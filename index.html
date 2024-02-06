@@ -6,12 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Steve Purves">
-<meta name="author" content="Rowan Cockett">
+<meta name="author" content="Tanya Strydom">
+<meta name="author" content="Andrew P. Beckerman">
 <meta name="dcterms.date" content="2024-02-06">
-<meta name="keywords" content="La Palma, Earthquakes">
+<meta name="keywords" content="food web, network construction">
 
-<title>La Palma Earthquakes</title>
+<title>T is for Topology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,7 +47,7 @@ div.csl-indent {
 }</style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -57,62 +57,42 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     document.body.classList.add('hypothesis-enabled');
   });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta name="citation_title" content="La Palma Earthquakes">
-<meta name="citation_abstract" content="In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). ...
+<meta name="citation_title" content="T is for Topology">
+<meta name="citation_abstract" content="Pending...
 ">
-<meta name="citation_keywords" content="La Palma,Earthquakes">
-<meta name="citation_author" content="Steve Purves">
-<meta name="citation_author" content="Rowan Cockett">
+<meta name="citation_keywords" content="food web,network construction">
+<meta name="citation_author" content="Tanya Strydom">
+<meta name="citation_author" content="Andrew P. Beckerman">
 <meta name="citation_publication_date" content="2024-02-06">
 <meta name="citation_cover_date" content="2024-02-06">
 <meta name="citation_year" content="2024">
 <meta name="citation_online_date" content="2024-02-06">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="Earth and Space Science">
-<meta name="citation_reference" content="citation_title=Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands);,citation_author=José Marrero;,citation_author=Alicia García;,citation_author=Manuel Berrocoso;,citation_author=Ángeles Llinares;,citation_author=Antonio Rodríguez-Losada;,citation_author=R. Ortiz;,citation_publication_date=2019-07;,citation_cover_date=2019-07;,citation_year=2019;,citation_doi=10.1186/s13617-019-0085-5;,citation_volume=8;,citation_journal_title=Journal of Applied Volcanology;">
+<meta name="citation_reference" content="citation_title=Addressing the Eltonian shortfall with trait-based interaction models;,citation_abstract=We have very limited knowledge of how species interact in most communities and ecosystems despite trophic relationships being fundamental for linking biodiversity to ecosystem functioning. A promising approach to fill this gap is to predict interactions based on functional traits, but many questions remain about how well we can predict interactions for different taxa, ecosystems and amounts of input data. Here, we built a new traits-based model of trophic interactions for European vertebrates and found that even models calibrated with 0.1% of the interactions (100 out of 71 k) estimated the full European vertebrate food web reasonably well. However, predators were easier to predict than prey, especially for some clades (e.g. fowl and storks) and local food web connectance was consistently overestimated. Our results demonstrate the ability to rapidly generate food webs when empirical data are lackingan important step towards a more complete and spatially explicit description of food webs.;,citation_author=Dominique Caron;,citation_author=Luigi Maiorano;,citation_author=Wilfried Thuiller;,citation_author=Laura J. Pollock;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_issue=4;,citation_doi=10.1111/ele.13966;,citation_issn=1461-0248;,citation_volume=25;,citation_language=en-US;,citation_journal_title=Ecology Letters;">
+<meta name="citation_reference" content="citation_title=Trophic interaction models predict interactions across space, not food webs;,citation_abstract=Aim: Trophic interactions are central to our understanding of essential ecosystem functions as well as their stability. Predicting these interactions has become increasingly common due to the lack of empirical data on trophic interactions for most taxa in most ecosystems. We aim to determine whether and how accurately we can extrapolate to new communities both in terms of pairwise predator-prey interactions and higher level food web attributes (i.e., species position, food web-level properties). Location: Canada, Europe, Tanzania. Time period: Current. Major taxa studied: Terrestrial vertebrates Methods: We use a trait-based model of pairwise trophic interactions, calibrated independently on four different terrestrial vertebrate food webs (Canadian tundra, Serengeti, alpine south-eastern Pyrenees, and entire Europe) and assess the ability of each calibrated instance of the model to predict alternative food webs. We test how well predictions recover individual predator-prey interactions as well as higher level food web properties across geographical locations. Results: We find that, given enough phylogenetic and environmental similarities between food webs, trait-based models predict most interactions and their absence correctly (AUC &amp;amp;amp;gt; 0.82), even across highly contrasting environments. However, network metrics were less well-predicted than single interactions by our models. Predicted food webs were more connected, less modular, and had higher mean trophic levels than observed. Main conclusions: Theory predicts that the variability observed in food webs can be explained by differences in trait distributions and trait-matching relationships. Trait-based models can predict potential interactions amongst species in an ecosystem when calibrated using food web data from reasonably similar ecosystems. This suggests that food webs vary spatially primarily through changes in trait distributions. These models, however, are less good at predicting system level food web properties. We thus highlight the need for methodological advances to simultaneously address trophic interactions and the structure of food webs across time and space.;,citation_author=Dominique Caron;,citation_author=Ulrich Brose;,citation_author=Miguel Lurgi;,citation_author=Guillaume Blanchet;,citation_author=Dominique Gravel;,citation_author=Laura J. Pollock;,citation_publication_date=2023-05;,citation_cover_date=2023-05;,citation_year=2023;,citation_language=en-US;,citation_publisher=EcoEvoRxiv;">
+<meta name="citation_reference" content="citation_title=Phylogenetic constraints and adaptation explain food-web structure;,citation_abstract=Food webs are descriptions of who eats whom in an ecosystem. Although extremely complex and variable, their structure possesses basic regularities1,2,3,4,5,6. A fascinating question is to find a simple model capturing the underlying processes behind these repeatable patterns. Until now, two models have been devised for the description of trophic interactions within a natural community7,8. Both are essentially based on the concept of ecological niche, with the consumers organized along a single niche dimension; for example, prey size8,9. Unfortunately, they fail to describe adequately recent and high-quality data. Here, we propose a new model built on the hypothesis that any species’ diet is the consequence of phylogenetic constraints and adaptation. Simple rules incorporating both concepts yield food webs whose structure is very close to real data. Consumers are organized in groups forming a nested hierarchy, which better reflects the complexity and multidimensionality of most natural systems.;,citation_author=Marie-France Cattin;,citation_author=Louis-Félix Bersier;,citation_author=Carolin Banašek-Richter;,citation_author=Richard Baltensperger;,citation_author=Jean-Pierre Gabriel;,citation_publication_date=2004-02;,citation_cover_date=2004-02;,citation_year=2004;,citation_issue=6977;,citation_doi=10.1038/nature02327;,citation_issn=1476-4687;,citation_volume=427;,citation_language=en-US;,citation_journal_title=Nature;,citation_publisher=Nature Publishing Group;">
+<meta name="citation_reference" content="citation_title=Transient dynamics and foodweb complexity in the LotkaVolterra cascade model;,citation_abstract=How does the longterm behaviour near equilibrium of model food webs correlate with their shortterm transient dynamics? Here, simulations of the LotkaVolterra cascade model of food webs provide the first evidence to answer this question. Transient behaviour is measured by resilience, reactivity, the maximum amplification of a perturbation and the time at which the maximum amplification occurs. Model food webs with a higher probability of local asymptotic stability may be less resilient and may have a larger transient growth of perturbations. Given a fixed connectance, the sizes and durations of transient responses to perturbations increase with the number of species. Given a fixed number of species, as connectance increases, the sizes and durations of transient responses to perturbations may increase or decrease depending on the type of link that is varied. Reactivity is more sensitive to changes in the number of donorcontrolled links than to changes in the number of recipientcontrolled links, while resilience is more sensitive to changes in the number of recipientcontrolled links than to changes in the number of donorcontrolled links. Transient behaviour is likely to be one of the important factors affecting the persistence of ecological communities.;,citation_author=X. Chen;,citation_author=J. E. Cohen;,citation_publication_date=2001-04;,citation_cover_date=2001-04;,citation_year=2001;,citation_issue=1469;,citation_doi=10.1098/rspb.2001.1596;,citation_volume=268;,citation_journal_title=Proceedings of the Royal Society of London. Series B: Biological Sciences;,citation_publisher=Royal Society;">
+<meta name="citation_reference" content="citation_title=Food webs and the dimensionality of trophic niche space;,citation_abstract=If the trophic niche of a kind of organism is a connected region in niche space, then it is possible for trophic niche overlaps to be described in a one-dimensional niche space if and only if the trophic niche overlap graph is an interval graph. An analysis of 30 food webs, using the combinatorial theory of interval graphs, suggests that a niche space of dimension 1 suffices, with unexpectedly high frequency and perhaps always, to describe the trophic niche overlaps implied by real food webs in single habitats. Consequently, real food webs fall in a small subset of the set of mathematically possible food webs. That real food webs are compatible with one-dimensional trophic niche spaces, more often than can be explained by chance alone, has not been noticed previously.;,citation_author=Joel E. Cohen;,citation_publication_date=1977-10;,citation_cover_date=1977-10;,citation_year=1977;,citation_issue=10;,citation_doi=10.1073/pnas.74.10.4533;,citation_volume=74;,citation_journal_title=Proceedings of the National Academy of Sciences;,citation_publisher=Proceedings of the National Academy of Sciences;">
+<meta name="citation_reference" content="citation_title=A stochastic theory of community food webs I. Models and aggregated data;,citation_abstract=Three recently discovered quantitative empirical generalizations describe major features of the structure of community food webs. These generalizations are: (i) a species scaling law: the mean proportions of basal, intermediate and top species remain invariant at approximately 0.19, 0.53, and 0.29, respectively, over the range of variation in the number of species in a web; (ii) a link scaling law : the mean proportions of trophic links in the categories basal-intermediate, basal-top, intermediateintermediate, and intermediatetop remain invariant at approximately 0.27, 0.08, 0.30 and 0.35, respectively, over the range of variation in the number of species in a web; and (iii) a link-species scaling law: the ratio of mean trophic links to species remains invariant at approximately 1.86, over the range of variation in the number of species in a web. This paper presents a model, the only successful one among several attempts, in which the first two of these empirical generalizations can be derived as a consequence of the third. The model assumes that species are ordered in a cascade or hierarchy such that a given species can prey on only those species below it and can be preyed on by only those species above it in the hierarchy.;,citation_author=Joel E. Cohen;,citation_author=C. M. Newman;,citation_author=John Hyslop Steele;,citation_publication_date=1997-01;,citation_cover_date=1997-01;,citation_year=1997;,citation_issue=1237;,citation_doi=10.1098/rspb.1985.0042;,citation_volume=224;,citation_journal_title=Proceedings of the Royal Society of London. Series B. Biological Sciences;,citation_publisher=Royal Society;">
+<meta name="citation_reference" content="citation_title=Size, foraging, and food web structure;,citation_abstract=Understanding what structures ecological communities is vital to answering questions about extinctions, environmental change, trophic cascades, and ecosystem functioning. Optimal foraging theory was conceived to increase such understanding by providing a framework with which to predict species interactions and resulting community structure. Here, we use an optimal foraging model and allometries of foraging variables to predict the structure of real food webs. The qualitative structure of the resulting model provides a more mechanistic basis for the phenomenological rules of previous models. Quantitative analyses show that the model predicts up to 65% of the links in real food webs. The deterministic nature of the model allows analysis of the model’s successes and failures in predicting particular interactions. Predacious and herbivorous feeding interactions are better predicted than pathogenic, parasitoid, and parasitic interactions. Results also indicate that accurate prediction and modeling of some food webs will require incorporating traits other than body size and diet choice models specific to different types of feeding interaction. The model results support the hypothesis that individual behavior, subject to natural selection, determines individual diets and that food web structure is the sum of these individual decisions.;,citation_author=Owen L. Petchey;,citation_author=Andrew P. Beckerman;,citation_author=Jens O. Riede;,citation_author=Philip H. Warren;,citation_publication_date=2008-03;,citation_cover_date=2008-03;,citation_year=2008;,citation_issue=11;,citation_doi=10.1073/pnas.0710672105;,citation_issn=0027-8424, 1091-6490;,citation_volume=105;,citation_language=en-US;,citation_journal_title=Proceedings of the National Academy of Sciences;">
+<meta name="citation_reference" content="citation_title=Before, during and after megafaunal extinctions: Human impact on Pleistocene-Holocene trophic networks in South Patagonia;,citation_abstract=Worldwide extinctions of large terrestrial vertebrates in the late Pleistocene provide insight on how humans reshape ecological communities. Understanding the ecological causes and consequences of megafaunal extinctions requires integrating approaches to reconstruct the ecological communities from the past. Here, we combined archeological and paleontological evidence with network analyses to understand the changes in ecological communities from late Pleistocene to the Holocene in South Patagonia, the last continental region where the encounter between humans and extinct megafauna occurred. The zooarcheological record suggests humans would have interacted mainly with large-bodied species, which comprise a small subset of the available prey. Accordingly, using network reconstructions and structural analyses, we found that human arrival would have produced minor changes in the overall structure of trophic networks. However, those few novel interactions established by humans would have created multiple indirect paths among megafaunal species. Indirect paths are the route for indirect effects such as competition and increase the vulnerability of interaction networks to perturbations. After the extinctions of most of the megafauna, the impoverished network became structurally simpler and densely connected. Our reconstructions of past trophic networks show that multiple indirect effects, potentially contributing to extinctions, can emerge even from a limited number of novel interactions and illustrate how network organization can affect and be affected by extinctions events.;,citation_author=Mathias M. Pires;,citation_author=Diego Rindel;,citation_author=Bruno Moscardi;,citation_author=Livia R. Cruz;,citation_author=Paulo R. Guimarães;,citation_author=Sergio F. Reis;,citation_author=S. Ivan Perez;,citation_publication_date=2020-12;,citation_cover_date=2020-12;,citation_year=2020;,citation_doi=10.1016/j.quascirev.2020.106696;,citation_issn=0277-3791;,citation_volume=250;,citation_journal_title=Quaternary Science Reviews;">
+<meta name="citation_reference" content="citation_title=Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.;,citation_abstract=Several stochastic models have tried to capture the architecture of food webs. This approach is interesting, but it is limited by the fact that different assumptions can yield similar results. To overcome this limitation, we develop a purely statistical approach. Body size in terms of an optimal ratio between prey and predator is used as explanatory variable. In 12 observed food webs, this model predicts, on average, 20% of interactions. To analyze the unexplained part, we introduce a latent term: each species is described by two latent traits, foraging and vulnerability, that represent nonmeasured characteristics of species once the optimal body size has been accounted for. The model now correctly predicts an average of 73% of links. The key features of our approach are that latent traits quantify the structure that is left unexplained by the explanatory variable and that this quantification allows a test of whether independent biological information, such as microhabitat use, camouflage, or phylogeny, explains this structure. We illustrate this method with phylogeny and find that it is linked to one or both latent traits in nine of 12 food webs. Our approach opens the door to the formulation of more complex models that can be applied to any kind of biological network.;,citation_author=Rudolf Philippe Rohr;,citation_author=Heike Scherer;,citation_author=Patrik Kehrli;,citation_author=Christian Mazza;,citation_author=Louis-Félix Bersier;,citation_publication_date=2010-08;,citation_cover_date=2010-08;,citation_year=2010;,citation_issue=2;,citation_doi=10.1086/653667;,citation_issn=0003-0147;,citation_volume=176;,citation_journal_title=The American Naturalist;,citation_publisher=The University of Chicago Press;">
+<meta name="citation_reference" content="citation_title=Extinction Cascades and Catastrophe in Ancient Food Webs;,citation_abstract=A model is developed to explore the potential responses of paleocommunities to disruptions of primary production during times of mass extinction and ecological crisis. Disruptions of primary production are expected to generate bottom-up cascades of secondary extinction, and these are predictable given species richnesses, functional diversity, and trophic link distributions. If, however, consumers are permitted to compensate for the loss of trophic resources by increasing the intensities of their remaining biotic interactions, top-down driven catastrophic increases of secondary extinction emerge from the model. Both bottom-up and top-down effects are themselves controlled by the geometry of the food webs. The general Phanerozoic trends of increasing taxonomic and ecological diversities, as well as the varying strengths of biotic interactions, have led to food webs of increasing complexity. The frequency of catastrophic secondary extinction increases as food web complexity increases, but increased complexity also serves to dampen the magnitude of the secondary extinctions. When intraguild competitive interactions are included in the model, competitively inferior taxa are observed to possess greater probabilities of survival if the guilds are embedded in simple subnetworks of the overall food web. The result is the emergence of post-extinction guilds dominated by those inferior taxa. These results are congruent with empirical observations of &amp;amp;amp;quot;disaster taxa&amp;quot; dominance after some mass extinction events, and provide a mechanism for the reorganization of ecosystems that is observed after those events. The model makes the testable prediction that dominance by disaster taxa, however, should be observed only when bottom-up disruptions have caused ecosystems to collapse catastrophically.;,citation_author=Peter D. Roopnarine;,citation_publication_date=2006;,citation_cover_date=2006;,citation_year=2006;,citation_fulltext_html_url=https://www.jstor.org/stable/4096814;,citation_issue=1;,citation_issn=0094-8373;,citation_volume=32;,citation_journal_title=Paleobiology;,citation_publisher=Paleontological Society;">
+<meta name="citation_reference" content="citation_title=Food webs: Experts consuming families of experts;,citation_abstract=Food webs of habitats as diverse as lakes or desert valleys are known to exhibit common “food-web patterns”, but the detailed mechanisms generating these structures have remained unclear. By employing a stochastic, dynamical model, we show that many aspects of the structure of predatory food webs can be understood as the traces of an evolutionary history where newly evolving species avoid direct competition with their relatives. The tendency to avoid sharing natural enemies (apparent competition) with related species is considerably weaker. Thus, “experts consuming families of experts” can be identified as the main underlying food-web pattern. We report the results of a systematic, quantitative model validation showing that the model is surprisingly accurate.;,citation_author=A. G. Rossberg;,citation_author=H. Matsuda;,citation_author=T. Amemiya;,citation_author=K. Itoh;,citation_publication_date=2006-08;,citation_cover_date=2006-08;,citation_year=2006;,citation_issue=3;,citation_doi=10.1016/j.jtbi.2005.12.021;,citation_issn=0022-5193;,citation_volume=241;,citation_journal_title=Journal of Theoretical Biology;">
+<meta name="citation_reference" content="citation_title=A framework for reconstructing ancient food webs using functional trait data;,citation_abstract=Food webs provide quantitative insights into the structure and dynamics of ecological communities. Previous work has shown their utility in understanding community responses to modern and ancient perturbations, including anthropogenic change and mass extinctions. However, few ancient food webs have been reconstructed due to difficulties assessing trophic interactions amongst extinct species derived from an incomplete fossil record. We present and assess the Paleo Food web Inference Model (PFIM). PFIM uses functional trait data–predictive of interactions in modern ecosystems and commonly available for fossil organisms–to reconstruct ancient food webs. We test the model by (i) applying it to four modern ecosystems with empirical constrained food webs to directly compare PFIM-constructed networks to their empirical counterparts, (ii) by carefully comparing discrepancies between PFIM-inferred and empirical webs in one of those systems, and (iii) by comparing networks describing feasible trophic interactions (&amp;amp;amp;quot;feasible webs&amp;quot;) with networks to which we superimpose characteristic interaction distributions derived from modern theory (&quot;realized webs&quot;). As a proof of concept, we then apply the method to faunal data from two Cambrian fossil deposits to reconstruct ancient trophic systems. PFIM-inferred feasible food webs successfully predict ~70% of trophic interactions across four modern systems. Furthermore, inferred food webs with enforced interaction distributions (i.e., realized webs) accurately predict ~90% of interactions. Comparisons with a global database of trophic interactions and other food web models, suggest that under sampling of empirical webs accounts for up to 21% of the remaining differences between PFIM and empirical food webs. Food webs can be reasonably approximated by inferring trophic interactions based upon life habit traits. This study provides the foundation to use trait-based inference models across the fossil record to examine ancient food webs and community evolution.;,citation_author=Jack O. Shaw;,citation_author=Alexander M. Dunhill;,citation_author=Andrew P. Beckerman;,citation_author=Jennifer A. Dunne;,citation_author=Pincelli M. Hull;,citation_publication_date=2024-01;,citation_cover_date=2024-01;,citation_year=2024;,citation_doi=10.1101/2024.01.30.578036;,citation_language=en-US;,citation_publisher=bioRxiv;">
+<meta name="citation_reference" content="citation_title=On Lumping Species in Food Webs;,citation_abstract=Species in community food webs are commonly aggregated or lumped on the basis of overlap in predators and prey. This note reports an unexpected result of lumping species in observed food webs and simulated food webs. The main result is that it is much easier to lump species in observed webs than in simulated webs. The reason is that there is much more overlap in predators and prey for species in observed webs than in simulated webs. This points to a fundamental deficiency in web assembly models that assume a random distribution of links.;,citation_author=Andrew R. Solow;,citation_author=Andrew R. Beet;,citation_publication_date=1998;,citation_cover_date=1998;,citation_year=1998;,citation_issue=6;,citation_doi=10.1890/0012-9658(1998)079[2013:OLSIFW]2.0.CO;2;,citation_issn=1939-9170;,citation_volume=79;,citation_language=en-US;,citation_journal_title=Ecology;">
+<meta name="citation_reference" content="citation_title=Food web reconstruction through phylogenetic transfer of low-rank network representation;,citation_abstract=Despite their importance in many ecological processes, collecting data and information on ecological interactions is an exceedingly challenging task. For this reason, large parts of the world have a data deficit when it comes to species interactions and how the resulting networks are structured. As data collection alone is unlikely to be sufficient, community ecologists must adopt predictive methods. We present a methodological framework that uses graph embedding and transfer learning to assemble a predicted list of trophic interactions of a species pool for which their interactions are unknown. Specifically, we “learn” the information (latent traits) of species from a known interaction network and infer the latent traits of another species pool for which we have no a priori interaction data based on their phylogenetic relatedness to species from the known network. The latent traits can then be used to predict interactions and construct an interaction network. Here we assembled a metaweb for Canadian mammals derived from interactions in the European food web, despite only 4% of common species being shared between the two locations. The results of the predictive model are compared against databases of recorded pairwise interactions, showing that we correctly recover 91% of known interactions. The framework itself is robust even when the known network is incomplete or contains spurious interactions making it an ideal candidate as a tool for filling gaps when it comes to species interactions. We provide guidance on how this framework can be adapted by substituting some approaches or predictors in order to make it more generally applicable.;,citation_author=Tanya Strydom;,citation_author=Salomé Bouskila;,citation_author=Francis Banville;,citation_author=Ceres Barros;,citation_author=Dominique Caron;,citation_author=Maxwell J. Farrell;,citation_author=Marie-Josée Fortin;,citation_author=Victoria Hemming;,citation_author=Benjamin Mercier;,citation_author=Laura J. Pollock;,citation_author=Rogini Runghen;,citation_author=Giulio V. Dalla Riva;,citation_author=Timothée Poisot;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_issue=12;,citation_doi=10.1111/2041-210X.13835;,citation_issn=2041-210X;,citation_volume=13;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
+<meta name="citation_reference" content="citation_title=Simple rules yield complex food webs;,citation_abstract=Several of the most ambitious theories in ecology1,2,3,4,5,6,7,8,9,10,11,12,13,14 describe food webs that document the structure of strong and weak trophic links9 that is responsible for ecological dynamics among diverse assemblages of species4,11,12,13. Early mechanism-based theory asserted that food webs have little omnivory and several properties that are independent of species richness1,2,3,4,6. This theory was overturned by empirical studies that found food webs to be much more complex5,7,8,9,14,15,16,17,18, but these studies did not provide mechanistic explanations for the complexity9. Here we show that a remarkably simple model fills this scientific void by successfully predicting key structural properties of the most complex and comprehensive food webs in the primary literature. These properties include the fractions of species at top, intermediate and basal trophic levels, the means and variabilities of generality, vulnerability and food-chain length, and the degrees of cannibalism, omnivory, looping and trophic similarity. Using only two empirical parameters, species number and connectance, our “niche model” extends the existing “cascade model”3,19 and improves its fit ten-fold by constraining species to consume a contiguous sequence of prey in a one-dimensional trophic niche20.;,citation_author=Richard J. Williams;,citation_author=Neo D. Martinez;,citation_publication_date=2000-03;,citation_cover_date=2000-03;,citation_year=2000;,citation_issue=6774;,citation_doi=10.1038/35004572;,citation_issn=1476-4687;,citation_volume=404;,citation_language=en-US;,citation_journal_title=Nature;,citation_publisher=Nature Publishing Group;">
+<meta name="citation_reference" content="citation_title=Collapse of an ecological network in Ancient Egypt;,citation_author=Justin D. Yeakel;,citation_author=Mathias M. Pires;,citation_author=Lars Rudolf;,citation_author=Nathaniel J. Dominy;,citation_author=Paul L. Koch;,citation_author=Paulo R. Guimarães;,citation_author=Thilo Gross;,citation_publication_date=2014-10;,citation_cover_date=2014-10;,citation_year=2014;,citation_issue=40;,citation_doi=10.1073/pnas.1408471111;,citation_volume=111;,citation_journal_title=PNAS;">
 </head>
 
 <body>
@@ -120,7 +100,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">La Palma Earthquakes</h1>
+      <h1 class="title">T is for Topology</h1>
           </div>
 
     
@@ -131,19 +111,19 @@ window.Quarto = {
           <div class="quarto-title-meta-heading">Affiliation</div>
           
                 <div class="quarto-title-meta-contents">
-            <p class="author">Steve Purves <a href="mailto:steve@curvenote.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0002-0760-5497" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+            <p class="author">Tanya Strydom <a href="mailto:t.strydom@sheffield.ac.uk" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-6067-1349" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
           </div>
                 <div class="quarto-title-meta-contents">
                     <p class="affiliation">
-                        Curvenote
+                        University of Sheffield
                       </p>
                   </div>
                       <div class="quarto-title-meta-contents">
-            <p class="author">Rowan Cockett <a href="https://orcid.org/0000-0002-7859-8394" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+            <p class="author">Andrew P. Beckerman <a href="https://orcid.org/0000-0002-7859-8394" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
           </div>
                 <div class="quarto-title-meta-contents">
                     <p class="affiliation">
-                        Curvenote
+                        University of Sheffield
                       </p>
                   </div>
                     </div>
@@ -168,14 +148,14 @@ window.Quarto = {
     <div>
       <div class="abstract">
         <div class="block-title">Abstract</div>
-        <p>In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). …</p>
+        <p>Pending…</p>
       </div>
     </div>
 
     <div>
       <div class="keywords">
         <div class="block-title">Keywords</div>
-        <p>La Palma, Earthquakes</p>
+        <p>food web, network construction</p>
       </div>
     </div>
 
@@ -188,11 +168,16 @@ window.Quarto = {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3</span> Conclusion</a></li>
+  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</a>
+  <ul class="collapse">
+  <li><a href="#overview-of-topology-generators" id="toc-overview-of-topology-generators" class="nav-link" data-scroll-target="#overview-of-topology-generators"><span class="header-section-number">2.1</span> Overview of topology generators</a></li>
+  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link" data-scroll-target="#datasets-used"><span class="header-section-number">2.2</span> Datasets used</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4</span> Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="index-preview.html"><i class="bi bi-journal-code"></i>Article Notebook</a></li><li><a href="notebooks/data-screening-preview.html"><i class="bi bi-journal-code"></i>Data Screening</a></li></ul></div></nav>
+</nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -205,139 +190,160 @@ window.Quarto = {
 
 <section id="introduction" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
-<div id="cell-fig-timeline" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display">
-<div id="fig-timeline" class="quarto-figure quarto-figure-center quarto-float anchored" alt="An event plot of the years of the last 8 eruptions on La Palma.">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/fig-timeline-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Timeline of recent earthquakes on La Palma"><img src="index_files/figure-html/fig-timeline-output-1.png" alt="An event plot of the years of the last 8 eruptions on La Palma." width="466" height="115" class="figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Timeline of recent earthquakes on La Palma
-</figcaption>
-</figure>
-</div>
-</div>
-<a class="quarto-notebook-link" id="nblink-1" href="index-preview.html#cell-fig-timeline">Source: Article Notebook</a></div>
-<p>Based on data up to and including 1971, eruptions on La Palma happen every 79.8 years on average.</p>
-<p>Studies of the magma systems feeding the volcano, such as <span class="citation" data-cites="marrero2019">Marrero et al. (<a href="#ref-marrero2019" role="doc-biblioref">2019</a>)</span>, have proposed that there are two main magma reservoirs feeding the Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-<p>Eight eruptions have been recorded since the late 1400s (<a href="#fig-timeline" class="quarto-xref">Figure&nbsp;1</a>).</p>
-<p>Data and methods are discussed in <a href="#sec-data-methods" class="quarto-xref">Section&nbsp;2</a>.</p>
-<p>Let <span class="math inline">\(x\)</span> denote the number of eruptions in a year. Then, <span class="math inline">\(x\)</span> can be modeled by a Poisson distribution</p>
-<p><span id="eq-poisson"><span class="math display">\[
-p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-\tag{1}\]</span></span></p>
-<p>where <span class="math inline">\(\lambda\)</span> is the rate of eruptions per year. Using <a href="#eq-poisson" class="quarto-xref">Equation&nbsp;1</a>, the probability of an eruption in the next <span class="math inline">\(t\)</span> years can be calculated.</p>
+<p>The standard run of the mill that we cannot always feasibly make network predictions because 1. hard, 2. time (prehistoric mostly), and 3. probably something else meaningful that’s just slipping my mind at the moment.</p>
+<p>Maybe a brief history of the development of predictive tools? Sort of where the theory/body of work was based and how that has changed?</p>
+<p>Maybe start here already about discussing the core mechanistic differences that models will work at - some are really concerned (and thus constrained by) structure, others are more mechanistic in nature <em>i.e.,</em> species <em>a</em> had the capacity to eat species <em>b</em>, and then you get <span class="citation" data-cites="rohrModelingFoodWebs2010">Rohr et al. (<a href="#ref-rohrModelingFoodWebs2010" role="doc-biblioref">2010</a>)</span> and <span class="citation" data-cites="strydomFoodWebReconstruction2022">Strydom et al. (<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">2022</a>)</span> that sit in the weird latent space…</p>
+<p>At some point we are going to need to discuss the key difference and implication between a metaweb and a network realisation.</p>
+<blockquote class="blockquote">
+<p>Do we need to delve into individual-based networks? (<em>sensu</em> Tinker 2012, Araújo 2008) I think its probably a step too far and one starts delving into apples and pears type of comparisons. Especially since these work off of already existing networks and its more about about ‘tweaking’ those - so not so much <em>de novo</em> predictions. Although this might be useful to keep in mind when it comes to re-wiring… Also on that note do we opn the re-wiring door here in this ms or wait it out a bit.</p>
+</blockquote>
+</section>
+<section id="sec-data-methods" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</h2>
+<section id="overview-of-topology-generators" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="overview-of-topology-generators"><span class="header-section-number">2.1</span> Overview of topology generators</h3>
+<p>I know table are awful but in this case they may make more sense</p>
 <div id="tbl-history" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Recent historic eruptions on La Palma
+Table&nbsp;1: Lets make a table that gives an overview of the different topology generators that we will look at
 </figcaption>
 <div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 54%">
+<col style="width: 23%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Name</th>
-<th>Year</th>
+<th>Model</th>
+<th>Reference</th>
+<th>Core Mechanism</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Current</td>
-<td>2021</td>
+<td>Niche model</td>
+<td><span class="citation" data-cites="cohenStochasticTheoryCommunity1997">Cohen, Newman, and Steele (<a href="#ref-cohenStochasticTheoryCommunity1997" role="doc-biblioref">1997</a>)</span></td>
+<td>structural</td>
 </tr>
 <tr class="even">
-<td>Teneguía</td>
-<td>1971</td>
+<td>Cascade model</td>
+<td><span class="citation" data-cites="williamsSimpleRulesYield2000">Williams and Martinez (<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">2000</a>)</span></td>
+<td>structural</td>
 </tr>
 <tr class="odd">
-<td>Nambroque</td>
-<td>1949</td>
+<td>PFIM</td>
+<td><span class="citation" data-cites="shawFrameworkReconstructingAncient2024">Shaw et al. (<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">2024</a>)</span></td>
+<td>mechanistic</td>
 </tr>
 <tr class="even">
-<td>El Charco</td>
-<td>1712</td>
+<td>Log-ratio</td>
+<td><span class="citation" data-cites="rohrModelingFoodWebs2010">Rohr et al. (<a href="#ref-rohrModelingFoodWebs2010" role="doc-biblioref">2010</a>)</span></td>
+<td>latent trait space</td>
 </tr>
 <tr class="odd">
-<td>Volcán San Antonio</td>
-<td>1677</td>
+<td>Nested hierarchy</td>
+<td><span class="citation" data-cites="cattinPhylogeneticConstraintsAdaptation2004">Cattin et al. (<a href="#ref-cattinPhylogeneticConstraintsAdaptation2004" role="doc-biblioref">2004</a>)</span></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Volcán San Martin</td>
-<td>1646</td>
+<td>ADBM</td>
+<td><span class="citation" data-cites="petcheySizeForagingFood2008">Petchey et al. (<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">2008</a>)</span></td>
+<td>mechanistic</td>
 </tr>
 <tr class="odd">
-<td>Tajuya near El Paso</td>
-<td>1585</td>
+<td>Stochastic</td>
+<td><span class="citation" data-cites="rossbergFoodWebsExperts2006">Rossberg et al. (<a href="#ref-rossbergFoodWebsExperts2006" role="doc-biblioref">2006</a>)</span></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Montaña Quemada</td>
-<td>1492</td>
+<td>Transfer learning</td>
+<td><span class="citation" data-cites="strydomFoodWebReconstruction2022">Strydom et al. (<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">2022</a>)</span></td>
+<td>latent trait space</td>
+</tr>
+<tr class="odd">
+<td>Trait-based</td>
+<td><span class="citation" data-cites="caronAddressingEltonianShortfall2022">Caron et al. (<a href="#ref-caronAddressingEltonianShortfall2022" role="doc-biblioref">2022</a>)</span></td>
+<td>mechanistic</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p><a href="#tbl-history" class="quarto-xref">Table&nbsp;1</a> summarises the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.</p>
-<div id="fig-map" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/la-palma-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Map of La Palma"><img src="images/la-palma-map.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Map of La Palma
-</figcaption>
-</figure>
-</div>
-<p>La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (<a href="#fig-map" class="quarto-xref">Figure&nbsp;2</a>).</p>
-<div class="quarto-embed-nb-cell">
-<div id="cell-fig-spatial-plot" class="cell" data-execution_count="7">
-<div class="cell-output cell-output-display">
-<div id="fig-spatial-plot" class="quarto-figure quarto-figure-center quarto-float anchored" alt="A scatterplot of earthquake locations plotting latitude against longitude.">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-spatial-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-data-screening-fig-spatial-plot-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Locations of earthquakes on La Palma since 2017."><img src="index_files/figure-html/notebooks-data-screening-fig-spatial-plot-output-1.png" alt="A scatterplot of earthquake locations plotting latitude against longitude." width="917" height="799" class="figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spatial-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Locations of earthquakes on La Palma since 2017.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<p><a href="#fig-spatial-plot" class="quarto-xref">Figure&nbsp;3</a> shows the location of recent Earthquakes on La Palma.</p>
 </section>
-<section id="sec-data-methods" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</h2>
+<section id="datasets-used" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="datasets-used"><span class="header-section-number">2.2</span> Datasets used</h3>
+<p>Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a ‘scale’ element as well <em>i.e.,</em> a regional and local network. I think there is going to be a ‘turning point’ where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) <em>sensu</em> <span class="citation" data-cites="caronTrophicInteractionModels2023">Caron et al. (<a href="#ref-caronTrophicInteractionModels2023" role="doc-biblioref">2023</a>)</span></p>
 </section>
-<section id="conclusion" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">3</span> Conclusion</h2>
+</section>
+<section id="results" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="results"><span class="header-section-number">3</span> Results</h2>
+<p>How we want to compare and contrast. I think there won’t be a ‘winner’ and thus we need to think of ‘tests’ that are going to measure performance in different situations/settings. With that in mind I think some valuable points to consider would be:</p>
+<ul>
+<li>Structural vs pairwise link predictions (graph vs node level)
+<ul>
+<li>% of links correctly retrieved</li>
+<li>connectence</li>
+<li>trophic level</li>
+<li>generalism vs specialism</li>
+<li>something related to false positives/negatives</li>
+</ul></li>
+<li>Data ‘cost’ (some methods might need a lot lot of supporting data vs something very light weight)</li>
+<li>I think it would be remiss to also take into consideration computational cost</li>
+</ul>
+</section>
+<section id="conclusion" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">4</span> Conclusion</h2>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-marrero2019" class="csl-entry" role="listitem">
-Marrero, José, Alicia García, Manuel Berrocoso, Ángeles Llinares, Antonio Rodríguez-Losada, and R. Ortiz. 2019. <span>“Strategies for the Development of Volcanic Hazard Maps in Monogenetic Volcanic Fields: The Example of <span>La</span> <span>Palma</span> (<span>Canary</span> <span>Islands</span>).”</span> <em>Journal of Applied Volcanology</em> 8 (July). <a href="https://doi.org/10.1186/s13617-019-0085-5">https://doi.org/10.1186/s13617-019-0085-5</a>.
+<div id="ref-caronTrophicInteractionModels2023" class="csl-entry" role="listitem">
+Caron, Dominique, Ulrich Brose, Miguel Lurgi, Guillaume Blanchet, Dominique Gravel, and Laura J. Pollock. 2023. <span>“Trophic Interaction Models Predict Interactions Across Space, Not Food Webs,”</span> May.
+</div>
+<div id="ref-caronAddressingEltonianShortfall2022" class="csl-entry" role="listitem">
+Caron, Dominique, Luigi Maiorano, Wilfried Thuiller, and Laura J. Pollock. 2022. <span>“Addressing the <span>Eltonian</span> Shortfall with Trait-Based Interaction Models.”</span> <em>Ecology Letters</em> 25 (4): 889–99. <a href="https://doi.org/10.1111/ele.13966">https://doi.org/10.1111/ele.13966</a>.
+</div>
+<div id="ref-cattinPhylogeneticConstraintsAdaptation2004" class="csl-entry" role="listitem">
+Cattin, Marie-France, Louis-Félix Bersier, Carolin Banašek-Richter, Richard Baltensperger, and Jean-Pierre Gabriel. 2004. <span>“Phylogenetic Constraints and Adaptation Explain Food-Web Structure.”</span> <em>Nature</em> 427 (6977): 835–39. <a href="https://doi.org/10.1038/nature02327">https://doi.org/10.1038/nature02327</a>.
+</div>
+<div id="ref-cohenStochasticTheoryCommunity1997" class="csl-entry" role="listitem">
+Cohen, Joel E., C. M. Newman, and John Hyslop Steele. 1997. <span>“A Stochastic Theory of Community Food Webs <span>I</span>. <span>Models</span> and Aggregated Data.”</span> <em>Proceedings of the Royal Society of London. Series B. Biological Sciences</em> 224 (1237): 421–48. <a href="https://doi.org/10.1098/rspb.1985.0042">https://doi.org/10.1098/rspb.1985.0042</a>.
+</div>
+<div id="ref-petcheySizeForagingFood2008" class="csl-entry" role="listitem">
+Petchey, Owen L., Andrew P. Beckerman, Jens O. Riede, and Philip H. Warren. 2008. <span>“Size, Foraging, and Food Web Structure.”</span> <em>Proceedings of the National Academy of Sciences</em> 105 (11): 4191–96. <a href="https://doi.org/10.1073/pnas.0710672105">https://doi.org/10.1073/pnas.0710672105</a>.
+</div>
+<div id="ref-rohrModelingFoodWebs2010" class="csl-entry" role="listitem">
+Rohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. <span>“Modeling <span>Food Webs</span>: <span>Exploring Unexplained Structure Using Latent Traits</span>.”</span> <em>The American Naturalist</em> 176 (2): 170–77. <a href="https://doi.org/10.1086/653667">https://doi.org/10.1086/653667</a>.
+</div>
+<div id="ref-rossbergFoodWebsExperts2006" class="csl-entry" role="listitem">
+Rossberg, A. G., H. Matsuda, T. Amemiya, and K. Itoh. 2006. <span>“Food Webs: <span>Experts</span> Consuming Families of Experts.”</span> <em>Journal of Theoretical Biology</em> 241 (3): 552–63. <a href="https://doi.org/10.1016/j.jtbi.2005.12.021">https://doi.org/10.1016/j.jtbi.2005.12.021</a>.
+</div>
+<div id="ref-shawFrameworkReconstructingAncient2024" class="csl-entry" role="listitem">
+Shaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. <span>“A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.”</span> <span>bioRxiv</span>. <a href="https://doi.org/10.1101/2024.01.30.578036">https://doi.org/10.1101/2024.01.30.578036</a>.
+</div>
+<div id="ref-strydomFoodWebReconstruction2022" class="csl-entry" role="listitem">
+Strydom, Tanya, Salomé Bouskila, Francis Banville, Ceres Barros, Dominique Caron, Maxwell J. Farrell, Marie-Josée Fortin, et al. 2022. <span>“Food Web Reconstruction Through Phylogenetic Transfer of Low-Rank Network Representation.”</span> <em>Methods in Ecology and Evolution</em> 13 (12): 2838–49. <a href="https://doi.org/10.1111/2041-210X.13835">https://doi.org/10.1111/2041-210X.13835</a>.
+</div>
+<div id="ref-williamsSimpleRulesYield2000" class="csl-entry" role="listitem">
+Williams, Richard J., and Neo D. Martinez. 2000. <span>“Simple Rules Yield Complex Food Webs.”</span> <em>Nature</em> 404 (6774): 180–83. <a href="https://doi.org/10.1038/35004572">https://doi.org/10.1038/35004572</a>.
 </div>
 </div>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{purves2024,
-  author = {Purves, Steve and Cockett, Rowan},
-  title = {La {Palma} {Earthquakes}},
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{strydom2024,
+  author = {Strydom, Tanya and P. Beckerman, Andrew},
+  title = {T Is for {Topology}},
   date = {2024-02-06},
   langid = {en},
-  abstract = {In September 2021, a significant jump in seismic activity
-    on the island of La Palma (Canary Islands, Spain) signaled the start
-    of a volcanic crisis that still continues at the time of writing.
-    Earthquake data is continually collected and published by the
-    Instituto Geográphico Nacional (IGN). ...}
+  abstract = {Pending...}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-purves2024" class="csl-entry quarto-appendix-citeas" role="listitem">
-Purves, Steve, and Rowan Cockett. 2024. <span>“La Palma
-Earthquakes.”</span> Earth and Space Science. February 6, 2024.
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-strydom2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+Strydom, Tanya, and Andrew P. Beckerman. 2024. <span>“T Is for
+Topology.”</span> Earth and Space Science. February 6, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -728,31 +734,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 

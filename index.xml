@@ -23,42 +23,42 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <title-group>
-<article-title>La Palma Earthquakes</article-title>
+<article-title>T is for Topology</article-title>
 </title-group>
 
 <contrib-group>
 <contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
+<contrib-id contrib-id-type="orcid">0000-0001-6067-1349</contrib-id>
 <name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
+<surname>Strydom</surname>
+<given-names>Tanya</given-names>
 </name>
-<string-name>Steve Purves</string-name>
+<string-name>Tanya Strydom</string-name>
 
-<email>steve@curvenote.com</email>
+<email>t.strydom@sheffield.ac.uk</email>
 <role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
 <role vocab="https://credit.niso.org" vocab-term="project
 administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
 administration</role>
 <role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
-<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+<role>Visualisation</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
 <xref ref-type="corresp" rid="cor-1">&#x002A;</xref>
 </contrib>
 <contrib contrib-type="author">
 <contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
 <name>
-<surname>Cockett</surname>
-<given-names>Rowan</given-names>
+<surname>Beckerman</surname>
+<given-names>Andrew P.</given-names>
 </name>
-<string-name>Rowan Cockett</string-name>
+<string-name>Andrew P. Beckerman</string-name>
 
 <xref ref-type="aff" rid="aff-1">a</xref>
 </contrib>
 </contrib-group>
 <aff id="aff-1">
 <institution-wrap>
-<institution>Curvenote</institution>
+<institution>University of Sheffield</institution>
 </institution-wrap>
 
 
@@ -69,7 +69,7 @@ administration</role>
 
 </aff>
 <author-notes>
-<corresp id="cor-1">steve@curvenote.com</corresp>
+<corresp id="cor-1">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
 <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-06">
@@ -88,15 +88,11 @@ administration</role>
 
 
 <abstract>
-<p>In September 2021, a significant jump in seismic activity on the
-island of La Palma (Canary Islands, Spain) signaled the start of a
-volcanic crisis that still continues at the time of writing. Earthquake
-data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
+<p>Pending…</p>
 </abstract>
 <kwd-group kwd-group-type="author">
-<kwd>La Palma</kwd>
-<kwd>Earthquakes</kwd>
+<kwd>food web</kwd>
+<kwd>network construction</kwd>
 </kwd-group>
 
 
@@ -109,719 +105,389 @@ Nacional (IGN). …</p>
 <body>
 <sec id="introduction">
   <title>1 Introduction</title>
-  <fig id="fig-timeline">
-    <caption><p>Figure 1: Timeline of recent earthquakes on La
-    Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-output-1.png" />
-  </fig>
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
-  (<xref alt="2019" rid="ref-marrero2019" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline">Figure 1</xref>).</p>
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods">Section 2</xref>.</p>
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  <fig id="tbl-history">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Current</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
-          </tr>
-          <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
-          </tr>
-          <tr>
-            <td>El Charco</td>
-            <td>1712</td>
-          </tr>
-          <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
-          </tr>
-          <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
-          </tr>
-          <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
-          </tr>
-          <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p><xref alt="Table 1" rid="tbl-history">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
-  <fig id="fig-map">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
-  </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map">Figure 2</xref>).</p>
-  <fig id="fig-spatial-plot">
-    <caption><p>Figure 3: Locations of earthquakes on La Palma since
-    2017.</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-data-screening-fig-spatial-plot-output-1.png" />
-  </fig>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
+  <p>The standard run of the mill that we cannot always feasibly make
+  network predictions because 1. hard, 2. time (prehistoric mostly), and
+  3. probably something else meaningful that’s just slipping my mind at
+  the moment.</p>
+  <p>Maybe a brief history of the development of predictive tools? Sort
+  of where the theory/body of work was based and how that has
+  changed?</p>
+  <p>Maybe start here already about discussing the core mechanistic
+  differences that models will work at - some are really concerned (and
+  thus constrained by) structure, others are more mechanistic in nature
+  <italic>i.e.,</italic> species <italic>a</italic> had the capacity to
+  eat species <italic>b</italic>, and then you get Rohr et al.
+  (<xref alt="2010" rid="ref-rohrModelingFoodWebs2010" ref-type="bibr">2010</xref>)
+  and Strydom et al.
+  (<xref alt="2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">2022</xref>)
+  that sit in the weird latent space…</p>
+  <p>At some point we are going to need to discuss the key difference
+  and implication between a metaweb and a network realisation.</p>
+  <disp-quote>
+    <p>Do we need to delve into individual-based networks?
+    (<italic>sensu</italic> Tinker 2012, Araújo 2008) I think its
+    probably a step too far and one starts delving into apples and pears
+    type of comparisons. Especially since these work off of already
+    existing networks and its more about about ‘tweaking’ those - so not
+    so much <italic>de novo</italic> predictions. Although this might be
+    useful to keep in mind when it comes to re-wiring… Also on that note
+    do we opn the re-wiring door here in this ms or wait it out a
+    bit.</p>
+  </disp-quote>
 </sec>
 <sec id="sec-data-methods">
   <title>2 Data &amp; Methods</title>
+  <sec id="overview-of-topology-generators">
+    <title>2.1 Overview of topology generators</title>
+    <p>I know table are awful but in this case they may make more
+    sense</p>
+    <fig id="tbl-history">
+      <caption><p>Table 1: Lets make a table that gives an overview of
+      the different topology generators that we will look
+      at</p></caption>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="22%" />
+            <col width="54%" />
+            <col width="24%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Reference</th>
+              <th>Core Mechanism</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Niche model</td>
+              <td>Cohen, Newman, and Steele
+              (<xref alt="1997" rid="ref-cohenStochasticTheoryCommunity1997" ref-type="bibr">1997</xref>)</td>
+              <td>structural</td>
+            </tr>
+            <tr>
+              <td>Cascade model</td>
+              <td>Williams and Martinez
+              (<xref alt="2000" rid="ref-williamsSimpleRulesYield2000" ref-type="bibr">2000</xref>)</td>
+              <td>structural</td>
+            </tr>
+            <tr>
+              <td>PFIM</td>
+              <td>Shaw et al.
+              (<xref alt="2024" rid="ref-shawFrameworkReconstructingAncient2024" ref-type="bibr">2024</xref>)</td>
+              <td>mechanistic</td>
+            </tr>
+            <tr>
+              <td>Log-ratio</td>
+              <td>Rohr et al.
+              (<xref alt="2010" rid="ref-rohrModelingFoodWebs2010" ref-type="bibr">2010</xref>)</td>
+              <td>latent trait space</td>
+            </tr>
+            <tr>
+              <td>Nested hierarchy</td>
+              <td>Cattin et al.
+              (<xref alt="2004" rid="ref-cattinPhylogeneticConstraintsAdaptation2004" ref-type="bibr">2004</xref>)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ADBM</td>
+              <td>Petchey et al.
+              (<xref alt="2008" rid="ref-petcheySizeForagingFood2008" ref-type="bibr">2008</xref>)</td>
+              <td>mechanistic</td>
+            </tr>
+            <tr>
+              <td>Stochastic</td>
+              <td>Rossberg et al.
+              (<xref alt="2006" rid="ref-rossbergFoodWebsExperts2006" ref-type="bibr">2006</xref>)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Transfer learning</td>
+              <td>Strydom et al.
+              (<xref alt="2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">2022</xref>)</td>
+              <td>latent trait space</td>
+            </tr>
+            <tr>
+              <td>Trait-based</td>
+              <td>Caron et al.
+              (<xref alt="2022" rid="ref-caronAddressingEltonianShortfall2022" ref-type="bibr">2022</xref>)</td>
+              <td>mechanistic</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </fig>
+  </sec>
+  <sec id="datasets-used">
+    <title>2.2 Datasets used</title>
+    <p>Here I think we need to span a variety of domains, at minimum
+    aquatic and terrestrial but maybe there should be a ‘scale’ element
+    as well <italic>i.e.,</italic> a regional and local network. I think
+    there is going to be a ‘turning point’ where structural will take
+    over from mechanistic in terms of performance. More specifically at
+    local scales bioenergetic constraints (and co-occurrence) may play a
+    bigger role in structuring a network whereas at the metaweb level
+    then mechanistic may make more (since by default its about who can
+    potentially interact and obviously not constrained by real-world
+    scenarios) <italic>sensu</italic> Caron et al.
+    (<xref alt="2023" rid="ref-caronTrophicInteractionModels2023" ref-type="bibr">2023</xref>)</p>
+  </sec>
+</sec>
+<sec id="results">
+  <title>3 Results</title>
+  <p>How we want to compare and contrast. I think there won’t be a
+  ‘winner’ and thus we need to think of ‘tests’ that are going to
+  measure performance in different situations/settings. With that in
+  mind I think some valuable points to consider would be:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Structural vs pairwise link predictions (graph vs node
+      level)</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>% of links correctly retrieved</p>
+        </list-item>
+        <list-item>
+          <p>connectence</p>
+        </list-item>
+        <list-item>
+          <p>trophic level</p>
+        </list-item>
+        <list-item>
+          <p>generalism vs specialism</p>
+        </list-item>
+        <list-item>
+          <p>something related to false positives/negatives</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p>Data ‘cost’ (some methods might need a lot lot of supporting
+      data vs something very light weight)</p>
+    </list-item>
+    <list-item>
+      <p>I think it would be remiss to also take into consideration
+      computational cost</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="conclusion">
-  <title>3 Conclusion</title>
+  <title>4 Conclusion</title>
 </sec>
 </body>
 
 <back>
 <ref-list>
   <title>References</title>
-  <ref id="ref-marrero2019">
+  <ref id="ref-caronAddressingEltonianShortfall2022">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
-        <name><surname>Marrero</surname><given-names>José</given-names></name>
-        <name><surname>García</surname><given-names>Alicia</given-names></name>
-        <name><surname>Berrocoso</surname><given-names>Manuel</given-names></name>
-        <name><surname>Llinares</surname><given-names>Ángeles</given-names></name>
-        <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
-        <name><surname>Ortiz</surname><given-names>R.</given-names></name>
+        <name><surname>Caron</surname><given-names>Dominique</given-names></name>
+        <name><surname>Maiorano</surname><given-names>Luigi</given-names></name>
+        <name><surname>Thuiller</surname><given-names>Wilfried</given-names></name>
+        <name><surname>Pollock</surname><given-names>Laura J.</given-names></name>
       </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
-      <source>Journal of Applied Volcanology</source>
-      <year iso-8601-date="2019-07">2019</year><month>07</month>
-      <volume>8</volume>
-      <pub-id pub-id-type="doi">10.1186/s13617-019-0085-5</pub-id>
-      <fpage></fpage>
+      <article-title>Addressing the Eltonian shortfall with trait-based interaction models</article-title>
+      <source>Ecology Letters</source>
+      <year iso-8601-date="2022">2022</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-15">2023</year><month>09</month><day>15</day></date-in-citation>
+      <volume>25</volume>
+      <issue>4</issue>
+      <issn>1461-0248</issn>
+      <pub-id pub-id-type="doi">10.1111/ele.13966</pub-id>
+      <fpage>889</fpage>
+      <lpage>899</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-caronTrophicInteractionModels2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Caron</surname><given-names>Dominique</given-names></name>
+        <name><surname>Brose</surname><given-names>Ulrich</given-names></name>
+        <name><surname>Lurgi</surname><given-names>Miguel</given-names></name>
+        <name><surname>Blanchet</surname><given-names>Guillaume</given-names></name>
+        <name><surname>Gravel</surname><given-names>Dominique</given-names></name>
+        <name><surname>Pollock</surname><given-names>Laura J.</given-names></name>
+      </person-group>
+      <article-title>Trophic interaction models predict interactions across space, not food webs</article-title>
+      <publisher-name>EcoEvoRxiv</publisher-name>
+      <year iso-8601-date="2023-05">2023</year><month>05</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-15">2023</year><month>09</month><day>15</day></date-in-citation>
+    </element-citation>
+  </ref>
+  <ref id="ref-cattinPhylogeneticConstraintsAdaptation2004">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cattin</surname><given-names>Marie-France</given-names></name>
+        <name><surname>Bersier</surname><given-names>Louis-Félix</given-names></name>
+        <name><surname>Banašek-Richter</surname><given-names>Carolin</given-names></name>
+        <name><surname>Baltensperger</surname><given-names>Richard</given-names></name>
+        <name><surname>Gabriel</surname><given-names>Jean-Pierre</given-names></name>
+      </person-group>
+      <article-title>Phylogenetic constraints and adaptation explain food-web structure</article-title>
+      <source>Nature</source>
+      <publisher-name>Nature Publishing Group</publisher-name>
+      <year iso-8601-date="2004-02">2004</year><month>02</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-01">2024</year><month>02</month><day>01</day></date-in-citation>
+      <volume>427</volume>
+      <issue>6977</issue>
+      <issn>1476-4687</issn>
+      <pub-id pub-id-type="doi">10.1038/nature02327</pub-id>
+      <fpage>835</fpage>
+      <lpage>839</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-cohenStochasticTheoryCommunity1997">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cohen</surname><given-names>Joel E.</given-names></name>
+        <name><surname>Newman</surname><given-names>C. M.</given-names></name>
+        <name><surname>Steele</surname><given-names>John Hyslop</given-names></name>
+      </person-group>
+      <article-title>A stochastic theory of community food webs I. Models and aggregated data</article-title>
+      <source>Proceedings of the Royal Society of London. Series B. Biological Sciences</source>
+      <publisher-name>Royal Society</publisher-name>
+      <year iso-8601-date="1997-01">1997</year><month>01</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-01">2024</year><month>02</month><day>01</day></date-in-citation>
+      <volume>224</volume>
+      <issue>1237</issue>
+      <pub-id pub-id-type="doi">10.1098/rspb.1985.0042</pub-id>
+      <fpage>421</fpage>
+      <lpage>448</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-petcheySizeForagingFood2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Petchey</surname><given-names>Owen L.</given-names></name>
+        <name><surname>Beckerman</surname><given-names>Andrew P.</given-names></name>
+        <name><surname>Riede</surname><given-names>Jens O.</given-names></name>
+        <name><surname>Warren</surname><given-names>Philip H.</given-names></name>
+      </person-group>
+      <article-title>Size, foraging, and food web structure</article-title>
+      <source>Proceedings of the National Academy of Sciences</source>
+      <year iso-8601-date="2008-03">2008</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-01-15">2024</year><month>01</month><day>15</day></date-in-citation>
+      <volume>105</volume>
+      <issue>11</issue>
+      <issn>0027-8424, 1091-6490</issn>
+      <pub-id pub-id-type="doi">10.1073/pnas.0710672105</pub-id>
+      <fpage>4191</fpage>
+      <lpage>4196</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-rohrModelingFoodWebs2010">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Rohr</surname><given-names>Rudolf Philippe</given-names></name>
+        <name><surname>Scherer</surname><given-names>Heike</given-names></name>
+        <name><surname>Kehrli</surname><given-names>Patrik</given-names></name>
+        <name><surname>Mazza</surname><given-names>Christian</given-names></name>
+        <name><surname>Bersier</surname><given-names>Louis-Félix</given-names></name>
+      </person-group>
+      <article-title>Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.</article-title>
+      <source>The American Naturalist</source>
+      <publisher-name>The University of Chicago Press</publisher-name>
+      <year iso-8601-date="2010-08">2010</year><month>08</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-01">2024</year><month>02</month><day>01</day></date-in-citation>
+      <volume>176</volume>
+      <issue>2</issue>
+      <issn>0003-0147</issn>
+      <pub-id pub-id-type="doi">10.1086/653667</pub-id>
+      <fpage>170</fpage>
+      <lpage>177</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-rossbergFoodWebsExperts2006">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Rossberg</surname><given-names>A. G.</given-names></name>
+        <name><surname>Matsuda</surname><given-names>H.</given-names></name>
+        <name><surname>Amemiya</surname><given-names>T.</given-names></name>
+        <name><surname>Itoh</surname><given-names>K.</given-names></name>
+      </person-group>
+      <article-title>Food webs: Experts consuming families of experts</article-title>
+      <source>Journal of Theoretical Biology</source>
+      <year iso-8601-date="2006-08">2006</year><month>08</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-01">2024</year><month>02</month><day>01</day></date-in-citation>
+      <volume>241</volume>
+      <issue>3</issue>
+      <issn>0022-5193</issn>
+      <pub-id pub-id-type="doi">10.1016/j.jtbi.2005.12.021</pub-id>
+      <fpage>552</fpage>
+      <lpage>563</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-shawFrameworkReconstructingAncient2024">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Shaw</surname><given-names>Jack O.</given-names></name>
+        <name><surname>Dunhill</surname><given-names>Alexander M.</given-names></name>
+        <name><surname>Beckerman</surname><given-names>Andrew P.</given-names></name>
+        <name><surname>Dunne</surname><given-names>Jennifer A.</given-names></name>
+        <name><surname>Hull</surname><given-names>Pincelli M.</given-names></name>
+      </person-group>
+      <article-title>A framework for reconstructing ancient food webs using functional trait data</article-title>
+      <publisher-name>bioRxiv</publisher-name>
+      <year iso-8601-date="2024-01">2024</year><month>01</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-01">2024</year><month>02</month><day>01</day></date-in-citation>
+      <pub-id pub-id-type="doi">10.1101/2024.01.30.578036</pub-id>
+      <fpage>2024.01.30.578036</fpage>
       <lpage></lpage>
     </element-citation>
   </ref>
-</ref-list>
-</back>
-
-<sub-article article-type="notebook" id="nb-8-nb-article">
-<front-stub>
-<title-group>
-<article-title>La Palma Earthquakes</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
-<name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
-</name>
-<string-name>Steve Purves</string-name>
-
-<email>steve@curvenote.com</email>
-<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
-<role vocab="https://credit.niso.org" vocab-term="project
-administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
-administration</role>
-<role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
-<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
-</contrib>
-<contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
-<name>
-<surname>Cockett</surname>
-<given-names>Rowan</given-names>
-</name>
-<string-name>Rowan Cockett</string-name>
-
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-</contrib>
-</contrib-group>
-<aff id="aff-1-nb-article">
-<institution-wrap>
-<institution>Curvenote</institution>
-</institution-wrap>
-
-
-
-
-
-
-
-</aff>
-<author-notes>
-<corresp id="cor-1-nb-article">steve@curvenote.com</corresp>
-</author-notes>
-<abstract>
-<p>In September 2021, a significant jump in seismic activity on the
-island of La Palma (Canary Islands, Spain) signaled the start of a
-volcanic crisis that still continues at the time of writing. Earthquake
-data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
-</abstract>
-</front-stub>
-
-<body>
-<sec id="cell-67a3a4e8-nb-article" specific-use="notebook-content">
-<sec id="introduction-nb-article">
-  <title>1 Introduction</title>
-  </sec>
-  <sec id="c69ee907-nb-article" specific-use="notebook-code">
-  <code language="python">import matplotlib.pyplot as plt
-import numpy as np
-eruptions = [1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021]</code>
-  </sec>
-  <sec id="cell-fig-timeline-nb-article" specific-use="notebook-code">
-  <code language="python">plt.figure(figsize=(6, 1))
-plt.eventplot(eruptions, lineoffsets=0, linelengths=0.1, color='black')
-plt.gca().axes.get_yaxis().set_visible(False)
-plt.ylabel('')
-plt.show()</code>
-  <sec id="cell-fig-timeline-output-0-nb-article" specific-use="notebook-output">
-  <fig id="fig-timeline-nb-article">
-    <caption><p>Figure 1: Timeline of recent earthquakes on La
-    Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-output-1.png" />
-  </fig>
-  </sec>
-  </sec>
-  <sec id="b397d1c8-nb-article" specific-use="notebook-code">
-  <code language="python">avg_years_between_eruptions = np.mean(np.diff(eruptions[:-1]))
-avg_years_between_eruptions</code>
-  <sec id="b397d1c8-output-0-nb-article" specific-use="notebook-output">
-  <preformat>79.83333333333333</preformat>
-  </sec>
-  </sec>
-  <sec id="cell-1962cec2-nb-article" specific-use="notebook-content">
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
-  (<xref alt="2019" rid="ref-marrero2019-nb-article" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline-nb-article">Figure 1</xref>).</p>
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods-nb-article">Section 2</xref>.</p>
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson-nb-article"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson-nb-article">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  <fig id="tbl-history-nb-article">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Current</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
-          </tr>
-          <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
-          </tr>
-          <tr>
-            <td>El Charco</td>
-            <td>1712</td>
-          </tr>
-          <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
-          </tr>
-          <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
-          </tr>
-          <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
-          </tr>
-          <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p><xref alt="Table 1" rid="tbl-history-nb-article">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
-  <fig id="fig-map-nb-article">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
-  </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map-nb-article">Figure 2</xref>).</p>
-  <sec id="cell-fig-spatial-plot-nb-article" specific-use="notebook-code">
-  <code language="python">from matplotlib import colormaps
-cmap = colormaps['viridis_r']
-ax = df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, 
-                     s=47-df[&quot;Depth(km)&quot;], c=df[&quot;Magnitude&quot;], 
-                     figsize=(12,10), grid=&quot;on&quot;, cmap=cmap)
-colorbar = ax.collections[0].colorbar
-colorbar.set_label(&quot;Magnitude&quot;)
-
-plt.show()</code>
-  <sec id="cell-fig-spatial-plot-output-0-nb-article" specific-use="notebook-output">
-  <fig id="fig-spatial-plot-nb-article">
-    <caption><p>Figure 3: Locations of earthquakes on La Palma since
-    2017.</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-data-screening-fig-spatial-plot-output-1.png" />
-  </fig>
-  </sec>
-  </sec>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot-nb-article">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
-</sec>
-<sec id="sec-data-methods-nb-article">
-  <title>2 Data &amp; Methods</title>
-</sec>
-<sec id="conclusion-nb-article">
-  <title>3 Conclusion</title>
-</sec>
-<sec id="references-nb-article">
-  <title>References</title>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-<ref-list>
-  <title></title>
-  <ref id="ref-marrero2019-nb-article">
+  <ref id="ref-strydomFoodWebReconstruction2022">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
-        <name><surname>Marrero</surname><given-names>José</given-names></name>
-        <name><surname>García</surname><given-names>Alicia</given-names></name>
-        <name><surname>Berrocoso</surname><given-names>Manuel</given-names></name>
-        <name><surname>Llinares</surname><given-names>Ángeles</given-names></name>
-        <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
-        <name><surname>Ortiz</surname><given-names>R.</given-names></name>
+        <name><surname>Strydom</surname><given-names>Tanya</given-names></name>
+        <name><surname>Bouskila</surname><given-names>Salomé</given-names></name>
+        <name><surname>Banville</surname><given-names>Francis</given-names></name>
+        <name><surname>Barros</surname><given-names>Ceres</given-names></name>
+        <name><surname>Caron</surname><given-names>Dominique</given-names></name>
+        <name><surname>Farrell</surname><given-names>Maxwell J.</given-names></name>
+        <name><surname>Fortin</surname><given-names>Marie-Josée</given-names></name>
+        <name><surname>Hemming</surname><given-names>Victoria</given-names></name>
+        <name><surname>Mercier</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Pollock</surname><given-names>Laura J.</given-names></name>
+        <name><surname>Runghen</surname><given-names>Rogini</given-names></name>
+        <name><surname>Dalla Riva</surname><given-names>Giulio V.</given-names></name>
+        <name><surname>Poisot</surname><given-names>Timothée</given-names></name>
       </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
-      <source>Journal of Applied Volcanology</source>
-      <year iso-8601-date="2019-07">2019</year><month>07</month>
-      <volume>8</volume>
-      <pub-id pub-id-type="doi">10.1186/s13617-019-0085-5</pub-id>
-      <fpage></fpage>
-      <lpage></lpage>
+      <article-title>Food web reconstruction through phylogenetic transfer of low-rank network representation</article-title>
+      <source>Methods in Ecology and Evolution</source>
+      <year iso-8601-date="2022">2022</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-06">2024</year><month>02</month><day>06</day></date-in-citation>
+      <volume>13</volume>
+      <issue>12</issue>
+      <issn>2041-210X</issn>
+      <pub-id pub-id-type="doi">10.1111/2041-210X.13835</pub-id>
+      <fpage>2838</fpage>
+      <lpage>2849</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-williamsSimpleRulesYield2000">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Williams</surname><given-names>Richard J.</given-names></name>
+        <name><surname>Martinez</surname><given-names>Neo D.</given-names></name>
+      </person-group>
+      <article-title>Simple rules yield complex food webs</article-title>
+      <source>Nature</source>
+      <publisher-name>Nature Publishing Group</publisher-name>
+      <year iso-8601-date="2000-03">2000</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-01">2024</year><month>02</month><day>01</day></date-in-citation>
+      <volume>404</volume>
+      <issue>6774</issue>
+      <issn>1476-4687</issn>
+      <pub-id pub-id-type="doi">10.1038/35004572</pub-id>
+      <fpage>180</fpage>
+      <lpage>183</lpage>
     </element-citation>
   </ref>
 </ref-list>
 </back>
 
 
-</sub-article>
-<sub-article article-type="notebook" id="nb-4-nb-1">
-<front-stub>
-<title-group>
-<article-title>Data Screening</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
-<name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
-</name>
-<string-name>Steve Purves</string-name>
-
-</contrib>
-<contrib contrib-type="author">
-<name>
-<surname>Wickham</surname>
-<given-names>Charlotte</given-names>
-</name>
-<string-name>Charlotte Wickham</string-name>
-
-<xref ref-type="author-note" rid="auth-note-2-nb-1">2</xref>
-</contrib>
-</contrib-group>
-<author-notes>
-<fn id="auth-note-2-nb-1" fn-type="author-note" symbol="2">Edited original
-notebook by Steve Purves</fn>
-</author-notes>
-</front-stub>
-
-<body>
-<sec id="cell-43daa9a5-nb-1" specific-use="notebook-code">
-<preformat>import pandas as pd
-import matplotlib.pyplot as plt</preformat>
-</sec>
-<sec id="cell-25be6d6d-nb-1" specific-use="notebook-content">
-<p>Import <monospace>la-palma.csv</monospace> - a clean subset of
-<ext-link ext-link-type="uri" xlink:href="https://github.com/Notebooks-Now/submission-quarto-full/blob/main/data/catalogoComunSV_1663233588717.csv"><monospace>catalogoComunSV_1663233588717.csv</monospace></ext-link>:</p>
-</sec>
-<sec id="cell-7e7b2b9e-nb-1" specific-use="notebook-code">
-<preformat>df = pd.read_csv('la-palma.csv')
-df['DateTime'] = pd.to_datetime(df['DateTime'])
-df = df.sort_values(by=['DateTime'], ascending=True)
-df.head()</preformat>
-<sec id="cell-7e7b2b9e-output-0-nb-1" specific-use="notebook-output">
-<table-wrap>
-  <table border="1">
-    <thead>
-      <tr style="text-align: right;">
-        <th></th>
-        <th>Longitude</th>
-        <th>Latitude</th>
-        <th>Depth(km)</th>
-        <th>Magnitude</th>
-        <th>DateTime</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>11346</td>
-        <td>-17.8349</td>
-        <td>28.5346</td>
-        <td>26.0</td>
-        <td>1.6</td>
-        <td>2017-03-09 23:44:06+00:00</td>
-      </tr>
-      <tr>
-        <td>11343</td>
-        <td>-17.8459</td>
-        <td>28.5491</td>
-        <td>27.0</td>
-        <td>2.0</td>
-        <td>2017-03-10 00:16:10+00:00</td>
-      </tr>
-      <tr>
-        <td>11344</td>
-        <td>-17.8863</td>
-        <td>28.5008</td>
-        <td>20.0</td>
-        <td>2.1</td>
-        <td>2017-03-10 00:16:11+00:00</td>
-      </tr>
-      <tr>
-        <td>11345</td>
-        <td>-17.8657</td>
-        <td>28.5204</td>
-        <td>30.0</td>
-        <td>1.6</td>
-        <td>2017-03-10 03:20:26+00:00</td>
-      </tr>
-      <tr>
-        <td>11342</td>
-        <td>-17.7156</td>
-        <td>28.5985</td>
-        <td>0.0</td>
-        <td>1.6</td>
-        <td>2017-08-21 02:06:55+00:00</td>
-      </tr>
-    </tbody>
-  </table>
-</table-wrap>
-</sec>
-</sec>
-<sec id="cca50ca5-nb-1" specific-use="notebook-code">
-<preformat>df.describe()</preformat>
-<sec id="cca50ca5-output-0-nb-1" specific-use="notebook-output">
-<table-wrap>
-  <table border="1">
-    <thead>
-      <tr style="text-align: right;">
-        <th></th>
-        <th>Longitude</th>
-        <th>Latitude</th>
-        <th>Depth(km)</th>
-        <th>Magnitude</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>count</td>
-        <td>11347.000000</td>
-        <td>11347.000000</td>
-        <td>11347.000000</td>
-        <td>11347.000000</td>
-      </tr>
-      <tr>
-        <td>mean</td>
-        <td>-17.844062</td>
-        <td>28.568893</td>
-        <td>14.089345</td>
-        <td>2.432423</td>
-      </tr>
-      <tr>
-        <td>std</td>
-        <td>0.027345</td>
-        <td>0.021899</td>
-        <td>8.624787</td>
-        <td>0.705282</td>
-      </tr>
-      <tr>
-        <td>min</td>
-        <td>-17.995800</td>
-        <td>28.310200</td>
-        <td>0.000000</td>
-        <td>0.200000</td>
-      </tr>
-      <tr>
-        <td>25%</td>
-        <td>-17.854100</td>
-        <td>28.558000</td>
-        <td>10.100000</td>
-        <td>1.900000</td>
-      </tr>
-      <tr>
-        <td>50%</td>
-        <td>-17.838700</td>
-        <td>28.564000</td>
-        <td>11.300000</td>
-        <td>2.600000</td>
-      </tr>
-      <tr>
-        <td>75%</td>
-        <td>-17.829700</td>
-        <td>28.574300</td>
-        <td>13.900000</td>
-        <td>2.900000</td>
-      </tr>
-      <tr>
-        <td>max</td>
-        <td>-17.705700</td>
-        <td>28.697800</td>
-        <td>46.900000</td>
-        <td>5.100000</td>
-      </tr>
-    </tbody>
-  </table>
-</table-wrap>
-</sec>
-</sec>
-<sec id="cell-3f3b8176-nb-1" specific-use="notebook-code">
-<preformat>df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, figsize=(12,12), grid=&quot;on&quot;);</preformat>
-<sec id="cell-3f3b8176-output-0-nb-1" specific-use="notebook-output">
-<graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-5-output-1.png" />
-</sec>
-</sec>
-<sec id="cell-319030b4-nb-1" specific-use="notebook-content">
-<sec id="filter-nb-1">
-  <title>Filter</title>
-  <p>Also some rows seem to be missing depth measurements, (see
-  differences in the <bold>count</bold> for columns above) - take only
-  rows with valid depths</p>
-  </sec>
-  <sec id="f02e8517-nb-1" specific-use="notebook-code">
-  <preformat>df = df[df['Depth(km)'].notna()]
-df.describe()</preformat>
-  <sec id="f02e8517-output-0-nb-1" specific-use="notebook-output">
-  <table-wrap>
-    <table border="1">
-      <thead>
-        <tr style="text-align: right;">
-          <th></th>
-          <th>Longitude</th>
-          <th>Latitude</th>
-          <th>Depth(km)</th>
-          <th>Magnitude</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>count</td>
-          <td>11347.000000</td>
-          <td>11347.000000</td>
-          <td>11347.000000</td>
-          <td>11347.000000</td>
-        </tr>
-        <tr>
-          <td>mean</td>
-          <td>-17.844062</td>
-          <td>28.568893</td>
-          <td>14.089345</td>
-          <td>2.432423</td>
-        </tr>
-        <tr>
-          <td>std</td>
-          <td>0.027345</td>
-          <td>0.021899</td>
-          <td>8.624787</td>
-          <td>0.705282</td>
-        </tr>
-        <tr>
-          <td>min</td>
-          <td>-17.995800</td>
-          <td>28.310200</td>
-          <td>0.000000</td>
-          <td>0.200000</td>
-        </tr>
-        <tr>
-          <td>25%</td>
-          <td>-17.854100</td>
-          <td>28.558000</td>
-          <td>10.100000</td>
-          <td>1.900000</td>
-        </tr>
-        <tr>
-          <td>50%</td>
-          <td>-17.838700</td>
-          <td>28.564000</td>
-          <td>11.300000</td>
-          <td>2.600000</td>
-        </tr>
-        <tr>
-          <td>75%</td>
-          <td>-17.829700</td>
-          <td>28.574300</td>
-          <td>13.900000</td>
-          <td>2.900000</td>
-        </tr>
-        <tr>
-          <td>max</td>
-          <td>-17.705700</td>
-          <td>28.697800</td>
-          <td>46.900000</td>
-          <td>5.100000</td>
-        </tr>
-      </tbody>
-    </table>
-  </table-wrap>
-  </sec>
-  </sec>
-  <sec id="f31daa87-nb-1" specific-use="notebook-code">
-  <preformat>plt.figure(figsize=(20,6))
-plt.subplot(1,3,1)
-df[&quot;Latitude&quot;].plot.hist(bins=20, density=True)
-plt.subplot(1,3,2)
-df[&quot;Longitude&quot;].plot.hist(bins=20, density=True)
-plt.subplot(1,3,3)
-df[&quot;Depth(km)&quot;].plot.hist(bins=50, density=True)</preformat>
-  <sec id="f31daa87-output-0-nb-1" specific-use="notebook-output">
-  <preformat>&lt;Axes: ylabel='Frequency'&gt;</preformat>
-  </sec>
-  <sec id="f31daa87-output-1-nb-1" specific-use="notebook-output">
-  <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-7-output-2.png" />
-  </sec>
-  </sec>
-  <sec id="cell-2e9530fb-nb-1" specific-use="notebook-content">
-</sec>
-<sec id="spatial-plot-nb-1">
-  <title>Spatial Plot</title>
-  <p>Scatter plot the spatial locations of events</p>
-  </sec>
-  <sec id="cell-fig-spatial-plot-nb-1" specific-use="notebook-code">
-  <preformat>#| label: fig-spatial-plot
-#| fig-cap: Locations of earthquakes on La Palma since 2017.
-#| fig-alt: A scatterplot of earthquake locations plotting latitude against longitude.
-from matplotlib import colormaps
-cmap = colormaps['viridis_r']
-ax = df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, 
-                     s=47-df[&quot;Depth(km)&quot;], c=df[&quot;Magnitude&quot;], 
-                     figsize=(12,10), grid=&quot;on&quot;, cmap=cmap)
-colorbar = ax.collections[0].colorbar
-colorbar.set_label(&quot;Magnitude&quot;)
-
-plt.show()</preformat>
-  <sec id="cell-fig-spatial-plot-output-0-nb-1" specific-use="notebook-output">
-  <fig id="fig-spatial-plot-nb-1">
-    <caption><p>Locations of earthquakes on La Palma since
-    2017.</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/fig-spatial-plot-output-1.png" />
-  </fig>
-  </sec>
-  </sec>
-  <sec id="f0aaa739-nb-1" specific-use="notebook-content">
-  <sec id="timeline-plot-nb-1">
-    <title>Timeline Plot</title>
-    <p>Scatter plot the event time series and look for any quantization
-    issues. Have times &amp; dates been loaded correctly?</p>
-    <p>ax = df.plot.scatter(x=‘DateTime’, y=‘Depth(km)’, figsize=(20,8))
-    ax.set_ylim(50,0);</p>
-    </sec>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
 
 </article>
