@@ -105,24 +105,26 @@ administration</role>
 <body>
 <sec id="introduction">
   <title>1 Introduction</title>
-  <p>The standard run of the mill that we cannot always feasibly make
-  network predictions because 1. hard, 2. time (prehistoric mostly), and
-  3. probably something else meaningful that’s just slipping my mind at
-  the moment.</p>
+  <p>The standard run of the mill that we cannot always feasibly
+  construct networks because 1. hard, 2. time (yay dinosaurs, but also
+  the future and impending doom I guess), and 3. probably something else
+  meaningful that’s just slipping my mind at the moment.</p>
   <p>Maybe a brief history of the development of predictive tools? Sort
   of where the theory/body of work was based and how that has
   changed?</p>
-  <p>Maybe start here already about discussing the core mechanistic
-  differences that models will work at - some are really concerned (and
-  thus constrained by) structure, others are more mechanistic in nature
-  <italic>i.e.,</italic> species <italic>a</italic> had the capacity to
-  eat species <italic>b</italic>, and then you get Rohr et al.
+  <p>Maybe start here with discussing the core mechanistic differences
+  that models will work at — some are really concerned about (and thus
+  constrained by) structure, others are more mechanistic in nature
+  <italic>i.e.,</italic> species <italic>a</italic> has the capacity to
+  eat species <italic>b</italic> because traits (read gob size), and
+  then you get Rohr et al.
   (<xref alt="2010" rid="ref-rohrModelingFoodWebs2010" ref-type="bibr">2010</xref>)
   and Strydom et al.
   (<xref alt="2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">2022</xref>)
-  that sit in the weird latent space…</p>
-  <p>At some point we are going to need to discuss the key difference
-  and implication between a metaweb and a network realisation.</p>
+  that sit in the weird liminal latent space…</p>
+  <p>At some point we are going to need to discuss the key differences
+  and implications between predicting a metaweb and a network
+  realisation.</p>
   <disp-quote>
     <p>Do we need to delve into individual-based networks?
     (<italic>sensu</italic> Tinker 2012, Araújo 2008) I think its
@@ -267,8 +269,13 @@ administration</role>
       data vs something very light weight)</p>
     </list-item>
     <list-item>
-      <p>I think it would be remiss to also take into consideration
+      <p>I think it would be remiss to not also take into consideration
       computational cost</p>
+    </list-item>
+    <list-item>
+      <p>something about the network output - I’m acknowledging my
+      biases and saying that probabilistic (or <italic>maybe</italic>
+      weighted) links are the way</p>
     </list-item>
   </list>
 </sec>
@@ -301,7 +308,7 @@ administration</role>
     </element-citation>
   </ref>
   <ref id="ref-caronTrophicInteractionModels2023">
-    <element-citation publication-type="article-journal">
+    <element-citation>
       <person-group person-group-type="author">
         <name><surname>Caron</surname><given-names>Dominique</given-names></name>
         <name><surname>Brose</surname><given-names>Ulrich</given-names></name>
@@ -314,6 +321,7 @@ administration</role>
       <publisher-name>EcoEvoRxiv</publisher-name>
       <year iso-8601-date="2023-05">2023</year><month>05</month>
       <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-15">2023</year><month>09</month><day>15</day></date-in-citation>
+      <pub-id pub-id-type="doi">10.32942/X29K55</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-cattinPhylogeneticConstraintsAdaptation2004">
