@@ -9,7 +9,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <journal-id></journal-id>
 
 <journal-title-group>
-<journal-title>Earth and Space Science</journal-title>
+<journal-title>Some fancy journal</journal-title>
 </journal-title-group>
 <issn></issn>
 
@@ -106,10 +106,19 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <p>The standard run of the mill that we cannot always feasibly
   construct networks because 1. hard, 2. time (yay dinosaurs, but also
   the future and impending doom I guess), and 3. probably something else
-  meaningful that’s just slipping my mind at the moment.</p>
-  <p>Maybe a brief history of the development of predictive tools? Sort
-  of where the theory/body of work was based and how that has
-  changed?</p>
+  meaningful that’s just slipping my mind at the moment. Some of the
+  usual culprits will come in here like: Jordano
+  (<xref alt="2016b" rid="ref-jordanoSamplingNetworksEcological2016" ref-type="bibr">2016b</xref>);
+  (<xref alt="Jordano 2016a" rid="ref-jordanoChasingEcologicalInteractions2016" ref-type="bibr">Jordano
+  2016a</xref>); Poisot et al.
+  (<xref alt="2021" rid="ref-poisotGlobalKnowledgeGaps2021" ref-type="bibr">2021</xref>);
+  Strydom et al.
+  (<xref alt="2021" rid="ref-strydomRoadmapPredictingSpecies2021" ref-type="bibr">2021</xref>)</p>
+  <p>Maybe a brief history of the development of predictive tools/topo
+  generators? Sort of where the theory/body of work was based and how
+  that has changed? IS there a difference between toppo generator and
+  predictive tool - I’m inclined to think that it aligns with the whole
+  debate of high level structure vs node-level perfection</p>
   <p>Maybe start here with discussing the core mechanistic differences
   that models will work at — some are really concerned about (and thus
   constrained by) structure, others are more mechanistic in nature
@@ -119,11 +128,23 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   (<xref alt="2010" rid="ref-rohrModelingFoodWebs2010" ref-type="bibr">2010</xref>)
   and Strydom et al.
   (<xref alt="2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">2022</xref>)
-  that sit in the weird liminal latent space…</p>
+  that sit in the weird liminal latent space… Here I will probably get
+  on my (newly discovered) soapbox and wax lyrical about how in certain
+  situations structure is enough (and that will probably be for some
+  high-level things like thinking about energy flows etc., I can also
+  see a world in which maybe you want to do some sort of
+  robustness/extinction work - since then you’re usually doing ‘random’
+  (within limits) extinctions) but there may be use cases where we are
+  really interested in the node-level interactions
+  <italic>i.e.,</italic> species identity is like a thing we need to
+  care about and also be able to retrieve specific interactions at
+  specific nodes correctly.</p>
   <p>At some point we are going to need to discuss the key differences
-  and implications between predicting a metaweb and a network
-  realisation. And here I can’t help but think about Poisot, Stouffer,
-  and Gravel
+  and implications between predicting a metaweb (<italic>sensu</italic>
+  Jennifer A. Dunne
+  (<xref alt="2006" rid="ref-dunneNetworkStructureFood2006" ref-type="bibr">2006</xref>))
+  and a network realisation. And here I can’t help but think about
+  Poisot, Stouffer, and Gravel
   (<xref alt="2015" rid="ref-poisotSpeciesWhyEcological2015" ref-type="bibr">2015</xref>)
   (and probably other papers) that discuss how the local factors are
   going to play a role and even the same pair of species may interact
@@ -169,14 +190,16 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           </thead>
           <tbody>
             <tr>
-              <td>Niche model</td>
-              <td>Cohen, Newman, and Steele
+              <td>Cascade model</td>
+              <td>Joel E. Cohen, Briand, and Newman
+              (<xref alt="1990" rid="ref-cohenCommunityFoodWebs1990" ref-type="bibr">1990</xref>);
+              Joel E. Cohen, Newman, and Steele
               (<xref alt="1997" rid="ref-cohenStochasticTheoryCommunity1997" ref-type="bibr">1997</xref>)</td>
               <td>structural</td>
               <td></td>
             </tr>
             <tr>
-              <td>Cascade model</td>
+              <td>Niche model</td>
               <td>Williams and Martinez
               (<xref alt="2000" rid="ref-williamsSimpleRulesYield2000" ref-type="bibr">2000</xref>)</td>
               <td>structural</td>
@@ -224,9 +247,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
             <tr>
               <td>Graph Embedding</td>
               <td>Strydom et al.
-              (<xref alt="2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">2022</xref>)</td>
+              (<xref alt="2023" rid="ref-strydomGraphEmbeddingTransfer2023" ref-type="bibr">2023</xref>)</td>
               <td>latent trait space</td>
-              <td></td>
+              <td>Strydom et al.
+              (<xref alt="2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">2022</xref>)</td>
             </tr>
             <tr>
               <td>Trait-based</td>
@@ -268,13 +292,16 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     Stouffer et al) But that might be where we get the idea of core
     <italic>structure</italic> vs something like linkage density. So
     core things like trophic level/chain length will be conserved but
-    connectence might not (I think I understand what I’m trying to say
+    connectance might not (I think I understand what I’m trying to say
     here)</p>
     <p>I think we should also use the Dunne (I think) Cambrian (also
-    think) network. Because 1) it gives the paleo-centric methods their
-    moment in the sun and 2) I think it also brings up the interesting
-    question of can we use modern structure to predict past ones? Here
-    one might expect a more mechanistic approach to shine.</p>
+    think) network (I was correct and its this one Jennifer A. Dunne et
+    al.
+    (<xref alt="2008" rid="ref-dunneCompilationNetworkAnalyses2008" ref-type="bibr">2008</xref>)).
+    Because 1) it gives the paleo-centric methods their moment in the
+    sun and 2) I think it also brings up the interesting question of can
+    we use modern structure to predict past ones? Here one might expect
+    a more mechanistic approach to shine.</p>
   </sec>
   <sec id="comparing-different-models">
     <title>2.3 Comparing different models</title>
@@ -286,8 +313,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         <p>collate/translate into <monospace>Julia</monospace></p>
         <list list-type="bullet">
           <list-item>
-            <p><italic>e.g.,</italic> some models wil be in EcoNets.jl,
-            Transfer learning (strydom) should be ready to play</p>
+            <p><italic>e.g.,</italic> some models wil be in
+            ESpeciesInteractionNetworks.jl (new EcoNet); I know (parts
+            of) the transfer learning stuff is and the niche model</p>
           </list-item>
           <list-item>
             <p>others will need to be coded out (the more simpler models
@@ -333,7 +361,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <p>% of links correctly retrieved</p>
         </list-item>
         <list-item>
-          <p>connectence</p>
+          <p>connectance</p>
         </list-item>
         <list-item>
           <p>trophic level</p>
@@ -383,7 +411,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   it up here again because also one of those things that I think about a
   bit too much probably…</p>
   <disp-quote>
-    <p>Thinking very longterm here and maybe a bit beyond the scope but
+    <p>Thinking very long term here and maybe a bit beyond the scope but
     also thinking about a multi- model approach? SO using one model to
     build an initial network but maybe a second one to constrain it a
     bit better. I blame this thought on the over-connected PFIM food
@@ -454,6 +482,21 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <lpage>839</lpage>
     </element-citation>
   </ref>
+  <ref id="ref-cohenCommunityFoodWebs1990">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Cohen</surname><given-names>Joel E</given-names></name>
+        <name><surname>Briand</surname><given-names>Frederic</given-names></name>
+        <name><surname>Newman</surname><given-names>Charles</given-names></name>
+      </person-group>
+      <source>Community Food Webs: Data and Theory</source>
+      <publisher-name>Springer-Verlag</publisher-name>
+      <publisher-loc>Berlin Heidelberg</publisher-loc>
+      <year iso-8601-date="1990">1990</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2019-08-07">2019</year><month>08</month><day>07</day></date-in-citation>
+      <isbn>978-3-642-83786-9</isbn>
+    </element-citation>
+  </ref>
   <ref id="ref-cohenStochasticTheoryCommunity1997">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -471,6 +514,76 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <pub-id pub-id-type="doi">10.1098/rspb.1985.0042</pub-id>
       <fpage>421</fpage>
       <lpage>448</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dunneCompilationNetworkAnalyses2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Dunne</surname><given-names>Jennifer A.</given-names></name>
+        <name><surname>Williams</surname><given-names>Richard J.</given-names></name>
+        <name><surname>Martinez</surname><given-names>Neo D.</given-names></name>
+        <name><surname>Wood</surname><given-names>Rachel A.</given-names></name>
+        <name><surname>Erwin</surname><given-names>Douglas H.</given-names></name>
+      </person-group>
+      <article-title>Compilation and Network Analyses of Cambrian Food Webs</article-title>
+      <source>PLOS Biology</source>
+      <publisher-name>Public Library of Science</publisher-name>
+      <year iso-8601-date="2008-04">2008</year><month>04</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-01-15">2024</year><month>01</month><day>15</day></date-in-citation>
+      <volume>6</volume>
+      <issue>4</issue>
+      <issn>1545-7885</issn>
+      <pub-id pub-id-type="doi">10.1371/journal.pbio.0060102</pub-id>
+      <fpage>e102</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dunneNetworkStructureFood2006">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Dunne</surname><given-names>Jennifer A</given-names></name>
+      </person-group>
+      <article-title>The Network Structure of Food Webs</article-title>
+      <source>Ecological networks: Linking structure and dynamics</source>
+      <person-group person-group-type="editor">
+        <name><surname>Dunne</surname><given-names>Jennifer A</given-names></name>
+        <name><surname>Pascual</surname><given-names>Mercedes</given-names></name>
+      </person-group>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2006">2006</year>
+      <fpage>27</fpage>
+      <lpage>86</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-jordanoChasingEcologicalInteractions2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jordano</surname><given-names>Pedro</given-names></name>
+      </person-group>
+      <article-title>Chasing Ecological Interactions</article-title>
+      <source>PLOS Biology</source>
+      <publisher-name>Public Library of Science</publisher-name>
+      <year iso-8601-date="2016-09">2016</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2020-11-07">2020</year><month>11</month><day>07</day></date-in-citation>
+      <volume>14</volume>
+      <issue>9</issue>
+      <issn>1545-7885</issn>
+      <pub-id pub-id-type="doi">10.1371/journal.pbio.1002559</pub-id>
+      <fpage>e1002559</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-jordanoSamplingNetworksEcological2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jordano</surname><given-names>Pedro</given-names></name>
+      </person-group>
+      <article-title>Sampling networks of ecological interactions</article-title>
+      <source>Functional Ecology</source>
+      <year iso-8601-date="2016-09">2016</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2016-10-12">2016</year><month>10</month><day>12</day></date-in-citation>
+      <issn>02698463</issn>
+      <pub-id pub-id-type="doi">10.1111/1365-2435.12763</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-petcheySizeForagingFood2008">
@@ -513,6 +626,29 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <pub-id pub-id-type="doi">10.1016/j.quascirev.2020.106696</pub-id>
       <fpage>106696</fpage>
       <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-poisotGlobalKnowledgeGaps2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Poisot</surname><given-names>Timothée</given-names></name>
+        <name><surname>Bergeron</surname><given-names>Gabriel</given-names></name>
+        <name><surname>Cazelles</surname><given-names>Kevin</given-names></name>
+        <name><surname>Dallas</surname><given-names>Tad</given-names></name>
+        <name><surname>Gravel</surname><given-names>Dominique</given-names></name>
+        <name><surname>MacDonald</surname><given-names>Andrew</given-names></name>
+        <name><surname>Mercier</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Violet</surname><given-names>Clément</given-names></name>
+        <name><surname>Vissault</surname><given-names>Steve</given-names></name>
+      </person-group>
+      <article-title>Global knowledge gaps in species interaction networks data</article-title>
+      <source>Journal of Biogeography</source>
+      <year iso-8601-date="2021">2021</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2021-04-29">2021</year><month>04</month><day>29</day></date-in-citation>
+      <volume>n/a</volume>
+      <issue>n/a</issue>
+      <issn>1365-2699</issn>
+      <pub-id pub-id-type="doi">10.1111/jbi.14127</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-poisotSpeciesWhyEcological2015">
@@ -621,6 +757,63 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <pub-id pub-id-type="doi">10.1111/2041-210X.13835</pub-id>
       <fpage>2838</fpage>
       <lpage>2849</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-strydomGraphEmbeddingTransfer2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Strydom</surname><given-names>Tanya</given-names></name>
+        <name><surname>Bouskila</surname><given-names>Salomé</given-names></name>
+        <name><surname>Banville</surname><given-names>Francis</given-names></name>
+        <name><surname>Barros</surname><given-names>Ceres</given-names></name>
+        <name><surname>Caron</surname><given-names>Dominique</given-names></name>
+        <name><surname>Farrell</surname><given-names>Maxwell J.</given-names></name>
+        <name><surname>Fortin</surname><given-names>Marie-Josée</given-names></name>
+        <name><surname>Mercier</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Pollock</surname><given-names>Laura J.</given-names></name>
+        <name><surname>Runghen</surname><given-names>Rogini</given-names></name>
+        <name><surname>Dalla Riva</surname><given-names>Giulio V.</given-names></name>
+        <name><surname>Poisot</surname><given-names>Timothée</given-names></name>
+      </person-group>
+      <article-title>Graph embedding and transfer learning can help predict potential species interaction networks despite data limitations</article-title>
+      <source>Methods in Ecology and Evolution</source>
+      <year iso-8601-date="2023">2023</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-07">2024</year><month>02</month><day>07</day></date-in-citation>
+      <volume>14</volume>
+      <issue>12</issue>
+      <issn>2041-210X</issn>
+      <pub-id pub-id-type="doi">10.1111/2041-210X.14228</pub-id>
+      <fpage>2917</fpage>
+      <lpage>2930</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-strydomRoadmapPredictingSpecies2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Strydom</surname><given-names>Tanya</given-names></name>
+        <name><surname>Catchen</surname><given-names>Michael D.</given-names></name>
+        <name><surname>Banville</surname><given-names>Francis</given-names></name>
+        <name><surname>Caron</surname><given-names>Dominique</given-names></name>
+        <name><surname>Dansereau</surname><given-names>Gabriel</given-names></name>
+        <name><surname>Desjardins-Proulx</surname><given-names>Philippe</given-names></name>
+        <name><surname>Forero-Muñoz</surname><given-names>Norma R.</given-names></name>
+        <name><surname>Higino</surname><given-names>Gracielle</given-names></name>
+        <name><surname>Mercier</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Gonzalez</surname><given-names>Andrew</given-names></name>
+        <name><surname>Gravel</surname><given-names>Dominique</given-names></name>
+        <name><surname>Pollock</surname><given-names>Laura</given-names></name>
+        <name><surname>Poisot</surname><given-names>Timothée</given-names></name>
+      </person-group>
+      <article-title>A roadmap towards predicting species interaction networks (across space and time)</article-title>
+      <source>Philosophical Transactions of the Royal Society B: Biological Sciences</source>
+      <publisher-name>Royal Society</publisher-name>
+      <year iso-8601-date="2021-11">2021</year><month>11</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2021-10-21">2021</year><month>10</month><day>21</day></date-in-citation>
+      <volume>376</volume>
+      <issue>1837</issue>
+      <pub-id pub-id-type="doi">10.1098/rstb.2021.0063</pub-id>
+      <fpage>20210063</fpage>
+      <lpage></lpage>
     </element-citation>
   </ref>
   <ref id="ref-williamsSimpleRulesYield2000">
