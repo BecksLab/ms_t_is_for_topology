@@ -9,4 +9,4 @@
 
 /.luarc.json
 
-/.vscode/
+.vscode/*
