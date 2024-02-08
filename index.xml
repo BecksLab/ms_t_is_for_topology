@@ -70,10 +70,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <corresp id="cor-1">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-07">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-08">
 <year>2024</year>
 <month>2</month>
-<day>7</day>
+<day>8</day>
 </pub-date>
 
 
@@ -302,6 +302,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     sun and 2) I think it also brings up the interesting question of can
     we use modern structure to predict past ones? Here one might expect
     a more mechanistic approach to shine.</p>
+    <p>Draw the other datasets from <monospace>Mangal</monospace>
+    because they will be nicely formatted and essentially at point and
+    shoot level</p>
   </sec>
   <sec id="comparing-different-models">
     <title>2.3 Comparing different models</title>
@@ -314,7 +317,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         <list list-type="bullet">
           <list-item>
             <p><italic>e.g.,</italic> some models wil be in
-            ESpeciesInteractionNetworks.jl (new EcoNet); I know (parts
+            SpeciesInteractionNetworks.jl (new EcoNet); I know (parts
             of) the transfer learning stuff is and the niche model</p>
           </list-item>
           <list-item>
@@ -329,10 +332,51 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </list>
       </list-item>
       <list-item>
-        <p>Create networks for the different datasets/scenarios we
+        <p>Curate networks for the different datasets/scenarios we
         select - I feel like there might be some scenarios that we can’t
         do all models for all datasets but maybe I’m being a
         pessimist.</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Need to also think about where one might find the
+            additional data for some of the models…</p>
+            <list list-type="bullet">
+              <list-item>
+                <p>Body size: Herberstein et al.
+                (<xref alt="2022" rid="ref-herbersteinAnimalTraitsCuratedAnimal2022" ref-type="bibr">2022</xref>)
+                - Although maybe Andrew has strong thotsTM RE the one
+                true body size database to rule them all…</p>
+              </list-item>
+              <list-item>
+                <p>Other trait sources: Wilman et al.
+                (<xref alt="2014" rid="ref-wilmanEltonTraitsSpecieslevelForaging2014" ref-type="bibr">2014</xref>)
+                and Jones et al.
+                (<xref alt="2009" rid="ref-jonesPanTHERIASpecieslevelDatabase2009" ref-type="bibr">2009</xref>)</p>
+              </list-item>
+              <list-item>
+                <p>This is where we’ll get the paleo traits from if I’m
+                correct Bambach, Bush, and Erwin
+                (<xref alt="2007" rid="ref-bambachAutecologyFillingEcospace2007" ref-type="bibr">2007</xref>)</p>
+              </list-item>
+              <list-item>
+                <p>Phylogeny stuff: Upham, Esselstyn, and Jetz
+                (<xref alt="2019" rid="ref-uphamInferringMammalTree2019" ref-type="bibr">2019</xref>)
+                (what we used for TL but its only mammals…) but I’m sure
+                there will be others</p>
+              </list-item>
+            </list>
+          </list-item>
+          <list-item>
+            <p>Also limitation of scope… <italic>e.g.,</italic> do we
+            even dare to think about including plants/basal producers
+            (see <italic>e.g.,</italic> Valdovinos et al.
+            (<xref alt="2023" rid="ref-valdovinosBioenergeticFrameworkAboveground2023" ref-type="bibr">2023</xref>))</p>
+          </list-item>
+          <list-item>
+            <p>Taxonomic harmonisation - something to think about and
+            check</p>
+          </list-item>
+        </list>
       </list-item>
       <list-item>
         <p>compare model performance based on the ideas currently listed
@@ -412,10 +456,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   bit too much probably…</p>
   <disp-quote>
     <p>Thinking very long term here and maybe a bit beyond the scope but
-    also thinking about a multi- model approach? SO using one model to
-    build an initial network but maybe a second one to constrain it a
-    bit better. I blame this thought on the over-connected PFIM food
-    webs…</p>
+    also thinking about a multi- model approach? So in other words using
+    one model to build an initial network but maybe a second one to
+    constrain it a bit better. I blame this thought on the
+    over-connected PFIM food webs…</p>
   </disp-quote>
 </sec>
 </body>
@@ -423,6 +467,25 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <back>
 <ref-list>
   <title>References</title>
+  <ref id="ref-bambachAutecologyFillingEcospace2007">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bambach</surname><given-names>Richard K.</given-names></name>
+        <name><surname>Bush</surname><given-names>Andrew M.</given-names></name>
+        <name><surname>Erwin</surname><given-names>Douglas H.</given-names></name>
+      </person-group>
+      <article-title>Autecology and the Filling of Ecospace: Key Metazoan Radiations</article-title>
+      <source>Palaeontology</source>
+      <year iso-8601-date="2007">2007</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-08">2024</year><month>02</month><day>08</day></date-in-citation>
+      <volume>50</volume>
+      <issue>1</issue>
+      <issn>1475-4983</issn>
+      <pub-id pub-id-type="doi">10.1111/j.1475-4983.2006.00611.x</pub-id>
+      <fpage>1</fpage>
+      <lpage>22</lpage>
+    </element-citation>
+  </ref>
   <ref id="ref-caronAddressingEltonianShortfall2022">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -553,6 +616,82 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <year iso-8601-date="2006">2006</year>
       <fpage>27</fpage>
       <lpage>86</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-herbersteinAnimalTraitsCuratedAnimal2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Herberstein</surname><given-names>Marie E.</given-names></name>
+        <name><surname>McLean</surname><given-names>Donald James</given-names></name>
+        <name><surname>Lowe</surname><given-names>Elizabeth</given-names></name>
+        <name><surname>Wolff</surname><given-names>Jonas O.</given-names></name>
+        <name><surname>Khan</surname><given-names>Md Kawsar</given-names></name>
+        <name><surname>Smith</surname><given-names>Kaitlyn</given-names></name>
+        <name><surname>Allen</surname><given-names>Andrew P.</given-names></name>
+        <name><surname>Bulbert</surname><given-names>Matthew</given-names></name>
+        <name><surname>Buzatto</surname><given-names>Bruno A.</given-names></name>
+        <name><surname>Eldridge</surname><given-names>Mark D. B.</given-names></name>
+        <name><surname>Falster</surname><given-names>Daniel</given-names></name>
+        <name><surname>Fernandez Winzer</surname><given-names>Laura</given-names></name>
+        <name><surname>Griffith</surname><given-names>Simon C.</given-names></name>
+        <name><surname>Madin</surname><given-names>Joshua S.</given-names></name>
+        <name><surname>Narendra</surname><given-names>Ajay</given-names></name>
+        <name><surname>Westoby</surname><given-names>Mark</given-names></name>
+        <name><surname>Whiting</surname><given-names>Martin J.</given-names></name>
+        <name><surname>Wright</surname><given-names>Ian J.</given-names></name>
+        <name><surname>Carthey</surname><given-names>Alexandra J. R.</given-names></name>
+      </person-group>
+      <article-title>AnimalTraits - a curated animal trait database for body mass, metabolic rate and brain size</article-title>
+      <source>Scientific Data</source>
+      <publisher-name>Nature Publishing Group</publisher-name>
+      <year iso-8601-date="2022-06">2022</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-08">2024</year><month>02</month><day>08</day></date-in-citation>
+      <volume>9</volume>
+      <issue>1</issue>
+      <issn>2052-4463</issn>
+      <pub-id pub-id-type="doi">10.1038/s41597-022-01364-9</pub-id>
+      <fpage>265</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-jonesPanTHERIASpecieslevelDatabase2009">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jones</surname><given-names>Kate E.</given-names></name>
+        <name><surname>Bielby</surname><given-names>Jon</given-names></name>
+        <name><surname>Cardillo</surname><given-names>Marcel</given-names></name>
+        <name><surname>Fritz</surname><given-names>Susanne A.</given-names></name>
+        <name><surname>O’Dell</surname><given-names>Justin</given-names></name>
+        <name><surname>Orme</surname><given-names>C. David L.</given-names></name>
+        <name><surname>Safi</surname><given-names>Kamran</given-names></name>
+        <name><surname>Sechrest</surname><given-names>Wes</given-names></name>
+        <name><surname>Boakes</surname><given-names>Elizabeth H.</given-names></name>
+        <name><surname>Carbone</surname><given-names>Chris</given-names></name>
+        <name><surname>Connolly</surname><given-names>Christina</given-names></name>
+        <name><surname>Cutts</surname><given-names>Michael J.</given-names></name>
+        <name><surname>Foster</surname><given-names>Janine K.</given-names></name>
+        <name><surname>Grenyer</surname><given-names>Richard</given-names></name>
+        <name><surname>Habib</surname><given-names>Michael</given-names></name>
+        <name><surname>Plaster</surname><given-names>Christopher A.</given-names></name>
+        <name><surname>Price</surname><given-names>Samantha A.</given-names></name>
+        <name><surname>Rigby</surname><given-names>Elizabeth A.</given-names></name>
+        <name><surname>Rist</surname><given-names>Janna</given-names></name>
+        <name><surname>Teacher</surname><given-names>Amber</given-names></name>
+        <name><surname>Bininda-Emonds</surname><given-names>Olaf R. P.</given-names></name>
+        <name><surname>Gittleman</surname><given-names>John L.</given-names></name>
+        <name><surname>Mace</surname><given-names>Georgina M.</given-names></name>
+        <name><surname>Purvis</surname><given-names>Andy</given-names></name>
+      </person-group>
+      <article-title>PanTHERIA: A species-level database of life history, ecology, and geography of extant and recently extinct mammals</article-title>
+      <source>Ecology</source>
+      <year iso-8601-date="2009">2009</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-08">2024</year><month>02</month><day>08</day></date-in-citation>
+      <volume>90</volume>
+      <issue>9</issue>
+      <issn>1939-9170</issn>
+      <pub-id pub-id-type="doi">10.1890/08-1494.1</pub-id>
+      <fpage>2648</fpage>
+      <lpage>2648</lpage>
     </element-citation>
   </ref>
   <ref id="ref-jordanoChasingEcologicalInteractions2016">
@@ -816,6 +955,52 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <lpage></lpage>
     </element-citation>
   </ref>
+  <ref id="ref-uphamInferringMammalTree2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Upham</surname><given-names>Nathan S.</given-names></name>
+        <name><surname>Esselstyn</surname><given-names>Jacob A.</given-names></name>
+        <name><surname>Jetz</surname><given-names>Walter</given-names></name>
+      </person-group>
+      <article-title>Inferring the mammal tree: Species-level sets of phylogenies for questions in ecology, evolution, and conservation</article-title>
+      <source>PLOS Biology</source>
+      <publisher-name>Public Library of Science</publisher-name>
+      <year iso-8601-date="2019-12">2019</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2021-05-05">2021</year><month>05</month><day>05</day></date-in-citation>
+      <volume>17</volume>
+      <issue>12</issue>
+      <issn>1545-7885</issn>
+      <pub-id pub-id-type="doi">10.1371/journal.pbio.3000494</pub-id>
+      <fpage>e3000494</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-valdovinosBioenergeticFrameworkAboveground2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Valdovinos</surname><given-names>Fernanda S.</given-names></name>
+        <name><surname>Hale</surname><given-names>Kayla R. S.</given-names></name>
+        <name><surname>Dritz</surname><given-names>Sabine</given-names></name>
+        <name><surname>Glaum</surname><given-names>Paul R.</given-names></name>
+        <name><surname>McCann</surname><given-names>Kevin S.</given-names></name>
+        <name><surname>Simon</surname><given-names>Sophia M.</given-names></name>
+        <name><surname>Thébault</surname><given-names>Elisa</given-names></name>
+        <name><surname>Wetzel</surname><given-names>William C.</given-names></name>
+        <name><surname>Wootton</surname><given-names>Kate L.</given-names></name>
+        <name><surname>Yeakel</surname><given-names>Justin D.</given-names></name>
+      </person-group>
+      <article-title>A bioenergetic framework for aboveground terrestrial food webs</article-title>
+      <source>Trends in Ecology &amp; Evolution</source>
+      <year iso-8601-date="2023-03">2023</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-01-19">2024</year><month>01</month><day>19</day></date-in-citation>
+      <volume>38</volume>
+      <issue>3</issue>
+      <issn>0169-5347</issn>
+      <pub-id pub-id-type="doi">10.1016/j.tree.2022.11.004</pub-id>
+      <fpage>301</fpage>
+      <lpage>312</lpage>
+    </element-citation>
+  </ref>
   <ref id="ref-williamsSimpleRulesYield2000">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -833,6 +1018,28 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <pub-id pub-id-type="doi">10.1038/35004572</pub-id>
       <fpage>180</fpage>
       <lpage>183</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-wilmanEltonTraitsSpecieslevelForaging2014">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wilman</surname><given-names>Hamish</given-names></name>
+        <name><surname>Belmaker</surname><given-names>Jonathan</given-names></name>
+        <name><surname>Simpson</surname><given-names>Jennifer</given-names></name>
+        <name><surname>de la Rosa</surname><given-names>Carolina</given-names></name>
+        <name><surname>Rivadeneira</surname><given-names>Marcelo M.</given-names></name>
+        <name><surname>Jetz</surname><given-names>Walter</given-names></name>
+      </person-group>
+      <article-title>EltonTraits 1.0: Species-level foraging attributes of the world’s birds and mammals</article-title>
+      <source>Ecology</source>
+      <year iso-8601-date="2014">2014</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-08">2024</year><month>02</month><day>08</day></date-in-citation>
+      <volume>95</volume>
+      <issue>7</issue>
+      <issn>1939-9170</issn>
+      <pub-id pub-id-type="doi">10.1890/13-1917.1</pub-id>
+      <fpage>2027</fpage>
+      <lpage>2027</lpage>
     </element-citation>
   </ref>
   <ref id="ref-yeakelCollapseEcologicalNetwork2014">

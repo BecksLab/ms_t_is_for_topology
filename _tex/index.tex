@@ -336,6 +336,9 @@ the sun and 2) I think it also brings up the interesting question of can
 we use modern structure to predict past ones? Here one might expect a
 more mechanistic approach to shine.
 
+Draw the other datasets from \texttt{Mangal} because they will be nicely
+formatted and essentially at point and shoot level
+
 \subsection{Comparing different
 models}\label{comparing-different-models}
 
@@ -350,7 +353,7 @@ models}\label{comparing-different-models}
   \begin{itemize}
   \tightlist
   \item
-    \emph{e.g.,} some models wil be in ESpeciesInteractionNetworks.jl
+    \emph{e.g.,} some models wil be in SpeciesInteractionNetworks.jl
     (new EcoNet); I know (parts of) the transfer learning stuff is and
     the niche model
   \item
@@ -362,9 +365,38 @@ models}\label{comparing-different-models}
     analyses
   \end{itemize}
 \item
-  Create networks for the different datasets/scenarios we select - I
+  Curate networks for the different datasets/scenarios we select - I
   feel like there might be some scenarios that we can't do all models
   for all datasets but maybe I'm being a pessimist.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Need to also think about where one might find the additional data
+    for some of the models\ldots{}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Body size: Herberstein et al. (2022) - Although maybe Andrew has
+      strong thotsTM RE the one true body size database to rule them
+      all\ldots{}
+    \item
+      Other trait sources: Wilman et al. (2014) and Jones et al. (2009)
+    \item
+      This is where we'll get the paleo traits from if I'm correct
+      Bambach et al. (2007)
+    \item
+      Phylogeny stuff: Upham et al. (2019) (what we used for TL but its
+      only mammals\ldots) but I'm sure there will be others
+    \end{itemize}
+  \item
+    Also limitation of scope\ldots{} \emph{e.g.,} do we even dare to
+    think about including plants/basal producers (see \emph{e.g.,}
+    Valdovinos et al. (2023))
+  \item
+    Taxonomic harmonisation - something to think about and check
+  \end{itemize}
 \item
   compare model performance based on the ideas currently listed in the
   results section.
@@ -435,9 +467,10 @@ probably\ldots{}
 
 \begin{quote}
 Thinking very long term here and maybe a bit beyond the scope but also
-thinking about a multi- model approach? SO using one model to build an
-initial network but maybe a second one to constrain it a bit better. I
-blame this thought on the over-connected PFIM food webs\ldots{}
+thinking about a multi- model approach? So in other words using one
+model to build an initial network but maybe a second one to constrain it
+a bit better. I blame this thought on the over-connected PFIM food
+webs\ldots{}
 \end{quote}
 
 \section*{References}\label{references}
@@ -451,6 +484,12 @@ Notebook}}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-bambachAutecologyFillingEcospace2007}
+Bambach, R. K., Bush, A. M., \& Erwin, D. H. (2007). Autecology and the
+{Filling} of {Ecospace}: {Key Metazoan Radiations}.
+\emph{Palaeontology}, \emph{50}(1), 1--22.
+\url{https://doi.org/10.1111/j.1475-4983.2006.00611.x}
+
 \bibitem[\citeproctext]{ref-caronAddressingEltonianShortfall2022}
 Caron, D., Maiorano, L., Thuiller, W., \& Pollock, L. J. (2022).
 Addressing the {Eltonian} shortfall with trait-based interaction models.
@@ -491,6 +530,20 @@ Dunne, Jennifer A., Williams, R. J., Martinez, N. D., Wood, R. A., \&
 Erwin, D. H. (2008). Compilation and {Network Analyses} of {Cambrian
 Food Webs}. \emph{PLOS Biology}, \emph{6}(4), e102.
 \url{https://doi.org/10.1371/journal.pbio.0060102}
+
+\bibitem[\citeproctext]{ref-herbersteinAnimalTraitsCuratedAnimal2022}
+Herberstein, M. E., McLean, D. J., Lowe, E., Wolff, J. O., Khan, M. K.,
+Smith, K., et al. (2022). {AnimalTraits} - a curated animal trait
+database for body mass, metabolic rate and brain size. \emph{Scientific
+Data}, \emph{9}(1), 265.
+\url{https://doi.org/10.1038/s41597-022-01364-9}
+
+\bibitem[\citeproctext]{ref-jonesPanTHERIASpecieslevelDatabase2009}
+Jones, K. E., Bielby, J., Cardillo, M., Fritz, S. A., O'Dell, J., Orme,
+C. D. L., et al. (2009). {PanTHERIA}: A species-level database of life
+history, ecology, and geography of extant and recently extinct mammals.
+\emph{Ecology}, \emph{90}(9), 2648--2648.
+\url{https://doi.org/10.1890/08-1494.1}
 
 \bibitem[\citeproctext]{ref-jordanoChasingEcologicalInteractions2016}
 Jordano, P. (2016a). Chasing {Ecological Interactions}. \emph{PLOS
@@ -567,10 +620,29 @@ predict potential species interaction networks despite data limitations.
 \emph{Methods in Ecology and Evolution}, \emph{14}(12), 2917--2930.
 \url{https://doi.org/10.1111/2041-210X.14228}
 
+\bibitem[\citeproctext]{ref-uphamInferringMammalTree2019}
+Upham, N. S., Esselstyn, J. A., \& Jetz, W. (2019). Inferring the mammal
+tree: {Species-level} sets of phylogenies for questions in ecology,
+evolution, and conservation. \emph{PLOS Biology}, \emph{17}(12),
+e3000494. \url{https://doi.org/10.1371/journal.pbio.3000494}
+
+\bibitem[\citeproctext]{ref-valdovinosBioenergeticFrameworkAboveground2023}
+Valdovinos, F. S., Hale, K. R. S., Dritz, S., Glaum, P. R., McCann, K.
+S., Simon, S. M., et al. (2023). A bioenergetic framework for
+aboveground terrestrial food webs. \emph{Trends in Ecology \&
+Evolution}, \emph{38}(3), 301--312.
+\url{https://doi.org/10.1016/j.tree.2022.11.004}
+
 \bibitem[\citeproctext]{ref-williamsSimpleRulesYield2000}
 Williams, R. J., \& Martinez, N. D. (2000). Simple rules yield complex
 food webs. \emph{Nature}, \emph{404}(6774), 180--183.
 \url{https://doi.org/10.1038/35004572}
+
+\bibitem[\citeproctext]{ref-wilmanEltonTraitsSpecieslevelForaging2014}
+Wilman, H., Belmaker, J., Simpson, J., de la Rosa, C., Rivadeneira, M.
+M., \& Jetz, W. (2014). {EltonTraits} 1.0: {Species-level} foraging
+attributes of the world's birds and mammals. \emph{Ecology},
+\emph{95}(7), 2027--2027. \url{https://doi.org/10.1890/13-1917.1}
 
 \bibitem[\citeproctext]{ref-yeakelCollapseEcologicalNetwork2014}
 Yeakel, J. D., Pires, M. M., Rudolf, L., Dominy, N. J., Koch, P. L.,
