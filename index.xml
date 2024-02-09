@@ -167,8 +167,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <sec id="overview-of-topology-generators">
     <title>2.1 Overview of topology generators</title>
     <p>I know table are awful but in this case they may make more sense.
-    Not sure about putting in some papers that have used the model -
-    totes happy to drop those I think…</p>
+    Also I don’t think I’m at the point where I can say that the table
+    is complete/comprehensive but it getting there Not sure about
+    putting in some papers that have used the model - totes happy to
+    drop those I think…</p>
     <fig id="tbl-history">
       <caption><p>Table 1: Lets make a table that gives an overview of
       the different topology generators that we will look
@@ -311,6 +313,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
   <sec id="comparing-different-models">
     <title>2.3 Comparing different models</title>
+    <p>For now the (still essentially pending) workflow/associated code
+    can be found at the following repository
+    <ext-link ext-link-type="uri" xlink:href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</ext-link></p>
     <list list-type="order">
       <list-item>
         <p>Shortlist/finalise the different topo generators</p>
