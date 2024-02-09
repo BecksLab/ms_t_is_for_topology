@@ -52,7 +52,7 @@ At some point we are going to need to discuss the key differences and implicatio
 
 ### Overview of topology generators
 
-I know table are awful but in this case they may make more sense. Not sure about putting in some papers that have used the model - totes happy to drop those I think...
+I know table are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
 | Approach          | Reference                                    | Core Mechanism     | *e.g.,* uses       |
 |-------------------|----------------------------------------------|--------------------|--------------------|
@@ -79,6 +79,8 @@ I think we should also use the Dunne (I think) Cambrian (also think) network (I 
 Draw the other datasets from `Mangal` because they will be nicely formatted and essentially at point and shoot level
 
 ### Comparing different models
+
+For now the (still essentially pending) workflow/associated code can be found at the following repository [BecksLab/topology_generators](https://github.com/BecksLab/topology_generators)
 
 1. Shortlist/finalise the different topo generators
 2. collate/translate into `Julia`
