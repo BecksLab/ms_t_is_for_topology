@@ -10,3 +10,4 @@
 /.luarc.json
 
 .vscode/*
+.DS_Store
