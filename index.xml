@@ -70,10 +70,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <corresp id="cor-1">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-08">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-09">
 <year>2024</year>
 <month>2</month>
-<day>8</day>
+<day>9</day>
 </pub-date>
 
 
@@ -113,7 +113,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   2016a</xref>); Poisot et al.
   (<xref alt="2021" rid="ref-poisotGlobalKnowledgeGaps2021" ref-type="bibr">2021</xref>);
   Strydom et al.
-  (<xref alt="2021" rid="ref-strydomRoadmapPredictingSpecies2021" ref-type="bibr">2021</xref>)</p>
+  (<xref alt="2021" rid="ref-strydomRoadmapPredictingSpecies2021" ref-type="bibr">2021</xref>)
+  (shameless self plug)</p>
   <p>Maybe a brief history of the development of predictive tools/topo
   generators? Sort of where the theory/body of work was based and how
   that has changed? IS there a difference between toppo generator and
@@ -201,7 +202,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
             <tr>
               <td>Niche model</td>
               <td>Williams and Martinez
-              (<xref alt="2000" rid="ref-williamsSimpleRulesYield2000" ref-type="bibr">2000</xref>)</td>
+              (<xref alt="2000" rid="ref-williamsSimpleRulesYield2000" ref-type="bibr">2000</xref>);
+              Williams and Martinez
+              (<xref alt="2008" rid="ref-williamsSuccessItsLimits2008" ref-type="bibr">2008</xref>)</td>
               <td>structural</td>
               <td></td>
             </tr>
@@ -446,14 +449,23 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <title>4 Discussion</title>
   <p>I think a big take home will (hopefully) be how different
   approaches do better in different situations and so you as an end user
-  need to take this into consideration and pick accordingly.</p>
+  need to take this into consideration and pick accordingly. I think
+  Petchey et al.
+  (<xref alt="2011" rid="ref-petcheyFitEfficiencyBiology2011" ref-type="bibr">2011</xref>)
+  might have (and share) some thoughts on this (thanks Andrew). I feel
+  like I need to look at Berlow, Brose, and Martinez
+  (<xref alt="2008" rid="ref-berlowGoldilocksFactorFood2008" ref-type="bibr">2008</xref>)
+  but maybe not exactly in this context but vaguely adjacent.</p>
+  <p>An interesting thing to also think about (and arguably it will be
+  addressed based on some of the other thoughts and ideas) is data
+  dependant and data independent ‘parametrisation’ of the models…</p>
   <p>I probably think about this point too much but a point of
   discussion that I think will be interesting to bring up the idea that
   if a model is missing a specific pairwise link but doing well at the
-  structural level when does it matter? I think this is covered with the
-  whole node vs graph level performance but I kind of just want to bring
-  it up here again because also one of those things that I think about a
-  bit too much probably…</p>
+  structural level then when does it matter? I think this is covered
+  with the whole node vs graph level performance but I kind of just want
+  to bring it up here again because also one of those things that I
+  think about a bit too much probably…</p>
   <disp-quote>
     <p>Thinking very long term here and maybe a bit beyond the scope but
     also thinking about a multi- model approach? So in other words using
@@ -484,6 +496,25 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <pub-id pub-id-type="doi">10.1111/j.1475-4983.2006.00611.x</pub-id>
       <fpage>1</fpage>
       <lpage>22</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-berlowGoldilocksFactorFood2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Berlow</surname><given-names>Eric L.</given-names></name>
+        <name><surname>Brose</surname><given-names>Ulrich</given-names></name>
+        <name><surname>Martinez</surname><given-names>Neo D.</given-names></name>
+      </person-group>
+      <article-title>The “Goldilocks factor” in food webs</article-title>
+      <source>Proceedings of the National Academy of Sciences</source>
+      <publisher-name>Proceedings of the National Academy of Sciences</publisher-name>
+      <year iso-8601-date="2008-03">2008</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-09">2024</year><month>02</month><day>09</day></date-in-citation>
+      <volume>105</volume>
+      <issue>11</issue>
+      <pub-id pub-id-type="doi">10.1073/pnas.0800967105</pub-id>
+      <fpage>4079</fpage>
+      <lpage>4080</lpage>
     </element-citation>
   </ref>
   <ref id="ref-caronAddressingEltonianShortfall2022">
@@ -723,6 +754,26 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <date-in-citation content-type="access-date"><year iso-8601-date="2016-10-12">2016</year><month>10</month><day>12</day></date-in-citation>
       <issn>02698463</issn>
       <pub-id pub-id-type="doi">10.1111/1365-2435.12763</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-petcheyFitEfficiencyBiology2011">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Petchey</surname><given-names>Owen L.</given-names></name>
+        <name><surname>Beckerman</surname><given-names>Andrew P.</given-names></name>
+        <name><surname>Riede</surname><given-names>Jens O.</given-names></name>
+        <name><surname>Warren</surname><given-names>Philip H.</given-names></name>
+      </person-group>
+      <article-title>Fit, efficiency, and biology: Some thoughts on judging food web models</article-title>
+      <source>Journal of Theoretical Biology</source>
+      <year iso-8601-date="2011-06">2011</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-09">2024</year><month>02</month><day>09</day></date-in-citation>
+      <volume>279</volume>
+      <issue>1</issue>
+      <issn>0022-5193</issn>
+      <pub-id pub-id-type="doi">10.1016/j.jtbi.2011.03.019</pub-id>
+      <fpage>169</fpage>
+      <lpage>171</lpage>
     </element-citation>
   </ref>
   <ref id="ref-petcheySizeForagingFood2008">
@@ -1018,6 +1069,24 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <pub-id pub-id-type="doi">10.1038/35004572</pub-id>
       <fpage>180</fpage>
       <lpage>183</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-williamsSuccessItsLimits2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Williams</surname><given-names>Richard J.</given-names></name>
+        <name><surname>Martinez</surname><given-names>Neo D.</given-names></name>
+      </person-group>
+      <article-title>Success and its limits among structural models of complex food webs</article-title>
+      <source>The Journal of Animal Ecology</source>
+      <year iso-8601-date="2008-05">2008</year><month>05</month>
+      <volume>77</volume>
+      <issue>3</issue>
+      <issn>1365-2656</issn>
+      <pub-id pub-id-type="doi">10.1111/j.1365-2656.2008.01362.x</pub-id>
+      <pub-id pub-id-type="pmid">18284474</pub-id>
+      <fpage>512</fpage>
+      <lpage>519</lpage>
     </element-citation>
   </ref>
   <ref id="ref-wilmanEltonTraitsSpecieslevelForaging2014">
