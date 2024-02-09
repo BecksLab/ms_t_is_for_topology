@@ -40,8 +40,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <role>Nonsense</role>
 <role>Rascality</role>
 <role>Visualisation (although absent)</role>
-<xref ref-type="aff" rid="aff-1">a</xref>
-<xref ref-type="corresp" rid="cor-1">&#x002A;</xref>
+<xref ref-type="aff" rid="sheffield">a</xref>
+<xref ref-type="corresp" rid="cor-ts">&#x002A;</xref>
 </contrib>
 <contrib contrib-type="author">
 <contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
@@ -51,10 +51,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </name>
 <string-name>Andrew P. Beckerman</string-name>
 
-<xref ref-type="aff" rid="aff-1">a</xref>
+<xref ref-type="aff" rid="sheffield">a</xref>
 </contrib>
 </contrib-group>
-<aff id="aff-1">
+<aff id="sheffield">
 <institution-wrap>
 <institution>University of Sheffield</institution>
 </institution-wrap>
@@ -67,7 +67,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 </aff>
 <author-notes>
-<corresp id="cor-1">t.strydom@sheffield.ac.uk</corresp>
+<corresp id="cor-ts">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
 <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-09">
@@ -94,6 +94,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </kwd-group>
 
 
+<funding-group>
+<funding-statement>The author(s) received no specific funding for this
+work. Well they did I just haven’t done the</funding-statement>
+</funding-group>
 
 
 </article-meta>
@@ -129,17 +133,22 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   (<xref alt="2010" rid="ref-rohrModelingFoodWebs2010" ref-type="bibr">2010</xref>)
   and Strydom et al.
   (<xref alt="2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">2022</xref>)
-  that sit in the weird liminal latent space… Here I will probably get
-  on my (newly discovered) soapbox and wax lyrical about how in certain
-  situations structure is enough (and that will probably be for some
-  high-level things like thinking about energy flows etc., I can also
-  see a world in which maybe you want to do some sort of
-  robustness/extinction work - since then you’re usually doing ‘random’
-  (within limits) extinctions) but there may be use cases where we are
-  really interested in the node-level interactions
+  that sit in the weird liminal latent space…</p>
+  <p>Here I will probably get on my (newly discovered) soapbox and wax
+  lyrical about how in certain situations structure is enough (and that
+  will probably be for some high-level things like thinking about energy
+  flows etc., I can also see a world in which maybe you want to do some
+  sort of robustness/extinction work - since then you’re usually doing
+  ‘random’ (within limits) extinctions) but there may be use cases where
+  we are really interested in the node-level interactions
   <italic>i.e.,</italic> species identity is like a thing we need to
   care about and also be able to retrieve specific interactions at
-  specific nodes correctly.</p>
+  specific nodes correctly. What is the purpose of generating a network?
+  Is it an element of a bigger question we are asking,
+  <italic>e.g.,</italic> I want to generate a series of networks to do
+  some extinction simulations/bioenergetic stuff OR are we looking for a
+  ‘final product’ network that is relevant to a specific location? (this
+  can still be broad in geographic scope).</p>
   <p>At some point we are going to need to discuss the key differences
   and implications between predicting a metaweb (<italic>sensu</italic>
   Jennifer A. Dunne
@@ -178,10 +187,14 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <table-wrap>
         <table>
           <colgroup>
-            <col width="18%" />
-            <col width="44%" />
-            <col width="19%" />
-            <col width="19%" />
+            <col width="9%" />
+            <col width="23%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="23%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="6%" />
           </colgroup>
           <thead>
             <tr>
@@ -189,6 +202,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
               <th>Reference</th>
               <th>Core Mechanism</th>
               <th><italic>e.g.,</italic> uses</th>
+              <th>Applications (potential)</th>
+              <th>End product</th>
+              <th>Theory basis</th>
+              <th>Assumptions</th>
             </tr>
           </thead>
           <tbody>
@@ -200,6 +217,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
               (<xref alt="1997" rid="ref-cohenStochasticTheoryCommunity1997" ref-type="bibr">1997</xref>)</td>
               <td>structural</td>
               <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
               <td>Niche model</td>
@@ -209,6 +230,12 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
               (<xref alt="2008" rid="ref-williamsSuccessItsLimits2008" ref-type="bibr">2008</xref>)</td>
               <td>structural</td>
               <td></td>
+              <td></td>
+              <td>networks have a finite number of links and species are
+              partitioned along a resource</td>
+              <td>A network configuration for a given number of species
+              &amp; connectance</td>
+              <td>connectance, and others</td>
             </tr>
             <tr>
               <td>PFIM</td>
@@ -216,6 +243,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
               (<xref alt="2024" rid="ref-shawFrameworkReconstructingAncient2024" ref-type="bibr">2024</xref>)</td>
               <td>mechanistic</td>
               <td>Dunhill (in review)</td>
+              <td>prehistoric networks (but can be modified)</td>
+              <td>Metaweb (I’d argue)</td>
+              <td>traits determine interactions</td>
+              <td>feeding mechanisms are trait correlated</td>
             </tr>
             <tr>
               <td>Log-ratio</td>
@@ -227,11 +258,19 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
               Pires et al.
               (<xref alt="2020" rid="ref-piresMegafaunalExtinctionsHuman2020" ref-type="bibr">2020</xref>)
               (?)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
               <td>Nested hierarchy</td>
               <td>Cattin et al.
               (<xref alt="2004" rid="ref-cattinPhylogeneticConstraintsAdaptation2004" ref-type="bibr">2004</xref>)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
             </tr>
@@ -241,11 +280,19 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
               (<xref alt="2008" rid="ref-petcheySizeForagingFood2008" ref-type="bibr">2008</xref>)</td>
               <td>mechanistic</td>
               <td>probably multiple</td>
+              <td></td>
+              <td>working on it…</td>
+              <td>diet and body size determine interactions</td>
+              <td>size and resources (many) limitations</td>
             </tr>
             <tr>
               <td>Stochastic</td>
               <td>Rossberg et al.
               (<xref alt="2006" rid="ref-rossbergFoodWebsExperts2006" ref-type="bibr">2006</xref>)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
             </tr>
@@ -256,6 +303,11 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
               <td>latent trait space</td>
               <td>Strydom et al.
               (<xref alt="2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">2022</xref>)</td>
+              <td>Generate metaweb for specific species pool</td>
+              <td>Probabilistic metaweb</td>
+              <td>interactions are ‘encoded’ and can thus be extracted
+              and transferred to similar species</td>
+              <td>evolutionary backbones/signals</td>
             </tr>
             <tr>
               <td>Trait-based</td>
@@ -264,6 +316,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
               <td>mechanistic</td>
               <td>Caron et al.
               (<xref alt="2023" rid="ref-caronTrophicInteractionModels2023" ref-type="bibr">2023</xref>)</td>
+              <td></td>
+              <td>metaweb</td>
+              <td>traits determine interactions</td>
+              <td>feeding mechanisms are trait correlated</td>
             </tr>
           </tbody>
         </table>

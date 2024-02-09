@@ -217,6 +217,7 @@ constrained by) structure, others are more mechanistic in nature
 \emph{i.e.,} species \emph{a} has the capacity to eat species \emph{b}
 because traits (read gob size), and then you get Rohr et al. (2010) and
 Strydom et al. (2022) that sit in the weird liminal latent space\ldots{}
+
 Here I will probably get on my (newly discovered) soapbox and wax
 lyrical about how in certain situations structure is enough (and that
 will probably be for some high-level things like thinking about energy
@@ -225,7 +226,12 @@ sort of robustness/extinction work - since then you're usually doing
 `random' (within limits) extinctions) but there may be use cases where
 we are really interested in the node-level interactions \emph{i.e.,}
 species identity is like a thing we need to care about and also be able
-to retrieve specific interactions at specific nodes correctly.
+to retrieve specific interactions at specific nodes correctly. What is
+the purpose of generating a network? Is it an element of a bigger
+question we are asking, \emph{e.g.,} I want to generate a series of
+networks to do some extinction simulations/bioenergetic stuff OR are we
+looking for a `final product' network that is relevant to a specific
+location? (this can still be broad in geographic scope).
 
 At some point we are going to need to discuss the key differences and
 implications between predicting a metaweb (\emph{sensu} Jennifer A.
@@ -257,10 +263,14 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1810}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.4381}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1905}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1905}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0931}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2255}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2255}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0637}}@{}}
 \caption{Lets make a table that gives an overview of the different
 topology generators that we will look
 at}\label{tbl-history}\tabularnewline
@@ -273,6 +283,14 @@ Reference
 Core Mechanism
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \emph{e.g.,} uses
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Applications (potential)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+End product
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Theory basis
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Assumptions
 \end{minipage} \\
 \midrule\noalign{}
 \endfirsthead
@@ -285,24 +303,44 @@ Reference
 Core Mechanism
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \emph{e.g.,} uses
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Applications (potential)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+End product
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Theory basis
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Assumptions
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
 Cascade model & Joel E. Cohen et al. (1990); Joel E. Cohen et al. (1997)
-& structural & \\
+& structural & & & & & \\
 Niche model & Williams \& Martinez (2000); Williams \& Martinez (2008) &
-structural & \\
-PFIM & Shaw et al. (2024) & mechanistic & Dunhill (in review) \\
+structural & & & networks have a finite number of links and species are
+partitioned along a resource & A network configuration for a given
+number of species \& connectance & connectance, and others \\
+PFIM & Shaw et al. (2024) & mechanistic & Dunhill (in review) &
+prehistoric networks (but can be modified) & Metaweb (I'd argue) &
+traits determine interactions & feeding mechanisms are trait
+correlated \\
 Log-ratio & Rohr et al. (2010) & latent trait space & Yeakel et al.
-(2014), Pires et al. (2020) (?) \\
-Nested hierarchy & Cattin et al. (2004) & & \\
-ADBM & Petchey et al. (2008) & mechanistic & probably multiple \\
-Stochastic & Rossberg et al. (2006) & & \\
+(2014), Pires et al. (2020) (?) & & & & \\
+Nested hierarchy & Cattin et al. (2004) & & & & & & \\
+ADBM & Petchey et al. (2008) & mechanistic & probably multiple & &
+working on it\ldots{} & diet and body size determine interactions & size
+and resources (many) limitations \\
+Stochastic & Rossberg et al. (2006) & & & & & & \\
 Graph Embedding & Strydom et al. (2023) & latent trait space & Strydom
-et al. (2022) \\
-Trait-based & Caron et al. (2022) & mechanistic & Caron et al. (2023) \\
+et al. (2022) & Generate metaweb for specific species pool &
+Probabilistic metaweb & interactions are `encoded' and can thus be
+extracted and transferred to similar species & evolutionary
+backbones/signals \\
+Trait-based & Caron et al. (2022) & mechanistic & Caron et al. (2023) &
+& metaweb & traits determine interactions & feeding mechanisms are trait
+correlated \\
 \end{longtable}
 
 \begin{quote}
