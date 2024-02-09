@@ -2,6 +2,7 @@
 title: T is for Topology
 author:
   - name: Tanya Strydom
+    id: ts
     orcid: 0000-0001-6067-1349
     corresponding: true
     email: t.strydom@sheffield.ac.uk
@@ -10,14 +11,17 @@ author:
       - Nonsense
       - Rascality
       - Visualisation (although absent)
-    affiliations:
-      - University of Sheffield
+    affiliation:
+      - id: sheffield
+        name: University of Sheffield
   - name: Andrew P. Beckerman
+    id: apb
     orcid: 0000-0002-7859-8394
     corresponding: false
     roles: []
     affiliations:
-      - University of Sheffield
+      - ref: sheffield
+funding: "The author(s) received no specific funding for this work. Well they did I just haven't done the "
 keywords:
   - food web
   - network construction
@@ -25,9 +29,6 @@ abstract: |
   Pending...
 plain-language-summary: |
   We want to know a bit more about the different network topology generators (predict tools) and how they differ - *i.e.,*  their strengths and weaknesses
-key-points:
-  - Important point 1
-  - Important point 2
 date: last-modified
 bibliography: references.bib
 citation:
@@ -42,7 +43,9 @@ The standard run of the mill that we cannot always feasibly construct networks b
 
 Maybe a brief history of the development of predictive tools/topo generators? Sort of where the theory/body of work was based and how that has changed? IS there a difference between toppo generator and predictive tool - I'm inclined to think that it aligns with the whole debate of high level structure vs node-level perfection
 
-Maybe start here with discussing the core mechanistic differences that models will work at --- some are really concerned about (and thus constrained by) structure, others are more mechanistic in nature *i.e.,* species *a* has the capacity to eat species *b* because traits (read gob size), and then you get @rohrModelingFoodWebs2010 and @strydomFoodWebReconstruction2022 that sit in the weird liminal latent space... Here I will probably get on my (newly discovered) soapbox and wax lyrical about how in certain situations structure is enough (and that will probably be for some high-level things like thinking about energy flows etc., I can also see a world in which maybe you want to do some sort of robustness/extinction work - since then you're usually doing 'random' (within limits) extinctions) but there may be use cases where we are really interested in the node-level interactions *i.e.,* species identity is like a thing we need to care about and also be able to retrieve specific interactions at specific nodes correctly. 
+Maybe start here with discussing the core mechanistic differences that models will work at --- some are really concerned about (and thus constrained by) structure, others are more mechanistic in nature *i.e.,* species *a* has the capacity to eat species *b* because traits (read gob size), and then you get @rohrModelingFoodWebs2010 and @strydomFoodWebReconstruction2022 that sit in the weird liminal latent space... 
+
+Here I will probably get on my (newly discovered) soapbox and wax lyrical about how in certain situations structure is enough (and that will probably be for some high-level things like thinking about energy flows etc., I can also see a world in which maybe you want to do some sort of robustness/extinction work - since then you're usually doing 'random' (within limits) extinctions) but there may be use cases where we are really interested in the node-level interactions *i.e.,* species identity is like a thing we need to care about and also be able to retrieve specific interactions at specific nodes correctly. What is the purpose of generating a network? Is it an element of a bigger question we are asking, *e.g.,* I want to generate a series of networks to do some extinction simulations/bioenergetic stuff OR are we looking for a 'final product' network that is relevant to a specific location? (this can still be broad in geographic scope). 
 
 At some point we are going to need to discuss the key differences and implications between predicting a metaweb (*sensu* @dunneNetworkStructureFood2006) and a network realisation. And here I can't help but think about @poisotSpeciesWhyEcological2015 (and probably other papers) that discuss how the local factors are going to play a role and even the same pair of species may interact differently in different points in the landscape.
 
@@ -54,17 +57,17 @@ At some point we are going to need to discuss the key differences and implicatio
 
 I know table are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
-| Approach          | Reference                                    | Core Mechanism     | *e.g.,* uses       |
-|-------------------|----------------------------------------------|--------------------|--------------------|
-| Cascade model     | @cohenCommunityFoodWebs1990; @cohenStochasticTheoryCommunity1997 | structural         | |
-| Niche model       | @williamsSimpleRulesYield2000; @williamsSuccessItsLimits2008     | structural         | |
-| PFIM              | @shawFrameworkReconstructingAncient2024      | mechanistic        | Dunhill (in review)|
-| Log-ratio         | @rohrModelingFoodWebs2010                    | latent trait space | @yeakelCollapseEcologicalNetwork2014, @piresMegafaunalExtinctionsHuman2020 (?)|
-| Nested hierarchy  | @cattinPhylogeneticConstraintsAdaptation2004 |                    | |
-| ADBM              | @petcheySizeForagingFood2008                 | mechanistic        | probably multiple  |
-| Stochastic        | @rossbergFoodWebsExperts2006                 |                    | |
-| Graph Embedding   | @strydomGraphEmbeddingTransfer2023           | latent trait space | @strydomFoodWebReconstruction2022 |
-| Trait-based       | @caronAddressingEltonianShortfall2022        | mechanistic        | @caronTrophicInteractionModels2023|
+| Approach          | Reference                                    | Core Mechanism     | *e.g.,* uses        | Applications (potential)                     | End product        | Theory basis        | Assumptions |
+|-------------------|----------------------------------------------|--------------------|--------------------|----------------------------------------------|--------------------|--------------------|-------------|
+| Cascade model     | @cohenCommunityFoodWebs1990; @cohenStochasticTheoryCommunity1997 | structural         | | | | | |
+| Niche model       | @williamsSimpleRulesYield2000; @williamsSuccessItsLimits2008     | structural         | | | networks have a finite number of links and species are partitioned along a resource | A network configuration for a given number of species & connectance | connectance, and others |
+| PFIM              | @shawFrameworkReconstructingAncient2024      | mechanistic        | Dunhill (in review)| prehistoric networks (but can be modified) | Metaweb (I'd argue) | traits determine interactions | feeding mechanisms are trait correlated |
+| Log-ratio         | @rohrModelingFoodWebs2010                    | latent trait space | @yeakelCollapseEcologicalNetwork2014, @piresMegafaunalExtinctionsHuman2020 (?)| | | | |
+| Nested hierarchy  | @cattinPhylogeneticConstraintsAdaptation2004 |                    | | | | | |
+| ADBM              | @petcheySizeForagingFood2008                 | mechanistic        | probably multiple  | | working on it... | diet and body size determine interactions | size and resources (many) limitations |
+| Stochastic        | @rossbergFoodWebsExperts2006                 |                    | | | | | | |
+| Graph Embedding   | @strydomGraphEmbeddingTransfer2023           | latent trait space | @strydomFoodWebReconstruction2022 | Generate metaweb for specific species pool | Probabilistic metaweb | interactions are 'encoded' and can thus be extracted and transferred to similar species | evolutionary backbones/signals |
+| Trait-based       | @caronAddressingEltonianShortfall2022        | mechanistic        | @caronTrophicInteractionModels2023| | metaweb | traits determine interactions | feeding mechanisms are trait correlated |
 
 : Lets make a table that gives an overview of the different topology generators that we will look at {#tbl-history}
 
