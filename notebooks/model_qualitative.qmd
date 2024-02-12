@@ -11,27 +11,33 @@ library(ggVennDiagram)
 ```
 
 
-First we need to create the 
+First we need to create the df with the relevant 'traits' for each model
 
 ```{r}
-genes <- paste("gene",1:1000,sep="")
-set.seed(20231214)
-x <- list(A=sample(genes,300),
-          B=sample(genes,525),
-          C=sample(genes,440),
-          D=sample(genes,350))
+
+x <- list(Niche=c("species agnostic", "structural", "synthetic network"),
+          ADBM=c("node-level", "mechanistic"),
+          `Transfer`=c("node-level", "embedding", "metaweb"),
+          PFIM=c("node-level", "mechanistic", "metaweb"),
+          Cascade=c("species agnostic", "structural", "synthetic network"))
+
+venn <- Venn(x)
+data <- process_data(venn)
 ```
 
-Create spatial plot:
+Create venn diagram:
 
 ```{r}
 #| label: fig-venn
 #| fig-cap: "Venn diagram for qualitative analysis/overview of the fancy maths things"
 #| fig-alt: "TODO"
-ggVennDiagram(x) + 
-  scale_fill_gradient(low="grey90",
-                      high = "red")
+ggVennDiagram(x, 
+              label = "none") +
+  theme_void() +
+  theme(legend.position = 'none')
 ```
+
+Looking at it now I don't think this is the wayTM and trying to sort of 'ordinate' modelling space might actually be more meaningful... Specifically thinking here that I need to also actually just read about model comparison (but without the performance aspect)
 
 ## References {.unnumbered}
 

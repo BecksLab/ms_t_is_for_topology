@@ -321,6 +321,16 @@ work. Well they did I just haven’t done the</funding-statement>
               <td>traits determine interactions</td>
               <td>feeding mechanisms are trait correlated</td>
             </tr>
+            <tr>
+              <td>Random</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>chaos and anarchy</td>
+            </tr>
           </tbody>
         </table>
       </table-wrap>
@@ -1253,21 +1263,25 @@ The following object is masked from 'package:tidyr':
     unite</preformat>
 </sec>
 </sec>
-<p>First we need to create the</p>
+<p>First we need to create the df with the relevant ‘traits’ for each
+model</p>
 <sec id="nb-code-cell-2-nb-1" specific-use="notebook-code">
-<code language="r script">genes &lt;- paste(&quot;gene&quot;,1:1000,sep=&quot;&quot;)
-set.seed(20231214)
-x &lt;- list(A=sample(genes,300),
-          B=sample(genes,525),
-          C=sample(genes,440),
-          D=sample(genes,350))
+<code language="r script">x &lt;- list(Niche=c(&quot;species agnostic&quot;, &quot;structural&quot;, &quot;synthetic network&quot;),
+          ADBM=c(&quot;node-level&quot;, &quot;mechanistic&quot;),
+          `Transfer`=c(&quot;node-level&quot;, &quot;embedding&quot;, &quot;metaweb&quot;),
+          PFIM=c(&quot;node-level&quot;, &quot;mechanistic&quot;, &quot;metaweb&quot;),
+          Cascade=c(&quot;species agnostic&quot;, &quot;structural&quot;, &quot;synthetic network&quot;))
+
+venn &lt;- Venn(x)
+data &lt;- process_data(venn)
 </code>
 </sec>
-<p>Create spatial plot:</p>
+<p>Create venn diagram:</p>
 <sec id="cell-fig-venn-nb-1" specific-use="notebook-code">
-<code language="r script">ggVennDiagram(x) + 
-  scale_fill_gradient(low=&quot;grey90&quot;,
-                      high = &quot;red&quot;)
+<code language="r script">ggVennDiagram(x, 
+              label = &quot;none&quot;) +
+  theme_void() +
+  theme(legend.position = 'none')
 </code>
 <fig id="fig-venn-nb-1">
   <caption><p>Venn diagram for qualitative analysis/overview of the
@@ -1275,6 +1289,10 @@ x &lt;- list(A=sample(genes,300),
   <graphic mimetype="image" mime-subtype="png" xlink:href="model_qualitative_files/figure-jats/fig-venn-1.png" />
 </fig>
 </sec>
+<p>Looking at it now I don’t think this is the wayTM and trying to sort
+of ‘ordinate’ modelling space might actually be more meaningful…
+Specifically thinking here that I need to also actually just read about
+model comparison (but without the performance aspect)</p>
 <sec id="references-nb-1">
   <title>References</title>
 </sec>
