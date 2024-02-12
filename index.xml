@@ -70,10 +70,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <corresp id="cor-ts">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-09">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-12">
 <year>2024</year>
 <month>2</month>
-<day>9</day>
+<day>12</day>
 </pub-date>
 
 
@@ -505,6 +505,14 @@ work. Well they did I just haven’t done the</funding-statement>
     predictions, regional scale predictions, pairwise interactions,
     structural (energetics), computationally cheap, low cost data</p>
   </disp-quote>
+  <sec id="qualitative-stuff">
+    <title>3.1 Qualitative stuff</title>
+    <fig id="fig-venn">
+      <caption><p>Figure 1: Venn diagram for qualitative
+      analysis/overview of the fancy maths things</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-model_qualitative-fig-venn-output-1.png" />
+    </fig>
+  </sec>
 </sec>
 <sec id="discussion">
   <title>4 Discussion</title>
@@ -1197,6 +1205,87 @@ work. Well they did I just haven’t done the</funding-statement>
 </ref-list>
 </back>
 
+<sub-article article-type="notebook" id="nb-4-nb-1">
+<front-stub>
+<title-group>
+<article-title>Qualitative approach to topology
+generators</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Strydom</surname>
+<given-names>Tanya</given-names>
+</name>
+<string-name>Tanya Strydom</string-name>
 
+</contrib>
+</contrib-group>
+</front-stub>
+
+<body>
+<p>Here we will use the standard [REF FOR TIDYVERSE] and
+@gaoGgVennDiagramIntuitiveEasytoUse2021 to create a venn diagram for the
+quantitative portion of or generator/model overview process.</p>
+<sec id="nb-code-cell-1-nb-1" specific-use="notebook-code">
+<code language="r script">library(tidyverse)
+</code>
+<code language="r script">library(ggVennDiagram)
+</code>
+<sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
+<preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
+</sec>
+<sec id="nb-code-cell-1-output-1-nb-1" specific-use="notebook-output">
+<preformat>
+Attaching package: 'ggVennDiagram'
+
+The following object is masked from 'package:tidyr':
+
+    unite</preformat>
+</sec>
+</sec>
+<p>First we need to create the</p>
+<sec id="nb-code-cell-2-nb-1" specific-use="notebook-code">
+<code language="r script">genes &lt;- paste(&quot;gene&quot;,1:1000,sep=&quot;&quot;)
+set.seed(20231214)
+x &lt;- list(A=sample(genes,300),
+          B=sample(genes,525),
+          C=sample(genes,440),
+          D=sample(genes,350))
+</code>
+</sec>
+<p>Create spatial plot:</p>
+<sec id="cell-fig-venn-nb-1" specific-use="notebook-code">
+<code language="r script">ggVennDiagram(x) + 
+  scale_fill_gradient(low=&quot;grey90&quot;,
+                      high = &quot;red&quot;)
+</code>
+<fig id="fig-venn-nb-1">
+  <caption><p>Venn diagram for qualitative analysis/overview of the
+  fancy maths things</p></caption>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="model_qualitative_files/figure-jats/fig-venn-1.png" />
+</fig>
+</sec>
+<sec id="references-nb-1">
+  <title>References</title>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
 
 </article>
