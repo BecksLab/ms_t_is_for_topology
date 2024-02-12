@@ -1,0 +1,39 @@
+---
+title: Qualitative approach to topology generators
+author: Tanya Strydom
+---
+
+Here we will use the standard [REF FOR TIDYVERSE] and @gaoGgVennDiagramIntuitiveEasytoUse2021 to create a venn diagram for the quantitative portion of or generator/model overview process.
+
+```{r}
+library(tidyverse)
+library(ggVennDiagram)
+```
+
+
+First we need to create the 
+
+```{r}
+genes <- paste("gene",1:1000,sep="")
+set.seed(20231214)
+x <- list(A=sample(genes,300),
+          B=sample(genes,525),
+          C=sample(genes,440),
+          D=sample(genes,350))
+```
+
+Create spatial plot:
+
+```{r}
+#| label: fig-venn
+#| fig-cap: "Venn diagram for qualitative analysis/overview of the fancy maths things"
+#| fig-alt: "TODO"
+ggVennDiagram(x) + 
+  scale_fill_gradient(low="grey90",
+                      high = "red")
+```
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

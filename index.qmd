@@ -118,6 +118,10 @@ How we want to compare and contrast. I think there won't be a 'winner' and thus 
 
 > maybe we can put these into broader categories - if we do start doing the venn overlap thing. *E.g.,* local scale predictions, regional scale predictions, pairwise interactions, structural (energetics), computationally cheap, low cost data
 
+### Qualitative stuff
+
+{{< embed notebooks/model_qualitative.qmd#fig-venn >}}
+
 ## Discussion
 
 I think a big take home will (hopefully) be how different approaches do better in different situations and so you as an end user need to take this into consideration and pick accordingly. I think @petcheyFitEfficiencyBiology2011 might have (and share) some thoughts on this (thanks Andrew). I feel like I need to look at @berlowGoldilocksFactorFood2008 but maybe not exactly in this context but vaguely adjacent.
