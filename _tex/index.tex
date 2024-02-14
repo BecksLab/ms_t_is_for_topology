@@ -203,13 +203,57 @@ networks because 1. hard, 2. time (yay dinosaurs, but also the future
 and impending doom I guess), and 3. probably something else meaningful
 that's just slipping my mind at the moment. Some of the usual culprits
 will come in here like: Jordano (2016b); (Jordano, 2016a); Poisot et al.
-(2021); Strydom et al. (2021) (shameless self plug)
+(2021)
+
+\begin{quote}
+TODO: standardise language between a topology generator and a topology
+predictor\ldots{} I guess they can both be considered models but I'm not
+quite sure\ldots{}
+\end{quote}
+
+\subsection{Philosophical contemplation when constructing interaction
+networks}\label{philosophical-contemplation-when-constructing-interaction-networks}
+
+\subsubsection{Why do we want to construct an interaction
+network?}\label{why-do-we-want-to-construct-an-interaction-network}
+
+Arguably the need for methods and tools for constructing interaction
+networks arises from two different (but still aligned) places of
+interest within the field of network ecology. On the one side of the
+spectrum sits the researcher who is interested in generating a set of
+ecologically plausible but not necessarily realised `in the field' for
+the purpose of running further simulations (\emph{e.g.,} extinction sim
+REF? \textbf{TODO}) or understanding some higher-level process
+(\emph{e.g.,} energetics REF \textbf{TODO}). This researcher is
+contrasted by one that is interested in constructing real-world,
+location specific interactions networks in lieu of having access to data
+generated in the field (see Strydom et al. (2021) for a discussion on
+this). Of course these two categories are not distinct, mutually
+exclusive, groups but can rather be viewed as operating on a gradient
+ranging from a need for generality (\emph{something}) to a need for
+specificity (local-level predictions) when it comes to the quality(?) of
+the network that is constructed by a specific tool. Of course this
+research need would also reflected in the model development process
+itself and thus the idea of what a `good enough' constructed network
+will be in the context of assessing the performance of a specific model.
+
+Joel E. Cohen et al. (1985) states that \emph{``{[}Their{]} approach is
+more like gross anatomy than like physiology\ldots{} that is, the gross
+anatomy is frozen, rather than in motion.''}.
+
+Interestingly Williams \& Martinez (2008) also explicitly talk about
+\emph{structural} food-web models in their introduction\ldots{} so how I
+see it that means that there has always been this inherent
+acknowledgement that models are function at a specific `network level'.
+
+\subsubsection{The history behind the
+approach}\label{the-history-behind-the-approach}
 
 Maybe a brief history of the development of predictive tools/topo
 generators? Sort of where the theory/body of work was based and how that
-has changed? IS there a difference between toppo generator and
-predictive tool - I'm inclined to think that it aligns with the whole
-debate of high level structure vs node-level perfection
+has changed? IS there a difference between topo generator and predictive
+tool - I'm inclined to think that it aligns with the whole debate of
+high level structure vs node-level perfection
 
 Maybe start here with discussing the core mechanistic differences that
 models will work at --- some are really concerned about (and thus
@@ -253,95 +297,94 @@ in this ms or wait it out a bit.
 
 \section{Data \& Methods}\label{sec-data-methods}
 
-\subsection{Overview of topology
-generators}\label{overview-of-topology-generators}
+\subsection{Overview of models}\label{overview-of-models}
 
-I know table are awful but in this case they may make more sense. Also I
-don't think I'm at the point where I can say that the table is
+\subsubsection{Structural models}\label{structural-models}
+
+\textbf{Random model} (Erdős \& Rényi, 1959): Links are assembled
+randomly, not developed within an ecological framework. But of course
+could still hold if we assume that communities are randomly assembled in
+terms of who is interacting with who (I seem to think that's sort of
+what May was arguing but I would need to remind myself)
+
+\textbf{Cascade model} (Joel E. Cohen et al., 1990): Much like the name
+suggests the cascade model rests on the idea that species feed on one
+another in a hierarchical manner. This rests on the assumption that the
+links within a network are variably distributed across the network; with
+the proportion of links decreasing as one moves up the trophic levels
+(\emph{i.e.,} `many' prey and `few' predators). This is achieved by
+assigning all species a random rank, this rank will then determine both
+the predators and prey of that species. A species will have a particular
+probability of being fed on by any species with a higher ranking than
+it, this probability is constrained by the specified connectance of the
+network. Interestingly here `species' are treated as any individual that
+consume and are consumed by the same `species', \emph{i.e.,} these are
+not taxonomical species (Joel E. Cohen et al., 1985). The original
+cascade model has altered to be more `generalised' (Stouffer et al.,
+2005), which altered the probability distribution of the prey that could
+be consumed by a species.
+
+\textbf{Niche model} (Williams \& Martinez, 2000): The niche model
+introduces the idea that species interactions are based on the `feeding
+niche' of a species. Broadly, all species are randomly assigned a
+`feeding niche' range and all species that fall in this range can be
+consumed by that species (thereby allowing for cannibalism). The niche
+of each species is randomly assigned and the range of each species'
+niche is (in part) constrained by the specified connectance of the
+network. The niche model has also been modified, although it appears
+that adding to the `complexity' of the niche model does not improve on
+its ability to generate a more ecologically `correct' network (Williams
+\& Martinez, 2008).
+
+\textbf{Nested hierarchy model} (Cattin et al., 2004):
+
+\subsubsection{Mechanistic models}\label{mechanistic-models}
+
+\textbf{Allometric diet breadth model (ADBM)} (Petchey et al., 2008):
+
+\textbf{Log-ratio} (Rohr et al., 2010): Interestingly often used in
+paleo settings (at least that's what it currently looks like in my
+mind\ldots{} (\emph{e.g.,} Yeakel et al. (2014), Pires et al. (2020))
+
+\textbf{Stochastic} (Rossberg et al., 2006):
+
+\textbf{PFIM} (Shaw et al., 2024):
+
+\textbf{Trait-based} (Caron et al., 2022):
+
+\textbf{Graph embedding} (Strydom et al., 2023): \emph{e.g.,} (Strydom
+et al., 2022)
+
+I know tables are awful but in this case they may make more sense. Also
+I don't think I'm at the point where I can say that the table is
 complete/comprehensive but it getting there Not sure about putting in
 some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0931}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2255}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2255}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0637}}@{}}
+\begin{longtable}[]{@{}llll@{}}
 \caption{Lets make a table that gives an overview of the different
 topology generators that we will look
 at}\label{tbl-history}\tabularnewline
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Approach
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Reference
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Core Mechanism
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\emph{e.g.,} uses
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Applications (potential)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-End product
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Theory basis
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assumptions
-\end{minipage} \\
+Model & Core Mechanism & End product & Data (?) \\
 \midrule\noalign{}
 \endfirsthead
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Approach
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Reference
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Core Mechanism
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\emph{e.g.,} uses
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Applications (potential)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-End product
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Theory basis
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assumptions
-\end{minipage} \\
+Model & Core Mechanism & End product & Data (?) \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Cascade model & Joel E. Cohen et al. (1990); Joel E. Cohen et al. (1997)
-& structural & & & & & \\
-Niche model & Williams \& Martinez (2000); Williams \& Martinez (2008) &
-structural & & & networks have a finite number of links and species are
-partitioned along a resource & A network configuration for a given
-number of species \& connectance & connectance, and others \\
-PFIM & Shaw et al. (2024) & mechanistic & Dunhill (in review) &
-prehistoric networks (but can be modified) & Metaweb (I'd argue) &
-traits determine interactions & feeding mechanisms are trait
-correlated \\
-Log-ratio & Rohr et al. (2010) & latent trait space & Yeakel et al.
-(2014), Pires et al. (2020) (?) & & & & \\
-Nested hierarchy & Cattin et al. (2004) & & & & & & \\
-ADBM & Petchey et al. (2008) & mechanistic & probably multiple & &
-working on it\ldots{} & diet and body size determine interactions & size
-and resources (many) limitations \\
-Stochastic & Rossberg et al. (2006) & & & & & & \\
-Graph Embedding & Strydom et al. (2023) & latent trait space & Strydom
-et al. (2022) & Generate metaweb for specific species pool &
-Probabilistic metaweb & interactions are `encoded' and can thus be
-extracted and transferred to similar species & evolutionary
-backbones/signals \\
-Trait-based & Caron et al. (2022) & mechanistic & Caron et al. (2023) &
-& metaweb & traits determine interactions & feeding mechanisms are trait
-correlated \\
-Random & & & & & & & chaos and anarchy \\
+random & structural & network & \\
+cascade & structural & network & \\
+niche & structural & network & \\
+nested hierarchical & structural & network & \\
+ADBM & mechanistic & \textbf{TODO} & \\
+log-ratio & mechanistic & \textbf{TODO} & \\
+PFIM & mechanistic & metaweb & \\
+graph embedding & mechanistic & metaweb & \\
+trait-based & mechanistic & metaweb & \\
+stochastic & \textbf{TODO} & \textbf{TODO} & \\
 \end{longtable}
 
 \begin{quote}
@@ -490,6 +533,11 @@ some valuable points to consider would be:
   saying that probabilistic (or \emph{maybe} weighted) links are the way
 \end{itemize}
 
+Joel E. Cohen et al. (1985) actually tells us that the cascade model
+only really works for communities that range from 3-33 species\ldots{}
+and Williams \& Martinez (2008) also highlights how structural models
+really only work for small communities
+
 \begin{quote}
 maybe we can put these into broader categories - if we do start doing
 the venn overlap thing. \emph{E.g.,} local scale predictions, regional
@@ -586,16 +634,16 @@ Cattin, M.-F., Bersier, L.-F., Banašek-Richter, C., Baltensperger, R.,
 explain food-web structure. \emph{Nature}, \emph{427}(6977), 835--839.
 \url{https://doi.org/10.1038/nature02327}
 
-\bibitem[\citeproctext]{ref-cohenCommunityFoodWebs1990}
-Cohen, Joel E., Briand, F., \& Newman, C. (1990). \emph{Community {Food
-Webs}: {Data} and {Theory}}. {Berlin Heidelberg}: {Springer-Verlag}.
-
-\bibitem[\citeproctext]{ref-cohenStochasticTheoryCommunity1997}
-Cohen, Joel E., Newman, C. M., \& Steele, J. H. (1997). A stochastic
+\bibitem[\citeproctext]{ref-cohenStochasticTheoryCommunity1985}
+Cohen, Joel E., Newman, C. M., \& Steele, J. H. (1985). A stochastic
 theory of community food webs {I}. {Models} and aggregated data.
 \emph{Proceedings of the Royal Society of London. Series B. Biological
 Sciences}, \emph{224}(1237), 421--448.
 \url{https://doi.org/10.1098/rspb.1985.0042}
+
+\bibitem[\citeproctext]{ref-cohenCommunityFoodWebs1990}
+Cohen, Joel E., Briand, F., \& Newman, C. (1990). \emph{Community {Food
+Webs}: {Data} and {Theory}}. {Berlin Heidelberg}: {Springer-Verlag}.
 
 \bibitem[\citeproctext]{ref-dunneNetworkStructureFood2006}
 Dunne, Jennifer A. (2006). The {Network Structure} of {Food Webs}. In
@@ -608,6 +656,11 @@ Dunne, Jennifer A., Williams, R. J., Martinez, N. D., Wood, R. A., \&
 Erwin, D. H. (2008). Compilation and {Network Analyses} of {Cambrian
 Food Webs}. \emph{PLOS Biology}, \emph{6}(4), e102.
 \url{https://doi.org/10.1371/journal.pbio.0060102}
+
+\bibitem[\citeproctext]{ref-erdosRandomGraphs1959}
+Erdős, P., \& Rényi, A. (1959). On {Random Graphs I}.
+\emph{Publicationes Mathematicae}.
+\url{https://doi.org/10.5486/PMD.1959.6.3-4.12}
 
 \bibitem[\citeproctext]{ref-herbersteinAnimalTraitsCuratedAnimal2022}
 Herberstein, M. E., McLean, D. J., Lowe, E., Wolff, J. O., Khan, M. K.,
@@ -682,6 +735,12 @@ M. (2024, January). A framework for reconstructing ancient food webs
 using functional trait data. {bioRxiv}.
 \url{https://doi.org/10.1101/2024.01.30.578036}
 
+\bibitem[\citeproctext]{ref-stoufferQuantitativePatternsStructure2005}
+Stouffer, D. B., Camacho, J., Guimerà, R., Ng, C. A., \& Nunes Amaral,
+L. A. (2005). Quantitative {Patterns} in the {Structure} of {Model} and
+{Empirical Food Webs}. \emph{Ecology}, \emph{86}(5), 1301--1311.
+\url{https://doi.org/10.1890/04-0957}
+
 \bibitem[\citeproctext]{ref-strydomRoadmapPredictingSpecies2021}
 Strydom, T., Catchen, M. D., Banville, F., Caron, D., Dansereau, G.,
 Desjardins-Proulx, P., et al. (2021). A roadmap towards predicting
@@ -724,7 +783,7 @@ food webs. \emph{Nature}, \emph{404}(6774), 180--183.
 
 \bibitem[\citeproctext]{ref-williamsSuccessItsLimits2008}
 Williams, R. J., \& Martinez, N. D. (2008). Success and its limits among
-structural models of complex food webs. \emph{The Journal of Animal
+structural models of complex food webs. \emph{Journal of Animal
 Ecology}, \emph{77}(3), 512--519.
 \url{https://doi.org/10.1111/j.1365-2656.2008.01362.x}
 
