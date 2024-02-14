@@ -39,9 +39,24 @@ jupyter: python3
 
 ## Introduction
 
-The standard run of the mill that we cannot always feasibly construct networks because 1. hard, 2. time (yay dinosaurs, but also the future and impending doom I guess), and 3. probably something else meaningful that's just slipping my mind at the moment. Some of the usual culprits will come in here like: @jordanoSamplingNetworksEcological2016; [@jordanoChasingEcologicalInteractions2016]; @poisotGlobalKnowledgeGaps2021; @strydomRoadmapPredictingSpecies2021 (shameless self plug)
+The standard run of the mill that we cannot always feasibly construct networks because 1. hard, 2. time (yay dinosaurs, but also the future and impending doom I guess), and 3. probably something else meaningful that's just slipping my mind at the moment. Some of the usual culprits will come in here like: @jordanoSamplingNetworksEcological2016; [@jordanoChasingEcologicalInteractions2016]; @poisotGlobalKnowledgeGaps2021
 
-Maybe a brief history of the development of predictive tools/topo generators? Sort of where the theory/body of work was based and how that has changed? IS there a difference between toppo generator and predictive tool - I'm inclined to think that it aligns with the whole debate of high level structure vs node-level perfection
+> TODO: standardise language between a topology generator and a topology predictor... I guess they can both be considered models but I'm not quite sure...
+
+### Philosophical contemplation when constructing interaction networks
+
+#### Why do we want to construct an interaction network?
+
+Arguably the need for methods and tools for constructing interaction networks arises from two different (but still aligned) places of interest within the field of network ecology. On the one side of the spectrum sits the researcher who is interested in generating a set of ecologically plausible but not necessarily realised 'in the field' for the purpose of running further simulations (*e.g.,* extinction sim REF? **TODO**) or understanding some higher-level process (*e.g.,* energetics REF **TODO**). This researcher is contrasted by one that is interested in constructing real-world, location specific interactions networks in lieu of having access to data generated in the field (see @strydomRoadmapPredictingSpecies2021 for a discussion on this). Of course these two categories are not distinct, mutually exclusive, groups but can rather be viewed as operating on a gradient ranging from a need for generality (*something*) to a need for specificity (local-level predictions) when it comes to the quality(?) of the network that is constructed by a specific tool. Of course this research need would also reflected in the model development process itself and thus the idea of what a 'good enough' constructed network will be in the context of assessing the performance of a specific model. 
+
+@cohenStochasticTheoryCommunity1985 states that *"[Their] approach is more like gross anatomy than like physiology... that is, the gross anatomy is frozen, rather than in motion."*. 
+
+Interestingly @williamsSuccessItsLimits2008 also explicitly talk about *structural* food-web models in their introduction... so how I see it that means that there has always been this inherent acknowledgement that models are function at a specific 'network level'.
+
+#### The history behind the approach
+
+
+Maybe a brief history of the development of predictive tools/topo generators? Sort of where the theory/body of work was based and how that has changed? IS there a difference between topo generator and predictive tool - I'm inclined to think that it aligns with the whole debate of high level structure vs node-level perfection
 
 Maybe start here with discussing the core mechanistic differences that models will work at --- some are really concerned about (and thus constrained by) structure, others are more mechanistic in nature *i.e.,* species *a* has the capacity to eat species *b* because traits (read gob size), and then you get @rohrModelingFoodWebs2010 and @strydomFoodWebReconstruction2022 that sit in the weird liminal latent space... 
 
@@ -53,22 +68,46 @@ At some point we are going to need to discuss the key differences and implicatio
 
 ## Data & Methods {#sec-data-methods}
 
-### Overview of topology generators
+### Overview of models
 
-I know table are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
+#### Structural models
 
-| Approach          | Reference                                    | Core Mechanism     | *e.g.,* uses        | Applications (potential)                     | End product        | Theory basis        | Assumptions |
-|-------------------|----------------------------------------------|--------------------|--------------------|----------------------------------------------|--------------------|--------------------|-------------|
-| Cascade model     | @cohenCommunityFoodWebs1990; @cohenStochasticTheoryCommunity1997 | structural         | | | | | |
-| Niche model       | @williamsSimpleRulesYield2000; @williamsSuccessItsLimits2008     | structural         | | | networks have a finite number of links and species are partitioned along a resource | A network configuration for a given number of species & connectance | connectance, and others |
-| PFIM              | @shawFrameworkReconstructingAncient2024      | mechanistic        | Dunhill (in review)| prehistoric networks (but can be modified) | Metaweb (I'd argue) | traits determine interactions | feeding mechanisms are trait correlated |
-| Log-ratio         | @rohrModelingFoodWebs2010                    | latent trait space | @yeakelCollapseEcologicalNetwork2014, @piresMegafaunalExtinctionsHuman2020 (?)| | | | |
-| Nested hierarchy  | @cattinPhylogeneticConstraintsAdaptation2004 |                    | | | | | |
-| ADBM              | @petcheySizeForagingFood2008                 | mechanistic        | probably multiple  | | working on it... | diet and body size determine interactions | size and resources (many) limitations |
-| Stochastic        | @rossbergFoodWebsExperts2006                 |                    | | | | | | |
-| Graph Embedding   | @strydomGraphEmbeddingTransfer2023           | latent trait space | @strydomFoodWebReconstruction2022 | Generate metaweb for specific species pool | Probabilistic metaweb | interactions are 'encoded' and can thus be extracted and transferred to similar species | evolutionary backbones/signals |
-| Trait-based       | @caronAddressingEltonianShortfall2022        | mechanistic        | @caronTrophicInteractionModels2023| | metaweb | traits determine interactions | feeding mechanisms are trait correlated |
-| Random       |     |   | | |  | | chaos and anarchy |
+**Random model** [@erdosRandomGraphs1959]: Links are assembled randomly, not developed within an ecological framework. But of course could still hold if we assume that communities are randomly assembled in terms of who is interacting with who (I seem to think that's sort of what May was arguing but I would need to remind myself)
+
+**Cascade model** [@cohenCommunityFoodWebs1990]: Much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). This is achieved by assigning all species a random rank, this rank will then determine both the predators and prey of that species. A species will have a particular probability of being fed on by any species with a higher ranking than it, this probability is constrained by the specified connectance of the network. Interestingly here 'species' are treated as any individual that consume and are consumed by the same 'species', *i.e.,* these are not taxonomical species [@cohenStochasticTheoryCommunity1985]. The original cascade model has altered to be more 'generalised' [@stoufferQuantitativePatternsStructure2005], which altered the probability distribution of the prey that could be consumed by a species. 
+
+**Niche model** [@williamsSimpleRulesYield2000]: The niche model introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' range and all species that fall in this range can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species' niche is (in part) constrained by the specified connectance of the network. The niche model has also been modified, although it appears that adding to the 'complexity' of the niche model does not improve on its ability to generate a more ecologically 'correct' network [@williamsSuccessItsLimits2008]. 
+
+**Nested hierarchy model** [@cattinPhylogeneticConstraintsAdaptation2004]:
+
+#### Mechanistic models
+
+**Allometric diet breadth model (ADBM)** [@petcheySizeForagingFood2008]:
+
+**Log-ratio** [@rohrModelingFoodWebs2010]: Interestingly often used in paleo settings (at least that's what it currently looks like in my mind... (*e.g.,* @yeakelCollapseEcologicalNetwork2014, @piresMegafaunalExtinctionsHuman2020)
+
+**Stochastic** [@rossbergFoodWebsExperts2006]:
+
+**PFIM** [@shawFrameworkReconstructingAncient2024]:
+
+**Trait-based** [@caronAddressingEltonianShortfall2022]:
+
+**Graph embedding** [@strydomGraphEmbeddingTransfer2023]: *e.g.,* [@strydomFoodWebReconstruction2022]
+
+I know tables are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
+
+| Model               | Core Mechanism | End product | Data (?) |
+|---------------------|----------------|-------------|----------|
+| random              | structural     | network     |          |
+| cascade             | structural     | network     |          |
+| niche               | structural     | network     |          |
+| nested hierarchical | structural     | network     |          |
+| ADBM                | mechanistic    | **TODO**    |          |
+| log-ratio           | mechanistic    | **TODO**    |          |
+| PFIM                | mechanistic    | metaweb     |          |
+| graph embedding     | mechanistic    | metaweb     |          |
+| trait-based         | mechanistic    | metaweb     |          |
+| stochastic          | **TODO**       | **TODO**    |          |
 
 : Lets make a table that gives an overview of the different topology generators that we will look at {#tbl-history}
 
@@ -116,6 +155,8 @@ How we want to compare and contrast. I think there won't be a 'winner' and thus 
 * Data 'cost' (some methods might need a lot lot of supporting data vs something very light weight)
 * I think it would be remiss to not also take into consideration computational cost
 * something about the network output - I'm acknowledging my biases and saying that probabilistic (or *maybe* weighted) links are the way
+
+@cohenStochasticTheoryCommunity1985 actually tells us that the cascade model only really works for communities that range from 3-33 species... and @williamsSuccessItsLimits2008 also highlights how structural models really only work for small communities
 
 > maybe we can put these into broader categories - if we do start doing the venn overlap thing. *E.g.,* local scale predictions, regional scale predictions, pairwise interactions, structural (energetics), computationally cheap, low cost data
 

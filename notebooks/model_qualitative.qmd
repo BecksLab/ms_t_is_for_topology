@@ -1,11 +1,15 @@
 ---
 title: Qualitative approach to topology generators
 author: Tanya Strydom
+bibliography: ../references.bib
 ---
 
-Here we will use the standard [REF FOR TIDYVERSE] and @gaoGgVennDiagramIntuitiveEasytoUse2021 to create a venn diagram for the quantitative portion of or generator/model overview process.
+## Venn Diagram
+
+Here we will use the standard [REF FOR TIDYVERSE] and @gaoGgVennDiagramIntuitiveEasytoUse2021 to create a venn diagram for the quantitative portion of or generator/model overview process. Also remember to drop the R version (maybe also look into if you can `renv` this because we aim for reproducibility)
 
 ```{r}
+#| include: false
 library(tidyverse)
 library(ggVennDiagram)
 ```
@@ -14,6 +18,7 @@ library(ggVennDiagram)
 First we need to create the df with the relevant 'traits' for each model
 
 ```{r}
+#| include: false
 
 x <- list(Niche=c("species agnostic", "structural", "synthetic network"),
           ADBM=c("node-level", "mechanistic"),
@@ -28,6 +33,7 @@ data <- process_data(venn)
 Create venn diagram:
 
 ```{r}
+#| echo: false
 #| label: fig-venn
 #| fig-cap: "Venn diagram for qualitative analysis/overview of the fancy maths things"
 #| fig-alt: "TODO"
@@ -38,6 +44,10 @@ ggVennDiagram(x,
 ```
 
 Looking at it now I don't think this is the wayTM and trying to sort of 'ordinate' modelling space might actually be more meaningful... Specifically thinking here that I need to also actually just read about model comparison (but without the performance aspect)
+
+## Ordination approach
+
+So at least according to @mccuneAnalysisEcologicalCommunities2002 we should be able to ordinate using only categorical data although we should stick to an NMDS. Its just going to be a case of encoding said categories correctly. How I see it is that each category that we 'create' will be its own entry (we could maybe also just turn each category into a factor but this comes at the cost of assuming the distribution of said variable, well that's what I infer form my 2 minute skim read).
 
 ## References {.unnumbered}
 
