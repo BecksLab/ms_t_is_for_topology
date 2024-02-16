@@ -10,6 +10,7 @@ Here we will use the standard [REF FOR TIDYVERSE] and @gaoGgVennDiagramIntuitive
 
 ```{r}
 #| include: false
+#| message: false
 library(tidyverse)
 library(ggVennDiagram)
 ```
@@ -22,7 +23,7 @@ First we need to create the df with the relevant 'traits' for each model
 
 x <- list(Niche=c("species agnostic", "structural", "synthetic network"),
           ADBM=c("node-level", "mechanistic"),
-          `Transfer`=c("node-level", "embedding", "metaweb"),
+          Transfer=c("node-level", "embedding", "metaweb"),
           PFIM=c("node-level", "mechanistic", "metaweb"),
           Cascade=c("species agnostic", "structural", "synthetic network"))
 
@@ -41,6 +42,7 @@ ggVennDiagram(x,
               label = "none") +
   theme_void() +
   theme(legend.position = 'none')
+
 ```
 
 Looking at it now I don't think this is the wayTM and trying to sort of 'ordinate' modelling space might actually be more meaningful... Specifically thinking here that I need to also actually just read about model comparison (but without the performance aspect)
