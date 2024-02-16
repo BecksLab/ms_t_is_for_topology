@@ -1549,7 +1549,7 @@ The following object is masked from 'package:tidyr':
   <code language="r script">
 x &lt;- list(Niche=c(&quot;species agnostic&quot;, &quot;structural&quot;, &quot;synthetic network&quot;),
           ADBM=c(&quot;node-level&quot;, &quot;mechanistic&quot;),
-          `Transfer`=c(&quot;node-level&quot;, &quot;embedding&quot;, &quot;metaweb&quot;),
+          Transfer=c(&quot;node-level&quot;, &quot;embedding&quot;, &quot;metaweb&quot;),
           PFIM=c(&quot;node-level&quot;, &quot;mechanistic&quot;, &quot;metaweb&quot;),
           Cascade=c(&quot;species agnostic&quot;, &quot;structural&quot;, &quot;synthetic network&quot;))
 
