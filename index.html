@@ -212,11 +212,12 @@ div.csl-indent {
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a>
   <ul class="collapse">
   <li><a href="#qualitative-stuff" id="toc-qualitative-stuff" class="nav-link" data-scroll-target="#qualitative-stuff"><span class="header-section-number">3.1</span> Qualitative stuff</a></li>
+  <li><a href="#quantitative-stuff" id="toc-quantitative-stuff" class="nav-link" data-scroll-target="#quantitative-stuff"><span class="header-section-number">3.2</span> Quantitative stuff</a></li>
   </ul></li>
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">4</span> Discussion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_qualitative-preview.html"><i class="bi bi-journal-code"></i>Qualitative approach to topology generators</a></li></ul></div></nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_qualitative-preview.html"><i class="bi bi-journal-code"></i>Qualitative approach to topology generators</a></li><li><a href="notebooks/model_quantitative-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li></ul></div></nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -271,7 +272,7 @@ div.csl-indent {
 <p><strong>Stochastic</strong> <span class="citation" data-cites="rossbergFoodWebsExperts2006">(<a href="#ref-rossbergFoodWebsExperts2006" role="doc-biblioref">Rossberg et al. 2006</a>)</span>:</p>
 <p><strong>PFIM</strong> <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span>:</p>
 <p><strong>Trait-based</strong> <span class="citation" data-cites="caronAddressingEltonianShortfall2022">(<a href="#ref-caronAddressingEltonianShortfall2022" role="doc-biblioref">Caron et al. 2022</a>)</span>:</p>
-<p><strong>Graph embedding</strong> <span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">(<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">Strydom et al. 2023</a>)</span>: <em>e.g.,</em> <span class="citation" data-cites="strydomFoodWebReconstruction2022">(<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">Strydom et al. 2022</a>)</span></p>
+<p><strong>Graph embedding</strong> <span class="citation" data-cites="strydomFoodWebReconstruction2022 strydomGraphEmbeddingTransfer2023">(<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">Strydom et al. 2022</a>, <a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span>: At a high level graph embedding focuses on capturing the structural data of a network as opposed to a list of pairwise (<em>i.e.,</em> mechanistic) interactions. Here specifically the embedding is preformed on a known interaction network and captures information as to where species (nodes) are positioned in a network <em>e.g.,</em> are they basal prey species or top predators, similar to the log ratio model. In <span class="citation" data-cites="strydomFoodWebReconstruction2022">Strydom et al. (<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">2022</a>)</span> the products of the embedding process are fed into a transfer learning framework for novel prediction…</p>
 <p>I know tables are awful but in this case they may make more sense. Also I don’t think I’m at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think…</p>
 <div id="tbl-history" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -281,11 +282,12 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 19%">
-<col style="width: 16%">
-<col style="width: 22%">
-<col style="width: 16%">
+<col style="width: 23%">
+<col style="width: 18%">
+<col style="width: 14%">
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 6%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -294,6 +296,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <th>End product</th>
 <th>Specificity</th>
 <th>Interaction</th>
+<th>Data</th>
 </tr>
 </thead>
 <tbody>
@@ -303,6 +306,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <td>network</td>
 <td>species agnostic</td>
 <td>binary</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>cascade</td>
@@ -310,6 +314,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <td>network</td>
 <td>species agnostic</td>
 <td>binary</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>niche</td>
@@ -317,6 +322,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <td>network</td>
 <td>species agnostic</td>
 <td>binary</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>nested hierarchical</td>
@@ -324,6 +330,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <td>network</td>
 <td>species agnostic</td>
 <td>binary</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>ADBM</td>
@@ -331,10 +338,12 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <td></td>
 <td>energetics</td>
 <td>quantitative</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>log-ratio</td>
 <td>pondering…</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -345,6 +354,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <td>metaweb</td>
 <td>trait based</td>
 <td>pondering…</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>graph embedding</td>
@@ -352,6 +362,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <td>metaweb</td>
 <td>evolutionary</td>
 <td>probabilistic</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>trait model</td>
@@ -359,9 +370,11 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <td>metaweb</td>
 <td>trait based</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>stochastic</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -450,6 +463,26 @@ Figure&nbsp;1: Venn diagram for qualitative analysis/overview of the fancy maths
 </div>
 </div>
 </div>
+</section>
+<section id="quantitative-stuff" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="quantitative-stuff"><span class="header-section-number">3.2</span> Quantitative stuff</h3>
+<div class="quarto-embed-nb-cell">
+<div id="cell-fig-topology" class="cell">
+<div class="cell-output cell-output-display">
+<div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored" alt="TODO">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Real vs observed values for network summary statistics"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="img-fluid figure-img" alt="TODO"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Real vs observed values for network summary statistics
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>This is actually an awful way to try and summarise the data but rolling with it for now…</p>
 </section>
 </section>
 <section id="discussion" class="level2" data-number="4">
@@ -963,7 +996,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

@@ -298,10 +298,20 @@ work. Well they did I just haven’t done the</funding-statement>
       (<xref alt="Caron et al. 2022" rid="ref-caronAddressingEltonianShortfall2022" ref-type="bibr">Caron
       et al. 2022</xref>):</p>
       <p><bold>Graph embedding</bold>
-      (<xref alt="Strydom et al. 2023" rid="ref-strydomGraphEmbeddingTransfer2023" ref-type="bibr">Strydom
-      et al. 2023</xref>): <italic>e.g.,</italic>
       (<xref alt="Strydom et al. 2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">Strydom
-      et al. 2022</xref>)</p>
+      et al. 2022</xref>,
+      <xref alt="2023" rid="ref-strydomGraphEmbeddingTransfer2023" ref-type="bibr">2023</xref>):
+      At a high level graph embedding focuses on capturing the
+      structural data of a network as opposed to a list of pairwise
+      (<italic>i.e.,</italic> mechanistic) interactions. Here
+      specifically the embedding is preformed on a known interaction
+      network and captures information as to where species (nodes) are
+      positioned in a network <italic>e.g.,</italic> are they basal prey
+      species or top predators, similar to the log ratio model. In
+      Strydom et al.
+      (<xref alt="2022" rid="ref-strydomFoodWebReconstruction2022" ref-type="bibr">2022</xref>)
+      the products of the embedding process are fed into a transfer
+      learning framework for novel prediction…</p>
       <p>I know tables are awful but in this case they may make more
       sense. Also I don’t think I’m at the point where I can say that
       the table is complete/comprehensive but it getting there Not sure
@@ -314,11 +324,12 @@ work. Well they did I just haven’t done the</funding-statement>
         <table-wrap>
           <table>
             <colgroup>
-              <col width="26%" />
+              <col width="24%" />
+              <col width="18%" />
+              <col width="15%" />
               <col width="20%" />
               <col width="16%" />
-              <col width="22%" />
-              <col width="16%" />
+              <col width="7%" />
             </colgroup>
             <thead>
               <tr>
@@ -327,6 +338,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <th>End product</th>
                 <th>Specificity</th>
                 <th>Interaction</th>
+                <th>Data</th>
               </tr>
             </thead>
             <tbody>
@@ -336,6 +348,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>network</td>
                 <td>species agnostic</td>
                 <td>binary</td>
+                <td></td>
               </tr>
               <tr>
                 <td>cascade</td>
@@ -343,6 +356,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>network</td>
                 <td>species agnostic</td>
                 <td>binary</td>
+                <td></td>
               </tr>
               <tr>
                 <td>niche</td>
@@ -350,6 +364,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>network</td>
                 <td>species agnostic</td>
                 <td>binary</td>
+                <td></td>
               </tr>
               <tr>
                 <td>nested hierarchical</td>
@@ -357,6 +372,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>network</td>
                 <td>species agnostic</td>
                 <td>binary</td>
+                <td></td>
               </tr>
               <tr>
                 <td>ADBM</td>
@@ -364,10 +380,12 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td></td>
                 <td>energetics</td>
                 <td>quantitative</td>
+                <td></td>
               </tr>
               <tr>
                 <td>log-ratio</td>
                 <td>pondering…</td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -378,6 +396,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>metaweb</td>
                 <td>trait based</td>
                 <td>pondering…</td>
+                <td></td>
               </tr>
               <tr>
                 <td>graph embedding</td>
@@ -385,6 +404,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>metaweb</td>
                 <td>evolutionary</td>
                 <td>probabilistic</td>
+                <td></td>
               </tr>
               <tr>
                 <td>trait model</td>
@@ -392,9 +412,11 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>metaweb</td>
                 <td>trait based</td>
                 <td></td>
+                <td></td>
               </tr>
               <tr>
                 <td>stochastic</td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -599,6 +621,16 @@ work. Well they did I just haven’t done the</funding-statement>
       analysis/overview of the fancy maths things</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-model_qualitative-fig-venn-output-1.png" />
     </fig>
+  </sec>
+  <sec id="quantitative-stuff">
+    <title>3.2 Quantitative stuff</title>
+    <fig id="fig-topology">
+      <caption><p>Figure 2: Real vs observed values for network summary
+      statistics</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-model_quantitative-fig-topology-output-1.png" />
+    </fig>
+    <p>This is actually an awful way to try and summarise the data but
+    rolling with it for now…</p>
   </sec>
 </sec>
 <sec id="discussion">
@@ -1328,6 +1360,138 @@ work. Well they did I just haven’t done the</funding-statement>
 <sub-article article-type="notebook" id="nb-4-nb-1">
 <front-stub>
 <title-group>
+<article-title>Quantitative approach to topology
+generators</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Strydom</surname>
+<given-names>Tanya</given-names>
+</name>
+<string-name>Tanya Strydom</string-name>
+
+</contrib>
+</contrib-group>
+</front-stub>
+
+<body>
+<p>I think in the long run I will probably turn the other repo
+(<ext-link ext-link-type="uri" xlink:href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</ext-link>)
+into a project that we can then access and I will port all of the
+working code here… I think it will just come down to what the ‘cost’ is
+of the computational side of things and how convoluted it might end up
+looking.</p>
+<p>Anyway so for now I am just pulling in the INTERIM data from some of
+the models. This uses (for now) 20 mangal
+(<xref alt="Poisot et al. 2016" rid="ref-poisotMangalMakingEcological2016-nb-1" ref-type="bibr">Poisot
+et al. 2016</xref>) datasets and just generates some networks for using
+the niche and cascade models. The ‘results’ for now is just counting the
+number of links each model generates for each network because that’s
+what my brain decided on doing…</p>
+<sec id="nb-code-cell-1-nb-1" specific-use="notebook-code">
+<code language="r script">library(tidyverse)
+</code>
+<code language="r script"># download file from other repo
+download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv&quot;, &quot;notebooks/data/topology_models.csv&quot;)
+</code>
+<code language="r script">df = read.csv(&quot;data/topology_models.csv&quot;)
+</code>
+<sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
+<preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
+</sec>
+<sec id="nb-code-cell-1-output-1-nb-1" specific-use="notebook-output">
+<preformat>Warning in
+download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv&quot;,
+: URL
+https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv:
+cannot open destfile 'notebooks/data/topology_models.csv', reason 'No such file
+or directory'</preformat>
+</sec>
+<sec id="nb-code-cell-1-output-2-nb-1" specific-use="notebook-output">
+<preformat>Warning in
+download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv&quot;,
+: download had nonzero exit status</preformat>
+</sec>
+</sec>
+<p>Lets just do a simple little plot where we plot real vs model
+observed</p>
+<sec id="cell-fig-topology-nb-1" specific-use="notebook-code">
+<code language="r script">ggplot() +
+    geom_abline(slope = 1,
+                intercept = 0) +
+    geom_point(data = df,
+                aes(x = links,
+                    y = niche_links),
+                fill = &quot;blue&quot;,
+                shape = 21,
+                alpha = 0.7,
+                size = 5) +
+    geom_point(data = df,
+                aes(x = links,
+                    y = cascade_links),
+                fill = &quot;green&quot;,
+                shape = 23,
+                alpha = 0.7,
+                size  = 5) +
+    theme_bw()
+</code>
+<fig id="fig-topology-nb-1">
+  <caption><p>Real vs observed values for network summary
+  statistics</p></caption>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="model_quantitative_files/figure-jats/fig-topology-1.png" />
+</fig>
+</sec>
+</body>
+
+
+
+<back>
+<ref-list>
+  <title>References</title>
+  <ref id="ref-poisotMangalMakingEcological2016-nb-1">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Poisot</surname><given-names>Timothée</given-names></name>
+        <name><surname>Baiser</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Dunne</surname><given-names>Jennifer</given-names></name>
+        <name><surname>Kéfi</surname><given-names>Sonia</given-names></name>
+        <name><surname>Massol</surname><given-names>François</given-names></name>
+        <name><surname>Mouquet</surname><given-names>Nicolas</given-names></name>
+        <name><surname>Romanuk</surname><given-names>Tamara N.</given-names></name>
+        <name><surname>Stouffer</surname><given-names>Daniel B.</given-names></name>
+        <name><surname>Wood</surname><given-names>Spencer A.</given-names></name>
+        <name><surname>Gravel</surname><given-names>Dominique</given-names></name>
+      </person-group>
+      <article-title>Mangal  making ecological network analysis simple</article-title>
+      <source>Ecography</source>
+      <year iso-8601-date="2016">2016</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2020-11-27">2020</year><month>11</month><day>27</day></date-in-citation>
+      <volume>39</volume>
+      <issue>4</issue>
+      <issn>1600-0587</issn>
+      <pub-id pub-id-type="doi">10.1111/ecog.00976</pub-id>
+      <fpage>384</fpage>
+      <lpage>390</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-8-nb-2">
+<front-stub>
+<title-group>
 <article-title>Qualitative approach to topology
 generators</article-title>
 </title-group>
@@ -1344,21 +1508,21 @@ generators</article-title>
 </front-stub>
 
 <body>
-<sec id="venn-diagram-nb-1">
+<sec id="venn-diagram-nb-2">
   <title>Venn Diagram</title>
   <p>Here we will use the standard [REF FOR TIDYVERSE] and Gao, Yu, and
   Cai
-  (<xref alt="2021" rid="ref-gaoGgVennDiagramIntuitiveEasytoUse2021-nb-1" ref-type="bibr">2021</xref>)
+  (<xref alt="2021" rid="ref-gaoGgVennDiagramIntuitiveEasytoUse2021-nb-2" ref-type="bibr">2021</xref>)
   to create a venn diagram for the quantitative portion of or
   generator/model overview process. Also remember to drop the R version
   (maybe also look into if you can <monospace>renv</monospace> this
   because we aim for reproducibility)</p>
-  <sec id="nb-code-cell-1-nb-1" specific-use="notebook-code">
+  <sec id="nb-code-cell-1-nb-2" specific-use="notebook-code">
   <code language="r script">library(tidyverse)
   </code>
   <code language="r script">library(ggVennDiagram)
   </code>
-  <sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
+  <sec id="nb-code-cell-1-output-0-nb-2" specific-use="notebook-output">
   <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
@@ -1370,7 +1534,7 @@ generators</article-title>
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
   </sec>
-  <sec id="nb-code-cell-1-output-1-nb-1" specific-use="notebook-output">
+  <sec id="nb-code-cell-1-output-1-nb-2" specific-use="notebook-output">
   <preformat>
 Attaching package: 'ggVennDiagram'
 
@@ -1381,7 +1545,7 @@ The following object is masked from 'package:tidyr':
   </sec>
   <p>First we need to create the df with the relevant ‘traits’ for each
   model</p>
-  <sec id="nb-code-cell-2-nb-1" specific-use="notebook-code">
+  <sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
   <code language="r script">
 x &lt;- list(Niche=c(&quot;species agnostic&quot;, &quot;structural&quot;, &quot;synthetic network&quot;),
           ADBM=c(&quot;node-level&quot;, &quot;mechanistic&quot;),
@@ -1394,13 +1558,13 @@ data &lt;- process_data(venn)
   </code>
   </sec>
   <p>Create venn diagram:</p>
-  <sec id="cell-fig-venn-nb-1" specific-use="notebook-code">
+  <sec id="cell-fig-venn-nb-2" specific-use="notebook-code">
   <code language="r script">ggVennDiagram(x, 
               label = &quot;none&quot;) +
   theme_void() +
   theme(legend.position = 'none')
   </code>
-  <fig id="fig-venn-nb-1">
+  <fig id="fig-venn-nb-2">
     <caption><p>Venn diagram for qualitative analysis/overview of the
     fancy maths things</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="model_qualitative_files/figure-jats/fig-venn-1.png" />
@@ -1411,10 +1575,10 @@ data &lt;- process_data(venn)
   Specifically thinking here that I need to also actually just read
   about model comparison (but without the performance aspect)</p>
 </sec>
-<sec id="ordination-approach-nb-1">
+<sec id="ordination-approach-nb-2">
   <title>Ordination approach</title>
   <p>So at least according to McCune and Grace
-  (<xref alt="2002" rid="ref-mccuneAnalysisEcologicalCommunities2002-nb-1" ref-type="bibr">2002</xref>)
+  (<xref alt="2002" rid="ref-mccuneAnalysisEcologicalCommunities2002-nb-2" ref-type="bibr">2002</xref>)
   we should be able to ordinate using only categorical data although we
   should stick to an NMDS. Its just going to be a case of encoding said
   categories correctly. How I see it is that each category that we
@@ -1430,7 +1594,7 @@ data &lt;- process_data(venn)
 <back>
 <ref-list>
   <title>References</title>
-  <ref id="ref-gaoGgVennDiagramIntuitiveEasytoUse2021-nb-1">
+  <ref id="ref-gaoGgVennDiagramIntuitiveEasytoUse2021-nb-2">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
         <name><surname>Gao</surname><given-names>Chun-Hui</given-names></name>
@@ -1445,7 +1609,7 @@ data &lt;- process_data(venn)
       <issn>1664-8021</issn>
     </element-citation>
   </ref>
-  <ref id="ref-mccuneAnalysisEcologicalCommunities2002-nb-1">
+  <ref id="ref-mccuneAnalysisEcologicalCommunities2002-nb-2">
     <element-citation publication-type="book">
       <person-group person-group-type="author">
         <name><surname>McCune</surname><given-names>Bruce</given-names></name>
