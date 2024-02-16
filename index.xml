@@ -70,10 +70,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <corresp id="cor-ts">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-14">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-16">
 <year>2024</year>
 <month>2</month>
-<day>14</day>
+<day>16</day>
 </pub-date>
 
 
@@ -313,12 +313,20 @@ work. Well they did I just haven’t done the</funding-statement>
         at</p></caption>
         <table-wrap>
           <table>
+            <colgroup>
+              <col width="26%" />
+              <col width="20%" />
+              <col width="16%" />
+              <col width="22%" />
+              <col width="16%" />
+            </colgroup>
             <thead>
               <tr>
                 <th>Model</th>
                 <th>Core Mechanism</th>
                 <th>End product</th>
-                <th>Data (?)</th>
+                <th>Specificity</th>
+                <th>Interaction</th>
               </tr>
             </thead>
             <tbody>
@@ -326,60 +334,70 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>random</td>
                 <td>structural</td>
                 <td>network</td>
-                <td></td>
+                <td>species agnostic</td>
+                <td>binary</td>
               </tr>
               <tr>
                 <td>cascade</td>
                 <td>structural</td>
                 <td>network</td>
-                <td></td>
+                <td>species agnostic</td>
+                <td>binary</td>
               </tr>
               <tr>
                 <td>niche</td>
                 <td>structural</td>
                 <td>network</td>
-                <td></td>
+                <td>species agnostic</td>
+                <td>binary</td>
               </tr>
               <tr>
                 <td>nested hierarchical</td>
                 <td>structural</td>
                 <td>network</td>
-                <td></td>
+                <td>species agnostic</td>
+                <td>binary</td>
               </tr>
               <tr>
                 <td>ADBM</td>
                 <td>mechanistic</td>
-                <td><bold>TODO</bold></td>
                 <td></td>
+                <td>energetics</td>
+                <td>quantitative</td>
               </tr>
               <tr>
                 <td>log-ratio</td>
-                <td>mechanistic</td>
-                <td><bold>TODO</bold></td>
+                <td>pondering…</td>
+                <td></td>
+                <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>PFIM</td>
                 <td>mechanistic</td>
                 <td>metaweb</td>
-                <td></td>
+                <td>trait based</td>
+                <td>pondering…</td>
               </tr>
               <tr>
                 <td>graph embedding</td>
-                <td>mechanistic</td>
+                <td>embedding</td>
                 <td>metaweb</td>
-                <td></td>
+                <td>evolutionary</td>
+                <td>probabilistic</td>
               </tr>
               <tr>
-                <td>trait-based</td>
+                <td>trait model</td>
                 <td>mechanistic</td>
                 <td>metaweb</td>
+                <td>trait based</td>
                 <td></td>
               </tr>
               <tr>
                 <td>stochastic</td>
-                <td><bold>TODO</bold></td>
-                <td><bold>TODO</bold></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td></td>
               </tr>
             </tbody>

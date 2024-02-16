@@ -361,30 +361,56 @@ complete/comprehensive but it getting there Not sure about putting in
 some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
-\begin{longtable}[]{@{}llll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2593}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1975}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1605}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1605}}@{}}
 \caption{Lets make a table that gives an overview of the different
 topology generators that we will look
 at}\label{tbl-history}\tabularnewline
 \toprule\noalign{}
-Model & Core Mechanism & End product & Data (?) \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Core Mechanism
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+End product
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Specificity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interaction
+\end{minipage} \\
 \midrule\noalign{}
 \endfirsthead
 \toprule\noalign{}
-Model & Core Mechanism & End product & Data (?) \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Core Mechanism
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+End product
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Specificity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interaction
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-random & structural & network & \\
-cascade & structural & network & \\
-niche & structural & network & \\
-nested hierarchical & structural & network & \\
-ADBM & mechanistic & \textbf{TODO} & \\
-log-ratio & mechanistic & \textbf{TODO} & \\
-PFIM & mechanistic & metaweb & \\
-graph embedding & mechanistic & metaweb & \\
-trait-based & mechanistic & metaweb & \\
-stochastic & \textbf{TODO} & \textbf{TODO} & \\
+random & structural & network & species agnostic & binary \\
+cascade & structural & network & species agnostic & binary \\
+niche & structural & network & species agnostic & binary \\
+nested hierarchical & structural & network & species agnostic &
+binary \\
+ADBM & mechanistic & & energetics & quantitative \\
+log-ratio & pondering\ldots{} & & & \\
+PFIM & mechanistic & metaweb & trait based & pondering\ldots{} \\
+graph embedding & embedding & metaweb & evolutionary & probabilistic \\
+trait model & mechanistic & metaweb & trait based & \\
+stochastic & & & & \\
 \end{longtable}
 
 \begin{quote}
