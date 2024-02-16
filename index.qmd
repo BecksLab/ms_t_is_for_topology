@@ -92,22 +92,22 @@ At some point we are going to need to discuss the key differences and implicatio
 
 **Trait-based** [@caronAddressingEltonianShortfall2022]:
 
-**Graph embedding** [@strydomGraphEmbeddingTransfer2023]: *e.g.,* [@strydomFoodWebReconstruction2022]
+**Graph embedding** [@strydomFoodWebReconstruction2022; @strydomGraphEmbeddingTransfer2023]: At a high level graph embedding focuses on capturing the structural data of a network as opposed to a list of pairwise (*i.e.,* mechanistic) interactions. Here specifically the embedding is preformed on a known interaction network and captures information as to where species (nodes) are positioned in a network *e.g.,* are they basal prey species or top predators, similar to the log ratio model. In  @strydomFoodWebReconstruction2022 the products of the embedding process are fed into a transfer leanring framework for novel prediction...
 
 I know tables are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
-| Model               | Core Mechanism | End product | Specificity      | Interaction |
-|---------------------|----------------|-------------|------------------|-------------|
-| random              | structural     | network     | species agnostic | binary      |
-| cascade             | structural     | network     | species agnostic | binary      |
-| niche               | structural     | network     | species agnostic | binary      |
-| nested hierarchical | structural     | network     | species agnostic | binary      |
-| ADBM                | mechanistic    |             | energetics       | quantitative|
-| log-ratio           | pondering...   |             |                  |             |
-| PFIM                | mechanistic    | metaweb     | trait based      |pondering... |
-| graph embedding     | embedding      | metaweb     | evolutionary     |probabilistic|
-| trait model         | mechanistic    | metaweb     | trait based      |             |
-| stochastic          |                |             |                  |             |
+| Model               | Core Mechanism | End product | Specificity      | Interaction  | Data |
+|---------------------|----------------|-------------|------------------|--------------|------|
+| random              | structural     | network     | species agnostic | binary       |
+| cascade             | structural     | network     | species agnostic | binary       |
+| niche               | structural     | network     | species agnostic | binary       |
+| nested hierarchical | structural     | network     | species agnostic | binary       |
+| ADBM                | mechanistic    |             | energetics       | quantitative |
+| log-ratio           | pondering...   |             |                  |              |
+| PFIM                | mechanistic    | metaweb     | trait based      |pondering...  |
+| graph embedding     | embedding      | metaweb     | evolutionary     |probabilistic |
+| trait model         | mechanistic    | metaweb     | trait based      |              |
+| stochastic          |                |             |                  |              |
 
 : Lets make a table that gives an overview of the different topology generators that we will look at {#tbl-history}
 
