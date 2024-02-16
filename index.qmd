@@ -92,7 +92,7 @@ At some point we are going to need to discuss the key differences and implicatio
 
 **Trait-based** [@caronAddressingEltonianShortfall2022]:
 
-**Graph embedding** [@strydomFoodWebReconstruction2022; @strydomGraphEmbeddingTransfer2023]: At a high level graph embedding focuses on capturing the structural data of a network as opposed to a list of pairwise (*i.e.,* mechanistic) interactions. Here specifically the embedding is preformed on a known interaction network and captures information as to where species (nodes) are positioned in a network *e.g.,* are they basal prey species or top predators, similar to the log ratio model. In  @strydomFoodWebReconstruction2022 the products of the embedding process are fed into a transfer leanring framework for novel prediction...
+**Graph embedding** [@strydomFoodWebReconstruction2022; @strydomGraphEmbeddingTransfer2023]: At a high level graph embedding focuses on capturing the structural data of a network as opposed to a list of pairwise (*i.e.,* mechanistic) interactions. Here specifically the embedding is preformed on a known interaction network and captures information as to where species (nodes) are positioned in a network *e.g.,* are they basal prey species or top predators, similar to the log ratio model. In  @strydomFoodWebReconstruction2022 the products of the embedding process are fed into a transfer learning framework for novel prediction...
 
 I know tables are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
@@ -163,6 +163,12 @@ How we want to compare and contrast. I think there won't be a 'winner' and thus 
 ### Qualitative stuff
 
 {{< embed notebooks/model_qualitative.qmd#fig-venn >}}
+
+### Quantitative stuff
+
+{{< embed notebooks/model_quantitative.qmd#fig-topology >}}
+
+This is actually an awful way to try and summarise the data but rolling with it for now...
 
 ## Discussion
 

@@ -1,0 +1,53 @@
+---
+title: Quantitative approach to topology generators
+author: Tanya Strydom
+bibliography: ../references.bib
+---
+
+I think in the long run I will probably turn the other repo ([BecksLab/topology_generators](https://github.com/BecksLab/topology_generators)) into a project that we can then access and I will port all of the working code here... I think it will just come down to what the 'cost' is of the computational side of things and how convoluted it might end up looking.
+
+Anyway so for now I am just pulling in the INTERIM data from some of the models. This uses (for now) 20 mangal [@poisotMangalMakingEcological2016] datasets and just generates some networks for using the niche and cascade models. The 'results' for now is just counting the number of links each model generates for each network because that's what my brain decided on doing...
+
+```{r}
+#| include: false
+#| echo: false
+library(tidyverse)
+
+# download file from other repo
+download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv", "notebooks/data/topology_models.csv")
+
+df = read.csv("data/topology_models.csv")
+```
+
+Lets just do a simple little plot where we plot real vs model observed
+
+```{r}
+#| echo: false
+#| label: fig-topology
+#| fig-cap: "Real vs observed values for network summary statistics"
+#| fig-alt: "TODO"
+ggplot() +
+    geom_abline(slope = 1,
+                intercept = 0) +
+    geom_point(data = df,
+                aes(x = links,
+                    y = niche_links),
+                fill = "blue",
+                shape = 21,
+                alpha = 0.7,
+                size = 5) +
+    geom_point(data = df,
+                aes(x = links,
+                    y = cascade_links),
+                fill = "green",
+                shape = 23,
+                alpha = 0.7,
+                size  = 5) +
+    theme_bw()
+
+```
+
+## References {.unnumbered}
+
+::: {#refs}
+:::
