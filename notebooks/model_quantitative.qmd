@@ -1,6 +1,7 @@
 ---
 title: Quantitative approach to topology generators
 author: Tanya Strydom
+date: last-modified
 bibliography: ../references.bib
 ---
 
@@ -16,7 +17,20 @@ library(tidyverse)
 # download file from other repo
 download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv", "notebooks/data/topology_models.csv")
 
-df = read.csv("data/topology_models.csv")
+df = read.csv("data/topology_models.csv") %>%
+        pivot_longer(
+            cols = c(niche_complexity, cascade_complexity, niche_distance, cascade_distance), 
+            names_to = "model",
+            values_to = "model_val") %>% 
+        pivot_longer(
+            cols = c(complexity, distance), 
+            names_to = "real",
+            values_to = "real_val")  %>% 
+        mutate(
+            test = str_extract(model, "(?<=_)(.*)"),
+            model = str_extract(model, "[^_]*")) %>%
+        filter(
+            real == test)
 ```
 
 Lets just do a simple little plot where we plot real vs model observed
@@ -30,19 +44,16 @@ ggplot() +
     geom_abline(slope = 1,
                 intercept = 0) +
     geom_point(data = df,
-                aes(x = links,
-                    y = niche_links),
-                fill = "blue",
-                shape = 21,
+                aes(x = real_val,
+                    y = model_val,
+                    size = richness,
+                    colour = model,
+                    fill = model),
                 alpha = 0.7,
-                size = 5) +
-    geom_point(data = df,
-                aes(x = links,
-                    y = cascade_links),
-                fill = "green",
-                shape = 23,
-                alpha = 0.7,
-                size  = 5) +
+                shape = 21) +
+    facet_wrap(vars(test),
+                scales = "free") +
+    scale_size(guide = 'none') +
     theme_bw()
 
 ```

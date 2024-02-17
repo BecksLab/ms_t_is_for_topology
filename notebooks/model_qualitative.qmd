@@ -1,6 +1,7 @@
 ---
 title: Qualitative approach to topology generators
 author: Tanya Strydom
+date: last-modified
 bibliography: ../references.bib
 ---
 
@@ -9,7 +10,7 @@ bibliography: ../references.bib
 Here we will use the standard [REF FOR TIDYVERSE] and @gaoGgVennDiagramIntuitiveEasytoUse2021 to create a venn diagram for the quantitative portion of or generator/model overview process. Also remember to drop the R version (maybe also look into if you can `renv` this because we aim for reproducibility)
 
 ```{r}
-#| include: false
+#| output: false
 #| message: false
 library(tidyverse)
 library(ggVennDiagram)
@@ -19,7 +20,6 @@ library(ggVennDiagram)
 First we need to create the df with the relevant 'traits' for each model
 
 ```{r}
-#| include: false
 
 x <- list(Niche=c("species agnostic", "structural", "synthetic network"),
           ADBM=c("node-level", "mechanistic"),
@@ -33,7 +33,7 @@ data <- process_data(venn)
 
 Create venn diagram:
 
-```{r}
+```{r, echo = FALSE}
 #| echo: false
 #| label: fig-venn
 #| fig-cap: "Venn diagram for qualitative analysis/overview of the fancy maths things"
