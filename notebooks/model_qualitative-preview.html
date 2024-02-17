@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
     <meta name="author" content="Tanya Strydom">
+    <meta name="dcterms.date" content="2024-02-17">
 
     <title>Qualitative approach to topology generators</title>
     <style>
@@ -216,6 +217,12 @@
                       </div>
           </div>
                 
+                <div>
+            <div class="quarto-title-meta-heading">Published</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">February 17, 2024</p>
+            </div>
+          </div>
           
                 
               </div>
@@ -273,15 +280,14 @@ The following object is masked from 'package:tidyr':
 </div></div>
 <p>First we need to create the df with the relevant ‘traits’ for each model</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">Niche=</span><span class="fu">c</span>(<span class="st">"species agnostic"</span>, <span class="st">"structural"</span>, <span class="st">"synthetic network"</span>),</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">ADBM=</span><span class="fu">c</span>(<span class="st">"node-level"</span>, <span class="st">"mechanistic"</span>),</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">Transfer=</span><span class="fu">c</span>(<span class="st">"node-level"</span>, <span class="st">"embedding"</span>, <span class="st">"metaweb"</span>),</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">PFIM=</span><span class="fu">c</span>(<span class="st">"node-level"</span>, <span class="st">"mechanistic"</span>, <span class="st">"metaweb"</span>),</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">Cascade=</span><span class="fu">c</span>(<span class="st">"species agnostic"</span>, <span class="st">"structural"</span>, <span class="st">"synthetic network"</span>))</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>venn <span class="ot">&lt;-</span> <span class="fu">Venn</span>(x)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">process_data</span>(venn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">Niche=</span><span class="fu">c</span>(<span class="st">"species agnostic"</span>, <span class="st">"structural"</span>, <span class="st">"synthetic network"</span>),</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">ADBM=</span><span class="fu">c</span>(<span class="st">"node-level"</span>, <span class="st">"mechanistic"</span>),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">Transfer=</span><span class="fu">c</span>(<span class="st">"node-level"</span>, <span class="st">"embedding"</span>, <span class="st">"metaweb"</span>),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">PFIM=</span><span class="fu">c</span>(<span class="st">"node-level"</span>, <span class="st">"mechanistic"</span>, <span class="st">"metaweb"</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">Cascade=</span><span class="fu">c</span>(<span class="st">"species agnostic"</span>, <span class="st">"structural"</span>, <span class="st">"synthetic network"</span>))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>venn <span class="ot">&lt;-</span> <span class="fu">Venn</span>(x)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">process_data</span>(venn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <p>Create venn diagram:</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-fig-venn" class="cell">
@@ -706,7 +712,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

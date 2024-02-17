@@ -70,10 +70,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <corresp id="cor-ts">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-16">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-17">
 <year>2024</year>
 <month>2</month>
-<day>16</day>
+<day>17</day>
 </pub-date>
 
 
@@ -1395,7 +1395,20 @@ what my brain decided on doing…</p>
 <code language="r script"># download file from other repo
 download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv&quot;, &quot;notebooks/data/topology_models.csv&quot;)
 </code>
-<code language="r script">df = read.csv(&quot;data/topology_models.csv&quot;)
+<code language="r script">df = read.csv(&quot;data/topology_models.csv&quot;) %&gt;%
+        pivot_longer(
+            cols = c(niche_complexity, cascade_complexity, niche_distance, cascade_distance), 
+            names_to = &quot;model&quot;,
+            values_to = &quot;model_val&quot;) %&gt;% 
+        pivot_longer(
+            cols = c(complexity, distance), 
+            names_to = &quot;real&quot;,
+            values_to = &quot;real_val&quot;)  %&gt;% 
+        mutate(
+            test = str_extract(model, &quot;(?&lt;=_)(.*)&quot;),
+            model = str_extract(model, &quot;[^_]*&quot;)) %&gt;%
+        filter(
+            real == test)
 </code>
 <sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
 <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
@@ -1430,19 +1443,16 @@ observed</p>
     geom_abline(slope = 1,
                 intercept = 0) +
     geom_point(data = df,
-                aes(x = links,
-                    y = niche_links),
-                fill = &quot;blue&quot;,
-                shape = 21,
+                aes(x = real_val,
+                    y = model_val,
+                    size = richness,
+                    colour = model,
+                    fill = model),
                 alpha = 0.7,
-                size = 5) +
-    geom_point(data = df,
-                aes(x = links,
-                    y = cascade_links),
-                fill = &quot;green&quot;,
-                shape = 23,
-                alpha = 0.7,
-                size  = 5) +
+                shape = 21) +
+    facet_wrap(vars(test),
+                scales = &quot;free&quot;) +
+    scale_size(guide = 'none') +
     theme_bw()
 </code>
 <fig id="fig-topology-nb-1">
@@ -1546,8 +1556,7 @@ The following object is masked from 'package:tidyr':
   <p>First we need to create the df with the relevant ‘traits’ for each
   model</p>
   <sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
-  <code language="r script">
-x &lt;- list(Niche=c(&quot;species agnostic&quot;, &quot;structural&quot;, &quot;synthetic network&quot;),
+  <code language="r script">x &lt;- list(Niche=c(&quot;species agnostic&quot;, &quot;structural&quot;, &quot;synthetic network&quot;),
           ADBM=c(&quot;node-level&quot;, &quot;mechanistic&quot;),
           Transfer=c(&quot;node-level&quot;, &quot;embedding&quot;, &quot;metaweb&quot;),
           PFIM=c(&quot;node-level&quot;, &quot;mechanistic&quot;, &quot;metaweb&quot;),
