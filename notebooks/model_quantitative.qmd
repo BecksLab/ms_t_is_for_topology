@@ -12,6 +12,7 @@ Anyway so for now I am just pulling in the INTERIM data from some of the models.
 ```{r}
 #| include: false
 #| echo: false
+#| warning: false
 library(tidyverse)
 
 # download file from other repo
