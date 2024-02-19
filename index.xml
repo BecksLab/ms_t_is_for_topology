@@ -1395,20 +1395,19 @@ what my brain decided on doing…</p>
 <code language="r script"># download file from other repo
 download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv&quot;, &quot;notebooks/data/topology_models.csv&quot;)
 </code>
-<code language="r script">df = read.csv(&quot;data/topology_models.csv&quot;) %&gt;%
+<code language="r script">df = read.csv(&quot;data/topology_models.csv&quot;)  %&gt;% 
         pivot_longer(
-            cols = c(niche_complexity, cascade_complexity, niche_distance, cascade_distance), 
-            names_to = &quot;model&quot;,
-            values_to = &quot;model_val&quot;) %&gt;% 
-        pivot_longer(
-            cols = c(complexity, distance), 
+            cols = c(complexity_real, distance_real, connectance_real), 
             names_to = &quot;real&quot;,
             values_to = &quot;real_val&quot;)  %&gt;% 
+        pivot_longer(
+            cols = c(complexity_mod, distance_mod, connectance_mod), 
+            names_to = &quot;test&quot;,
+            values_to = &quot;model_val&quot;)  %&gt;% 
         mutate(
-            test = str_extract(model, &quot;(?&lt;=_)(.*)&quot;),
-            model = str_extract(model, &quot;[^_]*&quot;)) %&gt;%
-        filter(
-            real == test)
+            real = str_extract(real, &quot;[^_]*&quot;),
+            test = str_extract(test, &quot;[^_]*&quot;))  %&gt;% 
+        filter(real == test)
 </code>
 <sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
 <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
