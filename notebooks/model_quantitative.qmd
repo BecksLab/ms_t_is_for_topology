@@ -17,20 +17,19 @@ library(tidyverse)
 # download file from other repo
 download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv", "notebooks/data/topology_models.csv")
 
-df = read.csv("data/topology_models.csv") %>%
+df = read.csv("data/topology_models.csv")  %>% 
         pivot_longer(
-            cols = c(niche_complexity, cascade_complexity, niche_distance, cascade_distance), 
-            names_to = "model",
-            values_to = "model_val") %>% 
-        pivot_longer(
-            cols = c(complexity, distance), 
+            cols = c(complexity_real, distance_real, connectance_real), 
             names_to = "real",
             values_to = "real_val")  %>% 
+        pivot_longer(
+            cols = c(complexity_mod, distance_mod, connectance_mod), 
+            names_to = "test",
+            values_to = "model_val")  %>% 
         mutate(
-            test = str_extract(model, "(?<=_)(.*)"),
-            model = str_extract(model, "[^_]*")) %>%
-        filter(
-            real == test)
+            real = str_extract(real, "[^_]*"),
+            test = str_extract(test, "[^_]*"))  %>% 
+        filter(real == test)
 ```
 
 Lets just do a simple little plot where we plot real vs model observed
