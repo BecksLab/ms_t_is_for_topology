@@ -331,7 +331,7 @@ Venn diagram for qualitative analysis/overview of the fancy maths things
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tribble</span>(</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Trait, <span class="sc">~</span>Random, <span class="sc">~</span>Cascade, <span class="sc">~</span>Niche, <span class="sc">~</span>ADBM, <span class="sc">~</span>embedding,</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"structural"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>,</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mechanistic"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mechanistic"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>,</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"embedding"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"network"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>,</span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"metaweb"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
@@ -346,49 +346,48 @@ Venn diagram for qualitative analysis/overview of the fancy maths things
 <span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>nmds<span class="ot">=</span><span class="fu">metaMDS</span>(community_matrix,</span>
 <span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>              <span class="at">k=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Run 0 stress 0 
+<pre><code>Run 0 stress 6.055762e-17 
 Run 1 stress 0 
-... Procrustes: rmse 0.1340269  max resid 0.1756238 
+... New best solution
+... Procrustes: rmse 0.1648533  max resid 0.2711284 
 Run 2 stress 0 
-... Procrustes: rmse 0.08020751  max resid 0.1674848 
+... Procrustes: rmse 0.2415503  max resid 0.3789344 
 Run 3 stress 0 
-... Procrustes: rmse 0.1445352  max resid 0.3521618 
-Run 4 stress 4.953298e-05 
-... Procrustes: rmse 0.1877508  max resid 0.4208231 
+... Procrustes: rmse 0.2222631  max resid 0.3377932 
+Run 4 stress 0 
+... Procrustes: rmse 0.1834411  max resid 0.2788241 
 Run 5 stress 0 
-... Procrustes: rmse 0.07983743  max resid 0.1427365 
-Run 6 stress 0.0821305 
-Run 7 stress 0 
-... Procrustes: rmse 0.1301663  max resid 0.2419043 
+... Procrustes: rmse 0.1086419  max resid 0.1874339 
+Run 6 stress 0 
+... Procrustes: rmse 0.1874631  max resid 0.2719791 
+Run 7 stress 0.06335697 
 Run 8 stress 0 
-... Procrustes: rmse 0.1463334  max resid 0.3404789 
+... Procrustes: rmse 0.2387256  max resid 0.3380424 
 Run 9 stress 0 
-... Procrustes: rmse 0.1775474  max resid 0.3480529 
+... Procrustes: rmse 0.07659501  max resid 0.1385462 
 Run 10 stress 0 
-... Procrustes: rmse 0.1261689  max resid 0.2234513 
-Run 11 stress 0 
-... Procrustes: rmse 0.1585046  max resid 0.3369891 
-Run 12 stress 0 
-... Procrustes: rmse 0.1392444  max resid 0.2643995 
-Run 13 stress 2.319523e-05 
-... Procrustes: rmse 0.1044193  max resid 0.1607743 
+... Procrustes: rmse 0.1670454  max resid 0.2483204 
+Run 11 stress 8.123983e-05 
+... Procrustes: rmse 0.1041446  max resid 0.1326098 
+Run 12 stress 0.07124327 
+Run 13 stress 7.796157e-05 
+... Procrustes: rmse 0.1459716  max resid 0.1945881 
 Run 14 stress 0 
-... Procrustes: rmse 0.1081457  max resid 0.141238 
-Run 15 stress 0 
-... Procrustes: rmse 0.1647884  max resid 0.3088701 
-Run 16 stress 1.937705e-05 
-... Procrustes: rmse 0.1036139  max resid 0.1653056 
+... Procrustes: rmse 0.217524  max resid 0.3558596 
+Run 15 stress 0.07437737 
+Run 16 stress 7.027019e-05 
+... Procrustes: rmse 0.1626957  max resid 0.2609984 
 Run 17 stress 0 
-... Procrustes: rmse 0.2006188  max resid 0.3155885 
-Run 18 stress 9.999804e-05 
-... Procrustes: rmse 0.1797624  max resid 0.3300718 
+... Procrustes: rmse 0.1011174  max resid 0.198959 
+Run 18 stress 0 
+... Procrustes: rmse 0.07338361  max resid 0.1263504 
 Run 19 stress 0 
-... Procrustes: rmse 0.186744  max resid 0.3350526 
+... Procrustes: rmse 0.236487  max resid 0.391489 
 Run 20 stress 0 
-... Procrustes: rmse 0.1034639  max resid 0.1543137 
+... Procrustes: rmse 0.2439364  max resid 0.365209 
 *** Best solution was not repeated -- monoMDS stopping criteria:
-     1: no. of iterations &gt;= maxit
-    19: stress &lt; smin</code></pre>
+     3: no. of iterations &gt;= maxit
+    17: stress &lt; smin</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in metaMDS(community_matrix, k = 2): stress is (nearly) zero: you may
@@ -413,10 +412,10 @@ have insufficient data</code></pre>
 <span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"NMDS1"</span>, <span class="at">y =</span> <span class="st">"NMDS2"</span>) <span class="sc">+</span></span>
 <span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-nmds" class="quarto-figure quarto-figure-center quarto-float anchored" alt="TODO">
+<div id="fig-nmds" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_qualitative_files/figure-html/fig-nmds-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="NMDS of things"><img src="model_qualitative_files/figure-html/fig-nmds-1.png" class="img-fluid figure-img" alt="TODO" width="672"></a>
+<a href="model_qualitative_files/figure-html/fig-nmds-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="NMDS of things"><img src="model_qualitative_files/figure-html/fig-nmds-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 NMDS of things
@@ -824,7 +823,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
