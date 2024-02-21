@@ -1,6 +1,9 @@
 ---
 title: Qualitative approach to topology generators
-author: Tanya Strydom
+authors:
+  - name: Tanya Strydom
+    id: ts
+    orcid: 0000-0001-6067-1349
 date: last-modified
 bibliography: ../references.bib
 ---
@@ -20,6 +23,7 @@ library(ggVennDiagram)
 First we need to create the df with the relevant 'traits' for each model
 
 ```{r}
+#| message: false
 
 x <- list(Niche=c("species agnostic", "structural", "synthetic network"),
           ADBM=c("node-level", "mechanistic"),

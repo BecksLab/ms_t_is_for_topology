@@ -1378,6 +1378,7 @@ generators</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">0000-0001-6067-1349</contrib-id>
 <name>
 <surname>Strydom</surname>
 <given-names>Tanya</given-names>
@@ -1451,7 +1452,8 @@ download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generato
 <p>Lets just do a simple little plot where we plot real vs model
 observed</p>
 <sec id="cell-fig-topology-nb-1" specific-use="notebook-code">
-<code language="r script">ggplot() +
+<code language="r script">
+ggplot() +
     geom_abline(slope = 1,
                 intercept = 0) +
     geom_point(data = df,
@@ -1519,6 +1521,7 @@ generators</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">0000-0001-6067-1349</contrib-id>
 <name>
 <surname>Strydom</surname>
 <given-names>Tanya</given-names>
@@ -1568,7 +1571,8 @@ The following object is masked from 'package:tidyr':
   <p>First we need to create the df with the relevant ‘traits’ for each
   model</p>
   <sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
-  <code language="r script">x &lt;- list(Niche=c(&quot;species agnostic&quot;, &quot;structural&quot;, &quot;synthetic network&quot;),
+  <code language="r script">
+x &lt;- list(Niche=c(&quot;species agnostic&quot;, &quot;structural&quot;, &quot;synthetic network&quot;),
           ADBM=c(&quot;node-level&quot;, &quot;mechanistic&quot;),
           Transfer=c(&quot;node-level&quot;, &quot;embedding&quot;, &quot;metaweb&quot;),
           PFIM=c(&quot;node-level&quot;, &quot;mechanistic&quot;, &quot;metaweb&quot;),

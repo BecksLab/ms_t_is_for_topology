@@ -1,6 +1,9 @@
 ---
 title: Quantitative approach to topology generators
-author: Tanya Strydom
+authors:
+  - name: Tanya Strydom
+    id: ts
+    orcid: 0000-0001-6067-1349
 date: last-modified
 bibliography: ../references.bib
 ---
@@ -11,7 +14,6 @@ Anyway so for now I am just pulling in the INTERIM data from some of the models.
 
 ```{r}
 #| include: false
-#| echo: false
 #| warning: false
 library(tidyverse)
 
@@ -36,10 +38,11 @@ df = read.csv("data/topology_models.csv")  %>%
 Lets just do a simple little plot where we plot real vs model observed
 
 ```{r}
+#| warning: false
 #| echo: false
 #| label: fig-topology
 #| fig-cap: "Real vs observed values for network summary statistics"
-#| fig-alt: "TODO"
+
 ggplot() +
     geom_abline(slope = 1,
                 intercept = 0) +
