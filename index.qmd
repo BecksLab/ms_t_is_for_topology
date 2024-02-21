@@ -41,6 +41,8 @@ jupyter: python3
 
 The standard run of the mill that we cannot always feasibly construct networks because 1. hard, 2. time (yay dinosaurs, but also the future and impending doom I guess), and 3. probably something else meaningful that's just slipping my mind at the moment. Some of the usual culprits will come in here like: @jordanoSamplingNetworksEcological2016; [@jordanoChasingEcologicalInteractions2016]; @poisotGlobalKnowledgeGaps2021
 
+> I'm beginning to think that the core discursive points should revolve around 'old school' vs 'new age' methods but in a way that sort of says in a world of new age tools are the the old school methods able to hole their own. But at the same time making it abundantly clear that there is a stack of context dependence to keep in mind before even thinking about drawing conclusions.
+
 > TODO: standardise language between a topology generator and a topology predictor... I guess they can both be considered models but I'm not quite sure...
 
 ### Philosophical contemplation when constructing interaction networks
@@ -54,7 +56,6 @@ Arguably the need for methods and tools for constructing interaction networks ar
 Interestingly @williamsSuccessItsLimits2008 also explicitly talk about *structural* food-web models in their introduction... so how I see it that means that there has always been this inherent acknowledgement that models are function at a specific 'network level'.
 
 #### The history behind the approach
-
 
 Maybe a brief history of the development of predictive tools/topo generators? Sort of where the theory/body of work was based and how that has changed? IS there a difference between topo generator and predictive tool - I'm inclined to think that it aligns with the whole debate of high level structure vs node-level perfection
 
