@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
     <meta name="author" content="Tanya Strydom">
-    <meta name="dcterms.date" content="2024-02-20">
+    <meta name="dcterms.date" content="2024-02-21">
 
     <title>Qualitative approach to topology generators</title>
     <style>
@@ -220,7 +220,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">February 20, 2024</p>
+              <p class="date">February 21, 2024</p>
             </div>
           </div>
           
@@ -242,7 +242,7 @@
    
   <ul>
   <li><a href="#venn-diagram" id="toc-venn-diagram" class="nav-link active" data-scroll-target="#venn-diagram">Venn Diagram</a></li>
-  <li><a href="#ordination-approach" id="toc-ordination-approach" class="nav-link" data-scroll-target="#ordination-approach">Ordination approach</a></li>
+  <li><a href="#multivariate-approach" id="toc-multivariate-approach" class="nav-link" data-scroll-target="#multivariate-approach">Multivariate approach</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -310,9 +310,121 @@ Venn diagram for qualitative analysis/overview of the fancy maths things
 </div></div>
 <p>Looking at it now I don’t think this is the wayTM and trying to sort of ‘ordinate’ modelling space might actually be more meaningful… Specifically thinking here that I need to also actually just read about model comparison (but without the performance aspect)</p>
 </section>
-<section id="ordination-approach" class="level2">
-<h2 class="anchored" data-anchor-id="ordination-approach">Ordination approach</h2>
-<p>So at least according to <span class="citation" data-cites="mccuneAnalysisEcologicalCommunities2002">McCune and Grace (<a href="#ref-mccuneAnalysisEcologicalCommunities2002" role="doc-biblioref">2002</a>)</span> we should be able to ordinate using only categorical data although we should stick to an NMDS. Its just going to be a case of encoding said categories correctly. How I see it is that each category that we ‘create’ will be its own entry (we could maybe also just turn each category into a factor but this comes at the cost of assuming the distribution of said variable, well that’s what I infer form my 2 minute skim read).</p>
+<section id="multivariate-approach" class="level2">
+<h2 class="anchored" data-anchor-id="multivariate-approach">Multivariate approach</h2>
+<p>So at least according to <span class="citation" data-cites="mccuneAnalysisEcologicalCommunities2002">McCune and Grace (<a href="#ref-mccuneAnalysisEcologicalCommunities2002" role="doc-biblioref">2002</a>)</span> we should be able to ordinate using only categorical data although we should stick to an NMDS. Its just going to be a case of encoding said categories correctly. How I see it is that each category that we ‘create’ will be its own entry (we could maybe also just turn each category into a factor but this comes at the cost of assuming the distribution of said variable, well at least that’s what I infer form my 2 minute skim read).</p>
+<p>I think what we should do is turn what is Table 1 in the manuscript into a ‘wide table’ that we can ‘simply’ throw into an NMDS to see what it throws out. Although I think we do need to think what would be deemed the /multivariate space of network generating models’…</p>
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vegan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: permute</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>This is vegan 2.6-4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">66</span>) <span class="co"># because star wars</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>community_matrix <span class="ot">=</span>  </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tribble</span>(</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Trait, <span class="sc">~</span>Random, <span class="sc">~</span>Cascade, <span class="sc">~</span>Niche, <span class="sc">~</span>ADBM, <span class="sc">~</span>embedding,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"structural"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mechanistic"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"embedding"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"network"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>,</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"metaweb"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"species_agnostic"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>,</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"energetics"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>,</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"evolutionary"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"binary"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>,</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"quantitative"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>,</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"probabilistic"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">column_to_rownames</span>(<span class="st">'Trait'</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>nmds<span class="ot">=</span><span class="fu">metaMDS</span>(community_matrix,</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>              <span class="at">k=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Run 0 stress 0 
+Run 1 stress 0 
+... Procrustes: rmse 0.1340269  max resid 0.1756238 
+Run 2 stress 0 
+... Procrustes: rmse 0.08020751  max resid 0.1674848 
+Run 3 stress 0 
+... Procrustes: rmse 0.1445352  max resid 0.3521618 
+Run 4 stress 4.953298e-05 
+... Procrustes: rmse 0.1877508  max resid 0.4208231 
+Run 5 stress 0 
+... Procrustes: rmse 0.07983743  max resid 0.1427365 
+Run 6 stress 0.0821305 
+Run 7 stress 0 
+... Procrustes: rmse 0.1301663  max resid 0.2419043 
+Run 8 stress 0 
+... Procrustes: rmse 0.1463334  max resid 0.3404789 
+Run 9 stress 0 
+... Procrustes: rmse 0.1775474  max resid 0.3480529 
+Run 10 stress 0 
+... Procrustes: rmse 0.1261689  max resid 0.2234513 
+Run 11 stress 0 
+... Procrustes: rmse 0.1585046  max resid 0.3369891 
+Run 12 stress 0 
+... Procrustes: rmse 0.1392444  max resid 0.2643995 
+Run 13 stress 2.319523e-05 
+... Procrustes: rmse 0.1044193  max resid 0.1607743 
+Run 14 stress 0 
+... Procrustes: rmse 0.1081457  max resid 0.141238 
+Run 15 stress 0 
+... Procrustes: rmse 0.1647884  max resid 0.3088701 
+Run 16 stress 1.937705e-05 
+... Procrustes: rmse 0.1036139  max resid 0.1653056 
+Run 17 stress 0 
+... Procrustes: rmse 0.2006188  max resid 0.3155885 
+Run 18 stress 9.999804e-05 
+... Procrustes: rmse 0.1797624  max resid 0.3300718 
+Run 19 stress 0 
+... Procrustes: rmse 0.186744  max resid 0.3350526 
+Run 20 stress 0 
+... Procrustes: rmse 0.1034639  max resid 0.1543137 
+*** Best solution was not repeated -- monoMDS stopping criteria:
+     1: no. of iterations &gt;= maxit
+    19: stress &lt; smin</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in metaMDS(community_matrix, k = 2): stress is (nearly) zero: you may
+have insufficient data</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data.scores <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">scores</span>(nmds)<span class="sc">$</span>sites)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>data.species <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">scores</span>(nmds)<span class="sc">$</span>species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="cell-fig-nmds" class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">data =</span> data.scores, </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x =</span> NMDS1, </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y =</span> NMDS2),</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span> </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="at">data =</span> data.species, </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">row.names</span>(data.species),</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>                   <span class="at">x =</span> NMDS1, </span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y =</span> NMDS2),</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">colour =</span> <span class="st">"red"</span>) <span class="sc">+</span> </span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"NMDS1"</span>, <span class="at">y =</span> <span class="st">"NMDS2"</span>) <span class="sc">+</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-nmds" class="quarto-figure quarto-figure-center quarto-float anchored" alt="TODO">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
+<a href="model_qualitative_files/figure-html/fig-nmds-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="NMDS of things"><img src="model_qualitative_files/figure-html/fig-nmds-1.png" class="img-fluid figure-img" alt="TODO" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+NMDS of things
+</figcaption>
+</figure>
+</div>
+</div>
+</div></div>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
@@ -712,7 +824,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

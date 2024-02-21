@@ -70,10 +70,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <corresp id="cor-ts">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-20">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-21">
 <year>2024</year>
 <month>2</month>
-<day>20</day>
+<day>21</day>
 </pub-date>
 
 
@@ -116,6 +116,14 @@ work. Well they did I just haven’t done the</funding-statement>
   (<xref alt="Jordano 2016a" rid="ref-jordanoChasingEcologicalInteractions2016" ref-type="bibr">Jordano
   2016a</xref>); Poisot et al.
   (<xref alt="2021" rid="ref-poisotGlobalKnowledgeGaps2021" ref-type="bibr">2021</xref>)</p>
+  <disp-quote>
+    <p>I’m beginning to think that the core discursive points should
+    revolve around ‘old school’ vs ‘new age’ methods but in a way that
+    sort of says in a world of new age tools are the the old school
+    methods able to hole their own. But at the same time making it
+    abundantly clear that there is a stack of context dependence to keep
+    in mind before even thinking about drawing conclusions.</p>
+  </disp-quote>
   <disp-quote>
     <p>TODO: standardise language between a topology generator and a
     topology predictor… I guess they can both be considered models but
@@ -621,11 +629,16 @@ work. Well they did I just haven’t done the</funding-statement>
       analysis/overview of the fancy maths things</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-model_qualitative-fig-venn-output-1.png" />
     </fig>
+    <p>See also</p>
+    <fig id="fig-nmds">
+      <caption><p>Figure 2: NMDS of things</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-model_qualitative-fig-nmds-output-1.png" />
+    </fig>
   </sec>
   <sec id="quantitative-stuff">
     <title>3.2 Quantitative stuff</title>
     <fig id="fig-topology">
-      <caption><p>Figure 2: Real vs observed values for network summary
+      <caption><p>Figure 3: Real vs observed values for network summary
       statistics</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-model_quantitative-fig-topology-output-1.png" />
     </fig>
@@ -1583,8 +1596,8 @@ data &lt;- process_data(venn)
   Specifically thinking here that I need to also actually just read
   about model comparison (but without the performance aspect)</p>
 </sec>
-<sec id="ordination-approach-nb-2">
-  <title>Ordination approach</title>
+<sec id="multivariate-approach-nb-2">
+  <title>Multivariate approach</title>
   <p>So at least according to McCune and Grace
   (<xref alt="2002" rid="ref-mccuneAnalysisEcologicalCommunities2002-nb-2" ref-type="bibr">2002</xref>)
   we should be able to ordinate using only categorical data although we
@@ -1592,8 +1605,119 @@ data &lt;- process_data(venn)
   categories correctly. How I see it is that each category that we
   ‘create’ will be its own entry (we could maybe also just turn each
   category into a factor but this comes at the cost of assuming the
-  distribution of said variable, well that’s what I infer form my 2
-  minute skim read).</p>
+  distribution of said variable, well at least that’s what I infer form
+  my 2 minute skim read).</p>
+  <p>I think what we should do is turn what is Table 1 in the manuscript
+  into a ‘wide table’ that we can ‘simply’ throw into an NMDS to see
+  what it throws out. Although I think we do need to think what would be
+  deemed the /multivariate space of network generating models’…</p>
+  <sec id="nb-code-cell-3-nb-2" specific-use="notebook-code">
+  <code language="r script">library(vegan)
+  </code>
+  <code language="r script">set.seed(66) # because star wars
+
+community_matrix =  
+  tribble(
+    ~Trait, ~Random, ~Cascade, ~Niche, ~ADBM, ~embedding,
+    &quot;structural&quot;, 1, 1, 1, 0, 0,
+    &quot;mechanistic&quot;, 0, 0, 0, 0, 1,
+    &quot;embedding&quot;, 0, 0, 0, 0, 1,
+    &quot;network&quot;, 1, 1, 1, 1, 0,
+    &quot;metaweb&quot;, 0, 0, 0, 0, 1,
+    &quot;species_agnostic&quot;, 1, 1, 1, 0, 0,
+    &quot;energetics&quot;, 0, 0, 0, 1, 0,
+    &quot;evolutionary&quot;, 0, 0, 0, 0, 1,
+    &quot;binary&quot;, 1, 1, 1, 0, 0,
+    &quot;quantitative&quot;, 0, 0, 0, 1, 0,
+    &quot;probabilistic&quot;, 0, 0, 0, 0, 1)  %&gt;% 
+    column_to_rownames('Trait')
+
+nmds=metaMDS(community_matrix,
+              k=2)
+  </code>
+  <code language="r script">data.scores = as.data.frame(scores(nmds)$sites)
+data.species = as.data.frame(scores(nmds)$species)
+  </code>
+  <sec id="nb-code-cell-3-output-0-nb-2" specific-use="notebook-output">
+  <preformat>Loading required package: permute</preformat>
+  </sec>
+  <sec id="nb-code-cell-3-output-1-nb-2" specific-use="notebook-output">
+  <preformat>Loading required package: lattice</preformat>
+  </sec>
+  <sec id="nb-code-cell-3-output-2-nb-2" specific-use="notebook-output">
+  <preformat>This is vegan 2.6-4</preformat>
+  </sec>
+  <sec id="nb-code-cell-3-output-3-nb-2" specific-use="notebook-output">
+  <preformat>Run 0 stress 0 
+Run 1 stress 0 
+... Procrustes: rmse 0.1340269  max resid 0.1756238 
+Run 2 stress 0 
+... Procrustes: rmse 0.08020751  max resid 0.1674848 
+Run 3 stress 0 
+... Procrustes: rmse 0.1445352  max resid 0.3521618 
+Run 4 stress 4.953298e-05 
+... Procrustes: rmse 0.1877508  max resid 0.4208231 
+Run 5 stress 0 
+... Procrustes: rmse 0.07983743  max resid 0.1427365 
+Run 6 stress 0.0821305 
+Run 7 stress 0 
+... Procrustes: rmse 0.1301663  max resid 0.2419043 
+Run 8 stress 0 
+... Procrustes: rmse 0.1463334  max resid 0.3404789 
+Run 9 stress 0 
+... Procrustes: rmse 0.1775474  max resid 0.3480529 
+Run 10 stress 0 
+... Procrustes: rmse 0.1261689  max resid 0.2234513 
+Run 11 stress 0 
+... Procrustes: rmse 0.1585046  max resid 0.3369891 
+Run 12 stress 0 
+... Procrustes: rmse 0.1392444  max resid 0.2643995 
+Run 13 stress 2.319523e-05 
+... Procrustes: rmse 0.1044193  max resid 0.1607743 
+Run 14 stress 0 
+... Procrustes: rmse 0.1081457  max resid 0.141238 
+Run 15 stress 0 
+... Procrustes: rmse 0.1647884  max resid 0.3088701 
+Run 16 stress 1.937705e-05 
+... Procrustes: rmse 0.1036139  max resid 0.1653056 
+Run 17 stress 0 
+... Procrustes: rmse 0.2006188  max resid 0.3155885 
+Run 18 stress 9.999804e-05 
+... Procrustes: rmse 0.1797624  max resid 0.3300718 
+Run 19 stress 0 
+... Procrustes: rmse 0.186744  max resid 0.3350526 
+Run 20 stress 0 
+... Procrustes: rmse 0.1034639  max resid 0.1543137 
+*** Best solution was not repeated -- monoMDS stopping criteria:
+     1: no. of iterations &gt;= maxit
+    19: stress &lt; smin</preformat>
+  </sec>
+  <sec id="nb-code-cell-3-output-4-nb-2" specific-use="notebook-output">
+  <preformat>Warning in metaMDS(community_matrix, k = 2): stress is (nearly) zero: you may
+have insufficient data</preformat>
+  </sec>
+  </sec>
+  <sec id="cell-fig-nmds-nb-2" specific-use="notebook-code">
+  <code language="r script">
+ggplot() + 
+    geom_point(data = data.scores, 
+               aes(x = NMDS1, 
+                   y = NMDS2),
+               size = 3,
+               colour = &quot;black&quot;) + 
+    geom_text(data = data.species, 
+               aes(label = row.names(data.species),
+                   x = NMDS1, 
+                   y = NMDS2),
+               colour = &quot;red&quot;) + 
+    labs(x = &quot;NMDS1&quot;, y = &quot;NMDS2&quot;) +
+    theme_classic()
+  </code>
+  <fig id="fig-nmds-nb-2">
+    <caption><p>NMDS of things</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="model_qualitative_files/figure-jats/fig-nmds-1.png" />
+  </fig>
+  </sec>
 </sec>
 </body>
 
