@@ -165,6 +165,10 @@ How we want to compare and contrast. I think there won't be a 'winner' and thus 
 
 {{< embed notebooks/model_qualitative.qmd#fig-venn >}}
 
+See also 
+
+{{< embed notebooks/model_qualitative.qmd#fig-nmds >}}
+
 ### Quantitative stuff
 
 {{< embed notebooks/model_quantitative.qmd#fig-topology >}}
