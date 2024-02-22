@@ -22,11 +22,11 @@ download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/ma
 
 df = read.csv("data/topology_models.csv")  %>% 
         pivot_longer(
-            cols = c(complexity_real, distance_real, connectance_real), 
+            cols = c(complexity_real, distance_real, connectance_real, basal_real), 
             names_to = "real",
             values_to = "real_val")  %>% 
         pivot_longer(
-            cols = c(complexity_mod, distance_mod, connectance_mod), 
+            cols = c(complexity_mod, distance_mod, connectance_mod, basal_mod), 
             names_to = "test",
             values_to = "model_val")  %>% 
         mutate(
@@ -41,7 +41,7 @@ Lets just do a simple little plot where we plot real vs model observed
 #| warning: false
 #| echo: false
 #| label: fig-topology
-#| fig-cap: "Real vs observed values for network summary statistics"
+#| fig-cap: "Real vs observed values for network summary statistics. Note here that 'basal' is calculated as the proportion of species that have a generality value of zero *i.e.,* are basal AFAIK"
 
 ggplot() +
     geom_abline(slope = 1,
