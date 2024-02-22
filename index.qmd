@@ -83,7 +83,7 @@ At some point we are going to need to discuss the key differences and implicatio
 
 #### Mechanistic models
 
-**Allometric diet breadth model (ADBM)** [@petcheySizeForagingFood2008]:
+**Allometric diet breadth model (ADBM)** [@petcheySizeForagingFood2008]: "Our modelling effort therefore asks how well our model can predict the arrangement rather than the number of feeding links in food webs." This is a scaled version of the diet breadth model [@beckermanForagingBiologyPredicts2006]
 
 **Log-ratio** [@rohrModelingFoodWebs2010]: Interestingly often used in paleo settings (at least that's what it currently looks like in my mind... (*e.g.,* @yeakelCollapseEcologicalNetwork2014, @piresMegafaunalExtinctionsHuman2020)
 
