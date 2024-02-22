@@ -647,7 +647,9 @@ work. Well they did I just haven’t done the</funding-statement>
     <title>3.2 Quantitative stuff</title>
     <fig id="fig-topology">
       <caption><p>Figure 3: Real vs observed values for network summary
-      statistics</p></caption>
+      statistics. Note here that ‘basal’ is calculated as the proportion
+      of species that have a generality value of zero
+      <italic>i.e.,</italic> are basal AFAIK</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-model_quantitative-fig-topology-output-1.png" />
     </fig>
     <p>This is actually an awful way to try and summarise the data but
@@ -1438,11 +1440,11 @@ download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generato
 </code>
 <code language="r script">df = read.csv(&quot;data/topology_models.csv&quot;)  %&gt;% 
         pivot_longer(
-            cols = c(complexity_real, distance_real, connectance_real), 
+            cols = c(complexity_real, distance_real, connectance_real, basal_real), 
             names_to = &quot;real&quot;,
             values_to = &quot;real_val&quot;)  %&gt;% 
         pivot_longer(
-            cols = c(complexity_mod, distance_mod, connectance_mod), 
+            cols = c(complexity_mod, distance_mod, connectance_mod, basal_mod), 
             names_to = &quot;test&quot;,
             values_to = &quot;model_val&quot;)  %&gt;% 
         mutate(
@@ -1497,8 +1499,10 @@ ggplot() +
     theme_bw()
 </code>
 <fig id="fig-topology-nb-1">
-  <caption><p>Real vs observed values for network summary
-  statistics</p></caption>
+  <caption><p>Real vs observed values for network summary statistics.
+  Note here that ‘basal’ is calculated as the proportion of species that
+  have a generality value of zero <italic>i.e.,</italic> are basal
+  AFAIK</p></caption>
   <graphic mimetype="image" mime-subtype="png" xlink:href="model_quantitative_files/figure-jats/fig-topology-1.png" />
 </fig>
 </sec>
