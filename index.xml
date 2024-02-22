@@ -287,7 +287,12 @@ work. Well they did I just haven’t done the</funding-statement>
       <title>2.1.2 Mechanistic models</title>
       <p><bold>Allometric diet breadth model (ADBM)</bold>
       (<xref alt="Petchey et al. 2008" rid="ref-petcheySizeForagingFood2008" ref-type="bibr">Petchey
-      et al. 2008</xref>):</p>
+      et al. 2008</xref>): “Our modelling effort therefore asks how well
+      our model can predict the arrangement rather than the number of
+      feeding links in food webs.” This is a scaled version of the diet
+      breadth model
+      (<xref alt="Beckerman, Petchey, and Warren 2006" rid="ref-beckermanForagingBiologyPredicts2006" ref-type="bibr">Beckerman,
+      Petchey, and Warren 2006</xref>)</p>
       <p><bold>Log-ratio</bold>
       (<xref alt="Rohr et al. 2010" rid="ref-rohrModelingFoodWebs2010" ref-type="bibr">Rohr
       et al. 2010</xref>): Interestingly often used in paleo settings
@@ -700,6 +705,25 @@ work. Well they did I just haven’t done the</funding-statement>
       <pub-id pub-id-type="doi">10.1111/j.1475-4983.2006.00611.x</pub-id>
       <fpage>1</fpage>
       <lpage>22</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-beckermanForagingBiologyPredicts2006">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Beckerman</surname><given-names>Andrew P.</given-names></name>
+        <name><surname>Petchey</surname><given-names>Owen L.</given-names></name>
+        <name><surname>Warren</surname><given-names>Philip H.</given-names></name>
+      </person-group>
+      <article-title>Foraging biology predicts food web complexity</article-title>
+      <source>Proceedings of the National Academy of Sciences</source>
+      <year iso-8601-date="2006-09">2006</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-01-15">2024</year><month>01</month><day>15</day></date-in-citation>
+      <volume>103</volume>
+      <issue>37</issue>
+      <issn>0027-8424, 1091-6490</issn>
+      <pub-id pub-id-type="doi">10.1073/pnas.0603039103</pub-id>
+      <fpage>13745</fpage>
+      <lpage>13749</lpage>
     </element-citation>
   </ref>
   <ref id="ref-berlowGoldilocksFactorFood2008">
