@@ -70,10 +70,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <corresp id="cor-ts">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-22">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-27">
 <year>2024</year>
 <month>2</month>
-<day>22</day>
+<day>27</day>
 </pub-date>
 
 
@@ -115,7 +115,10 @@ work. Well they did I just haven’t done the</funding-statement>
   (<xref alt="2016b" rid="ref-jordanoSamplingNetworksEcological2016" ref-type="bibr">2016b</xref>);
   (<xref alt="Jordano 2016a" rid="ref-jordanoChasingEcologicalInteractions2016" ref-type="bibr">Jordano
   2016a</xref>); Poisot et al.
-  (<xref alt="2021" rid="ref-poisotGlobalKnowledgeGaps2021" ref-type="bibr">2021</xref>)</p>
+  (<xref alt="2021" rid="ref-poisotGlobalKnowledgeGaps2021" ref-type="bibr">2021</xref>).
+  Also introduce something around the idea that we want to be making
+  network predictions as but a first step in a simulation/dynamic type
+  of framework.</p>
   <disp-quote>
     <p>I’m beginning to think that the core discursive points should
     revolve around ‘old school’ vs ‘new age’ methods but in a way that
@@ -282,6 +285,12 @@ work. Well they did I just haven’t done the</funding-statement>
       <p><bold>Nested hierarchy model</bold>
       (<xref alt="Cattin et al. 2004" rid="ref-cattinPhylogeneticConstraintsAdaptation2004" ref-type="bibr">Cattin
       et al. 2004</xref>):</p>
+      <disp-quote>
+        <p>Gravel et al.
+        (<xref alt="2013" rid="ref-gravelInferringFoodWeb2013" ref-type="bibr">2013</xref>)
+        also poses an interesting cross-over between the adbm and niche
+        model.</p>
+      </disp-quote>
     </sec>
     <sec id="mechanistic-models">
       <title>2.1.2 Mechanistic models</title>
@@ -889,6 +898,27 @@ work. Well they did I just haven’t done the</funding-statement>
       <source>Publicationes Mathematicae</source>
       <year iso-8601-date="1959">1959</year>
       <pub-id pub-id-type="doi">10.5486/PMD.1959.6.3-4.12</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-gravelInferringFoodWeb2013">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gravel</surname><given-names>Dominique</given-names></name>
+        <name><surname>Poisot</surname><given-names>Timothée</given-names></name>
+        <name><surname>Albouy</surname><given-names>Camille</given-names></name>
+        <name><surname>Velez</surname><given-names>Laure</given-names></name>
+        <name><surname>Mouillot</surname><given-names>David</given-names></name>
+      </person-group>
+      <article-title>Inferring food web structure from predator–prey body size relationships</article-title>
+      <source>Methods in Ecology and Evolution</source>
+      <year iso-8601-date="2013">2013</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-13">2024</year><month>02</month><day>13</day></date-in-citation>
+      <volume>4</volume>
+      <issue>11</issue>
+      <issn>2041-210X</issn>
+      <pub-id pub-id-type="doi">10.1111/2041-210X.12103</pub-id>
+      <fpage>1083</fpage>
+      <lpage>1090</lpage>
     </element-citation>
   </ref>
   <ref id="ref-herbersteinAnimalTraitsCuratedAnimal2022">
@@ -1527,7 +1557,7 @@ ggplot() +
         <name><surname>Wood</surname><given-names>Spencer A.</given-names></name>
         <name><surname>Gravel</surname><given-names>Dominique</given-names></name>
       </person-group>
-      <article-title>Mangal  making ecological network analysis simple</article-title>
+      <article-title>Mangal – making ecological network analysis simple</article-title>
       <source>Ecography</source>
       <year iso-8601-date="2016">2016</year>
       <date-in-citation content-type="access-date"><year iso-8601-date="2020-11-27">2020</year><month>11</month><day>27</day></date-in-citation>
