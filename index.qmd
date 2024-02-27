@@ -39,7 +39,7 @@ jupyter: python3
 
 ## Introduction
 
-The standard run of the mill that we cannot always feasibly construct networks because 1. hard, 2. time (yay dinosaurs, but also the future and impending doom I guess), and 3. probably something else meaningful that's just slipping my mind at the moment. Some of the usual culprits will come in here like: @jordanoSamplingNetworksEcological2016; [@jordanoChasingEcologicalInteractions2016]; @poisotGlobalKnowledgeGaps2021
+The standard run of the mill that we cannot always feasibly construct networks because 1. hard, 2. time (yay dinosaurs, but also the future and impending doom I guess), and 3. probably something else meaningful that's just slipping my mind at the moment. Some of the usual culprits will come in here like: @jordanoSamplingNetworksEcological2016; [@jordanoChasingEcologicalInteractions2016]; @poisotGlobalKnowledgeGaps2021. Also introduce something around the idea that we want to be making network predictions as but a first step in a simulation/dynamic type of framework.
 
 > I'm beginning to think that the core discursive points should revolve around 'old school' vs 'new age' methods but in a way that sort of says in a world of new age tools are the the old school methods able to hole their own. But at the same time making it abundantly clear that there is a stack of context dependence to keep in mind before even thinking about drawing conclusions.
 
@@ -80,6 +80,8 @@ At some point we are going to need to discuss the key differences and implicatio
 **Niche model** [@williamsSimpleRulesYield2000]: The niche model introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' range and all species that fall in this range can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species' niche is (in part) constrained by the specified connectance of the network. The niche model has also been modified, although it appears that adding to the 'complexity' of the niche model does not improve on its ability to generate a more ecologically 'correct' network [@williamsSuccessItsLimits2008]. 
 
 **Nested hierarchy model** [@cattinPhylogeneticConstraintsAdaptation2004]:
+
+> @gravelInferringFoodWeb2013 also poses an interesting cross-over between the adbm and niche model.
 
 #### Mechanistic models
 
