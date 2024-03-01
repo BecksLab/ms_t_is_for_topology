@@ -87,7 +87,7 @@ At some point we are going to need to discuss the key differences and implicatio
 
 **Allometric diet breadth model (ADBM)** [@petcheySizeForagingFood2008]: "Our modelling effort therefore asks how well our model can predict the arrangement rather than the number of feeding links in food webs." This is a scaled version of the diet breadth model [@beckermanForagingBiologyPredicts2006]
 
-**Log-ratio** [@rohrModelingFoodWebs2010]: Interestingly often used in paleo settings (at least that's what it currently looks like in my mind... (*e.g.,* @yeakelCollapseEcologicalNetwork2014, @piresMegafaunalExtinctionsHuman2020)
+**Log-ratio** [@rohrModelingFoodWebs2010]: Interestingly often used in paleo settings (at least that's what it currently looks like in my mind... [*e.g.,* @yeakelCollapseEcologicalNetwork2014, @piresMegafaunalExtinctionsHuman2020])
 
 **Matching** [@rossbergFoodWebsExperts2006]: This one is more of a dynamic model (so BEF) and maybe beyond the scope of this work. I think there is value on only focusing on the 'static' models at this point (probably have said this before elsewhere but yeah)
 
@@ -99,20 +99,20 @@ At some point we are going to need to discuss the key differences and implicatio
 
 I know tables are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
-| Model               | Core Mechanism | End product | Specificity      | Interaction  | Data |
-|---------------------|----------------|-------------|------------------|--------------|------|
-| random              | random         | network     | species agnostic | binary       |      |
-| cascade             | structural     | network     | species agnostic | binary       |      |
-| niche               | structural     | network     | species agnostic | binary       |      |
-| nested hierarchical | structural     | network     | species agnostic | binary       |      |
-| ADBM                | mechanistic    |             | energetics       | quantitative |      |
-| log-ratio           |                |             |                  |              |      |
-| PFIM                | mechanistic    | metaweb     | trait based      |              |      |
-| graph embedding     | embedding      | metaweb     | evolutionary     |probabilistic |      |
-| trait model         | mechanistic    | metaweb     | trait based      |              |      |
-| matching            |                |             |                  |              |      |
+| Model               | Core Mechanism | End product | Specificity      | Interaction  | Data-driven |
+|---------------------|----------------|-------------|------------------|--------------|-------------|
+| random              | random         | network     | species agnostic | binary       | no          |
+| cascade             | structural     | network     | species agnostic | binary       | no          |
+| niche               | structural     | network     | species agnostic | binary       | no          |
+| nested hierarchical | structural     | network     | species agnostic | binary       | no          |
+| ADBM                | mechanistic    |             | energetics       | quantitative |             |
+| log-ratio           |                |             |                  |              |             |
+| PFIM                | mechanistic    | metaweb     | trait based      |              |             |
+| graph embedding     | embedding      | metaweb     | evolutionary     |probabilistic | yes         |
+| trait model         | mechanistic    | metaweb     | trait based      |              | yes         |
+| matching            |                |             |                  |              |             |
 
-: Lets make a table that gives an overview of the different topology generators that we will look at {#tbl-history}
+: Lets make a table that gives an overview of the different topology generators that we will look at. Here I take 'data-driven' to refer to the need for 'real world' data. This can probably be approached in a different way though maybe? {#tbl-history}
 
 > Might be nice to have a little appendix/supp mat that breaks down the models in detail so that they are all in one place so that someone (grad student being told they need to build networks) some day can go and educate themselves with slightly lower effort. This will also be useful for me should I end up having to do some actual coding - think of this as step one in the pseudo code process.
 
