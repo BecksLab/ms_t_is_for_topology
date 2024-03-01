@@ -70,10 +70,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <corresp id="cor-ts">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-27">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-01">
 <year>2024</year>
-<month>2</month>
-<day>27</day>
+<month>3</month>
+<day>1</day>
 </pub-date>
 
 
@@ -305,10 +305,8 @@ work. Well they did I just haven’t done the</funding-statement>
       <p><bold>Log-ratio</bold>
       (<xref alt="Rohr et al. 2010" rid="ref-rohrModelingFoodWebs2010" ref-type="bibr">Rohr
       et al. 2010</xref>): Interestingly often used in paleo settings
-      (at least that’s what it currently looks like in my mind…
-      (<italic>e.g.,</italic> Yeakel et al.
-      (<xref alt="2014" rid="ref-yeakelCollapseEcologicalNetwork2014" ref-type="bibr">2014</xref>),
-      Pires et al.
+      (at least that’s what it currently looks like in my mind… Pires et
+      al.
       (<xref alt="2020" rid="ref-piresMegafaunalExtinctionsHuman2020" ref-type="bibr">2020</xref>))</p>
       <p><bold>Matching</bold>
       (<xref alt="Rossberg et al. 2006" rid="ref-rossbergFoodWebsExperts2006" ref-type="bibr">Rossberg
@@ -344,17 +342,19 @@ work. Well they did I just haven’t done the</funding-statement>
       happy to drop those I think…</p>
       <fig id="tbl-history">
         <caption><p>Table 1: Lets make a table that gives an overview of
-        the different topology generators that we will look
-        at</p></caption>
+        the different topology generators that we will look at. Here I
+        take ‘data-driven’ to refer to the need for ‘real world’ data.
+        This can probably be approached in a different way though
+        maybe?</p></caption>
         <table-wrap>
           <table>
             <colgroup>
-              <col width="24%" />
-              <col width="18%" />
+              <col width="22%" />
+              <col width="17%" />
+              <col width="14%" />
+              <col width="19%" />
               <col width="15%" />
-              <col width="20%" />
-              <col width="16%" />
-              <col width="7%" />
+              <col width="14%" />
             </colgroup>
             <thead>
               <tr>
@@ -363,7 +363,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <th>End product</th>
                 <th>Specificity</th>
                 <th>Interaction</th>
-                <th>Data</th>
+                <th>Data-driven</th>
               </tr>
             </thead>
             <tbody>
@@ -373,7 +373,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>network</td>
                 <td>species agnostic</td>
                 <td>binary</td>
-                <td></td>
+                <td>no</td>
               </tr>
               <tr>
                 <td>cascade</td>
@@ -381,7 +381,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>network</td>
                 <td>species agnostic</td>
                 <td>binary</td>
-                <td></td>
+                <td>no</td>
               </tr>
               <tr>
                 <td>niche</td>
@@ -389,7 +389,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>network</td>
                 <td>species agnostic</td>
                 <td>binary</td>
-                <td></td>
+                <td>no</td>
               </tr>
               <tr>
                 <td>nested hierarchical</td>
@@ -397,7 +397,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>network</td>
                 <td>species agnostic</td>
                 <td>binary</td>
-                <td></td>
+                <td>no</td>
               </tr>
               <tr>
                 <td>ADBM</td>
@@ -429,7 +429,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>metaweb</td>
                 <td>evolutionary</td>
                 <td>probabilistic</td>
-                <td></td>
+                <td>yes</td>
               </tr>
               <tr>
                 <td>trait model</td>
@@ -437,7 +437,7 @@ work. Well they did I just haven’t done the</funding-statement>
                 <td>metaweb</td>
                 <td>trait based</td>
                 <td></td>
-                <td></td>
+                <td>yes</td>
               </tr>
               <tr>
                 <td>matching</td>

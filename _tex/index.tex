@@ -363,7 +363,7 @@ is a scaled version of the diet breadth model (Beckerman et al., 2006)
 
 \textbf{Log-ratio} (Rohr et al., 2010): Interestingly often used in
 paleo settings (at least that's what it currently looks like in my
-mind\ldots{} (\emph{e.g.,} Yeakel et al. (2014), Pires et al. (2020))
+mind\ldots{} Pires et al. (2020))
 
 \textbf{Matching} (Rossberg et al., 2006): This one is more of a dynamic
 model (so BEF) and maybe beyond the scope of this work. I think there is
@@ -391,15 +391,16 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2386}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1818}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1477}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2045}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1591}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0682}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2211}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1684}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1368}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1895}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1474}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1368}}@{}}
 \caption{Lets make a table that gives an overview of the different
-topology generators that we will look
-at}\label{tbl-history}\tabularnewline
+topology generators that we will look at. Here I take `data-driven' to
+refer to the need for `real world' data. This can probably be approached
+in a different way though maybe?}\label{tbl-history}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -412,7 +413,7 @@ Specificity
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Data
+Data-driven
 \end{minipage} \\
 \midrule\noalign{}
 \endfirsthead
@@ -428,23 +429,23 @@ Specificity
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Data
+Data-driven
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-random & random & network & species agnostic & binary & \\
-cascade & structural & network & species agnostic & binary & \\
-niche & structural & network & species agnostic & binary & \\
-nested hierarchical & structural & network & species agnostic & binary
-& \\
+random & random & network & species agnostic & binary & no \\
+cascade & structural & network & species agnostic & binary & no \\
+niche & structural & network & species agnostic & binary & no \\
+nested hierarchical & structural & network & species agnostic & binary &
+no \\
 ADBM & mechanistic & & energetics & quantitative & \\
 log-ratio & & & & & \\
 PFIM & mechanistic & metaweb & trait based & & \\
-graph embedding & embedding & metaweb & evolutionary & probabilistic
-& \\
-trait model & mechanistic & metaweb & trait based & & \\
+graph embedding & embedding & metaweb & evolutionary & probabilistic &
+yes \\
+trait model & mechanistic & metaweb & trait based & & yes \\
 matching & & & & & \\
 \end{longtable}
 
