@@ -18,7 +18,7 @@ Anyway so for now I am just pulling in the INTERIM data from some of the models.
 library(tidyverse)
 
 # download file from other repo
-download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv", "notebooks/data/topology_models.csv")
+download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv", "../notebooks/data/topology_models.csv")
 
 df = read.csv("data/topology_models.csv")  %>% 
         pivot_longer(
