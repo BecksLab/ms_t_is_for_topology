@@ -70,10 +70,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <corresp id="cor-ts">t.strydom@sheffield.ac.uk</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-01">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-05">
 <year>2024</year>
 <month>3</month>
-<day>1</day>
+<day>5</day>
 </pub-date>
 
 
@@ -1466,9 +1466,9 @@ what my brain decided on doing…</p>
 <code language="r script">library(tidyverse)
 </code>
 <code language="r script"># download file from other repo
-download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv&quot;, &quot;notebooks/data/topology_models.csv&quot;)
-</code>
-<code language="r script">df = read.csv(&quot;data/topology_models.csv&quot;)  %&gt;% 
+download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv&quot;, &quot;../notebooks/data/topology_models.csv&quot;)
+
+df = read.csv(&quot;data/topology_models.csv&quot;)  %&gt;% 
         pivot_longer(
             cols = c(complexity_real, distance_real, connectance_real, basal_real), 
             names_to = &quot;real&quot;,
@@ -1493,19 +1493,6 @@ download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generato
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
-</sec>
-<sec id="nb-code-cell-1-output-1-nb-1" specific-use="notebook-output">
-<preformat>Warning in
-download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv&quot;,
-: URL
-https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv:
-cannot open destfile 'notebooks/data/topology_models.csv', reason 'No such file
-or directory'</preformat>
-</sec>
-<sec id="nb-code-cell-1-output-2-nb-1" specific-use="notebook-output">
-<preformat>Warning in
-download.file(&quot;https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv&quot;,
-: download had nonzero exit status</preformat>
 </sec>
 </sec>
 <p>Lets just do a simple little plot where we plot real vs model
