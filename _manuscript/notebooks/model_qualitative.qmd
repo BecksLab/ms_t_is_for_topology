@@ -1,0 +1,113 @@
+---
+title: Qualitative approach to topology generators
+authors:
+  - name: Tanya Strydom
+    id: ts
+    orcid: 0000-0001-6067-1349
+date: last-modified
+bibliography: ../references.bib
+---
+
+## Venn Diagram
+
+Here we will use the standard [REF FOR TIDYVERSE] and @gaoGgVennDiagramIntuitiveEasytoUse2021 to create a venn diagram for the quantitative portion of or generator/model overview process. Also remember to drop the R version (maybe also look into if you can `renv` this because we aim for reproducibility)
+
+```{r}
+#| output: false
+#| message: false
+library(tidyverse)
+library(ggVennDiagram)
+```
+
+
+First we need to create the df with the relevant 'traits' for each model
+
+```{r}
+#| message: false
+
+x <- list(Niche=c("species agnostic", "structural", "synthetic network"),
+          ADBM=c("node-level", "mechanistic"),
+          Transfer=c("node-level", "embedding", "metaweb"),
+          PFIM=c("node-level", "mechanistic", "metaweb"),
+          Cascade=c("species agnostic", "structural", "synthetic network"))
+
+venn <- Venn(x)
+data <- process_data(venn)
+```
+
+Create venn diagram:
+
+```{r, echo = FALSE}
+#| echo: false
+#| label: fig-venn
+#| fig-cap: "Venn diagram for qualitative analysis/overview of the fancy maths things"
+#| fig-alt: "TODO"
+ggVennDiagram(x, 
+              label = "none") +
+  theme_void() +
+  theme(legend.position = 'none')
+
+```
+
+Looking at it now I don't think this is the wayTM and trying to sort of 'ordinate' modelling space might actually be more meaningful... Specifically thinking here that I need to also actually just read about model comparison (but without the performance aspect)
+
+## Multivariate approach
+
+So at least according to @mccuneAnalysisEcologicalCommunities2002 we should be able to ordinate using only categorical data although we should stick to an NMDS. Its just going to be a case of encoding said categories correctly. How I see it is that each category that we 'create' will be its own entry (we could maybe also just turn each category into a factor but this comes at the cost of assuming the distribution of said variable, well at least that's what I infer form my 2 minute skim read).
+
+I think what we should do is turn what is Table 1 in the manuscript into a 'wide table' that we can 'simply' throw into an NMDS to see what it throws out. Although I think we do need to think what would be deemed the /multivariate space of network generating models'...
+
+```{r, echo = FALSE}
+
+library(vegan)
+set.seed(66) # because star wars
+
+community_matrix =  
+  tribble(
+    ~Trait, ~Random, ~Cascade, ~Niche, ~ADBM, ~embedding,
+    "structural", 1, 1, 1, 0, 0,
+    "mechanistic", 0, 0, 0, 1, 0,
+    "embedding", 0, 0, 0, 0, 1,
+    "network", 1, 1, 1, 1, 0,
+    "metaweb", 0, 0, 0, 0, 1,
+    "species_agnostic", 1, 1, 1, 0, 0,
+    "energetics", 0, 0, 0, 1, 0,
+    "evolutionary", 0, 0, 0, 0, 1,
+    "binary", 1, 1, 1, 0, 0,
+    "quantitative", 0, 0, 0, 1, 0,
+    "probabilistic", 0, 0, 0, 0, 1)  %>% 
+    column_to_rownames('Trait')
+
+nmds=metaMDS(community_matrix,
+              k=2)
+
+data.scores = as.data.frame(scores(nmds)$sites)
+data.species = as.data.frame(scores(nmds)$species)
+
+```
+
+```{r}
+#| echo: false
+#| label: fig-nmds
+#| fig-cap: "NMDS of things"
+
+ggplot() + 
+    geom_point(data = data.scores, 
+               aes(x = NMDS1, 
+                   y = NMDS2),
+               size = 3,
+               colour = "black") + 
+    geom_text(data = data.species, 
+               aes(label = row.names(data.species),
+                   x = NMDS1, 
+                   y = NMDS2),
+               colour = "red") + 
+    labs(x = "NMDS1", y = "NMDS2") +
+    theme_classic()
+
+```
+
+## References {.unnumbered}
+
+::: {#refs}
+:::
