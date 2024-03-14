@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.5.24">
+    <meta name="generator" content="quarto-1.4.549">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2024-03-08">
+    <meta name="dcterms.date" content="2024-02-21">
 
     <title>Qualitative approach to topology generators</title>
     <style>
@@ -219,7 +219,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">March 8, 2024</p>
+              <p class="date">February 21, 2024</p>
             </div>
           </div>
           
@@ -246,7 +246,7 @@
   </ul>
 </nav>
 </div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
@@ -299,7 +299,7 @@ The following object is masked from 'package:tidyr':
 <div id="fig-venn" class="quarto-figure quarto-figure-center quarto-float anchored" alt="TODO">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-venn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_qualitative_files/figure-html/fig-venn-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Venn diagram for qualitative analysis/overview of the fancy maths things"><img src="model_qualitative_files/figure-html/fig-venn-1.png" class="img-fluid figure-img" alt="TODO" width="672"></a>
+<a href="model_qualitative_files/figure-html/fig-venn-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="model_qualitative_files/figure-html/fig-venn-1.png" class="img-fluid figure-img" alt="TODO" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-venn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Venn diagram for qualitative analysis/overview of the fancy maths things
@@ -415,7 +415,7 @@ have insufficient data</code></pre>
 <div id="fig-nmds" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_qualitative_files/figure-html/fig-nmds-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="NMDS of things"><img src="model_qualitative_files/figure-html/fig-nmds-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="model_qualitative_files/figure-html/fig-nmds-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="model_qualitative_files/figure-html/fig-nmds-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 NMDS of things
@@ -432,8 +432,12 @@ NMDS of things
 Gao, Chun-Hui, Guangchuang Yu, and Peng Cai. 2021. <span>“<span class="nocase">ggVennDiagram</span>: <span>An Intuitive</span>, <span class="nocase">Easy-to-Use</span>, and <span>Highly Customizable R Package</span> to <span>Generate Venn Diagram</span>.”</span> <em>Frontiers in Genetics</em> 12.
 </div>
 <div id="ref-mccuneAnalysisEcologicalCommunities2002" class="csl-entry" role="listitem">
-McCune, Bruce, and James Grace B. 2002. <em>Analysis of <span>Ecological Communities</span></em>. <span>United States of America</span>: <span>MjM Software Design</span>.
+McCune, Bruce, and James Grace B. 2002. <em>Analysis of <span>Ecological Communities</span></em>. United States of America: MjM Software Design.
 </div>
+</div>
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Venn diagram for qualitative analysis/overview of the fancy maths things</span>
+<span class="glightbox-desc lightbox-desc-2">NMDS of things</span>
 </div>
 </section>
      </main>
@@ -516,24 +520,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -568,11 +554,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -845,7 +827,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
