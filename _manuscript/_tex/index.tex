@@ -211,6 +211,27 @@ critical when we think about the model we want to use.
   either want to construct/predict a collection of interactions
   (generate networks) or a network of interactions (predict
   interactions).
+\end{itemize}
+
+Arguably the need for methods and tools for constructing interaction
+networks arises from two different (but still aligned) places of
+interest within the field of network ecology. On the one side sits the
+researcher who is interested in generating a set of ecologically
+plausible but not necessarily realised `in the field' networks for the
+purpose of running further simulations (\emph{e.g.,} extinction sim
+\textbf{TODO}) or understanding some higher-level process/concept
+(\emph{e.g.,} energetics \textbf{TODO}). This researcher is contrasted
+by one that is interested in constructing real-world, location specific,
+interaction data in lieu of inventorying interactions based n
+observations made in the field (Strydom et al. 2021). Of course these
+two categories are not two distinct, mutually exclusive, groups but can
+rather be viewed as operating on a gradient ranging from a need for
+generality (\emph{i.e.,} creating a network that, when taken in
+aggregate, the distribution of links (interactions) between species are
+ecologically plausible) to a need for specificity (local-level
+predictions between specific species).
+
+\begin{itemize}
 \item
   A breakdown of network generators; statement of need and core
   philosophies
@@ -225,32 +246,6 @@ critical when we think about the model we want to use.
   thus valuable and that is kinda what we are trying to achieve.
 \end{itemize}
 
-\subsection{Philosophical contemplation when constructing interaction
-networks}\label{philosophical-contemplation-when-constructing-interaction-networks}
-
-\subsubsection{Why do we want to construct an interaction
-network?}\label{why-do-we-want-to-construct-an-interaction-network}
-
-Arguably the need for methods and tools for constructing interaction
-networks arises from two different (but still aligned) places of
-interest within the field of network ecology. On the one side of the
-spectrum sits the researcher who is interested in generating a set of
-ecologically plausible but not necessarily realised `in the field' for
-the purpose of running further simulations (\emph{e.g.,} extinction sim
-REF? \textbf{TODO}) or understanding some higher-level process
-(\emph{e.g.,} energetics REF \textbf{TODO}). This researcher is
-contrasted by one that is interested in constructing real-world,
-location specific interactions networks in lieu of having access to data
-generated in the field (see Strydom et al. (2021) for a discussion on
-this). Of course these two categories are not distinct, mutually
-exclusive, groups but can rather be viewed as operating on a gradient
-ranging from a need for generality (\emph{something}) to a need for
-specificity (local-level predictions) when it comes to the quality(?) of
-the network that is constructed by a specific tool. Of course this
-research need would also reflected in the model development process
-itself and thus the idea of what a `good enough' constructed network
-will be in the context of assessing the performance of a specific model.
-
 Joel E. Cohen, Newman, and Steele (1985) states that \emph{``{[}Their{]}
 approach is more like gross anatomy than like physiology\ldots{} that
 is, the gross anatomy is frozen, rather than in motion.''}.
@@ -261,7 +256,7 @@ see it that means that there has always been this inherent
 acknowledgement that models are functioning at a specific `network
 level'.
 
-\subsubsection{The history behind the
+\subsection{The history behind the
 approach}\label{the-history-behind-the-approach}
 
 Maybe a brief history of the development of predictive tools/topo
@@ -617,43 +612,6 @@ the venn overlap thing. \emph{E.g.,} local scale predictions, regional
 scale predictions, pairwise interactions, structural (energetics),
 computationally cheap, low cost data
 \end{quote}
-
-\subsection{Qualitative stuff}\label{qualitative-stuff}
-
-\begin{figure}[H]
-
-\centering{
-
-\includegraphics{index_files/figure-latex/notebooks-model_qualitative-fig-venn-output-1.png}
-
-}
-
-\caption{\label{fig-venn}Venn diagram for qualitative analysis/overview
-of the fancy maths things}
-
-\end{figure}%
-
-\textsubscript{Source:
-\href{https://BecksLab.github.io/ms_t_is_for_topology/index.qmd.html}{Article
-Notebook}}
-
-See also
-
-\begin{figure}[H]
-
-\centering{
-
-\includegraphics{index_files/figure-latex/notebooks-model_qualitative-fig-nmds-output-1.png}
-
-}
-
-\caption{\label{fig-nmds}NMDS of things}
-
-\end{figure}%
-
-\textsubscript{Source:
-\href{https://BecksLab.github.io/ms_t_is_for_topology/index.qmd.html}{Article
-Notebook}}
 
 \subsection{Quantitative stuff}\label{quantitative-stuff}
 

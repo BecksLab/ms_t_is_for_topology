@@ -43,25 +43,41 @@ jupyter: python3
 
 * It is perhaps useful to start with asking why do we want/need models to generate networks. This can be broadly thought of to fall into two categories. Build networks because we want to build concepts vs build networks because we want specificity. Broadly this means that we either want to construct/predict a collection of interactions (generate networks) or a network of interactions (predict interactions).
 
-* A breakdown of network generators; statement of need and core philosophies
+Arguably the need for methods and tools for constructing interaction networks arises from two different (but still aligned) places of interest within the field of network ecology. On the one side sits the researcher who is interested in generating a set of ecologically plausible but not necessarily realised 'in the field' networks for the purpose of running further simulations (*e.g.,* extinction sim **TODO**) or understanding some higher-level process/concept (*e.g.,* energetics **TODO**). This researcher is contrasted by one that is interested in constructing real-world, location specific, interaction data in lieu of inventorying interactions based n observations made in the field [@strydomRoadmapPredictingSpecies2021]. Of course these two categories are not two distinct, mutually exclusive, groups but can rather be viewed as operating on a gradient ranging from a need for generality (*i.e.,* creating a network that, when taken in aggregate, the distribution of links (interactions) between species are ecologically plausible) to a need for specificity (local-level predictions between specific species).
 
-* A breakdown of interaction predictors; statement of need ([@jordanoSamplingNetworksEcological2016; @jordanoChasingEcologicalInteractions2016; @poisotGlobalKnowledgeGaps2021]) and core philosophies (trait-matching, coexistence)
+* Brief history of the development of tools within the context of the two different fields? Sort of where the theory/body of work was based and how that has changed?
 
-* Stands to reason then that we have developed methods specialise in one or the other. Which comes at a cost of 'performance' in other aspects. Knowing how the different model families stack up to each other is thus valuable and that is kinda what we are trying to achieve.
+* A breakdown of wanting to generate a network; statement of need and core philosophies
 
-### Philosophical contemplation when constructing interaction networks
+* A breakdown of wanting to predict an interaction; statement of need ([@jordanoSamplingNetworksEcological2016; @jordanoChasingEcologicalInteractions2016; @poisotGlobalKnowledgeGaps2021]) and core philosophies (trait-matching, coexistence)
 
-#### Why do we want to construct an interaction network?
-
-Arguably the need for methods and tools for constructing interaction networks arises from two different (but still aligned) places of interest within the field of network ecology. On the one side of the spectrum sits the researcher who is interested in generating a set of ecologically plausible but not necessarily realised 'in the field' for the purpose of running further simulations (*e.g.,* extinction sim REF? **TODO**) or understanding some higher-level process (*e.g.,* energetics REF **TODO**). This researcher is contrasted by one that is interested in constructing real-world, location specific interactions networks in lieu of having access to data generated in the field (see @strydomRoadmapPredictingSpecies2021 for a discussion on this). Of course these two categories are not distinct, mutually exclusive, groups but can rather be viewed as operating on a gradient ranging from a need for generality (*something*) to a need for specificity (local-level predictions) when it comes to the quality(?) of the network that is constructed by a specific tool. Of course this research need would also reflected in the model development process itself and thus the idea of what a 'good enough' constructed network will be in the context of assessing the performance of a specific model.
+* Stands to reason then that we have developed methods that specialise in one or the other. Which comes at a cost of 'performance' in other aspects. Knowing how the different model families stack up to each other is thus valuable and that is kinda what we are trying to achieve.
 
 @cohenStochasticTheoryCommunity1985 states that *"\[Their\] approach is more like gross anatomy than like physiology... that is, the gross anatomy is frozen, rather than in motion."*.
 
 Interestingly @williamsSuccessItsLimits2008 also explicitly talk about *structural* food-web models in their introduction... so how I see it that means that there has always been this inherent acknowledgement that models are functioning at a specific 'network level'.
 
-#### The history behind the approach
+### Model families
 
-Maybe a brief history of the development of predictive tools/topo generators? Sort of where the theory/body of work was based and how that has changed? IS there a difference between topo generator and predictive tool - I'm inclined to think that it aligns with the whole debate of high level structure vs node-level perfection
+Given the large number of models that have been developed it is perhaps more meaningful to group models into families with the idea that models from the same family will yield similar results because they play by similar rules. These rules referring to the underlying philosophy as to what structures either networks or the interactions within them.
+
+**Null models:** The interactions between species occurs regardless of the identity of the species (*i.e.,* species have no agency) and links are randomly distributed throughout the network. There is however the assumption that a network will be constrained by the number of links. Type I [@fortunaHabitatLossStructure2006], where interactions happen proportionally to connectance and Type II [@bascompteNestedAssemblyPlantanimal2003], where interactions happen proportionally to the joint degree of the two species involved. These two models are equivalent to the Erdos-Renyi and Configuration models [@newmanNetworksIntroduction2010] (check that though).
+
+**Neutral models:** Based on the theory that interactions occur as the result of the abundance of species (*i.e.,* the species still has no agency but its abundance does?). See @pomeranzInferringPredatorPrey2019
+
+**Resource models:** In the context of network generating models this is perhaps the most well known family of models. Essentially these models can be viewed as being based on the idea of resource partitioning and that the number of links scale with species richness (maybe not directly that but these models are link constrained). That is there is some sort of hierarchical feeding based on how a 'resource' is partitioned. This includes the cascade model [@cohenCommunityFoodWebs1990], which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). The niche model [@williamsSimpleRulesYield2000] introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model[@cattinPhylogeneticConstraintsAdaptation2004] **TODO**.
+
+**Energetic models:** Broadly this family of models is rooted in feeding theory and allocates the links between species based on energetics. This means that the model is focused on predicting not only the number of links in a network but also the arrangement of these links based on the diet breadth of a species. The diet breadth model [@beckermanForagingBiologyPredicts2006] as well as its allometrically scaled cousin the allometric diet breadth model (ADBM) [@petcheySizeForagingFood2008] determine links between species based on the energetic content, handling time, and density of species.
+
+**Binary classifiers:** 
+
+**Graph embedding:** This family of approaches has been extensively discussed in @strydomGraphEmbeddingTransfer2023 but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. @strydomFoodWebReconstruction2022 presents a specific use case that is based on transfer learning and the idea that interactions are evolutionarily conserved and that we can use known networks, and this evolutionary relationship to predict interactions for a given species pool.
+
+**Trait hierarchy:** Here I envision models that present an *a priori* trait hierarchy that determines feeding links between species. That is, there is an element of 'expert knowledge' that also comes into play... Something like PFIM [@shawFrameworkReconstructingAncient2024] is what I imagine fitting in here...
+
+**Expert knowledge:** (boots on the ground ecology)
+
+### Model benchmarking
 
 Maybe start here with discussing the core mechanistic differences that models will work at --- some are really concerned about (and thus constrained by) structure, others are more mechanistic in nature *i.e.,* species *a* has the capacity to eat species *b* because traits (read gob size), and then you get @rohrModelingFoodWebs2010 and @strydomFoodWebReconstruction2022 that sit in the weird liminal latent space...
 
@@ -77,31 +93,15 @@ Here we only look at families of models that are explicitly developed to constru
 
 ### Topology Generators
 
-**Null models** [@erdosRandomGraphs1959]: Links are assembled randomly, not developed within an ecological framework. But of course could still hold if we assume that communities are randomly assembled in terms of who is interacting with who (I seem to think that's sort of what May was arguing but I would need to remind myself)
-
-**Neutral models**
-
-**Cascade model** [@cohenCommunityFoodWebs1990]: Much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). This is achieved by assigning all species a random rank, this rank will then determine both the predators and prey of that species. A species will have a particular probability of being fed on by any species with a higher ranking than it, this probability is constrained by the specified connectance of the network. Interestingly here 'species' are treated as any individual that consume and are consumed by the same 'species', *i.e.,* these are not taxonomical species [@cohenStochasticTheoryCommunity1985]. The original cascade model has altered to be more 'generalised' [@stoufferQuantitativePatternsStructure2005], which altered the probability distribution of the prey that could be consumed by a species.
-
-**Niche models** [@williamsSimpleRulesYield2000]: The niche model introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' range and all species that fall in this range can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species' niche is (in part) constrained by the specified connectance of the network. The niche model has also been modified, although it appears that adding to the 'complexity' of the niche model does not improve on its ability to generate a more ecologically 'correct' network [@williamsSuccessItsLimits2008].
-
-**Nested hierarchy model** [@cattinPhylogeneticConstraintsAdaptation2004]:
-
 > @gravelInferringFoodWeb2013 also poses an interesting cross-over between the adbm and niche model.
 
 ### Interaction Predictors
-
-**Allometric diet breadth model (ADBM)** [@petcheySizeForagingFood2008]: "Our modelling effort therefore asks how well our model can predict the arrangement rather than the number of feeding links in food webs." This is a scaled version of the diet breadth model [@beckermanForagingBiologyPredicts2006]
 
 **Log-ratio** [@rohrModelingFoodWebs2010]: Interestingly often used in paleo settings (at least that's what it currently looks like in my mind... [*e.g.,* @yeakelCollapseEcologicalNetwork2014, @piresMegafaunalExtinctionsHuman2020])
 
 **Matching** [@rossbergFoodWebsExperts2006]: This one is more of a dynamic model (so BEF) and maybe beyond the scope of this work. I think there is value on only focusing on the 'static' models at this point (probably have said this before elsewhere but yeah)
 
-**PFIM** [@shawFrameworkReconstructingAncient2024]:
-
 **Trait-based** [@caronAddressingEltonianShortfall2022]:
-
-**Graph embedding** [@strydomFoodWebReconstruction2022; @strydomGraphEmbeddingTransfer2023]: At a high level graph embedding focuses on capturing the structural data of a network as opposed to a list of pairwise (*i.e.,* mechanistic) interactions. Here specifically the embedding is preformed on a known interaction network and captures information as to where species (nodes) are positioned in a network *e.g.,* are they basal prey species or top predators, similar to the log ratio model. In @strydomFoodWebReconstruction2022 the products of the embedding process are fed into a transfer learning framework for novel prediction...
 
 I know tables are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
@@ -168,14 +168,6 @@ How we want to compare and contrast. I think there won't be a 'winner' and thus 
 @cohenStochasticTheoryCommunity1985 actually tells us that the cascade model only really works for communities that range from 3-33 species... and @williamsSuccessItsLimits2008 also highlights how structural models really only work for small communities
 
 > maybe we can put these into broader categories - if we do start doing the venn overlap thing. *E.g.,* local scale predictions, regional scale predictions, pairwise interactions, structural (energetics), computationally cheap, low cost data
-
-### Qualitative stuff
-
-{{< embed notebooks/model_qualitative.qmd#fig-venn >}}
-
-See also
-
-{{< embed notebooks/model_qualitative.qmd#fig-nmds >}}
 
 ### Quantitative stuff
 
