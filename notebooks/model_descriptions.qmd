@@ -1,0 +1,45 @@
+---
+title: Extended model descriptions
+authors:
+  - name: Tanya Strydom
+    id: ts
+    orcid: 0000-0001-6067-1349
+date: last-modified
+bibliography: ../references.bib
+---
+
+### Null models
+
+**Type I** [@fortunaHabitatLossStructure2006]:
+
+**Type II** [@bascompteNestedAssemblyPlantanimal2003]:
+
+### Neutral models
+
+### Resource models
+
+**Cascade model** [@cohenCommunityFoodWebs1990]: Much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). This is achieved by assigning all species a random rank, this rank will then determine both the predators and prey of that species. A species will have a particular probability of being fed on by any species with a higher ranking than it, this probability is constrained by the specified connectance of the network. Interestingly here 'species' are treated as any individual that consume and are consumed by the same 'species', *i.e.,* these are not taxonomical species [@cohenStochasticTheoryCommunity1985]. The original cascade model has altered to be more 'generalised' [@stoufferQuantitativePatternsStructure2005], which altered the probability distribution of the prey that could be consumed by a species.
+
+**Niche models** [@williamsSimpleRulesYield2000]: The niche model introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' range and all species that fall in this range can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species' niche is (in part) constrained by the specified connectance of the network. The niche model has also been modified, although it appears that adding to the 'complexity' of the niche model does not improve on its ability to generate a more ecologically 'correct' network [@williamsSuccessItsLimits2008].
+
+**Nested hierarchy model** [@cattinPhylogeneticConstraintsAdaptation2004]
+
+
+### Energetic models
+
+**ADBM** [@petcheySizeForagingFood2008]: 
+
+**DBM** [@beckermanForagingBiologyPredicts2006]:
+
+### Trait hierarchy
+
+**PFIM** [@shawFrameworkReconstructingAncient2024]:
+
+### Graph embedding
+
+**Transfer learning/RDPG** [@strydomFoodWebReconstruction2022]: The products of the embedding process are fed into a transfer learning framework for novel prediction...
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

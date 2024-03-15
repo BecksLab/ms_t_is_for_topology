@@ -5,9 +5,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2024-03-14">
+    <meta name="dcterms.date" content="2024-03-15">
 
-    <title>Qualitative approach to topology generators</title>
+    <title>Extended model descriptions</title>
     <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@
         width: 0.8em;
         margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
         vertical-align: middle;
-      }
-      /* CSS for syntax highlighting */
-      pre > code.sourceCode { white-space: pre; position: relative; }
-      pre > code.sourceCode > span { line-height: 1.25; }
-      pre > code.sourceCode > span:empty { height: 1.2em; }
-      .sourceCode { overflow: visible; }
-      code.sourceCode > span { color: inherit; text-decoration: inherit; }
-      div.sourceCode { margin: 1em 0; }
-      pre.sourceCode { margin: 0; }
-      @media screen {
-      div.sourceCode { overflow: auto; }
-      }
-      @media print {
-      pre > code.sourceCode { white-space: pre-wrap; }
-      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-      }
-      pre.numberSource code
-        { counter-reset: source-line 0; }
-      pre.numberSource code > span
-        { position: relative; left: -4em; counter-increment: source-line; }
-      pre.numberSource code > span > a:first-child::before
-        { content: counter(source-line);
-          position: relative; left: -1em; text-align: right; vertical-align: baseline;
-          border: none; display: inline-block;
-          -webkit-touch-callout: none; -webkit-user-select: none;
-          -khtml-user-select: none; -moz-user-select: none;
-          -ms-user-select: none; user-select: none;
-          padding: 0 4px; width: 4em;
-        }
-      pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-      div.sourceCode
-        {   }
-      @media screen {
-      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
       }
       /* CSS for citations */
       div.csl-bib-body { }
@@ -177,9 +143,6 @@
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -192,15 +155,15 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Qualitative approach to topology generators</h6>
+      <h6><i class="bi bi-journal-code"></i> Extended model descriptions</h6>
 
-            <a href="../notebooks/model_qualitative.qmd" class="btn btn-primary quarto-download-embed" download="model_qualitative.qmd">Download Source</a>
+            <a href="../notebooks/model_descriptions.qmd" class="btn btn-primary quarto-download-embed" download="model_descriptions.qmd">Download Source</a>
           </div>
 
      <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Qualitative approach to topology generators</h1>
+      <h1 class="title">Extended model descriptions</h1>
           </div>
 
     
@@ -219,7 +182,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">March 14, 2024</p>
+              <p class="date">March 15, 2024</p>
             </div>
           </div>
           
@@ -240,8 +203,12 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#venn-diagram" id="toc-venn-diagram" class="nav-link active" data-scroll-target="#venn-diagram">Venn Diagram</a></li>
-  <li><a href="#multivariate-approach" id="toc-multivariate-approach" class="nav-link" data-scroll-target="#multivariate-approach">Multivariate approach</a></li>
+  <li><a href="#null-models" id="toc-null-models" class="nav-link active" data-scroll-target="#null-models">Null models</a></li>
+  <li><a href="#neutral-models" id="toc-neutral-models" class="nav-link" data-scroll-target="#neutral-models">Neutral models</a></li>
+  <li><a href="#resource-models" id="toc-resource-models" class="nav-link" data-scroll-target="#resource-models">Resource models</a></li>
+  <li><a href="#energetic-models" id="toc-energetic-models" class="nav-link" data-scroll-target="#energetic-models">Energetic models</a></li>
+  <li><a href="#trait-hierarchy" id="toc-trait-hierarchy" class="nav-link" data-scroll-target="#trait-hierarchy">Trait hierarchy</a></li>
+  <li><a href="#graph-embedding" id="toc-graph-embedding" class="nav-link" data-scroll-target="#graph-embedding">Graph embedding</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -250,189 +217,71 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <section id="venn-diagram" class="level2">
-<h2 class="anchored" data-anchor-id="venn-diagram">Venn Diagram</h2>
-<p>Here we will use the standard [REF FOR TIDYVERSE] and <span class="citation" data-cites="gaoGgVennDiagramIntuitiveEasytoUse2021">Gao, Yu, and Cai (<a href="#ref-gaoGgVennDiagramIntuitiveEasytoUse2021" role="doc-biblioref">2021</a>)</span> to create a venn diagram for the quantitative portion of or generator/model overview process. Also remember to drop the R version (maybe also look into if you can <code>renv</code> this because we aim for reproducibility)</p>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.4.4     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggVennDiagram)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'ggVennDiagram'
-
-The following object is masked from 'package:tidyr':
-
-    unite</code></pre>
-</div>
-</div></div>
-<p>First we need to create the df with the relevant ‘traits’ for each model</p>
-<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">Niche=</span><span class="fu">c</span>(<span class="st">"species agnostic"</span>, <span class="st">"structural"</span>, <span class="st">"synthetic network"</span>),</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">ADBM=</span><span class="fu">c</span>(<span class="st">"node-level"</span>, <span class="st">"mechanistic"</span>),</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">Transfer=</span><span class="fu">c</span>(<span class="st">"node-level"</span>, <span class="st">"embedding"</span>, <span class="st">"metaweb"</span>),</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">PFIM=</span><span class="fu">c</span>(<span class="st">"node-level"</span>, <span class="st">"mechanistic"</span>, <span class="st">"metaweb"</span>),</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">Cascade=</span><span class="fu">c</span>(<span class="st">"species agnostic"</span>, <span class="st">"structural"</span>, <span class="st">"synthetic network"</span>))</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>venn <span class="ot">&lt;-</span> <span class="fu">Venn</span>(x)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">process_data</span>(venn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div>
-<p>Create venn diagram:</p>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-fig-venn" class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVennDiagram</span>(x, </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">label =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'none'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div id="fig-venn" class="quarto-figure quarto-figure-center quarto-float anchored" alt="TODO">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-venn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_qualitative_files/figure-html/fig-venn-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Venn diagram for qualitative analysis/overview of the fancy maths things"><img src="model_qualitative_files/figure-html/fig-venn-1.png" class="img-fluid figure-img" alt="TODO" width="672"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-venn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Venn diagram for qualitative analysis/overview of the fancy maths things
-</figcaption>
-</figure>
-</div>
-</div>
-</div></div>
-<p>Looking at it now I don’t think this is the wayTM and trying to sort of ‘ordinate’ modelling space might actually be more meaningful… Specifically thinking here that I need to also actually just read about model comparison (but without the performance aspect)</p>
+       <section id="null-models" class="level3">
+<h3 class="anchored" data-anchor-id="null-models">Null models</h3>
+<p><strong>Type I</strong> <span class="citation" data-cites="fortunaHabitatLossStructure2006">(<a href="#ref-fortunaHabitatLossStructure2006" role="doc-biblioref">Fortuna and Bascompte 2006</a>)</span>:</p>
+<p><strong>Type II</strong> <span class="citation" data-cites="bascompteNestedAssemblyPlantanimal2003">(<a href="#ref-bascompteNestedAssemblyPlantanimal2003" role="doc-biblioref">Bascompte et al. 2003</a>)</span>:</p>
 </section>
-<section id="multivariate-approach" class="level2">
-<h2 class="anchored" data-anchor-id="multivariate-approach">Multivariate approach</h2>
-<p>So at least according to <span class="citation" data-cites="mccuneAnalysisEcologicalCommunities2002">McCune and Grace (<a href="#ref-mccuneAnalysisEcologicalCommunities2002" role="doc-biblioref">2002</a>)</span> we should be able to ordinate using only categorical data although we should stick to an NMDS. Its just going to be a case of encoding said categories correctly. How I see it is that each category that we ‘create’ will be its own entry (we could maybe also just turn each category into a factor but this comes at the cost of assuming the distribution of said variable, well at least that’s what I infer form my 2 minute skim read).</p>
-<p>I think what we should do is turn what is Table 1 in the manuscript into a ‘wide table’ that we can ‘simply’ throw into an NMDS to see what it throws out. Although I think we do need to think what would be deemed the /multivariate space of network generating models’…</p>
-<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vegan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: permute</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: lattice</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>This is vegan 2.6-4</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">66</span>) <span class="co"># because star wars</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>community_matrix <span class="ot">=</span>  </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tribble</span>(</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Trait, <span class="sc">~</span>Random, <span class="sc">~</span>Cascade, <span class="sc">~</span>Niche, <span class="sc">~</span>ADBM, <span class="sc">~</span>embedding,</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"structural"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>,</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mechanistic"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>,</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"embedding"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"network"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>,</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"metaweb"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"species_agnostic"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>,</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"energetics"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>,</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"evolutionary"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"binary"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>,</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"quantitative"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>,</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"probabilistic"</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">column_to_rownames</span>(<span class="st">'Trait'</span>)</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>nmds<span class="ot">=</span><span class="fu">metaMDS</span>(community_matrix,</span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>              <span class="at">k=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Run 0 stress 6.055762e-17 
-Run 1 stress 0 
-... New best solution
-... Procrustes: rmse 0.1648533  max resid 0.2711284 
-Run 2 stress 0 
-... Procrustes: rmse 0.2415503  max resid 0.3789344 
-Run 3 stress 0 
-... Procrustes: rmse 0.2222631  max resid 0.3377932 
-Run 4 stress 0 
-... Procrustes: rmse 0.1834411  max resid 0.2788241 
-Run 5 stress 0 
-... Procrustes: rmse 0.1086419  max resid 0.1874339 
-Run 6 stress 0 
-... Procrustes: rmse 0.1874631  max resid 0.2719791 
-Run 7 stress 0.06335697 
-Run 8 stress 0 
-... Procrustes: rmse 0.2387256  max resid 0.3380424 
-Run 9 stress 0 
-... Procrustes: rmse 0.07659501  max resid 0.1385462 
-Run 10 stress 0 
-... Procrustes: rmse 0.1670454  max resid 0.2483204 
-Run 11 stress 8.123983e-05 
-... Procrustes: rmse 0.1041446  max resid 0.1326098 
-Run 12 stress 0.07124327 
-Run 13 stress 7.796157e-05 
-... Procrustes: rmse 0.1459716  max resid 0.1945881 
-Run 14 stress 0 
-... Procrustes: rmse 0.217524  max resid 0.3558596 
-Run 15 stress 0.07437737 
-Run 16 stress 7.027019e-05 
-... Procrustes: rmse 0.1626957  max resid 0.2609984 
-Run 17 stress 0 
-... Procrustes: rmse 0.1011174  max resid 0.198959 
-Run 18 stress 0 
-... Procrustes: rmse 0.07338361  max resid 0.1263504 
-Run 19 stress 0 
-... Procrustes: rmse 0.236487  max resid 0.391489 
-Run 20 stress 0 
-... Procrustes: rmse 0.2439364  max resid 0.365209 
-*** Best solution was not repeated -- monoMDS stopping criteria:
-     3: no. of iterations &gt;= maxit
-    17: stress &lt; smin</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in metaMDS(community_matrix, k = 2): stress is (nearly) zero: you may
-have insufficient data</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data.scores <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">scores</span>(nmds)<span class="sc">$</span>sites)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>data.species <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">scores</span>(nmds)<span class="sc">$</span>species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="cell-fig-nmds" class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">data =</span> data.scores, </span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x =</span> NMDS1, </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y =</span> NMDS2),</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">3</span>,</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span> </span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="at">data =</span> data.species, </span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">row.names</span>(data.species),</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>                   <span class="at">x =</span> NMDS1, </span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y =</span> NMDS2),</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">colour =</span> <span class="st">"red"</span>) <span class="sc">+</span> </span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"NMDS1"</span>, <span class="at">y =</span> <span class="st">"NMDS2"</span>) <span class="sc">+</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div id="fig-nmds" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_qualitative_files/figure-html/fig-nmds-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="NMDS of things"><img src="model_qualitative_files/figure-html/fig-nmds-1.png" class="img-fluid figure-img" width="672"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nmds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-NMDS of things
-</figcaption>
-</figure>
-</div>
-</div>
-</div></div>
+<section id="neutral-models" class="level3">
+<h3 class="anchored" data-anchor-id="neutral-models">Neutral models</h3>
+</section>
+<section id="resource-models" class="level3">
+<h3 class="anchored" data-anchor-id="resource-models">Resource models</h3>
+<p><strong>Cascade model</strong> <span class="citation" data-cites="cohenCommunityFoodWebs1990">(<a href="#ref-cohenCommunityFoodWebs1990" role="doc-biblioref">Joel E. Cohen, Briand, and Newman 1990</a>)</span>: Much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (<em>i.e.,</em> ‘many’ prey and ‘few’ predators). This is achieved by assigning all species a random rank, this rank will then determine both the predators and prey of that species. A species will have a particular probability of being fed on by any species with a higher ranking than it, this probability is constrained by the specified connectance of the network. Interestingly here ‘species’ are treated as any individual that consume and are consumed by the same ‘species’, <em>i.e.,</em> these are not taxonomical species <span class="citation" data-cites="cohenStochasticTheoryCommunity1985">(<a href="#ref-cohenStochasticTheoryCommunity1985" role="doc-biblioref">Joel E. Cohen, Newman, and Steele 1985</a>)</span>. The original cascade model has altered to be more ‘generalised’ <span class="citation" data-cites="stoufferQuantitativePatternsStructure2005">(<a href="#ref-stoufferQuantitativePatternsStructure2005" role="doc-biblioref">Stouffer et al. 2005</a>)</span>, which altered the probability distribution of the prey that could be consumed by a species.</p>
+<p><strong>Niche models</strong> <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span>: The niche model introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ range and all species that fall in this range can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species’ niche is (in part) constrained by the specified connectance of the network. The niche model has also been modified, although it appears that adding to the ‘complexity’ of the niche model does not improve on its ability to generate a more ecologically ‘correct’ network <span class="citation" data-cites="williamsSuccessItsLimits2008">(<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">Williams and Martinez 2008</a>)</span>.</p>
+<p><strong>Nested hierarchy model</strong> <span class="citation" data-cites="cattinPhylogeneticConstraintsAdaptation2004">(<a href="#ref-cattinPhylogeneticConstraintsAdaptation2004" role="doc-biblioref">Cattin et al. 2004</a>)</span></p>
+</section>
+<section id="energetic-models" class="level3">
+<h3 class="anchored" data-anchor-id="energetic-models">Energetic models</h3>
+<p><strong>ADBM</strong> <span class="citation" data-cites="petcheySizeForagingFood2008">(<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">Petchey et al. 2008</a>)</span>:</p>
+<p><strong>DBM</strong> <span class="citation" data-cites="beckermanForagingBiologyPredicts2006">(<a href="#ref-beckermanForagingBiologyPredicts2006" role="doc-biblioref">Beckerman, Petchey, and Warren 2006</a>)</span>:</p>
+</section>
+<section id="trait-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="trait-hierarchy">Trait hierarchy</h3>
+<p><strong>PFIM</strong> <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span>:</p>
+</section>
+<section id="graph-embedding" class="level3">
+<h3 class="anchored" data-anchor-id="graph-embedding">Graph embedding</h3>
+<p><strong>Transfer learning/RDPG</strong> <span class="citation" data-cites="strydomFoodWebReconstruction2022">(<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">Strydom et al. 2022</a>)</span>: The products of the embedding process are fed into a transfer learning framework for novel prediction…</p>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-gaoGgVennDiagramIntuitiveEasytoUse2021" class="csl-entry" role="listitem">
-Gao, Chun-Hui, Guangchuang Yu, and Peng Cai. 2021. <span>“<span class="nocase">ggVennDiagram</span>: <span>An Intuitive</span>, <span class="nocase">Easy-to-Use</span>, and <span>Highly Customizable R Package</span> to <span>Generate Venn Diagram</span>.”</span> <em>Frontiers in Genetics</em> 12.
+<div id="ref-bascompteNestedAssemblyPlantanimal2003" class="csl-entry" role="listitem">
+Bascompte, J., P. Jordano, C. J. Melian, and J. M. Olesen. 2003. <span>“The Nested Assembly of Plant-Animal Mutualistic Networks.”</span> <em>Proceedings of the National Academy of Sciences</em> 100 (16): 9383–87. <a href="https://doi.org/10.1073/pnas.1633576100">https://doi.org/10.1073/pnas.1633576100</a>.
 </div>
-<div id="ref-mccuneAnalysisEcologicalCommunities2002" class="csl-entry" role="listitem">
-McCune, Bruce, and James Grace B. 2002. <em>Analysis of <span>Ecological Communities</span></em>. United States of America: MjM Software Design.
+<div id="ref-beckermanForagingBiologyPredicts2006" class="csl-entry" role="listitem">
+Beckerman, Andrew P., Owen L. Petchey, and Philip H. Warren. 2006. <span>“Foraging Biology Predicts Food Web Complexity.”</span> <em>Proceedings of the National Academy of Sciences</em> 103 (37): 13745–49. <a href="https://doi.org/10.1073/pnas.0603039103">https://doi.org/10.1073/pnas.0603039103</a>.
+</div>
+<div id="ref-cattinPhylogeneticConstraintsAdaptation2004" class="csl-entry" role="listitem">
+Cattin, Marie-France, Louis-Félix Bersier, Carolin Banašek-Richter, Richard Baltensperger, and Jean-Pierre Gabriel. 2004. <span>“Phylogenetic Constraints and Adaptation Explain Food-Web Structure.”</span> <em>Nature</em> 427 (6977): 835–39. <a href="https://doi.org/10.1038/nature02327">https://doi.org/10.1038/nature02327</a>.
+</div>
+<div id="ref-cohenCommunityFoodWebs1990" class="csl-entry" role="listitem">
+Cohen, Joel E, Frederic Briand, and Charles Newman. 1990. <em>Community <span>Food Webs</span>: <span>Data</span> and <span>Theory</span></em>. Biomathematics. Berlin Heidelberg: Springer-Verlag.
+</div>
+<div id="ref-cohenStochasticTheoryCommunity1985" class="csl-entry" role="listitem">
+Cohen, Joel E., C. M. Newman, and John Hyslop Steele. 1985. <span>“A Stochastic Theory of Community Food Webs <span>I</span>. <span>Models</span> and Aggregated Data.”</span> <em>Proceedings of the Royal Society of London. Series B. Biological Sciences</em> 224 (1237): 421–48. <a href="https://doi.org/10.1098/rspb.1985.0042">https://doi.org/10.1098/rspb.1985.0042</a>.
+</div>
+<div id="ref-fortunaHabitatLossStructure2006" class="csl-entry" role="listitem">
+Fortuna, Miguel A., and Jordi Bascompte. 2006. <span>“Habitat Loss and the Structure of Plant-Animal Mutualistic Networks: <span>Mutualistic</span> Networks and Habitat Loss.”</span> <em>Ecology Letters</em> 9 (3): 281–86. <a href="https://doi.org/10.1111/j.1461-0248.2005.00868.x">https://doi.org/10.1111/j.1461-0248.2005.00868.x</a>.
+</div>
+<div id="ref-petcheySizeForagingFood2008" class="csl-entry" role="listitem">
+Petchey, Owen L., Andrew P. Beckerman, Jens O. Riede, and Philip H. Warren. 2008. <span>“Size, Foraging, and Food Web Structure.”</span> <em>Proceedings of the National Academy of Sciences</em> 105 (11): 4191–96. <a href="https://doi.org/10.1073/pnas.0710672105">https://doi.org/10.1073/pnas.0710672105</a>.
+</div>
+<div id="ref-shawFrameworkReconstructingAncient2024" class="csl-entry" role="listitem">
+Shaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. <span>“A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.”</span> bioRxiv. <a href="https://doi.org/10.1101/2024.01.30.578036">https://doi.org/10.1101/2024.01.30.578036</a>.
+</div>
+<div id="ref-stoufferQuantitativePatternsStructure2005" class="csl-entry" role="listitem">
+Stouffer, D. B., J. Camacho, R. Guimerà, C. A. Ng, and L. A. Nunes Amaral. 2005. <span>“Quantitative <span>Patterns</span> in the <span>Structure</span> of <span>Model</span> and <span>Empirical Food Webs</span>.”</span> <em>Ecology</em> 86 (5): 1301–11. <a href="https://doi.org/10.1890/04-0957">https://doi.org/10.1890/04-0957</a>.
+</div>
+<div id="ref-strydomFoodWebReconstruction2022" class="csl-entry" role="listitem">
+Strydom, Tanya, Salomé Bouskila, Francis Banville, Ceres Barros, Dominique Caron, Maxwell J. Farrell, Marie-Josée Fortin, et al. 2022. <span>“Food Web Reconstruction Through Phylogenetic Transfer of Low-Rank Network Representation.”</span> <em>Methods in Ecology and Evolution</em> 13 (12): 2838–49. <a href="https://doi.org/10.1111/2041-210X.13835">https://doi.org/10.1111/2041-210X.13835</a>.
+</div>
+<div id="ref-williamsSimpleRulesYield2000" class="csl-entry" role="listitem">
+Williams, Richard J., and Neo D. Martinez. 2000. <span>“Simple Rules Yield Complex Food Webs.”</span> <em>Nature</em> 404 (6774): 180–83. <a href="https://doi.org/10.1038/35004572">https://doi.org/10.1038/35004572</a>.
+</div>
+<div id="ref-williamsSuccessItsLimits2008" class="csl-entry" role="listitem">
+———. 2008. <span>“Success and Its Limits Among Structural Models of Complex Food Webs.”</span> <em>Journal of Animal Ecology</em> 77 (3): 512–19. <a href="https://doi.org/10.1111/j.1365-2656.2008.01362.x">https://doi.org/10.1111/j.1365-2656.2008.01362.x</a>.
 </div>
 </div>
 </section>
@@ -845,30 +694,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script> 
+</script>  </div> <!-- /content --> 
   
 </body></html>
