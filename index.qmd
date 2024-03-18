@@ -59,7 +59,9 @@ Interestingly @williamsSuccessItsLimits2008 also explicitly talk about *structur
 
 ### Model families
 
-Given the large number of models that have been developed it is perhaps more meaningful to group models into families with the idea that models from the same family will yield similar results because they play by similar rules. These rules referring to the underlying philosophy as to what structures either networks or the interactions within them.
+Given the large number of models that have been developed it is perhaps more meaningful to group models into families with the idea that models from the same family will yield similar results because they play by similar rules. These rules referring to the underlying philosophy as to what structures either networks or the interactions within them (see @fig-concept panel A).
+
+![Conceptual figure of the 'network prediction'. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to 'test'/benchmark for a model based on it being either a network or interaction predicting model](images/concept.jpeg){#fig-concept}
 
 **Null models:** The interactions between species occurs regardless of the identity of the species (*i.e.,* species have no agency) and links are randomly distributed throughout the network. There is however the assumption that a network will be constrained by the number of links. Type I [@fortunaHabitatLossStructure2006], where interactions happen proportionally to connectance and Type II [@bascompteNestedAssemblyPlantanimal2003], where interactions happen proportionally to the joint degree of the two species involved. These two models are equivalent to the Erdos-Renyi and Configuration models [@newmanNetworksIntroduction2010] (check that though).
 
@@ -78,6 +80,8 @@ Given the large number of models that have been developed it is perhaps more mea
 **Expert knowledge:** (boots on the ground ecology)
 
 ### Model benchmarking
+
+see @fig-concept panel B
 
 Maybe start here with discussing the core mechanistic differences that models will work at --- some are really concerned about (and thus constrained by) structure, others are more mechanistic in nature *i.e.,* species *a* has the capacity to eat species *b* because traits (read gob size), and then you get @rohrModelingFoodWebs2010 and @strydomFoodWebReconstruction2022 that sit in the weird liminal latent space...
 
