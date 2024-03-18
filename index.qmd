@@ -7,7 +7,6 @@ author:
     corresponding: true
     email: t.strydom@sheffield.ac.uk
     roles:
-      - Words
       - Nonsense
       - Rascality
       - Visualisation (although absent)
