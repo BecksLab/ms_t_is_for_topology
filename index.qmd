@@ -55,7 +55,7 @@ Arguably the need for methods and tools for constructing interaction networks ar
 
 * A breakdown of wanting to generate a network; statement of need and core philosophies
 
-* A breakdown of wanting to predict an interaction; statement of need ([@jordanoSamplingNetworksEcological2016; @jordanoChasingEcologicalInteractions2016; @poisotGlobalKnowledgeGaps2021]) and core philosophies (trait-matching, coexistence)
+* A breakdown of wanting to predict an interaction; statement of need [@jordanoSamplingNetworksEcological2016; @jordanoChasingEcologicalInteractions2016; @poisotGlobalKnowledgeGaps2021] and core philosophies (trait-matching, coexistence)
 
 * Stands to reason then that we have developed methods that specialise in one or the other. Which comes at a cost of 'performance' in other aspects. Knowing how the different model families stack up to each other is thus valuable and that is kinda what we are trying to achieve.
 
