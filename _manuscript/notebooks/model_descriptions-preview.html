@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2024-03-14">
+    <meta name="dcterms.date" content="2024-03-18">
 
     <title>Extended model descriptions</title>
     <style>
@@ -155,7 +155,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Extended model descriptions</h6>
+      <h6><i class="bi bi-journal-code"></i> Extended Model Description</h6>
 
             <a href="../notebooks/model_descriptions.qmd" class="btn btn-primary quarto-download-embed" download="model_descriptions.qmd">Download Source</a>
           </div>
@@ -182,7 +182,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">March 14, 2024</p>
+              <p class="date">March 18, 2024</p>
             </div>
           </div>
           
@@ -203,13 +203,23 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#null-models" id="toc-null-models" class="nav-link active" data-scroll-target="#null-models">Null models</a></li>
+  <li><a href="#secc-extended-model-descriptions" id="toc-secc-extended-model-descriptions" class="nav-link active" data-scroll-target="#secc-extended-model-descriptions">Extended model descriptions</a>
+  <ul class="collapse">
+  <li><a href="#network-models" id="toc-network-models" class="nav-link" data-scroll-target="#network-models">Network models</a>
+  <ul class="collapse">
+  <li><a href="#null-models" id="toc-null-models" class="nav-link" data-scroll-target="#null-models">Null models</a></li>
   <li><a href="#neutral-models" id="toc-neutral-models" class="nav-link" data-scroll-target="#neutral-models">Neutral models</a></li>
   <li><a href="#resource-models" id="toc-resource-models" class="nav-link" data-scroll-target="#resource-models">Resource models</a></li>
+  </ul></li>
+  <li><a href="#interaction-models" id="toc-interaction-models" class="nav-link" data-scroll-target="#interaction-models">Interaction models</a>
+  <ul class="collapse">
   <li><a href="#energetic-models" id="toc-energetic-models" class="nav-link" data-scroll-target="#energetic-models">Energetic models</a></li>
   <li><a href="#trait-hierarchy" id="toc-trait-hierarchy" class="nav-link" data-scroll-target="#trait-hierarchy">Trait hierarchy</a></li>
   <li><a href="#graph-embedding" id="toc-graph-embedding" class="nav-link" data-scroll-target="#graph-embedding">Graph embedding</a></li>
+  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other">Other</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -217,7 +227,11 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <section id="null-models" class="level3">
+       <section id="secc-extended-model-descriptions" class="level1">
+<h1>Extended model descriptions</h1>
+<section id="network-models" class="level2">
+<h2 class="anchored" data-anchor-id="network-models">Network models</h2>
+<section id="null-models" class="level3">
 <h3 class="anchored" data-anchor-id="null-models">Null models</h3>
 <p><strong>Type I</strong> <span class="citation" data-cites="fortunaHabitatLossStructure2006">(<a href="#ref-fortunaHabitatLossStructure2006" role="doc-biblioref">Fortuna and Bascompte 2006</a>)</span>:</p>
 <p><strong>Type II</strong> <span class="citation" data-cites="bascompteNestedAssemblyPlantanimal2003">(<a href="#ref-bascompteNestedAssemblyPlantanimal2003" role="doc-biblioref">Bascompte et al. 2003</a>)</span>:</p>
@@ -231,6 +245,9 @@
 <p><strong>Niche models</strong> <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span>: The niche model introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ range and all species that fall in this range can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species’ niche is (in part) constrained by the specified connectance of the network. The niche model has also been modified, although it appears that adding to the ‘complexity’ of the niche model does not improve on its ability to generate a more ecologically ‘correct’ network <span class="citation" data-cites="williamsSuccessItsLimits2008">(<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">Williams and Martinez 2008</a>)</span>.</p>
 <p><strong>Nested hierarchy model</strong> <span class="citation" data-cites="cattinPhylogeneticConstraintsAdaptation2004">(<a href="#ref-cattinPhylogeneticConstraintsAdaptation2004" role="doc-biblioref">Cattin et al. 2004</a>)</span></p>
 </section>
+</section>
+<section id="interaction-models" class="level2">
+<h2 class="anchored" data-anchor-id="interaction-models">Interaction models</h2>
 <section id="energetic-models" class="level3">
 <h3 class="anchored" data-anchor-id="energetic-models">Energetic models</h3>
 <p><strong>ADBM</strong> <span class="citation" data-cites="petcheySizeForagingFood2008">(<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">Petchey et al. 2008</a>)</span>:</p>
@@ -243,6 +260,12 @@
 <section id="graph-embedding" class="level3">
 <h3 class="anchored" data-anchor-id="graph-embedding">Graph embedding</h3>
 <p><strong>Transfer learning/RDPG</strong> <span class="citation" data-cites="strydomFoodWebReconstruction2022">(<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">Strydom et al. 2022</a>)</span>: The products of the embedding process are fed into a transfer learning framework for novel prediction…</p>
+<p><strong>Log-ratio</strong> <span class="citation" data-cites="rohrModelingFoodWebs2010">(<a href="#ref-rohrModelingFoodWebs2010" role="doc-biblioref">Rohr et al. 2010</a>)</span>: Interestingly often used in paleo settings (at least that’s what it currently looks like in my mind… <span class="citation" data-cites="yeakelCollapseEcologicalNetwork2014">Pires et al. (<a href="#ref-piresMegafaunalExtinctionsHuman2020" role="doc-biblioref">2020</a>)</span>)</p>
+</section>
+<section id="other" class="level3">
+<h3 class="anchored" data-anchor-id="other">Other</h3>
+<p><strong>Matching</strong> <span class="citation" data-cites="rossbergFoodWebsExperts2006">(<a href="#ref-rossbergFoodWebsExperts2006" role="doc-biblioref">Rossberg et al. 2006</a>)</span>: This one is more of a dynamic model (so BEF) and maybe beyond the scope of this work. I think there is value on only focusing on the ‘static’ models at this point (probably have said this before elsewhere but yeah)</p>
+</section>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
@@ -268,6 +291,15 @@ Fortuna, Miguel A., and Jordi Bascompte. 2006. <span>“Habitat Loss and the Str
 <div id="ref-petcheySizeForagingFood2008" class="csl-entry" role="listitem">
 Petchey, Owen L., Andrew P. Beckerman, Jens O. Riede, and Philip H. Warren. 2008. <span>“Size, Foraging, and Food Web Structure.”</span> <em>Proceedings of the National Academy of Sciences</em> 105 (11): 4191–96. <a href="https://doi.org/10.1073/pnas.0710672105">https://doi.org/10.1073/pnas.0710672105</a>.
 </div>
+<div id="ref-piresMegafaunalExtinctionsHuman2020" class="csl-entry" role="listitem">
+Pires, Mathias M., Diego Rindel, Bruno Moscardi, Livia R. Cruz, Paulo R. Guimarães, Sergio F. dos Reis, and S. Ivan Perez. 2020. <span>“Before, During and After Megafaunal Extinctions: <span>Human</span> Impact on <span>Pleistocene-Holocene</span> Trophic Networks in <span>South Patagonia</span>.”</span> <em>Quaternary Science Reviews</em> 250 (December): 106696. <a href="https://doi.org/10.1016/j.quascirev.2020.106696">https://doi.org/10.1016/j.quascirev.2020.106696</a>.
+</div>
+<div id="ref-rohrModelingFoodWebs2010" class="csl-entry" role="listitem">
+Rohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. <span>“Modeling <span>Food Webs</span>: <span>Exploring Unexplained Structure Using Latent Traits</span>.”</span> <em>The American Naturalist</em> 176 (2): 170–77. <a href="https://doi.org/10.1086/653667">https://doi.org/10.1086/653667</a>.
+</div>
+<div id="ref-rossbergFoodWebsExperts2006" class="csl-entry" role="listitem">
+Rossberg, A. G., H. Matsuda, T. Amemiya, and K. Itoh. 2006. <span>“Food Webs: <span>Experts</span> Consuming Families of Experts.”</span> <em>Journal of Theoretical Biology</em> 241 (3): 552–63. <a href="https://doi.org/10.1016/j.jtbi.2005.12.021">https://doi.org/10.1016/j.jtbi.2005.12.021</a>.
+</div>
 <div id="ref-shawFrameworkReconstructingAncient2024" class="csl-entry" role="listitem">
 Shaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. <span>“A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.”</span> bioRxiv. <a href="https://doi.org/10.1101/2024.01.30.578036">https://doi.org/10.1101/2024.01.30.578036</a>.
 </div>
@@ -283,7 +315,11 @@ Williams, Richard J., and Neo D. Martinez. 2000. <span>“Simple Rules Yield Com
 <div id="ref-williamsSuccessItsLimits2008" class="csl-entry" role="listitem">
 ———. 2008. <span>“Success and Its Limits Among Structural Models of Complex Food Webs.”</span> <em>Journal of Animal Ecology</em> 77 (3): 512–19. <a href="https://doi.org/10.1111/j.1365-2656.2008.01362.x">https://doi.org/10.1111/j.1365-2656.2008.01362.x</a>.
 </div>
+<div id="ref-yeakelCollapseEcologicalNetwork2014" class="csl-entry" role="listitem">
+Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. <span>“Collapse of an Ecological Network in <span>Ancient Egypt</span>.”</span> <em>PNAS</em> 111 (40): 14472–77. <a href="https://doi.org/10.1073/pnas.1408471111">https://doi.org/10.1073/pnas.1408471111</a>.
 </div>
+</div>
+</section>
 </section>
      </main>
 <!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">

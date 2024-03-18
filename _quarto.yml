@@ -3,6 +3,13 @@ project:
 
 manuscript:
   article: index.qmd
+  code-links:
+    - text: GitHub
+      icon: github
+      href: https://github.com/BecksLab/topology_generators
+  notebooks:
+    - notebook: notebooks/model_descriptions.qmd
+      title: Extended Model Description
 
 format:
   html:
