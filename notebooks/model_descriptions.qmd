@@ -8,6 +8,10 @@ date: last-modified
 bibliography: ../references.bib
 ---
 
+# Extended model descriptions {#secc-extended-model-descriptions}
+
+## Network models
+
 ### Null models
 
 **Type I** [@fortunaHabitatLossStructure2006]:
@@ -24,6 +28,7 @@ bibliography: ../references.bib
 
 **Nested hierarchy model** [@cattinPhylogeneticConstraintsAdaptation2004]
 
+## Interaction models
 
 ### Energetic models
 
@@ -38,6 +43,12 @@ bibliography: ../references.bib
 ### Graph embedding
 
 **Transfer learning/RDPG** [@strydomFoodWebReconstruction2022]: The products of the embedding process are fed into a transfer learning framework for novel prediction...
+
+**Log-ratio** [@rohrModelingFoodWebs2010]: Interestingly often used in paleo settings (at least that's what it currently looks like in my mind... [*e.g.,* @yeakelCollapseEcologicalNetwork2014, @piresMegafaunalExtinctionsHuman2020])
+
+### Other
+
+**Matching** [@rossbergFoodWebsExperts2006]: This one is more of a dynamic model (so BEF) and maybe beyond the scope of this work. I think there is value on only focusing on the 'static' models at this point (probably have said this before elsewhere but yeah)
 
 ## References {.unnumbered}
 
