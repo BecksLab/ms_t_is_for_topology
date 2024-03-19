@@ -13,6 +13,13 @@ author:
     affiliation:
       - id: sheffield
         name: School of Biosciences, University of Sheffield
+  - name: Timothée Poisot
+    orcid: 0000-0002-0735-5184
+    corresponding: false
+    roles: []
+    affiliations:
+      - Université de Montreal
+      - Québec Centre for Biodiversity Sciences
   - name: Andrew P. Beckerman
     id: apb
     orcid: 0000-0002-7859-8394
@@ -72,7 +79,7 @@ Given the large number of models that have been developed it is perhaps more mea
 
 **Neutral models:** Based on the theory that interactions occur as the result of the abundance of species (*i.e.,* the species still has no agency but its abundance does?). See @pomeranzInferringPredatorPrey2019
 
-**Resource models:** In the context of network generating models this is perhaps the most well known family of models. Essentially these models can be viewed as being based on the idea of resource partitioning and that the number of links scale with species richness (maybe not directly that but these models are link constrained). That is there is some sort of hierarchical feeding based on how a 'resource' is partitioned. This includes the cascade model [@cohenCommunityFoodWebs1990], which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). The niche model [@williamsSimpleRulesYield2000] introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model[@cattinPhylogeneticConstraintsAdaptation2004] **TODO**.
+**Resource models:** In the context of network generating models this is perhaps the most well known family of models. Essentially these models can be viewed as being based on the idea of resource partitioning and that the number of links scale with species richness (maybe not directly that but these models are link constrained). That is there is some sort of hierarchical feeding based on how a 'resource' is partitioned. This includes the cascade model [@cohenCommunityFoodWebs1990], which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). The niche model [@williamsSimpleRulesYield2000] introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model [@cattinPhylogeneticConstraintsAdaptation2004] **TODO**.
 
 **Energetic models:** Broadly this family of models is rooted in feeding theory and allocates the links between species based on energetics. This means that the model is focused on predicting not only the number of links in a network but also the arrangement of these links based on the diet breadth of a species. The diet breadth model [@beckermanForagingBiologyPredicts2006] as well as its allometrically scaled cousin the allometric diet breadth model (ADBM) [@petcheySizeForagingFood2008] determine links between species based on the energetic content, handling time, and density of species.
 
@@ -118,7 +125,7 @@ I know tables are awful but in this case they may make more sense. Also I don't 
 | null            | network      |             | binary        | no                       |
 | resource        | network      | link        | binary        | no                       |
 | energetic       |              |             | binary        | yes (body size)          |
-| graph embedding | interactions |             | probabilistic | yes (interaction)        |
+| graph embedding | interactions |             | probabilistic | yes (network)            |
 | trait hierarchy | interactions |             |               | yes (interaction, trait) |
 
 : Lets make a table that gives an overview of the different topology generators that we will look at. Here I take 'data-driven' to refer to the need for 'real world' data. This can probably be approached in a different way though maybe? {#tbl-history}
@@ -131,7 +138,7 @@ I know tables are awful but in this case they may make more sense. Also I don't 
 
 > Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a 'scale' element as well *i.e.,* a regional and local network. I think there is going to be a 'turning point' where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) *sensu* @caronTrophicInteractionModels2023. Although having said that I feel that contradicts the idea of backbones (*sensu* Bramon Mora (sp?) et al & Stouffer et al) But that might be where we get the idea of core *structure* vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I'm trying to say here)
 
-I think we should also use the Dunne [@dunneCompilationNetworkAnalyses2008]. Because 1) it gives the paleo-centric methods their moment in the sun and 2) I think it also brings up the interesting question of can we use modern structure to predict past ones?
+I think we should also use the @dunneCompilationNetworkAnalyses2008 work. Because 1) it gives the paleo-centric methods their moment in the sun and 2) I think it also brings up the interesting question of can we use modern structure to predict past ones?
 
 ### Model comparison
 
