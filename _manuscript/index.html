@@ -8,7 +8,7 @@
 
 <meta name="author" content="Tanya Strydom">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-03-18">
+<meta name="dcterms.date" content="2024-03-19">
 <meta name="keywords" content="food web, network construction">
 
 <title>T is for Topology</title>
@@ -74,10 +74,10 @@ div.csl-indent {
 <meta name="citation_keywords" content="food web,network construction">
 <meta name="citation_author" content="Tanya Strydom">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-03-18">
-<meta name="citation_cover_date" content="2024-03-18">
+<meta name="citation_publication_date" content="2024-03-19">
+<meta name="citation_cover_date" content="2024-03-19">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-03-18">
+<meta name="citation_online_date" content="2024-03-19">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="Some fancy journal">
 <meta name="citation_reference" content="citation_title=A General Model for Food Web Structure;,citation_abstract=A central problem in ecology is determining the processes that shape the complex networks known as food webs formed by species and their feeding relationships. The topology of these networks is a major determinant of ecosystems’ dynamics and is ultimately responsible for their responses to human impacts. Several simple models have been proposed for the intricate food webs observed in nature. We show that the three main models proposed so far fail to fully replicate the empirical data, and we develop a likelihood-based approach for the direct comparison of alternative models based on the full structure of the network. Results drive a new model that is able to generate all the empirical data sets and to do so with the highest likelihood.;,citation_author=Stefano Allesina;,citation_author=David Alonso;,citation_author=Mercedes Pascual;,citation_publication_date=2008-05;,citation_cover_date=2008-05;,citation_year=2008;,citation_issue=5876;,citation_doi=10.1126/science.1156269;,citation_volume=320;,citation_journal_title=Science;,citation_publisher=American Association for the Advancement of Science;">
@@ -186,7 +186,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">March 18, 2024</p>
+              <p class="date">March 19, 2024</p>
             </div>
           </div>
           
@@ -329,103 +329,63 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Model</th>
-<th>Core Mechanism</th>
+<th>Model family</th>
 <th>Predicts</th>
-<th>Specificity</th>
+<th>Constraints</th>
 <th>Interaction</th>
-<th>Data-driven</th>
+<th>Real world data</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>random</td>
-<td>random</td>
-<td>networks</td>
-<td>species agnostic</td>
+<td>network</td>
+<td>link</td>
 <td>binary</td>
 <td>no</td>
 </tr>
 <tr class="even">
-<td>cascade</td>
-<td>structural</td>
-<td>networks</td>
-<td>species agnostic</td>
-<td>binary</td>
-<td>no</td>
-</tr>
-<tr class="odd">
-<td>niche</td>
-<td>structural</td>
-<td>networks</td>
-<td>species agnostic</td>
-<td>binary</td>
-<td>no</td>
-</tr>
-<tr class="even">
-<td>nested hierarchical</td>
-<td>structural</td>
-<td>networks</td>
-<td>species agnostic</td>
+<td>null</td>
+<td>network</td>
+<td></td>
 <td>binary</td>
 <td>no</td>
 </tr>
 <tr class="odd">
-<td>ADBM</td>
-<td>mechanistic</td>
-<td>interactions</td>
-<td>energetics</td>
-<td>quantitative</td>
-<td></td>
+<td>resource</td>
+<td>network</td>
+<td>link</td>
+<td>binary</td>
+<td>no</td>
 </tr>
 <tr class="even">
-<td>log-ratio</td>
-<td></td>
-<td>interactions</td>
+<td>energetic</td>
 <td></td>
 <td></td>
-<td></td>
+<td>binary</td>
+<td>yes (body size)</td>
 </tr>
 <tr class="odd">
-<td>PFIM</td>
-<td>mechanistic</td>
-<td>interactions</td>
-<td>trait based</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
 <td>graph embedding</td>
-<td>embedding</td>
 <td>interactions</td>
-<td>evolutionary</td>
-<td>probabilistic</td>
-<td>yes</td>
-</tr>
-<tr class="odd">
-<td>trait model</td>
-<td>mechanistic</td>
-<td>interactions</td>
-<td>trait based</td>
 <td></td>
-<td>yes</td>
+<td>probabilistic</td>
+<td>yes (interaction)</td>
 </tr>
 <tr class="even">
-<td>matching</td>
+<td>trait hierarchy</td>
+<td>interactions</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>yes (interaction, trait)</td>
 </tr>
 </tbody>
 </table>
@@ -645,7 +605,7 @@ Wilman, Hamish, Jonathan Belmaker, Jennifer Simpson, Carolina de la Rosa, Marcel
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{strydom2024,
   author = {Strydom, Tanya and P. Beckerman, Andrew},
   title = {T Is for {Topology}},
-  date = {2024-03-18},
+  date = {2024-03-19},
   langid = {en},
   abstract = {There are many reasons one might want to generate a
     network and there are many tools on the market that might make that
@@ -659,7 +619,7 @@ Wilman, Hamish, Jonathan Belmaker, Jennifer Simpson, Carolina de la Rosa, Marcel
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-strydom2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Strydom, Tanya, and Andrew P. Beckerman. 2024. <span>“T Is for
-Topology.”</span> Some Fancy Journal. March 18, 2024.
+Topology.”</span> Some Fancy Journal. March 19, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1050,7 +1010,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
