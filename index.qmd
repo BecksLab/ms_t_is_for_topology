@@ -93,7 +93,7 @@ Given the large number of models that have been developed it is perhaps more mea
 
 **GLM** [@caronAddressingEltonianShortfall2022]: To confirm
 
-**Expert knowledge:** (boots on the ground ecology)
+**Expert knowledge:** (boots on the ground ecology) *e.g.,* @maioranoTETRAEUSpecieslevelTrophic2020 and @dunneCompilationNetworkAnalyses2008
 
 ### Model benchmarking
 
@@ -120,7 +120,7 @@ This section depends on if we go the family route and where we introduce them. B
 I know tables are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
 | Model family    | Predicts     | Constraints | Interaction   | Real world data          |
-|---------------|---------------|---------------|---------------|---------------|
+|-----------------|--------------|-------------|---------------|--------------------------|
 | random          | network      | link        | binary        | no                       |
 | null            | network      |             | binary        | no                       |
 | resource        | network      | link        | binary        | no                       |
