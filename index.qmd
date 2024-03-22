@@ -88,7 +88,7 @@ Given the large number of models that have been developed it is perhaps more mea
 
 > @gravelInferringFoodWeb2013 also poses an interesting cross-over between the adbm and niche model.
 
-**Binary classifiers:** The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [**e.g.,** @caronAddressingEltonianShortfall2022 use a tait-based approach], random forest [**e.g.,** @llewelynPredictingPredatorPrey2023], trait-based k-NN [**e.g.,** @desjardins-proulxEcologicalInteractionsNetflix2017]
+**Binary classifiers:** The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [*e.g.,* @caronAddressingEltonianShortfall2022 use a tait-based approach], random forest [*e.g.,* @llewelynPredictingPredatorPrey2023], trait-based k-NN [*e.g.,* @desjardins-proulxEcologicalInteractionsNetflix2017]
 
 **Graph embedding:** This family of approaches has been extensively discussed in @strydomGraphEmbeddingTransfer2023 but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. @strydomFoodWebReconstruction2022 presents a specific use case that is based on transfer learning and the idea that interactions are evolutionarily conserved and that we can use known networks, and this evolutionary relationship to predict interactions for a given species pool. **TODO** Log-ratio [@rohrModelingFoodWebs2010]
 
@@ -112,10 +112,9 @@ Given the large number of models that have been developed it is perhaps more mea
 
 -   Main concern with predicting interactions is that we want to test the 'quality' of the links we are predicting (both true positives and true negatives), but the inherit sparsity (meaning high class imbalance) means that we also need to look at the balance of these predictions.
 
--   Caveat regarding the use of real world interaction data both for training and validating predictions? **e.g.,** Poisot, Ouellet, et al. et al 2021 and Catchen et al 2023
+-   Caveat regarding the use of real world interaction data both for training and validating predictions? *e.g.,* Poisot, Ouellet, et al. et al 2021 and Catchen et al 2023
 
 -   See @poisotGuidelinesPredictionSpecies2023
-
   -   skill (ability to make the right prediction; evaluate whether low prevalence can lull us into a false sense of predictive accuracy)
   -   bias (trends towards systematically over-predicting one class)
   -   class imbalance (the relative number of cases representing interactions)
@@ -221,9 +220,9 @@ This might actually be an awful way to try and summarise the data but rolling wi
 
 - Why do interaction models do so badly at predicting structure? Nuance of metaweb vs realisation but also time? At the core of it interaction models are trained on existing interaction data; this is data that are most likely closer to a metaweb than a local realisation even if they are being inventoried at a small scale.
 
-> **"we highlight an interesting paradox: the models with the best performance measures are not necessarily the models with the closest reconstructed network structure."** - @poisotGuidelinesPredictionSpecies2023
+> *"we highlight an interesting paradox: the models with the best performance measures are not necessarily the models with the closest reconstructed network structure."* - @poisotGuidelinesPredictionSpecies2023
 
-- **Do we need network models to predict interactions and interaction models to predict structure?** (lets not think about that too hard or I might just have to sit in silence for a while...)
+- *Do we need network models to predict interactions and interaction models to predict structure?* (lets not think about that too hard or I might just have to sit in silence for a while...)
 
 - It will be interesting to bring up the idea that if a model is missing a specific pairwise link but doing well at the structural level then when does it matter?
 
