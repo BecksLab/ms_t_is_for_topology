@@ -2,13 +2,12 @@
 */.ipynb_checkpoints/*
 
 /.quarto/
+/_manuscript
 
 /agujournal2019.cls
 /trackchanges.sty
 
 /.luarc.json
-
-/site_libs/*
 
 .vscode/*
 .DS_Store
