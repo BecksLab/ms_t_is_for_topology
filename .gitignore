@@ -8,7 +8,7 @@
 
 /.luarc.json
 
-/site_libs/
+/site_libs/*
 
 .vscode/*
 .DS_Store
