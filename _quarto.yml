@@ -7,19 +7,14 @@ manuscript:
     - text: GitHub
       icon: github
       href: https://github.com/BecksLab/topology_generators
-  notebooks:
-    - notebook: notebooks/model_descriptions.qmd
-      title: Extended Model Description
+
+execute:
+  freeze: auto
 
 format:
   html:
+    toc: true
     comments:
       hypothesis: true
   docx: default
   pdf: default
-
-execute:
-  freeze: true
-
-
-
