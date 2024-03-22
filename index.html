@@ -256,7 +256,7 @@ div.csl-indent {
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">4</span> Discussion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_descriptions-preview.html"><i class="bi bi-journal-code"></i>Extended Model Description</a></li><li><a href="notebooks/model_quantitative.embed-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li></ul></div></nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_quantitative-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li><li><a href="notebooks/model_descriptions-preview.html"><i class="bi bi-journal-code"></i>Extended model descriptions</a></li></ul></div></nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
 </div>
@@ -282,7 +282,7 @@ div.csl-indent {
 <li><p>What is the purpose of generating a network? Is it an element of a bigger question we are asking, <em>e.g.,</em> I want to generate a series of networks to do some extinction simulations/bioenergetic stuff OR are we looking for a ‘final product’ network that is relevant to a specific location? (this can still be broad in geographic scope).</p></li>
 </ul></li>
 <li><p>A breakdown of wanting to generate a network; statement of need and core philosophies</p></li>
-<li><p>A breakdown of wanting to predict an interaction; statement of need <span class="citation" data-cites="jordanoSamplingNetworksEcological2016 jordanoChasingEcologicalInteractions2016 poisotGlobalKnowledgeGaps2021">(<a href="#ref-jordanoSamplingNetworksEcological2016" role="doc-biblioref">Jordano 2016b</a>, <a href="#ref-jordanoChasingEcologicalInteractions2016" role="doc-biblioref">2016a</a>; <a href="#ref-poisotGlobalKnowledgeGaps2021" role="doc-biblioref">Poisot et al. 2021</a>)</span> and core philosophies (trait-matching, coexistence)</p></li>
+<li><p>A breakdown of wanting to predict an interaction; statement of need <span class="citation" data-cites="jordanoSamplingNetworksEcological2016 jordanoChasingEcologicalInteractions2016 poisotGlobalKnowledgeGaps2021">(<a href="#ref-jordanoSamplingNetworksEcological2016" role="doc-biblioref">Jordano 2016b</a>, <a href="#ref-jordanoChasingEcologicalInteractions2016" role="doc-biblioref">2016a</a>; <a href="#ref-poisotGlobalKnowledgeGaps2021" role="doc-biblioref">Poisot et al. 2021</a>)</span> and core philosophies (trait-matching, coexistence, evolutionary backbones)</p></li>
 <li><p>Stands to reason then that we have developed methods that specialise in one or the other. Which comes at a cost of ‘performance’ in other aspects. Knowing how the different model families stack up to each other is thus valuable.</p></li>
 </ul>
 <p><span class="citation" data-cites="cohenStochasticTheoryCommunity1985">Joel E. Cohen, Newman, and Steele (<a href="#ref-cohenStochasticTheoryCommunity1985" role="doc-biblioref">1985</a>)</span> states that <em>“[Their] approach is more like gross anatomy than like physiology… that is, the gross anatomy is frozen, rather than in motion.”</em>.</p>
@@ -303,14 +303,14 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <p><strong>Null models:</strong> The interactions between species occurs regardless of the identity of the species (<em>i.e.,</em> species have no agency) and links are randomly distributed throughout the network. There is however the assumption that a network will be constrained by the number of links. Type I <span class="citation" data-cites="fortunaHabitatLossStructure2006">(<a href="#ref-fortunaHabitatLossStructure2006" role="doc-biblioref">Fortuna and Bascompte 2006</a>)</span>, where interactions happen proportionally to connectance and Type II <span class="citation" data-cites="bascompteNestedAssemblyPlantanimal2003">(<a href="#ref-bascompteNestedAssemblyPlantanimal2003" role="doc-biblioref">Bascompte et al. 2003</a>)</span>, where interactions happen proportionally to the joint degree of the two species involved. These two models are equivalent to the Erdos-Renyi and Configuration models <span class="citation" data-cites="newmanNetworksIntroduction2010">(<a href="#ref-newmanNetworksIntroduction2010" role="doc-biblioref">Newman 2010</a>)</span> (check that though).</p>
 <p><strong>Neutral models:</strong> Based on the theory that interactions occur as the result of the abundance of species (<em>i.e.,</em> the species still has no agency but its abundance does?). See <span class="citation" data-cites="pomeranzInferringPredatorPrey2019">Pomeranz et al. (<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">2019</a>)</span></p>
 <p><strong>Resource models:</strong> In the context of network generating models this is perhaps the most well known family of models. Essentially these models can be viewed as being based on the idea of resource partitioning and that the number of links scale with species richness (maybe not directly that but these models are link constrained). That is there is some sort of hierarchical feeding based on how a ‘resource’ is partitioned. This includes the cascade model <span class="citation" data-cites="cohenCommunityFoodWebs1990">(<a href="#ref-cohenCommunityFoodWebs1990" role="doc-biblioref">Joel E. Cohen, Briand, and Newman 1990</a>)</span>, which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (<em>i.e.,</em> ‘many’ prey and ‘few’ predators). The niche model <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model <span class="citation" data-cites="cattinPhylogeneticConstraintsAdaptation2004">(<a href="#ref-cattinPhylogeneticConstraintsAdaptation2004" role="doc-biblioref">Cattin et al. 2004</a>)</span> <strong>TODO</strong>.</p>
+<p><strong>Generative models:</strong> (this is maybe a bit of a bold term to use). MaxEnt <span class="citation" data-cites="banvilleWhatConstrainsFood2023">(<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">Banville, Gravel, and Poisot 2023</a>)</span>, (maybe) stochastic block <span class="citation" data-cites="xieCompletenessCommunityStructure2017">(<a href="#ref-xieCompletenessCommunityStructure2017" role="doc-biblioref">Xie et al. 2017</a>)</span>.</p>
 <p><strong>Energetic models:</strong> Broadly this family of models is rooted in feeding theory and allocates the links between species based on energetics. This means that the model is focused on predicting not only the number of links in a network but also the arrangement of these links based on the diet breadth of a species. The diet breadth model <span class="citation" data-cites="beckermanForagingBiologyPredicts2006">(<a href="#ref-beckermanForagingBiologyPredicts2006" role="doc-biblioref">Beckerman, Petchey, and Warren 2006</a>)</span> as well as its allometrically scaled cousin the allometric diet breadth model (ADBM) <span class="citation" data-cites="petcheySizeForagingFood2008">(<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">Petchey et al. 2008</a>)</span> determine links between species based on the energetic content, handling time, and density of species.</p>
 <blockquote class="blockquote">
 <p><span class="citation" data-cites="gravelInferringFoodWeb2013">Gravel et al. (<a href="#ref-gravelInferringFoodWeb2013" role="doc-biblioref">2013</a>)</span> also poses an interesting cross-over between the adbm and niche model.</p>
 </blockquote>
-<p><strong>Binary classifiers:</strong></p>
+<p><strong>Binary classifiers:</strong> The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate ‘real world’ interaction data with a suitable ecological proxy for which data is more widely available (<em>e.g.,</em> traits). Model families often used include generalised linear models <span class="citation" data-cites="caronAddressingEltonianShortfall2022">(<em>e.g.,</em> <a href="#ref-caronAddressingEltonianShortfall2022" role="doc-biblioref">Caron et al. 2022</a> use a tait-based approach)</span>, random forest <span class="citation" data-cites="llewelynPredictingPredatorPrey2023">(<em>e.g.,</em> <a href="#ref-llewelynPredictingPredatorPrey2023" role="doc-biblioref">Llewelyn et al. 2023</a>)</span>, trait-based k-NN <span class="citation" data-cites="desjardins-proulxEcologicalInteractionsNetflix2017">(<em>e.g.,</em> <a href="#ref-desjardins-proulxEcologicalInteractionsNetflix2017" role="doc-biblioref">Desjardins-Proulx et al. 2017</a>)</span></p>
 <p><strong>Graph embedding:</strong> This family of approaches has been extensively discussed in <span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span> but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. <span class="citation" data-cites="strydomFoodWebReconstruction2022">Strydom et al. (<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">2022</a>)</span> presents a specific use case that is based on transfer learning and the idea that interactions are evolutionarily conserved and that we can use known networks, and this evolutionary relationship to predict interactions for a given species pool. <strong>TODO</strong> Log-ratio <span class="citation" data-cites="rohrModelingFoodWebs2010">(<a href="#ref-rohrModelingFoodWebs2010" role="doc-biblioref">Rohr et al. 2010</a>)</span></p>
-<p><strong>Trait hierarchy:</strong> Here I envision models that present an <em>a priori</em> trait hierarchy that determines feeding links between species. That is, there is an element of ‘expert knowledge’ that also comes into play… Something like PFIM <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span> is what I imagine fitting in here…</p>
-<p><strong>GLM</strong> <span class="citation" data-cites="caronAddressingEltonianShortfall2022">(<a href="#ref-caronAddressingEltonianShortfall2022" role="doc-biblioref">Caron et al. 2022</a>)</span>: To confirm</p>
+<p><strong>Trait matching:</strong> Here I envision models that present an <em>a priori</em> set of rules that determines feeding links between species; specifically based on species traits. That is, there is an element of ‘expert knowledge’ that also comes into play… Something like PFIM <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span> is what I imagine fitting in here…</p>
 <p><strong>Expert knowledge:</strong> Not so much about empirical observations but more the idea of using human power/knowledge to create an assemblage of interactions for a specific community. This can include empirical data but can also make use of knowledge about ecological features (such as traits or co-occurrence) and how those can function as proxies for interactions <span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">(<em>e.g.,</em> <a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">Morales-Castilla et al. 2015</a>)</span>. Or alternatively the value of ‘local’ knowledge and having specific individuals sitting around a table and assigning a value of how confident they are that a specific species pair are likely to interact <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008">(<a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">Jennifer A. Dunne et al. 2008</a>)</span>, or a combination of published and grey literature <span class="citation" data-cites="maioranoTETRAEUSpecieslevelTrophic2020">(<em>e.g.,</em> <a href="#ref-maioranoTETRAEUSpecieslevelTrophic2020" role="doc-biblioref">Maiorano et al. 2020</a>)</span>.</p>
 </section>
 <section id="model-benchmarking" class="level3" data-number="1.2">
@@ -319,6 +319,9 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <li><p>‘Testing’ the performance of a model is going to depend on some of the core limitations of the model itself thus it makes sense to think of two sets benchmarking rules for network and interaction prediction models respectively (see <a href="#fig-concept" class="quarto-xref">Figure&nbsp;1</a> panel B).</p></li>
 <li><p>When it comes to network models we are concerned with the ‘preservation’ of structure and distribution of links across the network. For interaction models we want to ensure that we are able to retrieve interactions that really exist but also those that cannot exist (<em>sensu</em> forbidden links <span class="citation" data-cites="jordanoSamplingNetworksEcological2016">Jordano (<a href="#ref-jordanoSamplingNetworksEcological2016" role="doc-biblioref">2016b</a>)</span>)</p></li>
 </ul>
+<blockquote class="blockquote">
+<p>“As long as these predictions are not perfect, some interactions will be predicted at the ‘wrong’ position in the network; these measures cannot describe the structural effect of these mistakes. On the other hand, measures of network structure can have the same value with interactions that fall at drastically different positions; this is in part because a lot of these measures covary with connectance, and in part because as long as these values are not 0 or their respective maximum, there is a large number of network configurations that can have the same value.” - <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span></p>
+</blockquote>
 <section id="benchmarking-network-models" class="level4" data-number="1.2.1">
 <h4 data-number="1.2.1" class="anchored" data-anchor-id="benchmarking-network-models"><span class="header-section-number">1.2.1</span> Benchmarking network models</h4>
 <ul>
@@ -328,7 +331,13 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <section id="benchmarking-interaction-models" class="level4" data-number="1.2.2">
 <h4 data-number="1.2.2" class="anchored" data-anchor-id="benchmarking-interaction-models"><span class="header-section-number">1.2.2</span> Benchmarking interaction models</h4>
 <ul>
+<li><p>Main concern with predicting interactions is that we want to test the ‘quality’ of the links we are predicting (both true positives and true negatives), but the inherit sparsity (meaning high class imbalance) means that we also need to look at the balance of these predictions.</p></li>
+<li><p>Caveat regarding the use of real world interaction data both for training and validating predictions? <em>e.g.,</em> Poisot, Ouellet, et al.&nbsp;et al 2021 and Catchen et al 2023</p></li>
 <li><p>See <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span></p></li>
+<li><p>skill (ability to make the right prediction; evaluate whether low prevalence can lull us into a false sense of predictive accuracy)</p></li>
+<li><p>bias (trends towards systematically over-predicting one class)</p></li>
+<li><p>class imbalance (the relative number of cases representing interactions)</p></li>
+<li><p>“These results suggest that learning from a dataset with very low connectance can be a different task than for more connected networks: it becomes increasingly important to capture the mechanisms that make an interaction exist, and therefore having a slightly more biased training dataset might be beneficial. As connectance increases, the need for biased training sets is less prominent, as learning the rules for which interactions do not exist starts gaining importance”</p></li>
 <li><p>Need to discuss the key differences and implications between predicting a metaweb (<em>sensu</em> <span class="citation" data-cites="dunneNetworkStructureFood2006">Jennifer A. Dunne (<a href="#ref-dunneNetworkStructureFood2006" role="doc-biblioref">2006</a>)</span>) and a network realisation. Maybe also <span class="citation" data-cites="poisotSpeciesWhyEcological2015">Poisot, Stouffer, and Gravel (<a href="#ref-poisotSpeciesWhyEcological2015" role="doc-biblioref">2015</a>)</span> that discuss how the local factors are going to play a role.</p></li>
 </ul>
 </section>
@@ -348,11 +357,11 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 16%">
+<col style="width: 21%">
 <col style="width: 15%">
-<col style="width: 17%">
-<col style="width: 30%">
+<col style="width: 13%">
+<col style="width: 16%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -386,24 +395,38 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <td>no</td>
 </tr>
 <tr class="even">
+<td>generative</td>
+<td>network</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
 <td>energetic</td>
 <td></td>
 <td></td>
 <td>binary</td>
 <td>yes (body size)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>graph embedding</td>
 <td>interactions</td>
 <td></td>
 <td>probabilistic</td>
 <td>yes (network)</td>
 </tr>
-<tr class="even">
-<td>trait hierarchy</td>
+<tr class="odd">
+<td>trait matching</td>
 <td>interactions</td>
 <td></td>
 <td></td>
+<td>yes (expert knowledge, trait)</td>
+</tr>
+<tr class="even">
+<td>binary classifiers</td>
+<td>interactions</td>
+<td></td>
+<td>probabilistic</td>
 <td>yes (interaction, trait)</td>
 </tr>
 </tbody>
@@ -435,17 +458,20 @@ Table&nbsp;1: Lets make a table that gives an overview of the different topology
 <h4 data-number="2.3.1" class="anchored" data-anchor-id="network-models"><span class="header-section-number">2.3.1</span> Network models</h4>
 <p>Want to compare real vs predicted and then get something that looks like <a href="#fig-topology" class="quarto-xref">Figure&nbsp;2</a></p>
 <ul>
-<li><em>Shape:</em> do the models construct tall ‘pencil’ vs flat ‘pancake’ networks (Beckerman 2024, pers comms), generality/vulnerability, chain length (?)</li>
-<li><em>Structure:</em> Predicting ‘structure’ - SVD <span class="citation" data-cites="strydomSVDEntropyReveals2021">(<a href="#ref-strydomSVDEntropyReveals2021" role="doc-biblioref">Strydom, Dalla Riva, and Poisot 2021</a>)</span> but maybe something like nestedness as well (?)</li>
-<li><em>Links:</em> are the number of links preserved (most network predicting models are to some extend link constrained but useful to see)</li>
+<li><p>connectance, nestedness (Bastolla et al., 2009), modularity (Barber, 2007), asymmetry (Delmas et al., 2018), and Jaccard network dissimilarity (Canard et al., 2014)</p></li>
+<li><p><em>Shape:</em> do the models construct tall ‘pencil’ vs flat ‘pancake’ networks (Beckerman 2024, pers comms), generality/vulnerability, chain length (?)</p></li>
+<li><p><em>Structure:</em> Predicting ‘structure’ - SVD <span class="citation" data-cites="strydomSVDEntropyReveals2021">(<a href="#ref-strydomSVDEntropyReveals2021" role="doc-biblioref">Strydom, Dalla Riva, and Poisot 2021</a>)</span> but maybe something like nestedness as well (?)</p></li>
+<li><p><em>Links:</em> are the number of links preserved (most network predicting models are to some extend link constrained but useful to see)</p></li>
 </ul>
 </section>
 <section id="interaction-models" class="level4" data-number="2.3.2">
 <h4 data-number="2.3.2" class="anchored" data-anchor-id="interaction-models"><span class="header-section-number">2.3.2</span> Interaction models</h4>
 <ul>
-<li>Look at what <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span> has to say</li>
-<li>% links correctly retrieved</li>
-<li>TSS/ROC-AUC</li>
+<li>Based on <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span>:
+<ul>
+<li>Precision-Recall (PR-AUC) - performance</li>
+<li>Matthews correlation coefficient (MCC) - accuracy</li>
+</ul></li>
 <li>Maybe same measures we use for the network models</li>
 </ul>
 </section>
@@ -503,7 +529,7 @@ Figure&nbsp;2: Real vs observed values for network summary statistics. Note here
 </div>
 </div>
 </div>
-<a class="quarto-notebook-link" id="nblink-1" href="notebooks/model_quantitative.embed-preview.html#cell-fig-topology">Source: Quantitative approach to topology generators</a></div>
+<a class="quarto-notebook-link" id="nblink-1" href="notebooks/model_quantitative-preview.html#cell-fig-topology">Source: Quantitative approach to topology generators</a></div>
 <p>This might actually be an awful way to try and summarise the data but rolling with it for now…</p>
 </section>
 </section>
@@ -513,7 +539,12 @@ Figure&nbsp;2: Real vs observed values for network summary statistics. Note here
 <li><p>I think a big take home will (hopefully) be how different approaches do better in different situations and so you as an end user need to take this into consideration and pick accordingly. I think <span class="citation" data-cites="petcheyFitEfficiencyBiology2011">Petchey et al. (<a href="#ref-petcheyFitEfficiencyBiology2011" role="doc-biblioref">2011</a>)</span> might have (and share) some thoughts on this (thanks Andrew). I feel like I need to look at <span class="citation" data-cites="berlowGoldilocksFactorFood2008">Berlow, Brose, and Martinez (<a href="#ref-berlowGoldilocksFactorFood2008" role="doc-biblioref">2008</a>)</span> but maybe not exactly in this context but vaguely adjacent.</p></li>
 <li><p>An interesting thing to also think about (and arguably it will be addressed based on some of the other thoughts and ideas) is data dependant and data independent ‘parametrisation’ of the models…</p></li>
 <li><p>Why do interaction models do so badly at predicting structure? Nuance of metaweb vs realisation but also time? At the core of it interaction models are trained on existing interaction data; this is data that are most likely closer to a metaweb than a local realisation even if they are being inventoried at a small scale.</p></li>
-<li><p><strong>Do we need network models to predict interactions and interaction models to predict structure?</strong> (lets not think about that too hard or I might just have to sit in silence for a while…)</p></li>
+</ul>
+<blockquote class="blockquote">
+<p><em>“we highlight an interesting paradox: the models with the best performance measures are not necessarily the models with the closest reconstructed network structure.”</em> - <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span></p>
+</blockquote>
+<ul>
+<li><p><em>Do we need network models to predict interactions and interaction models to predict structure?</em> (lets not think about that too hard or I might just have to sit in silence for a while…)</p></li>
 <li><p>It will be interesting to bring up the idea that if a model is missing a specific pairwise link but doing well at the structural level then when does it matter?</p></li>
 <li><p>Close out with a call to action that we have models that predict networks very well and models that predict interactions very well but nothing that is doing well at predicting both - this is where we should be focusing our attention when it comes to furthering model development. (we need models that will fill the space in the top right quadrant of panel A in <a href="#fig-concept" class="quarto-xref">Figure&nbsp;1</a>)</p></li>
 </ul>
@@ -523,6 +554,9 @@ Figure&nbsp;2: Real vs observed values for network summary statistics. Note here
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-bambachAutecologyFillingEcospace2007" class="csl-entry" role="listitem">
 Bambach, Richard K., Andrew M. Bush, and Douglas H. Erwin. 2007. <span>“Autecology and the <span>Filling</span> of <span>Ecospace</span>: <span>Key Metazoan Radiations</span>.”</span> <em>Palaeontology</em> 50 (1): 1–22. <a href="https://doi.org/10.1111/j.1475-4983.2006.00611.x">https://doi.org/10.1111/j.1475-4983.2006.00611.x</a>.
+</div>
+<div id="ref-banvilleWhatConstrainsFood2023" class="csl-entry" role="listitem">
+Banville, Francis, Dominique Gravel, and Timothée Poisot. 2023. <span>“What Constrains Food Webs? <span>A</span> Maximum Entropy Framework for Predicting Their Structure with Minimal Biases.”</span> <em>PLOS Computational Biology</em> 19 (9): e1011458. <a href="https://doi.org/10.1371/journal.pcbi.1011458">https://doi.org/10.1371/journal.pcbi.1011458</a>.
 </div>
 <div id="ref-bascompteNestedAssemblyPlantanimal2003" class="csl-entry" role="listitem">
 Bascompte, J., P. Jordano, C. J. Melian, and J. M. Olesen. 2003. <span>“The Nested Assembly of Plant-Animal Mutualistic Networks.”</span> <em>Proceedings of the National Academy of Sciences</em> 100 (16): 9383–87. <a href="https://doi.org/10.1073/pnas.1633576100">https://doi.org/10.1073/pnas.1633576100</a>.
@@ -548,6 +582,9 @@ Cohen, Joel E, Frederic Briand, and Charles Newman. 1990. <em>Community <span>Fo
 <div id="ref-cohenStochasticTheoryCommunity1985" class="csl-entry" role="listitem">
 Cohen, Joel E., C. M. Newman, and John Hyslop Steele. 1985. <span>“A Stochastic Theory of Community Food Webs <span>I</span>. <span>Models</span> and Aggregated Data.”</span> <em>Proceedings of the Royal Society of London. Series B. Biological Sciences</em> 224 (1237): 421–48. <a href="https://doi.org/10.1098/rspb.1985.0042">https://doi.org/10.1098/rspb.1985.0042</a>.
 </div>
+<div id="ref-desjardins-proulxEcologicalInteractionsNetflix2017" class="csl-entry" role="listitem">
+Desjardins-Proulx, Philippe, Idaline Laigle, Timothée Poisot, and Dominique Gravel. 2017. <span>“Ecological Interactions and the <span>Netflix</span> Problem.”</span> <em>PeerJ</em> 5: e3644. <a href="https://doi.org/10.7717/peerj.3644">https://doi.org/10.7717/peerj.3644</a>.
+</div>
 <div id="ref-dunneNetworkStructureFood2006" class="csl-entry" role="listitem">
 Dunne, Jennifer A. 2006. <span>“The <span>Network Structure</span> of <span>Food Webs</span>.”</span> In <em>Ecological Networks: <span>Linking</span> Structure and Dynamics</em>, edited by Jennifer A Dunne and Mercedes Pascual, 27–86. Oxford University Press.
 </div>
@@ -571,6 +608,9 @@ Jordano, Pedro. 2016a. <span>“Chasing <span>Ecological Interactions</span>.”
 </div>
 <div id="ref-jordanoSamplingNetworksEcological2016" class="csl-entry" role="listitem">
 ———. 2016b. <span>“Sampling Networks of Ecological Interactions.”</span> <em>Functional Ecology</em>, September. <a href="https://doi.org/10.1111/1365-2435.12763">https://doi.org/10.1111/1365-2435.12763</a>.
+</div>
+<div id="ref-llewelynPredictingPredatorPrey2023" class="csl-entry" role="listitem">
+Llewelyn, John, Giovanni Strona, Christopher R. Dickman, Aaron C. Greenville, Glenda M. Wardle, Michael S. Y. Lee, Seamus Doherty, Farzin Shabani, Frédérik Saltré, and Corey J. A. Bradshaw. 2023. <span>“Predicting Predator–Prey Interactions in Terrestrial Endotherms Using Random Forest.”</span> <em>Ecography</em> 2023 (9): e06619. <a href="https://doi.org/10.1111/ecog.06619">https://doi.org/10.1111/ecog.06619</a>.
 </div>
 <div id="ref-maioranoTETRAEUSpecieslevelTrophic2020" class="csl-entry" role="listitem">
 Maiorano, Luigi, Alessandro Montemaggiori, Gentile Francesco Ficetola, Louise O’Connor, and Wilfried Thuiller. 2020. <span>“<span>TETRA-EU</span> 1.0: <span>A</span> Species-Level Trophic Metaweb of <span>European</span> Tetrapods.”</span> <em>Global Ecology and Biogeography</em> 29 (9): 1452–57. <a href="https://doi.org/10.1111/geb.13138">https://doi.org/10.1111/geb.13138</a>.
@@ -631,6 +671,9 @@ Williams, Richard J., and Neo D. Martinez. 2000. <span>“Simple Rules Yield Com
 </div>
 <div id="ref-wilmanEltonTraitsSpecieslevelForaging2014" class="csl-entry" role="listitem">
 Wilman, Hamish, Jonathan Belmaker, Jennifer Simpson, Carolina de la Rosa, Marcelo M. Rivadeneira, and Walter Jetz. 2014. <span>“<span>EltonTraits</span> 1.0: <span class="nocase">Species-level</span> Foraging Attributes of the World’s Birds and Mammals.”</span> <em>Ecology</em> 95 (7): 2027–27. <a href="https://doi.org/10.1890/13-1917.1">https://doi.org/10.1890/13-1917.1</a>.
+</div>
+<div id="ref-xieCompletenessCommunityStructure2017" class="csl-entry" role="listitem">
+Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Completeness of <span>Community Structure</span> in <span>Networks</span>.”</span> <em>Scientific Reports</em> 7 (1): 5269. <a href="https://doi.org/10.1038/s41598-017-05585-6">https://doi.org/10.1038/s41598-017-05585-6</a>.
 </div>
 </div>
 <div class="hidden" aria-hidden="true">
@@ -1048,7 +1091,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

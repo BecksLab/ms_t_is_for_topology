@@ -1,0 +1,67 @@
+---
+title: Quantitative approach to topology generators
+authors:
+  - name: Tanya Strydom
+    id: ts
+    orcid: 0000-0001-6067-1349
+date: last-modified
+bibliography: ../references.bib
+---
+
+I think in the long run I will probably turn the other repo ([BecksLab/topology_generators](https://github.com/BecksLab/topology_generators)) into a project that we can then access and I will port all of the working code here... I think it will just come down to what the 'cost' is of the computational side of things and how convoluted it might end up looking.
+
+Anyway so for now I am just pulling in the INTERIM data from some of the models. This uses (for now) 20 mangal [@poisotMangalMakingEcological2016] datasets and just generates some networks for using the niche and cascade models. The 'results' for now is just counting the number of links each model generates for each network because that's what my brain decided on doing...
+
+```{r}
+#| include: false
+#| warning: false
+library(tidyverse)
+
+# download file from other repo
+download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv", "../notebooks/data/topology_models.csv")
+
+df = read.csv("data/topology_models.csv")  %>% 
+        pivot_longer(
+            cols = c(complexity_real, distance_real, connectance_real, basal_real), 
+            names_to = "real",
+            values_to = "real_val")  %>% 
+        pivot_longer(
+            cols = c(complexity_mod, distance_mod, connectance_mod, basal_mod), 
+            names_to = "test",
+            values_to = "model_val")  %>% 
+        mutate(
+            real = str_extract(real, "[^_]*"),
+            test = str_extract(test, "[^_]*"))  %>% 
+        filter(real == test)
+```
+
+Lets just do a simple little plot where we plot real vs model observed
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: fig-topology
+#| fig-cap: "Real vs observed values for network summary statistics. Note here that 'basal' is calculated as the proportion of species that have a generality value of zero *i.e.,* are basal AFAIK"
+
+ggplot() +
+    geom_abline(slope = 1,
+                intercept = 0) +
+    geom_point(data = df,
+                aes(x = real_val,
+                    y = model_val,
+                    size = richness,
+                    colour = model,
+                    fill = model),
+                alpha = 0.7,
+                shape = 21) +
+    facet_wrap(vars(test),
+                scales = "free") +
+    scale_size(guide = 'none') +
+    theme_bw()
+
+```
+
+## References {.unnumbered}
+
+::: {#refs}
+:::
