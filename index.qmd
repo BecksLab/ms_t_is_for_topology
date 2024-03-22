@@ -14,6 +14,7 @@ author:
       - id: sheffield
         name: School of Biosciences, University of Sheffield
   - name: Timothée Poisot
+    id: tp
     orcid: 0000-0002-0735-5184
     corresponding: false
     roles: []
@@ -49,7 +50,7 @@ jupyter: python3
 
 -   It is perhaps useful to start with asking why do we want/need models to generate networks. This can be broadly thought of to fall into two categories. Build networks because we want to build concepts vs build networks because we want specificity. Broadly this means that we either want to construct/predict a collection of interactions (generate networks) or a network of interactions (predict interactions).
 
-Arguably the need for methods and tools for constructing interaction networks arises from two different (but still aligned) places of interest within the field of network ecology. On the one side sits the researcher who is interested in generating a set of ecologically plausible but not necessarily realised 'in the field' networks for the purpose of running further simulations (*e.g.,* extinction sim) or understanding some higher-level process/concept (*e.g.,* energetics). This researcher is contrasted by one that is interested in constructing real-world, location specific, interaction data in lieu of inventorying interactions based n observations made in the field [@strydomRoadmapPredictingSpecies2021]. Of course these two categories are not two distinct, mutually exclusive, groups but can rather be viewed as operating on a gradient ranging from a need for generality (*i.e.,* creating a network that, when taken in aggregate, the distribution of links (interactions) between species are ecologically plausible) to a need for specificity (local-level predictions between specific species).
+Arguably the need for methods and tools for constructing interaction networks arises from two different (but still aligned) places of interest within the field of network ecology. On the one side sits the researcher who is interested in generating a set of ecologically plausible networks for the purpose of running further simulations (*e.g.,* extinction simulations) or understanding some higher-level process/concept (*e.g.,* understanding energy flows), importantly these networks do not require any level of species specificity and it is more the arrangements of the nodes (species) within the context of network structure that is of value. This researcher is contrasted by one that is interested in constructing real-world, location specific, interaction data for a specific collection of species (community). This is driven by the need for researchers to find alternative ways to infer the interactions between species as a way to overcome the inherit challenges of inventorying interaction in the field [@morales-castillaInferringBioticInteractions2015; @strydomRoadmapPredictingSpecies2021]. Of course these two categories are not distinct, mutually exclusive, groups but can rather be viewed as operating on a gradient ranging from a need for generality (*i.e.,* creating a network that, when taken in aggregate, the distribution of links (interactions) between species are ecologically plausible) to a need for specificity (local-level predictions between specific species).
 
 -   Brief history of the development of tools within the context of the two different fields? Sort of where the theory/body of work was based and how that has changed?
 
@@ -61,9 +62,9 @@ Arguably the need for methods and tools for constructing interaction networks ar
 
 -   A breakdown of wanting to generate a network; statement of need and core philosophies
 
--   A breakdown of wanting to predict an interaction; statement of need [@jordanoSamplingNetworksEcological2016; @jordanoChasingEcologicalInteractions2016; @poisotGlobalKnowledgeGaps2021] and core philosophies (trait-matching, coexistence)
+-   A breakdown of wanting to predict an interaction; statement of need [@jordanoSamplingNetworksEcological2016; @jordanoChasingEcologicalInteractions2016; @poisotGlobalKnowledgeGaps2021] and core philosophies (trait-matching, coexistence, evolutionary backbones)
 
--   Stands to reason then that we have developed methods that specialise in one or the other. Which comes at a cost of 'performance' in other aspects. Knowing how the different model families stack up to each other is thus valuable and that is kinda what we are trying to achieve.
+-   Stands to reason then that we have developed methods that specialise in one or the other. Which comes at a cost of 'performance' in other aspects. Knowing how the different model families stack up to each other is thus valuable.
 
 @cohenStochasticTheoryCommunity1985 states that *"\[Their\] approach is more like gross anatomy than like physiology... that is, the gross anatomy is frozen, rather than in motion."*.
 
@@ -85,15 +86,13 @@ Given the large number of models that have been developed it is perhaps more mea
 
 > @gravelInferringFoodWeb2013 also poses an interesting cross-over between the adbm and niche model.
 
-**Binary classifiers:**
+**Binary classifiers:** The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [**e.g.,** @caronAddressingEltonianShortfall2022 use a tait-based approach], random forest [REF].
 
 **Graph embedding:** This family of approaches has been extensively discussed in @strydomGraphEmbeddingTransfer2023 but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. @strydomFoodWebReconstruction2022 presents a specific use case that is based on transfer learning and the idea that interactions are evolutionarily conserved and that we can use known networks, and this evolutionary relationship to predict interactions for a given species pool. **TODO** Log-ratio [@rohrModelingFoodWebs2010]
 
-**Trait hierarchy:** Here I envision models that present an *a priori* trait hierarchy that determines feeding links between species. That is, there is an element of 'expert knowledge' that also comes into play... Something like PFIM [@shawFrameworkReconstructingAncient2024] is what I imagine fitting in here...
+**Trait hierarchy:** Here I envision models that present an *a priori* set of rules that determines feeding links between species; specifically based on species traits. That is, there is an element of 'expert knowledge' that also comes into play... Something like PFIM [@shawFrameworkReconstructingAncient2024] is what I imagine fitting in here...
 
-**GLM** [@caronAddressingEltonianShortfall2022]: To confirm
-
-**Expert knowledge:** (boots on the ground ecology) *e.g.,* @maioranoTETRAEUSpecieslevelTrophic2020 and @dunneCompilationNetworkAnalyses2008
+**Expert knowledge:** Not so much about empirical observations but more the idea of using human power/knowledge to create an assemblage of interactions for a specific community. This can include empirical data but can also make use of knowledge about ecological features (such as traits or co-occurrence) and how those can function as proxies for interactions [*e.g.,* @morales-castillaInferringBioticInteractions2015]. Or alternatively the value of 'local' knowledge and having specific individuals sitting around a table and assigning a value of how confident they are that a specific species pair are likely to interact [@dunneCompilationNetworkAnalyses2008], or a combination of published and grey literature [*e.g.,* @maioranoTETRAEUSpecieslevelTrophic2020].
 
 ### Model benchmarking
 
@@ -119,14 +118,15 @@ This section depends on if we go the family route and where we introduce them. B
 
 I know tables are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
-| Model family    | Predicts     | Constraints | Interaction   | Real world data          |
-|-----------------|--------------|-------------|---------------|--------------------------|
-| random          | network      | link        | binary        | no                       |
-| null            | network      |             | binary        | no                       |
-| resource        | network      | link        | binary        | no                       |
-| energetic       |              |             | binary        | yes (body size)          |
-| graph embedding | interactions |             | probabilistic | yes (network)            |
-| trait hierarchy | interactions |             |               | yes (interaction, trait) |
+| Model family       | Predicts     | Constraints | Interaction   | Real world data               |
+|--------------------|--------------|-------------|---------------|-------------------------------|
+| random             | network      | link        | binary        | no                            |
+| null               | network      |             | binary        | no                            |
+| resource           | network      | link        | binary        | no                            |
+| energetic          |              |             | binary        | yes (body size)               |
+| graph embedding    | interactions |             | probabilistic | yes (network)                 |
+| trait hierarchy    | interactions |             |               | yes (expert knowledge, trait) |
+| binary classifiers | interactions |             | probabilistic | yes (interaction, trait)      |
 
 : Lets make a table that gives an overview of the different topology generators that we will look at. Here I take 'data-driven' to refer to the need for 'real world' data. This can probably be approached in a different way though maybe? {#tbl-history}
 
@@ -136,7 +136,7 @@ I know tables are awful but in this case they may make more sense. Also I don't 
 
 -   'Elite' number of datasets for interaction models
 
-> Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a 'scale' element as well *i.e.,* a regional and local network. I think there is going to be a 'turning point' where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) *sensu* @caronTrophicInteractionModels2023. Although having said that I feel that contradicts the idea of backbones (*sensu* Bramon Mora (sp?) et al & Stouffer et al) But that might be where we get the idea of core *structure* vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I'm trying to say here)
+> Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a 'scale' element as well *i.e.,* a regional and local network. I think there is going to be a 'turning point' where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) *sensu* @caronTraitmatchingModelsPredict2024. Although having said that I feel that contradicts the idea of backbones (*sensu* Bramon Mora (sp?) et al & Stouffer et al) But that might be where we get the idea of core *structure* vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I'm trying to say here)
 
 I think we should also use the @dunneCompilationNetworkAnalyses2008 work. Because 1) it gives the paleo-centric methods their moment in the sun and 2) I think it also brings up the interesting question of can we use modern structure to predict past ones?
 
@@ -154,7 +154,7 @@ Want to compare real vs predicted and then get something that looks like @fig-to
 
 -   *Shape:* do the models construct tall 'pencil' vs flat 'pancake' networks (Beckerman 2024, pers comms), generality/vulnerability, chain length (?)
 -   *Structure:* Predicting 'structure' - SVD [@strydomSVDEntropyReveals2021] but maybe something like nestedness as well (?)
--   *Links:* are the number of links preserved (most network predicting are to some extend link constrained but useful to see)
+-   *Links:* are the number of links preserved (most network predicting models are to some extend link constrained but useful to see)
 
 #### Interaction models
 
@@ -182,6 +182,14 @@ Want to compare real vs predicted and then get something that looks like @fig-to
 
 @cohenStochasticTheoryCommunity1985 actually tells us that the cascade model only really works for communities that range from 3-33 species... and @williamsSuccessItsLimits2008 also highlights how structural models really only work for small communities
 
+### Qualitative stuff
+
+Maybe not the best term to use but thinking here about practical limitations of the different families. This can include thinking about:
+
+- scale limitations (time or space); *e.g.,* a metaweb is going to encapsulate but not distinguish between different seasons or locations
+- data needed. I think this can be in the form of real world datasets (*e.g.,* traits) but also *a priori* knowledge (*e.g.,* having to define the constraints of a niche model)
+- computational costs
+
 ### Quantitative stuff
 
 {{< embed notebooks/model_quantitative.qmd#fig-topology >}}
@@ -190,15 +198,17 @@ This might actually be an awful way to try and summarise the data but rolling wi
 
 ## Discussion
 
-I think a big take home will (hopefully) be how different approaches do better in different situations and so you as an end user need to take this into consideration and pick accordingly. I think @petcheyFitEfficiencyBiology2011 might have (and share) some thoughts on this (thanks Andrew). I feel like I need to look at @berlowGoldilocksFactorFood2008 but maybe not exactly in this context but vaguely adjacent.
+- I think a big take home will (hopefully) be how different approaches do better in different situations and so you as an end user need to take this into consideration and pick accordingly. I think @petcheyFitEfficiencyBiology2011 might have (and share) some thoughts on this (thanks Andrew). I feel like I need to look at @berlowGoldilocksFactorFood2008 but maybe not exactly in this context but vaguely adjacent.
 
-An interesting thing to also think about (and arguably it will be addressed based on some of the other thoughts and ideas) is data dependant and data independent 'parametrisation' of the models...
+- An interesting thing to also think about (and arguably it will be addressed based on some of the other thoughts and ideas) is data dependant and data independent 'parametrisation' of the models...
 
-I probably think about this point too much but a point of discussion that I think will be interesting to bring up the idea that if a model is missing a specific pairwise link but doing well at the structural level then when does it matter? I think this is covered with the whole node vs graph level performance but I kind of just want to bring it up here again because also one of those things that I think about a bit too much probably...
+- Why do interaction models do so badly at predicting structure? Nuance of metaweb vs realisation but also time? At the core of it interaction models are trained on existing interaction data; this is data that are most likely closer to a metaweb than a local realisation even if they are being inventoried at a small scale.
 
-Thinking very long term here and maybe a bit beyond the scope but also thinking about a multi- model approach? So in other words using one model to build an initial network but maybe a second one to constrain it a bit better. I blame this thought on the over-connected PFIM food webs...
+- **Do we need network models to predict interactions and interaction models to predict structure?** (lets not think about that too hard or I might just have to sit in silence for a while...)
 
-Linking to previous point but framing this as a call to action that we have models that predict networks very well and models that predict interactions very well but nothing that is doing well at predicting both - this is where we should be focusing our attention when it comes to furthering model development.
+- It will be interesting to bring up the idea that if a model is missing a specific pairwise link but doing well at the structural level then when does it matter?
+
+- Close out with a call to action that we have models that predict networks very well and models that predict interactions very well but nothing that is doing well at predicting both - this is where we should be focusing our attention when it comes to furthering model development. (we need models that will fill the space in the top right quadrant of panel A in @fig-concept)
 
 ## References {.unnumbered}
 
