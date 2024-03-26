@@ -10,3 +10,5 @@
 
 .vscode/*
 .DS_Store
+
+site_libs/*
