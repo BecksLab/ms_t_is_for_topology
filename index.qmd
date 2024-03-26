@@ -80,11 +80,11 @@ Given the large number of models that have been developed it is perhaps more mea
 
 **Neutral models:** Based on the theory that interactions occur as the result of the abundance of species (*i.e.,* the species still has no agency but its abundance does?). See @pomeranzInferringPredatorPrey2019
 
-**Resource models:** In the context of network generating models this is perhaps the most well known family of models. Essentially these models can be viewed as being based on the idea of resource partitioning and that the number of links scale with species richness (maybe not directly that but these models are link constrained). That is there is some sort of hierarchical feeding based on how a 'resource' is partitioned. This includes the cascade model [@cohenCommunityFoodWebs1990], which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). The niche model [@williamsSimpleRulesYield2000] introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model [@cattinPhylogeneticConstraintsAdaptation2004] **TODO**.
+**Resource models:** In the context of network generating models this is perhaps the most well known family of models. Essentially these models can be viewed as being based on the idea of resource partitioning and that the number of links scale with species richness (linear link scaling). That is there is some sort of hierarchical feeding based on how a 'resource' is partitioned. This includes the cascade model [@cohenCommunityFoodWebs1990], which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). The niche model [@williamsSimpleRulesYield2000] introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model [@cattinPhylogeneticConstraintsAdaptation2004] **TODO**.
 
 **Generative models:** (this is maybe a bit of a bold term to use). MaxEnt [@banvilleWhatConstrainsFood2023], (maybe) stochastic block [@xieCompletenessCommunityStructure2017].
 
-**Energetic models:** Broadly this family of models is rooted in feeding theory and allocates the links between species based on energetics. This means that the model is focused on predicting not only the number of links in a network but also the arrangement of these links based on the diet breadth of a species. The diet breadth model [@beckermanForagingBiologyPredicts2006] as well as its allometrically scaled cousin the allometric diet breadth model (ADBM) [@petcheySizeForagingFood2008] determine links between species based on the energetic content, handling time, and density of species.
+**Feeding models:** Broadly this family of models is rooted in feeding theory and allocates the links between species based on energetics. This means that the model is focused on predicting not only the number of links in a network but also the arrangement of these links based on the diet breadth of a species. The diet breadth model [@beckermanForagingBiologyPredicts2006] as well as its allometrically scaled cousin the allometric diet breadth model (ADBM) [@petcheySizeForagingFood2008] determine links between species based on the energetic content, handling time, and density of species. See also @deangelisModelTropicInteraction1975
 
 > @gravelInferringFoodWeb2013 also poses an interesting cross-over between the adbm and niche model.
 
@@ -111,6 +111,8 @@ Given the large number of models that have been developed it is perhaps more mea
 #### Benchmarking interaction models
 
 -   Main concern with predicting interactions is that we want to test the 'quality' of the links we are predicting (both true positives and true negatives), but the inherit sparsity (meaning high class imbalance) means that we also need to look at the balance of these predictions.
+
+- "Both precision and recall may be useful in cases where there is imbalanced data. However, it may be valuable to prioritize one over the other in cases where the outcome of a false positive or false negative is costly."
 
 -   Caveat regarding the use of real world interaction data both for training and validating predictions? *e.g.,* Poisot, Ouellet, et al. et al 2021 and Catchen et al 2023
 
@@ -142,7 +144,7 @@ I know tables are awful but in this case they may make more sense. Also I don't 
 | trait matching     | interactions |             |               | yes (expert knowledge, trait) |
 | binary classifiers | interactions |             | probabilistic | yes (interaction, trait)      |
 
-: Lets make a table that gives an overview of the different topology generators that we will look at. Here I take 'data-driven' to refer to the need for 'real world' data. This can probably be approached in a different way though maybe? {#tbl-history}
+: Lets make a table that gives an overview of the different model families that we will look at. Here I take 'data-driven' to refer to the need for 'real world' data. This can probably be approached in a different way though maybe? {#tbl-history}
 
 ### Datasets used
 
