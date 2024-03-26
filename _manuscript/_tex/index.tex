@@ -496,11 +496,12 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2151}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1505}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1398}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1613}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1094}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3438}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0859}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1016}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1172}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2422}}@{}}
 \caption{Lets make a table that gives an overview of the different model
 families that we will look at. Here I take `data-driven' to refer to the
 need for `real world' data. This can probably be approached in a
@@ -509,13 +510,15 @@ different way though maybe?}\label{tbl-history}\tabularnewline
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Theory
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Real world data
+`Real world' data
 \end{minipage} \\
 \midrule\noalign{}
 \endfirsthead
@@ -523,27 +526,36 @@ Real world data
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Theory
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Real world data
+`Real world' data
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-random & network & link & binary & no \\
-null & network & & binary & no \\
-resource & network & link & binary & no \\
-generative & network & & & \\
-energetic & & & binary & yes (body size) \\
-graph embedding & interactions & & probabilistic & yes (network) \\
-trait matching & interactions & & & yes (expert knowledge, trait) \\
-binary classifiers & interactions & & probabilistic & yes (interaction,
-trait) \\
+null & Interactions occur randomly & network & link & binary & no \\
+neutral & Interactions are `random' but species abundance plays a role &
+network & & & abundance \\
+resource & Interactions are resource constrained (trophic pyramid) &
+network & link & binary & no \\
+generative & Interactions are determined by structural features of the
+network (\emph{pending}) & network & & & \\
+energetic & Interactions are determined by foraging theory (feeding
+links) & & & binary & yes (body size, \ldots) \\
+graph embedding & Interactions can be predicted from the latent traits
+of networks & interactions & & probabilistic & yes (network) \\
+trait matching & Interactions can be inferred by a mechanistic framework
+& interactions & & & yes (expert knowledge, trait) \\
+binary classifiers & Interactions can be predicted by learning the
+relationship between interactions and ecologically relevant &
+interactions & & probabilistic & yes (interaction, trait) \\
 \end{longtable}
 
 \subsection{Datasets used}\label{datasets-used}

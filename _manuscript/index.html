@@ -296,7 +296,7 @@ div.csl-indent {
 <div id="fig-concept" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
+<a href="images/concept.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model
@@ -361,38 +361,43 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 21%">
-<col style="width: 15%">
-<col style="width: 13%">
-<col style="width: 16%">
-<col style="width: 33%">
+<col style="width: 10%">
+<col style="width: 34%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 24%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Model family</th>
+<th>Theory</th>
 <th>Predicts</th>
 <th>Constraints</th>
 <th>Interaction</th>
-<th>Real world data</th>
+<th>‘Real world’ data</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>random</td>
+<td>null</td>
+<td>Interactions occur randomly</td>
 <td>network</td>
 <td>link</td>
 <td>binary</td>
 <td>no</td>
 </tr>
 <tr class="even">
-<td>null</td>
+<td>neutral</td>
+<td>Interactions are ‘random’ but species abundance plays a role</td>
 <td>network</td>
 <td></td>
-<td>binary</td>
-<td>no</td>
+<td></td>
+<td>abundance</td>
 </tr>
 <tr class="odd">
 <td>resource</td>
+<td>Interactions are resource constrained (trophic pyramid)</td>
 <td>network</td>
 <td>link</td>
 <td>binary</td>
@@ -400,6 +405,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </tr>
 <tr class="even">
 <td>generative</td>
+<td>Interactions are determined by structural features of the network (<em>pending</em>)</td>
 <td>network</td>
 <td></td>
 <td></td>
@@ -407,13 +413,15 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </tr>
 <tr class="odd">
 <td>energetic</td>
+<td>Interactions are determined by foraging theory (feeding links)</td>
 <td></td>
 <td></td>
 <td>binary</td>
-<td>yes (body size)</td>
+<td>yes (body size, …)</td>
 </tr>
 <tr class="even">
 <td>graph embedding</td>
+<td>Interactions can be predicted from the latent traits of networks</td>
 <td>interactions</td>
 <td></td>
 <td>probabilistic</td>
@@ -421,6 +429,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </tr>
 <tr class="odd">
 <td>trait matching</td>
+<td>Interactions can be inferred by a mechanistic framework</td>
 <td>interactions</td>
 <td></td>
 <td></td>
@@ -428,6 +437,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </tr>
 <tr class="even">
 <td>binary classifiers</td>
+<td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant</td>
 <td>interactions</td>
 <td></td>
 <td>probabilistic</td>
@@ -524,7 +534,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="img-fluid figure-img"></a>
+<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Real vs observed values for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal AFAIK
@@ -1098,7 +1108,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
