@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.27">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -240,28 +240,30 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#model-families" id="toc-model-families" class="nav-link" data-scroll-target="#model-families"><span class="header-section-number">2</span> Model families</a></li>
+  <li><a href="#model-benchmarking" id="toc-model-benchmarking" class="nav-link" data-scroll-target="#model-benchmarking"><span class="header-section-number">3</span> Model benchmarking</a>
   <ul class="collapse">
-  <li><a href="#model-families" id="toc-model-families" class="nav-link" data-scroll-target="#model-families"><span class="header-section-number">1.1</span> Model families</a></li>
-  <li><a href="#model-benchmarking" id="toc-model-benchmarking" class="nav-link" data-scroll-target="#model-benchmarking"><span class="header-section-number">1.2</span> Model benchmarking</a></li>
+  <li><a href="#benchmarking-network-models" id="toc-benchmarking-network-models" class="nav-link" data-scroll-target="#benchmarking-network-models"><span class="header-section-number">3.1</span> Benchmarking network models</a></li>
+  <li><a href="#benchmarking-interaction-models" id="toc-benchmarking-interaction-models" class="nav-link" data-scroll-target="#benchmarking-interaction-models"><span class="header-section-number">3.2</span> Benchmarking interaction models</a></li>
   </ul></li>
-  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</a>
+  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">4</span> Data &amp; Methods</a>
   <ul class="collapse">
-  <li><a href="#selecting-models" id="toc-selecting-models" class="nav-link" data-scroll-target="#selecting-models"><span class="header-section-number">2.1</span> Selecting models</a></li>
-  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link" data-scroll-target="#datasets-used"><span class="header-section-number">2.2</span> Datasets used</a></li>
-  <li><a href="#model-comparison" id="toc-model-comparison" class="nav-link" data-scroll-target="#model-comparison"><span class="header-section-number">2.3</span> Model comparison</a></li>
+  <li><a href="#selecting-models" id="toc-selecting-models" class="nav-link" data-scroll-target="#selecting-models"><span class="header-section-number">4.1</span> Selecting models</a></li>
+  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link" data-scroll-target="#datasets-used"><span class="header-section-number">4.2</span> Datasets used</a></li>
+  <li><a href="#model-comparison" id="toc-model-comparison" class="nav-link" data-scroll-target="#model-comparison"><span class="header-section-number">4.3</span> Model comparison</a></li>
   </ul></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">5</span> Results</a>
   <ul class="collapse">
-  <li><a href="#qualitative-stuff" id="toc-qualitative-stuff" class="nav-link" data-scroll-target="#qualitative-stuff"><span class="header-section-number">3.1</span> Qualitative stuff</a></li>
-  <li><a href="#quantitative-stuff" id="toc-quantitative-stuff" class="nav-link" data-scroll-target="#quantitative-stuff"><span class="header-section-number">3.2</span> Quantitative stuff</a></li>
+  <li><a href="#qualitative-stuff" id="toc-qualitative-stuff" class="nav-link" data-scroll-target="#qualitative-stuff"><span class="header-section-number">5.1</span> Qualitative stuff</a></li>
+  <li><a href="#quantitative-stuff" id="toc-quantitative-stuff" class="nav-link" data-scroll-target="#quantitative-stuff"><span class="header-section-number">5.2</span> Quantitative stuff</a></li>
   </ul></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">4</span> Discussion</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">6</span> Discussion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_descriptions-preview.html"><i class="bi bi-journal-code"></i>Extended model descriptions</a></li><li><a href="notebooks/model_quantitative-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li></ul></div></nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_quantitative-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li><li><a href="notebooks/model_descriptions-preview.html"><i class="bi bi-journal-code"></i>Extended model descriptions</a></li></ul></div></nav>
 </div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -290,20 +292,21 @@ div.csl-indent {
 </ul>
 <p><span class="citation" data-cites="cohenStochasticTheoryCommunity1985">Joel E. Cohen, Newman, and Steele (<a href="#ref-cohenStochasticTheoryCommunity1985" role="doc-biblioref">1985</a>)</span> states that <em>“[Their] approach is more like gross anatomy than like physiology… that is, the gross anatomy is frozen, rather than in motion.”</em>.</p>
 <p>Interestingly <span class="citation" data-cites="williamsSuccessItsLimits2008">Williams and Martinez (<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">2008</a>)</span> also explicitly talk about <em>structural</em> food-web models in their introduction… so how I see it that means that there has always been this inherent acknowledgement that models are functioning at a specific ‘network level’.</p>
-<section id="model-families" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="model-families"><span class="header-section-number">1.1</span> Model families</h3>
+</section>
+<section id="model-families" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="model-families"><span class="header-section-number">2</span> Model families</h2>
 <p>Given the large number of models that have been developed it is perhaps more meaningful to group models into families with the idea that models from the same family will yield similar results because they play by similar rules. These rules referring to the underlying philosophy as to what structures either networks or the interactions within them (see <a href="#fig-concept" class="quarto-xref">Figure&nbsp;1</a> panel A).</p>
 <div id="fig-concept" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
+<a href="images/concept.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model
 </figcaption>
 </figure>
 </div>
-<p><strong>Null models:</strong> The interactions between species occurs regardless of the identity of the species (<em>i.e.,</em> species have no agency) and links are randomly distributed throughout the network. There is however the assumption that a network will be constrained by the number of links. Type I <span class="citation" data-cites="fortunaHabitatLossStructure2006">(<a href="#ref-fortunaHabitatLossStructure2006" role="doc-biblioref">Fortuna and Bascompte 2006</a>)</span>, where interactions happen proportionally to connectance and Type II <span class="citation" data-cites="bascompteNestedAssemblyPlantanimal2003">(<a href="#ref-bascompteNestedAssemblyPlantanimal2003" role="doc-biblioref">Bascompte et al. 2003</a>)</span>, where interactions happen proportionally to the joint degree of the two species involved. These two models are equivalent to the Erdos-Renyi and Configuration models <span class="citation" data-cites="newmanNetworksIntroduction2010">(<a href="#ref-newmanNetworksIntroduction2010" role="doc-biblioref">Newman 2010</a>)</span> (check that though).</p>
+<p><strong>Null models:</strong> The interactions between species occurs regardless of the identity of the species (<em>i.e.,</em> species have no agency) and links are randomly distributed throughout the network. There is however the assumption that a network will be constrained by the number of links. Type I <span class="citation" data-cites="fortunaHabitatLossStructure2006">(<a href="#ref-fortunaHabitatLossStructure2006" role="doc-biblioref">Fortuna and Bascompte 2006</a>)</span>, where interactions happen proportionally to connectance and Type II <span class="citation" data-cites="bascompteNestedAssemblyPlantanimal2003">(<a href="#ref-bascompteNestedAssemblyPlantanimal2003" role="doc-biblioref">Bascompte et al. 2003</a>)</span>, where interactions happen proportionally to the joint degree of the two species involved. These two models are equivalent to the Erdos-Renyi <span class="citation" data-cites="erdosRandomGraphs1959">(<a href="#ref-erdosRandomGraphs1959" role="doc-biblioref">Erdős and Rényi 1959</a>)</span> and Configuration models <span class="citation" data-cites="newmanNetworksIntroduction2010">(<a href="#ref-newmanNetworksIntroduction2010" role="doc-biblioref">Newman 2010</a>)</span> respectively (check that though).</p>
 <p><strong>Neutral models:</strong> Based on the theory that interactions occur as the result of the abundance of species (<em>i.e.,</em> the species still has no agency but its abundance does?). See <span class="citation" data-cites="pomeranzInferringPredatorPrey2019">Pomeranz et al. (<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">2019</a>)</span></p>
 <p><strong>Resource models:</strong> In the context of network generating models this is perhaps the most well known family of models. Essentially these models can be viewed as being based on the idea of resource partitioning and that the number of links scale with species richness (linear link scaling). That is there is some sort of hierarchical feeding based on how a ‘resource’ is partitioned. This includes the cascade model <span class="citation" data-cites="cohenCommunityFoodWebs1990">(<a href="#ref-cohenCommunityFoodWebs1990" role="doc-biblioref">Joel E. Cohen, Briand, and Newman 1990</a>)</span>, which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (<em>i.e.,</em> ‘many’ prey and ‘few’ predators). The niche model <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model <span class="citation" data-cites="cattinPhylogeneticConstraintsAdaptation2004">(<a href="#ref-cattinPhylogeneticConstraintsAdaptation2004" role="doc-biblioref">Cattin et al. 2004</a>)</span> <strong>TODO</strong>.</p>
 <p><strong>Generative models:</strong> (this is maybe a bit of a bold term to use). MaxEnt <span class="citation" data-cites="banvilleWhatConstrainsFood2023">(<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">Banville, Gravel, and Poisot 2023</a>)</span>, (maybe) stochastic block <span class="citation" data-cites="xieCompletenessCommunityStructure2017">(<a href="#ref-xieCompletenessCommunityStructure2017" role="doc-biblioref">Xie et al. 2017</a>)</span>.</p>
@@ -316,8 +319,8 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <p><strong>Trait matching:</strong> Here I envision models that present an <em>a priori</em> set of rules that determines feeding links between species; specifically based on species traits. That is, there is an element of ‘expert knowledge’ that also comes into play… Something like PFIM <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span> is what I imagine fitting in here…</p>
 <p><strong>Expert knowledge:</strong> Not so much about empirical observations but more the idea of using human power/knowledge to create an assemblage of interactions for a specific community. This can include empirical data but can also make use of knowledge about ecological features (such as traits or co-occurrence) and how those can function as proxies for interactions <span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">(<em>e.g.,</em> <a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">Morales-Castilla et al. 2015</a>)</span>. Or alternatively the value of ‘local’ knowledge and having specific individuals sitting around a table and assigning a value of how confident they are that a specific species pair are likely to interact <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008">(<a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">Jennifer A. Dunne et al. 2008</a>)</span>, or a combination of published and grey literature <span class="citation" data-cites="maioranoTETRAEUSpecieslevelTrophic2020">(<em>e.g.,</em> <a href="#ref-maioranoTETRAEUSpecieslevelTrophic2020" role="doc-biblioref">Maiorano et al. 2020</a>)</span>.</p>
 </section>
-<section id="model-benchmarking" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="model-benchmarking"><span class="header-section-number">1.2</span> Model benchmarking</h3>
+<section id="model-benchmarking" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="model-benchmarking"><span class="header-section-number">3</span> Model benchmarking</h2>
 <ul>
 <li><p>‘Testing’ the performance of a model is going to depend on some of the core limitations of the model itself thus it makes sense to think of two sets benchmarking rules for network and interaction prediction models respectively (see <a href="#fig-concept" class="quarto-xref">Figure&nbsp;1</a> panel B).</p></li>
 <li><p>When it comes to network models we are concerned with the ‘preservation’ of structure and distribution of links across the network. For interaction models we want to ensure that we are able to retrieve interactions that really exist but also those that cannot exist (<em>sensu</em> forbidden links <span class="citation" data-cites="jordanoSamplingNetworksEcological2016">Jordano (<a href="#ref-jordanoSamplingNetworksEcological2016" role="doc-biblioref">2016b</a>)</span>)</p></li>
@@ -325,14 +328,14 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <blockquote class="blockquote">
 <p>“As long as these predictions are not perfect, some interactions will be predicted at the ‘wrong’ position in the network; these measures cannot describe the structural effect of these mistakes. On the other hand, measures of network structure can have the same value with interactions that fall at drastically different positions; this is in part because a lot of these measures covary with connectance, and in part because as long as these values are not 0 or their respective maximum, there is a large number of network configurations that can have the same value.” - <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span></p>
 </blockquote>
-<section id="benchmarking-network-models" class="level4" data-number="1.2.1">
-<h4 data-number="1.2.1" class="anchored" data-anchor-id="benchmarking-network-models"><span class="header-section-number">1.2.1</span> Benchmarking network models</h4>
+<section id="benchmarking-network-models" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="benchmarking-network-models"><span class="header-section-number">3.1</span> Benchmarking network models</h3>
 <ul>
 <li>Maybe look at some of the historic papers that compare some of the ‘resource models’</li>
 </ul>
 </section>
-<section id="benchmarking-interaction-models" class="level4" data-number="1.2.2">
-<h4 data-number="1.2.2" class="anchored" data-anchor-id="benchmarking-interaction-models"><span class="header-section-number">1.2.2</span> Benchmarking interaction models</h4>
+<section id="benchmarking-interaction-models" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="benchmarking-interaction-models"><span class="header-section-number">3.2</span> Benchmarking interaction models</h3>
 <ul>
 <li><p>Main concern with predicting interactions is that we want to test the ‘quality’ of the links we are predicting (both true positives and true negatives), but the inherit sparsity (meaning high class imbalance) means that we also need to look at the balance of these predictions.</p></li>
 <li><p>“Both precision and recall may be useful in cases where there is imbalanced data. However, it may be valuable to prioritize one over the other in cases where the outcome of a false positive or false negative is costly.”</p></li>
@@ -346,11 +349,10 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 </ul>
 </section>
 </section>
-</section>
-<section id="sec-data-methods" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</h2>
-<section id="selecting-models" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="selecting-models"><span class="header-section-number">2.1</span> Selecting models</h3>
+<section id="sec-data-methods" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">4</span> Data &amp; Methods</h2>
+<section id="selecting-models" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="selecting-models"><span class="header-section-number">4.1</span> Selecting models</h3>
 <p>This section depends on if we go the family route and where we introduce them. But a more extended description of each model can be found in the <code>Extended Model Description</code> notebook (I’m trying to work out how to embed this…)</p>
 <p>I know tables are awful but in this case they may make more sense. Also I don’t think I’m at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think…</p>
 <div id="tbl-history" class="quarto-float anchored">
@@ -449,8 +451,8 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </figure>
 </div>
 </section>
-<section id="datasets-used" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="datasets-used"><span class="header-section-number">2.2</span> Datasets used</h3>
+<section id="datasets-used" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="datasets-used"><span class="header-section-number">4.2</span> Datasets used</h3>
 <ul>
 <li><p>For network models makes sense to drop datasets from Mangal</p></li>
 <li><p>‘Elite’ number of datasets for interaction models</p></li>
@@ -460,16 +462,16 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </blockquote>
 <p>I think we should also use the <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008">Jennifer A. Dunne et al. (<a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">2008</a>)</span> work. Because 1) it gives the paleo-centric methods their moment in the sun and 2) I think it also brings up the interesting question of can we use modern structure to predict past ones?</p>
 </section>
-<section id="model-comparison" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="model-comparison"><span class="header-section-number">2.3</span> Model comparison</h3>
+<section id="model-comparison" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="model-comparison"><span class="header-section-number">4.3</span> Model comparison</h3>
 <p>For now the (still essentially pending) workflow/associated code can be found at the following repository <a href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</a>. This will reflect that which is shown in panel <em>B</em> of <a href="#fig-concept" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <ul>
 <li>Data ‘cost’ (some methods might need a lot lot of supporting data vs something very light weight)</li>
 <li>I think it would be remiss to not also take into consideration computational cost</li>
 <li>Something about the network output - I’m acknowledging my biases and saying that probabilistic (or <em>maybe</em> weighted) links are the way</li>
 </ul>
-<section id="network-models" class="level4" data-number="2.3.1">
-<h4 data-number="2.3.1" class="anchored" data-anchor-id="network-models"><span class="header-section-number">2.3.1</span> Network models</h4>
+<section id="network-models" class="level4" data-number="4.3.1">
+<h4 data-number="4.3.1" class="anchored" data-anchor-id="network-models"><span class="header-section-number">4.3.1</span> Network models</h4>
 <p>Want to compare real vs predicted and then get something that looks like <a href="#fig-topology" class="quarto-xref">Figure&nbsp;2</a></p>
 <ul>
 <li><p>connectance, nestedness (Bastolla et al., 2009), modularity (Barber, 2007), asymmetry (Delmas et al., 2018), and Jaccard network dissimilarity (Canard et al., 2014)</p></li>
@@ -478,8 +480,8 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <li><p><em>Links:</em> are the number of links preserved (most network predicting models are to some extend link constrained but useful to see)</p></li>
 </ul>
 </section>
-<section id="interaction-models" class="level4" data-number="2.3.2">
-<h4 data-number="2.3.2" class="anchored" data-anchor-id="interaction-models"><span class="header-section-number">2.3.2</span> Interaction models</h4>
+<section id="interaction-models" class="level4" data-number="4.3.2">
+<h4 data-number="4.3.2" class="anchored" data-anchor-id="interaction-models"><span class="header-section-number">4.3.2</span> Interaction models</h4>
 <ul>
 <li>Based on <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span>:
 <ul>
@@ -489,8 +491,8 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <li>Maybe same measures we use for the network models</li>
 </ul>
 </section>
-<section id="pva-action-plan" class="level4" data-number="2.3.3">
-<h4 data-number="2.3.3" class="anchored" data-anchor-id="pva-action-plan"><span class="header-section-number">2.3.3</span> PVA (action plan)</h4>
+<section id="pva-action-plan" class="level4" data-number="4.3.3">
+<h4 data-number="4.3.3" class="anchored" data-anchor-id="pva-action-plan"><span class="header-section-number">4.3.3</span> PVA (action plan)</h4>
 <ol type="1">
 <li>Shortlist/finalise the different topo generators</li>
 <li>collate/translate into <code>Julia</code>
@@ -514,11 +516,11 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </section>
 </section>
 </section>
-<section id="results" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="results"><span class="header-section-number">3</span> Results</h2>
+<section id="results" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="results"><span class="header-section-number">5</span> Results</h2>
 <p><span class="citation" data-cites="cohenStochasticTheoryCommunity1985">Joel E. Cohen, Newman, and Steele (<a href="#ref-cohenStochasticTheoryCommunity1985" role="doc-biblioref">1985</a>)</span> actually tells us that the cascade model only really works for communities that range from 3-33 species… and <span class="citation" data-cites="williamsSuccessItsLimits2008">Williams and Martinez (<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">2008</a>)</span> also highlights how structural models really only work for small communities</p>
-<section id="qualitative-stuff" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="qualitative-stuff"><span class="header-section-number">3.1</span> Qualitative stuff</h3>
+<section id="qualitative-stuff" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="qualitative-stuff"><span class="header-section-number">5.1</span> Qualitative stuff</h3>
 <p>Maybe not the best term to use but thinking here about practical limitations of the different families. This can include thinking about:</p>
 <ul>
 <li>scale limitations (time or space); <em>e.g.,</em> a metaweb is going to encapsulate but not distinguish between different seasons or locations</li>
@@ -526,15 +528,15 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <li>computational costs</li>
 </ul>
 </section>
-<section id="quantitative-stuff" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="quantitative-stuff"><span class="header-section-number">3.2</span> Quantitative stuff</h3>
+<section id="quantitative-stuff" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="quantitative-stuff"><span class="header-section-number">5.2</span> Quantitative stuff</h3>
 <div class="quarto-embed-nb-cell">
 <div id="cell-fig-topology" class="cell">
 <div class="cell-output cell-output-display">
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Real vs observed values for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero i.e., are basal AFAIK"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="img-fluid figure-img"></a>
+<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Real vs observed values for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal AFAIK
@@ -543,12 +545,12 @@ Figure&nbsp;2: Real vs observed values for network summary statistics. Note here
 </div>
 </div>
 </div>
-</div>
+<a class="quarto-notebook-link" id="nblink-1" href="notebooks/model_quantitative-preview.html#cell-fig-topology">Source: Quantitative approach to topology generators</a></div>
 <p>This might actually be an awful way to try and summarise the data but rolling with it for now…</p>
 </section>
 </section>
-<section id="discussion" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="discussion"><span class="header-section-number">4</span> Discussion</h2>
+<section id="discussion" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="discussion"><span class="header-section-number">6</span> Discussion</h2>
 <ul>
 <li><p>I think a big take home will (hopefully) be how different approaches do better in different situations and so you as an end user need to take this into consideration and pick accordingly. I think <span class="citation" data-cites="petcheyFitEfficiencyBiology2011">Petchey et al. (<a href="#ref-petcheyFitEfficiencyBiology2011" role="doc-biblioref">2011</a>)</span> might have (and share) some thoughts on this (thanks Andrew). I feel like I need to look at <span class="citation" data-cites="berlowGoldilocksFactorFood2008">Berlow, Brose, and Martinez (<a href="#ref-berlowGoldilocksFactorFood2008" role="doc-biblioref">2008</a>)</span> but maybe not exactly in this context but vaguely adjacent.</p></li>
 <li><p>An interesting thing to also think about (and arguably it will be addressed based on some of the other thoughts and ideas) is data dependant and data independent ‘parametrisation’ of the models…</p></li>
@@ -607,6 +609,9 @@ Dunne, Jennifer A. 2006. <span>“The <span>Network Structure</span> of <span>Fo
 </div>
 <div id="ref-dunneCompilationNetworkAnalyses2008" class="csl-entry" role="listitem">
 Dunne, Jennifer A., Richard J. Williams, Neo D. Martinez, Rachel A. Wood, and Douglas H. Erwin. 2008. <span>“Compilation and <span>Network Analyses</span> of <span>Cambrian Food Webs</span>.”</span> <em>PLOS Biology</em> 6 (4): e102. <a href="https://doi.org/10.1371/journal.pbio.0060102">https://doi.org/10.1371/journal.pbio.0060102</a>.
+</div>
+<div id="ref-erdosRandomGraphs1959" class="csl-entry" role="listitem">
+Erdős, Paul, and Alfréd Rényi. 1959. <span>“On <span>Random Graphs I</span>.”</span> <em>Publicationes Mathematicae</em>. <a href="https://doi.org/10.5486/PMD.1959.6.3-4.12">https://doi.org/10.5486/PMD.1959.6.3-4.12</a>.
 </div>
 <div id="ref-fortunaHabitatLossStructure2006" class="csl-entry" role="listitem">
 Fortuna, Miguel A., and Jordi Bascompte. 2006. <span>“Habitat Loss and the Structure of Plant-Animal Mutualistic Networks: <span>Mutualistic</span> Networks and Habitat Loss.”</span> <em>Ecology Letters</em> 9 (3): 281–86. <a href="https://doi.org/10.1111/j.1461-0248.2005.00868.x">https://doi.org/10.1111/j.1461-0248.2005.00868.x</a>.
@@ -693,6 +698,10 @@ Wilman, Hamish, Jonathan Belmaker, Jennifer Simpson, Carolina de la Rosa, Marcel
 Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Completeness of <span>Community Structure</span> in <span>Networks</span>.”</span> <em>Scientific Reports</em> 7 (1): 5269. <a href="https://doi.org/10.1038/s41598-017-05585-6">https://doi.org/10.1038/s41598-017-05585-6</a>.
 </div>
 </div>
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Real vs observed values for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal AFAIK</span>
+</div>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{strydom2024,
@@ -751,7 +760,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -783,47 +803,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -858,11 +838,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1137,7 +1113,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
