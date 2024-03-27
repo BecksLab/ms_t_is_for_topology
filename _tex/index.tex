@@ -341,12 +341,13 @@ within a network are variably distributed across the network; with the
 proportion of links decreasing as one moves up the trophic levels
 (\emph{i.e.,} `many' prey and `few' predators). The niche model
 (Williams and Martinez 2000) introduces the idea that species
-interactions are based on the `feeding niche' of a species. Broadly, all
-species are randomly assigned a `feeding niche' and all species that
-fall in this niche can be consumed by that species. Finally, the nested
-hierarchy model (Cattin et al. 2004), which adds some component of
-phylogenetic clustering/signal\ldots{} so not a single dimension?
-\textbf{TODO}.
+interactions are based on the `feeding niche' of a species. See also
+probabilistic niche model (Williams, Anandanadesan, and Purves 2010)
+Broadly, all species are randomly assigned a `feeding niche' and all
+species that fall in this niche can be consumed by that species.
+Finally, the nested hierarchy model (Cattin et al. 2004), which adds
+some component of phylogenetic clustering/signal\ldots{} so not a single
+dimension? \textbf{TODO}.
 
 \textbf{Generative models:} (this is maybe a bit of a bold term to use).
 MaxEnt (Banville, Gravel, and Poisot 2023), (maybe) stochastic block
@@ -375,7 +376,9 @@ interaction data with a suitable ecological proxy for which data is more
 widely available (\emph{e.g.,} traits). Model families often used
 include generalised linear models (\emph{e.g.,} Caron et al. 2022 use a
 tait-based approach), random forest (\emph{e.g.,} Llewelyn et al. 2023),
-trait-based k-NN (\emph{e.g.,} Desjardins-Proulx et al. 2017)
+trait-based k-NN (\emph{e.g.,} Desjardins-Proulx et al. 2017), and
+Bayesian models(\emph{e.g.,} Eklöf, Tang, and Allesina 2013; Cirtwill et
+al. 2019)
 
 \textbf{Graph embedding:} This family of approaches has been extensively
 discussed in Strydom et al. (2023) but can be broadly explained as an
@@ -443,6 +446,8 @@ models}\label{benchmarking-network-models}
 \item
   See also Allesina, Alonso, and Pascual (2008) and the likelihood
   function that they use for model selection
+\item
+  Look at Vermaat, Dunne, and Gilbert (2009)
 \end{itemize}
 
 \begin{quote}
@@ -905,6 +910,13 @@ Richard Baltensperger, and Jean-Pierre Gabriel. 2004. {``Phylogenetic
 Constraints and Adaptation Explain Food-Web Structure.''} \emph{Nature}
 427 (6977): 835--39. \url{https://doi.org/10.1038/nature02327}.
 
+\bibitem[\citeproctext]{ref-cirtwillQuantitativeFrameworkInvestigating2019}
+Cirtwill, Alyssa R., Anna Eklf, Tomas Roslin, Kate Wootton, and
+Dominique Gravel. 2019. {``A Quantitative Framework for Investigating
+the Reliability of Empirical Network Construction.''} \emph{Methods in
+Ecology and Evolution} 0 (ja).
+\url{https://doi.org/10.1111/2041-210X.13180}.
+
 \bibitem[\citeproctext]{ref-cohenCommunityFoodWebs1990}
 Cohen, Joel E, Frederic Briand, and Charles Newman. 1990.
 \emph{Community {Food Webs}: {Data} and {Theory}}. Biomathematics.
@@ -939,6 +951,12 @@ Dunne, Jennifer A., Richard J. Williams, Neo D. Martinez, Rachel A.
 Wood, and Douglas H. Erwin. 2008. {``Compilation and {Network Analyses}
 of {Cambrian Food Webs}.''} \emph{PLOS Biology} 6 (4): e102.
 \url{https://doi.org/10.1371/journal.pbio.0060102}.
+
+\bibitem[\citeproctext]{ref-eklofSecondaryExtinctionsFood2013}
+Eklöf, Anna, Si Tang, and Stefano Allesina. 2013. {``Secondary
+Extinctions in Food Webs: A {Bayesian} Network Approach.''} Edited by
+Jessica Metcalf. \emph{Methods in Ecology and Evolution} 4 (8): 760--70.
+\url{https://doi.org/10.1111/2041-210X.12062}.
 
 \bibitem[\citeproctext]{ref-erdosRandomGraphs1959}
 Erdős, Paul, and Alfréd Rényi. 1959. {``On {Random Graphs I}.''}
@@ -1098,6 +1116,17 @@ Kate L. Wootton, and Justin D. Yeakel. 2023. {``A Bioenergetic Framework
 for Aboveground Terrestrial Food Webs.''} \emph{Trends in Ecology \&
 Evolution} 38 (3): 301--12.
 \url{https://doi.org/10.1016/j.tree.2022.11.004}.
+
+\bibitem[\citeproctext]{ref-vermaatMajorDimensionsFoodweb2009}
+Vermaat, Jan E, Jennifer A Dunne, and Alison J Gilbert. 2009. {``Major
+Dimensions in Food-Web Structure Properties.''} \emph{Ecology} 90 (1):
+278--82. \url{https://www.ncbi.nlm.nih.gov/pubmed/19294932}.
+
+\bibitem[\citeproctext]{ref-williamsProbabilisticNicheModel2010}
+Williams, Richard J., Ananthi Anandanadesan, and Drew Purves. 2010.
+{``The {Probabilistic Niche Model Reveals} the {Niche Structure} and
+{Role} of {Body Size} in a {Complex Food Web}.''} \emph{PLOS ONE} 5 (8):
+e12092. \url{https://doi.org/10.1371/journal.pone.0012092}.
 
 \bibitem[\citeproctext]{ref-williamsSimpleRulesYield2000}
 Williams, Richard J., and Neo D. Martinez. 2000. {``Simple Rules Yield
