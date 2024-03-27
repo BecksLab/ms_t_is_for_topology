@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.27">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -261,9 +261,9 @@ div.csl-indent {
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">6</span> Discussion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_descriptions-preview.html"><i class="bi bi-journal-code"></i>Extended model descriptions</a></li><li><a href="notebooks/model_quantitative-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li></ul></div></nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_quantitative-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li><li><a href="notebooks/model_descriptions-preview.html"><i class="bi bi-journal-code"></i>Extended model descriptions</a></li></ul></div></nav>
 </div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -299,7 +299,7 @@ div.csl-indent {
 <div id="fig-concept" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
+<a href="images/concept.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model
@@ -308,14 +308,14 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 </div>
 <p><strong>Null models:</strong> The interactions between species occurs regardless of the identity of the species (<em>i.e.,</em> species have no agency) and links are randomly distributed throughout the network. There is however the assumption that a network will be constrained by the number of links. Type I <span class="citation" data-cites="fortunaHabitatLossStructure2006">(<a href="#ref-fortunaHabitatLossStructure2006" role="doc-biblioref">Fortuna and Bascompte 2006</a>)</span>, where interactions happen proportionally to connectance and Type II <span class="citation" data-cites="bascompteNestedAssemblyPlantanimal2003">(<a href="#ref-bascompteNestedAssemblyPlantanimal2003" role="doc-biblioref">Bascompte et al. 2003</a>)</span>, where interactions happen proportionally to the joint degree of the two species involved. These two models are equivalent to the Erdos-Renyi <span class="citation" data-cites="erdosRandomGraphs1959">(<a href="#ref-erdosRandomGraphs1959" role="doc-biblioref">Erdős and Rényi 1959</a>)</span> and Configuration models <span class="citation" data-cites="newmanNetworksIntroduction2010">(<a href="#ref-newmanNetworksIntroduction2010" role="doc-biblioref">Newman 2010</a>)</span> respectively (check that though).</p>
 <p><strong>Neutral models:</strong> Based on the theory that interactions occur as the result of the abundance of species (<em>i.e.,</em> the species still has no agency but its abundance does?). See <span class="citation" data-cites="pomeranzInferringPredatorPrey2019">Pomeranz et al. (<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">2019</a>)</span></p>
-<p><strong>Resource models:</strong> In the context of network generating models this is perhaps the most well known family of models. Essentially these models can be viewed as being based on the idea of resource partitioning and that the number of links scale with species richness (linear link scaling). That is there is some sort of hierarchical feeding based on how a ‘resource’ is partitioned. This includes the cascade model <span class="citation" data-cites="cohenCommunityFoodWebs1990">(<a href="#ref-cohenCommunityFoodWebs1990" role="doc-biblioref">Joel E. Cohen, Briand, and Newman 1990</a>)</span>, which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (<em>i.e.,</em> ‘many’ prey and ‘few’ predators). The niche model <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model <span class="citation" data-cites="cattinPhylogeneticConstraintsAdaptation2004">(<a href="#ref-cattinPhylogeneticConstraintsAdaptation2004" role="doc-biblioref">Cattin et al. 2004</a>)</span> <strong>TODO</strong>.</p>
+<p><strong>Resource models:</strong> Based on the idea that networks follow a trophic hierarchy and that species interactions can be determined using a single dimension (the “niche axis”) <span class="citation" data-cites="allesinaGeneralModelFood2008">(<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">Allesina, Alonso, and Pascual 2008</a>)</span>. Essentially these models can be viewed as being based on the idea of resource partitioning (niches) along a one-dimensional resource and that the number of links scale with species richness (linear link scaling). That is there is some sort of hierarchical feeding based on how a ‘resource’ is partitioned. This includes the cascade model <span class="citation" data-cites="cohenCommunityFoodWebs1990">(<a href="#ref-cohenCommunityFoodWebs1990" role="doc-biblioref">Joel E. Cohen, Briand, and Newman 1990</a>)</span>, which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (<em>i.e.,</em> ‘many’ prey and ‘few’ predators). The niche model <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model <span class="citation" data-cites="cattinPhylogeneticConstraintsAdaptation2004">(<a href="#ref-cattinPhylogeneticConstraintsAdaptation2004" role="doc-biblioref">Cattin et al. 2004</a>)</span>, which adds some component of phylogenetic clustering/signal… so not a single dimension? <strong>TODO</strong>.</p>
 <p><strong>Generative models:</strong> (this is maybe a bit of a bold term to use). MaxEnt <span class="citation" data-cites="banvilleWhatConstrainsFood2023">(<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">Banville, Gravel, and Poisot 2023</a>)</span>, (maybe) stochastic block <span class="citation" data-cites="xieCompletenessCommunityStructure2017">(<a href="#ref-xieCompletenessCommunityStructure2017" role="doc-biblioref">Xie et al. 2017</a>)</span>.</p>
 <p><strong>Feeding models:</strong> Broadly this family of models is rooted in feeding theory and allocates the links between species based on energetics. This means that the model is focused on predicting not only the number of links in a network but also the arrangement of these links based on the diet breadth of a species. The diet breadth model <span class="citation" data-cites="beckermanForagingBiologyPredicts2006">(<a href="#ref-beckermanForagingBiologyPredicts2006" role="doc-biblioref">Beckerman, Petchey, and Warren 2006</a>)</span> as well as its allometrically scaled cousin the allometric diet breadth model (ADBM) <span class="citation" data-cites="petcheySizeForagingFood2008">(<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">Petchey et al. 2008</a>)</span> determine links between species based on the energetic content, handling time, and density of species. See also <span class="citation" data-cites="deangelisModelTropicInteraction1975">DeAngelis, Goldstein, and O’Neill (<a href="#ref-deangelisModelTropicInteraction1975" role="doc-biblioref">1975</a>)</span></p>
 <blockquote class="blockquote">
 <p><span class="citation" data-cites="gravelInferringFoodWeb2013">Gravel et al. (<a href="#ref-gravelInferringFoodWeb2013" role="doc-biblioref">2013</a>)</span> also poses an interesting cross-over between the adbm and niche model.</p>
 </blockquote>
 <p><strong>Binary classifiers:</strong> The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate ‘real world’ interaction data with a suitable ecological proxy for which data is more widely available (<em>e.g.,</em> traits). Model families often used include generalised linear models <span class="citation" data-cites="caronAddressingEltonianShortfall2022">(<em>e.g.,</em> <a href="#ref-caronAddressingEltonianShortfall2022" role="doc-biblioref">Caron et al. 2022</a> use a tait-based approach)</span>, random forest <span class="citation" data-cites="llewelynPredictingPredatorPrey2023">(<em>e.g.,</em> <a href="#ref-llewelynPredictingPredatorPrey2023" role="doc-biblioref">Llewelyn et al. 2023</a>)</span>, trait-based k-NN <span class="citation" data-cites="desjardins-proulxEcologicalInteractionsNetflix2017">(<em>e.g.,</em> <a href="#ref-desjardins-proulxEcologicalInteractionsNetflix2017" role="doc-biblioref">Desjardins-Proulx et al. 2017</a>)</span></p>
-<p><strong>Graph embedding:</strong> This family of approaches has been extensively discussed in <span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span> but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. <span class="citation" data-cites="strydomFoodWebReconstruction2022">Strydom et al. (<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">2022</a>)</span> presents a specific use case that is based on transfer learning and the idea that interactions are evolutionarily conserved and that we can use known networks, and this evolutionary relationship to predict interactions for a given species pool. <strong>TODO</strong> Log-ratio <span class="citation" data-cites="rohrModelingFoodWebs2010">(<a href="#ref-rohrModelingFoodWebs2010" role="doc-biblioref">Rohr et al. 2010</a>)</span></p>
+<p><strong>Graph embedding:</strong> This family of approaches has been extensively discussed in <span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span> but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. <span class="citation" data-cites="strydomFoodWebReconstruction2022">Strydom et al. (<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">2022</a>)</span> uses a transfer learning framework (specifically using a random dot product graph for embedding) based around the idea that interactions are evolutionarily conserved and that we can use known networks, and phylogenetic relationships, to predict interactions for a given species pool. <strong>TODO</strong> Log-ratio <span class="citation" data-cites="rohrModelingFoodWebs2010">(<a href="#ref-rohrModelingFoodWebs2010" role="doc-biblioref">Rohr et al. 2010</a>)</span></p>
 <p><strong>Trait matching:</strong> Here I envision models that present an <em>a priori</em> set of rules that determines feeding links between species; specifically based on species traits. That is, there is an element of ‘expert knowledge’ that also comes into play… Something like PFIM <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span> is what I imagine fitting in here…</p>
 <p><strong>Expert knowledge:</strong> Not so much about empirical observations but more the idea of using human power/knowledge to create an assemblage of interactions for a specific community. This can include empirical data but can also make use of knowledge about ecological features (such as traits or co-occurrence) and how those can function as proxies for interactions <span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">(<em>e.g.,</em> <a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">Morales-Castilla et al. 2015</a>)</span>. Or alternatively the value of ‘local’ knowledge and having specific individuals sitting around a table and assigning a value of how confident they are that a specific species pair are likely to interact <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008">(<em>e.g.,</em> <a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">Jennifer A. Dunne et al. 2008</a>)</span>, or a combination of published and grey literature <span class="citation" data-cites="maioranoTETRAEUSpecieslevelTrophic2020">(<em>e.g.,</em> <a href="#ref-maioranoTETRAEUSpecieslevelTrophic2020" role="doc-biblioref">Maiorano et al. 2020</a>)</span>.</p>
 </section>
@@ -331,8 +331,12 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <section id="benchmarking-network-models" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="benchmarking-network-models"><span class="header-section-number">3.1</span> Benchmarking network models</h3>
 <ul>
-<li>Maybe look at some of the historic papers that compare some of the ‘resource models’</li>
+<li><p>Maybe look at some of the historic papers that compare some of the ‘resource models’</p></li>
+<li><p>See also <span class="citation" data-cites="allesinaGeneralModelFood2008">Allesina, Alonso, and Pascual (<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">2008</a>)</span> and the likelihood function that they use for model selection</p></li>
 </ul>
+<blockquote class="blockquote">
+<p>“Possibly, the most striking caveat of the use of summary statistics is that it cannot tell us whether or not a model is able to fully replicate empirical networks.” - <span class="citation" data-cites="allesinaGeneralModelFood2008">Allesina, Alonso, and Pascual (<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">2008</a>)</span></p>
+</blockquote>
 </section>
 <section id="benchmarking-interaction-models" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="benchmarking-interaction-models"><span class="header-section-number">3.2</span> Benchmarking interaction models</h3>
@@ -383,7 +387,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <tbody>
 <tr class="odd">
 <td>null</td>
-<td>Interactions occur randomly</td>
+<td>Network structure is random</td>
 <td>network</td>
 <td>link</td>
 <td>binary</td>
@@ -391,15 +395,15 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </tr>
 <tr class="even">
 <td>neutral</td>
-<td>Interactions are ‘random’ but species abundance plays a role</td>
+<td>Network structure is random, but species abundance plays a role</td>
 <td>network</td>
 <td></td>
 <td></td>
 <td>abundance</td>
 </tr>
 <tr class="odd">
-<td>resource</td>
-<td>Interactions are resource constrained (trophic pyramid)</td>
+<td>interval</td>
+<td>Networks are interval, can be ordered on a ‘niche axis’</td>
 <td>network</td>
 <td>link</td>
 <td>binary</td>
@@ -536,7 +540,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Real vs observed values for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero i.e., are basal AFAIK"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="img-fluid figure-img"></a>
+<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-1.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Real vs observed values for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal AFAIK
@@ -545,7 +549,7 @@ Figure&nbsp;2: Real vs observed values for network summary statistics. Note here
 </div>
 </div>
 </div>
-</div>
+<a class="quarto-notebook-link" id="nblink-1" href="notebooks/model_quantitative-preview.html#cell-fig-topology">Source: Quantitative approach to topology generators</a></div>
 <p>This might actually be an awful way to try and summarise the data but rolling with it for now…</p>
 </section>
 </section>
@@ -568,6 +572,9 @@ Figure&nbsp;2: Real vs observed values for network summary statistics. Note here
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-allesinaGeneralModelFood2008" class="csl-entry" role="listitem">
+Allesina, Stefano, David Alonso, and Mercedes Pascual. 2008. <span>“A <span>General Model</span> for <span>Food Web Structure</span>.”</span> <em>Science</em> 320 (5876): 658–61. <a href="https://doi.org/10.1126/science.1156269">https://doi.org/10.1126/science.1156269</a>.
+</div>
 <div id="ref-bambachAutecologyFillingEcospace2007" class="csl-entry" role="listitem">
 Bambach, Richard K., Andrew M. Bush, and Douglas H. Erwin. 2007. <span>“Autecology and the <span>Filling</span> of <span>Ecospace</span>: <span>Key Metazoan Radiations</span>.”</span> <em>Palaeontology</em> 50 (1): 1–22. <a href="https://doi.org/10.1111/j.1475-4983.2006.00611.x">https://doi.org/10.1111/j.1475-4983.2006.00611.x</a>.
 </div>
@@ -698,6 +705,10 @@ Wilman, Hamish, Jonathan Belmaker, Jennifer Simpson, Carolina de la Rosa, Marcel
 Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Completeness of <span>Community Structure</span> in <span>Networks</span>.”</span> <em>Scientific Reports</em> 7 (1): 5269. <a href="https://doi.org/10.1038/s41598-017-05585-6">https://doi.org/10.1038/s41598-017-05585-6</a>.
 </div>
 </div>
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Real vs observed values for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal AFAIK</span>
+</div>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{strydom2024,
@@ -756,7 +767,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -788,47 +810,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -863,11 +845,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1142,7 +1120,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false,"selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

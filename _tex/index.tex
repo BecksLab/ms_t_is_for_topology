@@ -326,10 +326,12 @@ respectively (check that though).
 the result of the abundance of species (\emph{i.e.,} the species still
 has no agency but its abundance does?). See Pomeranz et al. (2019)
 
-\textbf{Resource models:} In the context of network generating models
-this is perhaps the most well known family of models. Essentially these
-models can be viewed as being based on the idea of resource partitioning
-and that the number of links scale with species richness (linear link
+\textbf{Resource models:} Based on the idea that networks follow a
+trophic hierarchy and that species interactions can be determined using
+a single dimension (the ``niche axis'') (Allesina, Alonso, and Pascual
+2008). Essentially these models can be viewed as being based on the idea
+of resource partitioning (niches) along a one-dimensional resource and
+that the number of links scale with species richness (linear link
 scaling). That is there is some sort of hierarchical feeding based on
 how a `resource' is partitioned. This includes the cascade model (Joel
 E. Cohen, Briand, and Newman 1990), which much like the name suggests
@@ -342,7 +344,9 @@ proportion of links decreasing as one moves up the trophic levels
 interactions are based on the `feeding niche' of a species. Broadly, all
 species are randomly assigned a `feeding niche' and all species that
 fall in this niche can be consumed by that species. Finally, the nested
-hierarchy model (Cattin et al. 2004) \textbf{TODO}.
+hierarchy model (Cattin et al. 2004), which adds some component of
+phylogenetic clustering/signal\ldots{} so not a single dimension?
+\textbf{TODO}.
 
 \textbf{Generative models:} (this is maybe a bit of a bold term to use).
 MaxEnt (Banville, Gravel, and Poisot 2023), (maybe) stochastic block
@@ -376,11 +380,12 @@ trait-based k-NN (\emph{e.g.,} Desjardins-Proulx et al. 2017)
 \textbf{Graph embedding:} This family of approaches has been extensively
 discussed in Strydom et al. (2023) but can be broadly explained as an
 approach that estimates latent features from observed networks that can
-be used to predict interactions. Strydom et al. (2022) presents a
-specific use case that is based on transfer learning and the idea that
-interactions are evolutionarily conserved and that we can use known
-networks, and this evolutionary relationship to predict interactions for
-a given species pool. \textbf{TODO} Log-ratio (Rohr et al. 2010)
+be used to predict interactions. Strydom et al. (2022) uses a transfer
+learning framework (specifically using a random dot product graph for
+embedding) based around the idea that interactions are evolutionarily
+conserved and that we can use known networks, and phylogenetic
+relationships, to predict interactions for a given species pool.
+\textbf{TODO} Log-ratio (Rohr et al. 2010)
 
 \textbf{Trait matching:} Here I envision models that present an \emph{a
 priori} set of rules that determines feeding links between species;
@@ -432,11 +437,19 @@ the same value.'' - Poisot (2023)
 models}\label{benchmarking-network-models}
 
 \begin{itemize}
-\tightlist
 \item
   Maybe look at some of the historic papers that compare some of the
   `resource models'
+\item
+  See also Allesina, Alonso, and Pascual (2008) and the likelihood
+  function that they use for model selection
 \end{itemize}
+
+\begin{quote}
+``Possibly, the most striking caveat of the use of summary statistics is
+that it cannot tell us whether or not a model is able to fully replicate
+empirical networks.'' - Allesina, Alonso, and Pascual (2008)
+\end{quote}
 
 \subsection{Benchmarking interaction
 models}\label{benchmarking-interaction-models}
@@ -541,10 +554,10 @@ Interaction
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Interactions occur randomly & network & link & binary & no \\
-neutral & Interactions are `random' but species abundance plays a role &
-network & & & abundance \\
-resource & Interactions are resource constrained (trophic pyramid) &
+null & Network structure is random & network & link & binary & no \\
+neutral & Network structure is random, but species abundance plays a
+role & network & & & abundance \\
+interval & Networks are interval, can be ordered on a `niche axis' &
 network & link & binary & no \\
 generative & Interactions are determined by structural features of the
 network (\emph{pending}) & network & & & \\
@@ -814,6 +827,11 @@ Notebook}}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-allesinaGeneralModelFood2008}
+Allesina, Stefano, David Alonso, and Mercedes Pascual. 2008. {``A
+{General Model} for {Food Web Structure}.''} \emph{Science} 320 (5876):
+658--61. \url{https://doi.org/10.1126/science.1156269}.
+
 \bibitem[\citeproctext]{ref-bambachAutecologyFillingEcospace2007}
 Bambach, Richard K., Andrew M. Bush, and Douglas H. Erwin. 2007.
 {``Autecology and the {Filling} of {Ecospace}: {Key Metazoan
