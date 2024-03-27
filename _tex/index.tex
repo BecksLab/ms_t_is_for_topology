@@ -471,14 +471,17 @@ models}\label{benchmarking-interaction-models}
   al.~et al 2021 and Catchen et al 2023
 \item
   See Poisot (2023)
-\item
-  skill (ability to make the right prediction; evaluate whether low
-  prevalence can lull us into a false sense of predictive accuracy)
-\item
-  bias (trends towards systematically over-predicting one class)
-\item
-  class imbalance (the relative number of cases representing
-  interactions)
+
+  \begin{itemize}
+  \item
+    skill (ability to make the right prediction; evaluate whether low
+    prevalence can lull us into a false sense of predictive accuracy)
+  \item
+    bias (trends towards systematically over-predicting one class)
+  \item
+    class imbalance (the relative number of cases representing
+    interactions)
+  \end{itemize}
 \item
   ``These results suggest that learning from a dataset with very low
   connectance can be a different task than for more connected networks:
@@ -510,12 +513,13 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1493}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3284}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0821}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0970}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1119}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2313}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
 \caption{Lets make a table that gives an overview of the different model
 families that we will look at. Here I take `data-driven' to refer to the
 need for `real world' data. This can probably be approached in a
@@ -527,6 +531,8 @@ Model family
 Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome (these terms could be better\ldots)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -544,6 +550,8 @@ Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome (these terms could be better\ldots)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
@@ -554,23 +562,28 @@ Interaction
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Network structure is random & network & link & binary & no \\
+null & Network structure is random & network & random & link & binary &
+no \\
 neutral & Network structure is random, but species abundance plays a
-role & network & & & abundance \\
+role & network & & & & abundance \\
 interval & Networks are interval, can be ordered on a `niche axis' &
-network & link & binary & no \\
+network & `random' & link & binary & no \\
 generative & Interactions are determined by structural features of the
-network (\emph{pending}) & network & & & \\
+network (\emph{pending}) & network & `random' & & & \\
 energetic & Interactions are determined by foraging theory (feeding
-links) & & & binary & yes (body size, \ldots) \\
+links) & & deterministic & & binary & yes (body size, \ldots) \\
 graph embedding & Interactions can be predicted from the latent traits
-of networks & interactions & & probabilistic & yes (network) \\
+of networks & interactions & deterministic & & probabilistic & yes
+(network, ecological proxy) \\
 trait matching & Interactions can be inferred by a mechanistic
-framework/relationships & interactions & & & yes (expert knowledge,
-trait) \\
+framework/relationships & interactions & deterministic & & & yes (expert
+knowledge, trait) \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
-interactions & & probabilistic & yes (interaction, trait) \\
+interactions & deterministic & & probabilistic & yes (interaction,
+trait) \\
+expert knowledge & `Boots on the ground' ecological knowledge and
+observations & interactions & & & & \\
 \end{longtable}
 
 \subsection{Datasets used}\label{datasets-used}
@@ -747,6 +760,17 @@ limitations of the different families. This can include thinking about:
 \item
   computational costs
 \end{itemize}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{images/model_venn.png}
+
+}
+
+\caption{I still haven't given up on a sort of venn diagram idea but
+maybe it going to be more of a venn-flow chart hybrid\ldots{}}
+
+\end{figure}%
 
 \subsection{Quantitative stuff}\label{quantitative-stuff}
 
