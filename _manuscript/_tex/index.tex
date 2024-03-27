@@ -173,7 +173,7 @@
 
 \title{T is for Topology}
 \author{Tanya Strydom \and Timothée Poisot \and Andrew P. Beckerman}
-\date{2024-03-26}
+\date{2024-03-27}
 
 \begin{document}
 \maketitle
@@ -326,10 +326,12 @@ respectively (check that though).
 the result of the abundance of species (\emph{i.e.,} the species still
 has no agency but its abundance does?). See Pomeranz et al. (2019)
 
-\textbf{Resource models:} In the context of network generating models
-this is perhaps the most well known family of models. Essentially these
-models can be viewed as being based on the idea of resource partitioning
-and that the number of links scale with species richness (linear link
+\textbf{Resource models:} Based on the idea that networks follow a
+trophic hierarchy and that species interactions can be determined using
+a single dimension (the ``niche axis'') (Allesina, Alonso, and Pascual
+2008). Essentially these models can be viewed as being based on the idea
+of resource partitioning (niches) along a one-dimensional resource and
+that the number of links scale with species richness (linear link
 scaling). That is there is some sort of hierarchical feeding based on
 how a `resource' is partitioned. This includes the cascade model (Joel
 E. Cohen, Briand, and Newman 1990), which much like the name suggests
@@ -339,10 +341,13 @@ within a network are variably distributed across the network; with the
 proportion of links decreasing as one moves up the trophic levels
 (\emph{i.e.,} `many' prey and `few' predators). The niche model
 (Williams and Martinez 2000) introduces the idea that species
-interactions are based on the `feeding niche' of a species. Broadly, all
-species are randomly assigned a `feeding niche' and all species that
-fall in this niche can be consumed by that species. Finally, the nested
-hierarchy model (Cattin et al. 2004) \textbf{TODO}.
+interactions are based on the `feeding niche' of a species. See also
+probabilistic niche model (Williams, Anandanadesan, and Purves 2010)
+Broadly, all species are randomly assigned a `feeding niche' and all
+species that fall in this niche can be consumed by that species.
+Finally, the nested hierarchy model (Cattin et al. 2004), which adds
+some component of phylogenetic clustering/signal\ldots{} so not a single
+dimension? \textbf{TODO}.
 
 \textbf{Generative models:} (this is maybe a bit of a bold term to use).
 MaxEnt (Banville, Gravel, and Poisot 2023), (maybe) stochastic block
@@ -371,16 +376,19 @@ interaction data with a suitable ecological proxy for which data is more
 widely available (\emph{e.g.,} traits). Model families often used
 include generalised linear models (\emph{e.g.,} Caron et al. 2022 use a
 tait-based approach), random forest (\emph{e.g.,} Llewelyn et al. 2023),
-trait-based k-NN (\emph{e.g.,} Desjardins-Proulx et al. 2017)
+trait-based k-NN (\emph{e.g.,} Desjardins-Proulx et al. 2017), and
+Bayesian models(\emph{e.g.,} Eklöf, Tang, and Allesina 2013; Cirtwill et
+al. 2019)
 
 \textbf{Graph embedding:} This family of approaches has been extensively
 discussed in Strydom et al. (2023) but can be broadly explained as an
 approach that estimates latent features from observed networks that can
-be used to predict interactions. Strydom et al. (2022) presents a
-specific use case that is based on transfer learning and the idea that
-interactions are evolutionarily conserved and that we can use known
-networks, and this evolutionary relationship to predict interactions for
-a given species pool. \textbf{TODO} Log-ratio (Rohr et al. 2010)
+be used to predict interactions. Strydom et al. (2022) uses a transfer
+learning framework (specifically using a random dot product graph for
+embedding) based around the idea that interactions are evolutionarily
+conserved and that we can use known networks, and phylogenetic
+relationships, to predict interactions for a given species pool.
+\textbf{TODO} Log-ratio (Rohr et al. 2010)
 
 \textbf{Trait matching:} Here I envision models that present an \emph{a
 priori} set of rules that determines feeding links between species;
@@ -432,11 +440,21 @@ the same value.'' - Poisot (2023)
 models}\label{benchmarking-network-models}
 
 \begin{itemize}
-\tightlist
 \item
   Maybe look at some of the historic papers that compare some of the
   `resource models'
+\item
+  See also Allesina, Alonso, and Pascual (2008) and the likelihood
+  function that they use for model selection
+\item
+  Look at Vermaat, Dunne, and Gilbert (2009)
 \end{itemize}
+
+\begin{quote}
+``Possibly, the most striking caveat of the use of summary statistics is
+that it cannot tell us whether or not a model is able to fully replicate
+empirical networks.'' - Allesina, Alonso, and Pascual (2008)
+\end{quote}
 
 \subsection{Benchmarking interaction
 models}\label{benchmarking-interaction-models}
@@ -458,14 +476,17 @@ models}\label{benchmarking-interaction-models}
   al.~et al 2021 and Catchen et al 2023
 \item
   See Poisot (2023)
-\item
-  skill (ability to make the right prediction; evaluate whether low
-  prevalence can lull us into a false sense of predictive accuracy)
-\item
-  bias (trends towards systematically over-predicting one class)
-\item
-  class imbalance (the relative number of cases representing
-  interactions)
+
+  \begin{itemize}
+  \item
+    skill (ability to make the right prediction; evaluate whether low
+    prevalence can lull us into a false sense of predictive accuracy)
+  \item
+    bias (trends towards systematically over-predicting one class)
+  \item
+    class imbalance (the relative number of cases representing
+    interactions)
+  \end{itemize}
 \item
   ``These results suggest that learning from a dataset with very low
   connectance can be a different task than for more connected networks:
@@ -497,12 +518,13 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1493}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3284}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0821}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0970}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1119}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2313}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
 \caption{Lets make a table that gives an overview of the different model
 families that we will look at. Here I take `data-driven' to refer to the
 need for `real world' data. This can probably be approached in a
@@ -514,6 +536,8 @@ Model family
 Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome (these terms could be better\ldots)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -531,6 +555,8 @@ Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome (these terms could be better\ldots)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
@@ -541,23 +567,28 @@ Interaction
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Interactions occur randomly & network & link & binary & no \\
-neutral & Interactions are `random' but species abundance plays a role &
-network & & & abundance \\
-resource & Interactions are resource constrained (trophic pyramid) &
-network & link & binary & no \\
+null & Network structure is random & network & random & link & binary &
+no \\
+neutral & Network structure is random, but species abundance plays a
+role & network & & & & abundance \\
+interval & Networks are interval, can be ordered on a `niche axis' &
+network & `random' & link & binary & no \\
 generative & Interactions are determined by structural features of the
-network (\emph{pending}) & network & & & \\
+network (\emph{pending}) & network & `random' & & & \\
 energetic & Interactions are determined by foraging theory (feeding
-links) & & & binary & yes (body size, \ldots) \\
+links) & & deterministic & & binary & yes (body size, \ldots) \\
 graph embedding & Interactions can be predicted from the latent traits
-of networks & interactions & & probabilistic & yes (network) \\
+of networks & interactions & deterministic & & probabilistic & yes
+(network, ecological proxy) \\
 trait matching & Interactions can be inferred by a mechanistic
-framework/relationships & interactions & & & yes (expert knowledge,
-trait) \\
+framework/relationships & interactions & deterministic & & & yes (expert
+knowledge, trait) \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
-interactions & & probabilistic & yes (interaction, trait) \\
+interactions & deterministic & & probabilistic & yes (interaction,
+trait) \\
+expert knowledge & `Boots on the ground' ecological knowledge and
+observations & interactions & & & & \\
 \end{longtable}
 
 \subsection{Datasets used}\label{datasets-used}
@@ -735,6 +766,17 @@ limitations of the different families. This can include thinking about:
   computational costs
 \end{itemize}
 
+\begin{figure}[H]
+
+{\centering \includegraphics{images/model_venn.png}
+
+}
+
+\caption{I still haven't given up on a sort of venn diagram idea but
+maybe it going to be more of a venn-flow chart hybrid\ldots{}}
+
+\end{figure}%
+
 \subsection{Quantitative stuff}\label{quantitative-stuff}
 
 \begin{figure}[H]
@@ -814,6 +856,11 @@ Notebook}}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-allesinaGeneralModelFood2008}
+Allesina, Stefano, David Alonso, and Mercedes Pascual. 2008. {``A
+{General Model} for {Food Web Structure}.''} \emph{Science} 320 (5876):
+658--61. \url{https://doi.org/10.1126/science.1156269}.
+
 \bibitem[\citeproctext]{ref-bambachAutecologyFillingEcospace2007}
 Bambach, Richard K., Andrew M. Bush, and Douglas H. Erwin. 2007.
 {``Autecology and the {Filling} of {Ecospace}: {Key Metazoan
@@ -863,6 +910,13 @@ Richard Baltensperger, and Jean-Pierre Gabriel. 2004. {``Phylogenetic
 Constraints and Adaptation Explain Food-Web Structure.''} \emph{Nature}
 427 (6977): 835--39. \url{https://doi.org/10.1038/nature02327}.
 
+\bibitem[\citeproctext]{ref-cirtwillQuantitativeFrameworkInvestigating2019}
+Cirtwill, Alyssa R., Anna Eklf, Tomas Roslin, Kate Wootton, and
+Dominique Gravel. 2019. {``A Quantitative Framework for Investigating
+the Reliability of Empirical Network Construction.''} \emph{Methods in
+Ecology and Evolution} 0 (ja).
+\url{https://doi.org/10.1111/2041-210X.13180}.
+
 \bibitem[\citeproctext]{ref-cohenCommunityFoodWebs1990}
 Cohen, Joel E, Frederic Briand, and Charles Newman. 1990.
 \emph{Community {Food Webs}: {Data} and {Theory}}. Biomathematics.
@@ -897,6 +951,12 @@ Dunne, Jennifer A., Richard J. Williams, Neo D. Martinez, Rachel A.
 Wood, and Douglas H. Erwin. 2008. {``Compilation and {Network Analyses}
 of {Cambrian Food Webs}.''} \emph{PLOS Biology} 6 (4): e102.
 \url{https://doi.org/10.1371/journal.pbio.0060102}.
+
+\bibitem[\citeproctext]{ref-eklofSecondaryExtinctionsFood2013}
+Eklöf, Anna, Si Tang, and Stefano Allesina. 2013. {``Secondary
+Extinctions in Food Webs: A {Bayesian} Network Approach.''} Edited by
+Jessica Metcalf. \emph{Methods in Ecology and Evolution} 4 (8): 760--70.
+\url{https://doi.org/10.1111/2041-210X.12062}.
 
 \bibitem[\citeproctext]{ref-erdosRandomGraphs1959}
 Erdős, Paul, and Alfréd Rényi. 1959. {``On {Random Graphs I}.''}
@@ -1056,6 +1116,17 @@ Kate L. Wootton, and Justin D. Yeakel. 2023. {``A Bioenergetic Framework
 for Aboveground Terrestrial Food Webs.''} \emph{Trends in Ecology \&
 Evolution} 38 (3): 301--12.
 \url{https://doi.org/10.1016/j.tree.2022.11.004}.
+
+\bibitem[\citeproctext]{ref-vermaatMajorDimensionsFoodweb2009}
+Vermaat, Jan E, Jennifer A Dunne, and Alison J Gilbert. 2009. {``Major
+Dimensions in Food-Web Structure Properties.''} \emph{Ecology} 90 (1):
+278--82. \url{https://www.ncbi.nlm.nih.gov/pubmed/19294932}.
+
+\bibitem[\citeproctext]{ref-williamsProbabilisticNicheModel2010}
+Williams, Richard J., Ananthi Anandanadesan, and Drew Purves. 2010.
+{``The {Probabilistic Niche Model Reveals} the {Niche Structure} and
+{Role} of {Body Size} in a {Complex Food Web}.''} \emph{PLOS ONE} 5 (8):
+e12092. \url{https://doi.org/10.1371/journal.pone.0012092}.
 
 \bibitem[\citeproctext]{ref-williamsSimpleRulesYield2000}
 Williams, Richard J., and Neo D. Martinez. 2000. {``Simple Rules Yield
