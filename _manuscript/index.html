@@ -317,7 +317,7 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <p><strong>Binary classifiers:</strong> The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate ‘real world’ interaction data with a suitable ecological proxy for which data is more widely available (<em>e.g.,</em> traits). Model families often used include generalised linear models <span class="citation" data-cites="caronAddressingEltonianShortfall2022">(<em>e.g.,</em> <a href="#ref-caronAddressingEltonianShortfall2022" role="doc-biblioref">Caron et al. 2022</a> use a tait-based approach)</span>, random forest <span class="citation" data-cites="llewelynPredictingPredatorPrey2023">(<em>e.g.,</em> <a href="#ref-llewelynPredictingPredatorPrey2023" role="doc-biblioref">Llewelyn et al. 2023</a>)</span>, trait-based k-NN <span class="citation" data-cites="desjardins-proulxEcologicalInteractionsNetflix2017">(<em>e.g.,</em> <a href="#ref-desjardins-proulxEcologicalInteractionsNetflix2017" role="doc-biblioref">Desjardins-Proulx et al. 2017</a>)</span></p>
 <p><strong>Graph embedding:</strong> This family of approaches has been extensively discussed in <span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span> but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. <span class="citation" data-cites="strydomFoodWebReconstruction2022">Strydom et al. (<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">2022</a>)</span> presents a specific use case that is based on transfer learning and the idea that interactions are evolutionarily conserved and that we can use known networks, and this evolutionary relationship to predict interactions for a given species pool. <strong>TODO</strong> Log-ratio <span class="citation" data-cites="rohrModelingFoodWebs2010">(<a href="#ref-rohrModelingFoodWebs2010" role="doc-biblioref">Rohr et al. 2010</a>)</span></p>
 <p><strong>Trait matching:</strong> Here I envision models that present an <em>a priori</em> set of rules that determines feeding links between species; specifically based on species traits. That is, there is an element of ‘expert knowledge’ that also comes into play… Something like PFIM <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span> is what I imagine fitting in here…</p>
-<p><strong>Expert knowledge:</strong> Not so much about empirical observations but more the idea of using human power/knowledge to create an assemblage of interactions for a specific community. This can include empirical data but can also make use of knowledge about ecological features (such as traits or co-occurrence) and how those can function as proxies for interactions <span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">(<em>e.g.,</em> <a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">Morales-Castilla et al. 2015</a>)</span>. Or alternatively the value of ‘local’ knowledge and having specific individuals sitting around a table and assigning a value of how confident they are that a specific species pair are likely to interact <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008">(<a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">Jennifer A. Dunne et al. 2008</a>)</span>, or a combination of published and grey literature <span class="citation" data-cites="maioranoTETRAEUSpecieslevelTrophic2020">(<em>e.g.,</em> <a href="#ref-maioranoTETRAEUSpecieslevelTrophic2020" role="doc-biblioref">Maiorano et al. 2020</a>)</span>.</p>
+<p><strong>Expert knowledge:</strong> Not so much about empirical observations but more the idea of using human power/knowledge to create an assemblage of interactions for a specific community. This can include empirical data but can also make use of knowledge about ecological features (such as traits or co-occurrence) and how those can function as proxies for interactions <span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">(<em>e.g.,</em> <a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">Morales-Castilla et al. 2015</a>)</span>. Or alternatively the value of ‘local’ knowledge and having specific individuals sitting around a table and assigning a value of how confident they are that a specific species pair are likely to interact <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008">(<em>e.g.,</em> <a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">Jennifer A. Dunne et al. 2008</a>)</span>, or a combination of published and grey literature <span class="citation" data-cites="maioranoTETRAEUSpecieslevelTrophic2020">(<em>e.g.,</em> <a href="#ref-maioranoTETRAEUSpecieslevelTrophic2020" role="doc-biblioref">Maiorano et al. 2020</a>)</span>.</p>
 </section>
 <section id="model-benchmarking" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="model-benchmarking"><span class="header-section-number">3</span> Model benchmarking</h2>
@@ -363,12 +363,12 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 10%">
-<col style="width: 34%">
+<col style="width: 14%">
+<col style="width: 32%">
 <col style="width: 8%">
-<col style="width: 10%">
+<col style="width: 9%">
 <col style="width: 11%">
-<col style="width: 24%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -431,7 +431,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </tr>
 <tr class="odd">
 <td>trait matching</td>
-<td>Interactions can be inferred by a mechanistic framework</td>
+<td>Interactions can be inferred by a mechanistic framework/relationships</td>
 <td>interactions</td>
 <td></td>
 <td></td>
@@ -439,7 +439,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </tr>
 <tr class="even">
 <td>binary classifiers</td>
-<td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant</td>
+<td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors</td>
 <td>interactions</td>
 <td></td>
 <td>probabilistic</td>
@@ -1113,7 +1113,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
