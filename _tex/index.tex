@@ -377,8 +377,8 @@ widely available (\emph{e.g.,} traits). Model families often used
 include generalised linear models (\emph{e.g.,} Caron et al. 2022 use a
 tait-based approach), random forest (\emph{e.g.,} Llewelyn et al. 2023),
 trait-based k-NN (\emph{e.g.,} Desjardins-Proulx et al. 2017), and
-Bayesian models(\emph{e.g.,} Eklöf, Tang, and Allesina 2013; Cirtwill et
-al. 2019)
+Bayesian models (\emph{e.g.,} Eklöf, Tang, and Allesina 2013; Cirtwill
+et al. 2019)
 
 \textbf{Graph embedding:} This family of approaches has been extensively
 discussed in Strydom et al. (2023) but can be broadly explained as an
@@ -495,6 +495,10 @@ models}\label{benchmarking-interaction-models}
   training dataset might be beneficial. As connectance increases, the
   need for biased training sets is less prominent, as learning the rules
   for which interactions do not exist starts gaining importance''
+\item
+  Maybe also looking at how well a model can recover `missing links'
+  \emph{i.e.,} false negatives \emph{sensu} what we did in Strydom et
+  al. (2022)
 \item
   Need to discuss the key differences and implications between
   predicting a metaweb (\emph{sensu} Jennifer A. Dunne (2006)) and a
@@ -783,14 +787,16 @@ maybe it going to be more of a venn-flow chart hybrid\ldots{}}
 
 \centering{
 
-\includegraphics{index_files/figure-latex/notebooks-model_quantitative-fig-topology-output-1.png}
+\includegraphics{index_files/figure-latex/notebooks-model_quantitative-fig-topology-output-2.png}
 
 }
 
-\caption{\label{fig-topology}Real vs observed values for network summary
-statistics. Note here that `basal' is calculated as the proportion of
-species that have a generality value of zero \emph{i.e.,} are basal
-AFAIK}
+\caption{\label{fig-topology}Z-scores for network summary statistics.
+Note here that `basal' is calculated as the proportion of species that
+have a generality value of zero \emph{i.e.,} are basal, for `top'
+species it is the same except vulnerability is used. I am aware that
+there are no Z scores for some of the Random models and am looking into
+it}
 
 \end{figure}%
 
