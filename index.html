@@ -574,10 +574,10 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: Z-scores for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero i.e., are basal, for ‘top’ species it is the same except vulnerability is used. I am aware that there are no Z scores for some of the Random models and am looking into it"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="img-fluid figure-img"></a>
+<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is… Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero i.e., are basal, for ‘top’ species it is the same except vulnerability is used. I am aware that there are no Z scores for some of the Random models and am looking into it"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Z-scores for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal, for ‘top’ species it is the same except vulnerability is used. I am aware that there are no Z scores for some of the Random models and am looking into it
+Figure&nbsp;2: Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is… Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal, for ‘top’ species it is the same except vulnerability is used. I am aware that there are no Z scores for some of the Random models and am looking into it
 </figcaption>
 </figure>
 </div>
@@ -1195,7 +1195,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
