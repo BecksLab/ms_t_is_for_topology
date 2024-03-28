@@ -88,7 +88,7 @@ Given the large number of models that have been developed it is perhaps more mea
 
 > @gravelInferringFoodWeb2013 also poses an interesting cross-over between the adbm and niche model.
 
-**Binary classifiers:** The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [*e.g.,* @caronAddressingEltonianShortfall2022 use a tait-based approach], random forest [*e.g.,* @llewelynPredictingPredatorPrey2023], trait-based k-NN [*e.g.,* @desjardins-proulxEcologicalInteractionsNetflix2017], and Bayesian models[*e.g.,* @eklofSecondaryExtinctionsFood2013; @cirtwillQuantitativeFrameworkInvestigating2019]
+**Binary classifiers:** The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [*e.g.,* @caronAddressingEltonianShortfall2022 use a tait-based approach], random forest [*e.g.,* @llewelynPredictingPredatorPrey2023], trait-based k-NN [*e.g.,* @desjardins-proulxEcologicalInteractionsNetflix2017], and Bayesian models [*e.g.,* @eklofSecondaryExtinctionsFood2013; @cirtwillQuantitativeFrameworkInvestigating2019]
 
 **Graph embedding:** This family of approaches has been extensively discussed in @strydomGraphEmbeddingTransfer2023 but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. @strydomFoodWebReconstruction2022 uses a transfer learning framework (specifically using a random dot product graph for embedding) based around the idea that interactions are evolutionarily conserved and that we can use known networks, and phylogenetic relationships, to predict interactions for a given species pool. **TODO** Log-ratio [@rohrModelingFoodWebs2010]
 
@@ -131,6 +131,8 @@ Given the large number of models that have been developed it is perhaps more mea
     -   class imbalance (the relative number of cases representing interactions)
 
 -   "These results suggest that learning from a dataset with very low connectance can be a different task than for more connected networks: it becomes increasingly important to capture the mechanisms that make an interaction exist, and therefore having a slightly more biased training dataset might be beneficial. As connectance increases, the need for biased training sets is less prominent, as learning the rules for which interactions do not exist starts gaining importance"
+
+-   Maybe also looking at how well a model can recover 'missing links' *i.e.,* false negatives *sensu* what we did in @strydomFoodWebReconstruction2022
 
 -   Need to discuss the key differences and implications between predicting a metaweb (*sensu* @dunneNetworkStructureFood2006) and a network realisation. Maybe also @poisotSpeciesWhyEcological2015 that discuss how the local factors are going to play a role.
 
