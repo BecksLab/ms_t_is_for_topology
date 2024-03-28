@@ -304,7 +304,7 @@ div.csl-indent {
 <div id="fig-concept" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
+<a href="images/concept.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model
@@ -561,7 +561,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/model_venn.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"><img src="images/model_venn.png" class="img-fluid figure-img" alt="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"></a></p>
+<p><a href="images/model_venn.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"><img src="images/model_venn.png" class="img-fluid figure-img" alt="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"></a></p>
 <figcaption>I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…</figcaption>
 </figure>
 </div>
@@ -574,10 +574,10 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="img-fluid figure-img"></a>
+<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Z-scores for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal, for ‘top’ species it is the same except vulnerability is used. I am aware that there are no Z scores for some of the Random models and am looking into it
+Figure&nbsp;2: Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is… Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal, for ‘top’ species it is the same except vulnerability is used. I am aware that there are no Z scores for some of the Random models and am looking into it
 </figcaption>
 </figure>
 </div>
@@ -754,7 +754,7 @@ Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Com
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model</span>
 <span class="glightbox-desc lightbox-desc-2">I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…</span>
-<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;2: Z-scores for network summary statistics. Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal, for ‘top’ species it is the same except vulnerability is used. I am aware that there are no Z scores for some of the Random models and am looking into it</span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;2: Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is… Note here that ‘basal’ is calculated as the proportion of species that have a generality value of zero <em>i.e.,</em> are basal, for ‘top’ species it is the same except vulnerability is used. I am aware that there are no Z scores for some of the Random models and am looking into it</span>
 </div>
 </section>
 
@@ -1167,7 +1167,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
