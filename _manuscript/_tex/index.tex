@@ -597,7 +597,7 @@ network & `random' & link & binary & no \\
 generative & Interactions are determined by structural features of the
 network (\emph{pending}) & network & `random' & & & \\
 energetic & Interactions are determined by foraging theory (feeding
-links) & & deterministic & & binary & yes (body size, \ldots) \\
+links) & & deterministic & & quantitative & yes (body size, \ldots) \\
 graph embedding & Interactions can be predicted from the latent traits
 of networks & interactions & deterministic & & probabilistic & yes
 (network, ecological proxy) \\
@@ -610,6 +610,8 @@ interactions & deterministic & & probabilistic & yes (interaction,
 trait) \\
 expert knowledge & `Boots on the ground' ecological knowledge and
 observations & interactions & & & & \\
+data scavenging & Webscraping to create networks from online databases &
+interactions & & & & yes (online, published databases) \\
 \end{longtable}
 
 \subsection{Datasets used}\label{datasets-used}
@@ -811,11 +813,8 @@ maybe it going to be more of a venn-flow chart hybrid\ldots{}}
 \caption{\label{fig-topology}Z-scores for network summary statistics.
 Negative Z-scores indicate a (mean) value greater than expected. The
 magnitude of Z-score probably also tells us how `variable'/constrained
-the model is\ldots{} Note here that `basal' is calculated as the
-proportion of species that have a generality value of zero \emph{i.e.,}
-are basal, for `top' species it is the same except vulnerability is
-used. I am aware that there are no Z scores for some of the Random
-models and am looking into it}
+the model is\ldots{} I am aware that there are no Z scores for some of
+the Random models and am looking into it}
 
 \end{figure}%
 

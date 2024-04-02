@@ -112,7 +112,7 @@ Given the large number of models that have been developed it is perhaps more mea
 
 -   See also @allesinaGeneralModelFood2008 and the likelihood function that they use for model selection
 
-- Look at @vermaatMajorDimensionsFoodweb2009
+-   Look at @vermaatMajorDimensionsFoodweb2009
 
 > "Possibly, the most striking caveat of the use of summary statistics is that it cannot tell us whether or not a model is able to fully replicate empirical networks." - @allesinaGeneralModelFood2008
 
@@ -146,17 +146,18 @@ This section depends on if we go the family route and where we introduce them. B
 
 I know tables are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
-| Model family       | Theory                                                                                                               | Predicts     | Outcome (these terms could be better...) | Constraints | Interaction   | 'Real world' data               |
+| Model family       | Theory                                                                                                               | Predicts     | Outcome (these terms could be better...) | Constraints | Interaction   | 'Real world' data                 |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| null               | Network structure is random                                                                                          | network      | random                                   | link        | binary        | no                              |
-| neutral            | Network structure is random, but species abundance plays a role                                                      | network      |                                          |             |               | abundance                       |
-| interval           | Networks are interval, can be ordered on a 'niche axis'                                                              | network      | 'random'                                 | link        | binary        | no                              |
-| generative         | Interactions are determined by structural features of the network (*pending*)                                        | network      | 'random'                                 |             |               |                                 |
-| energetic          | Interactions are determined by foraging theory (feeding links)                                                       |              | deterministic                            |             | binary        | yes (body size, ...)            |
-| graph embedding    | Interactions can be predicted from the latent traits of networks                                                     | interactions | deterministic                            |             | probabilistic | yes (network, ecological proxy) |
-| trait matching     | Interactions can be inferred by a mechanistic framework/relationships                                                | interactions | deterministic                            |             |               | yes (expert knowledge, trait)   |
-| binary classifiers | Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors | interactions | deterministic                            |             | probabilistic | yes (interaction, trait)        |
-| expert knowledge   | 'Boots on the ground' ecological knowledge and observations                                                          | interactions |                                          |             |               |                                 |
+| null               | Network structure is random                                                                                          | network      | random                                   | link        | binary        | no                                |
+| neutral            | Network structure is random, but species abundance plays a role                                                      | network      |                                          |             |               | abundance                         |
+| interval           | Networks are interval, can be ordered on a 'niche axis'                                                              | network      | 'random'                                 | link        | binary        | no                                |
+| generative         | Interactions are determined by structural features of the network (*pending*)                                        | network      | 'random'                                 |             |               |                                   |
+| energetic          | Interactions are determined by foraging theory (feeding links)                                                       |              | deterministic                            |             | quantitative  | yes (body size, ...)              |
+| graph embedding    | Interactions can be predicted from the latent traits of networks                                                     | interactions | deterministic                            |             | probabilistic | yes (network, ecological proxy)   |
+| trait matching     | Interactions can be inferred by a mechanistic framework/relationships                                                | interactions | deterministic                            |             |               | yes (expert knowledge, trait)     |
+| binary classifiers | Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors | interactions | deterministic                            |             | probabilistic | yes (interaction, trait)          |
+| expert knowledge   | 'Boots on the ground' ecological knowledge and observations                                                          | interactions |                                          |             |               |                                   |
+| data scavenging    | Webscraping to create networks from online databases                                                                 | interactions |                                          |             |               | yes (online, published databases) |
 
 : Lets make a table that gives an overview of the different model families that we will look at. Here I take 'data-driven' to refer to the need for 'real world' data. This can probably be approached in a different way though maybe? {#tbl-history}
 
