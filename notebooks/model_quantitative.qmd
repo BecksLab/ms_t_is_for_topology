@@ -39,12 +39,14 @@ df = read.csv("data/topology_models.csv")  %>%
         mutate(
             real = str_extract(real, "[^_]*"),
             test = str_extract(test, "[^_]*"))  %>% 
-        filter(real == test)
+        filter(real == test) %>%
+        ungroup() %>% 
+        filter(model_val != Inf)
 ```
 
 From a data transformation perspective instead of looking at the raw number of 'top' (zero vulnerability) and 'bottom' (zero generality) species we can instead look at the ratio of top:bottom. A small (< 1) number will thus be indicative of a 'bottom-heavy' network and the opposite for larger numbers
 
-Lets tart by summarising the 'raw' data as box plots just to see what it looks like before we calculate the Z scores
+Lets start by summarising the 'raw' data as box plots just to see what it looks like before we calculate the Z scores
 
 ```{r}
 #| warning: false
@@ -64,10 +66,11 @@ ggplot(df) +
     facet_wrap(vars(real),
                 scales = 'free') +
     scale_size(guide = 'none') +
-    coord_cartesian(expand = FALSE) +
     theme_classic() +
     theme(panel.border = element_rect(colour = 'black',
-                                      fill = "#ffffff00"))
+                                      fill = "#ffffff00"),
+            axis.text.x = element_blank(),
+            axis.ticks.x = element_blank())
 
 ```
 

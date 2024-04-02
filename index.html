@@ -313,7 +313,7 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 </figcaption>
 </figure>
 </div>
-<p><strong>Null models:</strong> The interactions between species occurs regardless of the identity of the species (<em>i.e.,</em> species have no agency) and links are randomly distributed throughout the network. There is however the assumption that a network will be constrained by the number of links. Type I <span class="citation" data-cites="fortunaHabitatLossStructure2006">(<a href="#ref-fortunaHabitatLossStructure2006" role="doc-biblioref">Fortuna and Bascompte 2006</a>)</span>, where interactions happen proportionally to connectance and Type II <span class="citation" data-cites="bascompteNestedAssemblyPlantanimal2003">(<a href="#ref-bascompteNestedAssemblyPlantanimal2003" role="doc-biblioref">Bascompte et al. 2003</a>)</span>, where interactions happen proportionally to the joint degree of the two species involved. These two models are equivalent to the Erdos-Renyi <span class="citation" data-cites="erdosRandomGraphs1959">(<a href="#ref-erdosRandomGraphs1959" role="doc-biblioref">Erdős and Rényi 1959</a>)</span> and Configuration models <span class="citation" data-cites="newmanNetworksIntroduction2010">(<a href="#ref-newmanNetworksIntroduction2010" role="doc-biblioref">Newman 2010</a>)</span> respectively (check that though).</p>
+<p><strong>Null models:</strong> The interactions between species occurs regardless of the identity of the species (<em>i.e.,</em> species have no agency) and links are randomly distributed throughout the network. There is however the assumption that a network will be constrained by the number of links. Type I <span class="citation" data-cites="fortunaHabitatLossStructure2006">(<a href="#ref-fortunaHabitatLossStructure2006" role="doc-biblioref">Fortuna and Bascompte 2006</a>)</span>, where interactions happen proportionally to connectance and Type II <span class="citation" data-cites="bascompteNestedAssemblyPlantanimal2003">(<a href="#ref-bascompteNestedAssemblyPlantanimal2003" role="doc-biblioref">Bascompte et al. 2003</a>)</span>, where interactions happen proportionally to the joint degree of the two species involved. These two models are equivalent to the Erdos-Renyi and Configuration models <span class="citation" data-cites="newmanNetworksIntroduction2010">(<a href="#ref-newmanNetworksIntroduction2010" role="doc-biblioref">Newman 2010</a>)</span> respectively (check that though).</p>
 <p><strong>Neutral models:</strong> Based on the theory that interactions occur as the result of the abundance of species (<em>i.e.,</em> the species still has no agency but its abundance does?). See <span class="citation" data-cites="pomeranzInferringPredatorPrey2019">Pomeranz et al. (<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">2019</a>)</span></p>
 <p><strong>Resource models:</strong> Based on the idea that networks follow a trophic hierarchy and that species interactions can be determined using a single dimension (the “niche axis”) <span class="citation" data-cites="allesinaGeneralModelFood2008">(<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">Allesina, Alonso, and Pascual 2008</a>)</span>. Essentially these models can be viewed as being based on the idea of resource partitioning (niches) along a one-dimensional resource and that the number of links scale with species richness (linear link scaling). That is there is some sort of hierarchical feeding based on how a ‘resource’ is partitioned. This includes the cascade model <span class="citation" data-cites="cohenCommunityFoodWebs1990">(<a href="#ref-cohenCommunityFoodWebs1990" role="doc-biblioref">Joel E. Cohen, Briand, and Newman 1990</a>)</span>, which much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (<em>i.e.,</em> ‘many’ prey and ‘few’ predators). The niche model <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> introduces the idea that species interactions are based on the ‘feeding niche’ of a species. See also probabilistic niche model <span class="citation" data-cites="williamsProbabilisticNicheModel2010">(<a href="#ref-williamsProbabilisticNicheModel2010" role="doc-biblioref">Williams, Anandanadesan, and Purves 2010</a>)</span> Broadly, all species are randomly assigned a ‘feeding niche’ and all species that fall in this niche can be consumed by that species. Finally, the nested hierarchy model <span class="citation" data-cites="cattinPhylogeneticConstraintsAdaptation2004">(<a href="#ref-cattinPhylogeneticConstraintsAdaptation2004" role="doc-biblioref">Cattin et al. 2004</a>)</span>, which adds some component of phylogenetic clustering/signal… so not a single dimension? <strong>TODO</strong>.</p>
 <p><strong>Generative models:</strong> (this is maybe a bit of a bold term to use). MaxEnt <span class="citation" data-cites="banvilleWhatConstrainsFood2023">(<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">Banville, Gravel, and Poisot 2023</a>)</span>, (maybe) stochastic block <span class="citation" data-cites="xieCompletenessCommunityStructure2017">(<a href="#ref-xieCompletenessCommunityStructure2017" role="doc-biblioref">Xie et al. 2017</a>)</span>.</p>
@@ -374,25 +374,27 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <div id="tbl-history" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Lets make a table that gives an overview of the different model families that we will look at. Here I take ‘data-driven’ to refer to the need for ‘real world’ data. This can probably be approached in a different way though maybe?
+Table&nbsp;1: Lets make a table that gives an overview of the different model families and some of their features
 </figcaption>
 <div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 9%">
+<col style="width: 18%">
+<col style="width: 17%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Model family</th>
 <th>Theory</th>
+<th>Example used</th>
 <th>Predicts</th>
-<th>Outcome (these terms could be better…)</th>
+<th>Outcome</th>
 <th>Constraints</th>
 <th>Interaction</th>
 <th>‘Real world’ data</th>
@@ -402,6 +404,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <tr class="odd">
 <td>null</td>
 <td>Network structure is random</td>
+<td><span class="citation" data-cites="erdosRandomGraphs1959">(<a href="#ref-erdosRandomGraphs1959" role="doc-biblioref">Erdős and Rényi 1959</a>)</span></td>
 <td>network</td>
 <td>random</td>
 <td>link</td>
@@ -411,6 +414,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <tr class="even">
 <td>neutral</td>
 <td>Network structure is random, but species abundance plays a role</td>
+<td><span class="citation" data-cites="pomeranzInferringPredatorPrey2019">(<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">Pomeranz et al. 2019</a>)</span></td>
 <td>network</td>
 <td></td>
 <td></td>
@@ -418,8 +422,9 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <td>abundance</td>
 </tr>
 <tr class="odd">
-<td>interval</td>
-<td>Networks are interval, can be ordered on a ‘niche axis’</td>
+<td>resource</td>
+<td>Networks are interval, species can be ordered on a ‘niche axis’</td>
+<td></td>
 <td>network</td>
 <td>‘random’</td>
 <td>link</td>
@@ -428,7 +433,8 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </tr>
 <tr class="even">
 <td>generative</td>
-<td>Interactions are determined by structural features of the network (<em>pending</em>)</td>
+<td>Networks are determined by their structural features</td>
+<td>Maximum Entropy <span class="citation" data-cites="banvilleWhatConstrainsFood2023">(<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">Banville, Gravel, and Poisot 2023</a>)</span></td>
 <td>network</td>
 <td>‘random’</td>
 <td></td>
@@ -438,7 +444,8 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <tr class="odd">
 <td>energetic</td>
 <td>Interactions are determined by foraging theory (feeding links)</td>
-<td></td>
+<td>ADBM <span class="citation" data-cites="petcheySizeForagingFood2008">(<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">Petchey et al. 2008</a>)</span></td>
+<td>interactions</td>
 <td>deterministic</td>
 <td></td>
 <td>quantitative</td>
@@ -447,8 +454,9 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <tr class="even">
 <td>graph embedding</td>
 <td>Interactions can be predicted from the latent traits of networks</td>
+<td>Transfer Learning <span class="citation" data-cites="strydomFoodWebReconstruction2022">(<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">Strydom et al. 2022</a>)</span></td>
 <td>interactions</td>
-<td>deterministic</td>
+<td></td>
 <td></td>
 <td>probabilistic</td>
 <td>yes (network, ecological proxy)</td>
@@ -456,6 +464,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <tr class="odd">
 <td>trait matching</td>
 <td>Interactions can be inferred by a mechanistic framework/relationships</td>
+<td>PFIM <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span></td>
 <td>interactions</td>
 <td>deterministic</td>
 <td></td>
@@ -465,15 +474,17 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <tr class="even">
 <td>binary classifiers</td>
 <td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors</td>
+<td></td>
 <td>interactions</td>
 <td>deterministic</td>
 <td></td>
-<td>probabilistic</td>
-<td>yes (interaction, trait)</td>
+<td></td>
+<td>yes (interactions, trait)</td>
 </tr>
 <tr class="odd">
 <td>expert knowledge</td>
 <td>‘Boots on the ground’ ecological knowledge and observations</td>
+<td></td>
 <td>interactions</td>
 <td></td>
 <td></td>
@@ -483,6 +494,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <tr class="even">
 <td>data scavenging</td>
 <td>Webscraping to create networks from online databases</td>
+<td></td>
 <td>interactions</td>
 <td></td>
 <td></td>
@@ -1213,7 +1225,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
