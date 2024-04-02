@@ -173,7 +173,7 @@
 
 \title{T is for Topology}
 \author{Tanya Strydom \and Timothée Poisot \and Andrew P. Beckerman}
-\date{2024-03-28}
+\date{2024-04-02}
 
 \begin{document}
 \maketitle
@@ -407,6 +407,23 @@ individuals sitting around a table and assigning a value of how
 confident they are that a specific species pair are likely to interact
 (\emph{e.g.,} Jennifer A. Dunne et al. 2008), or a combination of
 published and grey literature (\emph{e.g.,} Maiorano et al. 2020).
+
+\textbf{Data scavenging:} There are also a lot of published
+\emph{interaction} data that are publicly available \emph{e.g.,} the
+Global Biotic Interactions (GloBI) database (Poelen, Simons, and Mungall
+2014) and these can also be used to construct an interaction network by
+mining these sources to look for interactions for specific species
+pairs. This is done by matching species pairs against those within a
+dataset of trophic interactions to determine if an interaction is
+present or absent between the two species (\emph{e.g.,} the WebBuilder
+tool developed by Gray et al. 2015). It is important to note that this
+methodology is only going to be able to infer observations that have
+been recorded in the field, and given the relative scarcity {[}\emph{I
+say Poisot et al. (2021) but that's more an overview of complete
+networks but one can also get pairwise interactions from these types of
+data so I feel like its okay?}{]} and localised sampling of these types
+of datasets it is very likely that there will be many false negatives
+(missing pairwise interactions) using this approach.
 
 \section{Model benchmarking}\label{model-benchmarking}
 
@@ -984,6 +1001,13 @@ Predator--Prey Body Size Relationships.''} \emph{Methods in Ecology and
 Evolution} 4 (11): 1083--90.
 \url{https://doi.org/10.1111/2041-210X.12103}.
 
+\bibitem[\citeproctext]{ref-grayJoiningDotsAutomated2015}
+Gray, Clare, David H. Figueroa, Lawrence N. Hudson, Athen Ma, Dan
+Perkins, and Guy Woodward. 2015. {``Joining the Dots: {An} Automated
+Method for Constructing Food Webs from Compendia of Published
+Interactions.''} \emph{Food Webs} 5 (December): 11--20.
+\url{https://doi.org/10.1016/j.fooweb.2015.09.001}.
+
 \bibitem[\citeproctext]{ref-herbersteinAnimalTraitsCuratedAnimal2022}
 Herberstein, Marie E., Donald James McLean, Elizabeth Lowe, Jonas O.
 Wolff, Md Kawsar Khan, Kaitlyn Smith, Andrew P. Allen, et al. 2022.
@@ -1043,6 +1067,13 @@ Warren. 2008. {``Size, Foraging, and Food Web Structure.''}
 ---------. 2011. {``Fit, Efficiency, and Biology: {Some} Thoughts on
 Judging Food Web Models.''} \emph{Journal of Theoretical Biology} 279
 (1): 169--71. \url{https://doi.org/10.1016/j.jtbi.2011.03.019}.
+
+\bibitem[\citeproctext]{ref-poelenGlobalBioticInteractions2014}
+Poelen, Jorrit H., James D. Simons, and Chris J. Mungall. 2014.
+{``Global Biotic Interactions: {An} Open Infrastructure to Share and
+Analyze Species-Interaction Datasets.''} \emph{Ecological Informatics}
+24 (November): 148--59.
+\url{https://doi.org/10.1016/j.ecoinf.2014.08.005}.
 
 \bibitem[\citeproctext]{ref-poisotGuidelinesPredictionSpecies2023}
 Poisot, Timothée. 2023. {``Guidelines for the Prediction of Species
