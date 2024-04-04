@@ -147,7 +147,7 @@ This section depends on if we go the family route and where we introduce them. B
 I know tables are awful but in this case they may make more sense. Also I don't think I'm at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think...
 
 | Model family       | Theory                                                                                                               | Example used                                          | Predicts                                     | Assembly        | Constraints | Interaction   | 'Real world' data                 |
-|---------|---------|---------|--------|---------|---------|---------|----------|
+|---------|---------|---------|---------|---------|---------|---------|---------|
 | null               | Network structure is random                                                                                          | [@erdosRandomGraphs1959]                              | network                                      | random          | link        | binary        | no                                |
 | neutral            | Network structure is random, but species abundance plays a role                                                      | [@pomeranzInferringPredatorPrey2019]                  | network                                      | mass effect     |             |               | abundance                         |
 | resource           | Networks are interval, species can be ordered on a 'niche axis'                                                      |                                                       | network                                      | 'random'        | link        | binary        | no                                |
@@ -192,6 +192,14 @@ Want to compare real vs predicted and then get something that looks like @fig-to
 -   *Links:* are the number of links preserved (most network predicting models are to some extend link constrained but useful to see)
 
 -   *Motifs:* @staniczenkoStructuralDynamicsRobustness2010 uses S1, S2, S4, S5 from @stoufferEvidenceExistenceRobust2007
+
+    -   S1: Number of linear chains
+
+    -   S2: Number of omnivory motifs
+
+    -   S4: Number of apparent competition motifs
+
+    -   S5: Number of direct competition motifs
 
 #### Interaction models
 

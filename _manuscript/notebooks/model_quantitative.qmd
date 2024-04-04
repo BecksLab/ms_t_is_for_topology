@@ -19,21 +19,24 @@ library(tidyverse)
 
 # download file from other repo
 download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv", "../notebooks/data/topology_models.csv")
+download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/mangal_summary.csv", "../notebooks/data/mangal_summary.csv")
 
-df = read.csv("data/topology_models.csv")  %>% 
-        filter(complexity_real != 0) %>% 
-        mutate(ratio_real = top_real/basal_real,
-                top_real = NULL,
-                basal_real = NULL,
+
+df = full_join(read.csv("data/mangal_summary.csv"),
+                read.csv("data/topology_models.csv")) %>% 
+        filter(complexity != 0) %>% 
+        mutate(ratio = top/basal,
+                top = NULL,
+                basal = NULL,
                 ratio_mod = top_mod/basal_mod,
                 top_mod = NULL,
                 basal_mod = NULL) %>%
         pivot_longer(
-            cols = c(complexity_real, distance_real, connectance_real, ratio_real), 
+            cols = c(complexity, distance, connectance, ratio, S1, S2, S4, S5), 
             names_to = "real",
             values_to = "real_val")  %>% 
         pivot_longer(
-            cols = c(complexity_mod, distance_mod, connectance_mod, ratio_mod), 
+            cols = c(complexity_mod, distance_mod, connectance_mod, ratio_mod, S1_mod, S2_mod, S4_mod, S5_mod), 
             names_to = "test",
             values_to = "model_val")  %>% 
         mutate(
@@ -87,7 +90,7 @@ $$
 #| warning: false
 #| echo: false
 #| label: fig-topology
-#| fig-cap: "Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. The magnitude of Z-score probably also tells us how 'variable'/constrained the model is... I am aware that there are no Z scores for some of the Random models and am looking into it"
+#| fig-cap: "Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in @@stoufferEvidenceExistenceRobust2007 The magnitude of Z-score probably also tells us how 'variable'/constrained the model is... I am aware that there are no Z scores for some of the Random models and am looking into it"
 
 ggplot(df %>% 
         group_by(id, real, model)  %>% 

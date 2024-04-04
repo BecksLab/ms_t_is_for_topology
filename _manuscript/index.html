@@ -309,7 +309,7 @@ div.csl-indent {
 <div id="fig-concept" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
+<a href="images/concept.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model
@@ -385,11 +385,11 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <col style="width: 12%">
 <col style="width: 12%">
 <col style="width: 12%">
-<col style="width: 11%">
 <col style="width: 12%">
 <col style="width: 12%">
 <col style="width: 12%">
-<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -537,7 +537,13 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <li><p><em>Shape:</em> do the models construct tall ‘pencil’ vs flat ‘pancake’ networks (Beckerman 2024, pers comms), generality/vulnerability, chain length (?)</p></li>
 <li><p><em>Structure:</em> Predicting ‘structure’ - SVD <span class="citation" data-cites="strydomSVDEntropyReveals2021">(<a href="#ref-strydomSVDEntropyReveals2021" role="doc-biblioref">Strydom, Dalla Riva, and Poisot 2021</a>)</span> but maybe something like nestedness as well (?)</p></li>
 <li><p><em>Links:</em> are the number of links preserved (most network predicting models are to some extend link constrained but useful to see)</p></li>
-<li><p><em>Motifs:</em> <span class="citation" data-cites="staniczenkoStructuralDynamicsRobustness2010">Staniczenko et al. (<a href="#ref-staniczenkoStructuralDynamicsRobustness2010" role="doc-biblioref">2010</a>)</span> uses S1, S2, S4, S5 from <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span></p></li>
+<li><p><em>Motifs:</em> <span class="citation" data-cites="staniczenkoStructuralDynamicsRobustness2010">Staniczenko et al. (<a href="#ref-staniczenkoStructuralDynamicsRobustness2010" role="doc-biblioref">2010</a>)</span> uses S1, S2, S4, S5 from <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span></p>
+<ul>
+<li><p>S1: Number of linear chains</p></li>
+<li><p>S2: Number of omnivory motifs</p></li>
+<li><p>S4: Number of apparent competition motifs</p></li>
+<li><p>S5: Number of direct competition motifs</p></li>
+</ul></li>
 </ul>
 </section>
 <section id="interaction-models" class="level4" data-number="4.3.2">
@@ -589,7 +595,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/model_venn.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"><img src="images/model_venn.png" class="img-fluid figure-img" alt="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"></a></p>
+<p><a href="images/model_venn.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"><img src="images/model_venn.png" class="img-fluid figure-img" alt="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"></a></p>
 <figcaption>I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…</figcaption>
 </figure>
 </div>
@@ -602,10 +608,10 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="img-fluid figure-img"></a>
+<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is… I am aware that there are no Z scores for some of the Random models and am looking into it
+Figure&nbsp;2: Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in @<span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span> The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is… I am aware that there are no Z scores for some of the Random models and am looking into it
 </figcaption>
 </figure>
 </div>
@@ -794,7 +800,7 @@ Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Com
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model</span>
 <span class="glightbox-desc lightbox-desc-2">I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…</span>
-<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;2: Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is… I am aware that there are no Z scores for some of the Random models and am looking into it</span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;2: Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in @<span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span> The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is… I am aware that there are no Z scores for some of the Random models and am looking into it</span>
 </div>
 </section>
 
@@ -1207,7 +1213,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
