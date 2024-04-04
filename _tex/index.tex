@@ -173,7 +173,7 @@
 
 \title{T is for Topology}
 \author{Tanya Strydom \and Timothée Poisot \and Andrew P. Beckerman}
-\date{2024-04-03}
+\date{2024-04-04}
 
 \begin{document}
 \maketitle
@@ -389,23 +389,28 @@ conserved and that we can use known networks, and phylogenetic
 relationships, to predict interactions for a given species pool.
 \textbf{TODO} Log-ratio (Rohr et al. 2010)
 
-\textbf{Trait matching:} Here I envision models that present an \emph{a
-priori} set of rules that determines feeding links between species;
-specifically based on species traits. That is, there is an element of
-`expert knowledge' that also comes into play\ldots{} Something like PFIM
-(Shaw et al. 2024) is what I imagine fitting in here\ldots{}
+\textbf{Trait matching:} Interactions are determined by a series of
+`feeding rules', whereby the interaction between a species pair will
+only occur if all feeding rules are met. These rules are determined on
+an \emph{a priori} basis using expert/ecological knowledge to determine
+the underlying feeding hierarchy using ecological proxies
+(Morales-Castilla et al. 2015). For example the PFIM Paleo Foodweb
+Inference Model (PFIM, Shaw et al. 2024) uses a series of rules for a
+set of trait categories (such as habitat and body size) to determine if
+an interaction can occur between a species pair. What sets this family
+of models apart from \textbf{expert knowledge} ones is that there is a
+formalisation of the feeding rules and thus there is some ability to
+transfer these rules to different communities.
 
 \textbf{Expert knowledge:} Not so much about empirical observations but
-more the idea of using human power/knowledge to create an assemblage of
-interactions for a specific community. This can include empirical data
-but can also make use of knowledge about ecological features (such as
-traits or co-occurrence) and how those can function as proxies for
-interactions (\emph{e.g.,} Morales-Castilla et al. 2015). Or
-alternatively the value of `local' knowledge and having specific
-individuals sitting around a table and assigning a value of how
-confident they are that a specific species pair are likely to interact
-(\emph{e.g.,} Jennifer A. Dunne et al. 2008), or a combination of
-published and grey literature (\emph{e.g.,} Maiorano et al. 2020).
+more the value of `local' knowledge and having specific individuals
+sitting around a table and assigning a value of how confident they are
+that a specific species pair are likely to interact (\emph{e.g.,}
+Jennifer A. Dunne et al. 2008), this has the added advantage that
+interactions can be scored in a more categorical as opposed to binary
+fashion, \emph{e.g.,} Maiorano et al. (2020) score interactions as
+either obligate (typical food resources) or occasional (opportunistic
+feeding) interactions.
 
 \textbf{Data scavenging:} There are also a lot of published
 \emph{interaction} data that are publicly available \emph{e.g.,} the
@@ -538,14 +543,14 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0946}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1892}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1757}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0946}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1081}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1081}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0946}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1351}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1111}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1389}}@{}}
 \caption{Lets make a table that gives an overview of the different model
 families and some of their features}\label{tbl-history}\tabularnewline
 \toprule\noalign{}
@@ -558,7 +563,7 @@ Example used
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Outcome
+Assembly
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -578,7 +583,7 @@ Example used
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Outcome
+Assembly
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -593,26 +598,27 @@ Interaction
 null & Network structure is random & (Erdős and Rényi 1959) & network &
 random & link & binary & no \\
 neutral & Network structure is random, but species abundance plays a
-role & (Pomeranz et al. 2019) & network & & & & abundance \\
+role & (Pomeranz et al. 2019) & network & mass effect & & & abundance \\
 resource & Networks are interval, species can be ordered on a `niche
 axis' & & network & `random' & link & binary & no \\
 generative & Networks are determined by their structural features &
 Maximum Entropy (Banville, Gravel, and Poisot 2023) & network & `random'
 & & & \\
 energetic & Interactions are determined by foraging theory (feeding
-links) & ADBM (Petchey et al. 2008) & interactions & deterministic & &
+links) & ADBM (Petchey et al. 2008) & interactions & quantitative(?) & &
 quantitative & yes (body size, \ldots) \\
 graph embedding & Interactions can be predicted from the latent traits
-of networks & Transfer Learning (Strydom et al. 2022) & interactions & &
-& probabilistic & yes (network, ecological proxy) \\
+of networks & Transfer Learning (Strydom et al. 2022) & interactions
+(but structurally constrained?) & & & probabilistic & yes (network,
+ecological proxy) \\
 trait matching & Interactions can be inferred by a mechanistic
 framework/relationships & PFIM (Shaw et al. 2024) & interactions &
-deterministic & & & yes (expert knowledge, trait) \\
+mechanistic & & & yes (expert knowledge, trait) \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
-& interactions & deterministic & & & yes (interactions, trait) \\
+& interactions & statistical & & & yes (interactions, trait) \\
 expert knowledge & `Boots on the ground' ecological knowledge and
-observations & & interactions & & & & \\
+observations & & interactions & `mechanistic' & & & \\
 data scavenging & Webscraping to create networks from online databases &
 & interactions & & & & yes (online, published databases) \\
 \end{longtable}
@@ -691,6 +697,9 @@ Figure~\ref{fig-topology}
   \emph{Links:} are the number of links preserved (most network
   predicting models are to some extend link constrained but useful to
   see)
+\item
+  \emph{Motifs:} Staniczenko et al. (2010) uses S1, S2, S4, S5 from
+  Stouffer et al. (2007)
 \end{itemize}
 
 \subsubsection{Interaction models}\label{interaction-models}
@@ -1113,6 +1122,19 @@ Shaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A.
 Dunne, and Pincelli M. Hull. 2024. {``A Framework for Reconstructing
 Ancient Food Webs Using Functional Trait Data.''} bioRxiv.
 \url{https://doi.org/10.1101/2024.01.30.578036}.
+
+\bibitem[\citeproctext]{ref-staniczenkoStructuralDynamicsRobustness2010}
+Staniczenko, Phillip P. A., Owen T. Lewis, Nick S. Jones, and Felix
+Reed-Tsochas. 2010. {``Structural Dynamics and Robustness of Food
+Webs.''} \emph{Ecology Letters} 13 (7): 891--99.
+\url{https://doi.org/10.1111/j.1461-0248.2010.01485.x}.
+
+\bibitem[\citeproctext]{ref-stoufferEvidenceExistenceRobust2007}
+Stouffer, Daniel B, Juan Camacho, Wenxin Jiang, and Luís A Nunes Amaral.
+2007. {``Evidence for the Existence of a Robust Pattern of Prey
+Selection in Food Webs.''} \emph{Proceedings of the Royal Society B:
+Biological Sciences} 274 (1621): 1931--40.
+\url{https://doi.org/10.1098/rspb.2007.0571}.
 
 \bibitem[\citeproctext]{ref-strydomFoodWebReconstruction2022}
 Strydom, Tanya, Salomé Bouskila, Francis Banville, Ceres Barros,
