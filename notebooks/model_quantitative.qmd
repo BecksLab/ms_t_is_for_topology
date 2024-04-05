@@ -58,9 +58,18 @@ Lets start by summarising the 'raw' data as box plots just to see what it looks 
 #| fig-cap: "Boxplot looking at raw values for each measurement for each model. The horizontal line represents the true overall mean for each measurement"
 
 ggplot(df) +
-    geom_boxplot(aes(x = real,
+#  geom_jitter(aes(x = model,
+#                 y = model_val,
+#                 colour = model),
+#             alpha = 0.4,
+#             fill = "#ffffff00", 
+#             stroke = 0.2,
+#             width = 0.25,
+#             shape = 21) +
+    geom_boxplot(aes(x = model,
                     y = model_val,
-                    colour = model)) +
+                    colour = model),
+                fill = "#ffffff00") +
     geom_hline(data = df  %>% 
                         group_by(real)  %>% 
                         reframe(mu_sim = mean(model_val, na.rm = TRUE)),
