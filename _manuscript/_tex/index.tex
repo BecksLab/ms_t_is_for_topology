@@ -174,7 +174,7 @@
 \title{T is for Topology}
 \author{Tanya Strydom \and Jennifer A. Dunne \and Timothée
 Poisot \and Andrew P. Beckerman}
-\date{2024-04-05}
+\date{2024-04-08}
 
 \begin{document}
 \maketitle
@@ -544,14 +544,14 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1096}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1233}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1233}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1233}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2192}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0959}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1096}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0959}}@{}}
 \caption{Lets make a table that gives an overview of the different model
 families and some of their features}\label{tbl-history}\tabularnewline
 \toprule\noalign{}
@@ -564,13 +564,13 @@ Example used
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Needs (minimum)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Assembly
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-`Real world' data
 \end{minipage} \\
 \midrule\noalign{}
 \endfirsthead
@@ -584,54 +584,71 @@ Example used
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Predicts
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Needs (minimum)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Assembly
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-`Real world' data
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
 null & Network structure is random & (Erdős and Rényi 1959) &
-artificial? network & random & link & binary & no \\
+artificial? network & network (species agnostic) & random & link &
+binary \\
 neutral & Network structure is random, but species abundance plays a
-role & (Pomeranz et al. 2019) & network & mass effect & & & abundance \\
+role & (Pomeranz et al. 2019) & network & abundance, number of links &
+mass effect & link & \\
 resource & Networks are interval, species can be ordered on a `niche
-axis' & & network & `random' & link & binary & no \\
+axis' & & network & richness, connectance & `random' & link & binary \\
 generative & Networks are determined by their structural features &
-Maximum Entropy (Banville, Gravel, and Poisot 2023) & network & `random'
-& & & \\
+Maximum Entropy (Banville, Gravel, and Poisot 2023) & network & network
+(species agnostic) & `random' & & \\
 energetic & Interactions are determined by foraging theory (feeding
-links) & ADBM (Petchey et al. 2008) & interactions & quantitative(?) & &
-quantitative & yes (body size, \ldots) \\
+links) & ADBM (Petchey et al. 2008) & interactions & connectance, body
+size, abundance & quantitative & & quantitative \\
 graph embedding & Interactions can be predicted from the latent traits
 of networks & Transfer Learning (Strydom et al. 2022) & interactions
-(but structurally constrained?) & & & probabilistic & yes (network,
-ecological proxy) \\
+(but structurally constrained?) & interactions, phylogenetic tree, list
+of target species (species pool) & & & probabilistic \\
 trait matching & Interactions can be inferred by a mechanistic
-framework/relationships & PFIM (Shaw et al. 2024) & interactions &
-mechanistic & & & yes (expert knowledge, trait) \\
+framework/relationships & PFIM (Shaw et al. 2024) & interactions & prior
+(expert) knowledge of trait hierarchy/relationships, traits, list of
+target species (species pool) & mechanistic & & \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
-& interactions & statistical & & & yes (interactions, trait) \\
+& interactions & interactions, traits, list of target species (species
+pool) & statistical & & \\
 expert knowledge & `Boots on the ground' ecological knowledge and
-observations & & interactions & `mechanistic' & & & \\
+observations & & interactions & list of target species (species pool) &
+`mechanistic' & & \\
 data scavenging & Webscraping to create networks from online databases &
-& interactions & & & & yes (online, published databases) \\
+& interactions & list of target species (species pool) & & & \\
 \end{longtable}
 
 \subsection{Datasets used}\label{datasets-used}
 
-\begin{itemize}
-\item
-  For network models makes sense to drop datasets from Mangal
-\item
-  `Elite' number of datasets for interaction models
-\end{itemize}
+\subsubsection{Mangal networks}\label{mangal-networks}
+
+We queried the Mangal (Poisot et al. 2016) database and extracted a
+total of \textbf{TODO} networks. \emph{Some sort of summary as to the
+geographic/taxonomic range??} Although these networks represent a high
+volume of interaction data they do not have accompanying `metadata' that
+we would need for some of the more data-hungry model families
+(\emph{e.g.,} local abundance), the Mangal networks were used to provide
+the `starting values' for the random, resource, and generative families.
+This allows us to generate a large number of different networks that we
+can use to compare and contrast the performance of the various model
+families (see Section~\ref{sec-model-benchmarking} for a more detailed
+breakdown). For each network from Mangal we generated \textbf{TODO}
+versions of that network using each model family.
+
+\subsubsection{Empirical networks}\label{empirical-networks}
+
+`Elite' number of datasets for interaction models
 
 \begin{quote}
 Here I think we need to span a variety of domains, at minimum aquatic
@@ -656,7 +673,7 @@ Because 1) it gives the paleo-centric methods their moment in the sun
 and 2) I think it also brings up the interesting question of can we use
 modern structure to predict past ones?
 
-\subsection{Model comparison}\label{model-comparison}
+\subsection{Model benchmarking}\label{sec-model-benchmarking}
 
 For now the (still essentially pending) workflow/associated code can be
 found at the following repository
@@ -1103,6 +1120,13 @@ Poisot, Timothée. 2023. {``Guidelines for the Prediction of Species
 Interactions Through Binary Classification.''} \emph{Methods in Ecology
 and Evolution} 14 (5): 1333--45.
 \url{https://doi.org/10.1111/2041-210X.14071}.
+
+\bibitem[\citeproctext]{ref-poisotMangalMakingEcological2016}
+Poisot, Timothée, Benjamin Baiser, Jennifer Dunne, Sonia Kéfi, François
+Massol, Nicolas Mouquet, Tamara N. Romanuk, Daniel B. Stouffer, Spencer
+A. Wood, and Dominique Gravel. 2016. {``Mangal -- Making Ecological
+Network Analysis Simple.''} \emph{Ecography} 39 (4): 384--90.
+\url{https://doi.org/10.1111/ecog.00976}.
 
 \bibitem[\citeproctext]{ref-poisotGlobalKnowledgeGaps2021}
 Poisot, Timothée, Gabriel Bergeron, Kevin Cazelles, Tad Dallas,

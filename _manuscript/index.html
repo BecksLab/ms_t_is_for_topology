@@ -10,7 +10,7 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-04-05">
+<meta name="dcterms.date" content="2024-04-08">
 <meta name="keywords" content="food web, network construction">
 
 <title>T is for Topology</title>
@@ -78,10 +78,10 @@ div.csl-indent {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-04-05">
-<meta name="citation_cover_date" content="2024-04-05">
+<meta name="citation_publication_date" content="2024-04-08">
+<meta name="citation_cover_date" content="2024-04-08">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-04-05">
+<meta name="citation_online_date" content="2024-04-08">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="Some fancy journal">
 <meta name="citation_reference" content="citation_title=Food web models: A plea for groups;,citation_abstract=The concept of a group is ubiquitous in biology. It underlies classifications in evolution and ecology, including those used to describe phylogenetic levels, the habitat and functional roles of organisms in ecosystems. Surprisingly, this concept is not explicitly included in simple models for the structure of food webs, the ecological networks formed by consumer–resource interactions. We present here the simplest possible model based on groups, and show that it performs substantially better than current models at predicting the structure of large food webs. Our group-based model can be applied to different types of biological and non-biological networks, and for the first time merges in the same framework two important notions in network theory: that of compartments (sets of highly interacting nodes) and that of roles (sets of nodes that have similar interaction patterns). This model provides a basis to examine the significance of groups in biological networks and to develop more accurate models for ecological network structure. It is especially relevant at a time when a new generation of empirical data is providing increasingly large food webs.;,citation_author=Stefano Allesina;,citation_author=Mercedes Pascual;,citation_publication_date=2009;,citation_cover_date=2009;,citation_year=2009;,citation_issue=7;,citation_doi=10.1111/j.1461-0248.2009.01321.x;,citation_issn=1461-0248;,citation_volume=12;,citation_language=en-US;,citation_journal_title=Ecology Letters;">
@@ -227,7 +227,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">April 5, 2024</p>
+              <p class="date">April 8, 2024</p>
             </div>
           </div>
           
@@ -271,7 +271,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#selecting-models" id="toc-selecting-models" class="nav-link" data-scroll-target="#selecting-models"><span class="header-section-number">4.1</span> Selecting models</a></li>
   <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link" data-scroll-target="#datasets-used"><span class="header-section-number">4.2</span> Datasets used</a></li>
-  <li><a href="#model-comparison" id="toc-model-comparison" class="nav-link" data-scroll-target="#model-comparison"><span class="header-section-number">4.3</span> Model comparison</a></li>
+  <li><a href="#sec-model-benchmarking" id="toc-sec-model-benchmarking" class="nav-link" data-scroll-target="#sec-model-benchmarking"><span class="header-section-number">4.3</span> Model benchmarking</a></li>
   </ul></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">5</span> Results</a>
   <ul class="collapse">
@@ -319,7 +319,7 @@ div.csl-indent {
 <div id="fig-concept" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
+<a href="images/concept.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/concept.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows where the model families fall in the the context of being models that predict networks or models that predict interactions space. Panel B serves to highlight the characteristics one might like to ‘test’/benchmark for a model based on it being either a network or interaction predicting model
@@ -392,14 +392,14 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
+<col style="width: 10%">
 <col style="width: 12%">
 <col style="width: 12%">
 <col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 21%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 9%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -407,10 +407,10 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <th>Theory</th>
 <th>Example used</th>
 <th>Predicts</th>
+<th>Needs (minimum)</th>
 <th>Assembly</th>
 <th>Constraints</th>
 <th>Interaction</th>
-<th>‘Real world’ data</th>
 </tr>
 </thead>
 <tbody>
@@ -419,38 +419,38 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <td>Network structure is random</td>
 <td><span class="citation" data-cites="erdosRandomGraphs1959">(<a href="#ref-erdosRandomGraphs1959" role="doc-biblioref">Erdős and Rényi 1959</a>)</span></td>
 <td>artificial? network</td>
+<td>network (species agnostic)</td>
 <td>random</td>
 <td>link</td>
 <td>binary</td>
-<td>no</td>
 </tr>
 <tr class="even">
 <td>neutral</td>
 <td>Network structure is random, but species abundance plays a role</td>
 <td><span class="citation" data-cites="pomeranzInferringPredatorPrey2019">(<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">Pomeranz et al. 2019</a>)</span></td>
 <td>network</td>
+<td>abundance, number of links</td>
 <td>mass effect</td>
+<td>link</td>
 <td></td>
-<td></td>
-<td>abundance</td>
 </tr>
 <tr class="odd">
 <td>resource</td>
 <td>Networks are interval, species can be ordered on a ‘niche axis’</td>
 <td></td>
 <td>network</td>
+<td>richness, connectance</td>
 <td>‘random’</td>
 <td>link</td>
 <td>binary</td>
-<td>no</td>
 </tr>
 <tr class="even">
 <td>generative</td>
 <td>Networks are determined by their structural features</td>
 <td>Maximum Entropy <span class="citation" data-cites="banvilleWhatConstrainsFood2023">(<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">Banville, Gravel, and Poisot 2023</a>)</span></td>
 <td>network</td>
+<td>network (species agnostic)</td>
 <td>‘random’</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -459,48 +459,48 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <td>Interactions are determined by foraging theory (feeding links)</td>
 <td>ADBM <span class="citation" data-cites="petcheySizeForagingFood2008">(<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">Petchey et al. 2008</a>)</span></td>
 <td>interactions</td>
-<td>quantitative(?)</td>
+<td>connectance, body size, abundance</td>
+<td>quantitative</td>
 <td></td>
 <td>quantitative</td>
-<td>yes (body size, …)</td>
 </tr>
 <tr class="even">
 <td>graph embedding</td>
 <td>Interactions can be predicted from the latent traits of networks</td>
 <td>Transfer Learning <span class="citation" data-cites="strydomFoodWebReconstruction2022">(<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">Strydom et al. 2022</a>)</span></td>
 <td>interactions (but structurally constrained?)</td>
+<td>interactions, phylogenetic tree, list of target species (species pool)</td>
 <td></td>
 <td></td>
 <td>probabilistic</td>
-<td>yes (network, ecological proxy)</td>
 </tr>
 <tr class="odd">
 <td>trait matching</td>
 <td>Interactions can be inferred by a mechanistic framework/relationships</td>
 <td>PFIM <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span></td>
 <td>interactions</td>
+<td>prior (expert) knowledge of trait hierarchy/relationships, traits, list of target species (species pool)</td>
 <td>mechanistic</td>
 <td></td>
 <td></td>
-<td>yes (expert knowledge, trait)</td>
 </tr>
 <tr class="even">
 <td>binary classifiers</td>
 <td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors</td>
 <td></td>
 <td>interactions</td>
+<td>interactions, traits, list of target species (species pool)</td>
 <td>statistical</td>
 <td></td>
 <td></td>
-<td>yes (interactions, trait)</td>
 </tr>
 <tr class="odd">
 <td>expert knowledge</td>
 <td>‘Boots on the ground’ ecological knowledge and observations</td>
 <td></td>
 <td>interactions</td>
+<td>list of target species (species pool)</td>
 <td>‘mechanistic’</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -509,10 +509,10 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <td>Webscraping to create networks from online databases</td>
 <td></td>
 <td>interactions</td>
+<td>list of target species (species pool)</td>
 <td></td>
 <td></td>
 <td></td>
-<td>yes (online, published databases)</td>
 </tr>
 </tbody>
 </table>
@@ -522,17 +522,21 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </section>
 <section id="datasets-used" class="level3" data-number="4.2">
 <h3 data-number="4.2" class="anchored" data-anchor-id="datasets-used"><span class="header-section-number">4.2</span> Datasets used</h3>
-<ul>
-<li><p>For network models makes sense to drop datasets from Mangal</p></li>
-<li><p>‘Elite’ number of datasets for interaction models</p></li>
-</ul>
+<section id="mangal-networks" class="level4" data-number="4.2.1">
+<h4 data-number="4.2.1" class="anchored" data-anchor-id="mangal-networks"><span class="header-section-number">4.2.1</span> Mangal networks</h4>
+<p>We queried the Mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot et al. 2016</a>)</span> database and extracted a total of <strong>TODO</strong> networks. <em>Some sort of summary as to the geographic/taxonomic range??</em> Although these networks represent a high volume of interaction data they do not have accompanying ‘metadata’ that we would need for some of the more data-hungry model families (<em>e.g.,</em> local abundance), the Mangal networks were used to provide the ‘starting values’ for the random, resource, and generative families. This allows us to generate a large number of different networks that we can use to compare and contrast the performance of the various model families (see <a href="#sec-model-benchmarking" class="quarto-xref">Section&nbsp;4.3</a> for a more detailed breakdown). For each network from Mangal we generated <strong>TODO</strong> versions of that network using each model family.</p>
+</section>
+<section id="empirical-networks" class="level4" data-number="4.2.2">
+<h4 data-number="4.2.2" class="anchored" data-anchor-id="empirical-networks"><span class="header-section-number">4.2.2</span> Empirical networks</h4>
+<p>‘Elite’ number of datasets for interaction models</p>
 <blockquote class="blockquote">
 <p>Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a ‘scale’ element as well <em>i.e.,</em> a regional and local network. I think there is going to be a ‘turning point’ where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) <em>sensu</em> <span class="citation" data-cites="caronTraitmatchingModelsPredict2024">Caron et al. (<a href="#ref-caronTraitmatchingModelsPredict2024" role="doc-biblioref">2024</a>)</span>. Although having said that I feel that contradicts the idea of backbones (<em>sensu</em> Bramon Mora (sp?) et al &amp; Stouffer et al) But that might be where we get the idea of core <em>structure</em> vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I’m trying to say here)</p>
 </blockquote>
 <p>I think we should also use the <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008">Jennifer A. Dunne et al. (<a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">2008</a>)</span> work. Because 1) it gives the paleo-centric methods their moment in the sun and 2) I think it also brings up the interesting question of can we use modern structure to predict past ones?</p>
 </section>
-<section id="model-comparison" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="model-comparison"><span class="header-section-number">4.3</span> Model comparison</h3>
+</section>
+<section id="sec-model-benchmarking" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="sec-model-benchmarking"><span class="header-section-number">4.3</span> Model benchmarking</h3>
 <p>For now the (still essentially pending) workflow/associated code can be found at the following repository <a href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</a>. This will reflect that which is shown in panel <em>B</em> of <a href="#fig-concept" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <ul>
 <li>Data ‘cost’ (some methods might need a lot lot of supporting data vs something very light weight)</li>
@@ -605,7 +609,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/model_venn.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"><img src="images/model_venn.png" class="img-fluid figure-img" alt="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"></a></p>
+<p><a href="images/model_venn.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"><img src="images/model_venn.png" class="img-fluid figure-img" alt="I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…"></a></p>
 <figcaption>I still haven’t given up on a sort of venn diagram idea but maybe it going to be more of a venn-flow chart hybrid…</figcaption>
 </figure>
 </div>
@@ -618,7 +622,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="img-fluid figure-img"></a>
+<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in @<span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span> The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is…
@@ -749,6 +753,9 @@ Poelen, Jorrit H., James D. Simons, and Chris J. Mungall. 2014. <span>“Global 
 <div id="ref-poisotGuidelinesPredictionSpecies2023" class="csl-entry" role="listitem">
 Poisot, Timothée. 2023. <span>“Guidelines for the Prediction of Species Interactions Through Binary Classification.”</span> <em>Methods in Ecology and Evolution</em> 14 (5): 1333–45. <a href="https://doi.org/10.1111/2041-210X.14071">https://doi.org/10.1111/2041-210X.14071</a>.
 </div>
+<div id="ref-poisotMangalMakingEcological2016" class="csl-entry" role="listitem">
+Poisot, Timothée, Benjamin Baiser, Jennifer Dunne, Sonia Kéfi, François Massol, Nicolas Mouquet, Tamara N. Romanuk, Daniel B. Stouffer, Spencer A. Wood, and Dominique Gravel. 2016. <span>“Mangal – Making Ecological Network Analysis Simple.”</span> <em>Ecography</em> 39 (4): 384–90. <a href="https://doi.org/10.1111/ecog.00976">https://doi.org/10.1111/ecog.00976</a>.
+</div>
 <div id="ref-poisotGlobalKnowledgeGaps2021" class="csl-entry" role="listitem">
 Poisot, Timothée, Gabriel Bergeron, Kevin Cazelles, Tad Dallas, Dominique Gravel, Andrew MacDonald, Benjamin Mercier, Clément Violet, and Steve Vissault. 2021. <span>“Global Knowledge Gaps in Species Interaction Networks Data.”</span> <em>Journal of Biogeography</em> n/a (n/a). <a href="https://doi.org/10.1111/jbi.14127">https://doi.org/10.1111/jbi.14127</a>.
 </div>
@@ -818,7 +825,7 @@ Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Com
   author = {Strydom, Tanya and A. Dunne, Jennifer and Poisot, Timothée
     and P. Beckerman, Andrew},
   title = {T Is for {Topology}},
-  date = {2024-04-05},
+  date = {2024-04-08},
   langid = {en},
   abstract = {There are many reasons one might want to generate a
     network and there are many tools on the market that might make that
@@ -833,7 +840,7 @@ Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Com
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-strydom2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
 Beckerman. 2024. <span>“T Is for Topology.”</span> Some Fancy Journal.
-April 5, 2024.
+April 8, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1224,7 +1231,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
