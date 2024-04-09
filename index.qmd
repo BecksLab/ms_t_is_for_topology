@@ -56,9 +56,11 @@ jupyter: python3
 
 -   In order to construct a 'perfect' network *i.e.,* one which *perfectly* captures the dynamics for a specific community one needs to consider and account for many different moving parts (*e.g.,*). So when developing a model it makes sense that you prioritise the aspect of the prediction/construction task that has the most value for your research goal, acknowledging that a model might fall short in others. The thing is that with the growing suite of approaches to generating networks it is important that we don't lose sight of the core philosophy behind the model we use and to ensure that we are using the model best suited to what we want to be accomplishing.
 
+    -   Bring up the fact that delimiting a network is in and of itself fuzzy - we tend to think of them int erms of snapshots but in reality the final network is often the result of aggregation over multiple timescales.
+
 -   It is perhaps useful to start with asking why do we want/need models to generate networks. This can be broadly thought of to fall into two categories. Build networks because we want to build concepts vs build networks because we want specificity. Broadly this means that we either want to construct/predict a collection of interactions (generate networks) or a network of interactions (predict interactions).
 
-Arguably the need for methods and tools for constructing interaction networks arises from two different (but still aligned) places of interest within the field of network ecology. On the one side sits the researcher who is interested in generating a set of ecologically plausible networks for the purpose of running further simulations (*e.g.,* extinction simulations) or understanding some higher-level process/concept (*e.g.,* understanding energy flows), importantly these networks do not require any level of species specificity and it is more the arrangements of the nodes (species) within the context of network structure that is of value. This researcher is contrasted by one that is interested in constructing real-world, location specific, interaction data for a specific collection of species (community). This is driven by the need for researchers to find alternative ways to infer the interactions between species as a way to overcome the inherit challenges of inventorying interaction in the field [@morales-castillaInferringBioticInteractions2015; @strydomRoadmapPredictingSpecies2021]. Of course these two categories are not distinct, mutually exclusive, groups but can rather be viewed as operating on a gradient ranging from a need for generality (*i.e.,* creating a network that, when taken in aggregate, the distribution of links (interactions) between species are ecologically plausible) to a need for specificity (local-level predictions between specific species).
+Arguably the need for methods and tools for constructing interaction networks arises from two different (but still aligned) places of interest within the field of network ecology. On the one side sits the researcher who is interested in generating a set of ecologically plausible networks for the purpose of running further simulations (*e.g.,* extinction simulations) or understanding some higher-level process/concept (*e.g.,* understanding energy flows), importantly these networks do not require any level of species specificity *per se* and it is more the arrangements of the nodes (species) within the context of network structure that is of value. This researcher is contrasted by one that is interested in constructing real-world, location specific, interaction data for a specific collection of species (community). This is driven by the need for researchers to find alternative ways to infer the interactions between species as a way to overcome the inherit challenges of inventorying interaction in the field [@morales-castillaInferringBioticInteractions2015; @strydomRoadmapPredictingSpecies2021]. Of course these two categories are not distinct, mutually exclusive, groups but can rather be viewed as operating on a gradient ranging from a need for generality (*i.e.,* creating a network that, when taken in aggregate, the distribution of links (interactions) between species are ecologically plausible) to a need for specificity (*i.e.,* local-level predictions between specific species).
 
 -   Brief history of the development of tools within the context of the two different fields? Sort of where the theory/body of work was based and how that has changed?
 
@@ -77,6 +79,12 @@ Arguably the need for methods and tools for constructing interaction networks ar
 @cohenStochasticTheoryCommunity1985 states that *"\[Their\] approach is more like gross anatomy than like physiology... that is, the gross anatomy is frozen, rather than in motion."*.
 
 Interestingly @williamsSuccessItsLimits2008 also explicitly talk about *structural* food-web models in their introduction... so how I see it that means that there has always been this inherent acknowledgement that models are functioning at a specific 'network level'.
+
+Other works to keep in mind: @pringleResolvingFoodWebStructure2020, @pringleUntanglingFoodWebs2020
+
+> "The resolution of food-web data is demonic because it can radically change network topology and associated biological inferences in ways that are unknowable in the absence of better data." - @pringleResolvingFoodWebStructure2020
+
+> "It makes no sense to describe the interaction structure of nodes which in themselves are poorly defined." — Roslin et al. (2013, p. 2)
 
 ## Model families
 
@@ -178,6 +186,8 @@ We queried the Mangal [@poisotMangalMakingEcological2016] database and extracted
 #### Empirical networks
 
 'Elite' number of datasets for interaction models
+
+Although the availability of empirical interaction data is growing as techniques begin to improve and grow [@pringleResolvingFoodWebStructure2020], we still lack a way to define what is the 'ideal' interaction dataset.
 
 > Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a 'scale' element as well *i.e.,* a regional and local network. I think there is going to be a 'turning point' where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) *sensu* @caronTraitmatchingModelsPredict2024. Although having said that I feel that contradicts the idea of backbones (*sensu* Bramon Mora (sp?) et al & Stouffer et al) But that might be where we get the idea of core *structure* vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I'm trying to say here)
 
