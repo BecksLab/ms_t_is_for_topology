@@ -174,7 +174,7 @@
 \title{T is for Topology}
 \author{Tanya Strydom \and Jennifer A. Dunne \and Timothée
 Poisot \and Andrew P. Beckerman}
-\date{2024-04-08}
+\date{2024-04-09}
 
 \begin{document}
 \maketitle
@@ -204,6 +204,15 @@ critical when we think about the model we want to use.
   sight of the core philosophy behind the model we use and to ensure
   that we are using the model best suited to what we want to be
   accomplishing.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Bring up the fact that delimiting a network is in and of itself
+    fuzzy - we tend to think of them int erms of snapshots but in
+    reality the final network is often the result of aggregation over
+    multiple timescales.
+  \end{itemize}
 \item
   It is perhaps useful to start with asking why do we want/need models
   to generate networks. This can be broadly thought of to fall into two
@@ -221,20 +230,21 @@ researcher who is interested in generating a set of ecologically
 plausible networks for the purpose of running further simulations
 (\emph{e.g.,} extinction simulations) or understanding some higher-level
 process/concept (\emph{e.g.,} understanding energy flows), importantly
-these networks do not require any level of species specificity and it is
-more the arrangements of the nodes (species) within the context of
-network structure that is of value. This researcher is contrasted by one
-that is interested in constructing real-world, location specific,
-interaction data for a specific collection of species (community). This
-is driven by the need for researchers to find alternative ways to infer
-the interactions between species as a way to overcome the inherit
-challenges of inventorying interaction in the field (Morales-Castilla et
-al. 2015; Strydom et al. 2021). Of course these two categories are not
-distinct, mutually exclusive, groups but can rather be viewed as
-operating on a gradient ranging from a need for generality (\emph{i.e.,}
-creating a network that, when taken in aggregate, the distribution of
-links (interactions) between species are ecologically plausible) to a
-need for specificity (local-level predictions between specific species).
+these networks do not require any level of species specificity \emph{per
+se} and it is more the arrangements of the nodes (species) within the
+context of network structure that is of value. This researcher is
+contrasted by one that is interested in constructing real-world,
+location specific, interaction data for a specific collection of species
+(community). This is driven by the need for researchers to find
+alternative ways to infer the interactions between species as a way to
+overcome the inherit challenges of inventorying interaction in the field
+(Morales-Castilla et al. 2015; Strydom et al. 2021). Of course these two
+categories are not distinct, mutually exclusive, groups but can rather
+be viewed as operating on a gradient ranging from a need for generality
+(\emph{i.e.,} creating a network that, when taken in aggregate, the
+distribution of links (interactions) between species are ecologically
+plausible) to a need for specificity (\emph{i.e.,} local-level
+predictions between specific species).
 
 \begin{itemize}
 \item
@@ -285,6 +295,21 @@ Interestingly Williams and Martinez (2008) also explicitly talk about
 see it that means that there has always been this inherent
 acknowledgement that models are functioning at a specific `network
 level'.
+
+Other works to keep in mind: Pringle and Hutchinson (2020), Pringle
+(2020)
+
+\begin{quote}
+``The resolution of food-web data is demonic because it can radically
+change network topology and associated biological inferences in ways
+that are unknowable in the absence of better data.'' - Pringle and
+Hutchinson (2020)
+\end{quote}
+
+\begin{quote}
+``It makes no sense to describe the interaction structure of nodes which
+in themselves are poorly defined.'' --- Roslin et al.~(2013, p.~2)
+\end{quote}
 
 \section{Model families}\label{model-families}
 
@@ -649,6 +674,10 @@ versions of that network using each model family.
 \subsubsection{Empirical networks}\label{empirical-networks}
 
 `Elite' number of datasets for interaction models
+
+Although the availability of empirical interaction data is growing as
+techniques begin to improve and grow (Pringle and Hutchinson 2020), we
+still lack a way to define what is the `ideal' interaction dataset.
 
 \begin{quote}
 Here I think we need to span a variety of domains, at minimum aquatic
@@ -1146,6 +1175,17 @@ Pomeranz, Justin P. F., Ross M. Thompson, Timothée Poisot, and Jon S.
 Harding. 2019. {``Inferring Predator--Prey Interactions in Food Webs.''}
 \emph{Methods in Ecology and Evolution} 10 (3): 356--67.
 \url{https://doi.org/10.1111/2041-210X.13125}.
+
+\bibitem[\citeproctext]{ref-pringleUntanglingFoodWebs2020}
+Pringle, Robert M. 2020. {``Untangling {Food Webs}.''} In
+\emph{Untangling {Food Webs}}, 225--38. Princeton University Press.
+\url{https://doi.org/10.1515/9780691195322-020}.
+
+\bibitem[\citeproctext]{ref-pringleResolvingFoodWebStructure2020}
+Pringle, Robert M., and Matthew C. Hutchinson. 2020. {``Resolving
+{Food-Web Structure}.''} \emph{Annual Review of Ecology, Evolution and
+Systematics} 51 (Volume 51, 2020): 55--80.
+\url{https://doi.org/10.1146/annurev-ecolsys-110218-024908}.
 
 \bibitem[\citeproctext]{ref-rohrModelingFoodWebs2010}
 Rohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza,
