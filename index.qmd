@@ -56,7 +56,12 @@ jupyter: python3
 
 -   In order to construct a 'perfect' network *i.e.,* one which *perfectly* captures the dynamics for a specific community one needs to consider and account for many different moving parts (*e.g.,*). So when developing a model it makes sense that you prioritise the aspect of the prediction/construction task that has the most value for your research goal, acknowledging that a model might fall short in others. The thing is that with the growing suite of approaches to generating networks it is important that we don't lose sight of the core philosophy behind the model we use and to ensure that we are using the model best suited to what we want to be accomplishing.
 
-    -   Bring up the fact that delimiting a network is in and of itself fuzzy - we tend to think of them int erms of snapshots but in reality the final network is often the result of aggregation over multiple timescales.
+    -   Bring up the fact that delimiting a network is in and of itself fuzzy - we tend to think of them in terms of snapshots but in reality the final network is often the result of aggregation over multiple timescales.
+    -   Also the fact that *some* people are concerned about the taxonomic resolution and cascading effects those might have on our understanding of network structure [@pringleResolvingFoodWebStructure2020; @pringleUntanglingFoodWebs2020], we are at risk of losing our ability to distinguish the wood from the tree - are we not (at least at times) concerned more with understanding ecosystem level processes than with needing to understand things *perfectly* at the species level.
+
+-   What do we mean when we talk about an 'interaction network'? Is it the flow of biomass/energy? Is it an effect on fitness (feeding)? (can we really represent indirect interactions as actual links?)
+
+    -  "For example, nodes can be individuals and the links contacts between those individuals (Melian et al. 2011), nodes can be species and the links the interactions (e.g. feeding, mutualistic, parasitic) between them (de Ruiter et al. 1995), or nodes can be ecological communities or ecosystems and the links fluxes between these localities (Proulx et al. 2005; Chadès et al. 2011)" - @poisotDescribeUnderstandPredict2016
 
 -   It is perhaps useful to start with asking why do we want/need models to generate networks. This can be broadly thought of to fall into two categories. Build networks because we want to build concepts vs build networks because we want specificity. Broadly this means that we either want to construct/predict a collection of interactions (generate networks) or a network of interactions (predict interactions).
 
@@ -104,7 +109,7 @@ Given the large number of models that have been developed it is perhaps more mea
 
 > @gravelInferringFoodWeb2013 also poses an interesting cross-over between the adbm and niche model.
 
-**Binary classifiers:** The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [*e.g.,* @caronAddressingEltonianShortfall2022 use a tait-based approach], random forest [*e.g.,* @llewelynPredictingPredatorPrey2023], trait-based k-NN [*e.g.,* @desjardins-proulxEcologicalInteractionsNetflix2017], and Bayesian models [*e.g.,* @eklofSecondaryExtinctionsFood2013; @cirtwillQuantitativeFrameworkInvestigating2019]
+**Binary classifiers:** The task of predicting if an interaction will occur between a species pair is treated as a statistical binary classification task. Here the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [*e.g.,* @caronAddressingEltonianShortfall2022 use a tait-based approach], random forest [*e.g.,* @llewelynPredictingPredatorPrey2023], trait-based k-NN [*e.g.,* @desjardins-proulxEcologicalInteractionsNetflix2017], and Bayesian models [*e.g.,* @eklofSecondaryExtinctionsFood2013; @cirtwillQuantitativeFrameworkInvestigating2019]. LOOK AT @pichlerMachineLearningAlgorithms2020 - overview of different approaches
 
 **Graph embedding:** This family of approaches has been extensively discussed in @strydomGraphEmbeddingTransfer2023 but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. @strydomFoodWebReconstruction2022 uses a transfer learning framework (specifically using a random dot product graph for embedding) based around the idea that interactions are evolutionarily conserved and that we can use known networks, and phylogenetic relationships, to predict interactions for a given species pool. **TODO** Log-ratio [@rohrModelingFoodWebs2010]
 
@@ -182,6 +187,8 @@ I know tables are awful but in this case they may make more sense. Also I don't 
 #### Mangal networks
 
 We queried the Mangal [@poisotMangalMakingEcological2016] database and extracted a total of **TODO** networks. *Some sort of summary as to the geographic/taxonomic range??* Although these networks represent a high volume of interaction data they do not have accompanying 'metadata' that we would need for some of the more data-hungry model families (*e.g.,* local abundance), the Mangal networks were used to provide the 'starting values' for the random, resource, and generative families. This allows us to generate a large number of different networks that we can use to compare and contrast the performance of the various model families (see @sec-model-benchmarking for a more detailed breakdown). For each network from Mangal we generated **TODO** versions of that network using each model family.
+
+> "These complex food webs differ in their level of resolution and sampling effort, which may introduce noise in the estimation of their properties, especially given their large number of interacting elements. However, because our MaxEnt models are applied on imperfect data, they aim at reproducing the sampled structure of food webs, not their actual structure." - @banvilleWhatConstrainsFood2023 (something to think about...)
 
 #### Empirical networks
 
@@ -263,7 +270,9 @@ Maybe not the best term to use but thinking here about practical limitations of 
 
 {{< embed notebooks/model_quantitative.qmd#fig-topology >}}
 
-This might actually be an awful way to try and summarise the data but rolling with it for now...
+I really like this way of plotting results from @pichlerMachineLearningAlgorithms2020
+
+![Cool way to conceptualise results from @pichlerMachineLearningAlgorithms2020](images/pichler_result.png){#fig-pichler}
 
 ## Discussion
 
@@ -276,6 +285,8 @@ This might actually be an awful way to try and summarise the data but rolling wi
 > *"we highlight an interesting paradox: the models with the best performance measures are not necessarily the models with the closest reconstructed network structure."* - @poisotGuidelinesPredictionSpecies2023
 
 -   *Do we need network models to predict interactions and interaction models to predict structure?* (lets not think about that too hard or I might just have to sit in silence for a while...)
+
+    -  "Another argument for the joint prediction of networks and interactions is to reduce circularity and biases in the predictions. As an example, models like linear filtering generate probabilities of non-observed interactions existing, but do so based on measured network properties." - @strydomRoadmapPredictingSpecies2021
 
 -   It will be interesting to bring up the idea that if a model is missing a specific pairwise link but doing well at the structural level then when does it matter?
 

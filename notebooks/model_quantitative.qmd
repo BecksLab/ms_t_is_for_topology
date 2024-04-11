@@ -18,11 +18,13 @@ Anyway so for now I am just pulling in the INTERIM data from some of the models.
 library(tidyverse)
 
 # download file from other repo
-download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/topology_summary.csv", "../notebooks/data/topology_models.csv")
-download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/mangal_summary.csv", "../notebooks/data/mangal_summary.csv")
+download.file("https://github.com/BecksLab/topology_generators/blob/main/data/processed/topology_summary.csv", "../notebooks/data/topology_models.csv")
+download.file("https://github.com/BecksLab/topology_generators/blob/main/data/processed/mangal_summary.csv", "../notebooks/data/mangal_summary.csv")
+download.file("https://github.com/BecksLab/topology_generators/blob/main/data/processed/nz_summary.csv", "../notebooks/data/nz_summary.csv")
 
 
-df = full_join(read.csv("data/mangal_summary.csv"),
+df = full_join(rbind(read.csv("data/mangal_summary.csv"),
+                     read.csv("data/nz_summary.csv")),
                 read.csv("data/topology_models.csv")) %>% 
         filter(complexity != 0) %>% 
         mutate(ratio = top/basal,

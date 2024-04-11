@@ -174,7 +174,7 @@
 \title{T is for Topology}
 \author{Tanya Strydom \and Jennifer A. Dunne \and Timothée
 Poisot \and Andrew P. Beckerman}
-\date{2024-04-09}
+\date{2024-04-10}
 
 \begin{document}
 \maketitle
@@ -209,9 +209,33 @@ critical when we think about the model we want to use.
   \tightlist
   \item
     Bring up the fact that delimiting a network is in and of itself
-    fuzzy - we tend to think of them int erms of snapshots but in
+    fuzzy - we tend to think of them in terms of snapshots but in
     reality the final network is often the result of aggregation over
     multiple timescales.
+  \item
+    Also the fact that \emph{some} people are concerned about the
+    taxonomic resolution and cascading effects those might have on our
+    understanding of network structure (Pringle and Hutchinson 2020;
+    Pringle 2020), we are at risk of losing our ability to distinguish
+    the wood from the tree - are we not (at least at times) concerned
+    more with understanding ecosystem level processes than with needing
+    to understand things \emph{perfectly} at the species level.
+  \end{itemize}
+\item
+  What do we mean when we talk about an `interaction network'? Is it the
+  flow of biomass/energy? Is it an effect on fitness (feeding)? (can we
+  really represent indirect interactions as actual links?)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``For example, nodes can be individuals and the links contacts
+    between those individuals (Melian et al.~2011), nodes can be species
+    and the links the interactions (e.g.~feeding, mutualistic,
+    parasitic) between them (de Ruiter et al.~1995), or nodes can be
+    ecological communities or ecosystems and the links fluxes between
+    these localities (Proulx et al.~2005; Chadès et al.~2011)'' -
+    Poisot, Stouffer, and Kéfi (2016)
   \end{itemize}
 \item
   It is perhaps useful to start with asking why do we want/need models
@@ -403,7 +427,8 @@ include generalised linear models (\emph{e.g.,} Caron et al. 2022 use a
 tait-based approach), random forest (\emph{e.g.,} Llewelyn et al. 2023),
 trait-based k-NN (\emph{e.g.,} Desjardins-Proulx et al. 2017), and
 Bayesian models (\emph{e.g.,} Eklöf, Tang, and Allesina 2013; Cirtwill
-et al. 2019)
+et al. 2019). LOOK AT Pichler et al. (2020) - overview of different
+approaches
 
 \textbf{Graph embedding:} This family of approaches has been extensively
 discussed in Strydom et al. (2023) but can be broadly explained as an
@@ -892,8 +917,20 @@ represent the different motif structures identified in @Stouffer et al.
 \href{https://BecksLab.github.io/ms_t_is_for_topology/index.qmd.html}{Article
 Notebook}}
 
-This might actually be an awful way to try and summarise the data but
-rolling with it for now\ldots{}
+I really like this way of plotting results from Pichler et al. (2020)
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/pichler_result.png}
+
+}
+
+\caption{\label{fig-pichler}Cool way to conceptualise results from
+Pichler et al. (2020)}
+
+\end{figure}%
 
 \section{Discussion}\label{discussion}
 
@@ -928,6 +965,16 @@ reconstructed network structure.''} - Poisot (2023)
   \emph{Do we need network models to predict interactions and
   interaction models to predict structure?} (lets not think about that
   too hard or I might just have to sit in silence for a while\ldots)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``Another argument for the joint prediction of networks and
+    interactions is to reduce circularity and biases in the predictions.
+    As an example, models like linear filtering generate probabilities
+    of non-observed interactions existing, but do so based on measured
+    network properties.'' - Strydom et al. (2021)
+  \end{itemize}
 \item
   It will be interesting to bring up the idea that if a model is missing
   a specific pairwise link but doing well at the structural level then
@@ -1137,6 +1184,13 @@ Warren. 2008. {``Size, Foraging, and Food Web Structure.''}
 Judging Food Web Models.''} \emph{Journal of Theoretical Biology} 279
 (1): 169--71. \url{https://doi.org/10.1016/j.jtbi.2011.03.019}.
 
+\bibitem[\citeproctext]{ref-pichlerMachineLearningAlgorithms2020}
+Pichler, Maximilian, Virginie Boreux, Alexandra-Maria Klein, Matthias
+Schleuning, and Florian Hartig. 2020. {``Machine Learning Algorithms to
+Infer Trait-Matching and Predict Species Interactions in Ecological
+Networks.''} \emph{Methods in Ecology and Evolution} 11 (2): 281--93.
+\url{https://doi.org/10.1111/2041-210X.13329}.
+
 \bibitem[\citeproctext]{ref-poelenGlobalBioticInteractions2014}
 Poelen, Jorrit H., James D. Simons, and Chris J. Mungall. 2014.
 {``Global Biotic Interactions: {An} Open Infrastructure to Share and
@@ -1169,6 +1223,12 @@ Poisot, Timothée, Daniel B. Stouffer, and Dominique Gravel. 2015.
 {``Beyond Species: Why Ecological Interaction Networks Vary Through
 Space and Time.''} \emph{Oikos} 124 (3): 243--51.
 \url{https://doi.org/10.1111/oik.01719}.
+
+\bibitem[\citeproctext]{ref-poisotDescribeUnderstandPredict2016}
+Poisot, Timothée, Daniel B. Stouffer, and Sonia Kéfi. 2016. {``Describe,
+Understand and Predict: Why Do We Need Networks in Ecology?''}
+\emph{Functional Ecology} 30 (12): 1878--82.
+\url{https://www.jstor.org/stable/48582345}.
 
 \bibitem[\citeproctext]{ref-pomeranzInferringPredatorPrey2019}
 Pomeranz, Justin P. F., Ross M. Thompson, Timothée Poisot, and Jon S.
