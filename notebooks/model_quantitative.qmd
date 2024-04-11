@@ -18,9 +18,9 @@ Anyway so for now I am just pulling in the INTERIM data from some of the models.
 library(tidyverse)
 
 # download file from other repo
-download.file("https://github.com/BecksLab/topology_generators/blob/main/data/processed/topology_summary.csv", "../notebooks/data/topology_models.csv")
-download.file("https://github.com/BecksLab/topology_generators/blob/main/data/processed/mangal_summary.csv", "../notebooks/data/mangal_summary.csv")
-download.file("https://github.com/BecksLab/topology_generators/blob/main/data/processed/nz_summary.csv", "../notebooks/data/nz_summary.csv")
+download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/topology_summary.csv", "../notebooks/data/topology_models.csv")
+download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/mangal_summary.csv", "../notebooks/data/mangal_summary.csv")
+download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/nz_summary.csv", "../notebooks/data/nz_summary.csv")
 
 
 df = full_join(rbind(read.csv("data/mangal_summary.csv"),
@@ -101,7 +101,7 @@ $$
 #| warning: false
 #| echo: false
 #| label: fig-topology
-#| fig-cap: "Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in @@stoufferEvidenceExistenceRobust2007 The magnitude of Z-score probably also tells us how 'variable'/constrained the model is..."
+#| fig-cap: "Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007 The magnitude of Z-score probably also tells us how 'variable'/constrained the model is..."
 
 ggplot(df %>% 
         group_by(id, real, model)  %>% 
