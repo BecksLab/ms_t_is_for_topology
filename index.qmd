@@ -196,6 +196,8 @@ We queried the Mangal [@poisotMangalMakingEcological2016] database and extracted
 
 Although the availability of empirical interaction data is growing as techniques begin to improve and grow [@pringleResolvingFoodWebStructure2020], we still lack a way to define what is the 'ideal' interaction dataset.
 
+New Zealand dataset(s): @pomeranzInferringPredatorPrey2019
+
 > Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a 'scale' element as well *i.e.,* a regional and local network. I think there is going to be a 'turning point' where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) *sensu* @caronTraitmatchingModelsPredict2024. Although having said that I feel that contradicts the idea of backbones (*sensu* Bramon Mora (sp?) et al & Stouffer et al) But that might be where we get the idea of core *structure* vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I'm trying to say here)
 
 I think we should also use the @dunneCompilationNetworkAnalyses2008 work. Because 1) it gives the paleo-centric methods their moment in the sun and 2) I think it also brings up the interesting question of can we use modern structure to predict past ones?

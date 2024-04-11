@@ -250,6 +250,7 @@
 
        <p>I think in the long run I will probably turn the other repo (<a href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</a>) into a project that we can then access and I will port all of the working code here… I think it will just come down to what the ‘cost’ is of the computational side of things and how convoluted it might end up looking.</p>
 <p>Anyway so for now I am just pulling in the INTERIM data from some of the models. This uses (for now) 20 mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot et al. 2016</a>)</span> datasets and just generates some networks for using the niche and cascade models. The ‘results’ for now is just counting the number of links each model generates for each network because that’s what my brain decided on doing…</p>
+<p>As well as the ‘New Zealand’ dataset from <span class="citation" data-cites="pomeranzInferringPredatorPrey2019">Pomeranz et al. (<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">2019</a>)</span></p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -332,7 +333,7 @@
 <div id="fig-boxplot" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_quantitative_files/figure-html/fig-boxplot-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="model_quantitative_files/figure-html/fig-boxplot-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="model_quantitative_files/figure-html/fig-boxplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="model_quantitative_files/figure-html/fig-boxplot-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Boxplot looking at raw values for each measurement for each model. The horizontal line represents the true overall mean for each measurement
@@ -371,13 +372,13 @@ Z = \frac{x_{real}-\mu_{model}}{\sigma_{model}}
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 164 rows containing non-finite values (`stat_bin()`).</code></pre>
+<pre><code>Warning: Removed 460 rows containing non-finite values (`stat_bin()`).</code></pre>
 </div>
 <div class="cell-output-display">
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_quantitative_files/figure-html/fig-topology-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="model_quantitative_files/figure-html/fig-topology-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="model_quantitative_files/figure-html/fig-topology-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="model_quantitative_files/figure-html/fig-topology-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span> The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is…
@@ -391,6 +392,9 @@ Z-scores for network summary statistics. Negative Z-scores indicate a (mean) val
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-poisotMangalMakingEcological2016" class="csl-entry" role="listitem">
 Poisot, Timothée, Benjamin Baiser, Jennifer Dunne, Sonia Kéfi, François Massol, Nicolas Mouquet, Tamara N. Romanuk, Daniel B. Stouffer, Spencer A. Wood, and Dominique Gravel. 2016. <span>“Mangal – Making Ecological Network Analysis Simple.”</span> <em>Ecography</em> 39 (4): 384–90. <a href="https://doi.org/10.1111/ecog.00976">https://doi.org/10.1111/ecog.00976</a>.
+</div>
+<div id="ref-pomeranzInferringPredatorPrey2019" class="csl-entry" role="listitem">
+Pomeranz, Justin P. F., Ross M. Thompson, Timothée Poisot, and Jon S. Harding. 2019. <span>“Inferring Predator–Prey Interactions in Food Webs.”</span> <em>Methods in Ecology and Evolution</em> 10 (3): 356–67. <a href="https://doi.org/10.1111/2041-210X.13125">https://doi.org/10.1111/2041-210X.13125</a>.
 </div>
 <div id="ref-stoufferEvidenceExistenceRobust2007" class="csl-entry" role="listitem">
 Stouffer, Daniel B, Juan Camacho, Wenxin Jiang, and Luís A Nunes Amaral. 2007. <span>“Evidence for the Existence of a Robust Pattern of Prey Selection in Food Webs.”</span> <em>Proceedings of the Royal Society B: Biological Sciences</em> 274 (1621): 1931–40. <a href="https://doi.org/10.1098/rspb.2007.0571">https://doi.org/10.1098/rspb.2007.0571</a>.
@@ -788,7 +792,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
