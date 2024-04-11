@@ -12,6 +12,8 @@ I think in the long run I will probably turn the other repo ([BecksLab/topology_
 
 Anyway so for now I am just pulling in the INTERIM data from some of the models. This uses (for now) 20 mangal [@poisotMangalMakingEcological2016] datasets and just generates some networks for using the niche and cascade models. The 'results' for now is just counting the number of links each model generates for each network because that's what my brain decided on doing...
 
+As well as the 'New Zealand' dataset from @pomeranzInferringPredatorPrey2019
+
 ```{r}
 #| include: false
 #| warning: false
