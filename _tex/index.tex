@@ -174,7 +174,7 @@
 \title{T is for Topology}
 \author{Tanya Strydom \and Jennifer A. Dunne \and Timothée
 Poisot \and Andrew P. Beckerman}
-\date{2024-04-11}
+\date{2024-04-15}
 
 \begin{document}
 \maketitle
@@ -194,15 +194,15 @@ critical when we think about the model we want to use.
 \begin{itemize}
 \item
   In order to construct a `perfect' network \emph{i.e.,} one which
-  \emph{perfectly} captures the dynamics for a specific community one
-  needs to consider and account for many different moving parts
-  (\emph{e.g.,}). So when developing a model it makes sense that you
-  prioritise the aspect of the prediction/construction task that has the
-  most value for your research goal, acknowledging that a model might
-  fall short in others. The thing is that with the growing suite of
-  approaches to generating networks it is important that we don't lose
-  sight of the core philosophy behind the model we use and to ensure
-  that we are using the model best suited to what we want to be
+  \emph{perfectly} captures the dynamics for a specific community at a
+  specific time one needs to consider and account for many different
+  moving parts (\emph{e.g.,}). So when developing a model it makes sense
+  that you prioritise the aspect of the prediction/construction task
+  that has the most value for your research goal, acknowledging that a
+  model might fall short in others. The thing is that with the growing
+  suite of approaches to generating networks it is important that we
+  don't lose sight of the core philosophy behind the model we use and to
+  ensure that we are using the model best suited to what we want to be
   accomplishing.
 
   \begin{itemize}
@@ -210,8 +210,8 @@ critical when we think about the model we want to use.
   \item
     Bring up the fact that delimiting a network is in and of itself
     fuzzy - we tend to think of them in terms of snapshots but in
-    reality the final network is often the result of aggregation over
-    multiple timescales.
+    reality the final (empirical) network is often the result of
+    aggregation over multiple timescales.
   \item
     Also the fact that \emph{some} people are concerned about the
     taxonomic resolution and cascading effects those might have on our
@@ -342,7 +342,11 @@ more meaningful to group models into families with the idea that models
 from the same family will yield similar results because they play by
 similar rules. These rules referring to the underlying philosophy as to
 what structures either networks or the interactions within them (see
-Figure~\ref{fig-concept} panel A).
+Figure~\ref{fig-concept} panel A). Although there have been efforts to
+compare and contrast different models (\emph{e.g.,} Williams and
+Martinez 2008 looked at `structural' models; and Pichler et al. 2020
+looked at `machine learning algorithms') there still lacks an overall
+synthesis as to how the different model families differ from each other.
 
 \begin{figure}
 
@@ -377,26 +381,23 @@ has no agency but its abundance does?). See Pomeranz et al. (2019)
 
 \textbf{Resource models:} Based on the idea that networks follow a
 trophic hierarchy and that species interactions can be determined using
-a single dimension (the ``niche axis'') (Allesina, Alonso, and Pascual
-2008). Essentially these models can be viewed as being based on the idea
-of resource partitioning (niches) along a one-dimensional resource and
-that the number of links scale with species richness (linear link
-scaling). That is there is some sort of hierarchical feeding based on
-how a `resource' is partitioned. This includes the cascade model (Joel
-E. Cohen, Briand, and Newman 1990), which much like the name suggests
-the cascade model rests on the idea that species feed on one another in
-a hierarchical manner. This rests on the assumption that the links
-within a network are variably distributed across the network; with the
-proportion of links decreasing as one moves up the trophic levels
-(\emph{i.e.,} `many' prey and `few' predators). The niche model
-(Williams and Martinez 2000) introduces the idea that species
-interactions are based on the `feeding niche' of a species. See also
-probabilistic niche model (Williams, Anandanadesan, and Purves 2010)
-Broadly, all species are randomly assigned a `feeding niche' and all
-species that fall in this niche can be consumed by that species.
-Finally, the nested hierarchy model (Cattin et al. 2004), which adds
-some component of phylogenetic clustering/signal\ldots{} so not a single
-dimension? \textbf{TODO}.
+a single dimension {[}the ``niche axis''; Allesina, Alonso, and Pascual
+(2008){]}. Essentially these models can be viewed as being based on the
+idea of resource partitioning (niches) along a one-dimensional resource
+and that the number of links scale with species richness (linear link
+scaling). That is, there is some sort of hierarchical feeding based on
+how a `resource' is partitioned. Broadly this family consists of three
+core models; the cascade model (Joel E. Cohen, Briand, and Newman 1990),
+which rests on the idea that species feed on one another in a
+hierarchical manner; the niche model (Williams and Martinez 2000),
+broadly all species are randomly assigned a `feeding niche' and all
+species that fall in this niche can be consumed by that species; and the
+nested hierarchy model (Cattin et al. 2004), which adds some component
+of phylogenetic clustering/signal\ldots{} so not a single dimension?
+\textbf{TODO}. Williams and Martinez (2008) provides a broader overview
+of some of the variations in these models as well as comparison between
+them regarding their ability to retrieve elements of networks structure
+(see also Allesina, Alonso, and Pascual (2008)).
 
 \textbf{Generative models:} (this is maybe a bit of a bold term to use).
 MaxEnt (Banville, Gravel, and Poisot 2023), (maybe) stochastic block
@@ -420,15 +421,16 @@ adbm and niche model.
 
 \textbf{Binary classifiers:} The task of predicting if an interaction
 will occur between a species pair is treated as a statistical binary
-classification task. Here the task is to correlate `real world'
+classification task, where the task is to correlate `real world'
 interaction data with a suitable ecological proxy for which data is more
 widely available (\emph{e.g.,} traits). Model families often used
-include generalised linear models (\emph{e.g.,} Caron et al. 2022 use a
-tait-based approach), random forest (\emph{e.g.,} Llewelyn et al. 2023),
-trait-based k-NN (\emph{e.g.,} Desjardins-Proulx et al. 2017), and
-Bayesian models (\emph{e.g.,} Eklöf, Tang, and Allesina 2013; Cirtwill
-et al. 2019). LOOK AT Pichler et al. (2020) - overview of different
-approaches
+include generalised linear models (\emph{e.g.,} Caron et al. 2022),
+random forest (\emph{e.g.,} Llewelyn et al. 2023), trait-based k-NN
+(\emph{e.g.,} Desjardins-Proulx et al. 2017), and Bayesian models
+(\emph{e.g.,} Eklöf, Tang, and Allesina 2013; Cirtwill et al. 2019). See
+Pichler et al. (2020) for a more detailed overview on the performance of
+machine learning and statistical approaches for inferring trait-trait
+relationships.
 
 \textbf{Graph embedding:} This family of approaches has been extensively
 discussed in Strydom et al. (2023) but can be broadly explained as an
@@ -445,11 +447,11 @@ relationships, to predict interactions for a given species pool.
 only occur if all feeding rules are met. These rules are determined on
 an \emph{a priori} basis using expert/ecological knowledge to determine
 the underlying feeding hierarchy using ecological proxies
-(Morales-Castilla et al. 2015). For example the PFIM Paleo Foodweb
-Inference Model (PFIM, Shaw et al. 2024) uses a series of rules for a
-set of trait categories (such as habitat and body size) to determine if
-an interaction can occur between a species pair. What sets this family
-of models apart from \textbf{expert knowledge} ones is that there is a
+(Morales-Castilla et al. 2015). For example the Paleo Foodweb Inference
+Model (PFIM, Shaw et al. 2024) uses a series of rules for a set of trait
+categories (such as habitat and body size) to determine if an
+interaction can occur between a species pair. What sets this family of
+models apart from \textbf{expert knowledge} ones is that there is a
 formalisation of the feeding rules and thus there is some ability to
 transfer these rules to different communities.
 
@@ -461,7 +463,8 @@ Jennifer A. Dunne et al. 2008), this has the added advantage that
 interactions can be scored in a more categorical as opposed to binary
 fashion, \emph{e.g.,} Maiorano et al. (2020) score interactions as
 either obligate (typical food resources) or occasional (opportunistic
-feeding) interactions.
+feeding) interactions. I feel like its worth also mentioning downfalls
+\emph{a la} Brimacombe et al. (2023)\ldots{}
 
 \textbf{Data scavenging:} There are also a lot of published
 \emph{interaction} data that are publicly available \emph{e.g.,} the
@@ -964,6 +967,13 @@ Pichler et al. (2020)}
   models are trained on existing interaction data; this is data that are
   most likely closer to a metaweb than a local realisation even if they
   are being inventoried at a small scale.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    I think this is sort of the crux of the argument presented in
+    Brimacombe, Bodner, and Fortin (2024)
+  \end{itemize}
 \end{itemize}
 
 \begin{quote}
@@ -1043,6 +1053,19 @@ Berlow, Eric L., Ulrich Brose, and Neo D. Martinez. 2008. {``The
 {`{Goldilocks} Factor'} in Food Webs.''} \emph{Proceedings of the
 National Academy of Sciences} 105 (11): 4079--80.
 \url{https://doi.org/10.1073/pnas.0800967105}.
+
+\bibitem[\citeproctext]{ref-brimacombeApplyingMethodIts2024}
+Brimacombe, Chris, Korryn Bodner, and Marie-Josee Fortin. 2024.
+{``Applying a Method Before Its Proof-of-Concept: {A} Cautionary Tale
+Using Inferred Food Webs.''}
+\url{https://doi.org/10.13140/RG.2.2.22076.65927}.
+
+\bibitem[\citeproctext]{ref-brimacombeShortcomingsReusingSpecies2023}
+Brimacombe, Chris, Korryn Bodner, Matthew Michalska-Smith, Timothée
+Poisot, and Marie-Josée Fortin. 2023. {``Shortcomings of Reusing Species
+Interaction Networks Created by Different Sets of Researchers.''}
+\emph{PLOS Biology} 21 (4): e3002068.
+\url{https://doi.org/10.1371/journal.pbio.3002068}.
 
 \bibitem[\citeproctext]{ref-caronTraitmatchingModelsPredict2024}
 Caron, Dominique, Ulrich Brose, Miguel Lurgi, F. Guillaume Blanchet,
@@ -1332,12 +1355,6 @@ Evolution} 38 (3): 301--12.
 Vermaat, Jan E, Jennifer A Dunne, and Alison J Gilbert. 2009. {``Major
 Dimensions in Food-Web Structure Properties.''} \emph{Ecology} 90 (1):
 278--82. \url{https://www.ncbi.nlm.nih.gov/pubmed/19294932}.
-
-\bibitem[\citeproctext]{ref-williamsProbabilisticNicheModel2010}
-Williams, Richard J., Ananthi Anandanadesan, and Drew Purves. 2010.
-{``The {Probabilistic Niche Model Reveals} the {Niche Structure} and
-{Role} of {Body Size} in a {Complex Food Web}.''} \emph{PLOS ONE} 5 (8):
-e12092. \url{https://doi.org/10.1371/journal.pone.0012092}.
 
 \bibitem[\citeproctext]{ref-williamsSimpleRulesYield2000}
 Williams, Richard J., and Neo D. Martinez. 2000. {``Simple Rules Yield
