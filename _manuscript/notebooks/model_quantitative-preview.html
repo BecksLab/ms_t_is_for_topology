@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2024-04-12">
+    <meta name="dcterms.date" content="2024-04-16">
 
     <title>Quantitative approach to topology generators</title>
     <style>
@@ -219,7 +219,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">April 12, 2024</p>
+              <p class="date">April 16, 2024</p>
             </div>
           </div>
           
@@ -354,7 +354,7 @@ Z = \frac{x_{real}-\mu_{model}}{\sigma_{model}}
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">reframe</span>(<span class="at">x_real =</span> real_val,</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">mu_sim =</span> <span class="fu">mean</span>(model_val, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">sd_sim =</span> <span class="fu">sd</span>(model_val, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">z_score =</span> ((x_real<span class="sc">-</span>mu_sim)<span class="sc">/</span>sd_sim)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">z_score =</span> (x_real<span class="sc">-</span>mu_sim)) <span class="sc">%&gt;%</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">distinct</span>()) <span class="sc">+</span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> z_score,</span>
@@ -371,9 +371,6 @@ Z = \frac{x_{real}-\mu_{model}}{\sigma_{model}}
 <div class="cell-output cell-output-stderr">
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 467 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -381,7 +378,7 @@ Z = \frac{x_{real}-\mu_{model}}{\sigma_{model}}
 <a href="model_quantitative_files/figure-html/fig-topology-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="model_quantitative_files/figure-html/fig-topology-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span> The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is…
+DIfference between real and model network summary statistics. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>.
 </figcaption>
 </figure>
 </div>
@@ -402,7 +399,7 @@ Stouffer, Daniel B, Juan Camacho, Wenxin Jiang, and Luís A Nunes Amaral. 2007. 
 </div>
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">Boxplot looking at raw values for each measurement for each model. The horizontal line represents the true overall mean for each measurement</span>
-<span class="glightbox-desc lightbox-desc-2">Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span> The magnitude of Z-score probably also tells us how ‘variable’/constrained the model is…</span>
+<span class="glightbox-desc lightbox-desc-2">DIfference between real and model network summary statistics. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>.</span>
 </div>
 </section>
      </main>
@@ -792,7 +789,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

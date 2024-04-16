@@ -103,14 +103,14 @@ $$
 #| warning: false
 #| echo: false
 #| label: fig-topology
-#| fig-cap: "Z-scores for network summary statistics. Negative Z-scores indicate a (mean) value greater than expected. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007 The magnitude of Z-score probably also tells us how 'variable'/constrained the model is..."
+#| fig-cap: "DIfference between real and model network summary statistics. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007."
 
 ggplot(df %>% 
         group_by(id, real, model)  %>% 
         reframe(x_real = real_val,
                 mu_sim = mean(model_val, na.rm = TRUE),
                 sd_sim = sd(model_val, na.rm = TRUE)) %>%
-        mutate(z_score = ((x_real-mu_sim)/sd_sim)) %>%
+        mutate(z_score = (x_real-mu_sim)) %>%
         distinct()) +
     geom_vline(aes(xintercept = 0)) +
     geom_histogram(aes(x = z_score,
