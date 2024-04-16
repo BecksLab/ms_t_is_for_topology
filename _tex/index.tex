@@ -174,7 +174,7 @@
 \title{T is for Topology}
 \author{Tanya Strydom \and Jennifer A. Dunne \and Timothée
 Poisot \and Andrew P. Beckerman}
-\date{2024-04-15}
+\date{2024-04-16}
 
 \begin{document}
 \maketitle
@@ -245,6 +245,17 @@ critical when we think about the model we want to use.
   either want to construct/predict a collection of interactions
   (generate networks) or a network of interactions (predict
   interactions).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``For example, dynamic models focus on how structure relates to
+    population dynamics and community stability (2, 7--11). Evolutionary
+    models incorporate the processes that control the formation and
+    expansion of food webs (12, 13). Static models include rules that
+    determine structural attributes of food webs (14--19).'' - Petchey
+    et al. (2008)
+  \end{itemize}
 \end{itemize}
 
 Arguably the need for methods and tools for constructing interaction
@@ -365,6 +376,18 @@ network or interaction predicting model}
 
 \end{figure}%
 
+\begin{figure}[H]
+
+{\centering \includegraphics{images/thullier_2023_concept.jpeg}
+
+}
+
+\caption{I like the use of the different source indicator items (not to
+dissimilar from Tall Tom's nature paper but also different). This is
+from Thuiller et al. (2024)}
+
+\end{figure}%
+
 \textbf{Null models:} The interactions between species occurs regardless
 of the identity of the species (\emph{i.e.,} species have no agency) and
 links are randomly distributed throughout the network. There is however
@@ -405,8 +428,9 @@ MaxEnt (Banville, Gravel, and Poisot 2023), (maybe) stochastic block
 
 \textbf{Feeding models:} Broadly this family of models is rooted in
 feeding theory and allocates the links between species based on
-energetics. This means that the model is focused on predicting not only
-the number of links in a network but also the arrangement of these links
+energetics, which predicts the diet of a consumer based on energy
+intake. This means that the model is focused on predicting not only the
+number of links in a network but also the arrangement of these links
 based on the diet breadth of a species. The diet breadth model
 (Beckerman, Petchey, and Warren 2006) as well as its allometrically
 scaled cousin the allometric diet breadth model (ADBM) (Petchey et al.
@@ -597,14 +621,14 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1096}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1233}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1233}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1233}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2192}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0959}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1096}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0959}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1031}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2062}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1443}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0928}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1546}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1031}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0928}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1031}}@{}}
 \caption{Lets make a table that gives an overview of the different model
 families and some of their features}\label{tbl-history}\tabularnewline
 \toprule\noalign{}
@@ -649,24 +673,23 @@ Interaction
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Network structure is random & (Erdős and Rényi 1959) &
-artificial? network & network (species agnostic) & random & link &
-binary \\
+null & Network structure is random & & network & network (species
+agnostic) & random & link & binary \\
 neutral & Network structure is random, but species abundance plays a
-role & (Pomeranz et al. 2019) & network & abundance, number of links &
-mass effect & link & \\
+role & Pomeranz et al. (2019) & network & abundance, number of links &
+mass effect & link & binary \\
 resource & Networks are interval, species can be ordered on a `niche
 axis' & & network & richness, connectance & `random' & link & binary \\
 generative & Networks are determined by their structural features &
 Maximum Entropy (Banville, Gravel, and Poisot 2023) & network & network
-(species agnostic) & `random' & & \\
+(species agnostic) & `random' & & binary \\
 energetic & Interactions are determined by foraging theory (feeding
-links) & ADBM (Petchey et al. 2008) & interactions & connectance, body
-size, abundance & quantitative & & quantitative \\
+links) & ADBM (Petchey et al. 2008) & interactions & body size &
+deterministic & & quantitative \\
 graph embedding & Interactions can be predicted from the latent traits
-of networks & Transfer Learning (Strydom et al. 2022) & interactions
-(but structurally constrained?) & interactions, phylogenetic tree, list
-of target species (species pool) & & & probabilistic \\
+of networks & Transfer Learning (Strydom et al. 2022) & interactions &
+interactions, phylogenetic tree, list of target species (species pool) &
+& & probabilistic \\
 trait matching & Interactions can be inferred by a mechanistic
 framework/relationships & PFIM (Shaw et al. 2024) & interactions & prior
 (expert) knowledge of trait hierarchy/relationships, traits, list of
@@ -677,7 +700,7 @@ relationship between interactions and ecologically relevant predictors &
 pool) & statistical & & \\
 expert knowledge & `Boots on the ground' ecological knowledge and
 observations & & interactions & list of target species (species pool) &
-`mechanistic' & & \\
+mechanistic & & \\
 data scavenging & Webscraping to create networks from online databases &
 & interactions & list of target species (species pool) & & & \\
 \end{longtable}
@@ -920,11 +943,9 @@ maybe it going to be more of a venn-flow chart hybrid\ldots{}}
 
 }
 
-\caption{\label{fig-topology}Z-scores for network summary statistics.
-Negative Z-scores indicate a (mean) value greater than expected. S1 - S5
-represent the different motif structures identified in Stouffer et al.
-(2007) The magnitude of Z-score probably also tells us how
-`variable'/constrained the model is\ldots{}}
+\caption{\label{fig-topology}DIfference between real and model network
+summary statistics. S1 - S5 represent the different motif structures
+identified in Stouffer et al. (2007).}
 
 \end{figure}%
 
@@ -1134,11 +1155,6 @@ Extinctions in Food Webs: A {Bayesian} Network Approach.''} Edited by
 Jessica Metcalf. \emph{Methods in Ecology and Evolution} 4 (8): 760--70.
 \url{https://doi.org/10.1111/2041-210X.12062}.
 
-\bibitem[\citeproctext]{ref-erdosRandomGraphs1959}
-Erdős, Paul, and Alfréd Rényi. 1959. {``On {Random Graphs I}.''}
-\emph{Publicationes Mathematicae}.
-\url{https://doi.org/10.5486/PMD.1959.6.3-4.12}.
-
 \bibitem[\citeproctext]{ref-fortunaHabitatLossStructure2006}
 Fortuna, Miguel A., and Jordi Bascompte. 2006. {``Habitat Loss and the
 Structure of Plant-Animal Mutualistic Networks: {Mutualistic} Networks
@@ -1335,6 +1351,13 @@ Strydom, Tanya, Giulio V. Dalla Riva, and Timothée Poisot. 2021. {``{SVD
 Entropy Reveals} the {High Complexity} of {Ecological Networks}.''}
 \emph{Frontiers in Ecology and Evolution} 9.
 \url{https://doi.org/10.3389/fevo.2021.623141}.
+
+\bibitem[\citeproctext]{ref-thuillerNavigatingIntegrationBiotic2024}
+Thuiller, Wilfried, Irene Calderón-Sanou, Loïc Chalmandrier, Pierre
+Gaüzère, Louise M. J. O'Connor, Marc Ohlmann, Giovanni Poggiato, and
+Tamara Münkemüller. 2024. {``Navigating the Integration of Biotic
+Interactions in Biogeography.''} \emph{Journal of Biogeography} 51 (4):
+550--59. \url{https://doi.org/10.1111/jbi.14734}.
 
 \bibitem[\citeproctext]{ref-uphamInferringMammalTree2019}
 Upham, Nathan S., Jacob A. Esselstyn, and Walter Jetz. 2019.
