@@ -312,13 +312,15 @@ div.csl-indent {
 <ul>
 <li>Bring up the fact that delimiting a network is in and of itself fuzzy - we tend to think of them in terms of snapshots but in reality the final (empirical) network is often the result of aggregation over multiple timescales.</li>
 <li>Also the fact that <em>some</em> people are concerned about the taxonomic resolution and cascading effects those might have on our understanding of network structure <span class="citation" data-cites="pringleResolvingFoodWebStructure2020 pringleUntanglingFoodWebs2020">(<a href="#ref-pringleResolvingFoodWebStructure2020" role="doc-biblioref">Pringle and Hutchinson 2020</a>; <a href="#ref-pringleUntanglingFoodWebs2020" role="doc-biblioref">Pringle 2020</a>)</span>, we are at risk of losing our ability to distinguish the wood from the tree - are we not (at least at times) concerned more with understanding ecosystem level processes than with needing to understand things <em>perfectly</em> at the species level.</li>
+<li>This is also going to be very important as network ecology as a field starts being incorporated into other fields <em>e.g.,</em> biogeography <span class="citation" data-cites="thuillerNavigatingIntegrationBiotic2024">(<a href="#ref-thuillerNavigatingIntegrationBiotic2024" role="doc-biblioref">Thuiller et al. 2024</a>)</span></li>
 </ul></li>
 <li><p>What do we mean when we talk about an ‘interaction network’? Is it the flow of biomass/energy? Is it an effect on fitness (feeding)? (can we really represent indirect interactions as actual links?)</p>
 <ul>
 <li>“For example, nodes can be individuals and the links contacts between those individuals (Melian et al.&nbsp;2011), nodes can be species and the links the interactions (e.g.&nbsp;feeding, mutualistic, parasitic) between them (de Ruiter et al.&nbsp;1995), or nodes can be ecological communities or ecosystems and the links fluxes between these localities (Proulx et al.&nbsp;2005; Chadès et al.&nbsp;2011)” - <span class="citation" data-cites="poisotDescribeUnderstandPredict2016">Poisot, Stouffer, and Kéfi (<a href="#ref-poisotDescribeUnderstandPredict2016" role="doc-biblioref">2016</a>)</span></li>
 </ul></li>
-<li><p>It is perhaps useful to start with asking why do we want/need models to generate networks. This can be broadly thought of to fall into two categories. Build networks because we want to build concepts vs build networks because we want specificity. Broadly this means that we either want to construct/predict a collection of interactions (generate networks) or a network of interactions (predict interactions).</p>
+<li><p>It is perhaps useful to start with asking why do we want/need models to generate networks. This can be broadly thought of to fall into two categories. Build networks because we want to build concepts vs build networks because we want specificity (‘real world’, on the ground applications). Broadly this means that we either want to construct/predict a collection of interactions (generate networks) or a network of interactions (predict interactions).</p>
 <ul>
+<li>Also need to discuss the nuance between predicting something vs generating something, which also then bleeds into need to be aware when we use the term ‘model’ as well…</li>
 <li>“For example, dynamic models focus on how structure relates to population dynamics and community stability (2, 7–11). Evolutionary models incorporate the processes that control the formation and expansion of food webs (12, 13). Static models include rules that determine structural attributes of food webs (14–19).” - <span class="citation" data-cites="petcheySizeForagingFood2008">Petchey et al. (<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">2008</a>)</span></li>
 </ul></li>
 </ul>
@@ -429,14 +431,14 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 10%">
-<col style="width: 20%">
-<col style="width: 14%">
-<col style="width: 9%">
-<col style="width: 15%">
-<col style="width: 10%">
-<col style="width: 9%">
-<col style="width: 10%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -498,8 +500,8 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <td>interactions</td>
 <td>body size</td>
 <td>deterministic</td>
+<td>energy</td>
 <td></td>
-<td>quantitative</td>
 </tr>
 <tr class="even">
 <td>graph embedding</td>
@@ -518,7 +520,7 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <td>interactions</td>
 <td>prior (expert) knowledge of trait hierarchy/relationships, traits, list of target species (species pool)</td>
 <td>mechanistic</td>
-<td></td>
+<td>trait matching (<em>sensu</em> forbidden links in a way)</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1332,7 +1334,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

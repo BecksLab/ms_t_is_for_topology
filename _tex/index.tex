@@ -234,6 +234,10 @@ critical when we think about the model we want to use.
     the wood from the tree - are we not (at least at times) concerned
     more with understanding ecosystem level processes than with needing
     to understand things \emph{perfectly} at the species level.
+  \item
+    This is also going to be very important as network ecology as a
+    field starts being incorporated into other fields \emph{e.g.,}
+    biogeography (Thuiller et al. 2024)
   \end{itemize}
 \item
   What do we mean when we talk about an `interaction network'? Is it the
@@ -255,13 +259,17 @@ critical when we think about the model we want to use.
   It is perhaps useful to start with asking why do we want/need models
   to generate networks. This can be broadly thought of to fall into two
   categories. Build networks because we want to build concepts vs build
-  networks because we want specificity. Broadly this means that we
-  either want to construct/predict a collection of interactions
-  (generate networks) or a network of interactions (predict
-  interactions).
+  networks because we want specificity (`real world', on the ground
+  applications). Broadly this means that we either want to
+  construct/predict a collection of interactions (generate networks) or
+  a network of interactions (predict interactions).
 
   \begin{itemize}
   \tightlist
+  \item
+    Also need to discuss the nuance between predicting something vs
+    generating something, which also then bleeds into need to be aware
+    when we use the term `model' as well\ldots{}
   \item
     ``For example, dynamic models focus on how structure relates to
     population dynamics and community stability (2, 7--11). Evolutionary
@@ -635,14 +643,14 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1031}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2062}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1443}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0928}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1546}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1031}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0928}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1031}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}@{}}
 \caption{Lets make a table that gives an overview of the different model
 families and some of their features}\label{tbl-history}\tabularnewline
 \toprule\noalign{}
@@ -699,7 +707,7 @@ Maximum Entropy (Banville, Gravel, and Poisot 2023) & network & network
 (species agnostic) & `random' & & binary \\
 energetic & Interactions are determined by foraging theory (feeding
 links) & ADBM (Petchey et al. 2008) & interactions & body size &
-deterministic & & quantitative \\
+deterministic & energy & \\
 graph embedding & Interactions can be predicted from the latent traits
 of networks & Transfer Learning (Strydom et al. 2022) & interactions &
 interactions, phylogenetic tree, list of target species (species pool) &
@@ -707,7 +715,8 @@ interactions, phylogenetic tree, list of target species (species pool) &
 trait matching & Interactions can be inferred by a mechanistic
 framework/relationships & PFIM (Shaw et al. 2024) & interactions & prior
 (expert) knowledge of trait hierarchy/relationships, traits, list of
-target species (species pool) & mechanistic & & \\
+target species (species pool) & mechanistic & trait matching
+(\emph{sensu} forbidden links in a way) & \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
 & interactions & interactions, traits, list of target species (species
