@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2024-04-16">
+    <meta name="dcterms.date" content="2024-04-19">
 
     <title>Quantitative approach to topology generators</title>
     <style>
@@ -219,7 +219,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">April 16, 2024</p>
+              <p class="date">April 19, 2024</p>
             </div>
           </div>
           
@@ -342,11 +342,7 @@ Boxplot looking at raw values for each measurement for each model. The horizonta
 </div>
 </div>
 </div></div>
-<p>Now we can look at the Z scores for the different models for the different network measures that we use.</p>
-<p>Here ‘Z score’ is calculated as:</p>
-<p><span class="math display">\[
-Z = \frac{x_{real}-\mu_{model}}{\sigma_{model}}
-\]</span></p>
+<p>Now we can look at the difference between the mean of the real network property and the simulated one. I had originally considered using the <span class="math inline">\(Z\)</span>-score but it doesn’t work well for the more ‘deterministic’ models (neutral and ADBM) because they effectively have a <span class="math inline">\(\sigma\)</span> of zero…</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-fig-topology" class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df <span class="sc">%&gt;%</span> </span>
@@ -378,7 +374,7 @@ Z = \frac{x_{real}-\mu_{model}}{\sigma_{model}}
 <a href="model_quantitative_files/figure-html/fig-topology-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="model_quantitative_files/figure-html/fig-topology-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-DIfference between real and model network summary statistics. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>.
+DIfference between real and model network property. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>.
 </figcaption>
 </figure>
 </div>
@@ -399,7 +395,7 @@ Stouffer, Daniel B, Juan Camacho, Wenxin Jiang, and Luís A Nunes Amaral. 2007. 
 </div>
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">Boxplot looking at raw values for each measurement for each model. The horizontal line represents the true overall mean for each measurement</span>
-<span class="glightbox-desc lightbox-desc-2">DIfference between real and model network summary statistics. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>.</span>
+<span class="glightbox-desc lightbox-desc-2">DIfference between real and model network property. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>.</span>
 </div>
 </section>
      </main>
@@ -789,7 +785,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
