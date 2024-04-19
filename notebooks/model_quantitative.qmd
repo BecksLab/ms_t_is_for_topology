@@ -91,19 +91,13 @@ ggplot(df) +
 ```
 
 
-Now we can look at the Z scores for the different models for the different network measures that we use.
-
-Here 'Z score' is calculated as:
-
-$$
- Z = \frac{x_{real}-\mu_{model}}{\sigma_{model}}
-$$
+Now we can look at the difference between the mean of the real network property and the simulated one. I had originally considered using the $Z$-score but it doesn't work well for the more 'deterministic' models (neutral and ADBM) because they effectively have a $\sigma$ of zero...
 
 ```{r}
 #| warning: false
 #| echo: false
 #| label: fig-topology
-#| fig-cap: "DIfference between real and model network summary statistics. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007."
+#| fig-cap: "DIfference between real and model network property. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007."
 
 ggplot(df %>% 
         group_by(id, real, model)  %>% 

@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -174,7 +188,7 @@
 \title{T is for Topology}
 \author{Tanya Strydom \and Jennifer A. Dunne \and Timothée
 Poisot \and Andrew P. Beckerman}
-\date{2024-04-16}
+\date{2024-04-19}
 
 \begin{document}
 \maketitle
@@ -944,8 +958,8 @@ maybe it going to be more of a venn-flow chart hybrid\ldots{}}
 }
 
 \caption{\label{fig-topology}DIfference between real and model network
-summary statistics. S1 - S5 represent the different motif structures
-identified in Stouffer et al. (2007).}
+property. S1 - S5 represent the different motif structures identified in
+Stouffer et al. (2007).}
 
 \end{figure}%
 
