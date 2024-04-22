@@ -210,14 +210,14 @@ critical when we think about the model we want to use.
   In order to construct a `perfect' network \emph{i.e.,} one which
   \emph{perfectly} captures the dynamics for a specific community at a
   specific time one needs to consider and account for many different
-  moving parts (\emph{e.g.,}). So when developing a model it makes sense
-  that you prioritise the aspect of the prediction/construction task
-  that has the most value for your research goal, acknowledging that a
-  model might fall short in others. The thing is that with the growing
-  suite of approaches to generating networks it is important that we
-  don't lose sight of the core philosophy behind the model we use and to
-  ensure that we are using the model best suited to what we want to be
-  accomplishing.
+  moving parts (\emph{e.g., \ldots{}}). So when developing a model it
+  makes sense that you prioritise the aspect of the
+  prediction/construction task that has the most value for your research
+  goal, acknowledging that a model might fall short in others. The thing
+  is that with the growing suite of approaches to generating networks it
+  is important that we don't lose sight of the core philosophy behind
+  the model we use and to ensure that we are using the model best suited
+  to what we want to be accomplishing.
 
   \begin{itemize}
   \tightlist
@@ -234,10 +234,25 @@ critical when we think about the model we want to use.
     the wood from the tree - are we not (at least at times) concerned
     more with understanding ecosystem level processes than with needing
     to understand things \emph{perfectly} at the species level.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      I don;t think these `rare'/nuanced links (e.g.~carnivorous hippos)
+      are going to rock the boat when we think about networks at the
+      structural level. To say this in a different way maybe it comes
+      down to thinking about the scale of organisation within a
+      network\ldots{} The classical levels of organisation within
+      ecology (population, community, \ldots) are also relevant when we
+      thin about a networks.
+    \end{itemize}
   \item
     This is also going to be very important as network ecology as a
-    field starts being incorporated into other fields \emph{e.g.,}
-    biogeography (Thuiller et al. 2024)
+    field starts being incorporated into other fields \emph{e.g.,} the
+    biogeography one from Thuiller et al. (2024) since there is nuance
+    in the method you use to generate the network but also in a more
+    general way in which you actually think about/delimit/conceptualise
+    your network.
   \end{itemize}
 \item
   What do we mean when we talk about an `interaction network'? Is it the
@@ -353,14 +368,16 @@ see it that means that there has always been this inherent
 acknowledgement that models are functioning at a specific `network
 level'.
 
-Other works to keep in mind: Pringle and Hutchinson (2020), Pringle
-(2020)
-
 \begin{quote}
 ``The resolution of food-web data is demonic because it can radically
 change network topology and associated biological inferences in ways
 that are unknowable in the absence of better data.'' - Pringle and
-Hutchinson (2020)
+Hutchinson (2020) The counter to this is that structural models are
+often not working at the species level and thus the structure remains
+`unchanged' when you increase the resolution - I don't think that people
+are that concerned with the structure of real world networks barring
+connectance and since that scales with species richness anyway your
+final proportion will probably still remain the same\ldots{}
 \end{quote}
 
 \begin{quote}
@@ -404,7 +421,7 @@ network or interaction predicting model}
 
 }
 
-\caption{I like the use of the different source indicator items (not to
+\caption{I like the use of the different source indicator items (not too
 dissimilar from Tall Tom's nature paper but also different). This is
 from Thuiller et al. (2024)}
 
@@ -647,16 +664,20 @@ some papers that have used the model - totes happy to drop those I
 think\ldots{}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0875}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1125}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}@{}}
 \caption{Lets make a table that gives an overview of the different model
-families and some of their features}\label{tbl-history}\tabularnewline
+families and some of their features. \emph{A column that captures naïve
+vs a priori knowledge of interactions/structure i.e., a `parameter' of
+sorts?}}\label{tbl-history}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
@@ -665,11 +686,15 @@ Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Example used
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Predicts
+Network predicted
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Links predict
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Make `\emph{de novo}' predictions (node/species identity)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Needs (minimum)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assembly
+Assembly mechanism
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -685,11 +710,15 @@ Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Example used
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Predicts
+Network predicted
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Links predict
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Make `\emph{de novo}' predictions (node/species identity)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Needs (minimum)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assembly
+Assembly mechanism
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Constraints
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -699,38 +728,44 @@ Interaction
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Network structure is random & \emph{a column that captures naïve
-vs a priori knowledge of interactions?} & network & network (species
-agnostic) & random & link & binary \\
+null & Network structure is random & & structure & & no & network
+(species agnostic) & random & link & binary \\
 neutral & Network structure is random, but species abundance plays a
-role & Pomeranz et al. (2019) & network & abundance, number of links &
-mass effect & link & binary \\
+role & Pomeranz et al. (2019) & structure & & yes & abundance, number of
+links & mass effect & link & binary \\
 resource & Networks are interval, species can be ordered on a `niche
-axis' & & network & richness, connectance & `random' & link & binary \\
+axis' & & structure & flow of biomass (resource?) & no & richness,
+connectance & `random' & link & binary \\
 generative & Networks are determined by their structural features &
-Maximum Entropy (Banville, Gravel, and Poisot 2023) & network & network
-(species agnostic) & `random' & & binary \\
+Maximum Entropy (Banville, Gravel, and Poisot 2023) & structure & & no &
+network (species agnostic) & `random' & & binary \\
 energetic & Interactions are determined by foraging theory (feeding
-links) & ADBM (Petchey et al. 2008) & interactions & body size &
-deterministic & energy & \\
+links) & ADBM (Petchey et al. 2008) & interactions & flow of energy &
+yes & body size & deterministic & energy & \\
 graph embedding & Interactions can be predicted from the latent traits
 of networks & Transfer Learning (Strydom et al. 2022) & interactions &
-interactions, phylogenetic tree, list of target species (species pool) &
-& & probabilistic \\
+potential feeding links & yes & interactions, phylogenetic tree, list of
+target species (species pool) & & & probabilistic \\
 trait matching & Interactions can be inferred by a mechanistic
-framework/relationships & PFIM (Shaw et al. 2024) & interactions & prior
-(expert) knowledge of trait hierarchy/relationships, traits, list of
-target species (species pool) & mechanistic & trait matching
-(\emph{sensu} forbidden links in a way) & \\
+framework/relationships & PFIM (Shaw et al. 2024) & interactions &
+potential feeding links & yes & prior (expert) knowledge of trait
+hierarchy/relationships, traits, list of target species (species pool) &
+mechanistic & trait matching (\emph{sensu} forbidden links in a way)
+& \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
-& interactions & interactions, traits, list of target species (species
-pool) & statistical & & \\
+& interactions & potential feeding links & yes & interactions, traits,
+list of target species (species pool) & statistical & & \\
 expert knowledge & `Boots on the ground' ecological knowledge and
-observations & & interactions & list of target species (species pool) &
-mechanistic & & \\
+observations & & interactions & potential feeding links & yes & list of
+target species (species pool) & mechanistic & forbidden links & \\
 data scavenging & Webscraping to create networks from online databases &
-& interactions & list of target species (species pool) & & & \\
+& interactions & potential feeding links & no & list of target species
+(species pool) & & & binary \\
+co-occurrence & co-occurrence patterns arise from interactions so we can
+use these patterns to reverse engineer the interactions & &
+co-occurrence links? (or am I being a bit too mean here) & association
+links & & co-occurrence (so a species list?) & statistical & & \\
 \end{longtable}
 
 \subsection{Datasets used}\label{datasets-used}
@@ -738,10 +773,10 @@ data scavenging & Webscraping to create networks from online databases &
 \subsubsection{Mangal networks}\label{mangal-networks}
 
 We queried the Mangal (Poisot et al. 2016) database and extracted a
-total of \textbf{TODO} networks. \emph{Some sort of summary as to the
-geographic/taxonomic range??} Although these networks represent a high
-volume of interaction data they do not have accompanying `metadata' that
-we would need for some of the more data-hungry model families
+total of \textbf{TODO} networks. {[}\emph{Some sort of summary as to the
+geographic/taxonomic range??{]}} Although these networks represent a
+high volume of interaction data they do not have accompanying `metadata'
+that we would need for some of the more data-hungry model families
 (\emph{e.g.,} local abundance), the Mangal networks were used to provide
 the `starting values' for the random, resource, and generative families.
 This allows us to generate a large number of different networks that we
@@ -950,14 +985,30 @@ limitations of the different families. This can include thinking about:
   computational costs
 \end{itemize}
 
-\begin{figure}[H]
+\begin{figure}
 
-{\centering \includegraphics{images/model_venn.png}
+\centering{
+
+\includegraphics{images/model_venn.png}
 
 }
 
-\caption{I still haven't given up on a sort of venn diagram idea but
-maybe it going to be more of a venn-flow chart hybrid\ldots{}}
+\caption{\label{fig-venn}I still haven't given up on a sort of venn
+diagram idea but maybe it going to be more of a venn-flow chart
+hybrid\ldots{}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/outhwaite_schematic.jpeg}
+
+}
+
+\caption{\label{fig-outhwaite}I like these schematics that Charlie
+Outhwaite presented at the EEB seminar (there was a series of them).}
 
 \end{figure}%
 
