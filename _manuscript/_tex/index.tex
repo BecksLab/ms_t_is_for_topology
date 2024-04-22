@@ -174,7 +174,7 @@
 \title{T is for Topology}
 \author{Tanya Strydom \and Jennifer A. Dunne \and Timothée
 Poisot \and Andrew P. Beckerman}
-\date{2024-04-19}
+\date{2024-04-22}
 
 \begin{document}
 \maketitle
@@ -515,6 +515,10 @@ data so I feel like its okay?}{]} and localised sampling of these types
 of datasets it is very likely that there will be many false negatives
 (missing pairwise interactions) using this approach.
 
+\textbf{Co-occurrence:} Trying to infer interactions from the
+co-occurrence patterns of species pairs within the community
+\emph{e.g.,} the geographical lasso (Ohlmann et al. 2018)
+
 \section{Model benchmarking}\label{model-benchmarking}
 
 \begin{itemize}
@@ -681,7 +685,8 @@ Interaction
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Network structure is random & & network & network (species
+null & Network structure is random & \emph{a column that captures naïve
+vs a priori knowledge of interactions?} & network & network (species
 agnostic) & random & link & binary \\
 neutral & Network structure is random, but species abundance plays a
 role & Pomeranz et al. (2019) & network & abundance, number of links &
@@ -1232,6 +1237,13 @@ Proxies.''} \emph{Trends in Ecology \& Evolution} 30 (6): 347--56.
 \bibitem[\citeproctext]{ref-newmanNetworksIntroduction2010}
 Newman, Mark E. J. 2010. \emph{Networks. {An} Introduction}. New York,
 NY: Oxford University Press.
+
+\bibitem[\citeproctext]{ref-ohlmannMappingImprintBiotic2018}
+Ohlmann, Marc, Florent Mazel, Loïc Chalmandrier, Stéphane Bec, Eric
+Coissac, Ludovic Gielly, Johan Pansu, et al. 2018. {``Mapping the
+Imprint of Biotic Interactions on {\(\beta\)}-Diversity.''}
+\emph{Ecology Letters} 21 (11): 1660--69.
+\url{https://doi.org/10.1111/ele.13143}.
 
 \bibitem[\citeproctext]{ref-petcheySizeForagingFood2008}
 Petchey, Owen L., Andrew P. Beckerman, Jens O. Riede, and Philip H.
