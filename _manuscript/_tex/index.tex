@@ -174,7 +174,7 @@
 \title{T is for Topology}
 \author{Tanya Strydom \and Jennifer A. Dunne \and Timothée
 Poisot \and Andrew P. Beckerman}
-\date{2024-04-22}
+\date{2024-04-23}
 
 \begin{document}
 \maketitle
@@ -224,13 +224,13 @@ critical when we think about the model we want to use.
     \begin{itemize}
     \tightlist
     \item
-      I don;t think these `rare'/nuanced links (e.g.~carnivorous hippos)
+      I don't think these `rare'/nuanced links (e.g.~carnivorous hippos)
       are going to rock the boat when we think about networks at the
       structural level. To say this in a different way maybe it comes
       down to thinking about the scale of organisation within a
       network\ldots{} The classical levels of organisation within
       ecology (population, community, \ldots) are also relevant when we
-      thin about a networks.
+      think about a networks.
     \end{itemize}
   \item
     This is also going to be very important as network ecology as a
@@ -534,7 +534,9 @@ of datasets it is very likely that there will be many false negatives
 
 \textbf{Co-occurrence:} Trying to infer interactions from the
 co-occurrence patterns of species pairs within the community
-\emph{e.g.,} the geographical lasso (Ohlmann et al. 2018)
+\emph{e.g.,} the geographical lasso (Ohlmann et al. 2018). This (for me)
+seems fundamentally flawed and Blanchet, Cazelles, and Gravel (2020)
+seems to agree with me at least a little bit.
 
 \section{Model benchmarking}\label{model-benchmarking}
 
@@ -653,8 +655,8 @@ think\ldots{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0875}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1125}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
@@ -751,7 +753,7 @@ data scavenging & Webscraping to create networks from online databases &
 co-occurrence & co-occurrence patterns arise from interactions so we can
 use these patterns to reverse engineer the interactions & &
 co-occurrence links? (or am I being a bit too mean here) & association
-links & & co-occurrence (so a species list?) & statistical & & \\
+links & & co-occurrence (so a species list?) & & & \\
 \end{longtable}
 
 \subsection{Datasets used}\label{datasets-used}
@@ -1075,13 +1077,15 @@ reconstructed network structure.''} - Poisot (2023)
   too hard or I might just have to sit in silence for a while\ldots)
 
   \begin{itemize}
-  \tightlist
   \item
     ``Another argument for the joint prediction of networks and
     interactions is to reduce circularity and biases in the predictions.
     As an example, models like linear filtering generate probabilities
     of non-observed interactions existing, but do so based on measured
     network properties.'' - Strydom et al. (2021)
+  \item
+    Aligning (dove-tailing) with this the idea of ensemble modelling as
+    presented by Becker et al. (2022)
   \end{itemize}
 \item
   It will be interesting to bring up the idea that if a model is missing
@@ -1128,6 +1132,13 @@ Nested Assembly of Plant-Animal Mutualistic Networks.''}
 \emph{Proceedings of the National Academy of Sciences} 100 (16):
 9383--87. \url{https://doi.org/10.1073/pnas.1633576100}.
 
+\bibitem[\citeproctext]{ref-beckerOptimisingPredictiveModels2022}
+Becker, Daniel J., Gregory F. Albery, Anna R. Sjodin, Timothée Poisot,
+Laura M. Bergner, Binqi Chen, Lily E. Cohen, et al. 2022. {``Optimising
+Predictive Models to Prioritise Viral Discovery in Zoonotic
+Reservoirs.''} \emph{The Lancet Microbe} 3 (8): e625--37.
+\url{https://doi.org/10.1016/S2666-5247(21)00245-7}.
+
 \bibitem[\citeproctext]{ref-beckermanForagingBiologyPredicts2006}
 Beckerman, Andrew P., Owen L. Petchey, and Philip H. Warren. 2006.
 {``Foraging Biology Predicts Food Web Complexity.''} \emph{Proceedings
@@ -1139,6 +1150,12 @@ Berlow, Eric L., Ulrich Brose, and Neo D. Martinez. 2008. {``The
 {`{Goldilocks} Factor'} in Food Webs.''} \emph{Proceedings of the
 National Academy of Sciences} 105 (11): 4079--80.
 \url{https://doi.org/10.1073/pnas.0800967105}.
+
+\bibitem[\citeproctext]{ref-blanchetCooccurrenceNotEvidence2020}
+Blanchet, F. Guillaume, Kevin Cazelles, and Dominique Gravel. 2020.
+{``Co-Occurrence Is Not Evidence of Ecological Interactions.''}
+\emph{Ecology Letters} 23 (7): 1050--63.
+\url{https://doi.org/10.1111/ele.13525}.
 
 \bibitem[\citeproctext]{ref-brimacombeApplyingMethodIts2024}
 Brimacombe, Chris, Korryn Bodner, and Marie-Josee Fortin. 2024.
