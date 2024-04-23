@@ -97,7 +97,7 @@ Now we can look at the difference between the mean of the real network property 
 #| warning: false
 #| echo: false
 #| label: fig-topology
-#| fig-cap: "DIfference between real and model network property. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007."
+#| fig-cap: "Difference between real and model network property. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007."
 
 ggplot(df %>% 
         group_by(id, real, model)  %>% 
