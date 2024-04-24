@@ -1,0 +1,91 @@
+---
+title: Quantitative approach to topology generators
+authors:
+  - name: Tanya Strydom
+    id: ts
+    orcid: 0000-0001-6067-1349
+date: last-modified
+bibliography: ../references.bib
+---
+
+Basically the important thing here is that we want to take what is currently table 1 in the manuscript and turn that into a more elaborate 'traits table'.
+
+```{r}
+#| include: false
+#| warning: false
+library(tidyverse)
+library(gt)
+
+trait_tbl <-
+  read.csv("data/traits_table.csv")  %>% 
+  tibble()
+```
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: tbl-traits
+#| tbl-cap: "Traits table for the different model families"
+
+trait_tbl %>% 
+  gt()  %>% 
+  sub_missing(
+    missing_text = "")  %>% 
+  tab_spanner(
+    label = "Network generators",
+    columns = c(null, neutral, resource, generative)) %>% 
+  tab_spanner(
+    label = "Interaction predictors",
+    columns = c(energetic, embedding, classifiers, matching, expert, scavenging))  %>%
+  tab_row_group(
+    label = "What is predicted?",
+    id = "predicts",
+    rows = trait_grp == "predicts"
+  ) %>%
+  tab_row_group(
+    label = "What is the underlying mechanism that predicts links?",
+    id = "mechanism",
+    rows = trait_grp == "mechanism"
+  ) %>%
+  tab_row_group(
+    label = "What do the links between nodes represent?",
+    id = "links",
+    rows = trait_grp == "links"
+  ) %>%
+  tab_row_group(
+    label = "Is there information at the node level?",
+    id = "nodes",
+    rows = trait_grp == "nodes"
+  ) %>%
+  tab_row_group(
+    label = "What type of interactions are predicted?",
+    id = "interactions",
+    rows = trait_grp == "interactions"
+  ) %>%
+  tab_row_group(
+    label = "What constrains how links are determined between nodes?",
+    id = "constraints",
+    rows = trait_grp == "constraints"
+  ) %>% 
+  tab_row_group(
+    label = "What data is needed to generate the network?",
+    id = "data",
+    rows = trait_grp %in% c("data_edge", "data_node", "data_meta", "data_network")
+  ) %>% 
+  row_group_order(
+    groups = c("predicts", "mechanism", "links", "nodes", "constraints", 
+      "interactions", "data"))  %>% 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_row_groups()) %>% 
+  tab_style(
+    style = cell_fill(color = "bisque"),
+    locations = cells_row_groups())  %>% 
+  cols_hide(columns = trait_grp)
+
+```
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

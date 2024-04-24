@@ -10,7 +10,7 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-04-23">
+<meta name="dcterms.date" content="2024-04-24">
 <meta name="keywords" content="food web, network construction">
 
 <title>T is for Topology</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-04-23">
-<meta name="citation_cover_date" content="2024-04-23">
+<meta name="citation_publication_date" content="2024-04-24">
+<meta name="citation_cover_date" content="2024-04-24">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-04-23">
+<meta name="citation_online_date" content="2024-04-24">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="Some fancy journal">
 <meta name="citation_reference" content="citation_title=Food web models: A plea for groups;,citation_abstract=The concept of a group is ubiquitous in biology. It underlies classifications in evolution and ecology, including those used to describe phylogenetic levels, the habitat and functional roles of organisms in ecosystems. Surprisingly, this concept is not explicitly included in simple models for the structure of food webs, the ecological networks formed by consumer–resource interactions. We present here the simplest possible model based on groups, and show that it performs substantially better than current models at predicting the structure of large food webs. Our group-based model can be applied to different types of biological and non-biological networks, and for the first time merges in the same framework two important notions in network theory: that of compartments (sets of highly interacting nodes) and that of roles (sets of nodes that have similar interaction patterns). This model provides a basis to examine the significance of groups in biological networks and to develop more accurate models for ecological network structure. It is especially relevant at a time when a new generation of empirical data is providing increasingly large food webs.;,citation_author=Stefano Allesina;,citation_author=Mercedes Pascual;,citation_publication_date=2009;,citation_cover_date=2009;,citation_year=2009;,citation_issue=7;,citation_doi=10.1111/j.1461-0248.2009.01321.x;,citation_issn=1461-0248;,citation_volume=12;,citation_language=en-US;,citation_journal_title=Ecology Letters;">
@@ -272,7 +272,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">April 23, 2024</p>
+              <p class="date">April 24, 2024</p>
             </div>
           </div>
           
@@ -306,27 +306,30 @@ window.Quarto = {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#model-families" id="toc-model-families" class="nav-link" data-scroll-target="#model-families"><span class="header-section-number">2</span> Model families</a></li>
-  <li><a href="#model-benchmarking" id="toc-model-benchmarking" class="nav-link" data-scroll-target="#model-benchmarking"><span class="header-section-number">3</span> Model benchmarking</a>
+  <li><a href="#what-does-a-network-mean" id="toc-what-does-a-network-mean" class="nav-link" data-scroll-target="#what-does-a-network-mean"><span class="header-section-number">2</span> What does a ‘network’ mean?</a></li>
+  <li><a href="#what-do-we-mean-when-we-generate-a-network" id="toc-what-do-we-mean-when-we-generate-a-network" class="nav-link" data-scroll-target="#what-do-we-mean-when-we-generate-a-network"><span class="header-section-number">3</span> What do we mean when we generate a network?</a></li>
+  <li><a href="#how-does-network-ecology-link-to-the-outstanding-questions-in-ecology" id="toc-how-does-network-ecology-link-to-the-outstanding-questions-in-ecology" class="nav-link" data-scroll-target="#how-does-network-ecology-link-to-the-outstanding-questions-in-ecology"><span class="header-section-number">4</span> How does network ecology link to the outstanding questions in ecology</a></li>
+  <li><a href="#model-families" id="toc-model-families" class="nav-link" data-scroll-target="#model-families"><span class="header-section-number">5</span> Model families</a></li>
+  <li><a href="#model-benchmarking" id="toc-model-benchmarking" class="nav-link" data-scroll-target="#model-benchmarking"><span class="header-section-number">6</span> Model benchmarking</a>
   <ul class="collapse">
-  <li><a href="#benchmarking-network-models" id="toc-benchmarking-network-models" class="nav-link" data-scroll-target="#benchmarking-network-models"><span class="header-section-number">3.1</span> Benchmarking network models</a></li>
-  <li><a href="#benchmarking-interaction-models" id="toc-benchmarking-interaction-models" class="nav-link" data-scroll-target="#benchmarking-interaction-models"><span class="header-section-number">3.2</span> Benchmarking interaction models</a></li>
+  <li><a href="#benchmarking-network-models" id="toc-benchmarking-network-models" class="nav-link" data-scroll-target="#benchmarking-network-models"><span class="header-section-number">6.1</span> Benchmarking network models</a></li>
+  <li><a href="#benchmarking-interaction-models" id="toc-benchmarking-interaction-models" class="nav-link" data-scroll-target="#benchmarking-interaction-models"><span class="header-section-number">6.2</span> Benchmarking interaction models</a></li>
   </ul></li>
-  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">4</span> Data &amp; Methods</a>
+  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">7</span> Data &amp; Methods</a>
   <ul class="collapse">
-  <li><a href="#selecting-models" id="toc-selecting-models" class="nav-link" data-scroll-target="#selecting-models"><span class="header-section-number">4.1</span> Selecting models</a></li>
-  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link" data-scroll-target="#datasets-used"><span class="header-section-number">4.2</span> Datasets used</a></li>
-  <li><a href="#sec-model-benchmarking" id="toc-sec-model-benchmarking" class="nav-link" data-scroll-target="#sec-model-benchmarking"><span class="header-section-number">4.3</span> Model benchmarking</a></li>
+  <li><a href="#selecting-models" id="toc-selecting-models" class="nav-link" data-scroll-target="#selecting-models"><span class="header-section-number">7.1</span> Selecting models</a></li>
+  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link" data-scroll-target="#datasets-used"><span class="header-section-number">7.2</span> Datasets used</a></li>
+  <li><a href="#sec-model-benchmarking" id="toc-sec-model-benchmarking" class="nav-link" data-scroll-target="#sec-model-benchmarking"><span class="header-section-number">7.3</span> Model benchmarking</a></li>
   </ul></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">5</span> Results</a>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">8</span> Results</a>
   <ul class="collapse">
-  <li><a href="#qualitative-stuff" id="toc-qualitative-stuff" class="nav-link" data-scroll-target="#qualitative-stuff"><span class="header-section-number">5.1</span> Qualitative stuff</a></li>
-  <li><a href="#quantitative-stuff" id="toc-quantitative-stuff" class="nav-link" data-scroll-target="#quantitative-stuff"><span class="header-section-number">5.2</span> Quantitative stuff</a></li>
+  <li><a href="#qualitative-stuff" id="toc-qualitative-stuff" class="nav-link" data-scroll-target="#qualitative-stuff"><span class="header-section-number">8.1</span> Qualitative stuff</a></li>
+  <li><a href="#quantitative-stuff" id="toc-quantitative-stuff" class="nav-link" data-scroll-target="#quantitative-stuff"><span class="header-section-number">8.2</span> Quantitative stuff</a></li>
   </ul></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">6</span> Discussion</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">9</span> Discussion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_descriptions-preview.html"><i class="bi bi-journal-code"></i>Extended model descriptions</a></li><li><a href="notebooks/model_quantitative-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li></ul></div></nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_descriptions-preview.html"><i class="bi bi-journal-code"></i>Extended model descriptions</a></li><li><a href="notebooks/model_quantitative-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li><li><a href="notebooks/model_qualitative-preview.html"><i class="bi bi-journal-code"></i>Quantitative approach to topology generators</a></li></ul></div></nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -339,6 +342,16 @@ window.Quarto = {
 
 <section id="introduction" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>Some more general thotsTM</p>
+</section>
+<section id="what-does-a-network-mean" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="what-does-a-network-mean"><span class="header-section-number">2</span> What does a ‘network’ mean?</h2>
+</section>
+<section id="what-do-we-mean-when-we-generate-a-network" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="what-do-we-mean-when-we-generate-a-network"><span class="header-section-number">3</span> What do we mean when we generate a network?</h2>
+</section>
+<section id="how-does-network-ecology-link-to-the-outstanding-questions-in-ecology" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="how-does-network-ecology-link-to-the-outstanding-questions-in-ecology"><span class="header-section-number">4</span> How does network ecology link to the outstanding questions in ecology</h2>
 <ul>
 <li><p>In order to construct a ‘perfect’ network <em>i.e.,</em> one which <em>perfectly</em> captures the dynamics for a specific community at a specific time one needs to consider and account for many different moving parts (<em>e.g., …</em>). So when developing a model it makes sense that you prioritise the aspect of the prediction/construction task that has the most value for your research goal, acknowledging that a model might fall short in others. The thing is that with the growing suite of approaches to generating networks it is important that we don’t lose sight of the core philosophy behind the model we use and to ensure that we are using the model best suited to what we want to be accomplishing.</p>
 <ul>
@@ -381,8 +394,8 @@ window.Quarto = {
 <p>“It makes no sense to describe the interaction structure of nodes which in themselves are poorly defined.” — Roslin et al.&nbsp;(2013, p.&nbsp;2)</p>
 </blockquote>
 </section>
-<section id="model-families" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="model-families"><span class="header-section-number">2</span> Model families</h2>
+<section id="model-families" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="model-families"><span class="header-section-number">5</span> Model families</h2>
 <p>Given the large number of models that have been developed it is perhaps more meaningful to group models into families with the idea that models from the same family will yield similar results because they play by similar rules. These rules referring to the underlying philosophy as to what structures either networks or the interactions within them (see <a href="#fig-concept" class="quarto-xref">Figure&nbsp;1</a> panel A). Although there have been efforts to compare and contrast different models <span class="citation" data-cites="williamsSuccessItsLimits2008 pichlerMachineLearningAlgorithms2020">(<em>e.g.,</em> <a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">Williams and Martinez 2008</a> looked at ‘structural’ models; and <a href="#ref-pichlerMachineLearningAlgorithms2020" role="doc-biblioref">Pichler et al. 2020</a> looked at ‘machine learning algorithms’)</span> there still lacks an overall synthesis as to how the different model families differ from each other.</p>
 <div id="fig-concept" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -415,8 +428,8 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <p><strong>Data scavenging:</strong> There are also a lot of published <em>interaction</em> data that are publicly available <em>e.g.,</em> the Global Biotic Interactions (GloBI) database <span class="citation" data-cites="poelenGlobalBioticInteractions2014">(<a href="#ref-poelenGlobalBioticInteractions2014" role="doc-biblioref">Poelen, Simons, and Mungall 2014</a>)</span> and these can also be used to construct an interaction network by mining these sources to look for interactions for specific species pairs. This is done by matching species pairs against those within a dataset of trophic interactions to determine if an interaction is present or absent between the two species <span class="citation" data-cites="grayJoiningDotsAutomated2015">(<em>e.g.,</em> the WebBuilder tool developed by <a href="#ref-grayJoiningDotsAutomated2015" role="doc-biblioref">Gray et al. 2015</a>)</span>. It is important to note that this methodology is only going to be able to infer observations that have been recorded in the field, and given the relative scarcity [<em>I say <span class="citation" data-cites="poisotGlobalKnowledgeGaps2021">Poisot et al. (<a href="#ref-poisotGlobalKnowledgeGaps2021" role="doc-biblioref">2021</a>)</span> but that’s more an overview of complete networks but one can also get pairwise interactions from these types of data so I feel like its okay?</em>] and localised sampling of these types of datasets it is very likely that there will be many false negatives (missing pairwise interactions) using this approach.</p>
 <p><strong>Co-occurrence:</strong> Trying to infer interactions from the co-occurrence patterns of species pairs within the community <em>e.g.,</em> the geographical lasso <span class="citation" data-cites="ohlmannMappingImprintBiotic2018">(<a href="#ref-ohlmannMappingImprintBiotic2018" role="doc-biblioref">Ohlmann et al. 2018</a>)</span>. This (for me) seems fundamentally flawed and <span class="citation" data-cites="blanchetCooccurrenceNotEvidence2020">Blanchet, Cazelles, and Gravel (<a href="#ref-blanchetCooccurrenceNotEvidence2020" role="doc-biblioref">2020</a>)</span> seems to agree with me at least a little bit.</p>
 </section>
-<section id="model-benchmarking" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="model-benchmarking"><span class="header-section-number">3</span> Model benchmarking</h2>
+<section id="model-benchmarking" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="model-benchmarking"><span class="header-section-number">6</span> Model benchmarking</h2>
 <ul>
 <li><p>‘Testing’ the performance of a model is going to depend on some of the core limitations of the model itself thus it makes sense to think of two sets benchmarking rules for network and interaction prediction models respectively (see <a href="#fig-concept" class="quarto-xref">Figure&nbsp;1</a> panel B).</p></li>
 <li><p>When it comes to network models we are concerned with the ‘preservation’ of structure and distribution of links across the network. For interaction models we want to ensure that we are able to retrieve interactions that really exist but also those that cannot exist (<em>sensu</em> forbidden links <span class="citation" data-cites="jordanoSamplingNetworksEcological2016">Jordano (<a href="#ref-jordanoSamplingNetworksEcological2016" role="doc-biblioref">2016b</a>)</span>)</p></li>
@@ -424,8 +437,8 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <blockquote class="blockquote">
 <p>“As long as these predictions are not perfect, some interactions will be predicted at the ‘wrong’ position in the network; these measures cannot describe the structural effect of these mistakes. On the other hand, measures of network structure can have the same value with interactions that fall at drastically different positions; this is in part because a lot of these measures covary with connectance, and in part because as long as these values are not 0 or their respective maximum, there is a large number of network configurations that can have the same value.” - <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span></p>
 </blockquote>
-<section id="benchmarking-network-models" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="benchmarking-network-models"><span class="header-section-number">3.1</span> Benchmarking network models</h3>
+<section id="benchmarking-network-models" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="benchmarking-network-models"><span class="header-section-number">6.1</span> Benchmarking network models</h3>
 <ul>
 <li><p>Maybe look at some of the historic papers that compare some of the ‘resource models’</p></li>
 <li><p>See also <span class="citation" data-cites="allesinaGeneralModelFood2008">Allesina, Alonso, and Pascual (<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">2008</a>)</span> and the likelihood function that they use for model selection</p></li>
@@ -435,8 +448,8 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <p>“Possibly, the most striking caveat of the use of summary statistics is that it cannot tell us whether or not a model is able to fully replicate empirical networks.” - <span class="citation" data-cites="allesinaGeneralModelFood2008">Allesina, Alonso, and Pascual (<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">2008</a>)</span></p>
 </blockquote>
 </section>
-<section id="benchmarking-interaction-models" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="benchmarking-interaction-models"><span class="header-section-number">3.2</span> Benchmarking interaction models</h3>
+<section id="benchmarking-interaction-models" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="benchmarking-interaction-models"><span class="header-section-number">6.2</span> Benchmarking interaction models</h3>
 <ul>
 <li><p>Main concern with predicting interactions is that we want to test the ‘quality’ of the links we are predicting (both true positives and true negatives), but the inherit sparsity (meaning high class imbalance) means that we also need to look at the balance of these predictions.</p></li>
 <li><p>“Both precision and recall may be useful in cases where there is imbalanced data. However, it may be valuable to prioritize one over the other in cases where the outcome of a false positive or false negative is costly.”</p></li>
@@ -453,10 +466,10 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 </ul>
 </section>
 </section>
-<section id="sec-data-methods" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">4</span> Data &amp; Methods</h2>
-<section id="selecting-models" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="selecting-models"><span class="header-section-number">4.1</span> Selecting models</h3>
+<section id="sec-data-methods" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">7</span> Data &amp; Methods</h2>
+<section id="selecting-models" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="selecting-models"><span class="header-section-number">7.1</span> Selecting models</h3>
 <p>This section depends on if we go the family route and where we introduce them. But a more extended description of each model can be found in the <code>Extended Model Description</code> notebook (I’m trying to work out how to embed this…)</p>
 <p>I know tables are awful but in this case they may make more sense. Also I don’t think I’m at the point where I can say that the table is complete/comprehensive but it getting there Not sure about putting in some papers that have used the model - totes happy to drop those I think…</p>
 <div id="tbl-history" class="quarto-float anchored">
@@ -618,17 +631,17 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </figure>
 </div>
 </section>
-<section id="datasets-used" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="datasets-used"><span class="header-section-number">4.2</span> Datasets used</h3>
-<section id="mangal-networks" class="level4" data-number="4.2.1">
-<h4 data-number="4.2.1" class="anchored" data-anchor-id="mangal-networks"><span class="header-section-number">4.2.1</span> Mangal networks</h4>
-<p>We queried the Mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot et al. 2016</a>)</span> database and extracted a total of <strong>TODO</strong> networks. [<em>Some sort of summary as to the geographic/taxonomic range??]</em> Although these networks represent a high volume of interaction data they do not have accompanying ‘metadata’ that we would need for some of the more data-hungry model families (<em>e.g.,</em> local abundance), the Mangal networks were used to provide the ‘starting values’ for the random, resource, and generative families. This allows us to generate a large number of different networks that we can use to compare and contrast the performance of the various model families (see <a href="#sec-model-benchmarking" class="quarto-xref">Section&nbsp;4.3</a> for a more detailed breakdown). For each network from Mangal we generated <strong>TODO</strong> versions of that network using each model family.</p>
+<section id="datasets-used" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="datasets-used"><span class="header-section-number">7.2</span> Datasets used</h3>
+<section id="mangal-networks" class="level4" data-number="7.2.1">
+<h4 data-number="7.2.1" class="anchored" data-anchor-id="mangal-networks"><span class="header-section-number">7.2.1</span> Mangal networks</h4>
+<p>We queried the Mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot et al. 2016</a>)</span> database and extracted a total of <strong>TODO</strong> networks. [<em>Some sort of summary as to the geographic/taxonomic range??]</em> Although these networks represent a high volume of interaction data they do not have accompanying ‘metadata’ that we would need for some of the more data-hungry model families (<em>e.g.,</em> local abundance), the Mangal networks were used to provide the ‘starting values’ for the random, resource, and generative families. This allows us to generate a large number of different networks that we can use to compare and contrast the performance of the various model families (see <a href="#sec-model-benchmarking" class="quarto-xref">Section&nbsp;7.3</a> for a more detailed breakdown). For each network from Mangal we generated <strong>TODO</strong> versions of that network using each model family.</p>
 <blockquote class="blockquote">
 <p>“These complex food webs differ in their level of resolution and sampling effort, which may introduce noise in the estimation of their properties, especially given their large number of interacting elements. However, because our MaxEnt models are applied on imperfect data, they aim at reproducing the sampled structure of food webs, not their actual structure.” - <span class="citation" data-cites="banvilleWhatConstrainsFood2023">Banville, Gravel, and Poisot (<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">2023</a>)</span> (something to think about…)</p>
 </blockquote>
 </section>
-<section id="empirical-networks" class="level4" data-number="4.2.2">
-<h4 data-number="4.2.2" class="anchored" data-anchor-id="empirical-networks"><span class="header-section-number">4.2.2</span> Empirical networks</h4>
+<section id="empirical-networks" class="level4" data-number="7.2.2">
+<h4 data-number="7.2.2" class="anchored" data-anchor-id="empirical-networks"><span class="header-section-number">7.2.2</span> Empirical networks</h4>
 <p>‘Elite’ number of datasets for interaction models</p>
 <p>Although the availability of empirical interaction data is growing as techniques begin to improve and grow <span class="citation" data-cites="pringleResolvingFoodWebStructure2020">(<a href="#ref-pringleResolvingFoodWebStructure2020" role="doc-biblioref">Pringle and Hutchinson 2020</a>)</span>, we still lack a way to define what is the ‘ideal’ interaction dataset.</p>
 <p>New Zealand dataset(s): <span class="citation" data-cites="pomeranzInferringPredatorPrey2019">Pomeranz et al. (<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">2019</a>)</span></p>
@@ -638,16 +651,16 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <p>I think we should also use the <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008">Jennifer A. Dunne et al. (<a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">2008</a>)</span> work. Because 1) it gives the paleo-centric methods their moment in the sun and 2) I think it also brings up the interesting question of can we use modern structure to predict past ones?</p>
 </section>
 </section>
-<section id="sec-model-benchmarking" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="sec-model-benchmarking"><span class="header-section-number">4.3</span> Model benchmarking</h3>
+<section id="sec-model-benchmarking" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="sec-model-benchmarking"><span class="header-section-number">7.3</span> Model benchmarking</h3>
 <p>For now the (still essentially pending) workflow/associated code can be found at the following repository <a href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</a>. This will reflect that which is shown in panel <em>B</em> of <a href="#fig-concept" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <ul>
 <li>Data ‘cost’ (some methods might need a lot lot of supporting data vs something very light weight)</li>
 <li>I think it would be remiss to not also take into consideration computational cost</li>
 <li>Something about the network output - I’m acknowledging my biases and saying that probabilistic (or <em>maybe</em> weighted) links are the way</li>
 </ul>
-<section id="network-models" class="level4" data-number="4.3.1">
-<h4 data-number="4.3.1" class="anchored" data-anchor-id="network-models"><span class="header-section-number">4.3.1</span> Network models</h4>
+<section id="network-models" class="level4" data-number="7.3.1">
+<h4 data-number="7.3.1" class="anchored" data-anchor-id="network-models"><span class="header-section-number">7.3.1</span> Network models</h4>
 <p>Want to compare real vs predicted and then get something that looks like <a href="#fig-topology" class="quarto-xref">Figure&nbsp;4</a></p>
 <ul>
 <li><p>connectance, nestedness (Bastolla et al., 2009), modularity (Barber, 2007), asymmetry (Delmas et al., 2018), and Jaccard network dissimilarity (Canard et al., 2014)</p></li>
@@ -663,8 +676,8 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </ul></li>
 </ul>
 </section>
-<section id="interaction-models" class="level4" data-number="4.3.2">
-<h4 data-number="4.3.2" class="anchored" data-anchor-id="interaction-models"><span class="header-section-number">4.3.2</span> Interaction models</h4>
+<section id="interaction-models" class="level4" data-number="7.3.2">
+<h4 data-number="7.3.2" class="anchored" data-anchor-id="interaction-models"><span class="header-section-number">7.3.2</span> Interaction models</h4>
 <ul>
 <li>Based on <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span>:
 <ul>
@@ -674,8 +687,8 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <li>Maybe same measures we use for the network models</li>
 </ul>
 </section>
-<section id="action-plan" class="level4" data-number="4.3.3">
-<h4 data-number="4.3.3" class="anchored" data-anchor-id="action-plan"><span class="header-section-number">4.3.3</span> Action plan</h4>
+<section id="action-plan" class="level4" data-number="7.3.3">
+<h4 data-number="7.3.3" class="anchored" data-anchor-id="action-plan"><span class="header-section-number">7.3.3</span> Action plan</h4>
 <ol type="1">
 <li>Shortlist/finalise the different topo generators</li>
 <li>collate/translate into <code>Julia</code>
@@ -699,11 +712,11 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 </section>
 </section>
 </section>
-<section id="results" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="results"><span class="header-section-number">5</span> Results</h2>
+<section id="results" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="results"><span class="header-section-number">8</span> Results</h2>
 <p><span class="citation" data-cites="cohenStochasticTheoryCommunity1985">Joel E. Cohen, Newman, and Steele (<a href="#ref-cohenStochasticTheoryCommunity1985" role="doc-biblioref">1985</a>)</span> actually tells us that the cascade model only really works for communities that range from 3-33 species… and <span class="citation" data-cites="williamsSuccessItsLimits2008">Williams and Martinez (<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">2008</a>)</span> also highlights how structural models really only work for small communities</p>
-<section id="qualitative-stuff" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="qualitative-stuff"><span class="header-section-number">5.1</span> Qualitative stuff</h3>
+<section id="qualitative-stuff" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="qualitative-stuff"><span class="header-section-number">8.1</span> Qualitative stuff</h3>
 <p>Maybe not the best term to use but thinking here about practical limitations of the different families. This can include thinking about:</p>
 <ul>
 <li>scale limitations (time or space); <em>e.g.,</em> a metaweb is going to encapsulate but not distinguish between different seasons or locations</li>
@@ -731,8 +744,8 @@ Figure&nbsp;3: I like these schematics that Charlie Outhwaite presented at the E
 </figure>
 </div>
 </section>
-<section id="quantitative-stuff" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="quantitative-stuff"><span class="header-section-number">5.2</span> Quantitative stuff</h3>
+<section id="quantitative-stuff" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="quantitative-stuff"><span class="header-section-number">8.2</span> Quantitative stuff</h3>
 <div class="quarto-embed-nb-cell">
 <div id="cell-fig-topology" class="cell">
 <div class="cell-output cell-output-display">
@@ -762,8 +775,8 @@ Figure&nbsp;5: Cool way to conceptualise results from <span class="citation" dat
 </div>
 </section>
 </section>
-<section id="discussion" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="discussion"><span class="header-section-number">6</span> Discussion</h2>
+<section id="discussion" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="discussion"><span class="header-section-number">9</span> Discussion</h2>
 <ul>
 <li><p>I think a big take home will (hopefully) be how different approaches do better in different situations and so you as an end user need to take this into consideration and pick accordingly. I think <span class="citation" data-cites="petcheyFitEfficiencyBiology2011">Petchey et al. (<a href="#ref-petcheyFitEfficiencyBiology2011" role="doc-biblioref">2011</a>)</span> might have (and share) some thoughts on this (thanks Andrew). I feel like I need to look at <span class="citation" data-cites="berlowGoldilocksFactorFood2008">Berlow, Brose, and Martinez (<a href="#ref-berlowGoldilocksFactorFood2008" role="doc-biblioref">2008</a>)</span> but maybe not exactly in this context but vaguely adjacent.</p></li>
 <li><p>An interesting thing to also think about (and arguably it will be addressed based on some of the other thoughts and ideas) is data dependant and data independent ‘parametrisation’ of the models…</p></li>
@@ -981,7 +994,7 @@ Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Com
   author = {Strydom, Tanya and A. Dunne, Jennifer and Poisot, Timothée
     and P. Beckerman, Andrew},
   title = {T Is for {Topology}},
-  date = {2024-04-23},
+  date = {2024-04-24},
   langid = {en},
   abstract = {There are many reasons one might want to generate a
     network and there are many tools on the market that might make that
@@ -996,7 +1009,7 @@ Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Com
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-strydom2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
 Beckerman. 2024. <span>“T Is for Topology.”</span> Some Fancy Journal.
-April 23, 2024.
+April 24, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1420,7 +1433,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
