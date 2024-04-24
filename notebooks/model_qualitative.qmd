@@ -1,5 +1,5 @@
 ---
-title: Quantitative approach to topology generators
+title: Qualitative approach to topology generators
 authors:
   - name: Tanya Strydom
     id: ts
