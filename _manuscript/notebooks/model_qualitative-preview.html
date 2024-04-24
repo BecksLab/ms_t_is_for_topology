@@ -246,9 +246,7 @@
 
        <p>Basically the important thing here is that we want to take what is currently table 1 in the manuscript and turn that into a more elaborate ‘traits table’.</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
@@ -261,50 +259,93 @@
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>gtcars_8 <span class="ot">&lt;-</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  gtcars  <span class="sc">%&gt;%</span> </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(ctry_origin)  <span class="sc">%&gt;%</span> </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">2</span>)  <span class="sc">%&gt;%</span> </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()  <span class="sc">%&gt;%</span> </span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(ctry_origin <span class="sc">!=</span> <span class="st">"United Kingdom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>trait_tbl <span class="ot">&lt;-</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read.csv</span>(<span class="st">"data/traits_table.csv"</span>)  <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell">
 
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-traits</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Traits table for the different model families"</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>gtcars_8 <span class="sc">|&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(ctry_origin) <span class="sc">|&gt;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div><div id="tbl-traits" class="cell quarto-float anchored">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>trait_tbl <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()  <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sub_missing</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">missing_text =</span> <span class="st">""</span>)  <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_spanner</span>(</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"Network generators"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(null, neutral, resource, generative)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_spanner</span>(</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"Interaction predictors"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(energetic, embedding, classifiers, matching, expert, scavenging))  <span class="sc">%&gt;%</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_row_group</span>(</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"What is predicted?"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="st">"predicts"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">rows =</span> trait_grp <span class="sc">==</span> <span class="st">"predicts"</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_row_group</span>(</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"What is the underlying mechanism that predicts links?"</span>,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="st">"mechanism"</span>,</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">rows =</span> trait_grp <span class="sc">==</span> <span class="st">"mechanism"</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_row_group</span>(</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"What do the links between nodes represent?"</span>,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="st">"links"</span>,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">rows =</span> trait_grp <span class="sc">==</span> <span class="st">"links"</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_row_group</span>(</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"Is there information at the node level?"</span>,</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="st">"nodes"</span>,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">rows =</span> trait_grp <span class="sc">==</span> <span class="st">"nodes"</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_row_group</span>(</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"What type of interactions are predicted?"</span>,</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="st">"interactions"</span>,</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">rows =</span> trait_grp <span class="sc">==</span> <span class="st">"interactions"</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_row_group</span>(</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"What constrains how links are determined between nodes?"</span>,</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="st">"constraints"</span>,</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">rows =</span> trait_grp <span class="sc">==</span> <span class="st">"constraints"</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_row_group</span>(</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"What data is needed to generate the network?"</span>,</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="st">"data"</span>,</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">rows =</span> trait_grp <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"data_edge"</span>, <span class="st">"data_node"</span>, <span class="st">"data_meta"</span>, <span class="st">"data_network"</span>)</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row_group_order</span>(</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">groups =</span> <span class="fu">c</span>(<span class="st">"predicts"</span>, <span class="st">"mechanism"</span>, <span class="st">"links"</span>, <span class="st">"nodes"</span>, <span class="st">"constraints"</span>, </span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>      <span class="st">"interactions"</span>, <span class="st">"data"</span>))  <span class="sc">%&gt;%</span> </span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>),</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_row_groups</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"bisque"</span>),</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_row_groups</span>())  <span class="sc">%&gt;%</span> </span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_hide</span>(<span class="at">columns =</span> trait_grp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div><div id="tbl-traits" class="cell quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-traits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Traits table for the different model families
 </figcaption>
 <div aria-describedby="tbl-traits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="aeuguarwgo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#aeuguarwgo table {
+<div id="omnjqsdmhc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#omnjqsdmhc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#aeuguarwgo thead, #aeuguarwgo tbody, #aeuguarwgo tfoot, #aeuguarwgo tr, #aeuguarwgo td, #aeuguarwgo th {
+#omnjqsdmhc thead, #omnjqsdmhc tbody, #omnjqsdmhc tfoot, #omnjqsdmhc tr, #omnjqsdmhc td, #omnjqsdmhc th {
   border-style: none;
 }
 
-#aeuguarwgo p {
+#omnjqsdmhc p {
   margin: 0;
   padding: 0;
 }
 
-#aeuguarwgo .gt_table {
+#omnjqsdmhc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -330,12 +371,12 @@ Traits table for the different model families
   border-left-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_caption {
+#omnjqsdmhc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#aeuguarwgo .gt_title {
+#omnjqsdmhc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -347,7 +388,7 @@ Traits table for the different model families
   border-bottom-width: 0;
 }
 
-#aeuguarwgo .gt_subtitle {
+#omnjqsdmhc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -359,7 +400,7 @@ Traits table for the different model families
   border-top-width: 0;
 }
 
-#aeuguarwgo .gt_heading {
+#omnjqsdmhc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -371,13 +412,13 @@ Traits table for the different model families
   border-right-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_bottom_border {
+#omnjqsdmhc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_col_headings {
+#omnjqsdmhc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -392,7 +433,7 @@ Traits table for the different model families
   border-right-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_col_heading {
+#omnjqsdmhc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -412,7 +453,7 @@ Traits table for the different model families
   overflow-x: hidden;
 }
 
-#aeuguarwgo .gt_column_spanner_outer {
+#omnjqsdmhc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -424,15 +465,15 @@ Traits table for the different model families
   padding-right: 4px;
 }
 
-#aeuguarwgo .gt_column_spanner_outer:first-child {
+#omnjqsdmhc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aeuguarwgo .gt_column_spanner_outer:last-child {
+#omnjqsdmhc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aeuguarwgo .gt_column_spanner {
+#omnjqsdmhc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -444,11 +485,11 @@ Traits table for the different model families
   width: 100%;
 }
 
-#aeuguarwgo .gt_spanner_row {
+#omnjqsdmhc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#aeuguarwgo .gt_group_heading {
+#omnjqsdmhc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -474,7 +515,7 @@ Traits table for the different model families
   text-align: left;
 }
 
-#aeuguarwgo .gt_empty_group_heading {
+#omnjqsdmhc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -489,15 +530,15 @@ Traits table for the different model families
   vertical-align: middle;
 }
 
-#aeuguarwgo .gt_from_md > :first-child {
+#omnjqsdmhc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aeuguarwgo .gt_from_md > :last-child {
+#omnjqsdmhc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aeuguarwgo .gt_row {
+#omnjqsdmhc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -516,7 +557,7 @@ Traits table for the different model families
   overflow-x: hidden;
 }
 
-#aeuguarwgo .gt_stub {
+#omnjqsdmhc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -529,7 +570,7 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#aeuguarwgo .gt_stub_row_group {
+#omnjqsdmhc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -543,15 +584,15 @@ Traits table for the different model families
   vertical-align: top;
 }
 
-#aeuguarwgo .gt_row_group_first td {
+#omnjqsdmhc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#aeuguarwgo .gt_row_group_first th {
+#omnjqsdmhc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#aeuguarwgo .gt_summary_row {
+#omnjqsdmhc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -561,16 +602,16 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#aeuguarwgo .gt_first_summary_row {
+#omnjqsdmhc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_first_summary_row.thick {
+#omnjqsdmhc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#aeuguarwgo .gt_last_summary_row {
+#omnjqsdmhc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -580,7 +621,7 @@ Traits table for the different model families
   border-bottom-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_grand_summary_row {
+#omnjqsdmhc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -590,7 +631,7 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#aeuguarwgo .gt_first_grand_summary_row {
+#omnjqsdmhc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -600,7 +641,7 @@ Traits table for the different model families
   border-top-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_last_grand_summary_row_top {
+#omnjqsdmhc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -610,11 +651,11 @@ Traits table for the different model families
   border-bottom-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_striped {
+#omnjqsdmhc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aeuguarwgo .gt_table_body {
+#omnjqsdmhc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -623,7 +664,7 @@ Traits table for the different model families
   border-bottom-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_footnotes {
+#omnjqsdmhc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -637,7 +678,7 @@ Traits table for the different model families
   border-right-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_footnote {
+#omnjqsdmhc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -646,7 +687,7 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#aeuguarwgo .gt_sourcenotes {
+#omnjqsdmhc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -660,7 +701,7 @@ Traits table for the different model families
   border-right-color: #D3D3D3;
 }
 
-#aeuguarwgo .gt_sourcenote {
+#omnjqsdmhc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -668,226 +709,757 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#aeuguarwgo .gt_left {
+#omnjqsdmhc .gt_left {
   text-align: left;
 }
 
-#aeuguarwgo .gt_center {
+#omnjqsdmhc .gt_center {
   text-align: center;
 }
 
-#aeuguarwgo .gt_right {
+#omnjqsdmhc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aeuguarwgo .gt_font_normal {
+#omnjqsdmhc .gt_font_normal {
   font-weight: normal;
 }
 
-#aeuguarwgo .gt_font_bold {
+#omnjqsdmhc .gt_font_bold {
   font-weight: bold;
 }
 
-#aeuguarwgo .gt_font_italic {
+#omnjqsdmhc .gt_font_italic {
   font-style: italic;
 }
 
-#aeuguarwgo .gt_super {
+#omnjqsdmhc .gt_super {
   font-size: 65%;
 }
 
-#aeuguarwgo .gt_footnote_marks {
+#omnjqsdmhc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#aeuguarwgo .gt_asterisk {
+#omnjqsdmhc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#aeuguarwgo .gt_indent_1 {
+#omnjqsdmhc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#aeuguarwgo .gt_indent_2 {
+#omnjqsdmhc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#aeuguarwgo .gt_indent_3 {
+#omnjqsdmhc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#aeuguarwgo .gt_indent_4 {
+#omnjqsdmhc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#aeuguarwgo .gt_indent_5 {
+#omnjqsdmhc .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
 <table class="gt_table do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
 <thead>
-<tr class="header gt_col_headings">
-<th id="mfr" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">mfr</th>
-<th id="model" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">model</th>
-<th id="year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">year</th>
-<th id="trim" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">trim</th>
-<th id="bdy_style" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">bdy_style</th>
-<th id="hp" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">hp</th>
-<th id="hp_rpm" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">hp_rpm</th>
-<th id="trq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">trq</th>
-<th id="trq_rpm" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">trq_rpm</th>
-<th id="mpg_c" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">mpg_c</th>
-<th id="mpg_h" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">mpg_h</th>
-<th id="drivetrain" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">drivetrain</th>
-<th id="trsmn" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">trsmn</th>
-<th id="msrp" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">msrp</th>
+<tr class="header gt_col_headings gt_spanner_row">
+<th rowspan="2" id="trait" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">trait</th>
+<th colspan="4" id="Network generators" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Network generators</span></th>
+<th colspan="6" id="Interaction predictors" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Interaction predictors</span></th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="null" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">null</th>
+<th id="neutral" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">neutral</th>
+<th id="resource" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">resource</th>
+<th id="generative" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">generative</th>
+<th id="energetic" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">energetic</th>
+<th id="embedding" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">embedding</th>
+<th id="classifiers" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">classifiers</th>
+<th id="matching" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">matching</th>
+<th id="expert" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">expert</th>
+<th id="scavenging" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">scavenging</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd gt_group_heading_row">
-<td colspan="14" id="Germany" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Germany</td>
+<td colspan="11" id="What is predicted?" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #FFE4C4" scope="colgroup">What is predicted?</td>
 </tr>
 <tr class="even gt_row_group_first">
-<td class="gt_row gt_left" headers="Germany  mfr">BMW</td>
-<td class="gt_row gt_left" headers="Germany  model">6-Series</td>
-<td class="gt_row gt_right" headers="Germany  year">2016</td>
-<td class="gt_row gt_left" headers="Germany  trim">640 I Coupe</td>
-<td class="gt_row gt_left" headers="Germany  bdy_style">coupe</td>
-<td class="gt_row gt_right" headers="Germany  hp">315</td>
-<td class="gt_row gt_right" headers="Germany  hp_rpm">5800</td>
-<td class="gt_row gt_right" headers="Germany  trq">330</td>
-<td class="gt_row gt_right" headers="Germany  trq_rpm">1400</td>
-<td class="gt_row gt_right" headers="Germany  mpg_c">20</td>
-<td class="gt_row gt_right" headers="Germany  mpg_h">30</td>
-<td class="gt_row gt_left" headers="Germany  drivetrain">rwd</td>
-<td class="gt_row gt_left" headers="Germany  trsmn">8am</td>
-<td class="gt_row gt_right" headers="Germany  msrp">77300</td>
+<td class="gt_row gt_left" headers="predicts  trait">structure</td>
+<td class="gt_row gt_right" headers="predicts  null">1</td>
+<td class="gt_row gt_right" headers="predicts  neutral">1</td>
+<td class="gt_row gt_right" headers="predicts  resource">1</td>
+<td class="gt_row gt_right" headers="predicts  generative">1</td>
+<td class="gt_row gt_right" headers="predicts  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="predicts  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="predicts  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="predicts  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="predicts  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="predicts  scavenging"><br>
+</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Germany  mfr">BMW</td>
-<td class="gt_row gt_left" headers="Germany  model">i8</td>
-<td class="gt_row gt_right" headers="Germany  year">2016</td>
-<td class="gt_row gt_left" headers="Germany  trim">Mega World Coupe</td>
-<td class="gt_row gt_left" headers="Germany  bdy_style">coupe</td>
-<td class="gt_row gt_right" headers="Germany  hp">357</td>
-<td class="gt_row gt_right" headers="Germany  hp_rpm">5800</td>
-<td class="gt_row gt_right" headers="Germany  trq">420</td>
-<td class="gt_row gt_right" headers="Germany  trq_rpm">3700</td>
-<td class="gt_row gt_right" headers="Germany  mpg_c">28</td>
-<td class="gt_row gt_right" headers="Germany  mpg_h">29</td>
-<td class="gt_row gt_left" headers="Germany  drivetrain">awd</td>
-<td class="gt_row gt_left" headers="Germany  trsmn">6am</td>
-<td class="gt_row gt_right" headers="Germany  msrp">140700</td>
+<td class="gt_row gt_left" headers="predicts  trait">interactions</td>
+<td class="gt_row gt_right" headers="predicts  null"><br>
+</td>
+<td class="gt_row gt_right" headers="predicts  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="predicts  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="predicts  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="predicts  energetic">1</td>
+<td class="gt_row gt_right" headers="predicts  embedding">1</td>
+<td class="gt_row gt_right" headers="predicts  classifiers">1</td>
+<td class="gt_row gt_right" headers="predicts  matching">1</td>
+<td class="gt_row gt_right" headers="predicts  expert">1</td>
+<td class="gt_row gt_right" headers="predicts  scavenging">1</td>
 </tr>
 <tr class="even gt_group_heading_row">
-<td colspan="14" id="Italy" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Italy</td>
+<td colspan="11" id="What is the underlying mechanism that predicts links?" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #FFE4C4" scope="colgroup">What is the underlying mechanism that predicts links?</td>
 </tr>
 <tr class="odd gt_row_group_first">
-<td class="gt_row gt_left" headers="Italy  mfr">Ferrari</td>
-<td class="gt_row gt_left" headers="Italy  model">458 Speciale</td>
-<td class="gt_row gt_right" headers="Italy  year">2015</td>
-<td class="gt_row gt_left" headers="Italy  trim">Base Coupe</td>
-<td class="gt_row gt_left" headers="Italy  bdy_style">coupe</td>
-<td class="gt_row gt_right" headers="Italy  hp">597</td>
-<td class="gt_row gt_right" headers="Italy  hp_rpm">9000</td>
-<td class="gt_row gt_right" headers="Italy  trq">398</td>
-<td class="gt_row gt_right" headers="Italy  trq_rpm">6000</td>
-<td class="gt_row gt_right" headers="Italy  mpg_c">13</td>
-<td class="gt_row gt_right" headers="Italy  mpg_h">17</td>
-<td class="gt_row gt_left" headers="Italy  drivetrain">rwd</td>
-<td class="gt_row gt_left" headers="Italy  trsmn">7a</td>
-<td class="gt_row gt_right" headers="Italy  msrp">291744</td>
+<td class="gt_row gt_left" headers="mechanism  trait">random</td>
+<td class="gt_row gt_right" headers="mechanism  null">1</td>
+<td class="gt_row gt_right" headers="mechanism  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  resource">1</td>
+<td class="gt_row gt_right" headers="mechanism  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  scavenging"><br>
+</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Italy  mfr">Ferrari</td>
-<td class="gt_row gt_left" headers="Italy  model">458 Spider</td>
-<td class="gt_row gt_right" headers="Italy  year">2015</td>
-<td class="gt_row gt_left" headers="Italy  trim">Base</td>
-<td class="gt_row gt_left" headers="Italy  bdy_style">convertible</td>
-<td class="gt_row gt_right" headers="Italy  hp">562</td>
-<td class="gt_row gt_right" headers="Italy  hp_rpm">9000</td>
-<td class="gt_row gt_right" headers="Italy  trq">398</td>
-<td class="gt_row gt_right" headers="Italy  trq_rpm">6000</td>
-<td class="gt_row gt_right" headers="Italy  mpg_c">13</td>
-<td class="gt_row gt_right" headers="Italy  mpg_h">17</td>
-<td class="gt_row gt_left" headers="Italy  drivetrain">rwd</td>
-<td class="gt_row gt_left" headers="Italy  trsmn">7a</td>
-<td class="gt_row gt_right" headers="Italy  msrp">263553</td>
+<td class="gt_row gt_left" headers="mechanism  trait">mass_effect</td>
+<td class="gt_row gt_right" headers="mechanism  null"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  neutral">1</td>
+<td class="gt_row gt_right" headers="mechanism  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="mechanism  trait">deterministic</td>
+<td class="gt_row gt_right" headers="mechanism  null"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  energetic">1</td>
+<td class="gt_row gt_right" headers="mechanism  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  matching">1</td>
+<td class="gt_row gt_right" headers="mechanism  expert">1</td>
+<td class="gt_row gt_right" headers="mechanism  scavenging">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="mechanism  trait">mechanistic</td>
+<td class="gt_row gt_right" headers="mechanism  null"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="mechanism  trait">mathematical</td>
+<td class="gt_row gt_right" headers="mechanism  null"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  generative">1</td>
+<td class="gt_row gt_right" headers="mechanism  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  embedding">1</td>
+<td class="gt_row gt_right" headers="mechanism  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  scavenging"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="mechanism  trait">statistical</td>
+<td class="gt_row gt_right" headers="mechanism  null"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  classifiers">1</td>
+<td class="gt_row gt_right" headers="mechanism  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="mechanism  scavenging"><br>
+</td>
 </tr>
 <tr class="odd gt_group_heading_row">
-<td colspan="14" id="Japan" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Japan</td>
+<td colspan="11" id="What do the links between nodes represent?" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #FFE4C4" scope="colgroup">What do the links between nodes represent?</td>
 </tr>
 <tr class="even gt_row_group_first">
-<td class="gt_row gt_left" headers="Japan  mfr">Acura</td>
-<td class="gt_row gt_left" headers="Japan  model">NSX</td>
-<td class="gt_row gt_right" headers="Japan  year">2017</td>
-<td class="gt_row gt_left" headers="Japan  trim">Base Coupe</td>
-<td class="gt_row gt_left" headers="Japan  bdy_style">coupe</td>
-<td class="gt_row gt_right" headers="Japan  hp">573</td>
-<td class="gt_row gt_right" headers="Japan  hp_rpm">6500</td>
-<td class="gt_row gt_right" headers="Japan  trq">476</td>
-<td class="gt_row gt_right" headers="Japan  trq_rpm">2000</td>
-<td class="gt_row gt_right" headers="Japan  mpg_c">21</td>
-<td class="gt_row gt_right" headers="Japan  mpg_h">22</td>
-<td class="gt_row gt_left" headers="Japan  drivetrain">awd</td>
-<td class="gt_row gt_left" headers="Japan  trsmn">9a</td>
-<td class="gt_row gt_right" headers="Japan  msrp">156000</td>
+<td class="gt_row gt_left" headers="links  trait">resources</td>
+<td class="gt_row gt_right" headers="links  null">1</td>
+<td class="gt_row gt_right" headers="links  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="links  resource">1</td>
+<td class="gt_row gt_right" headers="links  generative">1</td>
+<td class="gt_row gt_right" headers="links  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="links  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="links  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="links  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="links  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="links  scavenging"><br>
+</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Japan  mfr">Nissan</td>
-<td class="gt_row gt_left" headers="Japan  model">GT-R</td>
-<td class="gt_row gt_right" headers="Japan  year">2016</td>
-<td class="gt_row gt_left" headers="Japan  trim">Premium Coupe</td>
-<td class="gt_row gt_left" headers="Japan  bdy_style">coupe</td>
-<td class="gt_row gt_right" headers="Japan  hp">545</td>
-<td class="gt_row gt_right" headers="Japan  hp_rpm">6400</td>
-<td class="gt_row gt_right" headers="Japan  trq">436</td>
-<td class="gt_row gt_right" headers="Japan  trq_rpm">3200</td>
-<td class="gt_row gt_right" headers="Japan  mpg_c">16</td>
-<td class="gt_row gt_right" headers="Japan  mpg_h">22</td>
-<td class="gt_row gt_left" headers="Japan  drivetrain">awd</td>
-<td class="gt_row gt_left" headers="Japan  trsmn">6a</td>
-<td class="gt_row gt_right" headers="Japan  msrp">101770</td>
-</tr>
-<tr class="even gt_group_heading_row">
-<td colspan="14" id="United States" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">United States</td>
-</tr>
-<tr class="odd gt_row_group_first">
-<td class="gt_row gt_left" headers="United States  mfr">Ford</td>
-<td class="gt_row gt_left" headers="United States  model">GT</td>
-<td class="gt_row gt_right" headers="United States  year">2017</td>
-<td class="gt_row gt_left" headers="United States  trim">Base Coupe</td>
-<td class="gt_row gt_left" headers="United States  bdy_style">coupe</td>
-<td class="gt_row gt_right" headers="United States  hp">647</td>
-<td class="gt_row gt_right" headers="United States  hp_rpm">6250</td>
-<td class="gt_row gt_right" headers="United States  trq">550</td>
-<td class="gt_row gt_right" headers="United States  trq_rpm">5900</td>
-<td class="gt_row gt_right" headers="United States  mpg_c">11</td>
-<td class="gt_row gt_right" headers="United States  mpg_h">18</td>
-<td class="gt_row gt_left" headers="United States  drivetrain">rwd</td>
-<td class="gt_row gt_left" headers="United States  trsmn">7a</td>
-<td class="gt_row gt_right" headers="United States  msrp">447000</td>
+<td class="gt_row gt_left" headers="links  trait">energy</td>
+<td class="gt_row gt_right" headers="links  null"><br>
+</td>
+<td class="gt_row gt_right" headers="links  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="links  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="links  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="links  energetic">1</td>
+<td class="gt_row gt_right" headers="links  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="links  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="links  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="links  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="links  scavenging"><br>
+</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="United States  mfr">Chevrolet</td>
-<td class="gt_row gt_left" headers="United States  model">Corvette</td>
-<td class="gt_row gt_right" headers="United States  year">2016</td>
-<td class="gt_row gt_left" headers="United States  trim">Z06 Coupe</td>
-<td class="gt_row gt_left" headers="United States  bdy_style">coupe</td>
-<td class="gt_row gt_right" headers="United States  hp">650</td>
-<td class="gt_row gt_right" headers="United States  hp_rpm">6400</td>
-<td class="gt_row gt_right" headers="United States  trq">650</td>
-<td class="gt_row gt_right" headers="United States  trq_rpm">3600</td>
-<td class="gt_row gt_right" headers="United States  mpg_c">15</td>
-<td class="gt_row gt_right" headers="United States  mpg_h">22</td>
-<td class="gt_row gt_left" headers="United States  drivetrain">rwd</td>
-<td class="gt_row gt_left" headers="United States  trsmn">7m</td>
-<td class="gt_row gt_right" headers="United States  msrp">88345</td>
+<td class="gt_row gt_left" headers="links  trait">feeding</td>
+<td class="gt_row gt_right" headers="links  null"><br>
+</td>
+<td class="gt_row gt_right" headers="links  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="links  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="links  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="links  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="links  embedding">1</td>
+<td class="gt_row gt_right" headers="links  classifiers">1</td>
+<td class="gt_row gt_right" headers="links  matching">1</td>
+<td class="gt_row gt_right" headers="links  expert">1</td>
+<td class="gt_row gt_right" headers="links  scavenging">1</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="11" id="Is there information at the node level?" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #FFE4C4" scope="colgroup">Is there information at the node level?</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left" headers="nodes  trait">agnostic</td>
+<td class="gt_row gt_right" headers="nodes  null">1</td>
+<td class="gt_row gt_right" headers="nodes  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  resource">1</td>
+<td class="gt_row gt_right" headers="nodes  generative">1</td>
+<td class="gt_row gt_right" headers="nodes  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="nodes  trait">specific</td>
+<td class="gt_row gt_right" headers="nodes  null"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  neutral">1</td>
+<td class="gt_row gt_right" headers="nodes  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  energetic">1</td>
+<td class="gt_row gt_right" headers="nodes  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  classifiers">1</td>
+<td class="gt_row gt_right" headers="nodes  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="nodes  scavenging"><br>
+</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="11" id="What constrains how links are determined between nodes?" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #FFE4C4" scope="colgroup">What constrains how links are determined between nodes?</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_left" headers="constraints  trait">link</td>
+<td class="gt_row gt_right" headers="constraints  null">1</td>
+<td class="gt_row gt_right" headers="constraints  neutral">1</td>
+<td class="gt_row gt_right" headers="constraints  resource">1</td>
+<td class="gt_row gt_right" headers="constraints  generative">1</td>
+<td class="gt_row gt_right" headers="constraints  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  scavenging"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="constraints  trait">energy</td>
+<td class="gt_row gt_right" headers="constraints  null"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  energetic">1</td>
+<td class="gt_row gt_right" headers="constraints  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="constraints  trait">forbidden links</td>
+<td class="gt_row gt_right" headers="constraints  null"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="constraints  embedding">1</td>
+<td class="gt_row gt_right" headers="constraints  classifiers">1</td>
+<td class="gt_row gt_right" headers="constraints  matching">1</td>
+<td class="gt_row gt_right" headers="constraints  expert">1</td>
+<td class="gt_row gt_right" headers="constraints  scavenging">1</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="11" id="What type of interactions are predicted?" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #FFE4C4" scope="colgroup">What type of interactions are predicted?</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_left" headers="interactions  trait">binary</td>
+<td class="gt_row gt_right" headers="interactions  null">1</td>
+<td class="gt_row gt_right" headers="interactions  neutral">1</td>
+<td class="gt_row gt_right" headers="interactions  resource">1</td>
+<td class="gt_row gt_right" headers="interactions  generative">1</td>
+<td class="gt_row gt_right" headers="interactions  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  classifiers">1</td>
+<td class="gt_row gt_right" headers="interactions  matching">1</td>
+<td class="gt_row gt_right" headers="interactions  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  scavenging">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="interactions  trait">probabalistic</td>
+<td class="gt_row gt_right" headers="interactions  null"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  embedding">1</td>
+<td class="gt_row gt_right" headers="interactions  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  expert">1</td>
+<td class="gt_row gt_right" headers="interactions  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="interactions  trait">weighted</td>
+<td class="gt_row gt_right" headers="interactions  null"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  energetic">1</td>
+<td class="gt_row gt_right" headers="interactions  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="interactions  scavenging"><br>
+</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="11" id="What data is needed to generate the network?" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #FFE4C4" scope="colgroup">What data is needed to generate the network?</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_left" headers="data  trait">link</td>
+<td class="gt_row gt_right" headers="data  null">1</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource">1</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="data  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="data  trait">connectance</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="data  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="data  trait">richness</td>
+<td class="gt_row gt_right" headers="data  null">1</td>
+<td class="gt_row gt_right" headers="data  neutral">1</td>
+<td class="gt_row gt_right" headers="data  resource">1</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="data  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="data  trait">abundance</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral">1</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="data  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="data  trait">traits_other</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="data  classifiers">1</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="data  trait">phylogeny</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding">1</td>
+<td class="gt_row gt_right" headers="data  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="data  trait">spp_pool</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding">1</td>
+<td class="gt_row gt_right" headers="data  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="data  matching">1</td>
+<td class="gt_row gt_right" headers="data  expert">1</td>
+<td class="gt_row gt_right" headers="data  scavenging">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="data  trait">is_producer</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic">1</td>
+<td class="gt_row gt_right" headers="data  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="data  classifiers">1</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="data  trait">traits_size</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic">1</td>
+<td class="gt_row gt_right" headers="data  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="data  classifiers">1</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="data  trait">network</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative">1</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding">1</td>
+<td class="gt_row gt_right" headers="data  classifiers">1</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="data  trait">expert</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="data  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="data  matching">1</td>
+<td class="gt_row gt_right" headers="data  expert">1</td>
+<td class="gt_row gt_right" headers="data  scavenging"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="data  trait">published</td>
+<td class="gt_row gt_right" headers="data  null"><br>
+</td>
+<td class="gt_row gt_right" headers="data  neutral"><br>
+</td>
+<td class="gt_row gt_right" headers="data  resource"><br>
+</td>
+<td class="gt_row gt_right" headers="data  generative"><br>
+</td>
+<td class="gt_row gt_right" headers="data  energetic"><br>
+</td>
+<td class="gt_row gt_right" headers="data  embedding"><br>
+</td>
+<td class="gt_row gt_right" headers="data  classifiers"><br>
+</td>
+<td class="gt_row gt_right" headers="data  matching"><br>
+</td>
+<td class="gt_row gt_right" headers="data  expert"><br>
+</td>
+<td class="gt_row gt_right" headers="data  scavenging">1</td>
 </tr>
 </tbody>
 </table>
