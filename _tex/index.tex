@@ -249,16 +249,17 @@ conservation biology.
 
 
 
-\section{Introduction}\label{introduction}
+\subsection{Introduction}\label{introduction}
 
 Some more general thotsTM
 
-\section{What does a `network' mean?}\label{what-does-a-network-mean}
+\subsection{What does a `network' mean?}\label{what-does-a-network-mean}
 
-\section{What do we mean when we generate a
+\subsection{What do we mean when we generate a
 network?}\label{what-do-we-mean-when-we-generate-a-network}
 
-\section{How does network ecology link to the outstanding questions in
+\subsection{How does network ecology link to the outstanding questions
+in
 ecology}\label{how-does-network-ecology-link-to-the-outstanding-questions-in-ecology}
 
 \begin{itemize}
@@ -448,7 +449,7 @@ final proportion will probably still remain the same\ldots{}
 in themselves are poorly defined.'' --- Roslin et al.~(2013, p.~2)
 \end{quote}
 
-\section{Model families}\label{model-families}
+\subsection{Model families}\label{model-families}
 
 Given the large number of models that have been developed it is perhaps
 more meaningful to group models into families with the idea that models
@@ -614,7 +615,7 @@ co-occurrence patterns of species pairs within the community
 me) seems fundamentally flawed and Blanchet et al. (2020) seems to agree
 with me at least a little bit.
 
-\section{Model benchmarking}\label{model-benchmarking}
+\subsection{Model benchmarking}\label{model-benchmarking}
 
 \begin{itemize}
 \item
@@ -642,7 +643,7 @@ maximum, there is a large number of network configurations that can have
 the same value.'' - Poisot (2023)
 \end{quote}
 
-\subsection{Benchmarking network
+\subsubsection{Benchmarking network
 models}\label{benchmarking-network-models}
 
 \begin{itemize}
@@ -662,7 +663,7 @@ that it cannot tell us whether or not a model is able to fully replicate
 empirical networks.'' - Allesina et al. (2008)
 \end{quote}
 
-\subsection{Benchmarking interaction
+\subsubsection{Benchmarking interaction
 models}\label{benchmarking-interaction-models}
 
 \begin{itemize}
@@ -712,9 +713,9 @@ models}\label{benchmarking-interaction-models}
   the local factors are going to play a role.
 \end{itemize}
 
-\section{Data \& Methods}\label{sec-data-methods}
+\subsection{Data \& Methods}\label{sec-data-methods}
 
-\subsection{Selecting models}\label{selecting-models}
+\subsubsection{Selecting models}\label{selecting-models}
 
 This section depends on if we go the family route and where we introduce
 them. But a more extended description of each model can be found in the
@@ -825,9 +826,9 @@ links? (or am I being a bit too mean here) & association links & &
 co-occurrence (so a species list?) & & & \\
 \end{longtable}
 
-\subsection{Datasets used}\label{datasets-used}
+\subsubsection{Datasets used}\label{datasets-used}
 
-\subsubsection{Mangal networks}\label{mangal-networks}
+\paragraph{Mangal networks}\label{mangal-networks}
 
 We queried the Mangal (Poisot, Baiser, et al., 2016) database and
 extracted a total of \textbf{TODO} networks. {[}\emph{Some sort of
@@ -852,7 +853,7 @@ aim at reproducing the sampled structure of food webs, not their actual
 structure.'' - Banville et al. (2023) (something to think about\ldots)
 \end{quote}
 
-\subsubsection{Empirical networks}\label{empirical-networks}
+\paragraph{Empirical networks}\label{empirical-networks}
 
 `Elite' number of datasets for interaction models
 
@@ -885,7 +886,7 @@ Because 1) it gives the paleo-centric methods their moment in the sun
 and 2) I think it also brings up the interesting question of can we use
 modern structure to predict past ones?
 
-\subsection{Model benchmarking}\label{sec-model-benchmarking}
+\subsubsection{Model benchmarking}\label{sec-model-benchmarking}
 
 For now the (still essentially pending) workflow/associated code can be
 found at the following repository
@@ -906,7 +907,7 @@ Figure~\ref{fig-concept}.
   saying that probabilistic (or \emph{maybe} weighted) links are the way
 \end{itemize}
 
-\subsubsection{Network models}\label{network-models}
+\paragraph{Network models}\label{network-models}
 
 Want to compare real vs predicted and then get something that looks like
 Figure~\ref{fig-topology}
@@ -943,7 +944,7 @@ Figure~\ref{fig-topology}
   \end{itemize}
 \end{itemize}
 
-\subsubsection{Interaction models}\label{interaction-models}
+\paragraph{Interaction models}\label{interaction-models}
 
 \begin{itemize}
 \tightlist
@@ -961,7 +962,7 @@ Figure~\ref{fig-topology}
   Maybe same measures we use for the network models
 \end{itemize}
 
-\subsubsection{Action plan}\label{action-plan}
+\paragraph{Action plan}\label{action-plan}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1016,14 +1017,14 @@ Figure~\ref{fig-topology}
   \end{itemize}
 \end{enumerate}
 
-\section{Results}\label{results}
+\subsection{Results}\label{results}
 
 Joel E. Cohen et al. (1985) actually tells us that the cascade model
 only really works for communities that range from 3-33 species\ldots{}
 and Williams \& Martinez (2008) also highlights how structural models
 really only work for small communities
 
-\subsection{Qualitative stuff}\label{qualitative-stuff}
+\subsubsection{Qualitative stuff}\label{qualitative-stuff}
 
 Maybe not the best term to use but thinking here about practical
 limitations of the different families. This can include thinking about:
@@ -1068,7 +1069,23 @@ Outhwaite presented at the EEB seminar (there was a series of them).}
 
 \end{figure}%
 
-\subsection{Quantitative stuff}\label{quantitative-stuff}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-latex/notebooks-model_qualitative-fig-pca-output-2.png}
+
+}
+
+\caption{\label{fig-pca}PCA of the trait table}
+
+\end{figure}%
+
+\textsubscript{Source:
+\href{https://BecksLab.github.io/ms_t_is_for_topology/index.qmd.html}{Article
+Notebook}}
+
+\subsubsection{Quantitative stuff}\label{quantitative-stuff}
 
 \begin{figure}[H]
 
@@ -1103,7 +1120,7 @@ Pichler et al. (2020)}
 
 \end{figure}%
 
-\section{Discussion}\label{discussion}
+\subsection{Discussion}\label{discussion}
 
 \begin{itemize}
 \item
@@ -1168,8 +1185,8 @@ reconstructed network structure.''} - Poisot (2023)
   quadrant of panel A in Figure~\ref{fig-concept})
 \end{itemize}
 
-\section*{References}\label{references}
-\addcontentsline{toc}{section}{References}
+\subsection*{References}\label{references}
+\addcontentsline{toc}{subsection}{References}
 
 \vspace{1em}
 
