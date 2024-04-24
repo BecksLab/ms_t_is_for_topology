@@ -28,9 +28,10 @@ trait_tbl <-
 #| tbl-cap: "Traits table for the different model families"
 
 trait_tbl %>% 
-  gt()  %>% 
+  gt(
+    rowname_col = "trait") %>% 
   sub_missing(
-    missing_text = "")  %>% 
+    missing_text = "") %>% 
   tab_spanner(
     label = "Network generators",
     columns = c(null, neutral, resource, generative)) %>% 
@@ -80,8 +81,56 @@ trait_tbl %>%
     locations = cells_row_groups()) %>% 
   tab_style(
     style = cell_fill(color = "bisque"),
-    locations = cells_row_groups())  %>% 
-  cols_hide(columns = trait_grp)
+    locations = cells_row_groups()) %>% 
+  cols_hide(columns = trait_grp) %>% 
+  opt_row_striping(row_striping = FALSE)
+
+```
+
+Maybe we try some ordination based on this traits table?
+
+```{r}
+
+# transpose
+ df <- as.data.frame(t(trait_tbl[,-c(1,2)]))
+ colnames(df) <- pull(trait_tbl, trait)
+ rownames(df) <- names(trait_tbl)[-c(1,2)]
+
+# make all NAs 0...
+ df[is.na(df)] <- 0
+
+# pca
+pca <- prcomp(df)
+
+
+```
+
+new cell code for plotting because
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: fig-pca
+#| fig-cap: "PCA of the trait table"
+
+ggplot() +
+#  geom_text(aes(x = pca$x[,1],
+#                  y = pca$x[,2],
+#                  label = rownames(pca$x),
+#                  colour = rownames(pca$x)),
+#            check_overlap = TRUE,
+#            nudge_y = 0.05) +
+  geom_point(aes(x = pca$x[,1],
+                  y = pca$x[,2],
+                  label = rownames(pca$x),
+                  colour = rownames(pca$x)),
+            size = 6,
+            alpha = 0.7) +
+  theme_void() +
+  geom_hline(aes(yintercept = 0)) +
+  geom_vline(aes(xintercept = 0)) +
+  theme(legend.position = 'bottom')
+
 
 ```
 

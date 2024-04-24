@@ -287,6 +287,8 @@ Maybe not the best term to use but thinking here about practical limitations of 
 
 ![I like these schematics that Charlie Outhwaite presented at the EEB seminar (there was a series of them).](images/outhwaite_schematic.jpeg){#fig-outhwaite}
 
+{{< embed notebooks/model_qualitative.qmd#fig-pca >}}
+
 ### Quantitative stuff
 
 {{< embed notebooks/model_quantitative.qmd#fig-topology >}}
