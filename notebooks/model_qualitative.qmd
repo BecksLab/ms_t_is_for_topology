@@ -1,0 +1,42 @@
+---
+title: Quantitative approach to topology generators
+authors:
+  - name: Tanya Strydom
+    id: ts
+    orcid: 0000-0001-6067-1349
+date: last-modified
+bibliography: ../references.bib
+---
+
+Basically the important thing here is that we want to take what is currently table 1 in the manuscript and turn that into a more elaborate 'traits table'.
+
+```{r}
+#| include: false
+#| warning: false
+library(tidyverse)
+library(gt)
+
+trait_tbl <-
+  read.csv("data/traits_table.csv")  %>% 
+  tibble()
+```
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: tbl-traits
+#| tbl-cap: "Traits table for the different model families"
+
+trait_tbl  %>% 
+  group_by(trait_grp)  %>% 
+  gt()  %>% 
+  sub_missing(
+    missing_text = ""
+  )
+
+```
+
+## References {.unnumbered}
+
+::: {#refs}
+:::
