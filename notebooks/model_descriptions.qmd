@@ -50,6 +50,79 @@ bibliography: ../references.bib
 
 **Matching** [@rossbergFoodWebsExperts2006]: This one is more of a dynamic model (so BEF) and maybe beyond the scope of this work. I think there is value on only focusing on the 'static' models at this point (probably have said this before elsewhere but yeah)
 
+## Datasets used
+
+### Mangal networks
+
+We queried the Mangal [@poisotMangalMakingEcological2016] database and extracted a total of **TODO** networks. \[*Some sort of summary as to the geographic/taxonomic range??\]* Although these networks represent a high volume of interaction data they do not have accompanying 'metadata' that we would need for some of the more data-hungry model families (*e.g.,* local abundance), the Mangal networks were used to provide the 'starting values' for the random, resource, and generative families. This allows us to generate a large number of different networks that we can use to compare and contrast the performance of the various model families (see @sec-model-benchmarking for a more detailed breakdown). For each network from Mangal we generated **TODO** versions of that network using each model family.
+
+> "These complex food webs differ in their level of resolution and sampling effort, which may introduce noise in the estimation of their properties, especially given their large number of interacting elements. However, because our MaxEnt models are applied on imperfect data, they aim at reproducing the sampled structure of food webs, not their actual structure." - @banvilleWhatConstrainsFood2023 (something to think about...)
+
+### Empirical networks
+
+'Elite' number of datasets for interaction models
+
+Although the availability of empirical interaction data is growing as techniques begin to improve and grow [@pringleResolvingFoodWebStructure2020], we still lack a way to define what is the 'ideal' interaction dataset.
+
+New Zealand dataset(s): @pomeranzInferringPredatorPrey2019
+
+> Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a 'scale' element as well *i.e.,* a regional and local network. I think there is going to be a 'turning point' where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) *sensu* @caronTraitmatchingModelsPredict2024. Although having said that I feel that contradicts the idea of backbones (*sensu* Bramon Mora (sp?) et al & Stouffer et al) But that might be where we get the idea of core *structure* vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I'm trying to say here)
+
+I think we should also use the @dunneCompilationNetworkAnalyses2008 work. Because 1) it gives the paleo-centric methods their moment in the sun and 2) I think it also brings up the interesting question of can we use modern structure to predict past ones?
+
+## Model benchmarking {#sec-model-benchmarking}
+
+For now the (still essentially pending) workflow/associated code can be found at the following repository [BecksLab/topology_generators](https://github.com/BecksLab/topology_generators). This will reflect that which is shown in panel *B* of @fig-concept.
+
+-   Data 'cost' (some methods might need a lot lot of supporting data vs something very light weight)
+-   I think it would be remiss to not also take into consideration computational cost
+-   Something about the network output - I'm acknowledging my biases and saying that probabilistic (or *maybe* weighted) links are the way
+
+### Network models
+
+Want to compare real vs predicted and then get something that looks like @fig-topology
+
+-   connectance, nestedness (Bastolla et al., 2009), modularity (Barber, 2007), asymmetry (Delmas et al., 2018), and Jaccard network dissimilarity (Canard et al., 2014)
+
+-   *Shape:* do the models construct tall 'pencil' vs flat 'pancake' networks (Beckerman 2024, pers comms), generality/vulnerability, chain length (?)
+
+-   *Structure:* Predicting 'structure' - SVD [@strydomSVDEntropyReveals2021] but maybe something like nestedness as well (?)
+
+-   *Links:* are the number of links preserved (most network predicting models are to some extend link constrained but useful to see)
+
+-   *Motifs:* @staniczenkoStructuralDynamicsRobustness2010 uses S1, S2, S4, S5 from @stoufferEvidenceExistenceRobust2007
+
+    -   S1: Number of linear chains
+
+    -   S2: Number of omnivory motifs
+
+    -   S4: Number of apparent competition motifs
+
+    -   S5: Number of direct competition motifs
+
+### Interaction models
+
+-   Based on @poisotGuidelinesPredictionSpecies2023:
+    -   Precision-Recall (PR-AUC) - performance
+    -   Matthews correlation coefficient (MCC) - accuracy
+-   Maybe same measures we use for the network models
+
+### Action plan
+
+1.  Shortlist/finalise the different topo generators
+2.  collate/translate into `Julia`
+    -   *e.g.,* some models wil be in SpeciesInteractionNetworks.jl (new EcoNet); I know (parts of) the transfer learning stuff is and the niche model
+    -   others will need to be coded out (the more simpler models should be easier)
+3.  Curate networks for the different datasets/scenarios we select - I feel like there might be some scenarios that we can't do all models for all datasets but maybe I'm being a pessimist.
+    -   Need to also think about where one might find the additional data for some of the models...
+        -   Body size: @herbersteinAnimalTraitsCuratedAnimal2022 - Although maybe Andrew has strong thotsTM RE the one true body size database to rule them all...
+        -   Other trait sources: @wilmanEltonTraitsSpecieslevelForaging2014 and @jonesPanTHERIASpecieslevelDatabase2009
+        -   This is where we'll get the paleo traits from if I'm correct @bambachAutecologyFillingEcospace2007
+        -   Phylogeny stuff: @uphamInferringMammalTree2019 (what we used for TL but its only mammals...) but I'm sure there will be others
+    -   Also limitation of scope... *e.g.,* do we even dare to think about including plants/basal producers (see *e.g.,* @valdovinosBioenergeticFrameworkAboveground2023)
+    -   Taxonomic harmonisation - something to think about and check
+
+
 ## References {.unnumbered}
 
 ::: {#refs}

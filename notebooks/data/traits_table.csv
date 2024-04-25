@@ -11,7 +11,8 @@ links,resources,1,1,1,1,,,,,,,
 links,associations,,,,,,,,,,,1
 links,energy,,,,,1,,,,,,
 links,feeding,,,,,,1,1,1,1,1,
-nodes,agnostic,1,,1,1,,,,,,,
+nodes,agnostic,1,,,1,,,,,,,
+nodes,trophic_spp,,,1,,,,,,,,
 nodes,specific,,1,,,1,1,1,1,1,1,1
 interactions,binary,1,1,1,1,,,1,1,,1,1
 interactions,probabalistic,1,,,,,1,,,1,,
