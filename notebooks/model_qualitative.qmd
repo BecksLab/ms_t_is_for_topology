@@ -152,7 +152,7 @@ ggplot() +
 #| warning: false
 #| echo: false
 #| label: fig-dendo
-#| fig-cap: "Dendogram of the trait table"
+#| fig-cap: "Dendrogram of the trait table"
 
 ggplot() +
   geom_segment(data = segment(hcdata), 
