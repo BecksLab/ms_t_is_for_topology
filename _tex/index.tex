@@ -252,34 +252,43 @@ conservation biology.
 It can be argued that the interaction between species (or individuals)
 is one of the main determinants of the emergent properties that are
 studied in other fields of ecology, \emph{e.g.,} the range of plant will
-be determined by the range of its pollinator {[}ref{]}. And although the
-idea of species interactions and the resulting networks that they form
-has been a part of the ecological canon since the times of Darwin
-{[}ref{]}, if not since Aristotle??? {[}ref{]}, however the adoption of
-network ecology into other disciplines has been limited. This was
-primarily driven by two limitations; firstly, it is extremely
-challenging to actually record species interactions in the field
-(Jordano, 2016b, 2016a), which has resulted in a limitation in the
-coverage of interaction data (Poisot et al., 2021). The second is the
-need to develop a set of tools and terminology to construct,
-conceptualise, and analyse these networks. Although measuring
-interactions in the field remains a challenge the development of both
-practical tools (\emph{i.e.,} tools that help as record predictions,
-(e.g.~ref maybe Pringle \& Hutchinson, 2020)) as well as predictive
-tools (Morales-Castilla et al., 2015; Strydom et al., 2021) is allowing
-us to begin filling in these `global gaps'. Additionally there has been
+be determined by the range of its pollinator, and although the
+importance of species interactions and the resulting networks that they
+form has been an acknowledged part of the ecological canon since
+Darwin's `entangled bank' (Darwin, 1859) (if not even earlier, stemming
+from Greek Antiquity (Thanos, 1994)), the adoption of network ecology
+into other disciplines of ecology has been limited. This was primarily
+driven by two limitations; firstly, it is extremely challenging to
+actually record species interactions in the field (Jordano, 2016b,
+2016a), which has resulted in a limitation in the coverage of
+interaction data (Poisot et al., 2021), secondly has been the need to
+develop a set of tools and terminology to construct, conceptualise, and
+analyse these networks. Although measuring interactions in the field
+remains a challenge the development of both practical tools
+(\emph{i.e.,} tools that help as record predictions, (e.g.~ref maybe
+Pringle \& Hutchinson, 2020)) as well as predictive tools
+(Morales-Castilla et al., 2015; Strydom et al., 2021) is allowing us to
+begin filling in these `global gaps'. Additionally, there has been
 extensive development of tools that focus on quantifying the structure
-{[}ref{]}, analysis {[}graph theory ref{]}, properties {[}ref{]} of
-networks. All together these tools means that as a field network ecology
-can (and should) be integrated into ecology (\emph{e.g.,} Thuiller et
-al., 2024) and conservation biology. However (as with any new tool or
-model), it is important that one has a firm grasp of how networks
-(particularly synthetic ones) are generated and how the underlying
-philosophy thereof maps onto the questions being asked. Here we provide;
-a discussion of the underlying assumptions that are made when we attempt
-to delimit and describe a food webs, a synthesis of the different
-families of tools that are used to construct food webs, and a discussion
-linking network ecology to some of the outstanding questions in ecology.
+{[}ref{]}, analysis (Dale \& Fortin, 2010), properties (Delmas et al.,
+2019) of networks. All together these tools means that as a field
+network ecology can (and should) be integrated into ecology
+(\emph{e.g.,} Thuiller et al., 2024) and conservation biology. However
+(as with any new tool or model), it is important that one has a firm
+grasp of how networks (particularly synthetic ones) are generated and
+how the underlying philosophy thereof maps onto the questions being
+asked. Here we provide; a discussion of the underlying assumptions that
+are made when we attempt to delimit and describe a food webs, a
+synthesis of the different families of tools that are used to construct
+food webs, and a discussion linking network ecology to some of the
+outstanding questions in ecology.
+
+\begin{quote}
+Three themes that are aimed at: providing a standardisation of terms
+that are sued when we are talking about both networks as well as what we
+mean when we are generating networks. The final theme aims to map
+network ecology to some of the outstanding questions in ecology
+\end{quote}
 
 \subsection{The anatomy of a food web}\label{the-anatomy-of-a-food-web}
 
@@ -311,7 +320,62 @@ define the nodes (\emph{e.g.,} species or taxonomic group), edges
 (\emph{e.g.} potential or realised feeding links), the magnitude of the
 edges (\emph{e.g.,} binary vs probabilistic) and even how the network
 itself is delimited (does it represent an aggregation of interactions
-over time?, what is the spatial extent?).
+over time?, what is the spatial extent?). All these decisions will have
+an impact on the resultant structure and potential use-cases of the
+network.
+
+\subsubsection{How do we define a node?}\label{how-do-we-define-a-node}
+
+Although this may seem an elementary question in the context of food
+webs --- a node should represent a species, the reality is that nodes
+can often represent an aggregate of different (taxonomic) species - so
+called `trophic species', and it is not uncommon that networks can have
+nodes that represent both taxonomic and trophic species (\emph{e.g.,}
+there are many that do the basal `plant/plant ally' node but include at
+least one REF). Practical implications of how we are aggregating the
+nodes is that the resolution may not be `pixel perfect' \emph{i.e.,} we
+may be unable to assess the co-extinction risk of a species pair
+{[}mutualism ref, at least there should be one of them{]}, however there
+is value in `low-resolution' nodes because it pains a more generalist
+picture??
+
+\subsubsection{What is meant by an
+edge?}\label{what-is-meant-by-an-edge}
+
+As discussed earlier there are many ways to define the links between
+species --- even feeding links. At its core links within food webs can
+be thought of a representation of the flow of a resource {[}ref{]},
+realised (Pringle \& Hutchinson, 2020) or potential (Jennifer A. Dunne,
+2006) feeding links, or the flow of energy (sensu the ADBM Petchey et
+al., 2008 ??). How we quantify links will influence how the resulting
+structure of the network - and the inferences we will make thereof. For
+example taking a food web that consists of links representing
+\emph{potential} feeding links between species (\emph{i.e.,} species
+\emph{a} may have the ability to consume species \emph{b} it does not
+mean that it will be realised `in the field') will be meaningless if you
+are interested in understanding feeding preferences within/between
+communities as the links are `over distributed'.
+
+In order to understand why the links in a food web can be coded to
+represent different things it is perhaps meaningful to understand the
+theory behind how the links between nodes are thought to arise. Here I
+think we can think about the theory of intervality and structural
+constraints, trait matching, and foraging theory
+
+\subsubsection{How do we quantify the links between
+nodes?}\label{how-do-we-quantify-the-links-between-nodes}
+
+Key THMs here is that not only what the link represent but how it is
+quantified can differ. Big there is binary, probabilistic (`continuous'
+distribution between 0 and 1) and weighted (continuous but not bound by
+0, 1). I think the (when it finally goes to preprint) probabilities
+manuscript will come in here\ldots{}
+
+\subsubsection{How do we interpret the resulting
+network????}\label{how-do-we-interpret-the-resulting-network}
+
+Talking about delimiting, the idea of aggregating over time or
+aggregating over space\ldots{}
 
 \emph{something, something, introducing that the same problem (different
 philosophies) is also a thing that you need to think about when
@@ -343,6 +407,9 @@ for generality (\emph{i.e.,} creating a network that, when taken in
 aggregate, the distribution of links (interactions) between species are
 ecologically plausible) to a need for specificity (\emph{i.e.,}
 local-level predictions between specific species).
+
+\subsubsection{Predicting structure or
+interactions?}\label{predicting-structure-or-interactions}
 
 These two groups are they themselves made up of different tools that
 also have their own underlying rules and assumptions that are made when
@@ -1049,10 +1116,27 @@ Sciences}, \emph{224}(1237), 421--448.
 Cohen, Joel E., Briand, F., \& Newman, C. (1990). \emph{Community {Food
 Webs}: {Data} and {Theory}}. Berlin Heidelberg: Springer-Verlag.
 
+\bibitem[\citeproctext]{ref-daleGraphsSpatialGraphs2010}
+Dale, M. R. T., \& Fortin, M.-J. (2010). From {Graphs} to {Spatial
+Graphs}. \emph{Annual Review of Ecology, Evolution, and Systematics},
+\emph{41}, 21--38. Retrieved from
+\url{https://www.jstor.org/stable/27896212}
+
+\bibitem[\citeproctext]{ref-darwinOriginSpeciesMeans1859}
+Darwin, C. (1859). \emph{On the {Origin} of {Species} by {Means} of
+{Natural Selection}, or the {Preservation} of {Favoured Races} in the
+{Struggle} for {Life}}. London: J. Murray.
+
 \bibitem[\citeproctext]{ref-deangelisModelTropicInteraction1975}
 DeAngelis, D. L., Goldstein, R. A., \& O'Neill, R. V. (1975). A {Model}
 for {Tropic Interaction}. \emph{Ecology}, \emph{56}(4), 881--892.
 \url{https://doi.org/10.2307/1936298}
+
+\bibitem[\citeproctext]{ref-delmasAnalysingEcologicalNetworks2019}
+Delmas, E., Besson, M., Brice, M.-H., Burkle, L. A., Riva, G. V. D.,
+Fortin, M.-J., et al. (2019). Analysing ecological networks of species
+interactions. \emph{Biological Reviews}, \emph{94}(1), 16--36.
+\url{https://doi.org/10.1111/brv.12433}
 
 \bibitem[\citeproctext]{ref-desjardins-proulxEcologicalInteractionsNetflix2017}
 Desjardins-Proulx, P., Laigle, I., Poisot, T., \& Gravel, D. (2017).
@@ -1243,6 +1327,13 @@ M. J., et al. (2023). Graph embedding and transfer learning can help
 predict potential species interaction networks despite data limitations.
 \emph{Methods in Ecology and Evolution}, \emph{14}(12), 2917--2930.
 \url{https://doi.org/10.1111/2041-210X.14228}
+
+\bibitem[\citeproctext]{ref-thanosAristotleTheophrastusPlantanimal1994}
+Thanos, C. A. (1994). Aristotle and {Theophrastus} on plant-animal
+interactions. In M. Arianoutsou \& R. H. Groves (Eds.),
+\emph{Plant-animal interactions in {Mediterranean-type} ecosystems} (pp.
+3--11). Dordrecht: Springer Netherlands.
+\url{https://doi.org/10.1007/978-94-011-0908-6_1}
 
 \bibitem[\citeproctext]{ref-thuillerNavigatingIntegrationBiotic2024}
 Thuiller, W., Calderón-Sanou, I., Chalmandrier, L., Gaüzère, P.,
