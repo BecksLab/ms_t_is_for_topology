@@ -7,18 +7,19 @@ mechanism,mass_effect,,1,,,,,,,,,
 mechanism,mechanistic,,,,,,,,1,1,,
 mechanism,mathematical,,,,1,1,1,,,,,
 mechanism,statistical,,,,,,,1,,,,1
-links,resources,,,1,1,,,,,,,
-links,associations,1,,,,,,,,,,1
+links,resources,1,1,1,1,,,,,,,
+links,associations,,,,,,,,,,,1
 links,energy,,,,,1,,,,,,
 links,feeding,,,,,,1,1,1,1,1,
 nodes,agnostic,1,,1,1,,,,,,,
-nodes,specific,,1,,,1,,1,,,,1
+nodes,specific,,1,,,1,1,1,1,1,1,1
 interactions,binary,1,1,1,1,,,1,1,,1,1
 interactions,probabalistic,1,,,,,1,,,1,,
 interactions,weighted,,,,,1,,,,1,,
 constraints,link,1,1,1,1,,,,,,,
 constraints,energy,,,,,1,,,,,,
 constraints,forbidden links,,,,,,1,1,1,1,1,
+constraints,occurance,,,,,,,,,,,1
 data_edge,link,1,1,1,,,,,,,,
 data_edge,connectance,,,,,,,,,,,
 data_node,richness,1,1,1,,,,,,,,
