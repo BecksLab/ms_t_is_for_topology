@@ -289,6 +289,8 @@ Maybe not the best term to use but thinking here about practical limitations of 
 
 {{< embed notebooks/model_qualitative.qmd#fig-pca >}}
 
+{{< embed notebooks/model_qualitative.qmd#fig-dendo >}}
+
 ### Quantitative stuff
 
 {{< embed notebooks/model_quantitative.qmd#fig-topology >}}

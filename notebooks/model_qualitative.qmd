@@ -15,6 +15,7 @@ Basically the important thing here is that we want to take what is currently tab
 #| warning: false
 library(tidyverse)
 library(gt)
+library(ggdendro)
 
 trait_tbl <-
   read.csv("data/traits_table.csv")  %>% 
@@ -44,7 +45,12 @@ trait_tbl %>%
     rows = trait_grp == "predicts"
   ) %>%
   tab_row_group(
-    label = "What is the underlying mechanism that predicts links?",
+    label = "What is the generated network representing?",
+    id = "scale",
+    rows = trait_grp == "scale"
+  ) %>% 
+  tab_row_group(
+    label = "What is the underlying mechanism that determines links?",
     id = "mechanism",
     rows = trait_grp == "mechanism"
   ) %>%
@@ -74,7 +80,7 @@ trait_tbl %>%
     rows = trait_grp %in% c("data_edge", "data_node", "data_meta", "data_network")
   ) %>% 
   row_group_order(
-    groups = c("predicts", "mechanism", "links", "nodes", "constraints", 
+    groups = c("predicts", "scale", "mechanism", "links", "nodes", "constraints", 
       "interactions", "data"))  %>% 
   tab_style(
     style = cell_text(weight = "bold"),
@@ -83,6 +89,9 @@ trait_tbl %>%
     style = cell_fill(color = "bisque"),
     locations = cells_row_groups()) %>% 
   cols_hide(columns = trait_grp) %>% 
+  cols_align(
+    align = "center",
+    columns = everything()) %>% 
   opt_row_striping(row_striping = FALSE)
 
 ```
@@ -102,6 +111,11 @@ Maybe we try some ordination based on this traits table?
 # pca
 pca <- prcomp(df)
 
+
+# Fitting Hierarchical clustering Model
+set.seed(66)  # Setting seed
+hc <- hclust(dist(df), method = "ave")
+hcdata <- dendro_data(hc, type = "rectangle")
 
 ```
 
@@ -131,6 +145,26 @@ ggplot() +
   geom_vline(aes(xintercept = 0)) +
   theme(legend.position = 'bottom')
 
+
+```
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: fig-dendo
+#| fig-cap: "Dendogram of the trait table"
+
+ggplot() +
+  geom_segment(data = segment(hcdata), 
+               aes(x = x, y = y, xend = xend, yend = yend)
+  ) +
+  geom_text(data = label(hcdata), 
+            aes(x = x, y = y-0.1, label = label, hjust = 0), 
+            size = 3
+  ) +
+  coord_flip() +
+  scale_y_reverse(expand = c(0.2, 0)) +
+  theme_void()
 
 ```
 
