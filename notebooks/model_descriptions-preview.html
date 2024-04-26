@@ -282,7 +282,7 @@
 <h2 class="anchored" data-anchor-id="datasets-used">Datasets used</h2>
 <section id="mangal-networks" class="level3">
 <h3 class="anchored" data-anchor-id="mangal-networks">Mangal networks</h3>
-<p>We queried the Mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot et al. 2016</a>)</span> database and extracted a total of <strong>TODO</strong> networks. [<em>Some sort of summary as to the geographic/taxonomic range??]</em> Although these networks represent a high volume of interaction data they do not have accompanying ‘metadata’ that we would need for some of the more data-hungry model families (<em>e.g.,</em> local abundance), the Mangal networks were used to provide the ‘starting values’ for the random, resource, and generative families. This allows us to generate a large number of different networks that we can use to compare and contrast the performance of the various model families (see <span class="citation" data-cites="sec-model-benchmarking">(<a href="#ref-sec-model-benchmarking" role="doc-biblioref"><strong>sec-model-benchmarking?</strong></a>)</span> for a more detailed breakdown). For each network from Mangal we generated <strong>TODO</strong> versions of that network using each model family.</p>
+<p>We queried the Mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot et al. 2016</a>)</span> database and extracted a total of <strong>TODO</strong> networks. [<em>Some sort of summary as to the geographic/taxonomic range??]</em> Although these networks represent a high volume of interaction data they do not have accompanying ‘metadata’ that we would need for some of the more data-hungry model families (<em>e.g.,</em> local abundance), the Mangal networks were used to provide the ‘starting values’ for the random, resource, and generative families. This allows us to generate a large number of different networks that we can use to compare and contrast the performance of the various model families. For each network from Mangal we generated <strong>TODO</strong> versions of that network using each model family.</p>
 <blockquote class="blockquote">
 <p>“These complex food webs differ in their level of resolution and sampling effort, which may introduce noise in the estimation of their properties, especially given their large number of interacting elements. However, because our MaxEnt models are applied on imperfect data, they aim at reproducing the sampled structure of food webs, not their actual structure.” - <span class="citation" data-cites="banvilleWhatConstrainsFood2023">Banville, Gravel, and Poisot (<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">2023</a>)</span> (something to think about…)</p>
 </blockquote>
@@ -300,7 +300,7 @@
 </section>
 <section id="sec-model-benchmarking" class="level2">
 <h2 class="anchored" data-anchor-id="sec-model-benchmarking">Model benchmarking</h2>
-<p>For now the (still essentially pending) workflow/associated code can be found at the following repository <a href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</a>. This will reflect that which is shown in panel <em>B</em> of <span class="citation" data-cites="fig-concept">(<a href="#ref-fig-concept" role="doc-biblioref"><strong>fig-concept?</strong></a>)</span>.</p>
+<p>For now the (still essentially pending) workflow/associated code can be found at the following repository <a href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</a>. This will reflect that which is shown in panel <em>B</em>.</p>
 <ul>
 <li>Data ‘cost’ (some methods might need a lot lot of supporting data vs something very light weight)</li>
 <li>I think it would be remiss to not also take into consideration computational cost</li>
@@ -308,7 +308,6 @@
 </ul>
 <section id="network-models-1" class="level3">
 <h3 class="anchored" data-anchor-id="network-models-1">Network models</h3>
-<p>Want to compare real vs predicted and then get something that looks like <span class="citation" data-cites="fig-topology">(<a href="#ref-fig-topology" role="doc-biblioref"><strong>fig-topology?</strong></a>)</span></p>
 <ul>
 <li><p>connectance, nestedness (Bastolla et al., 2009), modularity (Barber, 2007), asymmetry (Delmas et al., 2018), and Jaccard network dissimilarity (Canard et al., 2014)</p></li>
 <li><p><em>Shape:</em> do the models construct tall ‘pencil’ vs flat ‘pancake’ networks (Beckerman 2024, pers comms), generality/vulnerability, chain length (?)</p></li>
