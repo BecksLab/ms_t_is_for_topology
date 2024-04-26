@@ -33,4 +33,4 @@ format:
       draft-format: true
 
 execute:
-  freeze: true
+  freeze: auto
