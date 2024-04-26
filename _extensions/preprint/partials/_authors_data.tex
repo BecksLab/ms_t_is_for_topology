@@ -1,0 +1,10 @@
+\vskip 1.5em
+\textbf{$it.name.literal$} $if(it.orcid)$~\orcidlink{$it.orcid$}$endif$$if(it.email)$\hfill\texttt{$it.email$}$endif$
+\textbf{$it.name.literal$}\affil{$for(it.affiliations)$$it.number$$sep$,$endfor$$if(it.acknowledgements)$,$endif$}$if(it.acknowledgements)$\thanks{$it.acknowledgements$}$endif$
+
+$if(it.attributes.corresponding)$\correspondingauthor{$it.name.literal$}{$it.email$}$endif$
+$if(it.attributes.equal-contributor)$This author shares equal contribution$endif$
+
+$if(it.affiliations)$$for(it.affiliations)$%
+\textsuperscript{$it.number$} $it.name$$if(it.department)$, $it.department$$endif$\\%
+$endfor$$endif$

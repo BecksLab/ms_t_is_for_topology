@@ -1,5 +1,11 @@
 project:
   type: manuscript
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "*.ipynb"
+    - "!reviews/"
+    - "!coverletter.md"
 
 manuscript:
   article: index.qmd
@@ -8,14 +14,23 @@ manuscript:
       icon: github
       href: https://github.com/BecksLab/topology_generators
 
-execute:
-  freeze: auto
-
 format:
   html:
-    toc: true
+    callout-appearance: simple
+    callout-icon: false
     comments:
       hypothesis: true
+    citations-hover: true
+    crossrefs-hover: true
+    toc: true
+    toc-location: left
+    title-block-style: manuscript
+    title-block-banner-color: "#1D8265"
   docx: default
-  agu-pdf: default
-    
+  preprint-pdf:
+    csl: https://www.zotero.org/styles/methods-in-ecology-and-evolution
+    formatting:
+      draft-format: true
+
+execute:
+  freeze: true

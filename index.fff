@@ -1,0 +1,113 @@
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/concept.jpeg}
+
+}
+
+\caption{\label{fig-concept}Conceptual figure of the `network
+prediction'. Panel A shows where the model families fall in the the
+context of being models that predict networks or models that predict
+interactions space. Panel B serves to highlight the characteristics one
+might like to `test'/benchmark for a model based on it being either a
+network or interaction predicting model}
+
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[H]
+
+{\centering \includegraphics{images/thullier_2023_concept.jpeg}
+
+}
+
+\caption{I like the use of the different source indicator items (not too
+dissimilar from Tall Tom's nature paper but also different). This is
+from Thuiller et al. (2024)}
+
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/model_venn.png}
+
+}
+
+\caption{\label{fig-venn}I still haven't given up on a sort of venn
+diagram idea but maybe it going to be more of a venn-flow chart
+hybrid\ldots{}}
+
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/outhwaite_schematic.jpeg}
+
+}
+
+\caption{\label{fig-outhwaite}I like these schematics that Charlie
+Outhwaite presented at the EEB seminar (there was a series of them).}
+
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-latex/notebooks-model_qualitative-fig-pca-output-2.png}
+
+}
+
+\caption{\label{fig-pca}PCA of the trait table}
+
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-latex/notebooks-model_qualitative-fig-dendo-output-1.png}
+
+}
+
+\caption{\label{fig-dendo}Dendrogram of the trait table}
+
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-latex/notebooks-model_quantitative-fig-topology-output-2.png}
+
+}
+
+\caption{\label{fig-topology}Difference between real and model network
+property. S1 - S5 represent the different motif structures identified in
+Stouffer et al. (2007).}
+
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/pichler_result.png}
+
+}
+
+\caption{\label{fig-pichler}Cool way to conceptualise results from
+Pichler et al. (2020)}
+
+\end{figure}
