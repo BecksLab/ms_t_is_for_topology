@@ -654,19 +654,14 @@ me) seems fundamentally flawed and Blanchet et al. (2020) seems to agree
 with me at least a little bit.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1268}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2676}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0986}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1268}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1549}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2254}}@{}}
 \caption{Lets make a table that gives an overview of the different model
-families and some of their features. \emph{A column that captures naïve
-vs a priori knowledge of interactions/structure i.e., a `parameter' of
-sorts?}}\label{tbl-families}\tabularnewline
+families and some of their features.}\label{tbl-families}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
@@ -675,15 +670,9 @@ Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Network predicted
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Links predict
+Nodes represent
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Make `\emph{de novo}' predictions (node/species identity)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Needs (minimum)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assembly mechanism
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Constraints
+Links represent
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
 \end{minipage} \\
@@ -697,15 +686,9 @@ Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Network predicted
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Links predict
+Nodes represent
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Make `\emph{de novo}' predictions (node/species identity)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Needs (minimum)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assembly mechanism
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Constraints
+Links represent
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
 \end{minipage} \\
@@ -713,42 +696,33 @@ Interaction
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Network structure is random & structure & & no & network (species
-agnostic) & random & link & binary \\
+null & Network structure is random & structure & agnostic & feeding
+links & binary \\
 neutral & Network structure is random, but species abundance plays a
-role & structure & & yes & abundance, number of links & mass effect &
-link & binary \\
+role & structure & species & feeding links & binary \\
 resource & Networks are interval, species can be ordered on a `niche
-axis' & structure & flow of biomass (resource?) & no & richness,
-connectance & `random' & link & binary \\
+axis' & structure & trophic species & subdivision of resource &
+binary \\
 generative & Networks are determined by their structural features &
-structure & & no & network (species agnostic) & `random' & & binary \\
+structure & agnostic & links & binary \\
 energetic & Interactions are determined by foraging theory (feeding
-links) & interactions & flow of energy & yes & body size & deterministic
-& energy & \\
+links) & interactions & species & feeding links & quantitative \\
 graph embedding & Interactions can be predicted from the latent traits
-of networks & interactions & potential feeding links & yes &
-interactions, phylogenetic tree, list of target species (species pool) &
-& & probabilistic \\
+of networks & interactions & species & potential feeding links &
+probabilistic \\
 trait matching & Interactions can be inferred by a mechanistic
-framework/relationships & interactions & potential feeding links & yes &
-prior (expert) knowledge of trait hierarchy/relationships, traits, list
-of target species (species pool) & mechanistic & trait matching
-(\emph{sensu} forbidden links in a way) & \\
+framework/relationships & interactions & species & feeding links &
+binary \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
-interactions & potential feeding links & yes & interactions, traits,
-list of target species (species pool) & statistical & & \\
+interactions & species & feeding links & binary \\
 expert knowledge & `Boots on the ground' ecological knowledge and
-observations & interactions & potential feeding links & yes & list of
-target species (species pool) & mechanistic & forbidden links & \\
+observations & interactions & species & feeding links & binary \\
 data scavenging & Webscraping to create networks from online databases &
-interactions & potential feeding links & no & list of target species
-(species pool) & & & binary \\
+interactions & species & feeding links & binary \\
 co-occurrence & co-occurrence patterns arise from interactions so we can
 use these patterns to reverse engineer the interactions & co-occurrence
-links? (or am I being a bit too mean here) & association links & &
-co-occurrence (so a species list?) & & & \\
+patterns & species & association links & binary \\
 \end{longtable}
 
 \paragraph{When to use what?}\label{when-to-use-what}

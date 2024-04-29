@@ -390,31 +390,25 @@ Figure&nbsp;1: Conceptual figure of the ‘network prediction’. Panel A shows 
 <div id="tbl-families" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Lets make a table that gives an overview of the different model families and some of their features. <em>A column that captures naïve vs a priori knowledge of interactions/structure i.e., a ‘parameter’ of sorts?</em>
+Table&nbsp;1: Lets make a table that gives an overview of the different model families and some of their features.
 </figcaption>
 <div aria-describedby="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 26%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 22%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Model family</th>
 <th>Theory</th>
 <th>Network predicted</th>
-<th>Links predict</th>
-<th>Make ‘<em>de novo</em>’ predictions (node/species identity)</th>
-<th>Needs (minimum)</th>
-<th>Assembly mechanism</th>
-<th>Constraints</th>
+<th>Nodes represent</th>
+<th>Links represent</th>
 <th>Interaction</th>
 </tr>
 </thead>
@@ -423,122 +417,89 @@ Table&nbsp;1: Lets make a table that gives an overview of the different model fa
 <td>null</td>
 <td>Network structure is random</td>
 <td>structure</td>
-<td></td>
-<td>no</td>
-<td>network (species agnostic)</td>
-<td>random</td>
-<td>link</td>
+<td>agnostic</td>
+<td>feeding links</td>
 <td>binary</td>
 </tr>
 <tr class="even">
 <td>neutral</td>
 <td>Network structure is random, but species abundance plays a role</td>
 <td>structure</td>
-<td></td>
-<td>yes</td>
-<td>abundance, number of links</td>
-<td>mass effect</td>
-<td>link</td>
+<td>species</td>
+<td>feeding links</td>
 <td>binary</td>
 </tr>
 <tr class="odd">
 <td>resource</td>
 <td>Networks are interval, species can be ordered on a ‘niche axis’</td>
 <td>structure</td>
-<td>flow of biomass (resource?)</td>
-<td>no</td>
-<td>richness, connectance</td>
-<td>‘random’</td>
-<td>link</td>
+<td>trophic species</td>
+<td>subdivision of resource</td>
 <td>binary</td>
 </tr>
 <tr class="even">
 <td>generative</td>
 <td>Networks are determined by their structural features</td>
 <td>structure</td>
-<td></td>
-<td>no</td>
-<td>network (species agnostic)</td>
-<td>‘random’</td>
-<td></td>
+<td>agnostic</td>
+<td>links</td>
 <td>binary</td>
 </tr>
 <tr class="odd">
 <td>energetic</td>
 <td>Interactions are determined by foraging theory (feeding links)</td>
 <td>interactions</td>
-<td>flow of energy</td>
-<td>yes</td>
-<td>body size</td>
-<td>deterministic</td>
-<td>energy</td>
-<td></td>
+<td>species</td>
+<td>feeding links</td>
+<td>quantitative</td>
 </tr>
 <tr class="even">
 <td>graph embedding</td>
 <td>Interactions can be predicted from the latent traits of networks</td>
 <td>interactions</td>
+<td>species</td>
 <td>potential feeding links</td>
-<td>yes</td>
-<td>interactions, phylogenetic tree, list of target species (species pool)</td>
-<td></td>
-<td></td>
 <td>probabilistic</td>
 </tr>
 <tr class="odd">
 <td>trait matching</td>
 <td>Interactions can be inferred by a mechanistic framework/relationships</td>
 <td>interactions</td>
-<td>potential feeding links</td>
-<td>yes</td>
-<td>prior (expert) knowledge of trait hierarchy/relationships, traits, list of target species (species pool)</td>
-<td>mechanistic</td>
-<td>trait matching (<em>sensu</em> forbidden links in a way)</td>
-<td></td>
+<td>species</td>
+<td>feeding links</td>
+<td>binary</td>
 </tr>
 <tr class="even">
 <td>binary classifiers</td>
 <td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors</td>
 <td>interactions</td>
-<td>potential feeding links</td>
-<td>yes</td>
-<td>interactions, traits, list of target species (species pool)</td>
-<td>statistical</td>
-<td></td>
-<td></td>
+<td>species</td>
+<td>feeding links</td>
+<td>binary</td>
 </tr>
 <tr class="odd">
 <td>expert knowledge</td>
 <td>‘Boots on the ground’ ecological knowledge and observations</td>
 <td>interactions</td>
-<td>potential feeding links</td>
-<td>yes</td>
-<td>list of target species (species pool)</td>
-<td>mechanistic</td>
-<td>forbidden links</td>
-<td></td>
+<td>species</td>
+<td>feeding links</td>
+<td>binary</td>
 </tr>
 <tr class="even">
 <td>data scavenging</td>
 <td>Webscraping to create networks from online databases</td>
 <td>interactions</td>
-<td>potential feeding links</td>
-<td>no</td>
-<td>list of target species (species pool)</td>
-<td></td>
-<td></td>
+<td>species</td>
+<td>feeding links</td>
 <td>binary</td>
 </tr>
 <tr class="odd">
 <td>co-occurrence</td>
 <td>co-occurrence patterns arise from interactions so we can use these patterns to reverse engineer the interactions</td>
-<td>co-occurrence links? (or am I being a bit too mean here)</td>
+<td>co-occurrence patterns</td>
+<td>species</td>
 <td>association links</td>
-<td></td>
-<td>co-occurrence (so a species list?)</td>
-<td></td>
-<td></td>
-<td></td>
+<td>binary</td>
 </tr>
 </tbody>
 </table>
@@ -1339,7 +1300,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
