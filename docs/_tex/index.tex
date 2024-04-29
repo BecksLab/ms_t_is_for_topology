@@ -296,10 +296,10 @@ interactions in the field remains a challenge, although the development
 of both practical tools (\emph{i.e.,} tools that help us to record or
 measure interactions, (e.g.~ref maybe Pringle \& Hutchinson, 2020)), as
 well as discussions around the development of tools to predict or infer
-them (Morales-Castilla et al., 2015; Strydom et al., 2021), has allowed
-us to begin filling in these `global gaps', albeit in a more synthetic
-manner (Poisot, Gravel, et al., 2016). Additionally, there has been
-extensive development in in the ways in which we formalise networks
+them (Morales-Castilla et al., 2015; Strydom, Catchen, et al., 2021),
+has allowed us to begin filling in these `global gaps', albeit in a more
+synthetic manner (Poisot, Gravel, et al., 2016). Additionally, there has
+been extensive development in in the ways in which we formalise networks
 (Dale \& Fortin, 2010), and the tools and language that we use to
 quantify the structure and properties of networks (Delmas et al., 2019).
 All together these tools mean that, as a field, network ecology can (and
@@ -321,7 +321,24 @@ mean when we are generating networks. The final theme aims to map
 network ecology to some of the outstanding questions in ecology
 \end{quote}
 
-\subsection{The anatomy of a food web}\label{the-anatomy-of-a-food-web}
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/concept.jpeg}
+
+}
+
+\caption{\label{fig-concept}Conceptual figure of the `network
+prediction'. Panel A shows where the model families fall in the the
+context of being models that predict networks or models that predict
+interactions space. Panel B serves to highlight the characteristics one
+might like to `test'/benchmark for a model based on it being either a
+network or interaction predicting model}
+
+\end{figure}%
+
+\section{The anatomy of a food web}\label{sec-network-anatomy}
 
 Although we specifically focus on food webs (interactions representing
 feeding links) it is beneficial to take a step back and acknowledge the
@@ -355,7 +372,7 @@ over time?, what is the spatial extent?). All these decisions will have
 an impact on the resultant structure and potential use-cases of the
 network.
 
-\subsubsection{How do we define a node?}\label{how-do-we-define-a-node}
+\subsection{How do we define a node?}\label{how-do-we-define-a-node}
 
 Although this may seem an elementary question in the context of food
 webs --- a node should represent a species, the reality is that nodes
@@ -371,8 +388,7 @@ however there is value in having nodes that represent an aggregation of
 species, as these convey a much more general overview of how the links
 are distributed within the community.
 
-\subsubsection{What is meant by an
-edge?}\label{what-is-meant-by-an-edge}
+\subsection{What is meant by an edge?}\label{what-is-meant-by-an-edge}
 
 As discussed earlier there are many ways to define the links between
 species --- even feeding links. At its core links within food webs can
@@ -399,7 +415,7 @@ way of representing interactions {[}probabilities preprint{]} this of
 course also means that there is an additional layer to the
 interpretation these links.
 
-\subsubsection{Putting the parts together; what does it
+\subsection{Putting the parts together; what does it
 mean?}\label{putting-the-parts-together-what-does-it-mean}
 
 It it clear that there are many ways to define, code, and construct food
@@ -435,7 +451,7 @@ ways\ldots{} {[}this is lazy writing{]}
 philosophies) is also a thing that you need to think about when
 aggregating interactions/generating networks.}
 
-\subsection{Constructing ecological
+\section{Constructing ecological
 networks}\label{constructing-ecological-networks}
 
 \begin{quote}
@@ -469,11 +485,11 @@ specific collection of species (community). This is driven by the need
 for researchers to find alternative ways to infer the interactions
 between species as a way to overcome the inherit challenges of
 inventorying interactions in the field (see Morales-Castilla et al.
-(2015) for a more mechanistic, and Strydom et al. (2021) for a more
-statistical overview of ways to approach this specific issue). Of course
-these two categories are not distinct, mutually exclusive, groups but
-can rather be viewed as operating on a continuum ranging from a need for
-generality (\emph{i.e.,} creating a network that, when taken in
+(2015) for a more mechanistic, and Strydom, Catchen, et al. (2021) for a
+more statistical overview of ways to approach this specific issue). Of
+course these two categories are not distinct, mutually exclusive, groups
+but can rather be viewed as operating on a continuum ranging from a need
+for generality (\emph{i.e.,} creating a network that, when taken in
 aggregate, the distribution of links (interactions) between nodes
 (species) are ecologically plausible) to a need for specificity
 (\emph{i.e.,} local-level predictions between specific species). It is
@@ -484,64 +500,116 @@ be aware of not only the underlying philosophy of the specific toolset
 they wish to use used also how well the tool is able to retrieve the
 network properties that they desire.
 
-\subsubsection{Model families}\label{model-families}
+\subsection{Model families}\label{model-families}
 
 As there are many food web generating tools to choose from it is perhaps
 useful to think about these tools in terms of families, where families
 represent tools that have a similar methodology and (more importantly)
 have the same underlying philosophies and assumptions that determine the
 links betweens nodes as well as how these may be encoded, a summary of
-these model families are presented in Table~\ref{tbl-families}. Although
-there have been efforts to compare and contrast different models
-(\emph{e.g.,} Williams \& Martinez, 2008 looked at `structural models';
-and Pichler et al., 2020 looked at machine learning algorithms) there
-still lacks an overall synthesis as to how the different model families
-differ from each other - both in terms of what they are actually
-predicting as well as how well they are preforming in the different
-facets of constructing a food web.
+these model families are presented in Table~\ref{tbl-families} and
+discussed in more detail below. Although there have been efforts to
+compare and contrast different models (\emph{e.g.,} Williams \&
+Martinez, 2008 looked at `structural models'; and Pichler et al., 2020
+looked at machine learning algorithms) there still lacks an overall
+synthesis as to how the different model families differ from each other
+- both in terms of what they are actually predicting as well as how well
+they are preforming in the different facets of constructing a food web.
 
-\begin{figure}
-
-\centering{
-
-\includegraphics{images/concept.jpeg}
-
-}
-
-\caption{\label{fig-concept}Conceptual figure of the `network
-prediction'. Panel A shows where the model families fall in the the
-context of being models that predict networks or models that predict
-interactions space. Panel B serves to highlight the characteristics one
-might like to `test'/benchmark for a model based on it being either a
-network or interaction predicting model}
-
-\end{figure}%
-
-\begin{figure}[H]
-
-{\centering \includegraphics{images/thullier_2023_concept.jpeg}
-
-}
-
-\caption{I like the use of the different source indicator items (not too
-dissimilar from Tall Tom's nature paper but also different). This is
-from Thuiller et al. (2024)}
-
-\end{figure}%
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1067}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1733}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1600}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1600}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1600}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1200}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1200}}@{}}
+\caption{A summary of the different families of tools that can be used
+to generate food webs, this includes a brief description of the
+underlying philosophy of the family as well as how the different
+elements (nodes and edges) of the generated network
+represents.}\label{tbl-families}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Model family
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Theory
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Network predicted
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nodes represent
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Links represent
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interaction
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Key reference
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Model family
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Theory
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Network predicted
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nodes represent
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Links represent
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interaction
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Key reference
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+null & Network structure is random & structure & agnostic & feeding
+links & binary & \\
+neutral & Network structure is random, but species abundance plays a
+role & structure & species & feeding links & binary & \\
+resource & Networks are interval, species can be ordered on a `niche
+axis' & structure & trophic species & subdivision of resource & binary &
+Williams \& Martinez (2008) \\
+generative & Networks are determined by their structural features &
+structure & agnostic & links & binary & \\
+energetic & Interactions are determined by foraging theory (feeding
+links) & interactions & species & feeding links & quantitative & \\
+graph embedding & Interactions can be predicted from the latent traits
+of networks & interactions & species & potential feeding links &
+probabilistic & Strydom et al. (2023) \\
+trait matching & Interactions can be inferred by a mechanistic
+framework/relationships & interactions & species & feeding links &
+binary & Morales-Castilla et al. (2015) \\
+binary classifiers & Interactions can be predicted by learning the
+relationship between interactions and ecologically relevant predictors &
+interactions & species & feeding links & binary & Pichler et al.
+(2020) \\
+expert knowledge & `Boots on the ground' ecological knowledge and
+observations & interactions & species & feeding links & binary & \\
+data scavenging & Webscraping to create networks from online databases &
+interactions & species & feeding links & binary & \\
+co-occurrence & co-occurrence patterns arise from interactions so we can
+use these patterns to reverse engineer the interactions & co-occurrence
+patterns & species & association links & binary & \\
+\end{longtable}
 
 \textbf{Null models:} The interactions between species occurs regardless
 of the identity of the species (\emph{i.e.,} species have no agency) and
-links are randomly distributed throughout the network. There is however
-the assumption that a network will be constrained by the number of
-links. Type I (Fortuna \& Bascompte, 2006), where interactions happen
-proportionally to connectance and Type II (Bascompte et al., 2003),
-where interactions happen proportionally to the joint degree of the two
-species involved. These two models are equivalent to the Erdos-Renyi and
-Configuration models (Newman, 2010) respectively (check that though).
+links are randomly distributed throughout the network. This family of
+models is often used as a way of benchmarking things\ldots{} Broadly
+there are two different approaches; Type I (Fortuna \& Bascompte, 2006),
+where interactions happen proportionally to connectance and Type II
+(Bascompte et al., 2003), where interactions happen proportionally to
+the joint degree of the two species involved.
 
-\textbf{Neutral models:} Based on the theory that interactions occur as
-the result of the abundance of species (\emph{i.e.,} the species still
-has no agency but its abundance does?). See Pomeranz et al. (2019)
+\textbf{Neutral models:} Can be tied to Hubble's (spellings but also
+name??) neutral theory {[}ref, probably mass-ratio{]} where it is
+assumed that the interactions that occur between species are due to the
+abundance of species within the community (Pomeranz et al., 2019).
 
 \textbf{Resource models:} Based on the idea that networks follow a
 trophic hierarchy and that species interactions can be determined using
@@ -556,12 +624,11 @@ that species feed on one another in a hierarchical manner; the niche
 model (Williams \& Martinez, 2000), broadly all species are randomly
 assigned a `feeding niche' and all species that fall in this niche can
 be consumed by that species; and the nested hierarchy model (Cattin et
-al., 2004), which adds some component of phylogenetic
-clustering/signal\ldots{} so not a single dimension? \textbf{TODO}.
-Williams \& Martinez (2008) provides a broader overview of some of the
-variations in these models as well as comparison between them regarding
-their ability to retrieve elements of networks structure (see also
-Allesina et al. (2008)).
+al., 2004), which adds some component of phylogenetic clustering/signal
+to determine interactions. Williams \& Martinez (2008) provides a
+broader overview of some of the variations in these models as well as
+comparison between them regarding their ability to retrieve elements of
+networks structure (see also Allesina et al. (2008)).
 
 \textbf{Generative models:} (this is maybe a bit of a bold term to use).
 MaxEnt (Banville et al., 2023), (maybe) stochastic block (Xie et al.,
@@ -584,17 +651,16 @@ adbm and niche model.
 \end{quote}
 
 \textbf{Binary classifiers:} The task of predicting if an interaction
-will occur between a species pair is treated as a statistical binary
-classification task, where the task is to correlate `real world'
-interaction data with a suitable ecological proxy for which data is more
-widely available (\emph{e.g.,} traits). Model families often used
-include generalised linear models (\emph{e.g.,} Caron et al., 2022),
-random forest (\emph{e.g.,} Llewelyn et al., 2023), trait-based k-NN
-(\emph{e.g.,} Desjardins-Proulx et al., 2017), and Bayesian models
-(Cirtwill et al., 2019; \emph{e.g.,} Eklöf et al., 2013). See Pichler et
-al. (2020) for a more detailed overview on the performance of machine
-learning and statistical approaches for inferring trait-trait
-relationships.
+will occur between a species pair is treated as abinary classification
+task, where the task is to correlate `real world' interaction data with
+a suitable ecological proxy for which data is more widely available
+(\emph{e.g.,} traits). Model families often used include generalised
+linear models (\emph{e.g.,} Caron et al., 2022), random forest
+(\emph{e.g.,} Llewelyn et al., 2023), trait-based k-NN (\emph{e.g.,}
+Desjardins-Proulx et al., 2017), and Bayesian models (Cirtwill et al.,
+2019; \emph{e.g.,} Eklöf et al., 2013). See Pichler et al. (2020) for a
+more detailed overview on the performance of machine learning and
+statistical approaches for inferring trait-feeding relationships.
 
 \textbf{Graph embedding:} This family of approaches has been extensively
 discussed in Strydom et al. (2023) but can be broadly explained as an
@@ -603,129 +669,53 @@ be used to predict interactions. Strydom et al. (2022) uses a transfer
 learning framework (specifically using a random dot product graph for
 embedding) based around the idea that interactions are evolutionarily
 conserved and that we can use known networks, and phylogenetic
-relationships, to predict interactions for a given species pool.
-\textbf{TODO} Log-ratio (Rohr et al., 2010)
+relationships, to predict interactions for a given species pool. Another
+approach that uses the concept of embedding is the log-ratio approach
+(Rohr et al., 2010)
 
 \textbf{Trait matching:} Interactions are determined by a series of
 `feeding rules', whereby the interaction between a species pair will
 only occur if all feeding rules are met. These rules are determined on
 an \emph{a priori} basis using expert/ecological knowledge to determine
-the underlying feeding hierarchy using ecological proxies
-(Morales-Castilla et al., 2015). For example the Paleo Foodweb Inference
-Model (PFIM, Shaw et al., 2024) uses a series of rules for a set of
-trait categories (such as habitat and body size) to determine if an
-interaction can occur between a species pair. What sets this family of
-models apart from \textbf{expert knowledge} ones is that there is a
+the underlying feeding hierarchy by using ecological proxies (see
+Morales-Castilla et al., 2015 for a more details on the idea of using
+this approach). For example the Paleo Foodweb Inference Model (PFIM,
+Shaw et al., 2024) uses a series of rules for a set of trait categories
+(such as habitat and body size) to determine if an interaction can
+feasibly occur between a species pair. What sets this family of models
+apart from \textbf{expert knowledge} ones is that there is a
 formalisation of the feeding rules and thus there is some ability to
 transfer these rules to different communities.
 
-\textbf{Expert knowledge:} Not so much about empirical observations but
-more the value of `local' knowledge and having specific individuals
-sitting around a table and assigning a value of how confident they are
-that a specific species pair are likely to interact (\emph{e.g.,} Dunne
-et al., 2008), this has the added advantage that interactions can be
-scored in a more categorical as opposed to binary fashion, \emph{e.g.,}
-Maiorano et al. (2020) score interactions as either obligate (typical
-food resources) or occasional (opportunistic feeding) interactions. I
-feel like its worth also mentioning downfalls \emph{a la} Brimacombe et
-al. (2023)\ldots{}
+\textbf{Expert knowledge:} This approach involves having a group of
+experts come together to assess and assign the likelihood of feeding
+interactions being able to occur for a specified community. This is done
+in a pairwise manner where the experts will assign a value of how
+confident they are that a specific species pair are likely to interact
+(\emph{e.g.,} Dunne et al., 2008) This has the added advantage that
+interactions can be scored in a more categorical (or probabilistic) as
+opposed to binary fashion, \emph{e.g.,} Maiorano et al. (2020) score
+interactions as either obligate (typical food resources) or occasional
+(opportunistic feeding) interactions.
 
 \textbf{Data scavenging:} There are also a lot of published
-\emph{interaction} data that are publicly available \emph{e.g.,} the
-Global Biotic Interactions (GloBI) database (Poelen et al., 2014) and
-these can also be used to construct an interaction network by mining
-these sources to look for interactions for specific species pairs. This
-is done by matching species pairs against those within a dataset of
-trophic interactions to determine if an interaction is present or absent
-between the two species (\emph{e.g.,} the WebBuilder tool developed by
-Gray et al., 2015). It is important to note that this methodology is
-only going to be able to infer observations that have been recorded in
-the field, and given the relative scarcity {[}\emph{I say Poisot et al.
-(2021) but that's more an overview of complete networks but one can also
-get pairwise interactions from these types of data so I feel like its
-okay?}{]} and localised sampling of these types of datasets it is very
-likely that there will be many false negatives (missing pairwise
-interactions) using this approach.
+\emph{interaction} \emph{e.g.,} the Global Biotic Interactions (GloBI)
+database (Poelen et al., 2014) or \emph{network} \emph{e.g.,} Mangal
+(Poisot, Baiser, et al., 2016) datasets, these can be mined to look for
+interactions for specific species pairs. This is done by matching
+species pairs against those within a dataset of trophic interactions to
+determine if an interaction is present between the two species
+(\emph{e.g.,} the WebBuilder tool developed by Gray et al., 2015). It is
+important to note that this methodology is only going to be able to
+infer observations that have been recorded and will thus be prone to
+many false negatives (missing pairwise interactions) being generated
+using this approach.
 
 \textbf{Co-occurrence:} Trying to infer interactions from the
 co-occurrence patterns of species pairs within the community
 \emph{e.g.,} the geographical lasso (Ohlmann et al., 2018). This (for
 me) seems fundamentally flawed and Blanchet et al. (2020) seems to agree
 with me at least a little bit.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1268}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2676}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0986}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1268}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1549}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2254}}@{}}
-\caption{Lets make a table that gives an overview of the different model
-families and some of their features.}\label{tbl-families}\tabularnewline
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Model family
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Theory
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Network predicted
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Nodes represent
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Links represent
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Interaction
-\end{minipage} \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Model family
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Theory
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Network predicted
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Nodes represent
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Links represent
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Interaction
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-null & Network structure is random & structure & agnostic & feeding
-links & binary \\
-neutral & Network structure is random, but species abundance plays a
-role & structure & species & feeding links & binary \\
-resource & Networks are interval, species can be ordered on a `niche
-axis' & structure & trophic species & subdivision of resource &
-binary \\
-generative & Networks are determined by their structural features &
-structure & agnostic & links & binary \\
-energetic & Interactions are determined by foraging theory (feeding
-links) & interactions & species & feeding links & quantitative \\
-graph embedding & Interactions can be predicted from the latent traits
-of networks & interactions & species & potential feeding links &
-probabilistic \\
-trait matching & Interactions can be inferred by a mechanistic
-framework/relationships & interactions & species & feeding links &
-binary \\
-binary classifiers & Interactions can be predicted by learning the
-relationship between interactions and ecologically relevant predictors &
-interactions & species & feeding links & binary \\
-expert knowledge & `Boots on the ground' ecological knowledge and
-observations & interactions & species & feeding links & binary \\
-data scavenging & Webscraping to create networks from online databases &
-interactions & species & feeding links & binary \\
-co-occurrence & co-occurrence patterns arise from interactions so we can
-use these patterns to reverse engineer the interactions & co-occurrence
-patterns & species & association links & binary \\
-\end{longtable}
-
-\paragraph{When to use what?}\label{when-to-use-what}
 
 \begin{figure}
 
@@ -758,22 +748,6 @@ Outhwaite presented at the EEB seminar (there was a series of them).}
 
 \centering{
 
-\includegraphics{index_files/figure-latex/notebooks-model_qualitative-fig-pca-output-2.png}
-
-}
-
-\caption{\label{fig-pca}PCA of the trait table}
-
-\end{figure}%
-
-\textsubscript{Source:
-\href{https://BecksLab.github.io/ms_t_is_for_topology/index.qmd.html}{Article
-Notebook}}
-
-\begin{figure}[H]
-
-\centering{
-
 \includegraphics{index_files/figure-latex/notebooks-model_qualitative-fig-dendo-output-1.png}
 
 }
@@ -786,36 +760,63 @@ Notebook}}
 \href{https://BecksLab.github.io/ms_t_is_for_topology/index.qmd.html}{Article
 Notebook}}
 
-\paragraph{Model benchmarking}\label{model-benchmarking}
+\subsection{Assessing strengths and
+weaknesses}\label{assessing-strengths-and-weaknesses}
 
-\begin{itemize}
-\item
-  `Testing' the performance of a model is going to depend on some of the
-  core limitations of the model itself thus it makes sense to think of
-  two sets benchmarking rules for network and interaction prediction
-  models respectively (see Figure~\ref{fig-concept} panel B).
-\item
-  When it comes to network models we are concerned with the
-  `preservation' of structure and distribution of links across the
-  network. For interaction models we want to ensure that we are able to
-  retrieve interactions that really exist but also those that cannot
-  exist (\emph{sensu} forbidden links Jordano (2016b))
-\end{itemize}
+Although understanding the underlying philosophy of the different model
+families is beneficial it is also important to understand in what
+situations the different families are likely to preform well or poorly.
+When we are assessing the performance of the different model families it
+is beneficial to think of benchmarking these assessments based on two
+broader criteria, namely the ability of the model to correctly capture
+different elements of the structure of the network and the ability of
+the model to correctly retrieve pairwise interactions. When thinking
+about how to benchmark models it is perhaps beneficial to take a step
+back and once again assess what are the needs of the researcher and
+linking this back to what aspects of the network
+(Section~\ref{sec-network-anatomy}) are of importance. For example if we
+are concerned with being able to successfully predict pairwise
+interactions we want to ensure that we are able to retrieve interactions
+that really exist but also those that cannot exist (\emph{sensu}
+forbidden links Jordano (2016b))
+
+Benchmarking how well a model is doing to capture the desired elements
+of a network is also a task that required some thought and
+contemplation. Even if we think about the predicting the structure of a
+network it is possible that two networks may have the same number of
+nodes and links but that those links may be distributed in very
+different ways. Thus it is important to think critically about the suite
+of summary statistics that are used to assess a model, since there is no
+one `silver bullet' summary statistic that will be able to assess if a
+model is able to fully replicate an empirical network (Allesina et al.,
+2008). One of the main challenges when assessing the ability to retrieve
+pairwise interactions is that food webs are sparse (that means that
+there are few links given the number of species) and it is important tha
+we are able to discern between a model that is able to correctly predict
+interactions that do (true positives) and not (true negatives) occur and
+one that is simply predicting a lack of interactions (Poisot, 2023).
 
 \begin{quote}
-``As long as these predictions are not perfect, some interactions will
-be predicted at the `wrong' position in the network; these measures
-cannot describe the structural effect of these mistakes. On the other
-hand, measures of network structure can have the same value with
-interactions that fall at drastically different positions; this is in
-part because a lot of these measures covary with connectance, and in
-part because as long as these values are not 0 or their respective
-maximum, there is a large number of network configurations that can have
-the same value.'' - Poisot (2023)
+benchmarking requires the use of empirical networks and comparing that
+to the predicted one
 \end{quote}
 
-\subparagraph{Benchmarking network
-models}\label{benchmarking-network-models}
+\paragraph{Benchmarking for structure}\label{benchmarking-for-structure}
+
+Despite structural models being some of the older model families there
+is a distinctive lack of clear guidelines as to how we assess the
+ability of these models to replicate the \emph{entire} structure of a
+network. In part this may perhaps be driven by the underlying research
+agenda and interest in different aspects of capturing the structure of
+networks \emph{e.g.,} the obsession with intervality {[}ref{]} or links
+distributions {[}ref{]}. However, it is still a good idea to think about
+the network in its entirety and to benchmark structural models in a more
+holistic manner. Some useful ways to assess how well the model predicts
+the shape (\emph{e.g.,} the height (chain length) and\ldots), links
+(\emph{e.g.,} connectance), internal structure (\emph{e.g.,} SVD
+entropy, Strydom, Dalla Riva, et al. (2021)), and meso-level features
+(\emph{e.g.,} motifs, Stouffer et al. (2007)) of a network. This is
+shown in Figure~\ref{fig-topology}\ldots{}
 
 \begin{itemize}
 \item
@@ -826,62 +827,6 @@ models}\label{benchmarking-network-models}
   use for model selection
 \item
   Look at Vermaat et al. (2009)
-\end{itemize}
-
-\begin{quote}
-``Possibly, the most striking caveat of the use of summary statistics is
-that it cannot tell us whether or not a model is able to fully replicate
-empirical networks.'' - Allesina et al. (2008)
-\end{quote}
-
-\subparagraph{Benchmarking interaction
-models}\label{benchmarking-interaction-models}
-
-\begin{itemize}
-\item
-  Main concern with predicting interactions is that we want to test the
-  `quality' of the links we are predicting (both true positives and true
-  negatives), but the inherit sparsity (meaning high class imbalance)
-  means that we also need to look at the balance of these predictions.
-\item
-  ``Both precision and recall may be useful in cases where there is
-  imbalanced data. However, it may be valuable to prioritize one over
-  the other in cases where the outcome of a false positive or false
-  negative is costly.''
-\item
-  Caveat regarding the use of real world interaction data both for
-  training and validating predictions? \emph{e.g.,} Poisot, Ouellet, et
-  al.~et al 2021 and Catchen et al 2023
-\item
-  See Poisot (2023)
-
-  \begin{itemize}
-  \item
-    skill (ability to make the right prediction; evaluate whether low
-    prevalence can lull us into a false sense of predictive accuracy)
-  \item
-    bias (trends towards systematically over-predicting one class)
-  \item
-    class imbalance (the relative number of cases representing
-    interactions)
-  \end{itemize}
-\item
-  ``These results suggest that learning from a dataset with very low
-  connectance can be a different task than for more connected networks:
-  it becomes increasingly important to capture the mechanisms that make
-  an interaction exist, and therefore having a slightly more biased
-  training dataset might be beneficial. As connectance increases, the
-  need for biased training sets is less prominent, as learning the rules
-  for which interactions do not exist starts gaining importance''
-\item
-  Maybe also looking at how well a model can recover `missing links'
-  \emph{i.e.,} false negatives \emph{sensu} what we did in Strydom et
-  al. (2022)
-\item
-  Need to discuss the key differences and implications between
-  predicting a metaweb (\emph{sensu} Dunne (2006)) and a network
-  realisation. Maybe also Poisot et al. (2015) that discuss how the
-  local factors are going to play a role.
 \end{itemize}
 
 \begin{figure}[H]
@@ -902,7 +847,61 @@ Stouffer et al. (2007).}
 \href{https://BecksLab.github.io/ms_t_is_for_topology/index.qmd.html}{Article
 Notebook}}
 
-I really like this way of plotting results from Pichler et al. (2020)
+\paragraph{Benchmarking for
+interactions}\label{benchmarking-for-interactions}
+
+Broadly speaking the task of assessing the ability of a model to predict
+interactions as being an assessment of the model's classification
+ability (does it correctly predict the presence and absence of
+interactions?) and so we want to benchmark the model on how well it is
+able to correctly predict these presences and absences. This can be done
+in a myriad of ways (Poisot, 2023; Strydom, Catchen, et al., 2021) but
+is always based off of the confusion matrix {[}ref maybe?{]}.
+Essentially the confusion matrix captures the number of true positives
+(interaction predicted as present when it is present), false negatives
+(interaction predicted as absent when it is present), false positives
+(interaction predicted as present when it is absent), and true negatives
+(interaction predicted as absent when it is absent). Using the confusion
+matrix it is then possible to assess the `quality' of the model
+predictions such as their accuracy or informedness.
+
+As mentioned above one of the main challenges we are faced with when
+trying to benchmark interaction predictions is the high class imbalance
+(inherit sparsity) of networks, and as highlighted by Poisot (2023) we
+can very easy to lull ourselves into a false sense of predictive
+accuracy if we use the wrong benchmarking tools --- even a low skill
+(fails to predict interactions that are present) model can appear to do
+well if we assess it on its ability to correctly predict interactions,
+this is because most interactions are absent and so a model that
+predicts interactions as being absent will still predict most
+interactions correctly. Another aspect of assessing these types of
+predictions is quantifying the bias of the model, this will give and
+indication id the model tends to systematically over predict one of the
+classes.
+
+\begin{itemize}
+\item
+  Caveat regarding the use of real world interaction data both for
+  training and validating predictions? \emph{e.g.,} Poisot, Ouellet, et
+  al.~et al 2021 and Catchen et al 2023
+\item
+  ``These results suggest that learning from a dataset with very low
+  connectance can be a different task than for more connected networks:
+  it becomes increasingly important to capture the mechanisms that make
+  an interaction exist, and therefore having a slightly more biased
+  training dataset might be beneficial. As connectance increases, the
+  need for biased training sets is less prominent, as learning the rules
+  for which interactions do not exist starts gaining importance''
+\item
+  Maybe also looking at how well a model can recover `missing links'
+  \emph{i.e.,} false negatives \emph{sensu} what we did in Strydom et
+  al. (2022)
+\item
+  Need to discuss the key differences and implications between
+  predicting a metaweb (\emph{sensu} Dunne (2006)) and a network
+  realisation. Maybe also Poisot et al. (2015) that discuss how the
+  local factors are going to play a role.
+\end{itemize}
 
 \begin{figure}
 
@@ -912,13 +911,12 @@ I really like this way of plotting results from Pichler et al. (2020)
 
 }
 
-\caption{\label{fig-pichler}Cool way to conceptualise results from
-Pichler et al. (2020)}
+\caption{\label{fig-pichler}Moc result from Pichler et al. (2020)}
 
 \end{figure}%
 
-\subsection{Link network ecology to the outstanding questions in
-ecology}\label{link-network-ecology-to-the-outstanding-questions-in-ecology}
+\section{Linking network ecology to the outstanding questions in
+ecology}\label{linking-network-ecology-to-the-outstanding-questions-in-ecology}
 
 \begin{itemize}
 \item
@@ -989,7 +987,7 @@ final proportion will probably still remain the same\ldots{}
 in themselves are poorly defined.'' --- Roslin et al.~(2013, p.~2)
 \end{quote}
 
-\subsection{Discussion}\label{discussion}
+\section{Discussion}\label{discussion}
 
 \begin{itemize}
 \item
@@ -1036,7 +1034,7 @@ reconstructed network structure.''} - Poisot (2023)
     interactions is to reduce circularity and biases in the predictions.
     As an example, models like linear filtering generate probabilities
     of non-observed interactions existing, but do so based on measured
-    network properties.'' - Strydom et al. (2021)
+    network properties.'' - Strydom, Catchen, et al. (2021)
   \item
     Aligning (dove-tailing) with this the idea of ensemble modelling as
     presented by Becker et al. (2022)
@@ -1054,8 +1052,8 @@ reconstructed network structure.''} - Poisot (2023)
   quadrant of panel A in Figure~\ref{fig-concept})
 \end{itemize}
 
-\subsection*{References}\label{references}
-\addcontentsline{toc}{subsection}{References}
+\section*{References}\label{references}
+\addcontentsline{toc}{section}{References}
 
 \textsubscript{Source:
 \href{https://BecksLab.github.io/ms_t_is_for_topology/index.qmd.html}{Article
@@ -1251,10 +1249,6 @@ Morales-Castilla, I., Matias, M. G., Gravel, D., \& Araújo, M. B.
 Ecology \& Evolution}, \emph{30}(6), 347--356.
 \url{https://doi.org/10.1016/j.tree.2015.03.014}
 
-\bibitem[\citeproctext]{ref-newmanNetworksIntroduction2010}
-Newman, M. E. J. (2010). \emph{Networks. {An} introduction}. Oxford
-University Press.
-
 \bibitem[\citeproctext]{ref-ohlmannMappingImprintBiotic2018}
 Ohlmann, M., Mazel, F., Chalmandrier, L., Bec, S., Coissac, E., Gielly,
 L., Pansu, J., Schilling, V., Taberlet, P., Zinger, L., Chave, J., \&
@@ -1291,6 +1285,12 @@ species-interaction datasets. \emph{Ecological Informatics}, \emph{24},
 Poisot, T. (2023). Guidelines for the prediction of species interactions
 through binary classification. \emph{Methods in Ecology and Evolution},
 \emph{14}(5), 1333--1345. \url{https://doi.org/10.1111/2041-210X.14071}
+
+\bibitem[\citeproctext]{ref-poisotMangalMakingEcological2016}
+Poisot, T., Baiser, B., Dunne, J., Kéfi, S., Massol, F., Mouquet, N.,
+Romanuk, T. N., Stouffer, D. B., Wood, S. A., \& Gravel, D. (2016).
+Mangal -- making ecological network analysis simple. \emph{Ecography},
+\emph{39}(4), 384--390. \url{https://doi.org/10.1111/ecog.00976}
 
 \bibitem[\citeproctext]{ref-poisotGlobalKnowledgeGaps2021}
 Poisot, T., Bergeron, G., Cazelles, K., Dallas, T., Gravel, D.,
@@ -1389,6 +1389,12 @@ towards predicting species interaction networks (across space and time).
 \emph{Philosophical Transactions of the Royal Society B: Biological
 Sciences}, \emph{376}(1837), 20210063.
 \url{https://doi.org/10.1098/rstb.2021.0063}
+
+\bibitem[\citeproctext]{ref-strydomSVDEntropyReveals2021}
+Strydom, T., Dalla Riva, G. V., \& Poisot, T. (2021). {SVD Entropy
+Reveals} the {High Complexity} of {Ecological Networks}. \emph{Frontiers
+in Ecology and Evolution}, \emph{9}.
+\url{https://doi.org/10.3389/fevo.2021.623141}
 
 \bibitem[\citeproctext]{ref-thanosAristotleTheophrastusPlantanimal1994}
 Thanos, C. A. (1994). Aristotle and {Theophrastus} on plant-animal

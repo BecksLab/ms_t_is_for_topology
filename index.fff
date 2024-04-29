@@ -16,19 +16,6 @@ network or interaction predicting model}
 \end{figure}
 \efloatseparator
  
-\begin{figure}[H]
-
-{\centering \includegraphics{images/thullier_2023_concept.jpeg}
-
-}
-
-\caption{I like the use of the different source indicator items (not too
-dissimilar from Tall Tom's nature paper but also different). This is
-from Thuiller et al. (2024)}
-
-\end{figure}
-\efloatseparator
- 
 \begin{figure}
 
 \centering{
@@ -54,19 +41,6 @@ hybrid\ldots{}}
 
 \caption{\label{fig-outhwaite}I like these schematics that Charlie
 Outhwaite presented at the EEB seminar (there was a series of them).}
-
-\end{figure}
-\efloatseparator
- 
-\begin{figure}[H]
-
-\centering{
-
-\includegraphics{index_files/figure-latex/notebooks-model_qualitative-fig-pca-output-2.png}
-
-}
-
-\caption{\label{fig-pca}PCA of the trait table}
 
 \end{figure}
 \efloatseparator
@@ -107,7 +81,6 @@ Stouffer et al. (2007).}
 
 }
 
-\caption{\label{fig-pichler}Cool way to conceptualise results from
-Pichler et al. (2020)}
+\caption{\label{fig-pichler}Moc result from Pichler et al. (2020)}
 
 \end{figure}
