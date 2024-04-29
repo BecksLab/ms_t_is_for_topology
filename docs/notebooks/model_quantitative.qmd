@@ -19,6 +19,15 @@ As well as the 'New Zealand' dataset from @pomeranzInferringPredatorPrey2019
 #| warning: false
 library(tidyverse)
 
+# function for radar plots
+coord_radar <- function (theta = "x", start = 0, direction = 1) {
+    theta <- match.arg(theta, c("x", "y"))
+    r <- if (theta == "x") "y" else "x"
+    ggproto("CordRadar", CoordPolar, theta = theta, r = r, start = start, 
+            direction = sign(direction),
+            is_linear = function(coord) TRUE)
+}
+
 # download file from other repo
 download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/topology_summary.csv", "../notebooks/data/topology_models.csv")
 download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/mangal_summary.csv", "../notebooks/data/mangal_summary.csv")
@@ -118,6 +127,33 @@ ggplot(df %>%
     theme_classic() +
     theme(panel.border = element_rect(colour = 'black',
                                       fill = "#ffffff00"))
+
+```
+
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: fig-spider
+#| fig-cap: "I was experimenting with radial plots... its not going well..."
+
+ggplot(df %>% 
+        pivot_longer(
+                    cols = c(real_val, model_val),
+                    names_to = "grp",
+                    values_to = "value",
+                    values_drop_na = TRUE) %>%
+        group_by(real, model, grp)  %>% 
+        reframe(mean = mean(value, na.rm = TRUE)) %>%
+        distinct(),
+        aes(x = real,
+            y = mean,
+            group = model,
+            colour = model)) +
+    geom_line() +
+    coord_radar() +
+    facet_wrap(vars(model)) + 
+    theme_minimal()
 
 ```
 
