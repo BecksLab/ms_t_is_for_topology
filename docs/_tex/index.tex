@@ -292,34 +292,31 @@ challenging to actually record species interactions in the field
 `real world' interaction data (Poisot et al., 2021), and secondly has
 been the need to develop terminology and tools that help us to
 construct, conceptualise, and analyse these networks. Although recording
-interactions in the field remains a challenge, although the development
-of both practical tools (\emph{i.e.,} tools that help us to record or
-measure interactions, (e.g.~ref maybe Pringle \& Hutchinson, 2020)), as
-well as discussions around the development of tools to predict or infer
-them (Morales-Castilla et al., 2015; Strydom, Catchen, et al., 2021),
-has allowed us to begin filling in these `global gaps', albeit in a more
-synthetic manner (Poisot, Gravel, et al., 2016). Additionally, there has
-been extensive development in in the ways in which we formalise networks
-(Dale \& Fortin, 2010), and the tools and language that we use to
-quantify the structure and properties of networks (Delmas et al., 2019).
-All together these tools mean that, as a field, network ecology can (and
-should) be integrated into the broader fields of ecology (\emph{e.g.,}
-Thuiller et al., 2024) and conservation biology. However (as with any
-new tool or model), it is important that one has a firm grasp of how
-networks (particularly synthetic ones) are generated and how the
-underlying philosophy thereof maps onto the questions being asked. Here
-we provide; a discussion of the underlying assumptions that are made
-when we attempt to delimit and describe a food webs, a synthesis of the
-different families of tools that are used to construct food webs, and a
+interactions in the field remains a challenge, the development of both
+practical tools (\emph{i.e.,} tools that help us to record or measure
+interactions, Pringle \& Hutchinson, 2020), as well as discussions
+around the development of tools to predict or infer them
+(Morales-Castilla et al., 2015; Strydom, Catchen, et al., 2021), has
+allowed us to begin filling in these `global gaps', albeit in a,
+potentially, more synthetic manner (Poisot, Gravel, et al., 2016).
+Additionally, there has been extensive development in in the ways in
+which we formalise networks (Dale \& Fortin, 2010), and the tools and
+language that we use to quantify the structure and properties of
+networks (Delmas et al., 2019). All together these tools mean that, as a
+field, network ecology can (and should) be integrated into the broader
+fields of ecology (\emph{e.g.,} Thuiller et al., 2024) and conservation
+biology. However (as with any new tool or model), it is important that
+one has a firm grasp of how the underlying philosophy that underpins the
+construction of networks (particularly synthetic ones) can have an
+impact on the interpretation of the questions being asked. In this
+manuscript we will discuss three themes that should help provide clarity
+and understanding for those wishing to take a step into network
+(particularly food web) ecology this includes; thinking about and
+understanding the underlying assumptions that are made when we attempt
+to delimit and describe a food webs, a synthesis of the different
+families of tools that are commonly used to construct food webs, and a
 discussion linking network ecology to some of the outstanding questions
 in ecology.
-
-\begin{quote}
-Three themes that are aimed at: providing a standardisation of terms
-that are sued when we are talking about both networks as well as what we
-mean when we are generating networks. The final theme aims to map
-network ecology to some of the outstanding questions in ecology
-\end{quote}
 
 \begin{figure}
 
@@ -415,6 +412,12 @@ way of representing interactions {[}probabilities preprint{]} this of
 course also means that there is an additional layer to the
 interpretation these links.
 
+\subsection{Aggregating networks}\label{aggregating-networks}
+
+Here I think we need to talk about realised vs potential links (i.e.~the
+concept of a metaweb) but also the idea that we are often aggregating
+over time and space which makes boundaries and whatnot all a bit fuzzy
+
 \subsection{Putting the parts together; what does it
 mean?}\label{putting-the-parts-together-what-does-it-mean}
 
@@ -492,13 +495,15 @@ but can rather be viewed as operating on a continuum ranging from a need
 for generality (\emph{i.e.,} creating a network that, when taken in
 aggregate, the distribution of links (interactions) between nodes
 (species) are ecologically plausible) to a need for specificity
-(\emph{i.e.,} local-level predictions between specific species). It is
-thus clear that (realistically) there will probably never be a `best
-fit' tool that is able to construct a food web that will span the entire
-range of needs, and rather the responsibility lies on the researcher to
-be aware of not only the underlying philosophy of the specific toolset
-they wish to use used also how well the tool is able to retrieve the
-network properties that they desire.
+(\emph{i.e.,} local-level predictions between specific species pairs).
+It is thus clear that (realistically) there will probably never be a
+`best fit' tool that is able to construct a food web that will span the
+entire range of needs, and rather the responsibility lies with the
+researcher to be aware of not only the underlying philosophy of the
+specific toolset (as this could have knock-on effects when using those
+networks for downstream analyses/simulations; pers. comms. Beckerman \&
+Petchy, 2024), but also how well the tool is able to retrieve the
+specific network or interaction properties that they desire.
 
 \subsection{Model families}\label{model-families}
 
@@ -877,7 +882,10 @@ predicts interactions as being absent will still predict most
 interactions correctly. Another aspect of assessing these types of
 predictions is quantifying the bias of the model, this will give and
 indication id the model tends to systematically over predict one of the
-classes.
+classes. As per Poisot (2023) the best ways to assess the classification
+performance of the different models is to use the Precision-Recall
+(PR-AUC) to assess precision {[}ref?{]}, and the Matthews correlation
+coefficient (MCC) to assess accuracy (Matthews, 1975).
 
 \begin{itemize}
 \item
@@ -1242,6 +1250,12 @@ Maiorano, L., Montemaggiori, A., Ficetola, G. F., O'Connor, L., \&
 Thuiller, W. (2020). {TETRA-EU} 1.0: {A} species-level trophic metaweb
 of {European} tetrapods. \emph{Global Ecology and Biogeography},
 \emph{29}(9), 1452--1457. \url{https://doi.org/10.1111/geb.13138}
+
+\bibitem[\citeproctext]{ref-matthewsComparisonPredictedObserved1975}
+Matthews, B. W. (1975). Comparison of the predicted and observed
+secondary structure of {T4} phage lysozyme. \emph{Biochimica Et
+Biophysica Acta (BBA) - Protein Structure}, \emph{405}(2), 442--451.
+\url{https://doi.org/10.1016/0005-2795(75)90109-9}
 
 \bibitem[\citeproctext]{ref-morales-castillaInferringBioticInteractions2015}
 Morales-Castilla, I., Matias, M. G., Gravel, D., \& Araújo, M. B.
