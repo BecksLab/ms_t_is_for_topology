@@ -418,6 +418,12 @@ Here I think we need to talk about realised vs potential links (i.e.~the
 concept of a metaweb) but also the idea that we are often aggregating
 over time and space which makes boundaries and whatnot all a bit fuzzy
 
+\begin{quote}
+Cohen et al. (1985) states that \emph{``{[}Their{]} approach is more
+like gross anatomy than like physiology\ldots{} that is, the gross
+anatomy is frozen, rather than in motion.''}.
+\end{quote}
+
 \subsection{Putting the parts together; what does it
 mean?}\label{putting-the-parts-together-what-does-it-mean}
 
@@ -501,9 +507,9 @@ It is thus clear that (realistically) there will probably never be a
 entire range of needs, and rather the responsibility lies with the
 researcher to be aware of not only the underlying philosophy of the
 specific toolset (as this could have knock-on effects when using those
-networks for downstream analyses/simulations; pers. comms. Beckerman \&
-Petchy, 2024), but also how well the tool is able to retrieve the
-specific network or interaction properties that they desire.
+networks for downstream analyses/simulations; pers. comms. Beckerman,
+2024), but also how well the tool is able to retrieve the specific
+network or interaction properties that they desire.
 
 \subsection{Model families}\label{model-families}
 
@@ -765,8 +771,7 @@ Outhwaite presented at the EEB seminar (there was a series of them).}
 \href{https://BecksLab.github.io/ms_t_is_for_topology/index.qmd.html}{Article
 Notebook}}
 
-\subsection{Assessing strengths and
-weaknesses}\label{assessing-strengths-and-weaknesses}
+\subsection{Assessing model outputs}\label{assessing-model-outputs}
 
 Although understanding the underlying philosophy of the different model
 families is beneficial it is also important to understand in what
@@ -813,7 +818,7 @@ is a distinctive lack of clear guidelines as to how we assess the
 ability of these models to replicate the \emph{entire} structure of a
 network. In part this may perhaps be driven by the underlying research
 agenda and interest in different aspects of capturing the structure of
-networks \emph{e.g.,} the obsession with intervality {[}ref{]} or links
+networks \emph{e.g.,} the obsession with intervality {[}ref{]} or link
 distributions {[}ref{]}. However, it is still a good idea to think about
 the network in its entirety and to benchmark structural models in a more
 holistic manner. Some useful ways to assess how well the model predicts
@@ -923,6 +928,24 @@ coefficient (MCC) to assess accuracy (Matthews, 1975).
 
 \end{figure}%
 
+\subsection{The bigger picture}\label{the-bigger-picture}
+
+In addition to thinking about the `performance' if a model it is also
+important to be aware of the `unseen' costs and limitations of the
+different modelling families. This includes thinking about the need for
+additional data sources (such as trait or phylogenetic data), the
+computational cost, as well as the time it might take to generate a
+network, \emph{e.g.,} binary classifiers require an (often times)
+extensive list of additional trait data for the model training process,
+which limits predictions to communities for which you do have the
+relevant auxiliary data available.
+
+\begin{quote}
+What data do I need? Can a make \emph{de novo} predictions? What are the
+related `sinks' \emph{e.g.,} computational or time? What does the
+network I am constructing actually represent?
+\end{quote}
+
 \section{Linking network ecology to the outstanding questions in
 ecology}\label{linking-network-ecology-to-the-outstanding-questions-in-ecology}
 
@@ -967,10 +990,6 @@ ecology}\label{linking-network-ecology-to-the-outstanding-questions-in-ecology}
   stuff OR are we looking for a `final product' network that is relevant
   to a specific location? (this can still be broad in geographic scope).
 \end{itemize}
-
-Cohen et al. (1985) states that \emph{``{[}Their{]} approach is more
-like gross anatomy than like physiology\ldots{} that is, the gross
-anatomy is frozen, rather than in motion.''}.
 
 Interestingly Williams \& Martinez (2008) also explicitly talk about
 \emph{structural} food-web models in their introduction\ldots{} so how I
@@ -1058,6 +1077,21 @@ reconstructed network structure.''} - Poisot (2023)
   should be focusing our attention when it comes to furthering model
   development. (we need models that will fill the space in the top right
   quadrant of panel A in Figure~\ref{fig-concept})
+\end{itemize}
+
+\subsection{Downsampling}\label{downsampling}
+
+\begin{itemize}
+\item
+  Dansereau et al. (2023)
+\item
+  ``That being said, there is a compelling argument for the need to
+  `combine' these smaller functional units with larger spatial networks
+  (\textbf{Fortin2021Network?}) and that we should also start thinking
+  about the interplay of time and space (\textbf{Estay2023Editorial?}).
+  Although deciding exactly what measure might actually be driving
+  differences between local networks and the regional metaweb might not
+  be that simple (\textbf{Saravia2022Ecological?})''''
 \end{itemize}
 
 \section*{References}\label{references}
@@ -1170,6 +1204,10 @@ Sciences}, \emph{224}(1237), 421--448.
 Dale, M. R. T., \& Fortin, M.-J. (2010). From {Graphs} to {Spatial
 Graphs}. \emph{Annual Review of Ecology, Evolution, and Systematics},
 \emph{41}, 21--38. \url{https://www.jstor.org/stable/27896212}
+
+\bibitem[\citeproctext]{ref-dansereauSpatiallyExplicitPredictions2023}
+Dansereau, G., Barros, C., \& Poisot, T. (2023). \emph{Spatially
+explicit predictions of food web structure from regional level data}.
 
 \bibitem[\citeproctext]{ref-darwinOriginSpeciesMeans1859}
 Darwin, C. (1859). \emph{On the {Origin} of {Species} by {Means} of
