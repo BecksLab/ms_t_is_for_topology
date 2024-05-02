@@ -1,5 +1,5 @@
 ---
-title: Qualitative approach to topology generators
+title: Model family traits
 authors:
   - name: Tanya Strydom
     id: ts
