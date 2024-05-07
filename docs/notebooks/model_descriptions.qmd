@@ -10,23 +10,45 @@ bibliography: ../references.bib
 
 # Extended model descriptions {#sec-extended-model-descriptions}
 
-## Network models
+## Network generators
 
-### Null models
+### Null models 
 
-**Type I** [@fortunaHabitatLossStructure2006]:
+The interactions between species occurs regardless of the identity of the species (*i.e.,* species have no agency) and links are randomly distributed throughout the network. This family of models is often used as a way of benchmarking things... Broadly there are two different approaches; Type I [@fortunaHabitatLossStructure2006], where interactions happen proportionally to connectance and Type II [@bascompteNestedAssemblyPlantanimal2003], where interactions happen proportionally to the joint degree of the two species involved.
 
-**Type II** [@bascompteNestedAssemblyPlantanimal2003]:
+### Neutral models 
 
-### Neutral models
+Can be tied to Hubble's (spellings but also name??) neutral theory \[ref, probably mass-ratio\] where it is assumed that the interactions that occur between species are due to the abundance of species within the community [@pomeranzInferringPredatorPrey2019].
 
 ### Resource models
+
+Based on the idea that networks follow a trophic hierarchy and that network structure can be determined by distributing interactions along single dimension [the “niche axis”; @allesinaGeneralModelFood2008]. Essentially these models can be viewed as being based on the idea of resource partitioning (niches) along a one-dimensional resource which will result in the standard 'trophic pyramid' to ensure that all species can 'fit' along this resource, importantly there is a strong assumption that the resulting structure is constrained by connectance. 
 
 **Cascade model** [@cohenCommunityFoodWebs1990]: Much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). This is achieved by assigning all species a random rank, this rank will then determine both the predators and prey of that species. A species will have a particular probability of being fed on by any species with a higher ranking than it, this probability is constrained by the specified connectance of the network. Interestingly here 'species' are treated as any individual that consume and are consumed by the same 'species', *i.e.,* these are not taxonomical species [@cohenStochasticTheoryCommunity1985]. The original cascade model has altered to be more 'generalised' [@stoufferQuantitativePatternsStructure2005], which altered the probability distribution of the prey that could be consumed by a species.
 
 **Niche models** [@williamsSimpleRulesYield2000]: The niche model introduces the idea that species interactions are based on the 'feeding niche' of a species. Broadly, all species are randomly assigned a 'feeding niche' range and all species that fall in this range can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species' niche is (in part) constrained by the specified connectance of the network. The niche model has also been modified, although it appears that adding to the 'complexity' of the niche model does not improve on its ability to generate a more ecologically 'correct' network [@williamsSuccessItsLimits2008].
 
 **Nested hierarchy model** [@cattinPhylogeneticConstraintsAdaptation2004]
+
+**Generative models:** (this is maybe a bit of a bold term to use). Structural representation of the interactions between species. MaxEnt [@banvilleWhatConstrainsFood2023], (maybe) stochastic block [@xieCompletenessCommunityStructure2017].
+
+## Interaction predictors
+
+**Feeding models:** Broadly this family of models is rooted in feeding theory and allocates the links between species based on energetics, which predicts the diet of a consumer based on energy intake. This means that the model is focused on predicting not only the number of links in a network but also the arrangement of these links based on the diet breadth of a species. The diet breadth model [@beckermanForagingBiologyPredicts2006] as well as its allometrically scaled cousin the allometric diet breadth model (ADBM) [@petcheySizeForagingFood2008] determine links between species based on the energetic content, handling time, and density of species. See also @deangelisModelTropicInteraction1975
+
+> @gravelInferringFoodWeb2013 also poses an interesting cross-over between the adbm and niche model?
+
+**Binary classifiers:** The task of predicting if an interaction will occur between a species pair is treated as abinary classification task, where the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [*e.g.,* @caronAddressingEltonianShortfall2022], random forest [*e.g.,* @llewelynPredictingPredatorPrey2023], trait-based k-NN [*e.g.,* @desjardins-proulxEcologicalInteractionsNetflix2017], and Bayesian models [*e.g.,* @eklofSecondaryExtinctionsFood2013; @cirtwillQuantitativeFrameworkInvestigating2019]. See @pichlerMachineLearningAlgorithms2020 for a more detailed overview on the performance of machine learning and statistical approaches for inferring trait-feeding relationships.
+
+**Graph embedding:** This family of approaches has been extensively discussed in @strydomGraphEmbeddingTransfer2023 but can be broadly explained as an approach that estimates latent features from observed networks that can be used to predict interactions. @strydomFoodWebReconstruction2022 uses a transfer learning framework (specifically using a random dot product graph for embedding) based around the idea that interactions are evolutionarily conserved and that we can use known networks, and phylogenetic relationships, to predict interactions for a given species pool. Another approach that uses the concept of embedding is the log-ratio approach [@rohrModelingFoodWebs2010]
+
+**Trait matching:** Interactions are determined by a series of 'feeding rules', whereby the interaction between a species pair will only occur if all feeding rules are met. These rules are determined on an *a priori* basis using expert/ecological knowledge to determine the underlying feeding hierarchy by using ecological proxies [see @morales-castillaInferringBioticInteractions2015 for a more details on the idea of using this approach]. For example the Paleo Foodweb Inference Model [PFIM, @shawFrameworkReconstructingAncient2024] uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair. What sets this family of models apart from **expert knowledge** ones is that there is a formalisation of the feeding rules and thus there is some ability to transfer these rules to different communities.
+
+**Expert knowledge:** This approach involves having a group of experts come together to assess and assign the likelihood of feeding interactions being able to occur for a specified community. This is done in a pairwise manner where the experts will assign a value of how confident they are that a specific species pair are likely to interact [*e.g.,* @dunneCompilationNetworkAnalyses2008] This has the added advantage that interactions can be scored in a more categorical (or probabilistic) as opposed to binary fashion, *e.g.,* @maioranoTETRAEUSpecieslevelTrophic2020 score interactions as either obligate (typical food resources) or occasional (opportunistic feeding) interactions.
+
+**Data scavenging:** There are also a lot of published *interaction* *e.g.,* the Global Biotic Interactions (GloBI) database [@poelenGlobalBioticInteractions2014] or *network* *e.g.,* Mangal [@poisotMangalMakingEcological2016] datasets, these can be mined to look for interactions for specific species pairs. This is done by matching species pairs against those within a dataset of trophic interactions to determine if an interaction is present between the two species [*e.g.,* the WebBuilder tool developed by @grayJoiningDotsAutomated2015]. It is important to note that this methodology is only going to be able to infer observations that have been recorded and will thus be prone to many false negatives (missing pairwise interactions) being generated using this approach.
+
+**Co-occurrence:** Trying to infer interactions from the co-occurrence patterns of species pairs within the community *e.g.,* the geographical lasso [@ohlmannMappingImprintBiotic2018]. This (for me) seems fundamentally flawed and @blanchetCooccurrenceNotEvidence2020 seems to agree with me at least a little bit.
 
 ## Interaction models
 

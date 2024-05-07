@@ -16,35 +16,6 @@ network or interaction predicting model}
 \end{figure}
 \efloatseparator
  
-\begin{figure}
-
-\centering{
-
-\includegraphics{images/model_venn.png}
-
-}
-
-\caption{\label{fig-venn}I still haven't given up on a sort of venn
-diagram idea but maybe it going to be more of a venn-flow chart
-hybrid\ldots{}}
-
-\end{figure}
-\efloatseparator
- 
-\begin{figure}
-
-\centering{
-
-\includegraphics{images/outhwaite_schematic.jpeg}
-
-}
-
-\caption{\label{fig-outhwaite}I like these schematics that Charlie
-Outhwaite presented at the EEB seminar (there was a series of them).}
-
-\end{figure}
-\efloatseparator
- 
 \begin{figure}[H]
 
 \centering{
@@ -68,7 +39,7 @@ Outhwaite presented at the EEB seminar (there was a series of them).}
 
 \caption{\label{fig-topology}Difference between real and model network
 property. S1 - S5 represent the different motif structures identified in
-Stouffer et al. (2007).}
+{[}31{]}.}
 
 \end{figure}
 \efloatseparator
@@ -81,6 +52,6 @@ Stouffer et al. (2007).}
 
 }
 
-\caption{\label{fig-pichler}Moc result from Pichler et al. (2020)}
+\caption{\label{fig-pichler}Moc result from {[}27{]}}
 
 \end{figure}
