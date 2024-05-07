@@ -41,28 +41,14 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
-\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}{
-    \@ifstar
-      \xxxParagraphStar
-      \xxxParagraphNoStar
-  }
-  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
-  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}{
-    \@ifstar
-      \xxxSubParagraphStar
-      \xxxSubParagraphNoStar
-  }
-  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
-  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
-\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -640,13 +626,14 @@ assumed that the interactions that occur between species are due to the
 abundance of species within the community (Pomeranz et al., 2019).
 
 \textbf{Resource models:} Based on the idea that networks follow a
-trophic hierarchy and that species interactions can be determined using
-a single dimension {[}the ``niche axis''; Allesina et al. (2008){]}.
-Essentially these models can be viewed as being based on the idea of
-resource partitioning (niches) along a one-dimensional resource and that
-the number of links scale with species richness (linear link scaling).
-That is, there is some sort of hierarchical feeding based on how a
-`resource' is partitioned. Broadly this family consists of three core
+trophic hierarchy and that network structure can be determined by
+distributing interactions along single dimension {[}the ``niche axis'';
+Allesina et al. (2008){]}. Essentially these models can be viewed as
+being based on the idea of resource partitioning (niches) along a
+one-dimensional resource which will result in the standard `trophic
+pyramid' to ensure that all species can `fit' along this resource,
+importantly there is a strong assumption that the resulting structure is
+constrained by connectance. Broadly this family consists of three core
 models; the cascade model (Cohen et al., 1990), which rests on the idea
 that species feed on one another in a hierarchical manner; the niche
 model (Williams \& Martinez, 2000), broadly all species are randomly
@@ -675,7 +662,7 @@ density of species. See also DeAngelis et al. (1975)
 
 \begin{quote}
 Gravel et al. (2013) also poses an interesting cross-over between the
-adbm and niche model.
+adbm and niche model?
 \end{quote}
 
 \textbf{Binary classifiers:} The task of predicting if an interaction
@@ -818,10 +805,11 @@ one `silver bullet' summary statistic that will be able to assess if a
 model is able to fully replicate an empirical network (Allesina et al.,
 2008). One of the main challenges when assessing the ability to retrieve
 pairwise interactions is that food webs are sparse (that means that
-there are few links given the number of species) and it is important tha
-we are able to discern between a model that is able to correctly predict
-interactions that do (true positives) and not (true negatives) occur and
-one that is simply predicting a lack of interactions (Poisot, 2023).
+there are few links given the number of species) and it is important
+that we are able to discern between a model that is able to correctly
+predict interactions that do (true positives) and not (true negatives)
+occur and one that is simply predicting a lack of interactions (Poisot,
+2023).
 
 \begin{quote}
 benchmarking requires the use of empirical networks and comparing that
@@ -924,13 +912,8 @@ coefficient (MCC) to assess accuracy (Matthews, 1975).
   for which interactions do not exist starts gaining importance''
 \item
   Maybe also looking at how well a model can recover `missing links'
-  \emph{i.e.,} false negatives \emph{sensu} what we did in Strydom et
-  al. (2022)
-\item
-  Need to discuss the key differences and implications between
-  predicting a metaweb (\emph{sensu} Dunne (2006)) and a network
-  realisation. Maybe also Poisot et al. (2015) that discuss how the
-  local factors are going to play a role.
+  \emph{i.e.,} introducing false negatives into the training data
+  \emph{sensu} what we did in Strydom et al. (2022)
 \end{itemize}
 
 \begin{figure}
@@ -949,22 +932,66 @@ coefficient (MCC) to assess accuracy (Matthews, 1975).
 
 In addition to thinking about the `performance' if a model it is also
 important to be aware of the `unseen' costs and limitations of the
-different modelling families. This includes thinking about the need for
-additional data sources (such as trait or phylogenetic data), the
-computational cost, as well as the time it might take to generate a
-network, \emph{e.g.,} binary classifiers require an (often times)
-extensive list of additional trait data for the model training process,
-which limits predictions to communities for which you do have the
-relevant auxiliary data available.
+different modelling families. What data do I need? Can a make \emph{de
+novo} predictions? What are the related `sinks' \emph{e.g.,}
+computational or time? What does the network I am constructing actually
+represent?
 
-\begin{quote}
-What data do I need? Can a make \emph{de novo} predictions? What are the
-related `sinks' \emph{e.g.,} computational or time? What does the
-network I am constructing actually represent?
-\end{quote}
+\subsubsection{Data need vs
+availability}\label{data-need-vs-availability}
+
+This includes thinking about the need for additional data sources (such
+as trait or phylogenetic data), the computational cost, as well as the
+time it might take to generate a network, \emph{e.g.,} binary
+classifiers require an (often times) extensive list of additional trait
+data for the model training process, which limits predictions to
+communities for which you do have the relevant auxiliary data available.
+
+\subsubsection{Theory vs `real world'}\label{theory-vs-real-world}
+
+Probably mentioned elsewhere but basically are we constructing networks
+because we want to make real-world, case-specific predictions
+\emph{e.g.,} for a conservation area or do we want to just have a set of
+ecologically plausible networks we can use for theoretical stuffs. Need
+to discuss the key differences and implications between predicting a
+metaweb (\emph{sensu} Dunne (2006)) and a network realisation. (In a way
+the idea of predicting a metaweb vs realisation is what makes me
+hesitant to use the Mangal networks to test the structural models
+because do we even know what the Mangal networks represent and what the
+structural models are predicting\ldots) Maybe also Poisot et al. (2015)
+that discuss how the local factors are going to play a role.
+
+\subsubsection{The target system?}\label{the-target-system}
+
+\subsubsection{Philosophy limits theory}\label{philosophy-limits-theory}
+
+Also need to take into consideration inherent constraints that the model
+imposes on itself and how it will affect our ability to test
+hypotheses/ask questions using the \emph{e.g.,} from Petchey et al.
+(2011) - models that are constrained by connectance means that we are
+unable to explain connectance itself and you would need a different
+approach if understanding connectance is your goal.
 
 \section{Linking network ecology to the outstanding questions in
 ecology}\label{linking-network-ecology-to-the-outstanding-questions-in-ecology}
+
+\begin{longtable}[]{@{}llll@{}}
+\caption{A high level attempt at identifying outstanding questions and
+mapping them to network stuff.}\label{tbl-questions}\tabularnewline
+\toprule\noalign{}
+Question & Ref & Network solution & Ref \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Question & Ref & Network solution & Ref \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& & & \\
+& & & \\
+& & & \\
+\end{longtable}
 
 \begin{itemize}
 \item
