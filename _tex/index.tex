@@ -41,14 +41,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -889,9 +903,10 @@ accuracy if we use the wrong benchmarking tools --- even a low skill
 well if we assess it on its ability to correctly predict interactions,
 this is because most interactions are absent and so a model that
 predicts interactions as being absent will still predict most
-interactions correctly. Another aspect of assessing these types of
-predictions is quantifying the bias of the model, this will give and
-indication id the model tends to systematically over predict one of the
+interactions correctly (\emph{i.e.,} getting the `right' answers but for
+the wrong reasons). Another aspect of assessing these types of
+predictions is quantifying the bias of the model, this will give an
+indication if the model tends to systematically over predict one of the
 classes. As per Poisot (2023) the best ways to assess the classification
 performance of the different models is to use the Precision-Recall
 (PR-AUC) to assess precision {[}ref?{]}, and the Matthews correlation
