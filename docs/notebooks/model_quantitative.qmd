@@ -8,6 +8,30 @@ date: last-modified
 bibliography: ../references.bib
 ---
 
+## Assessing model outputs
+
+### Benchmarking for structure
+
+Despite structural models being some of the older model families there is a distinctive lack of clear guidelines as to how we assess the ability of these models to replicate the *entire* structure of a network. In part this may perhaps be driven by the underlying research agenda and interest in different aspects of capturing the structure of networks *e.g.,* the obsession with intervality \[ref\] or link distributions \[ref\]. However, it is still a good idea to think about the network in its entirety and to benchmark structural models in a more holistic manner. Some useful ways to assess how well the model predicts the shape (*e.g.,* the height (chain length) and...), links (*e.g.,* connectance), internal structure (*e.g.,* SVD entropy, @strydomSVDEntropyReveals2021), and meso-level features (*e.g.,* motifs, @stoufferEvidenceExistenceRobust2007) of a network.
+
+-   Maybe look at some of the historic papers that compare some of the 'resource models'
+
+-   See also @allesinaGeneralModelFood2008 and the likelihood function that they use for model selection
+
+-   Look at @vermaatMajorDimensionsFoodweb2009
+
+### Benchmarking for interactions
+
+Broadly speaking the task of assessing the ability of a model to predict interactions as being an assessment of the model's classification ability (does it correctly predict the presence and absence of interactions?) and so we want to benchmark the model on how well it is able to correctly predict these presences and absences. This can be done in a myriad of ways [@strydomRoadmapPredictingSpecies2021; @poisotGuidelinesPredictionSpecies2023] but is always based off of the confusion matrix. Using the confusion matrix it is then possible to assess the 'quality' of the model predictions such as their accuracy or informedness. The high class imbalance (inherit sparsity) of networks means that most interactions are absent and so a model that predicts interactions as being absent will still predict most interactions correctly [*i.e.,* getting the 'right' answers but for the wrong reasons, @poisotGuidelinesPredictionSpecies2023]
+
+-    As per @poisotGuidelinesPredictionSpecies2023 the best ways to assess the classification performance of the different models is to use the Precision-Recall (PR-AUC) to assess precision \[ref?\], and the Matthews correlation coefficient (MCC) to assess accuracy [@matthewsComparisonPredictedObserved1975].
+
+-   Caveat regarding the use of real world interaction data both for training and validating predictions? *e.g.,* Poisot, Ouellet, et al. et al 2021 and Catchen et al 2023
+
+-   "These results suggest that learning from a dataset with very low connectance can be a different task than for more connected networks: it becomes increasingly important to capture the mechanisms that make an interaction exist, and therefore having a slightly more biased training dataset might be beneficial. As connectance increases, the need for biased training sets is less prominent, as learning the rules for which interactions do not exist starts gaining importance"
+
+-   Maybe also looking at how well a model can recover 'missing links' *i.e.,* introducing false negatives into the training data *sensu* what we did in @strydomFoodWebReconstruction2022
+
 I think in the long run I will probably turn the other repo ([BecksLab/topology_generators](https://github.com/BecksLab/topology_generators)) into a project that we can then access and I will port all of the working code here... I think it will just come down to what the 'cost' is of the computational side of things and how convoluted it might end up looking.
 
 Anyway so for now I am just pulling in the INTERIM data from some of the models. This uses (for now) 20 mangal [@poisotMangalMakingEcological2016] datasets and just generates some networks for using the niche and cascade models. The 'results' for now is just counting the number of links each model generates for each network because that's what my brain decided on doing...
