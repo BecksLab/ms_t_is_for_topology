@@ -29,7 +29,7 @@ format:
   docx:
     csl: https://www.zotero.org/styles/trends-in-ecology-and-evolution
   preprint-pdf:
-    csl: https://www.zotero.org/styles/trends-in-ecology-and-evolution
+    csl: https://www.zotero.org/styles/methods-in-ecology-and-evolution
     formatting:
       draft-format: true
 
