@@ -1,5 +1,5 @@
 ---
-title: Quantitative approach to topology generators
+title: "SuppMat 3: Benchmarking the different model families"
 authors:
   - name: Tanya Strydom
     id: ts
@@ -8,40 +8,86 @@ date: last-modified
 bibliography: ../references.bib
 ---
 
-## Assessing model outputs
+This notebook is going to visualise and further describe the process of benchmarking the different model families. The core code used to download, clean, and summarise the different networks can be found at the following repository [BecksLab/topology_generators](https://github.com/BecksLab/topology_generators).
 
-### Benchmarking for structure
+## Datasets used
 
-Despite structural models being some of the older model families there is a distinctive lack of clear guidelines as to how we assess the ability of these models to replicate the *entire* structure of a network. In part this may perhaps be driven by the underlying research agenda and interest in different aspects of capturing the structure of networks *e.g.,* the obsession with intervality \[ref\] or link distributions \[ref\]. However, it is still a good idea to think about the network in its entirety and to benchmark structural models in a more holistic manner. Some useful ways to assess how well the model predicts the shape (*e.g.,* the height (chain length) and...), links (*e.g.,* connectance), internal structure (*e.g.,* SVD entropy, @strydomSVDEntropyReveals2021), and meso-level features (*e.g.,* motifs, @stoufferEvidenceExistenceRobust2007) of a network.
+Note that not all datasets are suitable for use with all model families - this is primarily because some of the model families require a lot more additional (external) data and we cannot feasibly do this for all of the available datasets. Conversely for some of the 'data light' models it is of course possible to use many networks and create a large sample of networks. Below we will introduce three broader groups of datasets and in @tbl-datasets we show for which families we used which datasets.
 
--   Maybe look at some of the historic papers that compare some of the 'resource models'
+| Model family       | Mangal | New Zealand | Empirical |
+|--------------------|--------|-------------|-----------|
+| null               | Yes    | yes         | yes       |
+| neutral            |        | yes         | yes       |
+| resource           | Yes    | yes         | yes       |
+| generative         | Yes    | yes         | yes       |
+| energetic          |        | yes         | yes       |
+| graph embedding    |        |             | yes       |
+| trait matching     |        |             | yes       |
+| binary classifiers |        |             | yes       |
+| expert knowledge   |        |             | yes       |
+| data scavenging    |        |             | yes       |
+| co-occurrence      |        |             | yes       |
 
--   See also @allesinaGeneralModelFood2008 and the likelihood function that they use for model selection
+: Different model families and the datasets from which we are able to generate networks that we can use for benchmarking. {#tbl-datasets}
 
--   Look at @vermaatMajorDimensionsFoodweb2009
+### Mangal networks
 
-### Benchmarking for interactions
+We queried the Mangal [@poisotMangalMakingEcological2016] database and extracted a total of **TODO** networks. \[*Some sort of summary as to the geographic/taxonomic range??\]* Although these networks represent a high volume of interaction data they do not have accompanying 'metadata' that we would need for some of the more data-hungry model families (*e.g.,* local abundance), the Mangal networks were used to provide the 'starting values' for the random, resource, and generative families. This allows us to generate a large number of different networks that we can use to compare and contrast the performance of the various model families. For each network from Mangal we generated **TODO** versions of that network using each model family.
 
-Broadly speaking the task of assessing the ability of a model to predict interactions as being an assessment of the model's classification ability (does it correctly predict the presence and absence of interactions?) and so we want to benchmark the model on how well it is able to correctly predict these presences and absences. This can be done in a myriad of ways [@strydomRoadmapPredictingSpecies2021; @poisotGuidelinesPredictionSpecies2023] but is always based off of the confusion matrix. Using the confusion matrix it is then possible to assess the 'quality' of the model predictions such as their accuracy or informedness. The high class imbalance (inherit sparsity) of networks means that most interactions are absent and so a model that predicts interactions as being absent will still predict most interactions correctly [*i.e.,* getting the 'right' answers but for the wrong reasons, @poisotGuidelinesPredictionSpecies2023]
+> "These complex food webs differ in their level of resolution and sampling effort, which may introduce noise in the estimation of their properties, especially given their large number of interacting elements. However, because our MaxEnt models are applied on imperfect data, they aim at reproducing the sampled structure of food webs, not their actual structure." - @banvilleWhatConstrainsFood2023 (something to think about...)
 
--    As per @poisotGuidelinesPredictionSpecies2023 the best ways to assess the classification performance of the different models is to use the Precision-Recall (PR-AUC) to assess precision \[ref?\], and the Matthews correlation coefficient (MCC) to assess accuracy [@matthewsComparisonPredictedObserved1975].
+### New Zealand dataset
 
--   Caveat regarding the use of real world interaction data both for training and validating predictions? *e.g.,* Poisot, Ouellet, et al. et al 2021 and Catchen et al 2023
+Data from @pomeranzInferringPredatorPrey2019. **TODO** quick outline of what the dataset entails...
 
--   "These results suggest that learning from a dataset with very low connectance can be a different task than for more connected networks: it becomes increasingly important to capture the mechanisms that make an interaction exist, and therefore having a slightly more biased training dataset might be beneficial. As connectance increases, the need for biased training sets is less prominent, as learning the rules for which interactions do not exist starts gaining importance"
+### Empirical networks
 
--   Maybe also looking at how well a model can recover 'missing links' *i.e.,* introducing false negatives into the training data *sensu* what we did in @strydomFoodWebReconstruction2022
 
-I think in the long run I will probably turn the other repo ([BecksLab/topology_generators](https://github.com/BecksLab/topology_generators)) into a project that we can then access and I will port all of the working code here... I think it will just come down to what the 'cost' is of the computational side of things and how convoluted it might end up looking.
+> Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a 'scale' element as well *i.e.,* a regional and local network. I think there is going to be a 'turning point' where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) *sensu* @caronTraitmatchingModelsPredict2024. Although having said that I feel that contradicts the idea of backbones (*sensu* Bramon Mora (sp?) et al & Stouffer et al) But that might be where we get the idea of core *structure* vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I'm trying to say here)
 
-Anyway so for now I am just pulling in the INTERIM data from some of the models. This uses (for now) 20 mangal [@poisotMangalMakingEcological2016] datasets and just generates some networks for using the niche and cascade models. The 'results' for now is just counting the number of links each model generates for each network because that's what my brain decided on doing...
+## Predicting models
 
-As well as the 'New Zealand' dataset from @pomeranzInferringPredatorPrey2019
+For each model and network combination we predicted the model **TODO** number of times - this allows us to capture some of the inherent variability (and stochasticity) that we would expect from some of the models.
+
+## Model benchmarking
+
+Some of the considerations one needs to make when wanting to benchmark models is discussed in Box 2 of the main text. The different benchmarking summary statistics that we are collecting are as follows:
+
+For 'structure':
+
+-   **Links:** to determine if the number of links are 'correct' we use *connectance*
+
+-   *Shape:* to determine if the 'shape' of the network is correct we are looking at the ratio of 'top':'basal' species (where 'top' species are those that have a vulnerability of 0 and 'basal' species have a generality of 0) as well as the distance to base from one of the top species (this will represent the shortest path but a large discrepancy between the real and predicted network would be indicative that the model is not predicting a similar 'shape'). This will allow is to see if the models construct tall 'pencil' vs flat 'pancake' networks (Beckerman 2024, pers comms).
+
+    -   A small (\< 1) number will thus be indicative of a 'bottom-heavy' network and the opposite for larger numbers
+
+-   **Structure:** to determine if we are capturing some higher level of 'structure' we are using SVD entropy [@strydomSVDEntropyReveals2021]
+
+-   *Motifs:* We can estract the motifs identified by @stoufferEvidenceExistenceRobust2007, namely:
+
+    -   S1: Number of linear chains
+
+    -   S2: Number of omnivory motifs
+
+    -   S4: Number of apparent competition motifs
+
+    -   S5: Number of direct competition motifs
+
+For interactions:
+
+Based on @poisotGuidelinesPredictionSpecies2023:
+-   Precision-Recall (PR-AUC) - performance 
+-   Matthews correlation coefficient (MCC) - accuracy
+
+## Visualising results
+
+Now it is time to visualise the data
 
 ```{r}
 #| include: false
 #| warning: false
 library(tidyverse)
+library(patchwork)
 
 # function for radar plots
 coord_radar <- function (theta = "x", start = 0, direction = 1) {
@@ -62,6 +108,7 @@ df = full_join(rbind(read.csv("data/mangal_summary.csv"),
                      read.csv("data/nz_summary.csv")),
                 read.csv("data/topology_models.csv")) %>% 
         filter(complexity != 0) %>% 
+        # to get the ratio
         mutate(ratio = top/basal,
                 top = NULL,
                 basal = NULL,
@@ -84,9 +131,7 @@ df = full_join(rbind(read.csv("data/mangal_summary.csv"),
         filter(model_val != Inf)
 ```
 
-From a data transformation perspective instead of looking at the raw number of 'top' (zero vulnerability) and 'bottom' (zero generality) species we can instead look at the ratio of top:bottom. A small (< 1) number will thus be indicative of a 'bottom-heavy' network and the opposite for larger numbers
-
-Lets start by summarising the 'raw' data as box plots just to see what it looks like before we calculate the Z scores
+Lets start by summarising the 'raw' data as box plots just to see what it looks like before we try and do a more streamlines summary
 
 ```{r}
 #| warning: false
@@ -123,8 +168,7 @@ ggplot(df) +
 
 ```
 
-
-Now we can look at the difference between the mean of the real network property and the simulated one. I had originally considered using the $Z$-score but it doesn't work well for the more 'deterministic' models (neutral and ADBM) because they effectively have a $\sigma$ of zero...
+Now we can look at the difference between the mean of the real network property and the simulated one. I had originally considered using the $Z$-score but it doesn't work well for the more 'deterministic' models (neutral and ADBM) because they effectively have a $\sigma$ of zero... so we are just looking at the difference between the real value and the mean predicted value for each network.
 
 ```{r}
 #| warning: false
@@ -153,7 +197,6 @@ ggplot(df %>%
                                       fill = "#ffffff00"))
 
 ```
-
 
 ```{r}
 #| warning: false
