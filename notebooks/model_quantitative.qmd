@@ -12,7 +12,7 @@ This notebook is going to visualise and further describe the process of benchmar
 
 ## Datasets used
 
-Note that not all datasets are suitable for use with all model families - this is primarily because some of the model families require a lot more additional (external) data and we cannot feasibly do this for all of the available datasets. Conversely for some of the 'data light' models it is of course possible to use many networks and create a large sample of networks. Below we will introduce three broader groups of datasets and in @tbl-datasets we show for which families we used which datasets.
+Note that not all datasets are suitable for use with all model families - this is primarily because some of the model families require a lot more additional (external) data and we cannot feasibly do this for all of the available datasets. Conversely for some of the 'data light' models it is of course possible to use many networks and create a large sample of networks. Below we will introduce three broader groups of datasets and in the table below we show for which families we used which datasets.
 
 | Model family       | Mangal | New Zealand | Empirical |
 |--------------------|--------|-------------|-----------|
@@ -195,6 +195,8 @@ ggplot(df %>%
     theme_classic() +
     theme(panel.border = element_rect(colour = 'black',
                                       fill = "#ffffff00"))
+
+ggsave("../images/topology.png")
 
 ```
 

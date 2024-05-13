@@ -184,6 +184,8 @@ ggplot() +
   scale_y_reverse(expand = c(0.2, 0)) +
   theme_void()
 
+ggsave("../images/dendo.png")
+
 ```
 
 ## References {.unnumbered}

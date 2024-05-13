@@ -560,22 +560,16 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 </div>
 </figure>
 </div>
-<div class="quarto-embed-nb-cell">
-<div id="cell-fig-dendo" class="cell">
-<div class="cell-output cell-output-display">
-<div id="fig-dendo" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-dendro" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-dendo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-model_qualitative-fig-dendo-output-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/notebooks-model_qualitative-fig-dendo-output-1.png" class="img-fluid figure-img"></a>
+<div aria-describedby="fig-dendro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/dendo.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="images/dendo.png" class="img-fluid figure-img"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dendo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Dendrogram of the trait table
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dendro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Dendrogram of the trait table using a hierarchical clustering model, This is based off of the traits table in SuppMat 2)
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
-<a class="quarto-notebook-link" id="nblink-1" href="notebooks/model_qualitative-preview.html#cell-fig-dendo">Source: SuppMat 2: Looking at the traits of the different model families</a></div>
 <div id="box-benchmarking" class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -589,22 +583,16 @@ Box 2 - Assessing model outputs
 <p>Although understanding the underlying philosophy of the different model families is beneficial it is also important to understand in what situations the different families are likely to preform well or poorly. When we are assessing the performance of the different model families it is beneficial to think of benchmarking these assessments based on a broader basis than just its ability to correctly recover network structure or pairwise interactions. When thinking about how to benchmark models it is perhaps beneficial to take a step back and once again assess what are the needs of the researcher (<a href="#sec-network-why" class="quarto-xref">Section&nbsp;2</a>) and linking this back to what aspects of the network (<a href="#sec-network-anatomy" class="quarto-xref">Section&nbsp;1</a>) are of importance and assess the performance of a model within those parameters.</p>
 <p><strong>Benchmarking</strong></p>
 <p>Benchmarking how well a model is doing to capture the desired elements of a network is also a task that required some thought and contemplation. Even if we think about the predicting the structure of a network it is possible that two networks may have the same number of nodes and links but that those links may be distributed in very different ways. Thus it is important to think critically about the suite of summary statistics that are used to assess a model, since there is no one ‘silver bullet’ summary statistic that will be able to assess if a model is able to fully replicate an empirical network <span class="citation" data-cites="allesinaGeneralModelFood2008">(<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">Allesina, Alonso, and Pascual 2008</a>)</span>. One of the main challenges when assessing the ability to retrieve pairwise interactions is that food webs are sparse (that means that there are few links given the number of species) and it is important that we are able to discern between a model that is able to correctly predict interactions that do (true positives) and not (true negatives) occur and one that is simply predicting a lack of interactions <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">(<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">Poisot 2023</a>)</span>.</p>
-<div class="quarto-embed-nb-cell">
-<div id="cell-fig-topology" class="cell">
-<div class="cell-output cell-output-display">
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/notebooks-model_quantitative-fig-topology-output-2.png" class="img-fluid figure-img"></a>
+<a href="images/topology.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="images/topology.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Difference between real and model network property. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>.
+Figure&nbsp;3: Difference between real and model network property. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span> which are S1: Number of linear chains, S2: Number of omnivory motifs, S4: Number of apparent competition motifs, and S5: Number of direct competition motifs
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
-<a class="quarto-notebook-link" id="nblink-2" href="notebooks/model_quantitative-preview.html#cell-fig-topology">Source: SuppMat 3: Benchmarking the different model families</a></div>
 <p><strong>Data cost</strong></p>
 <p>This includes thinking about the need for additional data sources (such as trait or phylogenetic data), the computational cost, as well as the time it might take to generate a network, <em>e.g.,</em> binary classifiers require an (often times) extensive list of additional trait data for the model training process, which limits predictions to communities for which you do have the relevant auxiliary data available.</p>
 <p><strong>Philosophical constraints</strong></p>
@@ -860,8 +848,8 @@ Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. K
 </div>
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Panel <strong>A</strong> shows the many ways in which a food web can be defined and described at the node, edge, and even network level. Panel <strong>B</strong> (will) shows how the way in which we predict networks also limited and often focuses only only predicting the structure of a network (the final networks is parametrised by the expected structure of the network) or the interactions between species (the final network is determined by the behaviour of the nodes). These different models also encode different philosophies/hypotheses not only as to what determines how a network will look like but also how the final network itself is encoded <em>i.e.,</em> its anatomy. (<em>aside:</em> there is the potential to either try and visually summarise how the different model families define a network (so repeating the motifs used in the ANATOMY panel) alternatively it would be cool to try and have a panel C that tries to quantify the different ‘data ingredients’ you would need to try and construct a network, this would probably be very visually overwhelming though…)</span>
-<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Dendrogram of the trait table</span>
-<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;3: Difference between real and model network property. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>.</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Dendrogram of the trait table using a hierarchical clustering model, This is based off of the traits table in SuppMat 2)</span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;3: Difference between real and model network property. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span> which are S1: Number of linear chains, S2: Number of omnivory motifs, S4: Number of apparent competition motifs, and S5: Number of direct competition motifs</span>
 </div>
 </section>
 
@@ -1299,7 +1287,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

@@ -142,7 +142,7 @@ As there are many food web models to choose from it is perhaps useful to think a
 
 : A summary of the different families of tools that can be used to generate food webs, this includes a brief description of the underlying philosophy of the family as well as how the different elements (nodes and edges) of the generated network represents. {#tbl-families}
 
-{{< embed notebooks/model_qualitative.qmd#fig-dendo >}}
+![Dendrogram of the trait table using a hierarchical clustering model, This is based off of the traits table in SuppMat 2)](images/dendo.png){#fig-dendro}
 
 ::: {#box-benchmarking .callout-note}
 ## Box 2 - Assessing model outputs
@@ -153,7 +153,7 @@ Although understanding the underlying philosophy of the different model families
 
 Benchmarking how well a model is doing to capture the desired elements of a network is also a task that required some thought and contemplation. Even if we think about the predicting the structure of a network it is possible that two networks may have the same number of nodes and links but that those links may be distributed in very different ways. Thus it is important to think critically about the suite of summary statistics that are used to assess a model, since there is no one 'silver bullet' summary statistic that will be able to assess if a model is able to fully replicate an empirical network [@allesinaGeneralModelFood2008]. One of the main challenges when assessing the ability to retrieve pairwise interactions is that food webs are sparse (that means that there are few links given the number of species) and it is important that we are able to discern between a model that is able to correctly predict interactions that do (true positives) and not (true negatives) occur and one that is simply predicting a lack of interactions [@poisotGuidelinesPredictionSpecies2023].
 
-{{< embed notebooks/model_quantitative.qmd#fig-topology >}}
+![Difference between real and model network property. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007 which are S1: Number of linear chains, S2: Number of omnivory motifs, S4: Number of apparent competition motifs, and S5: Number of direct competition motifs](images/topology.png){#fig-topology}
 
 **Data cost**
 
