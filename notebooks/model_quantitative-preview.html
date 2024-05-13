@@ -240,7 +240,8 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link active" data-scroll-target="#datasets-used">Datasets used</a>
+  <li><a href="#specific-models-used" id="toc-specific-models-used" class="nav-link active" data-scroll-target="#specific-models-used">Specific models used</a></li>
+  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link" data-scroll-target="#datasets-used">Datasets used</a>
   <ul class="collapse">
   <li><a href="#mangal-networks" id="toc-mangal-networks" class="nav-link" data-scroll-target="#mangal-networks">Mangal networks</a></li>
   <li><a href="#new-zealand-dataset" id="toc-new-zealand-dataset" class="nav-link" data-scroll-target="#new-zealand-dataset">New Zealand dataset</a></li>
@@ -258,6 +259,90 @@
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
        <p>This notebook is going to visualise and further describe the process of benchmarking the different model families. The core code used to download, clean, and summarise the different networks can be found at the following repository <a href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</a>.</p>
+<section id="specific-models-used" class="level2">
+<h2 class="anchored" data-anchor-id="specific-models-used">Specific models used</h2>
+<p>The table below shows which specific use-case we use for the network prediction task</p>
+<div id="tbl-models" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Specific model example we used as a representative of the different model families.
+</figcaption>
+<div aria-describedby="tbl-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 23%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model family</th>
+<th>Model</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>null</td>
+<td>Type I model</td>
+<td><span class="citation" data-cites="fortunaHabitatLossStructure2006">Fortuna and Bascompte (<a href="#ref-fortunaHabitatLossStructure2006" role="doc-biblioref">2006</a>)</span></td>
+</tr>
+<tr class="even">
+<td>neutral</td>
+<td></td>
+<td><span class="citation" data-cites="pomeranzInferringPredatorPrey2019">Pomeranz et al. (<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">2019</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>resource</td>
+<td>undecided</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>generative</td>
+<td>MaxEnt model</td>
+<td><span class="citation" data-cites="banvilleWhatConstrainsFood2023">Banville, Gravel, and Poisot (<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>energetic</td>
+<td>ADBM</td>
+<td><span class="citation" data-cites="petcheySizeForagingFood2008">Petchey et al. (<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">2008</a>)</span></td>
+</tr>
+<tr class="even">
+<td>graph embedding</td>
+<td>Transfer learning</td>
+<td><span class="citation" data-cites="strydomFoodWebReconstruction2022">Strydom et al. (<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">2022</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>trait matching</td>
+<td>PFIM</td>
+<td><span class="citation" data-cites="shawFrameworkReconstructingAncient2024">Shaw et al. (<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="even">
+<td>binary classifiers</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>expert knowledge</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>data scavenging</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>co-occurrence</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
 <section id="datasets-used" class="level2">
 <h2 class="anchored" data-anchor-id="datasets-used">Datasets used</h2>
 <p>Note that not all datasets are suitable for use with all model families - this is primarily because some of the model families require a lot more additional (external) data and we cannot feasibly do this for all of the available datasets. Conversely for some of the ‘data light’ models it is of course possible to use many networks and create a large sample of networks. Below we will introduce three broader groups of datasets and in the table below we show for which families we used which datasets.</p>
@@ -583,6 +668,12 @@ Banville, Francis, Dominique Gravel, and Timothée Poisot. 2023. <span>“What C
 <div id="ref-caronTraitmatchingModelsPredict2024" class="csl-entry" role="listitem">
 Caron, Dominique, Ulrich Brose, Miguel Lurgi, F. Guillaume Blanchet, Dominique Gravel, and Laura J. Pollock. 2024. <span>“Trait-Matching Models Predict Pairwise Interactions Across Regions, Not Food Web Properties.”</span> <em>Global Ecology and Biogeography</em> 33 (4): e13807. <a href="https://doi.org/10.1111/geb.13807">https://doi.org/10.1111/geb.13807</a>.
 </div>
+<div id="ref-fortunaHabitatLossStructure2006" class="csl-entry" role="listitem">
+Fortuna, Miguel A., and Jordi Bascompte. 2006. <span>“Habitat Loss and the Structure of Plant-Animal Mutualistic Networks: <span>Mutualistic</span> Networks and Habitat Loss.”</span> <em>Ecology Letters</em> 9 (3): 281–86. <a href="https://doi.org/10.1111/j.1461-0248.2005.00868.x">https://doi.org/10.1111/j.1461-0248.2005.00868.x</a>.
+</div>
+<div id="ref-petcheySizeForagingFood2008" class="csl-entry" role="listitem">
+Petchey, Owen L., Andrew P. Beckerman, Jens O. Riede, and Philip H. Warren. 2008. <span>“Size, Foraging, and Food Web Structure.”</span> <em>Proceedings of the National Academy of Sciences</em> 105 (11): 4191–96. <a href="https://doi.org/10.1073/pnas.0710672105">https://doi.org/10.1073/pnas.0710672105</a>.
+</div>
 <div id="ref-poisotGuidelinesPredictionSpecies2023" class="csl-entry" role="listitem">
 Poisot, Timothée. 2023. <span>“Guidelines for the Prediction of Species Interactions Through Binary Classification.”</span> <em>Methods in Ecology and Evolution</em> 14 (5): 1333–45. <a href="https://doi.org/10.1111/2041-210X.14071">https://doi.org/10.1111/2041-210X.14071</a>.
 </div>
@@ -592,8 +683,14 @@ Poisot, Timothée, Benjamin Baiser, Jennifer Dunne, Sonia Kéfi, François Masso
 <div id="ref-pomeranzInferringPredatorPrey2019" class="csl-entry" role="listitem">
 Pomeranz, Justin P. F., Ross M. Thompson, Timothée Poisot, and Jon S. Harding. 2019. <span>“Inferring Predator–Prey Interactions in Food Webs.”</span> <em>Methods in Ecology and Evolution</em> 10 (3): 356–67. <a href="https://doi.org/10.1111/2041-210X.13125">https://doi.org/10.1111/2041-210X.13125</a>.
 </div>
+<div id="ref-shawFrameworkReconstructingAncient2024" class="csl-entry" role="listitem">
+Shaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. <span>“A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.”</span> bioRxiv. <a href="https://doi.org/10.1101/2024.01.30.578036">https://doi.org/10.1101/2024.01.30.578036</a>.
+</div>
 <div id="ref-stoufferEvidenceExistenceRobust2007" class="csl-entry" role="listitem">
 Stouffer, Daniel B, Juan Camacho, Wenxin Jiang, and Luís A Nunes Amaral. 2007. <span>“Evidence for the Existence of a Robust Pattern of Prey Selection in Food Webs.”</span> <em>Proceedings of the Royal Society B: Biological Sciences</em> 274 (1621): 1931–40. <a href="https://doi.org/10.1098/rspb.2007.0571">https://doi.org/10.1098/rspb.2007.0571</a>.
+</div>
+<div id="ref-strydomFoodWebReconstruction2022" class="csl-entry" role="listitem">
+Strydom, Tanya, Salomé Bouskila, Francis Banville, Ceres Barros, Dominique Caron, Maxwell J. Farrell, Marie-Josée Fortin, et al. 2022. <span>“Food Web Reconstruction Through Phylogenetic Transfer of Low-Rank Network Representation.”</span> <em>Methods in Ecology and Evolution</em> 13 (12): 2838–49. <a href="https://doi.org/10.1111/2041-210X.13835">https://doi.org/10.1111/2041-210X.13835</a>.
 </div>
 <div id="ref-strydomSVDEntropyReveals2021" class="csl-entry" role="listitem">
 Strydom, Tanya, Giulio V. Dalla Riva, and Timothée Poisot. 2021. <span>“<span>SVD Entropy Reveals</span> the <span>High Complexity</span> of <span>Ecological Networks</span>.”</span> <em>Frontiers in Ecology and Evolution</em> 9. <a href="https://doi.org/10.3389/fevo.2021.623141">https://doi.org/10.3389/fevo.2021.623141</a>.
@@ -1020,7 +1117,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
