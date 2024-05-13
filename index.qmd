@@ -105,7 +105,7 @@ The 'energy budget' for the environment means that only $y$ links are possible b
 
 **None**
 
-We are interacting because. This is random.
+We are therefore we interact. This is random.
 :::
 
 ## Why do we want to predict food webs? {#sec-network-why}
