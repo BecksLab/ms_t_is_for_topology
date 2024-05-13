@@ -5,9 +5,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2024-05-09">
+    <meta name="dcterms.date" content="2024-05-13">
 
-    <title>Quantitative approach to topology generators</title>
+    <title>SuppMat 3: Benchmarking the different model families</title>
     <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -192,7 +192,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Quantitative approach to topology generators</h6>
+      <h6><i class="bi bi-journal-code"></i> SuppMat 3: Benchmarking the different model families</h6>
 
             <a href="../notebooks/model_quantitative.qmd" class="btn btn-primary quarto-download-embed" download="model_quantitative.qmd">Download Source</a>
           </div>
@@ -200,7 +200,7 @@
      <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Quantitative approach to topology generators</h1>
+      <h1 class="title">SuppMat 3: Benchmarking the different model families</h1>
           </div>
 
     
@@ -219,7 +219,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">May 9, 2024</p>
+              <p class="date">May 13, 2024</p>
             </div>
           </div>
           
@@ -240,11 +240,15 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#assessing-model-outputs" id="toc-assessing-model-outputs" class="nav-link active" data-scroll-target="#assessing-model-outputs">Assessing model outputs</a>
+  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link active" data-scroll-target="#datasets-used">Datasets used</a>
   <ul class="collapse">
-  <li><a href="#benchmarking-for-structure" id="toc-benchmarking-for-structure" class="nav-link" data-scroll-target="#benchmarking-for-structure">Benchmarking for structure</a></li>
-  <li><a href="#benchmarking-for-interactions" id="toc-benchmarking-for-interactions" class="nav-link" data-scroll-target="#benchmarking-for-interactions">Benchmarking for interactions</a></li>
+  <li><a href="#mangal-networks" id="toc-mangal-networks" class="nav-link" data-scroll-target="#mangal-networks">Mangal networks</a></li>
+  <li><a href="#new-zealand-dataset" id="toc-new-zealand-dataset" class="nav-link" data-scroll-target="#new-zealand-dataset">New Zealand dataset</a></li>
+  <li><a href="#empirical-networks" id="toc-empirical-networks" class="nav-link" data-scroll-target="#empirical-networks">Empirical networks</a></li>
   </ul></li>
+  <li><a href="#predicting-models" id="toc-predicting-models" class="nav-link" data-scroll-target="#predicting-models">Predicting models</a></li>
+  <li><a href="#model-benchmarking" id="toc-model-benchmarking" class="nav-link" data-scroll-target="#model-benchmarking">Model benchmarking</a></li>
+  <li><a href="#visualising-results" id="toc-visualising-results" class="nav-link" data-scroll-target="#visualising-results">Visualising results</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -253,29 +257,144 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <section id="assessing-model-outputs" class="level2">
-<h2 class="anchored" data-anchor-id="assessing-model-outputs">Assessing model outputs</h2>
-<section id="benchmarking-for-structure" class="level3">
-<h3 class="anchored" data-anchor-id="benchmarking-for-structure">Benchmarking for structure</h3>
-<p>Despite structural models being some of the older model families there is a distinctive lack of clear guidelines as to how we assess the ability of these models to replicate the <em>entire</em> structure of a network. In part this may perhaps be driven by the underlying research agenda and interest in different aspects of capturing the structure of networks <em>e.g.,</em> the obsession with intervality [ref] or link distributions [ref]. However, it is still a good idea to think about the network in its entirety and to benchmark structural models in a more holistic manner. Some useful ways to assess how well the model predicts the shape (<em>e.g.,</em> the height (chain length) and…), links (<em>e.g.,</em> connectance), internal structure (<em>e.g.,</em> SVD entropy, <span class="citation" data-cites="strydomSVDEntropyReveals2021">Strydom, Dalla Riva, and Poisot (<a href="#ref-strydomSVDEntropyReveals2021" role="doc-biblioref">2021</a>)</span>), and meso-level features (<em>e.g.,</em> motifs, <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>) of a network.</p>
-<ul>
-<li><p>Maybe look at some of the historic papers that compare some of the ‘resource models’</p></li>
-<li><p>See also <span class="citation" data-cites="allesinaGeneralModelFood2008">Allesina, Alonso, and Pascual (<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">2008</a>)</span> and the likelihood function that they use for model selection</p></li>
-<li><p>Look at <span class="citation" data-cites="vermaatMajorDimensionsFoodweb2009">Vermaat, Dunne, and Gilbert (<a href="#ref-vermaatMajorDimensionsFoodweb2009" role="doc-biblioref">2009</a>)</span></p></li>
-</ul>
+       <p>This notebook is going to visualise and further describe the process of benchmarking the different model families. The core code used to download, clean, and summarise the different networks can be found at the following repository <a href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</a>.</p>
+<section id="datasets-used" class="level2">
+<h2 class="anchored" data-anchor-id="datasets-used">Datasets used</h2>
+<p>Note that not all datasets are suitable for use with all model families - this is primarily because some of the model families require a lot more additional (external) data and we cannot feasibly do this for all of the available datasets. Conversely for some of the ‘data light’ models it is of course possible to use many networks and create a large sample of networks. Below we will introduce three broader groups of datasets and in <span class="citation" data-cites="tbl-datasets">(<a href="#ref-tbl-datasets" role="doc-biblioref"><strong>tbl-datasets?</strong></a>)</span> we show for which families we used which datasets.</p>
+<div id="tbl-datasets" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-datasets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Different model families and the datasets from which we are able to generate networks that we can use for benchmarking.
+</figcaption>
+<div aria-describedby="tbl-datasets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Model family</th>
+<th>Mangal</th>
+<th>New Zealand</th>
+<th>Empirical</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>null</td>
+<td>Yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>neutral</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>resource</td>
+<td>Yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>generative</td>
+<td>Yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>energetic</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>graph embedding</td>
+<td></td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>trait matching</td>
+<td></td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>binary classifiers</td>
+<td></td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>expert knowledge</td>
+<td></td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>data scavenging</td>
+<td></td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>co-occurrence</td>
+<td></td>
+<td></td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<section id="mangal-networks" class="level3">
+<h3 class="anchored" data-anchor-id="mangal-networks">Mangal networks</h3>
+<p>We queried the Mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot et al. 2016</a>)</span> database and extracted a total of <strong>TODO</strong> networks. [<em>Some sort of summary as to the geographic/taxonomic range??]</em> Although these networks represent a high volume of interaction data they do not have accompanying ‘metadata’ that we would need for some of the more data-hungry model families (<em>e.g.,</em> local abundance), the Mangal networks were used to provide the ‘starting values’ for the random, resource, and generative families. This allows us to generate a large number of different networks that we can use to compare and contrast the performance of the various model families. For each network from Mangal we generated <strong>TODO</strong> versions of that network using each model family.</p>
+<blockquote class="blockquote">
+<p>“These complex food webs differ in their level of resolution and sampling effort, which may introduce noise in the estimation of their properties, especially given their large number of interacting elements. However, because our MaxEnt models are applied on imperfect data, they aim at reproducing the sampled structure of food webs, not their actual structure.” - <span class="citation" data-cites="banvilleWhatConstrainsFood2023">Banville, Gravel, and Poisot (<a href="#ref-banvilleWhatConstrainsFood2023" role="doc-biblioref">2023</a>)</span> (something to think about…)</p>
+</blockquote>
 </section>
-<section id="benchmarking-for-interactions" class="level3">
-<h3 class="anchored" data-anchor-id="benchmarking-for-interactions">Benchmarking for interactions</h3>
-<p>Broadly speaking the task of assessing the ability of a model to predict interactions as being an assessment of the model’s classification ability (does it correctly predict the presence and absence of interactions?) and so we want to benchmark the model on how well it is able to correctly predict these presences and absences. This can be done in a myriad of ways <span class="citation" data-cites="strydomRoadmapPredictingSpecies2021 poisotGuidelinesPredictionSpecies2023">(<a href="#ref-strydomRoadmapPredictingSpecies2021" role="doc-biblioref">Strydom et al. 2021</a>; <a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">Poisot 2023</a>)</span> but is always based off of the confusion matrix. Using the confusion matrix it is then possible to assess the ‘quality’ of the model predictions such as their accuracy or informedness. The high class imbalance (inherit sparsity) of networks means that most interactions are absent and so a model that predicts interactions as being absent will still predict most interactions correctly <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">(<em>i.e.,</em> getting the ‘right’ answers but for the wrong reasons, <a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">Poisot 2023</a>)</span></p>
+<section id="new-zealand-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="new-zealand-dataset">New Zealand dataset</h3>
+<p>Data from <span class="citation" data-cites="pomeranzInferringPredatorPrey2019">Pomeranz et al. (<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">2019</a>)</span>. <strong>TODO</strong> quick outline of what the dataset entails…</p>
+</section>
+<section id="empirical-networks" class="level3">
+<h3 class="anchored" data-anchor-id="empirical-networks">Empirical networks</h3>
+<blockquote class="blockquote">
+<p>Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a ‘scale’ element as well <em>i.e.,</em> a regional and local network. I think there is going to be a ‘turning point’ where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) <em>sensu</em> <span class="citation" data-cites="caronTraitmatchingModelsPredict2024">Caron et al. (<a href="#ref-caronTraitmatchingModelsPredict2024" role="doc-biblioref">2024</a>)</span>. Although having said that I feel that contradicts the idea of backbones (<em>sensu</em> Bramon Mora (sp?) et al &amp; Stouffer et al) But that might be where we get the idea of core <em>structure</em> vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I’m trying to say here)</p>
+</blockquote>
+</section>
+</section>
+<section id="predicting-models" class="level2">
+<h2 class="anchored" data-anchor-id="predicting-models">Predicting models</h2>
+<p>For each model and network combination we predicted the model <strong>TODO</strong> number of times - this allows us to capture some of the inherent variability (and stochasticity) that we would expect from some of the models.</p>
+</section>
+<section id="model-benchmarking" class="level2">
+<h2 class="anchored" data-anchor-id="model-benchmarking">Model benchmarking</h2>
+<p>Some of the considerations one needs to make when wanting to benchmark models is discussed in Box 2 of the main text. The different benchmarking summary statistics that we are collecting are as follows:</p>
+<p>For ‘structure’:</p>
 <ul>
-<li><p>As per <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span> the best ways to assess the classification performance of the different models is to use the Precision-Recall (PR-AUC) to assess precision [ref?], and the Matthews correlation coefficient (MCC) to assess accuracy <span class="citation" data-cites="matthewsComparisonPredictedObserved1975">(<a href="#ref-matthewsComparisonPredictedObserved1975" role="doc-biblioref">Matthews 1975</a>)</span>.</p></li>
-<li><p>Caveat regarding the use of real world interaction data both for training and validating predictions? <em>e.g.,</em> Poisot, Ouellet, et al.&nbsp;et al 2021 and Catchen et al 2023</p></li>
-<li><p>“These results suggest that learning from a dataset with very low connectance can be a different task than for more connected networks: it becomes increasingly important to capture the mechanisms that make an interaction exist, and therefore having a slightly more biased training dataset might be beneficial. As connectance increases, the need for biased training sets is less prominent, as learning the rules for which interactions do not exist starts gaining importance”</p></li>
-<li><p>Maybe also looking at how well a model can recover ‘missing links’ <em>i.e.,</em> introducing false negatives into the training data <em>sensu</em> what we did in <span class="citation" data-cites="strydomFoodWebReconstruction2022">Strydom et al. (<a href="#ref-strydomFoodWebReconstruction2022" role="doc-biblioref">2022</a>)</span></p></li>
+<li><p><strong>Links:</strong> to determine if the number of links are ‘correct’ we use <em>connectance</em></p></li>
+<li><p><em>Shape:</em> to determine if the ‘shape’ of the network is correct we are looking at the ratio of ‘top’:‘basal’ species (where ‘top’ species are those that have a vulnerability of 0 and ‘basal’ species have a generality of 0) as well as the distance to base from one of the top species (this will represent the shortest path but a large discrepancy between the real and predicted network would be indicative that the model is not predicting a similar ‘shape’). This will allow is to see if the models construct tall ‘pencil’ vs flat ‘pancake’ networks (Beckerman 2024, pers comms).</p>
+<ul>
+<li>A small (&lt; 1) number will thus be indicative of a ‘bottom-heavy’ network and the opposite for larger numbers</li>
+</ul></li>
+<li><p><strong>Structure:</strong> to determine if we are capturing some higher level of ‘structure’ we are using SVD entropy <span class="citation" data-cites="strydomSVDEntropyReveals2021">(<a href="#ref-strydomSVDEntropyReveals2021" role="doc-biblioref">Strydom, Dalla Riva, and Poisot 2021</a>)</span></p></li>
+<li><p><em>Motifs:</em> We can estract the motifs identified by <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>, namely:</p>
+<ul>
+<li><p>S1: Number of linear chains</p></li>
+<li><p>S2: Number of omnivory motifs</p></li>
+<li><p>S4: Number of apparent competition motifs</p></li>
+<li><p>S5: Number of direct competition motifs</p></li>
+</ul></li>
 </ul>
-<p>I think in the long run I will probably turn the other repo (<a href="https://github.com/BecksLab/topology_generators">BecksLab/topology_generators</a>) into a project that we can then access and I will port all of the working code here… I think it will just come down to what the ‘cost’ is of the computational side of things and how convoluted it might end up looking.</p>
-<p>Anyway so for now I am just pulling in the INTERIM data from some of the models. This uses (for now) 20 mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot et al. 2016</a>)</span> datasets and just generates some networks for using the niche and cascade models. The ‘results’ for now is just counting the number of links each model generates for each network because that’s what my brain decided on doing…</p>
-<p>As well as the ‘New Zealand’ dataset from <span class="citation" data-cites="pomeranzInferringPredatorPrey2019">Pomeranz et al. (<a href="#ref-pomeranzInferringPredatorPrey2019" role="doc-biblioref">2019</a>)</span></p>
+<p>For interactions:</p>
+<p>Based on <span class="citation" data-cites="poisotGuidelinesPredictionSpecies2023">Poisot (<a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">2023</a>)</span>: - Precision-Recall (PR-AUC) - performance - Matthews correlation coefficient (MCC) - accuracy</p>
+</section>
+<section id="visualising-results" class="level2">
+<h2 class="anchored" data-anchor-id="visualising-results">Visualising results</h2>
+<p>Now it is time to visualise the data</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -290,51 +409,53 @@
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># function for radar plots</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>coord_radar <span class="ot">&lt;-</span> <span class="cf">function</span> (<span class="at">theta =</span> <span class="st">"x"</span>, <span class="at">start =</span> <span class="dv">0</span>, <span class="at">direction =</span> <span class="dv">1</span>) {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    theta <span class="ot">&lt;-</span> <span class="fu">match.arg</span>(theta, <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>))</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    r <span class="ot">&lt;-</span> <span class="cf">if</span> (theta <span class="sc">==</span> <span class="st">"x"</span>) <span class="st">"y"</span> <span class="cf">else</span> <span class="st">"x"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggproto</span>(<span class="st">"CordRadar"</span>, CoordPolar, <span class="at">theta =</span> theta, <span class="at">r =</span> r, <span class="at">start =</span> start, </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">direction =</span> <span class="fu">sign</span>(direction),</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">is_linear =</span> <span class="cf">function</span>(coord) <span class="cn">TRUE</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># download file from other repo</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/topology_summary.csv"</span>, <span class="st">"../notebooks/data/topology_models.csv"</span>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/mangal_summary.csv"</span>, <span class="st">"../notebooks/data/mangal_summary.csv"</span>)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/nz_summary.csv"</span>, <span class="st">"../notebooks/data/nz_summary.csv"</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">full_join</span>(<span class="fu">rbind</span>(<span class="fu">read.csv</span>(<span class="st">"data/mangal_summary.csv"</span>),</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">read.csv</span>(<span class="st">"data/nz_summary.csv"</span>)),</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                <span class="fu">read.csv</span>(<span class="st">"data/topology_models.csv"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>(complexity <span class="sc">!=</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">ratio =</span> top<span class="sc">/</span>basal,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                <span class="at">top =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                <span class="at">basal =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>                <span class="at">ratio_mod =</span> top_mod<span class="sc">/</span>basal_mod,</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>                <span class="at">top_mod =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>                <span class="at">basal_mod =</span> <span class="cn">NULL</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pivot_longer</span>(</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            <span class="at">cols =</span> <span class="fu">c</span>(complexity, distance, connectance, ratio, S1, S2, S4, S5), </span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>            <span class="at">names_to =</span> <span class="st">"real"</span>,</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            <span class="at">values_to =</span> <span class="st">"real_val"</span>)  <span class="sc">%&gt;%</span> </span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pivot_longer</span>(</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>            <span class="at">cols =</span> <span class="fu">c</span>(complexity_mod, distance_mod, connectance_mod, ratio_mod, S1_mod, S2_mod, S4_mod, S5_mod), </span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>            <span class="at">names_to =</span> <span class="st">"test"</span>,</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>            <span class="at">values_to =</span> <span class="st">"model_val"</span>)  <span class="sc">%&gt;%</span> </span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>            <span class="at">real =</span> <span class="fu">str_extract</span>(real, <span class="st">"[^_]*"</span>),</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>            <span class="at">test =</span> <span class="fu">str_extract</span>(test, <span class="st">"[^_]*"</span>))  <span class="sc">%&gt;%</span> </span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>(real <span class="sc">==</span> test) <span class="sc">%&gt;%</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>(model_val <span class="sc">!=</span> <span class="cn">Inf</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># function for radar plots</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>coord_radar <span class="ot">&lt;-</span> <span class="cf">function</span> (<span class="at">theta =</span> <span class="st">"x"</span>, <span class="at">start =</span> <span class="dv">0</span>, <span class="at">direction =</span> <span class="dv">1</span>) {</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    theta <span class="ot">&lt;-</span> <span class="fu">match.arg</span>(theta, <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    r <span class="ot">&lt;-</span> <span class="cf">if</span> (theta <span class="sc">==</span> <span class="st">"x"</span>) <span class="st">"y"</span> <span class="cf">else</span> <span class="st">"x"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggproto</span>(<span class="st">"CordRadar"</span>, CoordPolar, <span class="at">theta =</span> theta, <span class="at">r =</span> r, <span class="at">start =</span> start, </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">direction =</span> <span class="fu">sign</span>(direction),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">is_linear =</span> <span class="cf">function</span>(coord) <span class="cn">TRUE</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># download file from other repo</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/topology_summary.csv"</span>, <span class="st">"../notebooks/data/topology_models.csv"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/mangal_summary.csv"</span>, <span class="st">"../notebooks/data/mangal_summary.csv"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/nz_summary.csv"</span>, <span class="st">"../notebooks/data/nz_summary.csv"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">full_join</span>(<span class="fu">rbind</span>(<span class="fu">read.csv</span>(<span class="st">"data/mangal_summary.csv"</span>),</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">read.csv</span>(<span class="st">"data/nz_summary.csv"</span>)),</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                <span class="fu">read.csv</span>(<span class="st">"data/topology_models.csv"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>(complexity <span class="sc">!=</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># to get the ratio</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">ratio =</span> top<span class="sc">/</span>basal,</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>                <span class="at">top =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>                <span class="at">basal =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>                <span class="at">ratio_mod =</span> top_mod<span class="sc">/</span>basal_mod,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>                <span class="at">top_mod =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>                <span class="at">basal_mod =</span> <span class="cn">NULL</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pivot_longer</span>(</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>            <span class="at">cols =</span> <span class="fu">c</span>(complexity, distance, connectance, ratio, S1, S2, S4, S5), </span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>            <span class="at">names_to =</span> <span class="st">"real"</span>,</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>            <span class="at">values_to =</span> <span class="st">"real_val"</span>)  <span class="sc">%&gt;%</span> </span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pivot_longer</span>(</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>            <span class="at">cols =</span> <span class="fu">c</span>(complexity_mod, distance_mod, connectance_mod, ratio_mod, S1_mod, S2_mod, S4_mod, S5_mod), </span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>            <span class="at">names_to =</span> <span class="st">"test"</span>,</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>            <span class="at">values_to =</span> <span class="st">"model_val"</span>)  <span class="sc">%&gt;%</span> </span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>            <span class="at">real =</span> <span class="fu">str_extract</span>(real, <span class="st">"[^_]*"</span>),</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>            <span class="at">test =</span> <span class="fu">str_extract</span>(test, <span class="st">"[^_]*"</span>))  <span class="sc">%&gt;%</span> </span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>(real <span class="sc">==</span> test) <span class="sc">%&gt;%</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>(model_val <span class="sc">!=</span> <span class="cn">Inf</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Joining with `by = join_by(id)`</code></pre>
 </div>
 </div></div>
-<p>From a data transformation perspective instead of looking at the raw number of ‘top’ (zero vulnerability) and ‘bottom’ (zero generality) species we can instead look at the ratio of top:bottom. A small (&lt; 1) number will thus be indicative of a ‘bottom-heavy’ network and the opposite for larger numbers</p>
-<p>Lets start by summarising the ‘raw’ data as box plots just to see what it looks like before we calculate the Z scores</p>
+<p>Lets start by summarising the ‘raw’ data as box plots just to see what it looks like before we try and do a more streamlines summary</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-fig-boxplot" class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span></span>
@@ -367,7 +488,7 @@
 <div id="fig-boxplot" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_quantitative_files/figure-html/fig-boxplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="model_quantitative_files/figure-html/fig-boxplot-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="model_quantitative_files/figure-html/fig-boxplot-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="model_quantitative_files/figure-html/fig-boxplot-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Boxplot looking at raw values for each measurement for each model. The horizontal line represents the true overall mean for each measurement
@@ -376,7 +497,7 @@ Boxplot looking at raw values for each measurement for each model. The horizonta
 </div>
 </div>
 </div></div>
-<p>Now we can look at the difference between the mean of the real network property and the simulated one. I had originally considered using the <span class="math inline">\(Z\)</span>-score but it doesn’t work well for the more ‘deterministic’ models (neutral and ADBM) because they effectively have a <span class="math inline">\(\sigma\)</span> of zero…</p>
+<p>Now we can look at the difference between the mean of the real network property and the simulated one. I had originally considered using the <span class="math inline">\(Z\)</span>-score but it doesn’t work well for the more ‘deterministic’ models (neutral and ADBM) because they effectively have a <span class="math inline">\(\sigma\)</span> of zero… so we are just looking at the difference between the real value and the mean predicted value for each network.</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-fig-topology" class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df <span class="sc">%&gt;%</span> </span>
@@ -405,7 +526,7 @@ Boxplot looking at raw values for each measurement for each model. The horizonta
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_quantitative_files/figure-html/fig-topology-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="model_quantitative_files/figure-html/fig-topology-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="model_quantitative_files/figure-html/fig-topology-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="model_quantitative_files/figure-html/fig-topology-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Difference between real and model network property. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span>.
@@ -437,7 +558,7 @@ Difference between real and model network property. S1 - S5 represent the differ
 <div id="fig-spider" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-spider-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="model_quantitative_files/figure-html/fig-spider-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="model_quantitative_files/figure-html/fig-spider-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="model_quantitative_files/figure-html/fig-spider-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="model_quantitative_files/figure-html/fig-spider-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spider-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 I was experimenting with radial plots… its not going well…
@@ -447,15 +568,14 @@ I was experimenting with radial plots… its not going well…
 </div>
 </div></div>
 </section>
-</section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-allesinaGeneralModelFood2008" class="csl-entry" role="listitem">
-Allesina, Stefano, David Alonso, and Mercedes Pascual. 2008. <span>“A <span>General Model</span> for <span>Food Web Structure</span>.”</span> <em>Science</em> 320 (5876): 658–61. <a href="https://doi.org/10.1126/science.1156269">https://doi.org/10.1126/science.1156269</a>.
+<div id="ref-banvilleWhatConstrainsFood2023" class="csl-entry" role="listitem">
+Banville, Francis, Dominique Gravel, and Timothée Poisot. 2023. <span>“What Constrains Food Webs? <span>A</span> Maximum Entropy Framework for Predicting Their Structure with Minimal Biases.”</span> <em>PLOS Computational Biology</em> 19 (9): e1011458. <a href="https://doi.org/10.1371/journal.pcbi.1011458">https://doi.org/10.1371/journal.pcbi.1011458</a>.
 </div>
-<div id="ref-matthewsComparisonPredictedObserved1975" class="csl-entry" role="listitem">
-Matthews, B. W. 1975. <span>“Comparison of the Predicted and Observed Secondary Structure of <span>T4</span> Phage Lysozyme.”</span> <em>Biochimica Et Biophysica Acta (BBA) - Protein Structure</em> 405 (2): 442–51. <a href="https://doi.org/10.1016/0005-2795(75)90109-9">https://doi.org/10.1016/0005-2795(75)90109-9</a>.
+<div id="ref-caronTraitmatchingModelsPredict2024" class="csl-entry" role="listitem">
+Caron, Dominique, Ulrich Brose, Miguel Lurgi, F. Guillaume Blanchet, Dominique Gravel, and Laura J. Pollock. 2024. <span>“Trait-Matching Models Predict Pairwise Interactions Across Regions, Not Food Web Properties.”</span> <em>Global Ecology and Biogeography</em> 33 (4): e13807. <a href="https://doi.org/10.1111/geb.13807">https://doi.org/10.1111/geb.13807</a>.
 </div>
 <div id="ref-poisotGuidelinesPredictionSpecies2023" class="csl-entry" role="listitem">
 Poisot, Timothée. 2023. <span>“Guidelines for the Prediction of Species Interactions Through Binary Classification.”</span> <em>Methods in Ecology and Evolution</em> 14 (5): 1333–45. <a href="https://doi.org/10.1111/2041-210X.14071">https://doi.org/10.1111/2041-210X.14071</a>.
@@ -469,17 +589,8 @@ Pomeranz, Justin P. F., Ross M. Thompson, Timothée Poisot, and Jon S. Harding. 
 <div id="ref-stoufferEvidenceExistenceRobust2007" class="csl-entry" role="listitem">
 Stouffer, Daniel B, Juan Camacho, Wenxin Jiang, and Luís A Nunes Amaral. 2007. <span>“Evidence for the Existence of a Robust Pattern of Prey Selection in Food Webs.”</span> <em>Proceedings of the Royal Society B: Biological Sciences</em> 274 (1621): 1931–40. <a href="https://doi.org/10.1098/rspb.2007.0571">https://doi.org/10.1098/rspb.2007.0571</a>.
 </div>
-<div id="ref-strydomFoodWebReconstruction2022" class="csl-entry" role="listitem">
-Strydom, Tanya, Salomé Bouskila, Francis Banville, Ceres Barros, Dominique Caron, Maxwell J. Farrell, Marie-Josée Fortin, et al. 2022. <span>“Food Web Reconstruction Through Phylogenetic Transfer of Low-Rank Network Representation.”</span> <em>Methods in Ecology and Evolution</em> 13 (12): 2838–49. <a href="https://doi.org/10.1111/2041-210X.13835">https://doi.org/10.1111/2041-210X.13835</a>.
-</div>
-<div id="ref-strydomRoadmapPredictingSpecies2021" class="csl-entry" role="listitem">
-Strydom, Tanya, Michael D. Catchen, Francis Banville, Dominique Caron, Gabriel Dansereau, Philippe Desjardins-Proulx, Norma R. Forero-Muñoz, et al. 2021. <span>“A Roadmap Towards Predicting Species Interaction Networks (Across Space and Time).”</span> <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em> 376 (1837): 20210063. <a href="https://doi.org/10.1098/rstb.2021.0063">https://doi.org/10.1098/rstb.2021.0063</a>.
-</div>
 <div id="ref-strydomSVDEntropyReveals2021" class="csl-entry" role="listitem">
 Strydom, Tanya, Giulio V. Dalla Riva, and Timothée Poisot. 2021. <span>“<span>SVD Entropy Reveals</span> the <span>High Complexity</span> of <span>Ecological Networks</span>.”</span> <em>Frontiers in Ecology and Evolution</em> 9. <a href="https://doi.org/10.3389/fevo.2021.623141">https://doi.org/10.3389/fevo.2021.623141</a>.
-</div>
-<div id="ref-vermaatMajorDimensionsFoodweb2009" class="csl-entry" role="listitem">
-Vermaat, Jan E, Jennifer A Dunne, and Alison J Gilbert. 2009. <span>“Major Dimensions in Food-Web Structure Properties.”</span> <em>Ecology</em> 90 (1): 278–82. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19294932">https://www.ncbi.nlm.nih.gov/pubmed/19294932</a>.
 </div>
 </div>
 <div class="hidden" aria-hidden="true">
@@ -875,7 +986,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false,"selector":".lightbox"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
