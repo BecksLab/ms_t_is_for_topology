@@ -7,7 +7,7 @@
 
     <meta name="dcterms.date" content="2024-05-13">
 
-    <title>Model family traits</title>
+    <title>SuppMat 2: Looking at the traits of the different model families</title>
     <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -191,7 +191,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Model family traits</h6>
+      <h6><i class="bi bi-journal-code"></i> SuppMat 2: Looking at the traits of the different model families</h6>
 
             <a href="../notebooks/model_qualitative.qmd" class="btn btn-primary quarto-download-embed" download="model_qualitative.qmd">Download Source</a>
           </div>
@@ -199,7 +199,7 @@
      <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Model family traits</h1>
+      <h1 class="title">SuppMat 2: Looking at the traits of the different model families</h1>
           </div>
 
     
@@ -247,7 +247,16 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <p>Basically the important thing here is that we want to take what is currently table 1 in the manuscript and turn that into a more elaborate ‘traits table’.</p>
+       <p>The purpose of this document is to provide a rationalisation but also ‘formalisation’ of the different model families of sorts. This starts of by trying to construct a ‘traits’ table and then we will feed that traits table into a hierarchical clustering model.</p>
+<p>Understanding the rationale of the traits table is perhaps the most crucial though.</p>
+<p>First. What the model is predicting. Is it the structure of a network, interactions between species, or their co-occurrence patterns.</p>
+<p>Second. What does the network represent. Is it a conceptual network (<em>i.e.,</em> cannot be assigned to specific community/geographic location), metaweb (network of potential interactions), realised network, or a ‘metacommunity’ (collection of co-occurring species).</p>
+<p>Third. What is the underlying mechanism that determines the interactions between species. This is an attempt at trying to code what is discussed in Box 1 of the main text but a bit more related to the ‘computational’ mechanism and not the ‘ecological’ mechanism. Note here that the use of mathematical is used to refer to a framework that uses some sort of mathematical formalisation to determine interactions/structure, unlike ‘statistical’ which is attempting to find and apply a pattern to determine interactions.</p>
+<p>Fourth. What do the links represent - this is much more aligned with Box 1 in the main text</p>
+<p>Fifth. What do the nodes represent. Note here that ‘agnostic’ means that there is no node-level metadata for the species/the information at the species level is not ecologically meaningful.</p>
+<p>Sixth. The ecological theory as to what constrains links (again Box 1 in the main text)</p>
+<p>Seventh. How the interactions quantified</p>
+<p>Eight. What are the data sources needed for each model.</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -344,23 +353,23 @@ Traits table for the different model families
 <div aria-describedby="tbl-traits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div>
-<div id="qjlwugbswf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qjlwugbswf table {
+<div id="rplujyxsvs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rplujyxsvs table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qjlwugbswf thead, #qjlwugbswf tbody, #qjlwugbswf tfoot, #qjlwugbswf tr, #qjlwugbswf td, #qjlwugbswf th {
+#rplujyxsvs thead, #rplujyxsvs tbody, #rplujyxsvs tfoot, #rplujyxsvs tr, #rplujyxsvs td, #rplujyxsvs th {
   border-style: none;
 }
 
-#qjlwugbswf p {
+#rplujyxsvs p {
   margin: 0;
   padding: 0;
 }
 
-#qjlwugbswf .gt_table {
+#rplujyxsvs .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -386,12 +395,12 @@ Traits table for the different model families
   border-left-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_caption {
+#rplujyxsvs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qjlwugbswf .gt_title {
+#rplujyxsvs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -403,7 +412,7 @@ Traits table for the different model families
   border-bottom-width: 0;
 }
 
-#qjlwugbswf .gt_subtitle {
+#rplujyxsvs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -415,7 +424,7 @@ Traits table for the different model families
   border-top-width: 0;
 }
 
-#qjlwugbswf .gt_heading {
+#rplujyxsvs .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -427,13 +436,13 @@ Traits table for the different model families
   border-right-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_bottom_border {
+#rplujyxsvs .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_col_headings {
+#rplujyxsvs .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -448,7 +457,7 @@ Traits table for the different model families
   border-right-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_col_heading {
+#rplujyxsvs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -468,7 +477,7 @@ Traits table for the different model families
   overflow-x: hidden;
 }
 
-#qjlwugbswf .gt_column_spanner_outer {
+#rplujyxsvs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -480,15 +489,15 @@ Traits table for the different model families
   padding-right: 4px;
 }
 
-#qjlwugbswf .gt_column_spanner_outer:first-child {
+#rplujyxsvs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qjlwugbswf .gt_column_spanner_outer:last-child {
+#rplujyxsvs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qjlwugbswf .gt_column_spanner {
+#rplujyxsvs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -500,11 +509,11 @@ Traits table for the different model families
   width: 100%;
 }
 
-#qjlwugbswf .gt_spanner_row {
+#rplujyxsvs .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qjlwugbswf .gt_group_heading {
+#rplujyxsvs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -530,7 +539,7 @@ Traits table for the different model families
   text-align: left;
 }
 
-#qjlwugbswf .gt_empty_group_heading {
+#rplujyxsvs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -545,15 +554,15 @@ Traits table for the different model families
   vertical-align: middle;
 }
 
-#qjlwugbswf .gt_from_md > :first-child {
+#rplujyxsvs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qjlwugbswf .gt_from_md > :last-child {
+#rplujyxsvs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qjlwugbswf .gt_row {
+#rplujyxsvs .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -572,7 +581,7 @@ Traits table for the different model families
   overflow-x: hidden;
 }
 
-#qjlwugbswf .gt_stub {
+#rplujyxsvs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -585,7 +594,7 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#qjlwugbswf .gt_stub_row_group {
+#rplujyxsvs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -599,15 +608,15 @@ Traits table for the different model families
   vertical-align: top;
 }
 
-#qjlwugbswf .gt_row_group_first td {
+#rplujyxsvs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qjlwugbswf .gt_row_group_first th {
+#rplujyxsvs .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qjlwugbswf .gt_summary_row {
+#rplujyxsvs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -617,16 +626,16 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#qjlwugbswf .gt_first_summary_row {
+#rplujyxsvs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_first_summary_row.thick {
+#rplujyxsvs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qjlwugbswf .gt_last_summary_row {
+#rplujyxsvs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -636,7 +645,7 @@ Traits table for the different model families
   border-bottom-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_grand_summary_row {
+#rplujyxsvs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -646,7 +655,7 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#qjlwugbswf .gt_first_grand_summary_row {
+#rplujyxsvs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -656,7 +665,7 @@ Traits table for the different model families
   border-top-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_last_grand_summary_row_top {
+#rplujyxsvs .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -666,11 +675,11 @@ Traits table for the different model families
   border-bottom-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_striped {
+#rplujyxsvs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qjlwugbswf .gt_table_body {
+#rplujyxsvs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -679,7 +688,7 @@ Traits table for the different model families
   border-bottom-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_footnotes {
+#rplujyxsvs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -693,7 +702,7 @@ Traits table for the different model families
   border-right-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_footnote {
+#rplujyxsvs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -702,7 +711,7 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#qjlwugbswf .gt_sourcenotes {
+#rplujyxsvs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -716,7 +725,7 @@ Traits table for the different model families
   border-right-color: #D3D3D3;
 }
 
-#qjlwugbswf .gt_sourcenote {
+#rplujyxsvs .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -724,63 +733,63 @@ Traits table for the different model families
   padding-right: 5px;
 }
 
-#qjlwugbswf .gt_left {
+#rplujyxsvs .gt_left {
   text-align: left;
 }
 
-#qjlwugbswf .gt_center {
+#rplujyxsvs .gt_center {
   text-align: center;
 }
 
-#qjlwugbswf .gt_right {
+#rplujyxsvs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qjlwugbswf .gt_font_normal {
+#rplujyxsvs .gt_font_normal {
   font-weight: normal;
 }
 
-#qjlwugbswf .gt_font_bold {
+#rplujyxsvs .gt_font_bold {
   font-weight: bold;
 }
 
-#qjlwugbswf .gt_font_italic {
+#rplujyxsvs .gt_font_italic {
   font-style: italic;
 }
 
-#qjlwugbswf .gt_super {
+#rplujyxsvs .gt_super {
   font-size: 65%;
 }
 
-#qjlwugbswf .gt_footnote_marks {
+#rplujyxsvs .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qjlwugbswf .gt_asterisk {
+#rplujyxsvs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qjlwugbswf .gt_indent_1 {
+#rplujyxsvs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qjlwugbswf .gt_indent_2 {
+#rplujyxsvs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qjlwugbswf .gt_indent_3 {
+#rplujyxsvs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qjlwugbswf .gt_indent_4 {
+#rplujyxsvs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qjlwugbswf .gt_indent_5 {
+#rplujyxsvs .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2178,7 +2187,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

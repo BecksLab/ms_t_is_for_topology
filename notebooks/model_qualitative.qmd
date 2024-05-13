@@ -1,5 +1,5 @@
 ---
-title: Model family traits
+title: "SuppMat 2: Looking at the traits of the different model families"
 authors:
   - name: Tanya Strydom
     id: ts
@@ -8,7 +8,25 @@ date: last-modified
 bibliography: ../references.bib
 ---
 
-Basically the important thing here is that we want to take what is currently table 1 in the manuscript and turn that into a more elaborate 'traits table'.
+The purpose of this document is to provide a rationalisation but also 'formalisation' of the different model families of sorts. This starts of by trying to construct a 'traits' table and then we will feed that traits table into a hierarchical clustering model.
+
+Understanding the rationale of the traits table is perhaps the most crucial though. 
+
+First. What the model is predicting. Is it the structure of a network, interactions between species, or their co-occurrence patterns.
+
+Second. What does the network represent. Is it a conceptual network (*i.e.,* cannot be assigned to specific community/geographic location), metaweb (network of potential interactions), realised network, or a 'metacommunity' (collection of co-occurring species).
+
+Third. What is the underlying mechanism that determines the interactions between species. This is an attempt at trying to code what is discussed in Box 1 of the main text but a bit more related to the 'computational' mechanism and not the 'ecological' mechanism. Note here that the use of mathematical is used to refer to a framework that uses some sort of mathematical formalisation to determine interactions/structure, unlike 'statistical' which is attempting to find and apply a pattern to determine interactions.
+
+Fourth. What do the links represent - this is much more aligned with Box 1 in the main text
+
+Fifth. What do the nodes represent. Note here that 'agnostic' means that there is no node-level metadata for the species/the information at the species level is not ecologically meaningful.
+
+Sixth. The ecological theory as to what constrains links (again Box 1 in the main text)
+
+Seventh. How the interactions quantified
+
+Eight. What are the data sources needed for each model.
 
 ```{r}
 #| include: false
