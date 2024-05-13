@@ -10,6 +10,26 @@ bibliography: ../references.bib
 
 This notebook is going to visualise and further describe the process of benchmarking the different model families. The core code used to download, clean, and summarise the different networks can be found at the following repository [BecksLab/topology_generators](https://github.com/BecksLab/topology_generators).
 
+## Specific models used
+
+The table below shows which specific use-case we use for the network prediction task
+
+| Model family       | Model             | Reference                               |
+|---------------------------------|-----------------|----------------------|
+| null               | Type I model      | @fortunaHabitatLossStructure2006        |
+| neutral            |                   | @pomeranzInferringPredatorPrey2019      |
+| resource           | undecided         |                                         |
+| generative         | MaxEnt model      | @banvilleWhatConstrainsFood2023         |
+| energetic          | ADBM              | @petcheySizeForagingFood2008            |
+| graph embedding    | Transfer learning | @strydomFoodWebReconstruction2022       |
+| trait matching     | PFIM              | @shawFrameworkReconstructingAncient2024 |
+| binary classifiers |                   |                                         |
+| expert knowledge   |                   |                                         |
+| data scavenging    |                   |                                         |
+| co-occurrence      |                   |                                         |
+
+: Specific model example we used as a representative of the different model families. {#tbl-models}
+
 ## Datasets used
 
 Note that not all datasets are suitable for use with all model families - this is primarily because some of the model families require a lot more additional (external) data and we cannot feasibly do this for all of the available datasets. Conversely for some of the 'data light' models it is of course possible to use many networks and create a large sample of networks. Below we will introduce three broader groups of datasets and in the table below we show for which families we used which datasets.
@@ -41,7 +61,6 @@ We queried the Mangal [@poisotMangalMakingEcological2016] database and extracted
 Data from @pomeranzInferringPredatorPrey2019. **TODO** quick outline of what the dataset entails...
 
 ### Empirical networks
-
 
 > Here I think we need to span a variety of domains, at minimum aquatic and terrestrial but maybe there should be a 'scale' element as well *i.e.,* a regional and local network. I think there is going to be a 'turning point' where structural will take over from mechanistic in terms of performance. More specifically at local scales bioenergetic constraints (and co-occurrence) may play a bigger role in structuring a network whereas at the metaweb level then mechanistic may make more (since by default its about who can potentially interact and obviously not constrained by real-world scenarios) *sensu* @caronTraitmatchingModelsPredict2024. Although having said that I feel that contradicts the idea of backbones (*sensu* Bramon Mora (sp?) et al & Stouffer et al) But that might be where we get the idea of core *structure* vs something like linkage density. So core things like trophic level/chain length will be conserved but connectance might not (I think I understand what I'm trying to say here)
 
@@ -75,9 +94,7 @@ For 'structure':
 
 For interactions:
 
-Based on @poisotGuidelinesPredictionSpecies2023:
--   Precision-Recall (PR-AUC) - performance 
--   Matthews correlation coefficient (MCC) - accuracy
+Based on @poisotGuidelinesPredictionSpecies2023: - Precision-Recall (PR-AUC) - performance - Matthews correlation coefficient (MCC) - accuracy
 
 ## Visualising results
 
