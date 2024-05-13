@@ -219,7 +219,7 @@ methods}
 1%
 }%
 }
-\date{2024-05-10}
+\date{2024-05-13}
 
 \usepackage{setspace}
 \usepackage[left,pagewise]{lineno}
@@ -364,16 +364,27 @@ work sets out to highlight and discuss these three specific points.
 
 \centering{
 
-\includegraphics{images/concept.jpeg}
+\includegraphics{images/concept_2.png}
 
 }
 
 \caption{\label{fig-concept}Conceptual figure of the `network
-prediction'. Panel A shows where the model families fall in the the
-context of being models that predict networks or models that predict
-interactions space. Panel B serves to highlight the characteristics one
-might like to `test'/benchmark for a model based on it being either a
-network or interaction predicting model}
+prediction'. Panel \textbf{A} shows the many ways in which a food web
+can be defined and described at the node, edge, and even network level.
+Panel \textbf{B} (will) shows how the way in which we predict networks
+also limited and often focuses only only predicting the structure of a
+network (the final networks is parametrised by the expected structure of
+the network) or the interactions between species (the final network is
+determined by the behaviour of the nodes). These different models also
+encode different philosophies/hypotheses not only as to what determines
+how a network will look but also how the final network itself is encoded
+\emph{i.e.,} its anatomy. (\emph{aside:} there is the potential to
+either try and visually summarise how the different model families
+define a network (so repeating the motifs used in the ANATOMY panel)
+alternatively it would be cool to try and have a panel C that tries to
+quantify the different `data ingredients' you would need to try and
+construct a network, this would probably be very visually overwhelming
+though\ldots)}
 
 \end{figure}%
 
@@ -388,15 +399,15 @@ individuals), community (the links between species), or metacommunity
 (fluxes between locations) level. Even if one were to limit their scope
 to thinking of interaction networks only in terms of food webs at the
 community-level there are still many ways to define the various
-components of the network, one needs to understand the different
-intentions/assumptions that are made when a food web is constructed.
-Although the main intention of a food web is to capture and represent
-the feeding links between species there are many ways to define the
-nodes (\emph{e.g.,} species or taxonomic group), edges (\emph{e.g.,}
-\textbf{potential} or \textbf{realised feeding links}), the magnitude of
-the edges (\emph{e.g.,} binary vs probabilistic), and even how the
-network itself is delimited (does it represent an aggregation of
-interactions over time?).
+components of the network Panel A of~\ref{fig-concept}, one needs to
+understand the different intentions/assumptions that are made when a
+food web is constructed. Although the main intention of a food web is to
+capture and represent the feeding links between species there are many
+ways to define the nodes (\emph{e.g.,} species or taxonomic group),
+edges (\emph{e.g.,} \textbf{potential} or \textbf{realised feeding
+links}), the magnitude of the edges (\emph{e.g.,} binary vs
+probabilistic), and even how the network itself is delimited (does it
+represent an aggregation of interactions over time?).
 
 \subsection{How do we define a node?}\label{how-do-we-define-a-node}
 
@@ -451,7 +462,7 @@ the different `types' of food webs within the larger research programmes
 (or even practical needs) that have been driving the construction of
 them.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, opacityback=0, rightrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toptitle=1mm, toprule=.15mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Mechanisms that determine feeding links}, coltitle=black, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, arc=.35mm, toprule=.15mm, bottomtitle=1mm, left=2mm, opacitybacktitle=0.6, colback=white, coltitle=black, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Mechanisms that determine feeding links}, colframe=quarto-callout-note-color-frame, toptitle=1mm, bottomrule=.15mm, leftrule=.75mm, opacityback=0]
 
 \textbf{Proximity}
 
@@ -525,7 +536,7 @@ the food web we are interested in scrutinising.
 
 Selecting a model for the task of network prediction should come down to
 two things; what \emph{aspect} of a food web am I interested in
-predicting, and what data is available. As shown in panel A of
+predicting, and what data is available. As shown in panel B of
 Figure~\ref{fig-concept} the models that are used to predict a food web
 tend to focus on only predicting the structure of a network
 (\textbf{topology generator}) or the interactions for a given species
@@ -563,7 +574,7 @@ In order for a model to formalise a `complete' food web it is necessary
 to formalise two aspects of the network, `who eats whom' (to determine
 the links between nodes) as well as the structure of the network (to
 limit the distribution of links), however most models are inclined to
-focus on one of the two aspects panel A of~\ref{fig-concept}.
+focus on one of the two aspects panel B of~\ref{fig-concept}.
 \end{quote}
 
 \begin{quote}
@@ -680,7 +691,7 @@ patterns & species & association links & binary & \\
 \href{https://BecksLab.github.io/ms_t_is_for_topology/notebooks/model_qualitative-preview.html\#cell-fig-dendo}{Model
 family traits}}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, opacityback=0, rightrule=.15mm, left=2mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toptitle=1mm, toprule=.15mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, coltitle=black, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, arc=.35mm, toprule=.15mm, bottomtitle=1mm, left=2mm, opacitybacktitle=0.6, colback=white, coltitle=black, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, colframe=quarto-callout-note-color-frame, toptitle=1mm, bottomrule=.15mm, leftrule=.75mm, opacityback=0]
 
 Although understanding the underlying philosophy of the different model
 families is beneficial it is also important to understand in what
@@ -885,8 +896,7 @@ reconstructed network structure.''} - Poisot (2023)
   networks very well and models that predict interactions very well but
   nothing that is doing well at predicting both - this is where we
   should be focusing our attention when it comes to furthering model
-  development. (we need models that will fill the space in the top right
-  quadrant of panel A in Figure~\ref{fig-concept})
+  development.
 \end{itemize}
 
 \subsection{Downsampling}\label{downsampling}
