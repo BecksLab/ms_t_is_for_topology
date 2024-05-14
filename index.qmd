@@ -84,7 +84,7 @@ The reality is that feeding interactions between species are the result of the c
 
 **Proximity**
 
-We are co-occurring in space and in time and thus we can interact
+We are co-occurring in space and in time and thus we can interact [@barberanUsingNetworkAnalysis2012]
 
 **Mass-effect**
 
@@ -122,6 +122,8 @@ Selecting a model for the task of network prediction should come down to two thi
 
 > Crucially most topology generators lack some key data on the interaction between species (this can be because of how the model itself defines species or the way in which links are assigned in the network) and interaction predictors lack some sort of parametrisation of network structure [just because two species can interact it does not mean that they will, @poisotSpeciesWhyEcological2015].
 
+> What is the purpose of generating a network? Is it an element of a bigger question we are asking, *e.g.,* I want to generate a series of networks to do some extinction simulations/bioenergetic stuff OR are we looking for a 'final product' network that is relevant to a specific location? (this can still be broad in geographic scope).
+
 ### Model families
 
 As there are many food web models to choose from it is perhaps useful to think about the models in terms of model families, a summary of these families is presented in @tbl-families and along with @fig-dendro highlights the differences and similarities of the philosophies and assumptions that determine a network. A more extensive overview of the different models that fall with in the different model families can be found in [SuppMat 1](https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_descriptions-preview.html) and for a more detailed breakdown of the different 'traits' of the model families refer to [SuppMat 2](https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_qualitative-preview.html).
@@ -151,7 +153,7 @@ Although understanding the underlying philosophy of the different model families
 
 **Benchmarking**
 
-Benchmarking how well a model is doing to capture the desired elements of a network is also a task that required some thought and contemplation. Even if we think about the predicting the structure of a network it is possible that two networks may have the same number of nodes and links but that those links may be distributed in very different ways. Thus it is important to think critically about the suite of summary statistics that are used to assess a model, since there is no one 'silver bullet' summary statistic that will be able to assess if a model is able to fully replicate an empirical network [@allesinaGeneralModelFood2008]. One of the main challenges when assessing the ability to retrieve pairwise interactions is that food webs are sparse (that means that there are few links given the number of species) and it is important that we are able to discern between a model that is able to correctly predict interactions that do (true positives) and not (true negatives) occur and one that is simply predicting a lack of interactions [@poisotGuidelinesPredictionSpecies2023].
+Benchmarking how well a model is doing to capture the desired elements of a network is also a task that required some thought and contemplation. Even if we think about the predicting the structure of a network it is possible that two networks may have the same number of nodes and links but that those links may be distributed in very different ways. Thus it is important to think critically about the suite of summary statistics that are used to assess a model, since there is no one 'silver bullet' summary statistic that will be able to assess if a model is able to fully replicate an empirical network [@allesinaGeneralModelFood2008]. One of the main challenges when assessing the ability to retrieve pairwise interactions is that food webs are sparse (that means that there are few links given the number of species) and it is important that we are able to discern between a model that is able to correctly predict interactions that do (true positives) and not (true negatives) occur and one that is simply predicting a lack of interactions [@poisotGuidelinesPredictionSpecies2023]. For more detailed methods as to how benchmarking was done refer to [SuppMat 3](https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_quantitative-preview.html)
 
 ![Difference between real and model network property. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007 which are S1: Number of linear chains, S2: Number of omnivory motifs, S4: Number of apparent competition motifs, and S5: Number of direct competition motifs](images/topology.png){#fig-topology}
 
@@ -164,49 +166,45 @@ This includes thinking about the need for additional data sources (such as trait
 Probably mentioned elsewhere but basically are we constructing networks because we want to make real-world, case-specific predictions *e.g.,* for a conservation area or do we want to just have a set of ecologically plausible networks we can use for theoretical stuffs. Need to discuss the key differences and implications between predicting a **metaweb** (*sensu* @dunneNetworkStructureFood2006) and a network realisation. (In a way the idea of predicting a metaweb vs realisation is what makes me hesitant to use the Mangal networks to test the structural models because do we even know what the Mangal networks represent and what the structural models are predicting...) Maybe also @poisotSpeciesWhyEcological2015 that discuss how the local factors are going to play a role.
 
 Also need to take into consideration inherent constraints that the model imposes on itself and how it will affect our ability to test hypotheses/ask questions using the *e.g.,* from @petcheyFitEfficiencyBiology2011 - models that are constrained by connectance means that we are unable to explain connectance itself and you would need a different approach if understanding connectance is your goal. Another way of phrasing this is thinking about what is needed (input data/parameters), produced (final network characteristics), and desired (end-use).
+
+> An interesting thing to also think about is data dependant and data independent 'parametrisation' of the models...
 :::
 
 ## Concluding remarks
 
--   As we can see in @fig-topology different models clearly do well in different things... For ,ore detailed methods refer to [SuppMat 3](https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_quantitative-preview.html)
+-   As discussion about the different model families and in what areas they do/do not do well. This will depend probably a fair bit on how @fig-topology end up looking... But it will also be important to tie in some of the other considerations/constraints that are listed in what is currently Box 2
 
--   Bring up the fact that delimiting a network is in and of itself fuzzy - we tend to think of them in terms of snapshots but in reality the final (empirical) network is often the result of aggregation over multiple timescales.
+    -   In certain situations structure is 'enough' but there may be use cases where we are really interested in the node-level interactions *i.e.,* species identity is a thing we care about and need to be able to retrieve specific interactions at specific nodes correctly.
 
--   Also the fact that *some* people are concerned about the taxonomic resolution and cascading effects those might have on our understanding of network structure [@pringleResolvingFoodWebStructure2020; @pringleUntanglingFoodWebs2020], we are at risk of losing our ability to distinguish the wood from the tree - are we not (at least at times) concerned more with understanding ecosystem level processes than with needing to understand things *perfectly* at the species level.
+-   Why do interaction models do so badly at predicting structure? Nuance of metaweb vs realisation but also time? At the core of it interaction models are trained on existing interaction data; this is data that are most likely closer to a metaweb than a local realisation even if they are being inventoried at a small scale...
+
+    -   We can briefly shoehorn downsampling here maybe??
+
+-   It will be interesting to bring up the idea that if a model is missing a specific pairwise link but doing well overall then when does it matter? 
+
+    -   The fact that *some* people are concerned about the taxonomic resolution and cascading effects those might have on our understanding of network structure [@pringleResolvingFoodWebStructure2020; @pringleUntanglingFoodWebs2020], but that puts us in a place where we are at risk of losing our ability to distinguish the wood from the tree - are we not (at least at times) concerned more with understanding ecosystem level processes than with needing to understand things *perfectly* at the species level.
 
     -   I don't think these 'rare'/nuanced links (e.g. carnivorous hippos) are going to rock the boat when we think about networks at the structural level.
 
--   In certain situations structure is 'enough' but there may be use cases where we are really interested in the node-level interactions *i.e.,* species identity is a thing we care about and need to be able to retrieve specific interactions at specific nodes correctly.
-
--   What is the purpose of generating a network? Is it an element of a bigger question we are asking, *e.g.,* I want to generate a series of networks to do some extinction simulations/bioenergetic stuff OR are we looking for a 'final product' network that is relevant to a specific location? (this can still be broad in geographic scope).
-
-Interestingly @williamsSuccessItsLimits2008 also explicitly talk about *structural* food-web models in their introduction... so how I see it that means that there has always been this inherent acknowledgement that models are functioning at a specific 'network level'.
-
 > "The resolution of food-web data is demonic because it can radically change network topology and associated biological inferences in ways that are unknowable in the absence of better data." - @pringleResolvingFoodWebStructure2020 The counter to this is that structural models are often not working at the species level and thus the structure remains 'unchanged' when you increase the resolution - I don't think that people are that concerned with the structure of real world networks barring connectance and since that scales with species richness anyway your final proportion will probably still remain the same...
 
-> "It makes no sense to describe the interaction structure of nodes which in themselves are poorly defined." — Roslin et al. (2013, p. 2)
+-   I think a big take home will (hopefully) be how different approaches do better in different situations and so you as an end user need to take this into consideration and pick accordingly. I think @petcheyFitEfficiencyBiology2011 might have (and share) some thoughts on this. I feel like I need to look at @berlowGoldilocksFactorFood2008 but maybe not exactly in this context but vaguely adjacent.
 
--   I think a big take home will (hopefully) be how different approaches do better in different situations and so you as an end user need to take this into consideration and pick accordingly. I think @petcheyFitEfficiencyBiology2011 might have (and share) some thoughts on this (thanks Andrew). I feel like I need to look at @berlowGoldilocksFactorFood2008 but maybe not exactly in this context but vaguely adjacent.
-
--   An interesting thing to also think about (and arguably it will be addressed based on some of the other thoughts and ideas) is data dependant and data independent 'parametrisation' of the models...
-
--   Why do interaction models do so badly at predicting structure? Nuance of metaweb vs realisation but also time? At the core of it interaction models are trained on existing interaction data; this is data that are most likely closer to a metaweb than a local realisation even if they are being inventoried at a small scale.
-
-    -   I think this is sort of the crux of the argument presented in @brimacombeApplyingMethodIts2024
+    -   I think this is sort of the crux of the argument presented in @brimacombeApplyingMethodIts2024 as well.
 
 > *"we highlight an interesting paradox: the models with the best performance measures are not necessarily the models with the closest reconstructed network structure."* - @poisotGuidelinesPredictionSpecies2023
 
--   *Do we need network models to predict interactions and interaction models to predict structure?* (lets not think about that too hard or I might just have to sit in silence for a while...)
+-   Do we need network models to predict interactions and interaction models to predict structure?
 
     -   "Another argument for the joint prediction of networks and interactions is to reduce circularity and biases in the predictions. As an example, models like linear filtering generate probabilities of non-observed interactions existing, but do so based on measured network properties." - @strydomRoadmapPredictingSpecies2021
 
     -   Aligning (dove-tailing) with this the idea of ensemble modelling as presented by @beckerOptimisingPredictiveModels2022
 
--   It will be interesting to bring up the idea that if a model is missing a specific pairwise link but doing well at the structural level then when does it matter?
-
--   Close out with a call to action that we have models that predict networks very well and models that predict interactions very well but nothing that is doing well at predicting both - this is where we should be focusing our attention when it comes to furthering model development.
+-   Close out with a call to action that we have models that predict networks very well and models that predict interactions very well but nothing that is doing well at predicting both - this is where we should be focusing our attention when it comes to furthering model development...
 
 ### Downsampling
+
+do we bring this up? this could be a box... if we have the 'finances' for it... otherwise it should go to the outstanding questions fur sure
 
 -   @dansereauSpatiallyExplicitPredictions2023
 
@@ -231,7 +229,9 @@ Interestingly @williamsSuccessItsLimits2008 also explicitly talk about *structur
 
 -   non-consumptive effects
 
--   can we develop a model that is both an topology generator as well as an interaction predictor?
+-   can we develop a model that is both a topology generator as well as an interaction predictor?
+
+-   how do we define the spatial and temporal 'boundaries' of a network
 
 ## References {.unnumbered}
 
