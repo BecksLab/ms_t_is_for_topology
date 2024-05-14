@@ -1,16 +1,16 @@
 ---
-title: "SuppMat 2: Looking at the traits of the different model families"
+title: "SuppMat 2: Looking at the 'traits' of the different model families"
 authors:
   - name: Tanya Strydom
     id: ts
     orcid: 0000-0001-6067-1349
+abstract: |
+  The purpose of this document is to provide a rationalisation but also 'formalisation' of the different model families of sorts. This starts of by trying to construct a 'traits' table that focuses on what the resulting network is (is it a prediction of structure or is it a prediction of interactions), how the resulting network is encoded (*i.e.,* its anatomy) as well as trying to identify what type of data are needed to 'parametrise' the model. Finally we take this traits table and feed it into a hierarchical clustering model to sort of see how our broader *a priori* ideas of models being either topology generators or interaction predictors.
 date: last-modified
 bibliography: ../references.bib
 ---
 
-The purpose of this document is to provide a rationalisation but also 'formalisation' of the different model families of sorts. This starts of by trying to construct a 'traits' table and then we will feed that traits table into a hierarchical clustering model.
-
-Understanding the rationale of the traits table is perhaps the most crucial though. 
+Understanding the rationale of the traits table is perhaps the most crucial thing though so I will try and elaborate on some of the 'categories' that I have selected and provide a very high-level glossary of terms. Many of these categories are the product of discussions we've hard and this is an attempt to articulate those discussions in a more categorical manner.
 
 First. What the model is predicting. Is it the structure of a network, interactions between species, or their co-occurrence patterns.
 
@@ -39,6 +39,10 @@ trait_tbl <-
   read.csv("data/traits_table.csv")  %>% 
   tibble()
 ```
+
+## Model family traits table
+
+We can visualise these eight 'character traits' as a table 
 
 ```{r}
 #| warning: false
@@ -114,6 +118,8 @@ trait_tbl %>%
 
 ```
 
+## Visualisation
+
 Maybe we try some ordination based on this traits table?
 
 ```{r}
@@ -125,10 +131,6 @@ Maybe we try some ordination based on this traits table?
 
 # make all NAs 0...
  df[is.na(df)] <- 0
-
-# pca
-pca <- prcomp(df)
-
 
 # Fitting Hierarchical clustering Model
 set.seed(66)  # Setting seed
@@ -142,35 +144,8 @@ new cell code for plotting because
 ```{r}
 #| warning: false
 #| echo: false
-#| label: fig-pca
-#| fig-cap: "PCA of the trait table"
-
-ggplot() +
-#  geom_text(aes(x = pca$x[,1],
-#                  y = pca$x[,2],
-#                  label = rownames(pca$x),
-#                  colour = rownames(pca$x)),
-#            check_overlap = TRUE,
-#            nudge_y = 0.05) +
-  geom_point(aes(x = pca$x[,1],
-                  y = pca$x[,2],
-                  label = rownames(pca$x),
-                  colour = rownames(pca$x)),
-            size = 6,
-            alpha = 0.7) +
-  theme_void() +
-  geom_hline(aes(yintercept = 0)) +
-  geom_vline(aes(xintercept = 0)) +
-  theme(legend.position = 'bottom')
-
-
-```
-
-```{r}
-#| warning: false
-#| echo: false
 #| label: fig-dendo
-#| fig-cap: "Dendrogram of the trait table"
+#| fig-cap: "Dendrogram of the trait table using a Hierarchical clustering model"
 
 ggplot() +
   geom_segment(data = segment(hcdata), 
