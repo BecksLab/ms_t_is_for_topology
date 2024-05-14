@@ -103,17 +103,10 @@ Now it is time to visualise the data
 ```{r}
 #| include: false
 #| warning: false
-library(tidyverse)
+library(ggradar)
 library(patchwork)
-
-# function for radar plots
-coord_radar <- function (theta = "x", start = 0, direction = 1) {
-    theta <- match.arg(theta, c("x", "y"))
-    r <- if (theta == "x") "y" else "x"
-    ggproto("CordRadar", CoordPolar, theta = theta, r = r, start = start, 
-            direction = sign(direction),
-            is_linear = function(coord) TRUE)
-}
+library(scales)
+suppressPackageStartupMessages(library(tidyverse))
 
 # download file from other repo
 download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/topology_summary.csv", "../notebooks/data/topology_models.csv")
@@ -221,25 +214,85 @@ ggsave("../images/topology.png")
 #| warning: false
 #| echo: false
 #| label: fig-spider
-#| fig-cap: "I was experimenting with radial plots... its not going well..."
+#| fig-cap: "I was experimenting with radial plots... its not going well.. But in terms of what is currently happening the blue 'inner' circle represents a difference of zero between real and modelled value so ideally we would want the points touching the green circle..."
 
-ggplot(df %>% 
-        pivot_longer(
-                    cols = c(real_val, model_val),
-                    names_to = "grp",
-                    values_to = "value",
-                    values_drop_na = TRUE) %>%
-        group_by(real, model, grp)  %>% 
-        reframe(mean = mean(value, na.rm = TRUE)) %>%
-        distinct(),
-        aes(x = real,
-            y = mean,
-            group = model,
-            colour = model)) +
-    geom_line() +
-    coord_radar() +
-    facet_wrap(vars(model)) + 
-    theme_minimal()
+
+df_radar <- 
+  df %>%
+  group_by(id, real, model)  %>% 
+        reframe(diff = real_val - model_val) %>%
+        distinct() %>% 
+        ungroup()  %>% 
+        group_by(real, model) %>%
+        mutate(diff = mean(diff)) %>%
+        select(real, model, diff) %>% 
+        distinct() %>% 
+        pivot_wider(names_from = real, 
+                    values_from = diff) %>%
+        ungroup() %>% 
+        mutate(across(-model, ~ rescale(.x, 
+                                        to = c(-1,1)))) %>% 
+        arrange(model)
+
+mod_grp = df_radar %>% distinct(model) %>% pull()
+col_mod = c("red", "blue", "yellow", "pink", "black", "orange", "green",
+            "purple", "aquamarine", "darkgreen", "deeppink")
+
+data <- vector('list', length(mod_grp))
+
+for (i in 1:length(mod_grp)) {
+  
+  data[[i]] = ggradar(df_radar %>% 
+                      filter(model == mod_grp[i]),
+               group.colours = col_mod[i],
+               values.radar = NA,
+               grid.min = -1,
+               grid.mid = 0,
+               grid.max = 1,
+               group.point.size = 1,
+               group.line.width = .5,
+               grid.label.size = 3,
+               plot.title = mod_grp[i],
+               axis.label.size = 0,
+               plot.legend = FALSE) +
+               theme(title = element_text(size = 8))
+  
+}
+
+p1 = ggradar(df_radar,
+             group.colours = col_mod[1:6],
+               grid.min = -1,
+               values.radar = NA,
+               grid.mid = 0,
+               grid.max = 1,
+               group.point.size = 0,
+               group.line.width = 1,
+               axis.label.size = 3)
+
+
+layout <- "
+ALLLK
+BLLLJ
+CLLLI
+DEFGH
+"
+
+data[[1]] + 
+  data[[2]] + 
+  data[[3]] +  
+  data[[4]] +
+  data[[5]] +
+  data[[6]] + 
+  data[[1]] +
+  data[[2]] + 
+  data[[3]] +
+  data[[4]] + 
+  data[[5]] +
+  p1 + 
+  plot_layout(design = layout,
+              guides = 'collect') & 
+  theme(legend.position = 'none',
+        legend.text=element_text(size = 4))
 
 ```
 
