@@ -481,11 +481,12 @@ the different `types' of food webs within the larger research programmes
 (or even practical needs) that have been driving the construction of
 them.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, breakable, titlerule=0mm, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Mechanisms that determine feeding links}, toptitle=1mm, rightrule=.15mm, arc=.35mm, left=2mm, coltitle=black, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, colback=white, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, arc=.35mm, opacitybacktitle=0.6, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Mechanisms that determine feeding links}, toprule=.15mm, breakable, titlerule=0mm, rightrule=.15mm, left=2mm]
 
 \textbf{Proximity}
 
 We are co-occurring in space and in time and thus we can interact
+(Barberán et al., 2012)
 
 \textbf{Mass-effect}
 
@@ -613,6 +614,14 @@ structure (just because two species can interact it does not mean that
 they will, Poisot et al., 2015).
 \end{quote}
 
+\begin{quote}
+What is the purpose of generating a network? Is it an element of a
+bigger question we are asking, \emph{e.g.,} I want to generate a series
+of networks to do some extinction simulations/bioenergetic stuff OR are
+we looking for a `final product' network that is relevant to a specific
+location? (this can still be broad in geographic scope).
+\end{quote}
+
 \subsection{Model families}\label{model-families}
 
 As there are many food web models to choose from it is perhaps useful to
@@ -724,7 +733,7 @@ SuppMat 2)}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, breakable, titlerule=0mm, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, toptitle=1mm, rightrule=.15mm, arc=.35mm, left=2mm, coltitle=black, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, colback=white, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, arc=.35mm, opacitybacktitle=0.6, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, toprule=.15mm, breakable, titlerule=0mm, rightrule=.15mm, left=2mm]
 
 Although understanding the underlying philosophy of the different model
 families is beneficial it is also important to understand in what
@@ -756,7 +765,10 @@ there are few links given the number of species) and it is important
 that we are able to discern between a model that is able to correctly
 predict interactions that do (true positives) and not (true negatives)
 occur and one that is simply predicting a lack of interactions (Poisot,
-2023).
+2023). For more detailed methods as to how benchmarking was done refer
+to
+\href{https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_quantitative-preview.html}{SuppMat
+3}
 
 \begin{figure}[H]
 
@@ -806,55 +818,65 @@ approach if understanding connectance is your goal. Another way of
 phrasing this is thinking about what is needed (input data/parameters),
 produced (final network characteristics), and desired (end-use).
 
+\begin{quote}
+An interesting thing to also think about is data dependant and data
+independent `parametrisation' of the models\ldots{}
+\end{quote}
+
 \end{tcolorbox}
 
 \section{Concluding remarks}\label{concluding-remarks}
 
 \begin{itemize}
 \item
-  As we can see in Figure~\ref{fig-topology} different models clearly do
-  well in different things\ldots{} For ,ore detailed methods refer to
-  \href{https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_quantitative-preview.html}{SuppMat
-  3}
-\item
-  Bring up the fact that delimiting a network is in and of itself fuzzy
-  - we tend to think of them in terms of snapshots but in reality the
-  final (empirical) network is often the result of aggregation over
-  multiple timescales.
-\item
-  Also the fact that \emph{some} people are concerned about the
-  taxonomic resolution and cascading effects those might have on our
-  understanding of network structure (Pringle, 2020; Pringle \&
-  Hutchinson, 2020), we are at risk of losing our ability to distinguish
-  the wood from the tree - are we not (at least at times) concerned more
-  with understanding ecosystem level processes than with needing to
-  understand things \emph{perfectly} at the species level.
+  As discussion about the different model families and in what areas
+  they do/do not do well. This will depend probably a fair bit on how
+  Figure~\ref{fig-topology} end up looking\ldots{} But it will also be
+  important to tie in some of the other considerations/constraints that
+  are listed in what is currently Box 2
 
   \begin{itemize}
   \tightlist
+  \item
+    In certain situations structure is `enough' but there may be use
+    cases where we are really interested in the node-level interactions
+    \emph{i.e.,} species identity is a thing we care about and need to
+    be able to retrieve specific interactions at specific nodes
+    correctly.
+  \end{itemize}
+\item
+  Why do interaction models do so badly at predicting structure? Nuance
+  of metaweb vs realisation but also time? At the core of it interaction
+  models are trained on existing interaction data; this is data that are
+  most likely closer to a metaweb than a local realisation even if they
+  are being inventoried at a small scale\ldots{}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We can briefly shoehorn downsampling here maybe??
+  \end{itemize}
+\item
+  It will be interesting to bring up the idea that if a model is missing
+  a specific pairwise link but doing well overall then when does it
+  matter?
+
+  \begin{itemize}
+  \item
+    The fact that \emph{some} people are concerned about the taxonomic
+    resolution and cascading effects those might have on our
+    understanding of network structure (Pringle, 2020; Pringle \&
+    Hutchinson, 2020), but that puts us in a place where we are at risk
+    of losing our ability to distinguish the wood from the tree - are we
+    not (at least at times) concerned more with understanding ecosystem
+    level processes than with needing to understand things
+    \emph{perfectly} at the species level.
   \item
     I don't think these `rare'/nuanced links (e.g.~carnivorous hippos)
     are going to rock the boat when we think about networks at the
     structural level.
   \end{itemize}
-\item
-  In certain situations structure is `enough' but there may be use cases
-  where we are really interested in the node-level interactions
-  \emph{i.e.,} species identity is a thing we care about and need to be
-  able to retrieve specific interactions at specific nodes correctly.
-\item
-  What is the purpose of generating a network? Is it an element of a
-  bigger question we are asking, \emph{e.g.,} I want to generate a
-  series of networks to do some extinction simulations/bioenergetic
-  stuff OR are we looking for a `final product' network that is relevant
-  to a specific location? (this can still be broad in geographic scope).
 \end{itemize}
-
-Interestingly Williams \& Martinez (2008) also explicitly talk about
-\emph{structural} food-web models in their introduction\ldots{} so how I
-see it that means that there has always been this inherent
-acknowledgement that models are functioning at a specific `network
-level'.
 
 \begin{quote}
 ``The resolution of food-web data is demonic because it can radically
@@ -868,35 +890,20 @@ connectance and since that scales with species richness anyway your
 final proportion will probably still remain the same\ldots{}
 \end{quote}
 
-\begin{quote}
-``It makes no sense to describe the interaction structure of nodes which
-in themselves are poorly defined.'' --- Roslin et al.~(2013, p.~2)
-\end{quote}
-
 \begin{itemize}
 \item
   I think a big take home will (hopefully) be how different approaches
   do better in different situations and so you as an end user need to
   take this into consideration and pick accordingly. I think Petchey et
-  al. (2011) might have (and share) some thoughts on this (thanks
-  Andrew). I feel like I need to look at Berlow et al. (2008) but maybe
-  not exactly in this context but vaguely adjacent.
-\item
-  An interesting thing to also think about (and arguably it will be
-  addressed based on some of the other thoughts and ideas) is data
-  dependant and data independent `parametrisation' of the models\ldots{}
-\item
-  Why do interaction models do so badly at predicting structure? Nuance
-  of metaweb vs realisation but also time? At the core of it interaction
-  models are trained on existing interaction data; this is data that are
-  most likely closer to a metaweb than a local realisation even if they
-  are being inventoried at a small scale.
+  al. (2011) might have (and share) some thoughts on this. I feel like I
+  need to look at Berlow et al. (2008) but maybe not exactly in this
+  context but vaguely adjacent.
 
   \begin{itemize}
   \tightlist
   \item
     I think this is sort of the crux of the argument presented in
-    Brimacombe et al. (2024)
+    Brimacombe et al. (2024) as well.
   \end{itemize}
 \end{itemize}
 
@@ -908,9 +915,8 @@ reconstructed network structure.''} - Poisot (2023)
 
 \begin{itemize}
 \item
-  \emph{Do we need network models to predict interactions and
-  interaction models to predict structure?} (lets not think about that
-  too hard or I might just have to sit in silence for a while\ldots)
+  Do we need network models to predict interactions and interaction
+  models to predict structure?
 
   \begin{itemize}
   \item
@@ -924,18 +930,18 @@ reconstructed network structure.''} - Poisot (2023)
     presented by Becker et al. (2022)
   \end{itemize}
 \item
-  It will be interesting to bring up the idea that if a model is missing
-  a specific pairwise link but doing well at the structural level then
-  when does it matter?
-\item
   Close out with a call to action that we have models that predict
   networks very well and models that predict interactions very well but
   nothing that is doing well at predicting both - this is where we
   should be focusing our attention when it comes to furthering model
-  development.
+  development\ldots{}
 \end{itemize}
 
 \subsection{Downsampling}\label{downsampling}
+
+do we bring this up? this could be a box\ldots{} if we have the
+`finances' for it\ldots{} otherwise it should go to the outstanding
+questions fur sure
 
 \begin{itemize}
 \item
@@ -1008,8 +1014,10 @@ predicted as absent when it is absent) \\
 \item
   non-consumptive effects
 \item
-  can we develop a model that is both an topology generator as well as
-  an interaction predictor?
+  can we develop a model that is both a topology generator as well as an
+  interaction predictor?
+\item
+  how do we define the spatial and temporal `boundaries' of a network
 \end{itemize}
 
 \section*{References}\label{references}
@@ -1021,6 +1029,12 @@ predicted as absent when it is absent) \\
 Allesina, S., Alonso, D., \& Pascual, M. (2008). A {General Model} for
 {Food Web Structure}. \emph{Science}, \emph{320}(5876), 658--661.
 \url{https://doi.org/10.1126/science.1156269}
+
+\bibitem[\citeproctext]{ref-barberanUsingNetworkAnalysis2012}
+Barberán, A., Bates, S. T., Casamayor, E. O., \& Fierer, N. (2012).
+Using network analysis to explore co-occurrence patterns in soil
+microbial communities. \emph{The ISME Journal}, \emph{6}(2), 343--351.
+\url{https://doi.org/10.1038/ismej.2011.119}
 
 \bibitem[\citeproctext]{ref-beckerOptimisingPredictiveModels2022}
 Becker, D. J., Albery, G. F., Sjodin, A. R., Poisot, T., Bergner, L. M.,
