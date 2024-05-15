@@ -31,9 +31,14 @@ Eight. What are the data sources needed for each model.
 ```{r}
 #| include: false
 #| warning: false
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 library(gt)
 library(ggdendro)
+
+options(warn = -1)
+
+# this is the clustering code
+source("scripts/hierarchy_cluster.R")
 
 trait_tbl <-
   read.csv("data/traits_table.csv")  %>% 
@@ -120,48 +125,7 @@ trait_tbl %>%
 
 ## Visualisation
 
-Maybe we try some ordination based on this traits table?
-
-```{r}
-
-# transpose
- df <- as.data.frame(t(trait_tbl[,-c(1,2)]))
- colnames(df) <- pull(trait_tbl, trait)
- rownames(df) <- names(trait_tbl)[-c(1,2)]
-
-# make all NAs 0...
- df[is.na(df)] <- 0
-
-# Fitting Hierarchical clustering Model
-set.seed(66)  # Setting seed
-hc <- hclust(dist(df), method = "ave")
-hcdata <- dendro_data(hc, type = "rectangle")
-
-```
-
-new cell code for plotting because
-
-```{r}
-#| warning: false
-#| echo: false
-#| label: fig-dendo
-#| fig-cap: "Dendrogram of the trait table using a Hierarchical clustering model"
-
-ggplot() +
-  geom_segment(data = segment(hcdata), 
-               aes(x = x, y = y, xend = xend, yend = yend)
-  ) +
-  geom_text(data = label(hcdata), 
-            aes(x = x, y = y-0.1, label = label, hjust = 0), 
-            size = 3
-  ) +
-  coord_flip() +
-  scale_y_reverse(expand = c(0.2, 0)) +
-  theme_void()
-
-ggsave("../images/dendo.png")
-
-```
+![Dendrogram of the trait table using a hierarchical clustering model, This is based off of the traits table in SuppMat 2)](../images/dendo.png){#fig-dendro}
 
 ## References {.unnumbered}
 
