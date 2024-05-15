@@ -7,6 +7,11 @@ authors:
 abstract: |
   This notebook is an extended description of the different model families (and attempts to highlight the different features and what makes them unique). We also link to some explicit (canonical) examples.
 date: last-modified
+format:
+  preprint-pdf:
+    csl: https://www.zotero.org/styles/methods-in-ecology-and-evolution
+    formatting:
+      draft-format: true
 bibliography: ../references.bib
 ---
 
@@ -82,7 +87,7 @@ This group of families uses the co-occurrence patterns of species to presume tha
 
 ### Co-occurrence
 
- Trying to infer interactions from the co-occurrence patterns of species pairs within the community *e.g.,* the geographical lasso [@ohlmannMappingImprintBiotic2018]. This (for me) seems fundamentally flawed and @blanchetCooccurrenceNotEvidence2020 seems to agree with me at least a little bit.
+Trying to infer interactions from the co-occurrence patterns of species pairs within the community *e.g.,* the geographical lasso [@ohlmannMappingImprintBiotic2018]. This (for me) seems like a fundamentally flawed assumption to make and @blanchetCooccurrenceNotEvidence2020 seems to agree with me at least a little bit.
 
 ## References {.unnumbered}
 
