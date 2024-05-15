@@ -98,203 +98,22 @@ Based on @poisotGuidelinesPredictionSpecies2023: - Precision-Recall (PR-AUC) - p
 
 ## Visualising results
 
-Now it is time to visualise the data
-
 ```{r}
-#| include: false
-#| warning: false
-library(ggradar)
-library(patchwork)
-library(scales)
-suppressPackageStartupMessages(library(tidyverse))
 
-# download file from other repo
-download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/topology_summary.csv", "../notebooks/data/topology_models.csv")
-download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/mangal_summary.csv", "../notebooks/data/mangal_summary.csv")
-download.file("https://raw.githubusercontent.com/BecksLab/topology_generators/main/data/processed/nz_summary.csv", "../notebooks/data/nz_summary.csv")
+options(warn = -1)
 
+# this is the clustering code
+source("scripts/benchmarking.R")
 
-df = full_join(rbind(read.csv("data/mangal_summary.csv"),
-                     read.csv("data/nz_summary.csv")),
-                read.csv("data/topology_models.csv")) %>% 
-        filter(complexity != 0) %>% 
-        # to get the ratio
-        mutate(ratio = top/basal,
-                top = NULL,
-                basal = NULL,
-                ratio_mod = top_mod/basal_mod,
-                top_mod = NULL,
-                basal_mod = NULL) %>%
-        pivot_longer(
-            cols = c(complexity, distance, connectance, ratio, S1, S2, S4, S5), 
-            names_to = "real",
-            values_to = "real_val")  %>% 
-        pivot_longer(
-            cols = c(complexity_mod, distance_mod, connectance_mod, ratio_mod, S1_mod, S2_mod, S4_mod, S5_mod), 
-            names_to = "test",
-            values_to = "model_val")  %>% 
-        mutate(
-            real = str_extract(real, "[^_]*"),
-            test = str_extract(test, "[^_]*"))  %>% 
-        filter(real == test) %>%
-        ungroup() %>% 
-        filter(model_val != Inf)
 ```
 
 Lets start by summarising the 'raw' data as box plots just to see what it looks like before we try and do a more streamlines summary
 
-```{r}
-#| warning: false
-#| echo: false
-#| label: fig-boxplot
-#| fig-cap: "Boxplot looking at raw values for each measurement for each model. The horizontal line represents the true overall mean for each measurement"
-
-ggplot(df) +
-#  geom_jitter(aes(x = model,
-#                 y = model_val,
-#                 colour = model),
-#             alpha = 0.4,
-#             fill = "#ffffff00", 
-#             stroke = 0.2,
-#             width = 0.25,
-#             shape = 21) +
-    geom_boxplot(aes(x = model,
-                    y = model_val,
-                    colour = model),
-                fill = "#ffffff00") +
-    geom_hline(data = df  %>% 
-                        group_by(real)  %>% 
-                        reframe(mu_sim = mean(model_val, na.rm = TRUE)),
-                aes(yintercept = mu_sim),
-                alpha = 0.7) +
-    facet_wrap(vars(real),
-                scales = 'free') +
-    scale_size(guide = 'none') +
-    theme_classic() +
-    theme(panel.border = element_rect(colour = 'black',
-                                      fill = "#ffffff00"),
-            axis.text.x = element_blank(),
-            axis.ticks.x = element_blank())
-
-```
+![Boxplot](../images/boxplot.png){#fig-boxplot}
 
 Now we can look at the difference between the mean of the real network property and the simulated one. I had originally considered using the $Z$-score but it doesn't work well for the more 'deterministic' models (neutral and ADBM) because they effectively have a $\sigma$ of zero... so we are just looking at the difference between the real value and the mean predicted value for each network.
 
-```{r}
-#| warning: false
-#| echo: false
-#| label: fig-topology
-#| fig-cap: "Difference between real and model network property. S1 - S5 represent the different motif structures identified in @stoufferEvidenceExistenceRobust2007."
-
-ggplot(df %>% 
-        group_by(id, real, model)  %>% 
-        reframe(x_real = real_val,
-                mu_sim = mean(model_val, na.rm = TRUE),
-                sd_sim = sd(model_val, na.rm = TRUE)) %>%
-        mutate(z_score = (x_real-mu_sim)) %>%
-        distinct()) +
-    geom_vline(aes(xintercept = 0)) +
-    geom_histogram(aes(x = z_score,
-                    fill = model),
-                colour = "#ffffff00") +
-    facet_grid(rows = vars(model),
-                cols = vars(real),
-                scales = "free") +
-    scale_size(guide = 'none') +
-    coord_cartesian(expand = FALSE) +
-    theme_classic() +
-    theme(panel.border = element_rect(colour = 'black',
-                                      fill = "#ffffff00"))
-
-ggsave("../images/topology.png")
-
-```
-
-```{r}
-#| warning: false
-#| echo: false
-#| label: fig-spider
-#| fig-cap: "I was experimenting with radial plots... its not going well.. But in terms of what is currently happening the blue 'inner' circle represents a difference of zero between real and modelled value so ideally we would want the points touching the green circle..."
-
-
-df_radar <- 
-  df %>%
-  group_by(id, real, model)  %>% 
-        reframe(diff = real_val - model_val) %>%
-        distinct() %>% 
-        ungroup()  %>% 
-        group_by(real, model) %>%
-        mutate(diff = mean(diff)) %>%
-        select(real, model, diff) %>% 
-        distinct() %>% 
-        pivot_wider(names_from = real, 
-                    values_from = diff) %>%
-        ungroup() %>% 
-        mutate(across(-model, ~ rescale(.x, 
-                                        to = c(-1,1)))) %>% 
-        arrange(model)
-
-mod_grp = df_radar %>% distinct(model) %>% pull()
-col_mod = c("red", "blue", "yellow", "pink", "black", "orange", "green",
-            "purple", "aquamarine", "darkgreen", "deeppink")
-
-data <- vector('list', length(mod_grp))
-
-for (i in 1:length(mod_grp)) {
-  
-  data[[i]] = ggradar(df_radar %>% 
-                      filter(model == mod_grp[i]),
-               group.colours = col_mod[i],
-               values.radar = NA,
-               grid.min = -1,
-               grid.mid = 0,
-               grid.max = 1,
-               group.point.size = 1,
-               group.line.width = .5,
-               grid.label.size = 3,
-               plot.title = mod_grp[i],
-               axis.label.size = 0,
-               plot.legend = FALSE) +
-               theme(title = element_text(size = 8))
-  
-}
-
-p1 = ggradar(df_radar,
-             group.colours = col_mod[1:6],
-               grid.min = -1,
-               values.radar = NA,
-               grid.mid = 0,
-               grid.max = 1,
-               group.point.size = 0,
-               group.line.width = 1,
-               axis.label.size = 3)
-
-
-layout <- "
-ALLLK
-BLLLJ
-CLLLI
-DEFGH
-"
-
-data[[1]] + 
-  data[[2]] + 
-  data[[3]] +  
-  data[[4]] +
-  data[[5]] +
-  data[[6]] + 
-  data[[1]] +
-  data[[2]] + 
-  data[[3]] +
-  data[[4]] + 
-  data[[5]] +
-  p1 + 
-  plot_layout(design = layout,
-              guides = 'collect') & 
-  theme(legend.position = 'none',
-        legend.text=element_text(size = 4))
-
-```
+![Differences](../images/topology.png){#fig-topology}
 
 ## References {.unnumbered}
 
