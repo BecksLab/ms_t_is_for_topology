@@ -82,6 +82,8 @@ The reality is that feeding interactions between species are the result of the c
 ::: {#box-mechanisms .callout-note}
 ## Box 1 - Mechanisms that determine feeding links
 
+There are many ideas as to what are the underlying mechanisms that determine the links between species. The way one chooses to encode a network will most likely also be reflective of (or only be able to encapsulate) one or a few of the different mechanisms. There is probably even an argument to be had that depending on how we define a network we will probably expect some of the 'hypotheses' of the different mechanisms to hold. *e.g.,* I think most people will agree that the feasibility of interactions between specific species pairs is not random (there needs to be some sort of trait/form complementarity) but how/if they interact within the environment (*i.e.,* the realisation of the interactions) *might* as well be (also probably even more relevant if one thinks about/works with trophic species...)
+
 **Proximity**
 
 We are co-occurring in space and in time and thus we can interact [@barberanUsingNetworkAnalysis2012]
@@ -95,7 +97,7 @@ Our (respective and instantaneous) abundance in that time and space is going to 
 We have a set of 'traits' that means we can interact including:
 
 -   You as a prey item fit in my gob (I can eat you, ~~even if its small bites~~) \[ref\]
--   You as a prey item are energetically 'worth it' \[ref foraging ecology\]
+-   You as a prey item are energetically 'worth it' ~~and allowing me to hit all the right macros~~ \[ref foraging ecology\]
 -   As a predator I have the required traits that allow me to ~~kill~~ unalive and eat you [*sensu* forbidden links @jordanoSamplingNetworksEcological2016]
 -   As predator and prey we have been co-occurring for a long time and I have found ways to eat you (trying to capture the idea of evolutionary time)
 
