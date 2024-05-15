@@ -4,11 +4,11 @@ authors:
   - name: Tanya Strydom
     id: ts
     orcid: 0000-0001-6067-1349
+abstract: |
+  This notebook is an extended description of the different model families (and attempts to highlight the different features and what makes them unique). We also link to some explicit (canonical) examples.
 date: last-modified
 bibliography: ../references.bib
 ---
-
-This document provides a more in-depth overview of the different model families as well as linking to some explicit examples.
 
 ## Topology generators
 

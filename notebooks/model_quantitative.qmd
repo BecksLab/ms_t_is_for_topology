@@ -4,11 +4,13 @@ authors:
   - name: Tanya Strydom
     id: ts
     orcid: 0000-0001-6067-1349
+abstract: |
+  The purpose is to act as an 'extended data and methods' section as well as to further describe the benchmarking process in terms of which metrics we end up using etc.
 date: last-modified
 bibliography: ../references.bib
 ---
 
-This notebook is going to visualise and further describe the process of benchmarking the different model families. The core code used to download, clean, and summarise the different networks can be found at the following repository [BecksLab/topology_generators](https://github.com/BecksLab/topology_generators).
+The core code used to download, clean, and summarise the different networks can be found at the following repository [BecksLab/topology_generators](https://github.com/BecksLab/topology_generators).
 
 ## Specific models used
 
