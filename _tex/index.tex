@@ -233,7 +233,7 @@ methods}
 1%
 }%
 }
-\date{2024-05-16}
+\date{2024-05-17}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -406,20 +406,21 @@ represent an aggregation of interactions over time?).
 \subsection{How do we define a node?}\label{how-do-we-define-a-node}
 
 Although this may seem an elementary question in the context of food
-webs --- a node \emph{should} represent a species, the reality is that
-nodes can often represent an aggregation of different (taxonomic)
+webs --- a node \emph{should} represent a (taxonomic) species, the
+reality is that nodes can often represent an aggregation of different
 species - so called `trophic species' or segregation of species by life
 stages. Representing nodes as non-taxonomic species can be useful in
-certain context (Williams \& Martinez, 2000) and in cases where the
+certain contexts (Williams \& Martinez, 2000) and in cases where the
 adult and larval stages of a species have different diets it may make
-ecological sense (Clegg et al., 2018). It is thus not uncommon that
-networks often have nodes that represent both taxonomic and trophic
-species. Practical implications of how we are aggregating the nodes is
-that the resolution may not always be `pixel perfect' \emph{i.e.,} we
-may be unable to assess the co-extinction risk of a species pair,
-however there is value in having nodes that represent an aggregation of
-species, as these convey a much more general overview of how the links
-are distributed within the community.
+ecological sense (Clegg et al., 2018) meaning that it is not uncommon
+that networks often have nodes that have different definitions of a
+`species' \emph{e.g.} consisting of both taxonomic and trophic species.
+Practical implications of how we are aggregating the nodes is that the
+resolution may not always be `pixel perfect' \emph{i.e.,} we may be
+unable to assess the co-extinction risk of a species pair, however there
+is value in having nodes that represent an aggregation of species, as
+these convey a much more general overview of how the links are
+distributed within the community.
 
 \subsection{What is meant by an edge?}\label{what-is-meant-by-an-edge}
 
@@ -432,38 +433,39 @@ specify links will influence the resulting structure of the network -
 and the inferences we will make thereof. For example taking a food web
 that consists of links representing \emph{potential} feeding links
 between species will be meaningless if you are interested in
-understanding the flow of energy through the system as the links within
-the network are over connected. In addition to the various ways of
-defining the links between species pairs there are also a myriad of ways
-in which the links themselves can be quantified. Links between species
-are often treated as being present or absent (\emph{i.e.,} binary) but
-it is also possible to use probabilities (which quantifies how likely an
-interaction is to occur, Poisot, Cirtwill, et al., 2016) or continuous
-measurements (which quantifies the strength of of an interaction, Berlow
-et al., 2004). Moving away from a purely binary way of representing
-allows us to quantify a level of (un)certainty of our knowledge of
-interactions (\emph{i.e.,} moving from being able to say are they
-occurring to how likely they are to be occurring) does add an additional
-level of `complexity' to the construction and interpretation of networks
-it ultimately allows us to capture more information at different scales
-(Banville, in prep).
+understanding \emph{e.g.,} the flow of energy through the system as the
+links within the network are over overrepresented. In addition to the
+various ways of defining the links between species pairs there are also
+a myriad of ways in which the links themselves can be quantified. Links
+between species are often treated as being present or absent
+(\emph{i.e.,} binary) but it is also possible to use probabilities
+(which quantifies how likely an interaction is to occur, Poisot,
+Cirtwill, et al., 2016) or continuous measurements (which quantifies the
+strength of of an interaction, Berlow et al., 2004). Moving away from a
+purely binary way of representing allows us to quantify a level of
+(un)certainty of our knowledge of interactions (\emph{i.e.,} moving from
+being able to ask if are they occurring to quantifying how likely they
+are to occur) does add an additional level of `complexity' to the
+construction and interpretation of networks, but ultimately it allows us
+to capture more information at different scales (Banville, in prep).
 
 \subsection{Putting the parts together; what does it
 mean?}\label{putting-the-parts-together-what-does-it-mean}
 
-The ingredients one thus uses to construct networks from nodes and edges
-generates a unique representation of mechanism (see Box 1 - Mechanisms
-that determine feeding links) that allow inference and reasoning about
-the structure, aspects of dynamics (e.g.~stability), and potentially the
-function of communities (e.g.~flux). It is thus beneficial to keep in
-mind that in the process of `codifying' a network one is already
-embedding some sort of hypothesis as to the nature of the feeding links
-between species (Brimacombe et al., 2023; Proulx et al., 2005). Here it
-may be meaningful to contextualise the different `types' of food webs
-within the larger research programmes (or even practical needs) that
-have been driving the construction of them.
+The ingredients one uses to construct networks from nodes and edges
+generates a unique representation of the mechanisms (see Box 1 -
+Mechanisms that determine feeding links) that allow inference and
+reasoning about the structure, aspects of dynamics (\emph{e.g.,}
+stability), and potentially the function of communities (\emph{e.g.,}
+flux). It is thus beneficial to keep in mind that in the process of
+`codifying' a network one is already embedding some sort of hypothesis
+as to the nature of the feeding links between species (Brimacombe et
+al., 2023; Proulx et al., 2005). Here it may be meaningful to
+contextualise the different `types' of food webs within the larger
+research programmes (or even practical needs) that have been driving the
+construction of them.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Mechanisms that determine feeding links}, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, opacitybacktitle=0.6, rightrule=.15mm, breakable, bottomrule=.15mm, coltitle=black, opacityback=0, toprule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, leftrule=.75mm, colback=white, titlerule=0mm, breakable, arc=.35mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Mechanisms that determine feeding links}, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, toptitle=1mm, left=2mm]
 
 There are many ideas as to what are the underlying mechanisms that
 determine the links between species. The way one chooses to encode a
@@ -528,26 +530,27 @@ We are therefore we interact. This is random.
 As discussed in Section~\ref{sec-network-anatomy} there are many ways to
 define a food web, meaning that there are equally as many reasons one
 might be interested in predicting a food web. However we may think of
-two primary drivers for wanting to predict networks, namely an interest
-in generating a set of ecologically plausible networks (\emph{i.e.,}
-being able to describe networks using a model) or being able to
-construct a network that has location specific, `realised' interactions
-for a specific species community (\emph{i.e.,} being able to
-predict/infer the interactions between species). Of course these two
-categories are not distinct, mutually exclusive, groups but can rather
-be viewed as operating on a continuum ranging from a need for generality
-(\emph{i.e.,} creating a network that, when taken in aggregate, the
-distribution of links (interactions) between nodes (species) are
-ecologically plausible) to a need for specificity (\emph{i.e.,}
-local-level predictions between specific species pairs). Although the
-ability to predict `real-world' interactions (and the resulting food
-webs) can have more intuitive `real world' applications \emph{e.g.,}
-being able to `recover' food webs that have since gone extinct (Dunne et
-al., 2008; Yeakel et al., 2014), using pairwise interactions to
-understand species distributions (Pollock et al., 2014) or even
-co-extinction risk (Dunn et al., 2009), a more structural approach to
-network construction affords one an opportunity to interrogate some of
-the more high-level mechanisms that are structuring networks (Box 1).
+two primary drivers for wanting to predict networks (Panel B
+Figure~\ref{fig-concept}), namely an interest in generating a set of
+ecologically plausible networks (\emph{i.e.,} being able to describe
+networks using a model) or being able to recover (predict) location
+specific, `realised', interactions for a specific species community
+(\emph{i.e.,} being able to predict/infer the interactions between
+species). Of course these two categories are not distinct, mutually
+exclusive, groups but can rather be viewed as operating on a continuum
+ranging from a need for generality (\emph{i.e.,} creating a network
+that, when taken in aggregate, the distribution of links (interactions)
+between nodes (species) are ecologically plausible) to a need for
+specificity (\emph{i.e.,} local-level predictions between specific
+species pairs). Although the ability to predict `real-world'
+interactions (and the resulting food webs) can have more intuitive `real
+world' applications \emph{e.g.,} being able to `recover' food webs that
+have since gone extinct (Dunne et al., 2008; Yeakel et al., 2014), using
+pairwise interactions to understand species distributions (Pollock et
+al., 2014) or even co-extinction risk (Dunn et al., 2009), a more
+structural approach to network construction affords one an opportunity
+to interrogate some of the more high-level mechanisms that are
+structuring networks (Box 1).
 
 It is perhaps more important that when one is talking about `why' they
 want to predict networks to articulate exactly what anatomical part of
@@ -558,39 +561,48 @@ the food web we are interested in scrutinising.
 Selecting a model for the task of network prediction should come down to
 two things; what \emph{aspect} of a food web one is interested in
 predicting, and what data are available, necessary, and sufficient. As
-shown in panel B of Figure~\ref{fig-concept} the models that are used to
-predict a food web tend to focus on only predicting the structure of a
-network (a \textbf{topology generator}) or the interactions for a given
-species pool (an \textbf{interaction predictor}). Although it is
-possible to construct a food web given a set of interactions interaction
-predictors themselves lack any sort of parametrisation of the network
-structure and so the resulting network is a poor reflection of the
-actual network structure (Caron et al., 2024). Models themselves are a
-reflection of the different goals and intentions of the research program
-from which they are developed and are often `described' by a specific
-mechanism that will determine the resulting structure or interactions
-(Box 1). Models such as the niche (Williams \& Martinez, 2000) or
-cascade (Cohen et al., 1990) were developed with the intent of being
-used to understand the \emph{structural} aspects of food webs,
-specifically how links are distributed amongst species in the community,
-whereas bayesian (Cirtwill et al., 2019) or trait hierarchy (Shaw et
-al., 2024) models have been developed on the basis that the traits of a
-species are the underlying mechanism in determining the feasibility of
-interactions (\emph{i.e.,} species \(a\) has the capacity to eat species
-\(b\)). Along with predicting different anatomical parts of a food web
-the different models have varying degrees of data that are needed to
-`parametrise' the network. Once these two limitations are assessed and
-addressed it is then possible to select the model (or model family) that
-will best be able to capture food web feature that the researcher is
-most interested in (see Box 2 - Assessing model outputs). It is thus
-clear that (realistically) there will probably never be a `best fit'
-tool that is able to construct a food web that will span the entire
-range of needs, and rather the responsibility lies with the researcher
-to be aware of not only the underlying philosophy of the specific
-toolset (as this could have knock-on effects when using those networks
-for downstream analyses/simulations; pers. comms. Beckerman, 2024), but
-also how well the tool is able to retrieve the specific network or
-interaction properties that is of interest.
+shown in panel B of Figure~\ref{fig-concept} the interest in a network
+is (usually) at either the `structural' or `interaction' level and the
+development of models for the task of network prediction often focus on
+high fidelity (performance) at one of these scales. With this in mind it
+is beneficial to think of the different model families relative to these
+two different goals; here we refer to models that are used to predict
+the structure of a network as \textbf{topology generators} and models
+developed to infer the interactions for a given species pool as
+\textbf{interaction predictors}. It is meaningful to make this
+distinction because although it is possible to construct a food web
+given using an \emph{interaction predictor} the models themselves lack
+any sort of parametrisation of the network structure and so the
+resulting network is a poor reflection of the actual network structure
+(Caron et al., 2024). This is primarily because \emph{interaction
+predictors} are models that evaluate the feasibility of an interaction
+between species pairs and not in the context of feasibility at the
+community level. Models themselves are a reflection of the different
+goals and intentions of the research program from which they are
+developed and are often `described' by a specific mechanism that will
+determine the resulting structure or interactions (Box 1). Models such
+as the niche (Williams \& Martinez, 2000) or cascade (Cohen et al.,
+1990) were developed with the intent of being used to understand the
+\emph{structural} aspects of food webs, specifically how links are
+distributed amongst species in the community, whereas bayesian (Cirtwill
+et al., 2019) or trait hierarchy (Shaw et al., 2024) models have been
+developed on the basis that the traits of a species are the underlying
+mechanism in determining the feasibility of interactions (\emph{i.e.,}
+species \(a\) has the capacity to eat species \(b\)). Along with
+predicting different anatomical parts of a food web the different models
+have varying degrees of data that are needed to `parametrise' the
+network. Once these two limitations are assessed and addressed it is
+then possible to select the model (or model family) that will best be
+able to capture food web feature that the researcher is most interested
+in (see Box 2 - Assessing model outputs). It is thus clear that
+(realistically) there will probably never be a `best fit' tool that is
+able to construct a food web that will span the entire range of needs,
+and rather the responsibility lies with the researcher to be aware of
+not only the underlying philosophy of the specific toolset (as this
+could have knock-on effects when using those networks for downstream
+analyses/simulations; pers. comms. Beckerman, 2024), but also how well
+the tool is able to retrieve the specific network or interaction
+properties that is of interest.
 
 \begin{quote}
 In order for a model to formalise a `complete' food web it is necessary
@@ -728,7 +740,7 @@ SuppMat 2)}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, opacitybacktitle=0.6, rightrule=.15mm, breakable, bottomrule=.15mm, coltitle=black, opacityback=0, toprule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, leftrule=.75mm, colback=white, titlerule=0mm, breakable, arc=.35mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, toptitle=1mm, left=2mm]
 
 Although understanding the underlying philosophy of the different model
 families is beneficial it is also important to understand in what
