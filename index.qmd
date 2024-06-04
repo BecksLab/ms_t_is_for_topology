@@ -204,6 +204,10 @@ Also need to take into consideration inherent constraints that the model imposes
 
 -   Close out with a call to action that we have models that predict networks very well and models that predict interactions very well but nothing that is doing well at predicting both - this is where we should be focusing our attention when it comes to furthering model development...
 
+-   Do we expect there to be differences when thinking about unipartite vs bipartite networks? Is there underlying ecology/theory that would assume that different mechanisms (and thus models) are relevant in these two 'systems'.
+
+    -   The @terryFindingMissingLinks2020 looks at some methods but is specifically looking at a bipartite world...
+
 ### Downsampling
 
 do we bring this up? this could be a box... if we have the 'finances' for it... otherwise it should go to the outstanding questions fur sure
