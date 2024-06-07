@@ -206,7 +206,7 @@ Also need to take into consideration inherent constraints that the model imposes
 
 -   Do we expect there to be differences when thinking about unipartite vs bipartite networks? Is there underlying ecology/theory that would assume that different mechanisms (and thus models) are relevant in these two 'systems'.
 
-    -   The @terryFindingMissingLinks2020 looks at some methods but is specifically looking at a bipartite world...
+    -   The @terryFindingMissingLinks2020 paper looks at some methods but is specifically looking at a bipartite world...
 
 ### Downsampling
 

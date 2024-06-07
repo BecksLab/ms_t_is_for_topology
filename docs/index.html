@@ -10,7 +10,7 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-06-04">
+<meta name="dcterms.date" content="2024-06-06">
 <meta name="keywords" content="food web, network construction, scientific ignorance">
 
 <title>Navigating food web prediction; assumptions, rationale, and methods</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-06-04">
-<meta name="citation_cover_date" content="2024-06-04">
+<meta name="citation_publication_date" content="2024-06-06">
+<meta name="citation_cover_date" content="2024-06-06">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-06-04">
+<meta name="citation_online_date" content="2024-06-06">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="TREE (one can dream...)">
 <meta name="citation_reference" content="citation_title=A novel method for predicting ecological interactions with an unsupervised machine learning algorithm;,citation_abstract=This gap in knowledge regarding ecological interactions has prompted the development of various predictive approaches. Traditionally, ecological interactions have been inferred using traits. However, the lack of trait information for numerous organisms necessitates using phylogenetic data and statistical insights from interaction matrices for prediction. Previous studies have overlooked the validation of model-predicted interactions. This study used a novel method in predicting ecological interactions using a self-organizing map (SOM), an unsupervised machine learning algorithm. The SOM learns from the input interaction matrix by grouping the nodes into output layers based on their interactions. Subsequently, the trained model predicts the interactions as scores. To distinguish between interactions and non-interactions, we employed F1 score maximization, setting scores above a specific threshold as interactions and the remainder as non-interactions. We applied this method to three unipartite metawebs and one bipartite metaweb and subsequently validated the predicted interactions using two innovative approaches: taxonomic and interaction recovery validation. Our method exhibited outstanding predictive performance, particularly for large networks. Various binary classification performance indicators, including F1 score (0.84–0.97) and accuracy (0.97–0.99), indicated high performance. Moreover, the method generated minimal predicted interactions, signifying low noise in the predictions, particularly for large networks. Taxonomic validation excels in metawebs with a connectance &amp;amp;amp;gt;0.1 but performs poorly in metawebs with very low connectance. In contrast, interaction recovery was most effective in larger metawebs. Our proposed method excels at making highly accurate predictions of ecological interactions with minimal noise, solely utilizing input interaction data without relying on traits or phylogenetic information regarding interacting nodes. These predictions are particularly precise for large networks, underscoring their potential to address knowledge gaps in emerging extensive metawebs. Notably, taxonomic validation and interaction recovery methods are sensitive to connectance and network size, respectively, suggesting prospects for developing robust interaction validation methods.;,citation_author=Sagar Adhurya;,citation_author=Young-Seuk Park;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=n/a;,citation_doi=10.1111/2041-210X.14358;,citation_issn=2041-210X;,citation_volume=n/a;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
@@ -298,7 +298,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">June 4, 2024</p>
+              <p class="date">June 6, 2024</p>
             </div>
           </div>
           
@@ -367,7 +367,7 @@ window.Quarto = {
 <div id="fig-concept" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept_2.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/concept_2.png" class="img-fluid figure-img"></a>
+<a href="images/concept_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/concept_2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Panel <strong>A</strong> shows the many ways in which a food web can be defined and described at the node, edge, and even network level. Panel <strong>B</strong> (will) shows how the way in which we predict networks also limited and often focuses only only predicting the structure of a network (the final networks is parametrised by the expected structure of the network) or the interactions between species (the final network is determined by the behaviour of the nodes). These different models also encode different philosophies/hypotheses not only as to what determines how a network will look like but also how the final network itself is encoded <em>i.e.,</em> its anatomy. (<em>aside:</em> there is the potential to either try and visually summarise how the different model families define a network (so repeating the motifs used in the ANATOMY panel) alternatively it would be cool to try and have a panel C that tries to quantify the different ‘data ingredients’ you would need to try and construct a network, this would probably be very visually overwhelming though…)
@@ -574,7 +574,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <div id="fig-dendro" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-dendro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/dendo.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="images/dendo.png" class="img-fluid figure-img"></a>
+<a href="images/dendo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="images/dendo.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dendro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Dendrogram of the trait table using a hierarchical clustering model, This is based off of the traits table in SuppMat 2)
@@ -597,7 +597,7 @@ Box 2 - Assessing model outputs
 <div id="fig-topology" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/topology.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="images/topology.png" class="img-fluid figure-img"></a>
+<a href="images/topology.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="images/topology.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Difference between real and model network property. S1 - S5 represent the different motif structures identified in <span class="citation" data-cites="stoufferEvidenceExistenceRobust2007">Stouffer et al. (<a href="#ref-stoufferEvidenceExistenceRobust2007" role="doc-biblioref">2007</a>)</span> which are S1: Number of linear chains, S2: Number of omnivory motifs, S4: Number of apparent competition motifs, and S5: Number of direct competition motifs
@@ -654,7 +654,7 @@ Figure&nbsp;3: Difference between real and model network property. S1 - S5 repre
 <li><p>Close out with a call to action that we have models that predict networks very well and models that predict interactions very well but nothing that is doing well at predicting both - this is where we should be focusing our attention when it comes to furthering model development…</p></li>
 <li><p>Do we expect there to be differences when thinking about unipartite vs bipartite networks? Is there underlying ecology/theory that would assume that different mechanisms (and thus models) are relevant in these two ‘systems’.</p>
 <ul>
-<li>The <span class="citation" data-cites="terryFindingMissingLinks2020">Terry and Lewis (<a href="#ref-terryFindingMissingLinks2020" role="doc-biblioref">2020</a>)</span> looks at some methods but is specifically looking at a bipartite world…</li>
+<li>The <span class="citation" data-cites="terryFindingMissingLinks2020">Terry and Lewis (<a href="#ref-terryFindingMissingLinks2020" role="doc-biblioref">2020</a>)</span> paper looks at some methods but is specifically looking at a bipartite world…</li>
 </ul></li>
 </ul>
 <section id="downsampling" class="level3" data-number="4.1">
@@ -897,14 +897,14 @@ Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. K
     and P. Beckerman, Andrew},
   title = {Navigating Food Web Prediction; Assumptions, Rationale, and
     Methods},
-  date = {2024-06-04},
+  date = {2024-06-06},
   langid = {en},
   abstract = {TODO}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-strydom2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
 Beckerman. 2024. <span>“Navigating Food Web Prediction; Assumptions,
-Rationale, and Methods.”</span> TREE (One Can Dream...). June 4, 2024.
+Rationale, and Methods.”</span> TREE (One Can Dream...). June 6, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1295,7 +1295,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
