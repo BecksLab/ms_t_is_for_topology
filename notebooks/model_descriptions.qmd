@@ -89,6 +89,8 @@ This group of families uses the co-occurrence patterns of species to presume tha
 
 Trying to infer interactions from the co-occurrence patterns of species pairs within the community *e.g.,* the geographical lasso [@ohlmannMappingImprintBiotic2018]. This (for me) seems like a fundamentally flawed assumption to make and @blanchetCooccurrenceNotEvidence2020 seems to agree with me at least a little bit.
 
+@ovaskainenUsingLatentVariable2016
+
 ## References {.unnumbered}
 
 ::: {#refs}
