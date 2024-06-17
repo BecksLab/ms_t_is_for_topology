@@ -96,7 +96,7 @@ Although the assumption that because two species are co-occurring it must mean t
 
 **2. Mechanistic feasibility**
 
-This is based on the idea of forbidden links introduced by @jordanoSamplingNetworksEcological2016, specifically that there must be some degree of *trait complementarity* that allows a predator to chase, capture, kill, and consume, its prey. This is probably the level that the idea of a metaweb [@dunneNetworkStructureFood2006] is most applicable. Within the network prediction 'field' this is perhaps the most developed space. Predictive models run the gamut including mechanistic models [@morales-castillaInferringBioticInteractions2015], binary classifiers [@pichlerMachineLearningAlgorithms2020], and graph embedding [@strydomGraphEmbeddingTransfer2023].
+This is based on the idea of forbidden links introduced by @jordanoSamplingNetworksEcological2016, specifically that there must be some degree of *trait complementarity* that allows a predator to chase, capture, kill, and consume, its prey. This is probably the level that the idea of a metaweb [@dunneNetworkStructureFood2006] is most applicable. Within the network prediction 'field' this is perhaps the most developed space. Predictive models run the gamut including mechanistic models [@morales-castillaInferringBioticInteractions2015], binary classifiers [@pichlerMachineLearningAlgorithms2020], and graph embedding [@strydomGraphEmbeddingTransfer2023]. It is probably worth having a brief interlude here to be really clear that just because an interaction is probabilistic it does not make it quantitative - it is still binary but at least we do have some way of saying how confident we are in the feasibility of an interaction - not how likely it is to occur - per se.
 
 **3. Likelihood of meeting (there must be a better word)**
 
@@ -113,6 +113,10 @@ Now we move into the 'prey choice' space - specifically the cost-benefit side of
 Builds primarily on the ideas presented in @cherifEnvironmentRescueCan, which is essentially a take on movement ecology? What it boils down to is being able to quantify the cost of movement *i.e.,* the physical constraints that the environment imposes on a species... 
 
 > The role of the environment: Although we only explicitly take the environment into consideration in the final 'rule' the role of the environment (at least from a modelling perspective) is perhaps also meaningful at the first step (we expect environmental filtering to be the main determinant of species distributions in the absence of species interactions) I think the way in which we perceive the environment at the extreme of these two ends of the spectrum comes down to a question of scale?? Or at least the degree of information that we need at need at these two points is very different. RE occurrence it is a case of survival and for movement it is a case of performance??
+
+### Notes on the 'ensemble' approach
+
+IDK I just really want to articulate that we can't feasibly be functioning at a 'level 5' at all times because of other real world constraints such as the fact that the amount of data one needs is simply not going to be feasible in most cases... Also that you (probably) need to go through the whole step-wise process because (at least for now) models at the 'higher' levels are overlooking some of the 'lower' levels *e.g.,* the the ADBM model (in its current form) has no way of accounting for forbidden links and so it is probably going to end up predicting some links that are strictly speaking 'forbidden' at the trait level (I guess this kind of thinking will probably open the door for talking about benchmarking should we still want to keep the  model comparison angle).
 
 :::
 
