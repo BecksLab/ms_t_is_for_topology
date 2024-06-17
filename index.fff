@@ -26,6 +26,36 @@ visually overwhelming though\ldots)}
 \end{figure}
 \efloatseparator
  
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{images/concept_2.png}
+
+}
+
+\caption{\label{fig-feasibility}A schematic overview of the
+feasibility-reality axis that defines species interactions (and the
+resulting networks), specifically in the context of the underling
+mechanisms that determine the `rules of engagement'. As one moves from
+feasibility towards reality the way in which the edges between nodes are
+defined (but not necessarily quantified) begins to shift from
+representing the \emph{possibility} of an interaction occurring between
+two species to the quantification of \emph{strength} of the interaction.
+This is because as we move down this axis we begin to incorporate
+additional `rules' that allow us to begin approaching a much more
+resolved reality of the interactions for a specific location until we
+reach a point where we are able to encapsulate the energetics of the
+system. Moving from the most general to the most specific it goes: 1.)
+the co-occurrence of species, 2.) the mechanistic feasibility of the
+interaction, 3.) the likelihood of two potentially interacting species
+to meet, 4.) the energetic `cost' of interaction (building on the
+feeding ecology framework) and 5.) the environmental cost of searching
+for and capturing prey (building on the movement ecology framework).}
+
+\end{figure}
+\efloatseparator
+ 
 \begin{figure}
 
 \centering{

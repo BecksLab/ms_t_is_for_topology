@@ -80,34 +80,40 @@ As discussed earlier there are many ways to define the links between species ---
 The ingredients one uses to construct networks from nodes and edges generates a unique representation of the mechanisms (see Box 1 - Mechanisms that determine feeding links) that allow inference and reasoning about the structure, aspects of dynamics (*e.g.,* stability), and potentially the function of communities (*e.g.,* flux). It is thus beneficial to keep in mind that in the process of 'codifying' a network one is already embedding some sort of hypothesis as to the nature of the feeding links between species [@proulxNetworkThinkingEcology2005; @brimacombeShortcomingsReusingSpecies2023]. Here it may be meaningful to contextualise the different 'types' of food webs within the larger research programmes (or even practical needs) that have been driving the construction of them.
 
 ::: {#box-mechanisms .callout-note}
-## Box 1 - Mechanisms that determine feeding links
+## Box 1 - Moving between the feasibility and reality of interactions
 
-There are many ideas as to what are the underlying mechanisms that determine the links between species. The way one chooses to encode a network will most likely also be reflective of (or only be able to encapsulate) one or a few of the different mechanisms. There is probably even an argument to be had that depending on how we define a network we will probably expect some of the 'hypotheses' of the different mechanisms to hold. *e.g.,* I think most people will agree that the feasibility of interactions between specific species pairs is not random (there needs to be some sort of trait/form complementarity) but how/if they interact within the environment (*i.e.,* the realisation of the interactions) *might* as well be (also probably even more relevant if one thinks about/works with trophic species...)
+Before thinking about the ways in which we can predict networks it is perhaps meaningful to take a step back and think about the different criteria that must be met in order for an interaction to be able to occur between two species, specifically thinking of this in terms of distinguishing between the feasibility or realisation of an interaction and how these are determined (and defined by) different 'rules'/hierarchical mechanisms. If we look at this feasibility-reality continuum (@fig-feasibility) it is clear how the different predictive approaches usually encapsulate one specific 'rule' and fail to account for the rest. This is not to say that this shortcoming should be viewed as a 'bug' but rather a 'feature' of the field as it allows one to engage with, as well as construct networks at different scales, which is particularly valuable if one take into consideration the considerable 'data cost' of predicting well resolved, realised networks in comparison to constructing high-level metawebs. However, it is important that there is an awareness and acknowledgement of where within this feasibility-reality one is working at and how this will impact and limit the contexts in which the resulting network can be used and applied within.
 
-**Proximity**
+![A schematic overview of the feasibility-reality axis that defines species interactions (and the resulting networks), specifically in the context of the underling mechanisms that determine the 'rules of engagement'. As one moves from feasibility towards reality the way in which the edges between nodes are defined (but not necessarily quantified) begins to shift from representing the *possibility* of an interaction occurring between two species to the quantification of *strength* of the interaction. This is because as we move down this axis we begin to incorporate additional 'rules' that allow us to begin approaching a much more resolved reality of the interactions for a specific location until we reach a point where we are able to encapsulate the energetics of the system. Moving from the most general to the most specific it goes: 1.) the co-occurrence of species, 2.) the mechanistic feasibility of the interaction, 3.) the likelihood of two potentially interacting species to meet, 4.) the energetic 'cost' of interaction (building on the feeding ecology framework) and 5.) the environmental cost of searching for and capturing prey (building on the movement ecology framework).](images/concept_2.png){#fig-feasibility}
 
-We are co-occurring in space and in time and thus we can interact [@barberanUsingNetworkAnalysis2012]
+> Aside: this is maybe not the IRL mechanisms (e.g. we species must co-occur, then they must meet, then we can determine if the interaction will happen) but it makes modelling sense? IDK... anyway we can shuffles things around
 
-**Mass-effect**
+### Mechanisms
 
-Our (respective and instantaneous) abundance in that time and space is going to influence how we interact. *Sensu* @hubbellUnifiedNeutralTheory2001 Neutral Theory
+**1. Co-occurrence**
 
-**Complementarity**
+Although the assumption that because two species are co-occurring it must mean that they are interacting is presumptive [@blanchetCooccurrenceNotEvidence2020] it is of course impossible for two species to interact (in terms of feeding links) if they are not co-occurring We are co-occurring and so it represents the *basic* requirement for the interaction between a species pair
 
-We have a set of 'traits' that means we can interact including:
+**2. Mechanistic feasibility**
 
--   You as a prey item fit in my gob (I can eat you, ~~even if its small bites~~) \[ref\]
--   You as a prey item are energetically 'worth it' ~~and allowing me to hit all the right macros~~ \[ref foraging ecology\]
--   As a predator I have the required traits that allow me to ~~kill~~ unalive and eat you [*sensu* forbidden links @jordanoSamplingNetworksEcological2016]
--   As predator and prey we have been co-occurring for a long time and I have found ways to eat you (trying to capture the idea of evolutionary time)
+This is based on the idea of forbidden links introduced by @jordanoSamplingNetworksEcological2016, specifically that there must be some degree of *trait complementarity* that allows a predator to chase, capture, kill, and consume, its prey. This is probably the level that the idea of a metaweb [@dunneNetworkStructureFood2006] is most applicable. Within the network prediction 'field' this is perhaps the most developed space. Predictive models run the gamut including mechanistic models [@morales-castillaInferringBioticInteractions2015], binary classifiers [@pichlerMachineLearningAlgorithms2020], and graph embedding [@strydomGraphEmbeddingTransfer2023].
 
-**'Structural'**
+**3. Likelihood of meeting (there must be a better word)**
 
-The 'energy budget' for the environment means that only $y$ links are possible between us $x$ number of species and so our interactions reflect that. Or is it more the only way we can all access the energy resource is by arranging ourselves into trophic units...
+This is probably the point where we start to shift from a presence/absence way of defining interactions and start moving into the 'qualitative'/weighted space - we are not 'determining' if the interaction is feasible but rather making an assumption on prey selection based on species likelihood of 'meeting'.
 
-**None**
+> Not sure if there are models that 'only' consider abundance but it is rather more of a building block in some of the models that are more relevant to the next steps.
 
-We are therefore we interact. This is random.
+**4. Prey choice (energy cost-benefit)**
+
+Now we move into the 'prey choice' space - specifically the cost-benefit side of things that falls under feeding ecology. Examples of models [@beckermanForagingBiologyPredicts2006; @petcheySizeForagingFood2008]
+
+**5. Environmental 'energy budget'**
+
+Builds primarily on the ideas presented in @cherifEnvironmentRescueCan, which is essentially a take on movement ecology? What it boils down to is being able to quantify the cost of movement *i.e.,* the physical constraints that the environment imposes on a species... 
+
+> The role of the environment: Although we only explicitly take the environment into consideration in the final 'rule' the role of the environment (at least from a modelling perspective) is perhaps also meaningful at the first step (we expect environmental filtering to be the main determinant of species distributions in the absence of species interactions) I think the way in which we perceive the environment at the extreme of these two ends of the spectrum comes down to a question of scale?? Or at least the degree of information that we need at need at these two points is very different. RE occurrence it is a case of survival and for movement it is a case of performance??
+
 :::
 
 ## Why do we want to predict food webs? {#sec-network-why}
@@ -215,6 +221,10 @@ do we bring this up? this could be a box... if we have the 'finances' for it... 
 -   @dansereauSpatiallyExplicitPredictions2023
 
 -   "That being said, there is a compelling argument for the need to 'combine' these smaller functional units with larger spatial networks [@fortinNetworkEcologyDynamic2021] and that we should also start thinking about the interplay of time and space [@estayEditorialPatternsProcesses2023]. Although deciding exactly what measure might actually be driving differences between local networks and the regional metaweb might not be that simple [@saraviaEcologicalNetworkAssembly2022]."
+
+### Time
+
+We lack a clear agenda (and conceptualisation) as to what the appropriate level of aggregation is for a 'network'. Realistically most empirical networks are more aligned with 'feasibility networks' as opposed to 'realised networks' as they are often the result of some sort of aggregation of observations across time. This 'problem' is two-fold. Firstly we need to think about how this affects any sort of development of theory that sits closer to the 'realised network' side of the spectrum - how often are we trying to ask and answer questions about realised networks using feasible networks? The second is that this lack of 'direction' as to how we should define a network is (actually) probably one of the biggest barriers that is affecting the use of networks in applied settings...
 
 ## Glossary {.unnumbered}
 
