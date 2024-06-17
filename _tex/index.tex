@@ -38,13 +38,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\ifLuaTeX
-  \usepackage{luacolor}
-  \usepackage[soul]{lua-ul}
-\else
-  \usepackage{soul}
-  
-\fi
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
@@ -233,7 +226,7 @@ methods}
 1%
 }%
 }
-\date{2024-06-11}
+\date{2024-06-17}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -465,63 +458,126 @@ contextualise the different `types' of food webs within the larger
 research programmes (or even practical needs) that have been driving the
 construction of them.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, toptitle=1mm, opacityback=0, rightrule=.15mm, bottomrule=.15mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Mechanisms that determine feeding links}, coltitle=black, titlerule=0mm, breakable, bottomtitle=1mm, left=2mm, toprule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, breakable, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, arc=.35mm, toprule=.15mm, left=2mm, leftrule=.75mm, bottomtitle=1mm, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Moving between the feasibility and reality of interactions}, bottomrule=.15mm, opacitybacktitle=0.6, coltitle=black]
 
-There are many ideas as to what are the underlying mechanisms that
-determine the links between species. The way one chooses to encode a
-network will most likely also be reflective of (or only be able to
-encapsulate) one or a few of the different mechanisms. There is probably
-even an argument to be had that depending on how we define a network we
-will probably expect some of the `hypotheses' of the different
-mechanisms to hold. \emph{e.g.,} I think most people will agree that the
-feasibility of interactions between specific species pairs is not random
-(there needs to be some sort of trait/form complementarity) but how/if
-they interact within the environment (\emph{i.e.,} the realisation of
-the interactions) \emph{might} as well be (also probably even more
-relevant if one thinks about/works with trophic species\ldots)
+Before thinking about the ways in which we can predict networks it is
+perhaps meaningful to take a step back and think about the different
+criteria that must be met in order for an interaction to be able to
+occur between two species, specifically thinking of this in terms of
+distinguishing between the feasibility or realisation of an interaction
+and how these are determined (and defined by) different
+`rules'/hierarchical mechanisms. If we look at this feasibility-reality
+continuum (Figure~\ref{fig-feasibility}) it is clear how the different
+predictive approaches usually encapsulate one specific `rule' and fail
+to account for the rest. This is not to say that this shortcoming should
+be viewed as a `bug' but rather a `feature' of the field as it allows
+one to engage with, as well as construct networks at different scales,
+which is particularly valuable if one take into consideration the
+considerable `data cost' of predicting well resolved, realised networks
+in comparison to constructing high-level metawebs. However, it is
+important that there is an awareness and acknowledgement of where within
+this feasibility-reality one is working at and how this will impact and
+limit the contexts in which the resulting network can be used and
+applied within.
 
-\textbf{Proximity}
+\begin{figure}[H]
 
-We are co-occurring in space and in time and thus we can interact
-(Barberán et al., 2012)
+\centering{
 
-\textbf{Mass-effect}
+\includegraphics{images/concept_2.png}
 
-Our (respective and instantaneous) abundance in that time and space is
-going to influence how we interact. \emph{Sensu} Hubbell (2001) Neutral
-Theory
+}
 
-\textbf{Complementarity}
+\caption{\label{fig-feasibility}A schematic overview of the
+feasibility-reality axis that defines species interactions (and the
+resulting networks), specifically in the context of the underling
+mechanisms that determine the `rules of engagement'. As one moves from
+feasibility towards reality the way in which the edges between nodes are
+defined (but not necessarily quantified) begins to shift from
+representing the \emph{possibility} of an interaction occurring between
+two species to the quantification of \emph{strength} of the interaction.
+This is because as we move down this axis we begin to incorporate
+additional `rules' that allow us to begin approaching a much more
+resolved reality of the interactions for a specific location until we
+reach a point where we are able to encapsulate the energetics of the
+system. Moving from the most general to the most specific it goes: 1.)
+the co-occurrence of species, 2.) the mechanistic feasibility of the
+interaction, 3.) the likelihood of two potentially interacting species
+to meet, 4.) the energetic `cost' of interaction (building on the
+feeding ecology framework) and 5.) the environmental cost of searching
+for and capturing prey (building on the movement ecology framework).}
 
-We have a set of `traits' that means we can interact including:
+\end{figure}%
 
-\begin{itemize}
-\tightlist
-\item
-  You as a prey item fit in my gob (I can eat you, \st{even if its small
-  bites}) {[}ref{]}
-\item
-  You as a prey item are energetically `worth it' \st{and allowing me to
-  hit all the right macros} {[}ref foraging ecology{]}
-\item
-  As a predator I have the required traits that allow me to \st{kill}
-  unalive and eat you (\emph{sensu} forbidden links Jordano, 2016b)
-\item
-  As predator and prey we have been co-occurring for a long time and I
-  have found ways to eat you (trying to capture the idea of evolutionary
-  time)
-\end{itemize}
+\begin{quote}
+Aside: this is maybe not the IRL mechanisms (e.g.~we species must
+co-occur, then they must meet, then we can determine if the interaction
+will happen) but it makes modelling sense? IDK\ldots{} anyway we can
+shuffles things around
+\end{quote}
 
-\textbf{`Structural'}
+\subsection{Mechanisms}\label{mechanisms}
 
-The `energy budget' for the environment means that only \(y\) links are
-possible between us \(x\) number of species and so our interactions
-reflect that. Or is it more the only way we can all access the energy
-resource is by arranging ourselves into trophic units\ldots{}
+\textbf{1. Co-occurrence}
 
-\textbf{None}
+Although the assumption that because two species are co-occurring it
+must mean that they are interacting is presumptive (Blanchet et al.,
+2020) it is of course impossible for two species to interact (in terms
+of feeding links) if they are not co-occurring We are co-occurring and
+so it represents the \emph{basic} requirement for the interaction
+between a species pair
 
-We are therefore we interact. This is random.
+\textbf{2. Mechanistic feasibility}
+
+This is based on the idea of forbidden links introduced by Jordano
+(2016b), specifically that there must be some degree of \emph{trait
+complementarity} that allows a predator to chase, capture, kill, and
+consume, its prey. This is probably the level that the idea of a metaweb
+(Dunne, 2006) is most applicable. Within the network prediction `field'
+this is perhaps the most developed space. Predictive models run the
+gamut including mechanistic models (Morales-Castilla et al., 2015),
+binary classifiers (Pichler et al., 2020), and graph embedding (Strydom
+et al., 2023).
+
+\textbf{3. Likelihood of meeting (there must be a better word)}
+
+This is probably the point where we start to shift from a
+presence/absence way of defining interactions and start moving into the
+`qualitative'/weighted space - we are not `determining' if the
+interaction is feasible but rather making an assumption on prey
+selection based on species likelihood of `meeting'.
+
+\begin{quote}
+Not sure if there are models that `only' consider abundance but it is
+rather more of a building block in some of the models that are more
+relevant to the next steps.
+\end{quote}
+
+\textbf{4. Prey choice (energy cost-benefit)}
+
+Now we move into the `prey choice' space - specifically the cost-benefit
+side of things that falls under feeding ecology. Examples of models
+(Beckerman et al., 2006; Petchey et al., 2008)
+
+\textbf{5. Environmental `energy budget'}
+
+Builds primarily on the ideas presented in Cherif et al. (n.d.), which
+is essentially a take on movement ecology? What it boils down to is
+being able to quantify the cost of movement \emph{i.e.,} the physical
+constraints that the environment imposes on a species\ldots{}
+
+\begin{quote}
+The role of the environment: Although we only explicitly take the
+environment into consideration in the final `rule' the role of the
+environment (at least from a modelling perspective) is perhaps also
+meaningful at the first step (we expect environmental filtering to be
+the main determinant of species distributions in the absence of species
+interactions) I think the way in which we perceive the environment at
+the extreme of these two ends of the spectrum comes down to a question
+of scale?? Or at least the degree of information that we need at need at
+these two points is very different. RE occurrence it is a case of
+survival and for movement it is a case of performance??
+\end{quote}
 
 \end{tcolorbox}
 
@@ -741,7 +797,7 @@ SuppMat 2)}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, toptitle=1mm, opacityback=0, rightrule=.15mm, bottomrule=.15mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, coltitle=black, titlerule=0mm, breakable, bottomtitle=1mm, left=2mm, toprule=.15mm, leftrule=.75mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, breakable, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, arc=.35mm, toprule=.15mm, left=2mm, leftrule=.75mm, bottomtitle=1mm, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, bottomrule=.15mm, opacitybacktitle=0.6, coltitle=black]
 
 Although understanding the underlying philosophy of the different model
 families is beneficial it is also important to understand in what
@@ -976,6 +1032,21 @@ questions fur sure
   (Saravia et al., 2022).''
 \end{itemize}
 
+\subsection{Time}\label{time}
+
+We lack a clear agenda (and conceptualisation) as to what the
+appropriate level of aggregation is for a `network'. Realistically most
+empirical networks are more aligned with `feasibility networks' as
+opposed to `realised networks' as they are often the result of some sort
+of aggregation of observations across time. This `problem' is two-fold.
+Firstly we need to think about how this affects any sort of development
+of theory that sits closer to the `realised network' side of the
+spectrum - how often are we trying to ask and answer questions about
+realised networks using feasible networks? The second is that this lack
+of `direction' as to how we should define a network is (actually)
+probably one of the biggest barriers that is affecting the use of
+networks in applied settings\ldots{}
+
 \section*{Glossary}\label{glossary}
 \addcontentsline{toc}{section}{Glossary}
 
@@ -1050,12 +1121,6 @@ Allesina, S., Alonso, D., \& Pascual, M. (2008). A {General Model} for
 {Food Web Structure}. \emph{Science}, \emph{320}(5876), 658--661.
 \url{https://doi.org/10.1126/science.1156269}
 
-\bibitem[\citeproctext]{ref-barberanUsingNetworkAnalysis2012}
-Barberán, A., Bates, S. T., Casamayor, E. O., \& Fierer, N. (2012).
-Using network analysis to explore co-occurrence patterns in soil
-microbial communities. \emph{The ISME Journal}, \emph{6}(2), 343--351.
-\url{https://doi.org/10.1038/ismej.2011.119}
-
 \bibitem[\citeproctext]{ref-beckerOptimisingPredictiveModels2022}
 Becker, D. J., Albery, G. F., Sjodin, A. R., Poisot, T., Bergner, L. M.,
 Chen, B., Cohen, L. E., Dallas, T. A., Eskew, E. A., Fagre, A. C.,
@@ -1064,6 +1129,12 @@ Teeling, E. C., \& Carlson, C. J. (2022). Optimising predictive models
 to prioritise viral discovery in zoonotic reservoirs. \emph{The Lancet
 Microbe}, \emph{3}(8), e625--e637.
 \url{https://doi.org/10.1016/S2666-5247(21)00245-7}
+
+\bibitem[\citeproctext]{ref-beckermanForagingBiologyPredicts2006}
+Beckerman, A. P., Petchey, O. L., \& Warren, P. H. (2006). Foraging
+biology predicts food web complexity. \emph{Proceedings of the National
+Academy of Sciences}, \emph{103}(37), 13745--13749.
+\url{https://doi.org/10.1073/pnas.0603039103}
 
 \bibitem[\citeproctext]{ref-berlowGoldilocksFactorFood2008}
 Berlow, E. L., Brose, U., \& Martinez, N. D. (2008). The {``{Goldilocks}
@@ -1085,6 +1156,11 @@ Network-based restoration strategies maximize ecosystem recovery.
 \emph{Communications Biology}, \emph{6}(1), 1--10.
 \url{https://doi.org/10.1038/s42003-023-05622-3}
 
+\bibitem[\citeproctext]{ref-blanchetCooccurrenceNotEvidence2020}
+Blanchet, F. G., Cazelles, K., \& Gravel, D. (2020). Co-occurrence is
+not evidence of ecological interactions. \emph{Ecology Letters},
+\emph{23}(7), 1050--1063. \url{https://doi.org/10.1111/ele.13525}
+
 \bibitem[\citeproctext]{ref-brimacombeApplyingMethodIts2024}
 Brimacombe, C., Bodner, K., \& Fortin, M.-J. (2024). \emph{Applying a
 method before its proof-of-concept: {A} cautionary tale using inferred
@@ -1103,6 +1179,14 @@ Pollock, L. J. (2024). Trait-matching models predict pairwise
 interactions across regions, not food web properties. \emph{Global
 Ecology and Biogeography}, \emph{33}(4), e13807.
 \url{https://doi.org/10.1111/geb.13807}
+
+\bibitem[\citeproctext]{ref-cherifEnvironmentRescueCan}
+Cherif, M., Brose, U., Hirt, M. R., Ryser, R., Silve, V., Albert, G.,
+Arnott, R., Berti, E., Cirtwill, A., Dyer, A., Gauzens, B., Gupta, A.,
+Ho, H.-C., Portalier, S. M. J., Wain, D., \& Wootton, K. (n.d.). The
+environment to the rescue: Can physics help predict predator--prey
+interactions? \emph{Biological Reviews}, \emph{n/a}(n/a).
+\url{https://doi.org/10.1111/brv.13105}
 
 \bibitem[\citeproctext]{ref-cirtwillQuantitativeFrameworkInvestigating2019}
 Cirtwill, A. R., Eklf, A., Roslin, T., Wootton, K., \& Gravel, D.
@@ -1163,11 +1247,6 @@ J. M., \& Ladle, R. J. (2015). Seven {Shortfalls} that {Beset
 Large-Scale Knowledge} of {Biodiversity}. \emph{Annual Review of
 Ecology, Evolution, and Systematics}, \emph{46}(1), 523--549.
 \url{https://doi.org/10.1146/annurev-ecolsys-112414-054400}
-
-\bibitem[\citeproctext]{ref-hubbellUnifiedNeutralTheory2001}
-Hubbell, S. P. (2001). \emph{The {Unified Neutral Theory} of
-{Biodiversity} and {Biogeography} ({MPB-32})}. Princeton University
-Press. \url{https://www.jstor.org/stable/j.ctt7rj8w}
 
 \bibitem[\citeproctext]{ref-jordanoChasingEcologicalInteractions2016}
 Jordano, P. (2016a). Chasing {Ecological Interactions}. \emph{PLOS
