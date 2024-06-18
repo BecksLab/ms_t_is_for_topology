@@ -226,7 +226,7 @@ methods}
 1%
 }%
 }
-\date{2024-06-17}
+\date{2024-06-18}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -458,7 +458,7 @@ contextualise the different `types' of food webs within the larger
 research programmes (or even practical needs) that have been driving the
 construction of them.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, titlerule=0mm, colback=white, breakable, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, left=2mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Moving between the feasibility and reality of interactions}, arc=.35mm, opacityback=0, toprule=.15mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, opacitybacktitle=0.6, titlerule=0mm, opacityback=0, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Moving between the feasibility and reality of interactions}, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, left=2mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, leftrule=.75mm, rightrule=.15mm]
 
 Before thinking about the ways in which we can predict networks it is
 perhaps meaningful to take a step back and think about the different
@@ -479,6 +479,13 @@ important that there is an awareness and acknowledgement of where within
 this feasibility-reality one is working at and how this will impact and
 limit the contexts in which the resulting network can be used and
 applied within.
+
+When we move from feasibility we can also maybe think of it as moving
+from trying to determine interaction between species pairs and rather
+determine the final network (because basically at that point it is a
+case of the fact that interactions are `interacting' \emph{i.e.} its not
+just the trophic links but also the competitive/non trophic links that
+matter)
 
 \begin{figure}[H]
 
@@ -510,24 +517,24 @@ for and capturing prey (building on the movement ecology framework).}
 \end{figure}%
 
 \begin{quote}
-Aside: this is maybe not the IRL mechanisms (e.g.~we species must
+Aside: this is maybe not the IRL mechanisms per se (e.g.~species must
 co-occur, then they must meet, then we can determine if the interaction
 will happen) but it makes modelling sense? IDK\ldots{} anyway we can
 shuffles things around
 \end{quote}
 
-\subsection{Mechanisms}\label{mechanisms}
+\subsection*{Mechanisms}\label{mechanisms}
+\addcontentsline{toc}{subsection}{Mechanisms}
 
-\textbf{1. Co-occurrence}
+\textbf{1. (co)Occurrence interactions}
 
 Although the assumption that because two species are co-occurring it
 must mean that they are interacting is presumptive (Blanchet et al.,
 2020) it is of course impossible for two species to interact (in terms
-of feeding links) if they are not co-occurring We are co-occurring and
-so it represents the \emph{basic} requirement for the interaction
-between a species pair
+of feeding \emph{i.e.,} consumptive links) if they are not co-occurring
+in time and space.
 
-\textbf{2. Mechanistic feasibility}
+\textbf{2. Feasibility interactions}
 
 This is based on the idea of forbidden links introduced by Jordano
 (2016b), specifically that there must be some degree of \emph{trait
@@ -537,38 +544,60 @@ consume, its prey. This is probably the level that the idea of a metaweb
 this is perhaps the most developed space. Predictive models run the
 gamut including mechanistic models (Morales-Castilla et al., 2015),
 binary classifiers (Pichler et al., 2020), and graph embedding (Strydom
-et al., 2023). It is probably worth having a brief interlude here to be
-really clear that just because an interaction is probabilistic it does
-not make it quantitative - it is still binary but at least we do have
-some way of saying how confident we are in the feasibility of an
-interaction - not how likely it is to occur - per se.
+et al., 2023) and use either traits (or phylogeny as a proxy for the
+conservation thereof) as a means to `evaluate' if an interaction is
+\emph{possible} between two species (again not the likelihood of it
+happening but the likelihood of its feasibility). It is probably worth
+having a brief interlude here to be really clear that just because an
+interaction is probabilistic it does not make it weighted (at least not
+in the traditional sense of weighted networks Wootton \& Emmerson
+(2005)) - it is still `binary', it just happens to be defined by a
+binomial distribution.
 
-\textbf{3. Likelihood of meeting (there must be a better word)}
+\textbf{3. Mass effect interactions}
 
 This is probably the point where we start to shift from a
-presence/absence way of defining interactions and start moving into the
-`qualitative'/weighted space - we are not `determining' if the
-interaction is feasible but rather making an assumption on prey
-selection based on species likelihood of `meeting'.
+\emph{potential} (presence/absence) way of defining interactions and
+start moving into the `qualitative'/weighted interaction space - we are
+not `determining' if the interaction is feasible but rather making an
+assumption on prey selection based on the species likelihood of
+`meeting'. Although Banville (in prep) presents a compelling case that
+this could still be considered something that falls under the
+`feasibility' and nor `reality' side of the spectrum
 
 \begin{quote}
-Not sure if there are models that `only' consider abundance but it is
-rather more of a building block in some of the models that are more
-relevant to the next steps.
+Not sure if there are models that `only' consider abundance (barring the
+neutral model) and that it is rather more of a building block in some of
+the models that are more relevant to the next steps. Maybe there is an
+argument that this `rule' is `irrelevant' in the context of network
+assembly and more so a data parameter one needs\ldots{}
 \end{quote}
 
-\textbf{4. Prey choice (energy cost-benefit)}
+\textbf{4. Consumer--resource interactions (energetics)}
 
-Now we move into the `prey choice' space - specifically the cost-benefit
-side of things that falls under feeding ecology. Examples of models
-(Beckerman et al., 2006; Petchey et al., 2008)
+\begin{quote}
+consumption rate (energy acquisition) vs metabolic rate (energy use)
+\end{quote}
 
-\textbf{5. Environmental `energy budget'}
+I think here it a case of thinking of how the value of the prey will
+influence prey choice which has its roots in feeding ecology\ldots{}
 
-Builds primarily on the ideas presented in Cherif et al. (n.d.), which
-is essentially a take on movement ecology? What it boils down to is
-being able to quantify the cost of movement \emph{i.e.,} the physical
-constraints that the environment imposes on a species\ldots{}
+Here we move into the `prey choice' space - specifically the
+cost-benefit side of things that falls under feeding ecology. Examples
+of models (Beckerman et al., 2006; Petchey et al., 2008).
+
+Also the consumer search space?? (Pawar et al., 2012)
+
+\textbf{5. Consumer--environment interactions (also energetics but more
+about environmental energy budget)}
+
+I think this should be it's own rule since its really more about the
+idea of how the environment is imposing energy costs on the predator as
+opposed the energetic costs (and gain) of consuming the prey. Basically
+the ideas presented in Cherif et al. (n.d.), which is essentially a take
+on movement ecology? What it boils down to is being able to quantify the
+cost of movement \emph{i.e.,} the physical constraints that the
+environment imposes on a species\ldots{}
 
 \begin{quote}
 The role of the environment: Although we only explicitly take the
@@ -583,8 +612,9 @@ these two points is very different. RE occurrence it is a case of
 survival and for movement it is a case of performance??
 \end{quote}
 
-\subsection{Notes on the `ensemble'
+\subsection*{Notes on the `ensemble'
 approach}\label{notes-on-the-ensemble-approach}
+\addcontentsline{toc}{subsection}{Notes on the `ensemble' approach}
 
 IDK I just really want to articulate that we can't feasibly be
 functioning at a `level 5' at all times because of other real world
@@ -817,7 +847,7 @@ SuppMat 2)}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, titlerule=0mm, colback=white, breakable, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, left=2mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, arc=.35mm, opacityback=0, toprule=.15mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, opacitybacktitle=0.6, titlerule=0mm, opacityback=0, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, left=2mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, leftrule=.75mm, rightrule=.15mm]
 
 Although understanding the underlying philosophy of the different model
 families is beneficial it is also important to understand in what
@@ -1294,6 +1324,12 @@ Morales-Castilla, I., Matias, M. G., Gravel, D., \& Araújo, M. B.
 Ecology \& Evolution}, \emph{30}(6), 347--356.
 \url{https://doi.org/10.1016/j.tree.2015.03.014}
 
+\bibitem[\citeproctext]{ref-pawarDimensionalityConsumerSearch2012}
+Pawar, S., Dell, A. I., \& Van M. Savage. (2012). Dimensionality of
+consumer search space drives trophic interaction strengths.
+\emph{Nature}, \emph{486}(7404), 485--489.
+\url{https://doi.org/10.1038/nature11131}
+
 \bibitem[\citeproctext]{ref-petcheySizeForagingFood2008}
 Petchey, O. L., Beckerman, A. P., Riede, J. O., \& Warren, P. H. (2008).
 Size, foraging, and food web structure. \emph{Proceedings of the
@@ -1446,6 +1482,12 @@ Williams, R. J., \& Martinez, N. D. (2008). Success and its limits among
 structural models of complex food webs. \emph{Journal of Animal
 Ecology}, \emph{77}(3), 512--519.
 \url{https://doi.org/10.1111/j.1365-2656.2008.01362.x}
+
+\bibitem[\citeproctext]{ref-woottonMeasurementInteractionStrength2005}
+Wootton, J. T., \& Emmerson, M. (2005). Measurement of {Interaction
+Strength} in {Nature}. \emph{Annual Review of Ecology, Evolution, and
+Systematics}, \emph{36}(1), 419--444.
+\url{https://doi.org/10.1146/annurev.ecolsys.36.091704.175535}
 
 \bibitem[\citeproctext]{ref-yeakelCollapseEcologicalNetwork2014}
 Yeakel, J. D., Pires, M. M., Rudolf, L., Dominy, N. J., Koch, P. L.,
