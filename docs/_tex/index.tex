@@ -212,7 +212,7 @@ methods}
 1%
 }%
 }
-\date{2024-06-18}
+\date{2024-06-19}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -444,7 +444,7 @@ contextualise the different `types' of food webs within the larger
 research programmes (or even practical needs) that have been driving the
 construction of them.
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, coltitle=black, titlerule=0mm, opacitybacktitle=0.6, bottomrule=.15mm, left=2mm, arc=.35mm, breakable, rightrule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Moving between the feasibility and reality of interactions}, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, toprule=.15mm, opacityback=0, colframe=quarto-callout-note-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, opacityback=0, arc=.35mm, colback=white, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, rightrule=.15mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Moving between the feasibility and reality of interactions}, left=2mm, breakable, opacitybacktitle=0.6]
 
 Before thinking about the ways in which we can predict networks it is
 perhaps meaningful to take a step back and think about the different
@@ -477,7 +477,7 @@ matter)
 
 \centering{
 
-\includegraphics{images/concept_2.png}
+\includegraphics{images/mechanism.png}
 
 }
 
@@ -494,11 +494,11 @@ additional `rules' that allow us to begin approaching a much more
 resolved reality of the interactions for a specific location until we
 reach a point where we are able to encapsulate the energetics of the
 system. Moving from the most general to the most specific it goes: 1.)
-the co-occurrence of species, 2.) the mechanistic feasibility of the
-interaction, 3.) the likelihood of two potentially interacting species
-to meet, 4.) the energetic `cost' of interaction (building on the
-feeding ecology framework) and 5.) the environmental cost of searching
-for and capturing prey (building on the movement ecology framework).}
+the `physical' feasibility of the interaction, 2.) the co-occurrence of
+species, 3.) the likelihood of two potentially interacting species to
+meet, 4.) the energetic `cost' of interaction (building on the feeding
+ecology framework) and 5.) the environmental cost of searching for and
+capturing prey (building on the movement ecology framework).}
 
 \end{figure}%
 
@@ -512,15 +512,7 @@ shuffles things around
 \subsection*{Mechanisms}\label{mechanisms}
 \addcontentsline{toc}{subsection}{Mechanisms}
 
-\textbf{1. (co)Occurrence interactions}
-
-Although the assumption that because two species are co-occurring it
-must mean that they are interacting is presumptive (Blanchet et al.,
-2020) it is of course impossible for two species to interact (in terms
-of feeding \emph{i.e.,} consumptive links) if they are not co-occurring
-in time and space.
-
-\textbf{2. Feasibility interactions}
+\textbf{1. Feasibility interactions}
 
 This is based on the idea of forbidden links introduced by Jordano
 (2016b), specifically that there must be some degree of \emph{trait
@@ -536,30 +528,39 @@ conservation thereof) as a means to `evaluate' if an interaction is
 happening but the likelihood of its feasibility). It is probably worth
 having a brief interlude here to be really clear that just because an
 interaction is probabilistic it does not make it weighted (at least not
-in the traditional sense of weighted networks Wootton \& Emmerson
-(2005)) - it is still `binary', it just happens to be defined by a
-binomial distribution.
+in the traditional sense of weighted networks, \emph{e.g.,} Wootton \&
+Emmerson (2005)) - it is still `binary', it just happens to be defined
+by a binomial distribution.
 
-\textbf{3. Mass effect interactions}
+\textbf{2. (co)Occurrence interactions}
 
-This is probably the point where we start to shift from a
-\emph{potential} (presence/absence) way of defining interactions and
-start moving into the `qualitative'/weighted interaction space - we are
-not `determining' if the interaction is feasible but rather making an
-assumption on prey selection based on the species likelihood of
-`meeting'. Although Banville (in prep) presents a compelling case that
-this could still be considered something that falls under the
-`feasibility' and nor `reality' side of the spectrum
+Although the assumption that because two species are co-occurring it
+must mean that they are interacting is presumptive (Blanchet et al.,
+2020) it is of course impossible for two species to interact (in terms
+of feeding \emph{i.e.,} consumptive links) if they are not co-occurring
+in time and space. An example of this would be Dansereau et al. (2023)
+where the metaweb is downsampled into smaller realisations - however
+arguably these are still firmly in the space of feasible interactions
+for the specific location but are a better approximation of
+`reality'\ldots{}
 
 \begin{quote}
-Not sure if there are models that `only' consider abundance (barring the
-neutral model) and that it is rather more of a building block in some of
-the models that are more relevant to the next steps. Maybe there is an
+Mass effect interactions?? This is probably the point where we start to
+shift from a \emph{potential} (presence/absence) way of defining
+interactions and start moving into the `qualitative'/weighted
+interaction space - we are not `determining' if the interaction is
+feasible but rather making an assumption on prey selection based on the
+species likelihood of `meeting'. Although Banville (in prep) presents a
+compelling case that this could still be considered something that falls
+under the `feasibility' and nor `reality' side of the spectrum. Not sure
+if there are models that `only' consider abundance (barring the neutral
+model) and that it is rather more of a building block in some of the
+models that are more relevant to the next steps. Maybe there is an
 argument that this `rule' is `irrelevant' in the context of network
 assembly and more so a data parameter one needs\ldots{}
 \end{quote}
 
-\textbf{4. Consumer--resource interactions (energetics)}
+\textbf{3. Consumer--resource interactions}
 
 \begin{quote}
 consumption rate (energy acquisition) vs metabolic rate (energy use)
@@ -574,8 +575,7 @@ of models (Beckerman et al., 2006; Petchey et al., 2008).
 
 Also the consumer search space?? (Pawar et al., 2012)
 
-\textbf{5. Consumer--environment interactions (also energetics but more
-about environmental energy budget)}
+\textbf{4. Consumer--environment interactions}
 
 I think this should be it's own rule since its really more about the
 idea of how the environment is imposing energy costs on the predator as
@@ -833,7 +833,7 @@ SuppMat 2)}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, coltitle=black, titlerule=0mm, opacitybacktitle=0.6, bottomrule=.15mm, left=2mm, arc=.35mm, breakable, rightrule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, toprule=.15mm, opacityback=0, colframe=quarto-callout-note-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, opacityback=0, arc=.35mm, colback=white, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, rightrule=.15mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, left=2mm, breakable, opacitybacktitle=0.6]
 
 Although understanding the underlying philosophy of the different model
 families is beneficial it is also important to understand in what
