@@ -226,7 +226,7 @@ methods}
 1%
 }%
 }
-\date{2024-06-19}
+\date{2024-06-20}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -458,34 +458,27 @@ contextualise the different `types' of food webs within the larger
 research programmes (or even practical needs) that have been driving the
 construction of them.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, toprule=.15mm, leftrule=.75mm, colback=white, colframe=quarto-callout-note-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Moving between the feasibility and reality of interactions}, bottomtitle=1mm, arc=.35mm, opacityback=0, bottomrule=.15mm, toptitle=1mm, titlerule=0mm, left=2mm, coltitle=black, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, bottomrule=.15mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, rightrule=.15mm, coltitle=black, leftrule=.75mm, bottomtitle=1mm, arc=.35mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Moving between the feasibility and reality of interactions}]
 
 Before thinking about the ways in which we can predict networks it is
 perhaps meaningful to take a step back and think about the different
 criteria that must be met in order for an interaction to be able to
 occur between two species, specifically thinking of this in terms of
-distinguishing between the feasibility or realisation of an interaction
-and how these are determined (and defined by) different
-`rules'/hierarchical mechanisms. If we look at this feasibility-reality
-continuum (Figure~\ref{fig-feasibility}) it is clear how the different
-predictive approaches usually encapsulate one specific `rule' and fail
-to account for the rest. This is not to say that this shortcoming should
-be viewed as a `bug' but rather a `feature' of the field as it allows
-one to engage with, as well as construct networks at different scales,
-which is particularly valuable if one take into consideration the
-considerable `data cost' of predicting well resolved, realised networks
-in comparison to constructing high-level metawebs. However, it is
-important that there is an awareness and acknowledgement of where within
-this feasibility-reality one is working at and how this will impact and
-limit the contexts in which the resulting network can be used and
-applied within.
-
-When we move from feasibility we can also maybe think of it as moving
-from trying to determine interaction between species pairs and rather
-determine the final network (because basically at that point it is a
-case of the fact that interactions are `interacting' \emph{i.e.} its not
-just the trophic links but also the competitive/non trophic links that
-matter)
+distinguishing between the feasibility versus realisation of an
+interaction and how these are determined (and defined by) different
+`rules'/mechanisms. If we look at this feasibility-reality continuum
+(Figure~\ref{fig-feasibility}) it is clear how the different predictive
+approaches (methods) tend to fall within one of the broader categories
+identified (distinguished) in the triangle. This is not to say that this
+shortcoming should be viewed as a `bug' but rather a `feature' of the
+field as it allows one to engage with, as well as construct networks at
+different scales, which is particularly valuable if one takes into
+consideration the considerable `data cost' of predicting well resolved,
+realised networks in comparison to constructing high-level metawebs.
+However, it is important that there is an awareness and acknowledgement
+of where within this feasibility-reality one is working at and how this
+will impact and limit the contexts in which the resulting network can be
+used and applied within.
 
 \begin{figure}[H]
 
@@ -517,14 +510,14 @@ capturing prey (building on the movement ecology framework).}
 \end{figure}%
 
 \begin{quote}
-Aside: this is maybe not the IRL mechanisms per se (e.g.~species must
-co-occur, then they must meet, then we can determine if the interaction
-will happen) but it makes modelling sense? IDK\ldots{} anyway we can
-shuffles things around
+Aside: this is maybe not the IRL `assembly mechanisms' per se
+(e.g.~species must co-occur, then they must meet, then we can determine
+if the interaction will happen) but it makes modelling sense?
+IDK\ldots{} anyway we can shuffle things around
 \end{quote}
 
-\subsection*{Mechanisms}\label{mechanisms}
-\addcontentsline{toc}{subsection}{Mechanisms}
+\subsection*{`Mechanisms'}\label{mechanisms}
+\addcontentsline{toc}{subsection}{`Mechanisms'}
 
 \textbf{1. Feasibility interactions}
 
@@ -532,9 +525,9 @@ This is based on the idea of forbidden links introduced by Jordano
 (2016b), specifically that there must be some degree of \emph{trait
 complementarity} that allows a predator to chase, capture, kill, and
 consume, its prey. This is probably the level that the idea of a metaweb
-(Dunne, 2006) is most applicable. Within the network prediction `field'
-this is perhaps the most developed space. Predictive models run the
-gamut including mechanistic models (Morales-Castilla et al., 2015),
+(Dunne, 2006) is most applicable to. Within the network prediction
+`field' this is perhaps the most developed space. Predictive models run
+the gamut including mechanistic models (Morales-Castilla et al., 2015),
 binary classifiers (Pichler et al., 2020), and graph embedding (Strydom
 et al., 2023) and use either traits (or phylogeny as a proxy for the
 conservation thereof) as a means to `evaluate' if an interaction is
@@ -542,54 +535,60 @@ conservation thereof) as a means to `evaluate' if an interaction is
 happening but the likelihood of its feasibility). It is probably worth
 having a brief interlude here to be really clear that just because an
 interaction is probabilistic it does not make it weighted (at least not
-in the traditional sense of weighted networks, \emph{e.g.,} Wootton \&
-Emmerson (2005)) - it is still `binary', it just happens to be defined
-by a binomial distribution.
+in the traditional sense of weighted networks, \emph{e.g.,} J. T.
+Wootton \& Emmerson (2005)) - it is still `binary', it just happens to
+be defined by a binomial distribution (\emph{sensu} Banville, in prep).
 
-\textbf{2. (co)Occurrence interactions}
+\textbf{2. (Co)occurrence interactions}
 
 Although the assumption that because two species are co-occurring it
 must mean that they are interacting is presumptive (Blanchet et al.,
-2020) it is of course impossible for two species to interact (in terms
-of feeding \emph{i.e.,} consumptive links) if they are not co-occurring
-in time and space. An example of this would be Dansereau et al. (2023)
-where the metaweb is downsampled into smaller realisations - however
-arguably these are still firmly in the space of feasible interactions
-for the specific location but are a better approximation of
-`reality'\ldots{}
+2020) it is of course impossible for two species to interact (at least
+in terms of feeding links) if they are not co-occurring in time and
+space. An example of this would be Dansereau et al. (2023) where the
+metaweb is downsampled into smaller realisations based on better
+data/knowledge as to which species are occurring at a specific location
+- however arguably these are still firmly in the space of feasible
+interactions for the specific location but are approaching a better
+approximation of `reality'\ldots{}
 
-\begin{quote}
-Mass effect interactions?? This is probably the point where we start to
-shift from a \emph{potential} (presence/absence) way of defining
-interactions and start moving into the `qualitative'/weighted
-interaction space - we are not `determining' if the interaction is
-feasible but rather making an assumption on prey selection based on the
-species likelihood of `meeting'. Although Banville (in prep) presents a
-compelling case that this could still be considered something that falls
-under the `feasibility' and nor `reality' side of the spectrum. Not sure
-if there are models that `only' consider abundance (barring the neutral
-model) and that it is rather more of a building block in some of the
-models that are more relevant to the next steps. Maybe there is an
+\textbf{3. Mass effect interactions}
+
+Not sure if there are models that `only' consider abundance (barring the
+neutral model) and that it is rather more of a building block in some of
+the models that are more relevant to the next steps. Maybe there is an
 argument that this `rule' is `irrelevant' in the context of network
-assembly and more so a data parameter one needs\ldots{}
-\end{quote}
+prediction and more so a data parameter one needs\ldots{}
 
-\textbf{3. Consumer--resource interactions}
+This is probably the point where we start to shift from a
+\emph{potential} (presence/absence) way of defining interactions and
+start moving into the `qualitative'/weighted interaction space - we are
+not `determining' if the interaction is feasible but rather making an
+assumption on prey selection based on the species likelihood of
+`meeting', although Banville (in prep) presents a compelling case that
+this could still be considered something that falls under the
+`feasibility' and not `reality' side of the spectrum\ldots{} (maybe,
+past Tanya seemed to think so)
 
-\begin{quote}
-consumption rate (energy acquisition) vs metabolic rate (energy use)
-\end{quote}
+\textbf{4. Consumer--resource interactions}
 
-I think here it a case of thinking of how the value of the prey will
-influence prey choice which has its roots in feeding ecology\ldots{}
+This is where we begin to move into the foraging ecology space -
+specifically consumption rate and how that pertains to energy
+acquisition. In the loosest sense I think this is the `prey choice'
+space - but specifically in the context of how prey choice is informed
+by energetic cost (not just purely based on \emph{e.g.,} the most
+abundant species). If we think about ways that people have approached
+this there are the diet models of (Beckerman et al., 2006) and (Petchey
+et al., 2008) that tike a high-level (imo) approach to accounting for
+energy acquisition, then you get the `trait' framework developed by K.
+L. Wootton et al. (2023) that moves the `energy' into different
+`modules' related to the process of the consumer acquiring energy from
+the resource (however there is a disregard for the `Rule 1' requirement
+of forbidden links, again not bad just pointing it out). The idea of the
+consumer search space developed by Pawar et al. (2012) is also an
+interesting consideration.
 
-Here we move into the `prey choice' space - specifically the
-cost-benefit side of things that falls under feeding ecology. Examples
-of models (Beckerman et al., 2006; Petchey et al., 2008).
-
-Also the consumer search space?? (Pawar et al., 2012)
-
-\textbf{4. Consumer--environment interactions}
+\textbf{5. Consumer--environment interactions}
 
 I think this should be it's own rule since its really more about the
 idea of how the environment is imposing energy costs on the predator as
@@ -597,7 +596,8 @@ opposed the energetic costs (and gain) of consuming the prey. Basically
 the ideas presented in Cherif et al. (n.d.), which is essentially a take
 on movement ecology? What it boils down to is being able to quantify the
 cost of movement \emph{i.e.,} the physical constraints that the
-environment imposes on a species\ldots{}
+environment imposes on a species\ldots{} Maybe we can also think of it
+more in terms of metabolic rate?
 
 \begin{quote}
 The role of the environment: Although we only explicitly take the
@@ -617,7 +617,7 @@ approach}\label{notes-on-the-ensemble-approach}
 \addcontentsline{toc}{subsection}{Notes on the `ensemble' approach}
 
 IDK I just really want to articulate that we can't feasibly be
-functioning at a `level 5' at all times because of other real world
+functioning at a `Rule 5' level at all times because of other real world
 constraints such as the fact that the amount of data one needs is simply
 not going to be feasible in most cases\ldots{} Also that you (probably)
 need to go through the whole step-wise process because (at least for
@@ -625,9 +625,7 @@ now) models at the `higher' levels are overlooking some of the `lower'
 levels \emph{e.g.,} the the ADBM model (in its current form) has no way
 of accounting for forbidden links and so it is probably going to end up
 predicting some links that are strictly speaking `forbidden' at the
-trait level (I guess this kind of thinking will probably open the door
-for talking about benchmarking should we still want to keep the model
-comparison angle).
+trait level.
 
 \end{tcolorbox}
 
@@ -847,7 +845,7 @@ SuppMat 2)}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, toprule=.15mm, leftrule=.75mm, colback=white, colframe=quarto-callout-note-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, bottomtitle=1mm, arc=.35mm, opacityback=0, bottomrule=.15mm, toptitle=1mm, titlerule=0mm, left=2mm, coltitle=black, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, bottomrule=.15mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, breakable, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, rightrule=.15mm, coltitle=black, leftrule=.75mm, bottomtitle=1mm, arc=.35mm, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}]
 
 Although understanding the underlying philosophy of the different model
 families is beneficial it is also important to understand in what
@@ -1096,6 +1094,17 @@ realised networks using feasible networks? The second is that this lack
 of `direction' as to how we should define a network is (actually)
 probably one of the biggest barriers that is affecting the use of
 networks in applied settings\ldots{}
+
+Another time perspective question is when do we determine a link to be
+`real'\ldots{} In the context of feasible networks this is perhaps
+clearer - all things equal would the predator be bale to consume the
+prey. However in the realised space there is also the question of the
+long term `energetic feasibility' of an interaction - just because an
+interaction is possible in the now is it able to sustain a population in
+the long term. And what is the scale for that long term - are we
+thinking at the generational scale? Because ultimately when we are
+constructing a network we are aggregating not only across space but also
+across time.
 
 \section*{Glossary}\label{glossary}
 \addcontentsline{toc}{section}{Glossary}
@@ -1488,6 +1497,12 @@ Wootton, J. T., \& Emmerson, M. (2005). Measurement of {Interaction
 Strength} in {Nature}. \emph{Annual Review of Ecology, Evolution, and
 Systematics}, \emph{36}(1), 419--444.
 \url{https://doi.org/10.1146/annurev.ecolsys.36.091704.175535}
+
+\bibitem[\citeproctext]{ref-woottonModularTheoryTrophic2023}
+Wootton, K. L., Curtsdotter, A., Roslin, T., Bommarco, R., \& Jonsson,
+T. (2023). Towards a modular theory of trophic interactions.
+\emph{Functional Ecology}, \emph{37}(1), 26--43.
+\url{https://doi.org/10.1111/1365-2435.13954}
 
 \bibitem[\citeproctext]{ref-yeakelCollapseEcologicalNetwork2014}
 Yeakel, J. D., Pires, M. M., Rudolf, L., Dominy, N. J., Koch, P. L.,
