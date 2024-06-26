@@ -212,7 +212,7 @@ methods}
 1%
 }%
 }
-\date{2024-06-21}
+\date{2024-06-26}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -444,7 +444,7 @@ contextualise the different `types' of food webs within the larger
 research programmes (or even practical needs) that have been driving the
 construction of them.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, toprule=.15mm, coltitle=black, opacityback=0, left=2mm, leftrule=.75mm, colback=white, breakable, colframe=quarto-callout-note-color-frame, titlerule=0mm, opacitybacktitle=0.6, bottomrule=.15mm, bottomtitle=1mm, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Moving between the feasibility and reality of interactions}, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Moving between the feasibility and reality of interactions}, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, toptitle=1mm, colback=white, coltitle=black, opacityback=0, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, left=2mm, arc=.35mm]
 
 Before thinking about the ways in which we can predict networks it is
 perhaps meaningful to take a step back and think about the different
@@ -470,30 +470,11 @@ used and applied within.
 
 \centering{
 
-\includegraphics{images/mechanism.png}
+\includegraphics{images/concept_v2.png}
 
 }
 
-\caption{\label{fig-feasibility}A schematic overview of the
-feasibility-reality axis that defines species interactions (and the
-resulting networks), specifically in the context of the underling
-mechanisms that determine the `rules of engagement'. As one moves from
-feasibility towards reality the way in which the edges between nodes are
-defined (but not necessarily quantified) begins to shift from
-representing the \emph{possibility} of an interaction occurring between
-two species to the quantification of \emph{strength} of the interaction.
-This is because as we move down this axis we begin to incorporate
-additional `rules' that allow us to begin approaching a much more
-resolved reality of the interactions for a specific location until we
-reach a point where we are able to encapsulate the energetics of the
-system. Moving from the most general to the most specific it goes: 1.)
-feasibility interactions (the physical `compatibility' between consumer
-and resource), 2.) the co-occurrence interaction (the occurrence of the
-consumer and resource in the same space and time), 3.) mass effect
-interactions (how abundance influences interactions), 4.)
-consumer--resource interactions (what are the energetic gains and costs
-to the consumer from the resource) and 5.) consumer--environment
-interactions (metabolic costs of environment on the consumer).}
+\caption{\label{fig-feasibility}TODO.}
 
 \end{figure}%
 
@@ -507,7 +488,22 @@ IDK\ldots{} anyway we can shuffle things around
 \subsection*{`Mechanisms'}\label{mechanisms}
 \addcontentsline{toc}{subsection}{`Mechanisms'}
 
-\textbf{1. Feasibility interactions}
+\textbf{1. (Co)occurrence interactions}
+
+Although the outright assumption that because two species are
+co-occurring it must mean that they are interacting is inherently flawed
+(Blanchet et al., 2020), it is of course impossible for two species to
+interact (at least in terms of feeding links) if they are not
+co-occurring in time and space. Hence it is of course important to take
+into consideration the co-occurrence of both the resource and the
+consumer. An example of this would be the work from Dansereau et al.
+(2023), where a metaweb (feasibility network) is downsampled into
+smaller realisations based on better data/knowledge as to which species
+are occurring at a specific location - however arguably these are still
+firmly in the space of feasible interactions for the specific location
+but are approaching a better approximation of `reality'\ldots{}
+
+\textbf{2. Feasibility interactions}
 
 This is based on the idea of forbidden links introduced by Jordano
 (2016b), specifically that there must be some degree of \emph{trait
@@ -526,21 +522,6 @@ interaction is probabilistic it does not make it weighted (at least not
 in the traditional sense of weighted interactions, \emph{e.g.,} J. T.
 Wootton \& Emmerson (2005)) - it is still `binary', it just happens to
 be defined by a binomial distribution (\emph{sensu} Banville, in prep).
-
-\textbf{2. (Co)occurrence interactions}
-
-Although the outright assumption that because two species are
-co-occurring it must mean that they are interacting is inherently flawed
-(Blanchet et al., 2020), it is of course impossible for two species to
-interact (at least in terms of feeding links) if they are not
-co-occurring in time and space. Hence it is of course important to take
-into consideration the co-occurrence of both the resource and the
-consumer. An example of this would be the work from Dansereau et al.
-(2023), where a metaweb (feasibility network) is downsampled into
-smaller realisations based on better data/knowledge as to which species
-are occurring at a specific location - however arguably these are still
-firmly in the space of feasible interactions for the specific location
-but are approaching a better approximation of `reality'\ldots{}
 
 \textbf{3. Mass effect interactions}
 
@@ -835,7 +816,7 @@ SuppMat 2)}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, toprule=.15mm, coltitle=black, opacityback=0, left=2mm, leftrule=.75mm, colback=white, breakable, colframe=quarto-callout-note-color-frame, titlerule=0mm, opacitybacktitle=0.6, bottomrule=.15mm, bottomtitle=1mm, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 2 - Assessing model outputs}, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, toptitle=1mm, colback=white, coltitle=black, opacityback=0, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, left=2mm, arc=.35mm]
 
 Although understanding the underlying philosophy of the different model
 families is beneficial it is also important to understand in what
@@ -1154,10 +1135,9 @@ predicted as absent when it is absent) \\
 \item
   non-consumptive effects
 \item
-  can we develop a model that is both a topology generator as well as an
-  interaction predictor?
+  how do we define the spatial and temporal `boundaries' of a network?
 \item
-  how do we define the spatial and temporal `boundaries' of a network
+  how do we define a `real' network?
 \end{itemize}
 
 \section*{References}\label{references}

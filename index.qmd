@@ -84,19 +84,19 @@ The ingredients one uses to construct networks from nodes and edges generates a 
 
 Before thinking about the ways in which we can predict networks it is perhaps meaningful to take a step back and think about the different criteria that must be met in order for an interaction to be able to occur between two species, specifically thinking of this in terms of distinguishing between the feasibility versus realisation of an interaction and how these are determined (and defined by) different 'rules'/mechanisms. If we look at this feasibility-reality continuum (@fig-feasibility) it is clear how the different predictive approaches (methods) tend to fall within one of the broader categories identified (distinguished) in the triangle. This is not to say that this shortcoming should be viewed as a 'bug' but rather a 'feature' of the field as it allows one to engage with, as well as construct networks at different scales, which is particularly valuable if one takes into consideration the considerable 'data cost' of predicting well resolved, realised networks in comparison to constructing high-level metawebs. However, it is important that there is an awareness and acknowledgement of where within this feasibility-reality one is working at and how this will impact and limit the contexts in which the resulting network can be used and applied within.
 
-![A schematic overview of the feasibility-reality axis that defines species interactions (and the resulting networks), specifically in the context of the underling mechanisms that determine the 'rules of engagement'. As one moves from feasibility towards reality the way in which the edges between nodes are defined (but not necessarily quantified) begins to shift from representing the *possibility* of an interaction occurring between two species to the quantification of *strength* of the interaction. This is because as we move down this axis we begin to incorporate additional 'rules' that allow us to begin approaching a much more resolved reality of the interactions for a specific location until we reach a point where we are able to encapsulate the energetics of the system. Moving from the most general to the most specific it goes: 1.) feasibility interactions (the physical 'compatibility' between consumer and resource), 2.) the co-occurrence interaction (the occurrence of the consumer and resource in the same space and time),  3.) mass effect interactions (how abundance influences interactions), 4.) consumer–resource interactions (what are the energetic gains and costs to the consumer from the resource) and 5.) consumer–environment interactions (metabolic costs of environment on the consumer).](images/mechanism.png){#fig-feasibility}
+![TODO.](images/concept_v2.png){#fig-feasibility}
 
 > Aside: this is maybe not the IRL 'assembly mechanisms' per se (e.g. species must co-occur, then they must meet, then we can determine if the interaction will happen) but it makes modelling sense? IDK... anyway we can shuffle things around
 
 ### 'Mechanisms' {.unnumbered}
 
-**1. Feasibility interactions**
-
-This is based on the idea of forbidden links introduced by @jordanoSamplingNetworksEcological2016, specifically that there must be some degree of *trait complementarity* that allows a predator to chase, capture, kill, and consume, its prey. This is probably the level that the idea of a metaweb [@dunneNetworkStructureFood2006] is most applicable to. Within the network prediction 'field' this is perhaps the most developed space. Predictive models run the gamut including mechanistic models [@morales-castillaInferringBioticInteractions2015], binary classifiers [@pichlerMachineLearningAlgorithms2020], and graph embedding [@strydomGraphEmbeddingTransfer2023] and use either traits (or phylogeny as a proxy for the conservation thereof) as a means to 'evaluate' if an interaction is *possible* between two species (again not the likelihood of it happening but the likelihood of its feasibility). It is probably worth having a brief interlude here to be really clear that just because an interaction is probabilistic it does not make it weighted (at least not in the traditional sense of weighted interactions, *e.g.,* @woottonMeasurementInteractionStrength2005) - it is still 'binary', it just happens to be defined by a binomial distribution (*sensu* Banville, in prep).
-
-**2. (Co)occurrence interactions**
+**1. (Co)occurrence interactions**
 
 Although the outright assumption that because two species are co-occurring it must mean that they are interacting is inherently flawed [@blanchetCooccurrenceNotEvidence2020], it is of course impossible for two species to interact (at least in terms of feeding links) if they are not co-occurring in time and space. Hence it is of course important to take into consideration the co-occurrence of both the resource and the consumer. An example of this would be the work from @dansereauSpatiallyExplicitPredictions2023, where a metaweb (feasibility network) is downsampled  into smaller realisations based on better data/knowledge as to which species are occurring at a specific location - however arguably these are still firmly in the space of feasible interactions for the specific location but are approaching a better approximation of 'reality'...
+
+**2. Feasibility interactions**
+
+This is based on the idea of forbidden links introduced by @jordanoSamplingNetworksEcological2016, specifically that there must be some degree of *trait complementarity* that allows a predator to chase, capture, kill, and consume, its prey. This is probably the level that the idea of a metaweb [@dunneNetworkStructureFood2006] is most applicable to. Within the network prediction 'field' this is perhaps the most developed space. Predictive models run the gamut including mechanistic models [@morales-castillaInferringBioticInteractions2015], binary classifiers [@pichlerMachineLearningAlgorithms2020], and graph embedding [@strydomGraphEmbeddingTransfer2023] and use either traits (or phylogeny as a proxy for the conservation thereof) as a means to 'evaluate' if an interaction is *possible* between two species (again not the likelihood of it happening but the likelihood of its feasibility). It is probably worth having a brief interlude here to be really clear that just because an interaction is probabilistic it does not make it weighted (at least not in the traditional sense of weighted interactions, *e.g.,* @woottonMeasurementInteractionStrength2005) - it is still 'binary', it just happens to be defined by a binomial distribution (*sensu* Banville, in prep).
 
 **3. Mass effect interactions**
 
@@ -251,9 +251,9 @@ Another time perspective question is when do we determine a link to be 'real'...
 
 -   non-consumptive effects
 
--   can we develop a model that is both a topology generator as well as an interaction predictor?
+-   how do we define the spatial and temporal 'boundaries' of a network?
 
--   how do we define the spatial and temporal 'boundaries' of a network
+-   how do we define a 'real' network?
 
 ## References {.unnumbered}
 

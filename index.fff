@@ -30,30 +30,11 @@ visually overwhelming though\ldots)}
 
 \centering{
 
-\includegraphics{images/mechanism.png}
+\includegraphics{images/concept_v2.png}
 
 }
 
-\caption{\label{fig-feasibility}A schematic overview of the
-feasibility-reality axis that defines species interactions (and the
-resulting networks), specifically in the context of the underling
-mechanisms that determine the `rules of engagement'. As one moves from
-feasibility towards reality the way in which the edges between nodes are
-defined (but not necessarily quantified) begins to shift from
-representing the \emph{possibility} of an interaction occurring between
-two species to the quantification of \emph{strength} of the interaction.
-This is because as we move down this axis we begin to incorporate
-additional `rules' that allow us to begin approaching a much more
-resolved reality of the interactions for a specific location until we
-reach a point where we are able to encapsulate the energetics of the
-system. Moving from the most general to the most specific it goes: 1.)
-feasibility interactions (the physical `compatibility' between consumer
-and resource), 2.) the co-occurrence interaction (the occurrence of the
-consumer and resource in the same space and time), 3.) mass effect
-interactions (how abundance influences interactions), 4.)
-consumer--resource interactions (what are the energetic gains and costs
-to the consumer from the resource) and 5.) consumer--environment
-interactions (metabolic costs of environment on the consumer).}
+\caption{\label{fig-feasibility}TODO.}
 
 \end{figure}
 \efloatseparator
