@@ -19,22 +19,8 @@
 
 }
 
-\caption{\label{fig-anatomy}Panel \textbf{A} shows the many ways in
-which a food web can be defined and described at the node, edge, and
-even network level. Panel \textbf{B} (will) shows how the way in which
-we predict networks also limited and often focuses only only predicting
-the structure of a network (the final networks is parametrised by the
-expected structure of the network) or the interactions between species
-(the final network is determined by the behaviour of the nodes). These
-different models also encode different philosophies/hypotheses not only
-as to what determines how a network will look like but also how the
-final network itself is encoded \emph{i.e.,} its anatomy. (\emph{aside:}
-there is the potential to either try and visually summarise how the
-different model families define a network (so repeating the motifs used
-in the ANATOMY panel) alternatively it would be cool to try and have a
-panel C that tries to quantify the different `data ingredients' you
-would need to try and construct a network, this would probably be very
-visually overwhelming though\ldots)}
+\caption{\label{fig-anatomy}The many ways in which a food web can be
+defined and described at the node, edge, and even network level.}
 
 \end{figure}
 \efloatseparator
