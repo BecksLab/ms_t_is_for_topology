@@ -2,11 +2,24 @@
 
 \centering{
 
+\includegraphics{images/concept_v2.png}
+
+}
+
+\caption{\label{fig-feasibility}TODO.}
+
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[H]
+
+\centering{
+
 \includegraphics{images/concept_2.png}
 
 }
 
-\caption{\label{fig-concept}Panel \textbf{A} shows the many ways in
+\caption{\label{fig-anatomy}Panel \textbf{A} shows the many ways in
 which a food web can be defined and described at the node, edge, and
 even network level. Panel \textbf{B} (will) shows how the way in which
 we predict networks also limited and often focuses only only predicting
@@ -22,19 +35,6 @@ in the ANATOMY panel) alternatively it would be cool to try and have a
 panel C that tries to quantify the different `data ingredients' you
 would need to try and construct a network, this would probably be very
 visually overwhelming though\ldots)}
-
-\end{figure}
-\efloatseparator
- 
-\begin{figure}[H]
-
-\centering{
-
-\includegraphics{images/concept_v2.png}
-
-}
-
-\caption{\label{fig-feasibility}TODO.}
 
 \end{figure}
 \efloatseparator
