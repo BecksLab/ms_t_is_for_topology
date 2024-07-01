@@ -96,7 +96,7 @@ This is where we begin to move into the foraging ecology space - specifically co
 
 Defining a food web seems simple, it is the representation of the interactions (edges) between species (nodes), however the definition of 'edges' and 'nodes', as well as the scale at which they are aggregated can take many forms. As highlighted in @poisotDescribeUnderstandPredict2016 networks can be constructed at the population (the links among individuals), community (the links between species), or metacommunity (fluxes between locations) level. Even if one were to limit their scope to thinking of interaction networks only in terms of food webs at the community-level there are still many ways to define the various components of the network [Panel A of @fig-anatomy], one needs to understand the different intentions/assumptions that are made when a food web is constructed. Although the main intention of a food web is to capture and represent the feeding links between species there are many ways to define the nodes (*e.g.,* species or taxonomic group), edges (*e.g.,* **potential** or **realised feeding links**), the magnitude of the edges (*e.g.,* binary vs probabilistic), and even how the network itself is delimited (does it represent an aggregation of interactions over time?).
 
-![The many ways in which a food web can be defined and described at the node, edge, and even network level.](images/concept_2.png){#fig-anatomy}
+![The many ways in which a food web can be defined and described at the node, edge, and even network level.](images/anatomy.png){#fig-anatomy}
 
 ### How do we define a node?
 
