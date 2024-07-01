@@ -339,22 +339,20 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#understanding-the-drivers-of-species-interactions" id="toc-understanding-the-drivers-of-species-interactions" class="nav-link active" data-scroll-target="#understanding-the-drivers-of-species-interactions"><span class="header-section-number">1</span> Understanding the drivers of species interactions</a>
+  <li><a href="#understanding-the-drivers-of-species-interactions" id="toc-understanding-the-drivers-of-species-interactions" class="nav-link active" data-scroll-target="#understanding-the-drivers-of-species-interactions"><span class="header-section-number">1</span> Understanding the drivers of species interactions</a></li>
+  <li><a href="#network-prediction-is-scale-dependant" id="toc-network-prediction-is-scale-dependant" class="nav-link" data-scroll-target="#network-prediction-is-scale-dependant"><span class="header-section-number">2</span> Network prediction is scale dependant</a>
   <ul class="collapse">
-  <li><a href="#network-prediction-is-scale-dependant" id="toc-network-prediction-is-scale-dependant" class="nav-link" data-scroll-target="#network-prediction-is-scale-dependant"><span class="header-section-number">1.1</span> Network prediction is scale dependant</a>
-  <ul class="collapse">
-  <li><a href="#sec-network-build" id="toc-sec-network-build" class="nav-link" data-scroll-target="#sec-network-build"><span class="header-section-number">1.1.1</span> How do we predict food webs?</a></li>
-  <li><a href="#model-families" id="toc-model-families" class="nav-link" data-scroll-target="#model-families"><span class="header-section-number">1.1.2</span> Model families</a></li>
+  <li><a href="#sec-network-build" id="toc-sec-network-build" class="nav-link" data-scroll-target="#sec-network-build"><span class="header-section-number">2.1</span> How do we predict food webs?</a></li>
+  <li><a href="#model-families" id="toc-model-families" class="nav-link" data-scroll-target="#model-families"><span class="header-section-number">2.2</span> Model families</a></li>
   </ul></li>
-  <li><a href="#how-do-we-use-networks" id="toc-how-do-we-use-networks" class="nav-link" data-scroll-target="#how-do-we-use-networks"><span class="header-section-number">1.2</span> How do we use networks?</a></li>
-  <li><a href="#concluding-remarks" id="toc-concluding-remarks" class="nav-link" data-scroll-target="#concluding-remarks"><span class="header-section-number">1.3</span> Concluding remarks</a>
+  <li><a href="#how-do-we-use-networks" id="toc-how-do-we-use-networks" class="nav-link" data-scroll-target="#how-do-we-use-networks"><span class="header-section-number">3</span> How do we use networks?</a></li>
+  <li><a href="#concluding-remarks" id="toc-concluding-remarks" class="nav-link" data-scroll-target="#concluding-remarks"><span class="header-section-number">4</span> Concluding remarks</a>
   <ul class="collapse">
-  <li><a href="#time" id="toc-time" class="nav-link" data-scroll-target="#time"><span class="header-section-number">1.3.1</span> Time</a></li>
+  <li><a href="#time" id="toc-time" class="nav-link" data-scroll-target="#time"><span class="header-section-number">4.1</span> Time</a></li>
   </ul></li>
   <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
   <li><a href="#outstanding-questions" id="toc-outstanding-questions" class="nav-link" data-scroll-target="#outstanding-questions">Outstanding questions</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
   </ul>
 <div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/model_descriptions-preview.html"><i class="bi bi-journal-code"></i>SuppMat 1: Model Families Extended Description</a></li><li><a href="notebooks/model_qualitative-preview.html"><i class="bi bi-journal-code"></i>SuppMat 2: Looking at the 'traits' of the different model families</a></li><li><a href="notebooks/model_quantitative-preview.html"><i class="bi bi-journal-code"></i>SuppMat 3: Benchmarking the different model families</a></li></ul></div></nav>
 </div>
@@ -439,8 +437,9 @@ Figure&nbsp;2: The many ways in which a food web can be defined and described at
 </section>
 </div>
 </div>
-<section id="network-prediction-is-scale-dependant" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="network-prediction-is-scale-dependant"><span class="header-section-number">1.1</span> Network prediction is scale dependant</h2>
+</section>
+<section id="network-prediction-is-scale-dependant" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Network prediction is scale dependant</h1>
 <blockquote class="blockquote">
 <p>The way in which we predict a network is driven by the underlying theory <a href="#fig-feasibility" class="quarto-xref">Figure&nbsp;1</a> which constrains or informs the assumptions we make (this of course also has implications with regards to how the resulting network is defined (Box 1)). We can then spend a moment introducing the different model families <a href="#tbl-families" class="quarto-xref">Table&nbsp;1</a>. I think a clear messaging here might be that models can share a similar underlying theory but use different methods to get there (<em>e.g.,</em> using ecological rules (explicit), ecological expectations (pattern finders), or mathematical models (assumptions on the structure of the matrix - maybe even network)). Importantly different models will also have different ‘limits’ to them - this is probably a product of both where they are found within the ‘theory space’ <a href="#fig-feasibility" class="quarto-xref">Figure&nbsp;1</a> as well as the definition of the network (Box 1) space. Should we also maybe revisit the idea of interaction vs structure predictors… I think it is still a point that is owrth raising but no longer the framework on which we hanf the different model families…</p>
 </blockquote>
@@ -453,8 +452,8 @@ Figure&nbsp;2: The many ways in which a food web can be defined and described at
 </ul>
 <p>As discussed in Box 1 there are many ways to define a food web, meaning that there are equally as many reasons one might be interested in predicting a food web. However we may think of two primary drivers for wanting to predict networks (Panel B <a href="#fig-anatomy" class="quarto-xref">Figure&nbsp;2</a>), namely an interest in generating a set of ecologically plausible networks (<em>i.e.,</em> being able to describe networks using a model) or being able to recover (predict) location specific, ‘realised’, interactions for a specific species community (<em>i.e.,</em> being able to predict/infer the interactions between species). Of course these two categories are not distinct, mutually exclusive, groups but can rather be viewed as operating on a continuum ranging from a need for generality (<em>i.e.,</em> creating a network that, when taken in aggregate, the distribution of links (interactions) between nodes (species) are ecologically plausible) to a need for specificity (<em>i.e.,</em> local-level predictions between specific species pairs). Although the ability to predict ‘real-world’ interactions (and the resulting food webs) can have more intuitive ‘real world’ applications <em>e.g.,</em> being able to ‘recover’ food webs that have since gone extinct <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008 yeakelCollapseEcologicalNetwork2014">(<a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">Jennifer A. Dunne et al. 2008</a>; <a href="#ref-yeakelCollapseEcologicalNetwork2014" role="doc-biblioref">Yeakel et al. 2014</a>)</span>, using pairwise interactions to understand species distributions <span class="citation" data-cites="pollockUnderstandingCooccurrenceModelling2014">(<a href="#ref-pollockUnderstandingCooccurrenceModelling2014" role="doc-biblioref">Pollock et al. 2014</a>)</span> or even co-extinction risk <span class="citation" data-cites="dunnSixthMassCoextinction2009">(<a href="#ref-dunnSixthMassCoextinction2009" role="doc-biblioref">Dunn et al. 2009</a>)</span>, a more structural approach to network construction affords one an opportunity to interrogate some of the more high-level mechanisms that are structuring networks (Box 1).</p>
 <p>It is perhaps more important that when one is talking about ‘why’ they want to predict networks to articulate exactly what anatomical part of the food web we are interested in scrutinising.</p>
-<section id="sec-network-build" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="sec-network-build"><span class="header-section-number">1.1.1</span> How do we predict food webs?</h3>
+<section id="sec-network-build" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-network-build"><span class="header-section-number">2.1</span> How do we predict food webs?</h2>
 <p>Selecting a model for the task of network prediction should come down to two things; what <em>aspect</em> of a food web one is interested in predicting, and what data are available, necessary, and sufficient. As shown in panel B of <a href="#fig-anatomy" class="quarto-xref">Figure&nbsp;2</a> the interest in a network is (usually) at either the ‘structural’ or ‘interaction’ level and the development of models for the task of network prediction often focus on high fidelity (performance) at one of these scales. With this in mind it is beneficial to think of the different model families relative to these two different goals; here we refer to models that are used to predict the structure of a network as <strong>topology generators</strong> and models developed to infer the interactions for a given species pool as <strong>interaction predictors</strong>. It is meaningful to make this distinction because although it is possible to construct a food web given using an <em>interaction predictor</em> the models themselves lack any sort of parametrisation of the network structure and so the resulting network is a poor reflection of the actual network structure <span class="citation" data-cites="caronTraitmatchingModelsPredict2024">(<a href="#ref-caronTraitmatchingModelsPredict2024" role="doc-biblioref">Caron et al. 2024</a>)</span>. This is primarily because <em>interaction predictors</em> are models that evaluate the feasibility of an interaction between species pairs and not in the context of feasibility at the community level. Models themselves are a reflection of the different goals and intentions of the research program from which they are developed and are often ‘described’ by a specific mechanism that will determine the resulting structure or interactions (Box 1). Models such as the niche <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> or cascade <span class="citation" data-cites="cohenCommunityFoodWebs1990">(<a href="#ref-cohenCommunityFoodWebs1990" role="doc-biblioref">Cohen, Briand, and Newman 1990</a>)</span> were developed with the intent of being used to understand the <em>structural</em> aspects of food webs, specifically how links are distributed amongst species in the community, whereas bayesian <span class="citation" data-cites="cirtwillQuantitativeFrameworkInvestigating2019">(<a href="#ref-cirtwillQuantitativeFrameworkInvestigating2019" role="doc-biblioref">Cirtwill et al. 2019</a>)</span> or trait hierarchy <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span> models have been developed on the basis that the traits of a species are the underlying mechanism in determining the feasibility of interactions (<em>i.e.,</em> species <span class="math inline">\(a\)</span> has the capacity to eat species <span class="math inline">\(b\)</span>). Along with predicting different anatomical parts of a food web the different models have varying degrees of data that are needed to ‘parametrise’ the network. Once these two limitations are assessed and addressed it is then possible to select the model (or model family) that will best be able to capture food web feature that the researcher is most interested in (see Box 2 - Assessing model outputs). It is thus clear that (realistically) there will probably never be a ‘best fit’ tool that is able to construct a food web that will span the entire range of needs, and rather the responsibility lies with the researcher to be aware of not only the underlying philosophy of the specific toolset (as this could have knock-on effects when using those networks for downstream analyses/simulations; pers. comms. Beckerman, 2024), but also how well the tool is able to retrieve the specific network or interaction properties that is of interest.</p>
 <blockquote class="blockquote">
 <p>In order for a model to formalise a ‘complete’ food web it is necessary to formalise two aspects of the network, ‘who eats whom’ (to determine the links between nodes) as well as the structure of the network (to limit the distribution of links), however most models are inclined to focus on one of the two aspects <a href="#fig-anatomy" class="quarto-xref">panel B of&nbsp;2</a>.</p>
@@ -466,8 +465,8 @@ Figure&nbsp;2: The many ways in which a food web can be defined and described at
 <p>What is the purpose of generating a network? Is it an element of a bigger question we are asking, <em>e.g.,</em> I want to generate a series of networks to do some extinction simulations/bioenergetic stuff OR are we looking for a ‘final product’ network that is relevant to a specific location? (this can still be broad in geographic scope).</p>
 </blockquote>
 </section>
-<section id="model-families" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="model-families"><span class="header-section-number">1.1.2</span> Model families</h3>
+<section id="model-families" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="model-families"><span class="header-section-number">2.2</span> Model families</h2>
 <p>As there are many food web models to choose from it is perhaps useful to think about the models in terms of model families, a summary of these families is presented in <a href="#tbl-families" class="quarto-xref">Table&nbsp;1</a> highlights the differences and similarities of the philosophies and assumptions that determine a network. A more extensive overview of the different models that fall with in the different model families can be found in <a href="https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_descriptions-preview.html">SuppMat 1</a> and for a more detailed breakdown of the different ‘traits’ of the model families refer to <a href="https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_qualitative-preview.html">SuppMat 2</a>.</p>
 <div id="tbl-families" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -590,14 +589,14 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 </div>
 </section>
 </section>
-<section id="how-do-we-use-networks" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="how-do-we-use-networks"><span class="header-section-number">1.2</span> How do we use networks?</h2>
+<section id="how-do-we-use-networks" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> How do we use networks?</h1>
 <blockquote class="blockquote">
 <p>In this section I want to highlight that we don’t actually have any clear guidelines as to how we can ‘use’ networks - which probably stems from both the fact that when I am talking about a networks and when someone else is talking about a network we may actually be talking about two very different conceptualisations of ‘a network’ (this should actually be a selling point in the intro - may have just found my <em>raison d’etre</em>) as well as that a lot of the ideas that we have about networks are not really tied to any sort of tangible function (i.e.&nbsp;Tim’s GeoBon ms thing-y). However we can maybe at least try to present some guidelines - but I think specifically within the sort of Petchy dilemma space and clearly tied to the ideas we discuss in the ms. This includes: understanding the limits of how a network is defined and how the underlying theory impacts the use as well as data?? IDK we need to shoehorn data in here somehow…</p>
 </blockquote>
 </section>
-<section id="concluding-remarks" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="concluding-remarks"><span class="header-section-number">1.3</span> Concluding remarks</h2>
+<section id="concluding-remarks" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Concluding remarks</h1>
 <blockquote class="blockquote">
 <p>I think the idea of time and how we are aggregating networks across that should be a prominent feature here…</p>
 </blockquote>
@@ -639,14 +638,14 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 </ul>
 <p>do we bring this up? this could be a box… if we have the ‘finances’ for it… otherwise it should go to the outstanding questions fur sure</p>
 <p>“That being said, there is a compelling argument for the need to ‘combine’ these smaller functional units with larger spatial networks <span class="citation" data-cites="fortinNetworkEcologyDynamic2021">(<a href="#ref-fortinNetworkEcologyDynamic2021" role="doc-biblioref">Fortin, Dale, and Brimacombe 2021</a>)</span> and that we should also start thinking about the interplay of time and space <span class="citation" data-cites="estayEditorialPatternsProcesses2023">(<a href="#ref-estayEditorialPatternsProcesses2023" role="doc-biblioref">Estay, Fortin, and López 2023</a>)</span>. Although deciding exactly what measure might actually be driving differences between local networks and the regional metaweb might not be that simple <span class="citation" data-cites="saraviaEcologicalNetworkAssembly2022">(<a href="#ref-saraviaEcologicalNetworkAssembly2022" role="doc-biblioref">Saravia et al. 2022</a>)</span>.”</p>
-<section id="time" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="time"><span class="header-section-number">1.3.1</span> Time</h3>
+<section id="time" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="time"><span class="header-section-number">4.1</span> Time</h2>
 <p>We lack a clear agenda (and conceptualisation) as to what the appropriate level of aggregation is for a ‘network’. Realistically most empirical networks are more aligned with ‘feasibility networks’ as opposed to ‘realised networks’ as they are often the result of some sort of aggregation of observations across time. This ‘problem’ is two-fold. Firstly we need to think about how this affects any sort of development of theory that sits closer to the ‘realised network’ side of the spectrum - how often are we trying to ask and answer questions about realised networks using feasible networks? The second is that this lack of ‘direction’ as to how we should define a network is (actually) probably one of the biggest barriers that is affecting the use of networks in applied settings…</p>
 <p>Another time perspective question is when do we determine a link to be ‘real’… In the context of feasible networks this is perhaps clearer - all things equal would the predator be bale to consume the prey. However in the realised space there is also the question of the long term ‘energetic feasibility’ of an interaction - just because an interaction is possible in the now is it able to sustain a population in the long term. And what is the scale for that long term - are we thinking at the generational scale? Because ultimately when we are constructing a network we are aggregating not only across space but also across time.</p>
 </section>
 </section>
-<section id="glossary" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="glossary">Glossary</h2>
+<section id="glossary" class="level1 unnumbered">
+<h1 class="unnumbered">Glossary</h1>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -702,16 +701,16 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 </tbody>
 </table>
 </section>
-<section id="outstanding-questions" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="outstanding-questions">Outstanding questions</h2>
+<section id="outstanding-questions" class="level1 unnumbered">
+<h1 class="unnumbered">Outstanding questions</h1>
 <ul>
 <li><p>non-consumptive effects</p></li>
 <li><p>how do we define the spatial and temporal ‘boundaries’ of a network?</p></li>
 <li><p>how do we define a ‘real’ network?</p></li>
 </ul>
 </section>
-<section id="references" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-beckerOptimisingPredictiveModels2022" class="csl-entry" role="listitem">
 Becker, Daniel J., Gregory F. Albery, Anna R. Sjodin, Timothée Poisot, Laura M. Bergner, Binqi Chen, Lily E. Cohen, et al. 2022. <span>“Optimising Predictive Models to Prioritise Viral Discovery in Zoonotic Reservoirs.”</span> <em>The Lancet Microbe</em> 3 (8): e625–37. <a href="https://doi.org/10.1016/S2666-5247(21)00245-7">https://doi.org/10.1016/S2666-5247(21)00245-7</a>.
@@ -870,7 +869,6 @@ Wootton, Kate L., Alva Curtsdotter, Tomas Roslin, Riccardo Bommarco, and Tomas J
 Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. <span>“Collapse of an Ecological Network in <span>Ancient Egypt</span>.”</span> <em>PNAS</em> 111 (40): 14472–77. <a href="https://doi.org/10.1073/pnas.1408471111">https://doi.org/10.1073/pnas.1408471111</a>.
 </div>
 </div>
-</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{strydom2024,
@@ -1309,7 +1307,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
