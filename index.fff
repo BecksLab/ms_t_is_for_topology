@@ -23,35 +23,3 @@
 defined and described at the node, edge, and even network level.}
 
 \end{figure}
-\efloatseparator
- 
-\begin{figure}
-
-\centering{
-
-\includegraphics{images/dendo.png}
-
-}
-
-\caption{\label{fig-dendro}Dendrogram of the trait table using a
-hierarchical clustering model, This is based off of the traits table in
-SuppMat 2)}
-
-\end{figure}
-\efloatseparator
- 
-\begin{figure}[H]
-
-\centering{
-
-\includegraphics{images/topology.png}
-
-}
-
-\caption{\label{fig-topology}Difference between real and model network
-property. S1 - S5 represent the different motif structures identified in
-Stouffer et al. (2007) which are S1: Number of linear chains, S2: Number
-of omnivory motifs, S4: Number of apparent competition motifs, and S5:
-Number of direct competition motifs}
-
-\end{figure}
