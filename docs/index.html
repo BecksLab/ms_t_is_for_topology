@@ -384,7 +384,7 @@ window.Quarto = {
 <div id="fig-feasibility" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-feasibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept_v2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/concept_v2.png" class="img-fluid figure-img"></a>
+<a href="images/concept_v2.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/concept_v2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feasibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: TODO.
@@ -417,7 +417,7 @@ Box 1 -The anatomy of a food web
 <div id="fig-anatomy" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-anatomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="images/concept_2.png" class="img-fluid figure-img"></a>
+<a href="images/concept_2.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="images/concept_2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anatomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: The many ways in which a food web can be defined and described at the node, edge, and even network level.
@@ -477,21 +477,19 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <div aria-describedby="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Model family</th>
+<th>Assumption</th>
 <th>Theory</th>
-<th>Network predicted</th>
 <th>Nodes represent</th>
-<th>Links represent</th>
 <th>Interaction</th>
 <th>Key reference</th>
 </tr>
@@ -500,101 +498,90 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <tr class="odd">
 <td>null</td>
 <td>Links are randomly distributed within a network</td>
-<td>structural</td>
+<td></td>
 <td>agnostic</td>
-<td>feeding links</td>
 <td>binary</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>neutral</td>
 <td>Network structure is random, but species abundance determines links between nodes</td>
-<td>structural</td>
+<td>abundance</td>
 <td>species</td>
-<td>feeding links</td>
 <td>binary</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>resource</td>
 <td>Networks are interval, species can be ordered on a ‘niche axis’</td>
-<td>structural</td>
+<td></td>
 <td>trophic species</td>
-<td>subdivision of resource</td>
 <td>binary</td>
 <td><span class="citation" data-cites="williamsSuccessItsLimits2008">Williams and Martinez (<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">2008</a>)</span></td>
 </tr>
 <tr class="even">
 <td>generative</td>
 <td>Networks are determined by their structural features</td>
-<td>structural</td>
+<td></td>
 <td>agnostic</td>
-<td>links</td>
 <td>binary</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>energetic</td>
-<td>Interactions are determined by foraging theory (feeding links)</td>
-<td>interaction</td>
+<td>Interactions are determined by energetic costs</td>
+<td>abundance + energy</td>
 <td>species</td>
-<td>feeding links</td>
 <td>quantitative</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>graph embedding</td>
 <td>Interactions can be predicted from the latent traits of networks</td>
-<td>interaction</td>
+<td>feasibility</td>
 <td>species</td>
-<td>potential feeding links</td>
 <td>probabilistic</td>
 <td><span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span></td>
 </tr>
 <tr class="odd">
 <td>trait matching</td>
 <td>Interactions can be inferred by a mechanistic framework/relationships</td>
-<td>interaction</td>
+<td>feasibility</td>
 <td>species</td>
-<td>feeding links</td>
 <td>binary</td>
 <td><span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">Morales-Castilla et al. (<a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">2015</a>)</span></td>
 </tr>
 <tr class="even">
 <td>binary classifiers</td>
 <td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors</td>
-<td>interaction</td>
+<td>feasibility</td>
 <td>species</td>
-<td>feeding links</td>
 <td>binary</td>
 <td><span class="citation" data-cites="pichlerMachineLearningAlgorithms2020">Pichler et al. (<a href="#ref-pichlerMachineLearningAlgorithms2020" role="doc-biblioref">2020</a>)</span></td>
 </tr>
 <tr class="odd">
 <td>expert knowledge</td>
 <td>‘Boots on the ground’ ecological knowledge and observations</td>
-<td>interaction</td>
+<td>feasibility</td>
 <td>species</td>
-<td>feeding links</td>
 <td>binary</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>data scavenging</td>
 <td>Webscraping to create networks from online databases</td>
-<td>interaction</td>
+<td></td>
 <td>species</td>
-<td>feeding links</td>
 <td>binary</td>
 <td><span class="citation" data-cites="poisotSyntheticDatasetsCommunity2016">Poisot, Gravel, et al. (<a href="#ref-poisotSyntheticDatasetsCommunity2016" role="doc-biblioref">2016</a>)</span> (f you squint?)</td>
 </tr>
 <tr class="odd">
 <td>co-occurrence</td>
 <td>co-occurrence patterns arise from interactions so we can use these patterns to reverse engineer the interactions</td>
-<td>co-occurrence patterns</td>
+<td>co-occurence</td>
 <td>species</td>
-<td>association links</td>
 <td>binary</td>
-<td><span class="citation" data-cites="kuschEcologicalNetworkInference2023">Kusch et al. (<a href="#ref-kuschEcologicalNetworkInference2023" role="doc-biblioref">2023</a>)</span> (although more plant-plant <em>i.e.</em> non-trophic…)</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -794,9 +781,6 @@ Jordano, Pedro. 2016a. <span>“Chasing <span>Ecological Interactions</span>.”
 </div>
 <div id="ref-jordanoSamplingNetworksEcological2016" class="csl-entry" role="listitem">
 ———. 2016b. <span>“Sampling Networks of Ecological Interactions.”</span> <em>Functional Ecology</em>, September. <a href="https://doi.org/10.1111/1365-2435.12763">https://doi.org/10.1111/1365-2435.12763</a>.
-</div>
-<div id="ref-kuschEcologicalNetworkInference2023" class="csl-entry" role="listitem">
-Kusch, Erik, Malyon Bimler, James A. Lutz, and Alejandro Ordonez. 2023. <span>“Ecological Network Inference Is Not Consistent Across Scales or Approaches.”</span> bioRxiv. <a href="https://doi.org/10.1101/2023.07.13.548816">https://doi.org/10.1101/2023.07.13.548816</a>.
 </div>
 <div id="ref-lindemanTrophicDynamicAspectEcology1942" class="csl-entry" role="listitem">
 Lindeman, Raymond L. 1942. <span>“The <span>Trophic-Dynamic Aspect</span> of <span>Ecology</span>.”</span> <em>Ecology</em> 23 (4): 399–417. <a href="https://doi.org/10.2307/1930126">https://doi.org/10.2307/1930126</a>.
@@ -1296,7 +1280,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

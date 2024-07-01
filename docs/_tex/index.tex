@@ -456,7 +456,7 @@ cost of movement \emph{i.e.,} the physical constraints that the
 environment imposes on a species\ldots{} Maybe we can also think of it
 more in terms of metabolic rate?
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 -The anatomy of a food web}, rightrule=.15mm, breakable, titlerule=0mm, left=2mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm, toprule=.15mm, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, colframe=quarto-callout-note-color-frame, breakable, bottomrule=.15mm, leftrule=.75mm, bottomtitle=1mm, colback=white, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, toptitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 -The anatomy of a food web}, left=2mm, toprule=.15mm, rightrule=.15mm, arc=.35mm, opacitybacktitle=0.6]
 
 \begin{quote}
 Important goal of this box is to highlight the different terminology
@@ -738,13 +738,12 @@ model families refer to
 2}.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1571}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1571}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2143}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1571}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1571}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1571}}@{}}
 \caption{A summary of the different families of tools that can be used
 to generate food webs, this includes a brief description of the
 underlying philosophy of the family as well as how the different
@@ -754,13 +753,11 @@ represents.}\label{tbl-families}\tabularnewline
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Assumption
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Network predicted
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Nodes represent
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Links represent
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -772,13 +769,11 @@ Key reference
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Assumption
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Network predicted
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Nodes represent
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Links represent
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Interaction
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -788,36 +783,32 @@ Key reference
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Links are randomly distributed within a network & structural &
-agnostic & feeding links & binary & \\
+null & Links are randomly distributed within a network & & agnostic &
+binary & \\
 neutral & Network structure is random, but species abundance determines
-links between nodes & structural & species & feeding links & binary & \\
+links between nodes & abundance & species & binary & \\
 resource & Networks are interval, species can be ordered on a `niche
-axis' & structural & trophic species & subdivision of resource & binary
-& Williams \& Martinez (2008) \\
-generative & Networks are determined by their structural features &
-structural & agnostic & links & binary & \\
-energetic & Interactions are determined by foraging theory (feeding
-links) & interaction & species & feeding links & quantitative & \\
+axis' & & trophic species & binary & Williams \& Martinez (2008) \\
+generative & Networks are determined by their structural features & &
+agnostic & binary & \\
+energetic & Interactions are determined by energetic costs & abundance +
+energy & species & quantitative & \\
 graph embedding & Interactions can be predicted from the latent traits
-of networks & interaction & species & potential feeding links &
-probabilistic & Strydom et al. (2023) \\
+of networks & feasibility & species & probabilistic & Strydom et al.
+(2023) \\
 trait matching & Interactions can be inferred by a mechanistic
-framework/relationships & interaction & species & feeding links & binary
-& Morales-Castilla et al. (2015) \\
+framework/relationships & feasibility & species & binary &
+Morales-Castilla et al. (2015) \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
-interaction & species & feeding links & binary & Pichler et al.
-(2020) \\
+feasibility & species & binary & Pichler et al. (2020) \\
 expert knowledge & `Boots on the ground' ecological knowledge and
-observations & interaction & species & feeding links & binary & \\
+observations & feasibility & species & binary & \\
 data scavenging & Webscraping to create networks from online databases &
-interaction & species & feeding links & binary & Poisot, Gravel, et al.
-(2016) (f you squint?) \\
+& species & binary & Poisot, Gravel, et al. (2016) (f you squint?) \\
 co-occurrence & co-occurrence patterns arise from interactions so we can
-use these patterns to reverse engineer the interactions & co-occurrence
-patterns & species & association links & binary & Kusch et al. (2023)
-(although more plant-plant \emph{i.e.} non-trophic\ldots) \\
+use these patterns to reverse engineer the interactions & co-occurence &
+species & binary & \\
 \end{longtable}
 
 \subsection{How do we use networks?}\label{how-do-we-use-networks}
@@ -1198,12 +1189,6 @@ Biology}, \emph{14}(9), e1002559.
 \bibitem[\citeproctext]{ref-jordanoSamplingNetworksEcological2016}
 Jordano, P. (2016b). Sampling networks of ecological interactions.
 \emph{Functional Ecology}. \url{https://doi.org/10.1111/1365-2435.12763}
-
-\bibitem[\citeproctext]{ref-kuschEcologicalNetworkInference2023}
-Kusch, E., Bimler, M., Lutz, J. A., \& Ordonez, A. (2023).
-\emph{Ecological network inference is not consistent across scales or
-approaches} (p. 2023.07.13.548816). bioRxiv.
-\url{https://doi.org/10.1101/2023.07.13.548816}
 
 \bibitem[\citeproctext]{ref-lindemanTrophicDynamicAspectEcology1942}
 Lindeman, R. L. (1942). The {Trophic-Dynamic Aspect} of {Ecology}.
