@@ -113,7 +113,7 @@ The ingredients one uses to construct networks from nodes and edges generates a 
 Before thinking about the ways in which we can predict networks it is perhaps meaningful to take a step back and think about the different criteria that must be met in order for an interaction to be able to occur between two species, specifically thinking of this in terms of distinguishing between the feasibility versus realisation of an interaction and how these are determined (and defined by) different 'rules'/mechanisms. If we look at this feasibility-reality continuum (@fig-feasibility) it is clear how the different predictive approaches (methods) tend to fall within one of the broader categories identified (distinguished) in the triangle. This is not to say that this shortcoming should be viewed as a 'bug' but rather a 'feature' of the field as it allows one to engage with, as well as construct networks at different scales, which is particularly valuable if one takes into consideration the considerable 'data cost' of predicting well resolved, realised networks in comparison to constructing high-level metawebs. However, it is important that there is an awareness and acknowledgement of where within this feasibility-reality one is working at and how this will impact and limit the contexts in which the resulting network can be used and applied within.
 :::
 
-## Network prediction is scale dependant
+# Network prediction is scale dependant
 
 > The way in which we predict a network is driven by the underlying theory [@fig-feasibility] which constrains or informs the assumptions we make (this of course also has implications with regards to how the resulting network is defined (Box 1)). We can then spend a moment introducing the different model families [@tbl-families]. I think a clear messaging here might be that models can share a similar underlying theory but use different methods to get there (*e.g.,* using ecological rules (explicit), ecological expectations (pattern finders), or mathematical models (assumptions on the structure of the matrix - maybe even network)). Importantly different models will also have different 'limits' to them - this is probably a product of both where they are found within the 'theory space' [@fig-feasibility] as well as the definition of the network (Box 1) space. Should we also maybe revisit the idea of interaction vs structure predictors... I think it is still a point that is owrth raising but no longer the framework on which we hanf the different model families...
 
@@ -131,7 +131,7 @@ As discussed in Box 1 there are many ways to define a food web, meaning that the
 
 It is perhaps more important that when one is talking about 'why' they want to predict networks to articulate exactly what anatomical part of the food web we are interested in scrutinising.
 
-### How do we predict food webs? {#sec-network-build}
+## How do we predict food webs? {#sec-network-build}
 
 Selecting a model for the task of network prediction should come down to two things; what *aspect* of a food web one is interested in predicting, and what data are available, necessary, and sufficient. As shown in panel B of @fig-anatomy the interest in a network is (usually) at either the 'structural' or 'interaction' level and the development of models for the task of network prediction often focus on high fidelity (performance) at one of these scales. With this in mind it is beneficial to think of the different model families relative to these two different goals; here we refer to models that are used to predict the structure of a network as **topology generators** and models developed to infer the interactions for a given species pool as **interaction predictors**. It is meaningful to make this distinction because although it is possible to construct a food web given using an *interaction predictor* the models themselves lack any sort of parametrisation of the network structure and so the resulting network is a poor reflection of the actual network structure [@caronTraitmatchingModelsPredict2024]. This is primarily because *interaction predictors* are models that evaluate the feasibility of an interaction between species pairs and not in the context of feasibility at the community level. Models themselves are a reflection of the different goals and intentions of the research program from which they are developed and are often 'described' by a specific mechanism that will determine the resulting structure or interactions (Box 1). Models such as the niche [@williamsSimpleRulesYield2000] or cascade [@cohenCommunityFoodWebs1990] were developed with the intent of being used to understand the *structural* aspects of food webs, specifically how links are distributed amongst species in the community, whereas bayesian [@cirtwillQuantitativeFrameworkInvestigating2019] or trait hierarchy [@shawFrameworkReconstructingAncient2024] models have been developed on the basis that the traits of a species are the underlying mechanism in determining the feasibility of interactions (*i.e.,* species $a$ has the capacity to eat species $b$). Along with predicting different anatomical parts of a food web the different models have varying degrees of data that are needed to 'parametrise' the network. Once these two limitations are assessed and addressed it is then possible to select the model (or model family) that will best be able to capture food web feature that the researcher is most interested in (see Box 2 - Assessing model outputs). It is thus clear that (realistically) there will probably never be a 'best fit' tool that is able to construct a food web that will span the entire range of needs, and rather the responsibility lies with the researcher to be aware of not only the underlying philosophy of the specific toolset (as this could have knock-on effects when using those networks for downstream analyses/simulations; pers. comms. Beckerman, 2024), but also how well the tool is able to retrieve the specific network or interaction properties that is of interest.
 
@@ -141,7 +141,7 @@ Selecting a model for the task of network prediction should come down to two thi
 
 > What is the purpose of generating a network? Is it an element of a bigger question we are asking, *e.g.,* I want to generate a series of networks to do some extinction simulations/bioenergetic stuff OR are we looking for a 'final product' network that is relevant to a specific location? (this can still be broad in geographic scope).
 
-### Model families
+## Model families
 
 As there are many food web models to choose from it is perhaps useful to think about the models in terms of model families, a summary of these families is presented in @tbl-families highlights the differences and similarities of the philosophies and assumptions that determine a network. A more extensive overview of the different models that fall with in the different model families can be found in [SuppMat 1](https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_descriptions-preview.html) and for a more detailed breakdown of the different 'traits' of the model families refer to [SuppMat 2](https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_qualitative-preview.html).
 
@@ -161,11 +161,11 @@ As there are many food web models to choose from it is perhaps useful to think a
 
 : A summary of the different families of tools that can be used to generate food webs, this includes a brief description of the underlying philosophy of the family as well as how the different elements (nodes and edges) of the generated network represents. {#tbl-families}
 
-## How do we use networks?
+# How do we use networks?
 
 > In this section I want to highlight that we don't actually have any clear guidelines as to how we can 'use' networks - which probably stems from both the fact that when I am talking about a networks and when someone else is talking about a network we may actually be talking about two very different conceptualisations of 'a network' (this should actually be a selling point in the intro - may have just found my *raison d'etre*) as well as that a lot of the ideas that we have about networks are not really tied to any sort of tangible function (i.e. Tim's GeoBon ms thing-y). However we can maybe at least try to present some guidelines - but I think specifically within the sort of Petchy dilemma space and clearly tied to the ideas we discuss in the ms. This includes: understanding the limits of how a network is defined and how the underlying theory impacts the use as well as data?? IDK we need to shoehorn data in here somehow...
 
-## Concluding remarks
+# Concluding remarks
 
 > I think the idea of time and how we are aggregating networks across that should be a prominent feature here...
 
@@ -205,13 +205,13 @@ do we bring this up? this could be a box... if we have the 'finances' for it... 
 
 "That being said, there is a compelling argument for the need to 'combine' these smaller functional units with larger spatial networks [@fortinNetworkEcologyDynamic2021] and that we should also start thinking about the interplay of time and space [@estayEditorialPatternsProcesses2023]. Although deciding exactly what measure might actually be driving differences between local networks and the regional metaweb might not be that simple [@saraviaEcologicalNetworkAssembly2022]."
 
-### Time
+## Time
 
 We lack a clear agenda (and conceptualisation) as to what the appropriate level of aggregation is for a 'network'. Realistically most empirical networks are more aligned with 'feasibility networks' as opposed to 'realised networks' as they are often the result of some sort of aggregation of observations across time. This 'problem' is two-fold. Firstly we need to think about how this affects any sort of development of theory that sits closer to the 'realised network' side of the spectrum - how often are we trying to ask and answer questions about realised networks using feasible networks? The second is that this lack of 'direction' as to how we should define a network is (actually) probably one of the biggest barriers that is affecting the use of networks in applied settings...
 
 Another time perspective question is when do we determine a link to be 'real'... In the context of feasible networks this is perhaps clearer - all things equal would the predator be bale to consume the prey. However in the realised space there is also the question of the long term 'energetic feasibility' of an interaction - just because an interaction is possible in the now is it able to sustain a population in the long term. And what is the scale for that long term - are we thinking at the generational scale? Because ultimately when we are constructing a network we are aggregating not only across space but also across time.
 
-## Glossary {.unnumbered}
+# Glossary {.unnumbered}
 
 | Term                   | Definition                                                                                                                                                                                                                                                                                                      |
 |------------------------------------|------------------------------------|
@@ -226,7 +226,7 @@ Another time perspective question is when do we determine a link to be 'real'...
 | realised feeding link  | links that indicate that the interaction is realised 'in the field'. (a realised network contains realised feeding links)                                                                                                                                                                                       |
 | confusion matrix       | captures the number of true positives (interaction predicted as present when it is present), false negatives (interaction predicted as absent when it is present), false positives (interaction predicted as present when it is absent), and true negatives (interaction predicted as absent when it is absent) |
 
-## Outstanding questions {.unnumbered}
+# Outstanding questions {.unnumbered}
 
 -   non-consumptive effects
 
@@ -234,7 +234,7 @@ Another time perspective question is when do we determine a link to be 'real'...
 
 -   how do we define a 'real' network?
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::
