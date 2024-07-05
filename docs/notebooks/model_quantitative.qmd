@@ -84,7 +84,7 @@ For 'structure':
 
 -   **Structure:** to determine if we are capturing some higher level of 'structure' we are using SVD entropy [@strydomSVDEntropyReveals2021]
 
--   *Motifs:* We can estract the motifs identified by @stoufferEvidenceExistenceRobust2007, namely:
+-   *Motifs:* We can extract the motifs [@miloNetworkMotifsSimple2002; @stoufferEvidenceExistenceRobust2007], namely:
 
     -   S1: Number of linear chains
 
