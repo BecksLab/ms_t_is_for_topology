@@ -78,4 +78,4 @@ ggplot(df %>%
     theme(panel.border = element_rect(colour = 'black',
                                       fill = "#ffffff00"))
 
-ggsave("./images/topology.png")
+ggsave("../images/topology.png")
