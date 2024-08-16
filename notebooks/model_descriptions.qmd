@@ -91,6 +91,8 @@ Trying to infer interactions from the co-occurrence patterns of species pairs wi
 
 @ovaskainenUsingLatentVariable2016
 
+**Expectation-maximisation (EM) algorithms** [@momalTreebasedInferenceSpecies2020]: 
+
 ## References {.unnumbered}
 
 ::: {#refs}
