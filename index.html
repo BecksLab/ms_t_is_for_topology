@@ -10,7 +10,7 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-08-13">
+<meta name="dcterms.date" content="2024-08-16">
 <meta name="keywords" content="food web, network construction, scientific ignorance">
 
 <title>Navigating food web prediction; assumptions, rationale, and methods</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-08-13">
-<meta name="citation_cover_date" content="2024-08-13">
+<meta name="citation_publication_date" content="2024-08-16">
+<meta name="citation_cover_date" content="2024-08-16">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-08-13">
+<meta name="citation_online_date" content="2024-08-16">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="TREE (one can dream...)">
 <meta name="citation_reference" content="citation_title=A novel method for predicting ecological interactions with an unsupervised machine learning algorithm;,citation_abstract=This gap in knowledge regarding ecological interactions has prompted the development of various predictive approaches. Traditionally, ecological interactions have been inferred using traits. However, the lack of trait information for numerous organisms necessitates using phylogenetic data and statistical insights from interaction matrices for prediction. Previous studies have overlooked the validation of model-predicted interactions. This study used a novel method in predicting ecological interactions using a self-organizing map (SOM), an unsupervised machine learning algorithm. The SOM learns from the input interaction matrix by grouping the nodes into output layers based on their interactions. Subsequently, the trained model predicts the interactions as scores. To distinguish between interactions and non-interactions, we employed F1 score maximization, setting scores above a specific threshold as interactions and the remainder as non-interactions. We applied this method to three unipartite metawebs and one bipartite metaweb and subsequently validated the predicted interactions using two innovative approaches: taxonomic and interaction recovery validation. Our method exhibited outstanding predictive performance, particularly for large networks. Various binary classification performance indicators, including F1 score (0.84–0.97) and accuracy (0.97–0.99), indicated high performance. Moreover, the method generated minimal predicted interactions, signifying low noise in the predictions, particularly for large networks. Taxonomic validation excels in metawebs with a connectance $&amp;amp;amp;gt;$0.1 but performs poorly in metawebs with very low connectance. In contrast, interaction recovery was most effective in larger metawebs. Our proposed method excels at making highly accurate predictions of ecological interactions with minimal noise, solely utilizing input interaction data without relying on traits or phylogenetic information regarding interacting nodes. These predictions are particularly precise for large networks, underscoring their potential to address knowledge gaps in emerging extensive metawebs. Notably, taxonomic validation and interaction recovery methods are sensitive to connectance and network size, respectively, suggesting prospects for developing robust interaction validation methods.;,citation_author=Sagar Adhurya;,citation_author=Young-Seuk Park;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=n/a;,citation_doi=10.1111/2041-210X.14358;,citation_issn=2041-210X;,citation_volume=n/a;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
@@ -195,6 +195,7 @@ window.Quarto = {
 <meta name="citation_reference" content="citation_title=Comparison of the predicted and observed secondary structure of T4 phage lysozyme;,citation_abstract=Predictions of the secondary structure of T4 phage lysozyme, made by a number of investigators on the basis of the amino acid sequence, are compared with the structure of the protein determined experimentally by X-ray crystallography. Within the amino terminal half of the molecule the locations of helices predicted by a number of methods agree moderately well with the observed structure, however within the carboxyl half of the molecule the overall agreement is poor. For eleven different helix predictions, the coefficients giving the correlation between prediction and observation range from 0.14 to 0.42. The accuracy of the predictions for both $\beta$-sheet regions and for turns are generally lower than for the helices, and in a number of instances the agreement between prediction and observation is no better than would be expected for a random selection of residues. The structural predictions for T4 phage lysozyme are much less successful than was the case for adenylate kinase (Schulz et al. (1974) Nature 250, 140–142). No one method of prediction is clearly superior to all others, and although empirical predictions based on larger numbers of known protein structure tend to be more accurate than those based on a limited sample, the improvement in accuracy is not dramatic, suggesting that the accuracy of current empirical predictive methods will not be substantially increased simply by the inclusion of more data from additional protein structure determinations.;,citation_author=B. W. Matthews;,citation_publication_date=1975-10;,citation_cover_date=1975-10;,citation_year=1975;,citation_issue=2;,citation_doi=10.1016/0005-2795(75)90109-9;,citation_issn=0005-2795;,citation_volume=405;,citation_journal_title=Biochimica et Biophysica Acta (BBA) - Protein Structure;">
 <meta name="citation_reference" content="citation_title=Analysis of Ecological Communities;,citation_author=Bruce McCune;,citation_author=James Grace;,citation_publication_date=2002;,citation_cover_date=2002;,citation_year=2002;,citation_isbn=0-9721290-0-6;">
 <meta name="citation_reference" content="citation_title=Network Motifs: Simple Building Blocks of Complex Networks;,citation_abstract=Complex networks are studied across many fields of science. To uncover their structural design principles, we defined “network motifs,” patterns of interconnections occurring in complex networks at numbers that are significantly higher than those in randomized networks. We found such motifs in networks from biochemistry, neurobiology, ecology, and engineering. The motifs shared by ecological food webs were distinct from the motifs shared by the genetic networks of Escherichia coli and Saccharomyces cerevisiae or from those found in the World Wide Web. Similar motifs were found in networks that perform information processing, even though they describe elements as different as biomolecules within a cell and synaptic connections between neurons in Caenorhabditis elegans. Motifs may thus define universal classes of networks. This approach may uncover the basic building blocks of most networks.;,citation_author=R. Milo;,citation_author=S. Shen-Orr;,citation_author=S. Itzkovitz;,citation_author=N. Kashtan;,citation_author=D. Chklovskii;,citation_author=U. Alon;,citation_publication_date=2002-10;,citation_cover_date=2002-10;,citation_year=2002;,citation_issue=5594;,citation_doi=10.1126/science.298.5594.824;,citation_volume=298;,citation_journal_title=Science;,citation_publisher=American Association for the Advancement of Science;">
+<meta name="citation_reference" content="citation_title=Tree-based inference of species interaction networks from abundance data;,citation_abstract=The behaviour of ecological systems mainly relies on the interactions between the species it involves. We consider the problem of inferring the species interaction network from abundance data. To be relevant, any network inference methodology needs to handle count data and to account for possible environmental effects. It also needs to distinguish between direct interactions and indirect associations and graphical models provide a convenient framework for this purpose. A simulation study shows that the proposed methodology compares well with state-of-the-art approaches, even when the underlying graph strongly differs from a tree. The analysis of two datasets highlights the influence of covariates on the inferred network. Accounting for covariates is critical to avoid spurious edges. The proposed approach could be extended to perform network comparison or to look for missing species.;,citation_author=Raphaëlle Momal;,citation_author=Stéphane Robin;,citation_author=Christophe Ambroise;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_issue=5;,citation_doi=10.1111/2041-210X.13380;,citation_issn=2041-210X;,citation_volume=11;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
 <meta name="citation_reference" content="citation_title=Inferring biotic interactions from proxies;,citation_abstract=Inferring biotic interactions from functional, phylogenetic and geographical proxies remains one great challenge in ecology. We propose a conceptual framework to infer the backbone of biotic interaction networks within regional species pools. First, interacting groups are identified to order links and remove forbidden interactions between species. Second, additional links are removed by examination of the geographical context in which species co-occur. Third, hypotheses are proposed to establish interaction probabilities between species. We illustrate the framework using published food-webs in terrestrial and marine systems. We conclude that preliminary descriptions of the web of life can be made by careful integration of data with theory.;,citation_author=Ignacio Morales-Castilla;,citation_author=Miguel G. Matias;,citation_author=Dominique Gravel;,citation_author=Miguel B. Araújo;,citation_publication_date=2015-06;,citation_cover_date=2015-06;,citation_year=2015;,citation_issue=6;,citation_doi=10.1016/j.tree.2015.03.014;,citation_volume=30;,citation_journal_title=Trends in Ecology &amp;amp;amp; Evolution;">
 <meta name="citation_reference" content="citation_title=Networks. An introduction;,citation_author=Mark E. J. Newman;,citation_publication_date=2010;,citation_cover_date=2010;,citation_year=2010;">
 <meta name="citation_reference" content="citation_title=Natural - synthetic - artificial!;,citation_abstract=The terms “natural, “synthetic” and “artificial” are discussed in relation to synthetic and artificial chromosomes and genomes, synthetic and artificial cells and artificial life.;,citation_author=Peter E. Nielsen;,citation_publication_date=2010-07;,citation_cover_date=2010-07;,citation_year=2010;,citation_issue=1;,citation_doi=10.4161/adna.1.1.12934;,citation_issn=1949-095X;,citation_pmid=21687528;,citation_volume=1;,citation_journal_title=Artificial DNA: PNA &amp;amp;amp; XNA;,citation_publisher=Taylor &amp;amp; Francis;">
@@ -317,7 +318,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">August 13, 2024</p>
+              <p class="date">August 16, 2024</p>
             </div>
           </div>
           
@@ -482,14 +483,13 @@ Figure&nbsp;2: The many ways in which a food web can be defined and described at
 <div id="tbl-families" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: A summary of the different families of tools that can be used to generate food webs, this includes a brief description of the underlying philosophy of the family as well as how the different elements (nodes and edges) of the generated network represents.
+Table&nbsp;1: A summary of the different families of tools that can be used to generate food webs. Here ‘type’ leans on the ideas from <span class="citation" data-cites="momalTreebasedInferenceSpecies2020">Momal, Robin, and Ambroise (<a href="#ref-momalTreebasedInferenceSpecies2020" role="doc-biblioref">2020</a>)</span> in terms of reconstructing networks from other known (observed) interactions and inferring interactions without relying on observed interactions.
 </figcaption>
 <div aria-describedby="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 18%">
+<col style="width: 31%">
 <col style="width: 16%">
 <col style="width: 16%">
 <col style="width: 16%">
@@ -499,8 +499,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <th>Model family</th>
 <th>Assumption</th>
 <th>Theory</th>
-<th>Nodes represent</th>
-<th>Interaction</th>
+<th>Type</th>
 <th>Key reference</th>
 </tr>
 </thead>
@@ -509,88 +508,77 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>null</td>
 <td>Links are randomly distributed within a network</td>
 <td></td>
-<td>agnostic</td>
-<td>binary</td>
+<td>network inference</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>neutral</td>
 <td>Network structure is random, but species abundance determines links between nodes</td>
 <td>abundance</td>
-<td>species</td>
-<td>binary</td>
+<td>network inference</td>
 <td><span class="citation" data-cites="canardEmergenceStructuralPatterns2012">Canard et al. (<a href="#ref-canardEmergenceStructuralPatterns2012" role="doc-biblioref">2012</a>)</span></td>
 </tr>
 <tr class="odd">
 <td>resource</td>
 <td>Networks are interval, species can be ordered on a ‘niche axis’</td>
 <td></td>
-<td>trophic species</td>
-<td>binary</td>
+<td>network inference</td>
 <td><span class="citation" data-cites="williamsSuccessItsLimits2008">Williams and Martinez (<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">2008</a>)</span></td>
 </tr>
 <tr class="even">
 <td>generative</td>
 <td>Networks are determined by their structural features</td>
 <td></td>
-<td>agnostic</td>
-<td>binary</td>
+<td>network reconstruction</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>energetic</td>
 <td>Interactions are determined by energetic costs</td>
 <td>abundance + energy</td>
-<td>species</td>
-<td>quantitative</td>
+<td>network reconstruction</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>graph embedding</td>
 <td>Interactions can be predicted from the latent traits of networks</td>
 <td>feasibility</td>
-<td>species</td>
-<td>probabilistic</td>
+<td>network reconstruction</td>
 <td><span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span></td>
 </tr>
 <tr class="odd">
 <td>trait matching</td>
 <td>Interactions can be inferred by a mechanistic framework/relationships</td>
 <td>feasibility</td>
-<td>species</td>
-<td>binary</td>
+<td>network reconstruction</td>
 <td><span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">Morales-Castilla et al. (<a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">2015</a>)</span></td>
 </tr>
 <tr class="even">
 <td>binary classifiers</td>
 <td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors</td>
 <td>feasibility</td>
-<td>species</td>
-<td>binary</td>
+<td>network reconstruction</td>
 <td><span class="citation" data-cites="pichlerMachineLearningAlgorithms2020">Pichler et al. (<a href="#ref-pichlerMachineLearningAlgorithms2020" role="doc-biblioref">2020</a>)</span></td>
 </tr>
 <tr class="odd">
 <td>expert knowledge</td>
 <td>‘Boots on the ground’ ecological knowledge and observations</td>
 <td>feasibility</td>
-<td>species</td>
-<td>binary</td>
+<td>network reconstruction</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>data scavenging</td>
 <td>Webscraping to create networks from online databases</td>
 <td></td>
-<td>species</td>
-<td>binary</td>
+<td>network reconstruction</td>
 <td><span class="citation" data-cites="poisotSyntheticDatasetsCommunity2016">Poisot, Gravel, et al. (<a href="#ref-poisotSyntheticDatasetsCommunity2016" role="doc-biblioref">2016</a>)</span> (f you squint?)</td>
 </tr>
 <tr class="odd">
 <td>co-occurrence</td>
 <td>co-occurrence patterns arise from interactions so we can use these patterns to reverse engineer the interactions</td>
-<td>co-occurence</td>
-<td>species</td>
-<td>binary</td>
+<td>co-occurrence</td>
+<td>network inference</td>
 <td></td>
 </tr>
 </tbody>
@@ -804,6 +792,9 @@ Jordano, Pedro. 2016a. <span>“Chasing <span>Ecological Interactions</span>.”
 <div id="ref-lindemanTrophicDynamicAspectEcology1942" class="csl-entry" role="listitem">
 Lindeman, Raymond L. 1942. <span>“The <span>Trophic-Dynamic Aspect</span> of <span>Ecology</span>.”</span> <em>Ecology</em> 23 (4): 399–417. <a href="https://doi.org/10.2307/1930126">https://doi.org/10.2307/1930126</a>.
 </div>
+<div id="ref-momalTreebasedInferenceSpecies2020" class="csl-entry" role="listitem">
+Momal, Raphaëlle, Stéphane Robin, and Christophe Ambroise. 2020. <span>“Tree-Based Inference of Species Interaction Networks from Abundance Data.”</span> <em>Methods in Ecology and Evolution</em> 11 (5): 621–32. <a href="https://doi.org/10.1111/2041-210X.13380">https://doi.org/10.1111/2041-210X.13380</a>.
+</div>
 <div id="ref-morales-castillaInferringBioticInteractions2015" class="csl-entry" role="listitem">
 Morales-Castilla, Ignacio, Miguel G. Matias, Dominique Gravel, and Miguel B. Araújo. 2015. <span>“Inferring Biotic Interactions from Proxies.”</span> <em>Trends in Ecology &amp; Evolution</em> 30 (6): 347–56. <a href="https://doi.org/10.1016/j.tree.2015.03.014">https://doi.org/10.1016/j.tree.2015.03.014</a>.
 </div>
@@ -896,14 +887,14 @@ Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. K
     and P. Beckerman, Andrew},
   title = {Navigating Food Web Prediction; Assumptions, Rationale, and
     Methods},
-  date = {2024-08-13},
+  date = {2024-08-16},
   langid = {en},
   abstract = {TODO}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-strydom2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
 Beckerman. 2024. <span>“Navigating Food Web Prediction; Assumptions,
-Rationale, and Methods.”</span> TREE (One Can Dream...). August 13,
+Rationale, and Methods.”</span> TREE (One Can Dream...). August 16,
 2024.
 </div></div></section></div></main>
 <!-- /main column -->
@@ -1328,7 +1319,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
