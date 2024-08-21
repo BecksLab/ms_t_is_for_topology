@@ -47,7 +47,7 @@ keywords:
   - network construction
   - scientific ignorance
 abstract: |
-  TODO
+  New perspective on key aim is to showcase how the SuperTriangle represents a synthesis across scales and mechanisms, how this underpins differences in concepts and methods, and how it ultimately defines how to answer fundamental questions and at what scale+type of modelling we need to focus on to advance networks into valuable predictive ecology.
 date: last-modified
 bibliography: references.bib
 citation:
