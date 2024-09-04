@@ -10,10 +10,10 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-08-21">
+<meta name="dcterms.date" content="2024-09-04">
 <meta name="keywords" content="food web, network construction, scientific ignorance">
 
-<title>Navigating food web prediction; assumptions, rationale, and methods</title>
+<title>Unveiling the Complexity of Food Webs: A Comprehensive Overview of Definitions, Scales, and Mechanisms</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -99,7 +99,7 @@ window.Quarto = {
 };
 </script>
 
-<meta name="citation_title" content="Navigating food web prediction; assumptions, rationale, and methods">
+<meta name="citation_title" content="Unveiling the Complexity of Food Webs: A Comprehensive Overview of Definitions, Scales, and Mechanisms">
 <meta name="citation_abstract" content="New perspective on key aim is to showcase how the SuperTriangle represents a synthesis across scales and mechanisms, how this underpins differences in concepts and methods, and how it ultimately defines how to answer fundamental questions and at what scale+type of modelling we need to focus on to advance networks into valuable predictive ecology.
 ">
 <meta name="citation_keywords" content="food web,network construction,scientific ignorance">
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-08-21">
-<meta name="citation_cover_date" content="2024-08-21">
+<meta name="citation_publication_date" content="2024-09-04">
+<meta name="citation_cover_date" content="2024-09-04">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-08-21">
+<meta name="citation_online_date" content="2024-09-04">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="TREE (one can dream...)">
 <meta name="citation_reference" content="citation_title=A novel method for predicting ecological interactions with an unsupervised machine learning algorithm;,citation_abstract=This gap in knowledge regarding ecological interactions has prompted the development of various predictive approaches. Traditionally, ecological interactions have been inferred using traits. However, the lack of trait information for numerous organisms necessitates using phylogenetic data and statistical insights from interaction matrices for prediction. Previous studies have overlooked the validation of model-predicted interactions. This study used a novel method in predicting ecological interactions using a self-organizing map (SOM), an unsupervised machine learning algorithm. The SOM learns from the input interaction matrix by grouping the nodes into output layers based on their interactions. Subsequently, the trained model predicts the interactions as scores. To distinguish between interactions and non-interactions, we employed F1 score maximization, setting scores above a specific threshold as interactions and the remainder as non-interactions. We applied this method to three unipartite metawebs and one bipartite metaweb and subsequently validated the predicted interactions using two innovative approaches: taxonomic and interaction recovery validation. Our method exhibited outstanding predictive performance, particularly for large networks. Various binary classification performance indicators, including F1 score (0.84–0.97) and accuracy (0.97–0.99), indicated high performance. Moreover, the method generated minimal predicted interactions, signifying low noise in the predictions, particularly for large networks. Taxonomic validation excels in metawebs with a connectance &amp;amp;amp;gt;0.1 but performs poorly in metawebs with very low connectance. In contrast, interaction recovery was most effective in larger metawebs. Our proposed method excels at making highly accurate predictions of ecological interactions with minimal noise, solely utilizing input interaction data without relying on traits or phylogenetic information regarding interacting nodes. These predictions are particularly precise for large networks, underscoring their potential to address knowledge gaps in emerging extensive metawebs. Notably, taxonomic validation and interaction recovery methods are sensitive to connectance and network size, respectively, suggesting prospects for developing robust interaction validation methods.;,citation_author=Sagar Adhurya;,citation_author=Young-Seuk Park;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=n/a;,citation_doi=10.1111/2041-210X.14358;,citation_issn=2041-210X;,citation_volume=n/a;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
@@ -265,7 +265,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Navigating food web prediction; assumptions, rationale, and methods</h1>
+      <h1 class="title">Unveiling the Complexity of Food Webs: A Comprehensive Overview of Definitions, Scales, and Mechanisms</h1>
           </div>
 
     
@@ -318,7 +318,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">August 21, 2024</p>
+              <p class="date">September 4, 2024</p>
             </div>
           </div>
           
@@ -382,7 +382,7 @@ window.Quarto = {
 
 
 <blockquote class="blockquote">
-<p>key ‘aim’ is to highlight how we need to think of interactions at scales and the same goes fro predicting. this is important because it will influence the we way in which we are actually able to ude a network</p>
+<p>key ‘aim’ is to highlight how we need to think of interactions at scales and the same goes for predicting. this is important because it will influence the we way in which we are actually able to ude a network</p>
 </blockquote>
 <p>At the heart of modern biodiversity science are a set of concepts and theories about biodiversity, stability and function. These relate to the abundance, distribution and services that biodiversity provides, and how biodiversity – as an interconnected set of species – responds to multiple stressors. The interaction between species (or individuals) is one of the fundamental building blocks of ecological communities. Collecting species interactions among many species (e.g.&nbsp;biodiversity) results in the formation of networks which are long established as a canon of ecology since the penning of the ‘entangled bank’ <span class="citation" data-cites="darwinOriginSpeciesMeans1859">(<a href="#ref-darwinOriginSpeciesMeans1859" role="doc-biblioref">Darwin 1859</a>)</span>.</p>
 <p>The use of species interaction networks provides a powerful abstraction that can help quantify, conceptualise, and understand biodiversity dynamics, and ultimately, one hopes, make prediction, mitigate change and manage services. Such network representations of biodiversity (including within species diversity) are increasingly argued to be an asset to predictive ecology, climate change mitigation and resource management. Here, it is argued that characterising biodiversity in a network will allow deeper capacity to understand and predict the abundance, distribution, dynamics and services provided by multiple species facing multiple stressors.</p>
@@ -412,7 +412,7 @@ Box 1 -The anatomy of a food web
 <div id="fig-anatomy" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-anatomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/anatomy.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/anatomy.png" class="img-fluid figure-img"></a>
+<a href="images/anatomy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/anatomy.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anatomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: The many ways in which a food web can be defined and described at the node, edge, and even network level.
@@ -447,7 +447,7 @@ Figure&nbsp;1: The many ways in which a food web can be defined and described at
 <div id="fig-feasibility" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-feasibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept_v2.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="images/concept_v2.png" class="img-fluid figure-img"></a>
+<a href="images/concept_v2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="images/concept_v2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feasibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: TODO.
@@ -884,9 +884,10 @@ Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. K
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{strydom2024,
   author = {Strydom, Tanya and A. Dunne, Jennifer and Poisot, Timothée
     and P. Beckerman, Andrew},
-  title = {Navigating Food Web Prediction; Assumptions, Rationale, and
-    Methods},
-  date = {2024-08-21},
+  title = {Unveiling the {Complexity} of {Food} {Webs:} {A}
+    {Comprehensive} {Overview} of {Definitions,} {Scales,} and
+    {Mechanisms}},
+  date = {2024-09-04},
   langid = {en},
   abstract = {New perspective on key aim is to showcase how the
     SuperTriangle represents a synthesis across scales and mechanisms,
@@ -897,9 +898,9 @@ Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. K
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-strydom2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
-Beckerman. 2024. <span>“Navigating Food Web Prediction; Assumptions,
-Rationale, and Methods.”</span> TREE (One Can Dream...). August 21,
-2024.
+Beckerman. 2024. <span>“Unveiling the Complexity of Food Webs: A
+Comprehensive Overview of Definitions, Scales, and Mechanisms.”</span>
+TREE (One Can Dream...). September 4, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1290,7 +1291,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
