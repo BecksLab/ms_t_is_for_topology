@@ -110,22 +110,6 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
-\definecolor{quarto-callout-color}{HTML}{909090}
-\definecolor{quarto-callout-note-color}{HTML}{0758E5}
-\definecolor{quarto-callout-important-color}{HTML}{CC1914}
-\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
-\definecolor{quarto-callout-tip-color}{HTML}{00A047}
-\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
-\definecolor{quarto-callout-color-frame}{HTML}{acacac}
-\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
-\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
-\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
-\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
-\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -212,7 +196,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-09-04}
+\date{2024-09-06}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -254,12 +238,20 @@ Tanya Strydom %
 
 \vfil
 {\small
-\textbf{Abstract:} New perspective on key aim is to showcase how the
-SuperTriangle represents a synthesis across scales and mechanisms, how
-this underpins differences in concepts and methods, and how it
-ultimately defines how to answer fundamental questions and at what
-scale+type of modelling we need to focus on to advance networks into
-valuable predictive ecology.
+\textbf{Abstract:} Food webs are a useful abstraction and representation
+of the feeding links between species in a community and are used to
+infer many ecosystem level processes. However, the different theories,
+mechanisms, and criteria that underpin how a food web is defined and,
+ultimately, constructed means that not all food webs are representing
+the same ecological process. Here we present a synthesis of the
+different assumptions, scales and mechanisms that are used to define
+different ecological networks ranging from metawebs (an inventory of all
+potential interactions) to fully realised networks (interactions that
+occur within a given community over a certain timescale). Illuminating
+the assumptions, scales, and mechanisms of network inference allows a
+formal categorisation of how to use networks to answer key ecological
+and conservation questions and defines guidelines to prevent
+unintentional misuse or misinterpretation.
 \vfil
 \textbf{Keywords:} %
 food web, network construction, %
@@ -270,51 +262,39 @@ scientific ignorance%
 \doublespacing
 \linenumbers
 
-\begin{quote}
-key `aim' is to highlight how we need to think of interactions at scales
-and the same goes for predicting. this is important because it will
-influence the we way in which we are actually able to ude a network
-\end{quote}
-
 At the heart of modern biodiversity science are a set of concepts and
 theories about biodiversity, stability and function. These relate to the
 abundance, distribution and services that biodiversity provides, and how
 biodiversity -- as an interconnected set of species -- responds to
 multiple stressors. The interaction between species (or individuals) is
-one of the fundamental building blocks of ecological communities.
-Collecting species interactions among many species (e.g.~biodiversity)
-results in the formation of networks which are long established as a
-canon of ecology since the penning of the `entangled bank' (Darwin,
-1859).
+one of the fundamental building blocks of ecological communities provide
+a powerful abstraction that can help quantify, conceptualise, and
+understand biodiversity dynamics, and ultimately, one hopes, make
+prediction, mitigate change and manage services {[}ref{]}. Such network
+representations of biodiversity (including within species diversity) are
+increasingly argued to be an asset to predictive ecology, climate change
+mitigation and resource management. Here, it is argued that
+characterising biodiversity in a network will allow deeper capacity to
+understand and predict the abundance, distribution, dynamics and
+services provided by multiple species facing multiple stressors.
 
-The use of species interaction networks provides a powerful abstraction
-that can help quantify, conceptualise, and understand biodiversity
-dynamics, and ultimately, one hopes, make prediction, mitigate change
-and manage services. Such network representations of biodiversity
-(including within species diversity) are increasingly argued to be an
-asset to predictive ecology, climate change mitigation and resource
-management. Here, it is argued that characterising biodiversity in a
-network will allow deeper capacity to understand and predict the
-abundance, distribution, dynamics and services provided by multiple
-species facing multiple stressors.
-
-However, the way that a network is coded (constructed) defines an
+However, the way that a network is constructed (encoded) defines an
 epistemology of the network concept which, we argue, can influence the
 resulting observations and conclusions about pattern and mechanisms that
 are made (Brimacombe et al., 2023; Proulx et al., 2005). This process of
-coding/constructing networks has two major pillars: data and theory, the
+constructing networks has two major pillars: the data and theory, the
 latter representing an expression of mechanism and process giving rise
 to patterns that emerge from collating interactions among species. Each
-of these carries with it a set of practical, semantic and conceptual
-constraints that not only influence progress in making network ecology
-more valuable and potentially predictive, but help define the spatial,
-temporal and evolutionary scale of assumptions we make and predictions
-we might generate from the networks.
+of these pillars carries with it a set of practical, semantic and
+conceptual constraints that not only influence progress in making
+network ecology more valuable and potentially predictive, but help
+define the spatial, temporal and evolutionary scale of assumptions we
+make and predictions we might generate from the networks.
 
 With respect to data, it is extremely challenging to actually record
 species interactions in the field (Jordano, 2016a, 2016b). Despite
 notable herculean efforts (\textbf{Woodward? Benguela?}), actual
-coverage of `real world' interaction data is sparse (Poisot et al.,
+coverage of `real world' interaction data remains sparse (Poisot et al.,
 2021). Against this practical challenge, there is additionally high
 variance in the terminology we use to define networks. Finally, the
 mathematical and statistical tools we use to construct, conceptualise,
@@ -344,45 +324,26 @@ impact of multiple stressors on biodiverse communities.
 \section{Setting the Scene: The Not So Basics of Nodes and
 Edges}\label{setting-the-scene-the-not-so-basics-of-nodes-and-edges}
 
-\begin{quote}
-Important goal here is to introduce the idea that there are multiple
-facets as to what determines the interaction between species and that
-there is some sort of `scale of organisation'
-Figure~\ref{fig-feasibility}. We can then introduce these different
-scales/theories and I think some key points to highlights are the
-\emph{features}, \emph{limits}, and \emph{descriptions} of these
-different scales (by that I mean what rules them, what finds them, and
-what binds them - sorry not sorry). I think it is also worth either in
-this section or in the one where we talk about model families to discuss
-the idea of `moving between' different levels - e.g.~downsampling but
-also feasibility - can we actually do that? ANother interesting
-discussion here (or maybe actually something that can make its way into
-the concluding remarks) is thinking about what determines interactions
-vs what determines structure\ldots{}
-\end{quote}
-
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 -The anatomy of a food web}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, breakable, toprule=.15mm]
-
-Defining a food web seems simple, it is the representation of the
+Defining a food web seems simple; it is the representation of the
 interactions (edges) between species (nodes), however the definition of
 `edges' and `nodes', as well as the scale at which they are aggregated
-can take many forms. As highlighted in Poisot, Stouffer, et al. (2016)
-networks can be constructed at the population (the links among
-individuals), community (the links between species), or metacommunity
-(fluxes between locations) level. Even if one were to limit their scope
-to thinking of interaction networks only in terms of food webs at the
-community-level there are still many ways to define the various
-components of the network Panel A of~\ref{fig-anatomy}, one needs to
-understand the different intentions/assumptions that are made when a
-food web is constructed. Although the main intention of a food web is to
-capture and represent the feeding links between species there are many
-ways to define the nodes (\emph{e.g.,} species or taxonomic group),
-edges (\emph{e.g.,} \textbf{potential} or \textbf{realised feeding
-links}), the magnitude of the edges (\emph{e.g.,} binary vs
-probabilistic), and even how the network itself is delimited (does it
-represent an aggregation of interactions over time?).
+can take many forms (Poisot, Stouffer, et al., 2016). Networks can be
+constructed at the population (the links among individuals), community
+(the links between species), or metacommunity (fluxes between locations)
+level. Even if one were to limit their scope to thinking of interaction
+networks only in terms of food webs at the community-level there are
+still many ways to define the various components of the network Panel A
+of~\ref{fig-anatomy}, one needs to understand the different
+intentions/assumptions that are made when a food web is constructed.
+Although the main intention of a food web is to capture and represent
+the feeding links between species there are many ways to define the
+nodes (\emph{e.g.,} species or taxonomic group), edges (\emph{e.g.,}
+\emph{potential} or \emph{realised} feeding links), the magnitude of the
+edges (\emph{e.g.,} binary vs probabilistic), and even how the network
+itself is delimited (does it represent an aggregation of interactions
+over time?).
 
-\begin{figure}[H]
+\begin{figure}
 
 \centering{
 
@@ -417,46 +378,45 @@ distributed within the community.
 \subsubsection{What is meant by an
 edge?}\label{what-is-meant-by-an-edge}
 
-As discussed earlier there are many ways to define the links between
-species --- even feeding links. At its core links within food webs can
-be thought of as a representation of either the flow of a resource
-{[}ref{]}, realised (Pringle, 2020) or potential (Dunne, 2006) feeding
-links, or energy transfer and material flow (Lindeman, 1942). How we
-specify links will influence the resulting structure of the network -
-and the inferences we will make thereof. For example taking a food web
-that consists of links representing \emph{potential} feeding links
-between species will be meaningless if you are interested in
-understanding \emph{e.g.,} the flow of energy through the system as the
-links within the network are over overrepresented. In addition to the
-various ways of defining the links between species pairs there are also
-a myriad of ways in which the links themselves can be quantified. Links
-between species are often treated as being present or absent
-(\emph{i.e.,} binary) but it is also possible to use probabilities
-(which quantifies how likely an interaction is to occur, Poisot,
-Cirtwill, et al., 2016) or continuous measurements (which quantifies the
-strength of of an interaction, Berlow et al., 2004). Moving away from a
-purely binary way of representing allows us to quantify a level of
-(un)certainty of our knowledge of interactions (\emph{i.e.,} moving from
-being able to ask if are they occurring to quantifying how likely they
-are to occur) does add an additional level of `complexity' to the
-construction and interpretation of networks, but ultimately it allows us
-to capture more information at different scales (Banville et al., 2024).
+At its core links within food webs can be thought of as a representation
+of either feeding links between species - be that realised (Pringle,
+2020) or potential (Dunne, 2006), or representative of fluxes within the
+community/system \emph{e..,} energy transfer or material flow (Lindeman,
+1942). How we specify links will influence the resulting structure of
+the network - and the inferences we will make thereof. For example
+taking a food web that consists of links representing all
+\emph{potential} feeding links for a community (\emph{i.e.,} a metaweb)
+will be meaningless if you are interested in understanding the flow of
+energy through the system as the links within a metaweb do not represent
+environmental/energetic constraints. In addition to the various ways of
+defining the links between species pairs there are also a myriad of ways
+in which the links themselves can be quantified. Links between species
+are often treated as being present or absent (\emph{i.e.,} binary) but
+it is also possible to use probabilities (which quantifies how likely an
+interaction is to occur, Poisot, Cirtwill, et al., 2016) or continuous
+measurements (which quantifies the strength of of an interaction, Berlow
+et al., 2004). Moving away from a purely binary way of representing
+allows us to quantify a level of (un)certainty of our knowledge of
+interactions (\emph{i.e.,} moving from being able to ask if are they
+occurring to quantifying how likely they are to occur) does add an
+additional level of `complexity' to the construction and interpretation
+of networks, but ultimately it will allow us to capture more information
+at different scales (Banville et al., 2024).
 
 \subsubsection{Putting the parts together; what does it
 mean?}\label{putting-the-parts-together-what-does-it-mean}
 
 The ingredients one uses to construct networks from nodes and edges
-generates a unique representation of the mechanisms (see Box 1 -
-Mechanisms that determine feeding links) that allow inference and
-reasoning about the structure, aspects of dynamics (\emph{e.g.,}
-stability), and potentially the function of communities (\emph{e.g.,}
-flux). It is thus beneficial to keep in mind that in the process of
-`codifying' a network one is already embedding some sort of hypothesis
-as to the nature of the feeding links between species (Brimacombe et
-al., 2023; Proulx et al., 2005). Here it may be meaningful to
-contextualise the different `types' of food webs within the larger
-research programmes (or even practical needs) that have been driving the
-construction of them.
+generates a unique representation of the mechanisms (see
+Section~\ref{sec-mechanisms}) that allow inference and reasoning about
+the structure, aspects of dynamics (\emph{e.g.,} stability), and
+potentially the function of communities (\emph{e.g.,} flux). It is thus
+important to keep in mind that different networks are going to be
+representing different processes and that can only be used for inference
+of some but not all aspects of the community at large. Here it may be
+meaningful to contextualise the different `types' of food webs within
+the larger research programmes (or even practical needs) that have been
+driving the construction of them.
 
 Before thinking about the ways in which we can predict networks it is
 perhaps meaningful to take a step back and think about the different
@@ -478,10 +438,8 @@ of where within this feasibility-reality one is working at and how this
 will impact and limit the contexts in which the resulting network can be
 used and applied within.
 
-\end{tcolorbox}
-
 \section{From Nodes and Edges to Scales and
-Processes}\label{from-nodes-and-edges-to-scales-and-processes}
+Processes}\label{sec-mechanisms}
 
 Armed with these basics, it is now possible to review the scales and
 assumptions that are made by a wide range of tools to assist in
@@ -1182,11 +1140,6 @@ Webs}: {Data} and {Theory}}. Springer-Verlag.
 \bibitem[\citeproctext]{ref-dansereauSpatiallyExplicitPredictions2023}
 Dansereau, G., Barros, C., \& Poisot, T. (2023). \emph{Spatially
 explicit predictions of food web structure from regional level data}.
-
-\bibitem[\citeproctext]{ref-darwinOriginSpeciesMeans1859}
-Darwin, C. (1859). \emph{On the {Origin} of {Species} by {Means} of
-{Natural Selection}, or the {Preservation} of {Favoured Races} in the
-{Struggle} for {Life}}. J. Murray.
 
 \bibitem[\citeproctext]{ref-dunnSixthMassCoextinction2009}
 Dunn, R. R., Harris, N. C., Colwell, R. K., Koh, L. P., \& Sodhi, N. S.
