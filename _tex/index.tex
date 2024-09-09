@@ -212,7 +212,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-09-06}
+\date{2024-09-09}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -346,19 +346,19 @@ interactions (edges) between species (nodes), however the definition of
 `edges' and `nodes', as well as the scale at which they are aggregated
 can take many forms (Poisot, Stouffer, et al., 2016). Networks can be
 constructed at the population (the links among individuals), community
-(the links between species), or metacommunity (fluxes between locations)
-level. Even if one were to limit their scope to thinking of interaction
-networks only in terms of food webs at the community-level there are
-still many ways to define the various components of the network Panel A
-of~\ref{fig-anatomy}, one needs to understand the different
-intentions/assumptions that are made when a food web is constructed.
-Although the main intention of a food web is to capture and represent
-the feeding links between species there are many ways to define the
-nodes (\emph{e.g.,} species or taxonomic group), edges (\emph{e.g.,}
-\emph{potential} or \emph{realised} feeding links), the magnitude of the
-edges (\emph{e.g.,} binary vs probabilistic), and even how the network
-itself is delimited (does it represent an aggregation of interactions
-over time?).
+(the links between species), or metacommunity (changes between
+locations) level. Even if one were to limit their scope to thinking of
+interaction networks only in terms of food webs at the community-level
+there are still many ways to define the various components of the
+network Panel A of~\ref{fig-anatomy}, one needs to understand the
+different intentions/assumptions that are made when a food web is
+constructed. Although the main goal of constructing a food web is to
+capture and represent the feeding links between species there are many
+ways to define the nodes (\emph{e.g.,} species or taxonomic group),
+edges (\emph{e.g.,} \emph{potential} or \emph{realised} feeding links),
+the magnitude of the edges (\emph{e.g.,} binary vs probabilistic), and
+even how the network itself is delimited (does it represent an
+aggregation of interactions over time?).
 
 \begin{figure}
 
@@ -455,7 +455,7 @@ of where within this feasibility-reality one is working at and how this
 will impact and limit the contexts in which the resulting network can be
 used and applied within.
 
-\section{From Nodes and Edges to Scales and
+\section{From Nodes and Edges to Scales, Context and
 Processes}\label{sec-mechanisms}
 
 Armed with these basics, it is now possible to review the scales and
@@ -466,8 +466,8 @@ centres on a four-tier conceptualization of networks: co-occurrence,
 feasibility, mass effects and energetics. In the following sections we
 review each of these and then provide a synthesis among them.
 
-\subsection{Understanding the drivers of species
-interactions}\label{understanding-the-drivers-of-species-interactions}
+\subsection{Understanding the processes that determine species
+interactions}\label{sec-process}
 
 Important goal here is to introduce the idea that there are multiple
 facets as to what determines the interaction between species and that
@@ -513,32 +513,33 @@ interact (at least in terms of feeding links) if they are not
 co-occurring in time and space. Hence it is of course important to take
 into consideration the co-occurrence of both the resource and the
 consumer. An example of this would be the work from Dansereau et al.
-(2023), where a metaweb (feasibility network) is downsampled into
-smaller realisations based on better data/knowledge as to which species
-are occurring at a specific location - however arguably these are still
-firmly in the space of feasible interactions for the specific location
-but are approaching a better approximation of `reality'\ldots{}
+(2023), where a metaweb is downsampled into smaller realisations based
+on better data/knowledge as to which species are occurring at a specific
+location - however arguably these are still firmly in the space of
+feasible interactions for the specific location but are approaching a
+better approximation of `reality'\ldots{}
 
-\textbf{2. Feasibility}
+\textbf{2. Evolutionary compatibility}
 
-This is based on the idea of forbidden links introduced by Jordano
-(2016b), specifically that there must be some degree of \emph{trait
-complementarity} that allows a predator to chase, capture, kill, and
-consume, its prey. This is probably the level that the idea of a metaweb
-(Dunne, 2006) is most applicable to. Within the network prediction
-`field' this is perhaps the most developed space. Predictive models run
-the gamut including mechanistic models (Morales-Castilla et al., 2015),
-binary classifiers (Pichler et al., 2020), and graph embedding (Strydom
-et al., 2023) and use either traits (or phylogeny as a proxy for the
-conservation thereof) as a means to `evaluate' if an interaction is
-\emph{possible} between two species (again not the likelihood of it
-happening but the likelihood of its feasibility). It is probably worth
-having a brief interlude here to be really clear that just because an
-interaction is probabilistic it does not make it weighted (at least not
-in the traditional sense of weighted interactions, \emph{e.g.,} J. T.
-Wootton \& Emmerson (2005)) - it is still `binary', it just happens to
-be defined by a binomial distribution (\emph{sensu} Banville et al.
-(2024)).
+There is compelling evidence that the possibility of an interaction
+occurring between two species is the result of their shared
+(co)evolutionary history (Dalla Riva \& Stouffer, 2016). In the more
+proximal sense this is manifested as the `trait complementarity' between
+two species, whereby one species (the predator) has the `correct' set of
+traits that allow it to chase, capture, kill, and consume the other
+species (the prey). For species pairs where this condition is not met
+the link is deemed to be forbidden (Jordano, 2016b); \emph{i.e.,} not
+physically possible and will always be absent within the network. In the
+context of trying to determine the feasibility (\emph{i.e.,} the
+\emph{possibility}) of an interaction, phylogeny is an excellent
+predictor (Fricke et al., 2022; Strydom et al., 2022) and allows one to
+construct what can be considered to be a metaweb. In terms of thinking
+about the anatomy of an `feasibility network' one should be aware that
+it is possible to represent interactions as either binary
+(feasible/forbidden; \emph{i.e.,} the traditional definition of a
+metaweb Dunne (2006)) or as a probability (Banville et al., 2024), where
+the probability represents how likely that the interaction between to
+species is feasible (not how likely it is to occur).
 
 \textbf{3. Mass effect}
 
@@ -569,7 +570,7 @@ of how prey choice as informed by energetic cost (not just purely based
 on \emph{e.g.,} the most abundant species). If we think about ways that
 people have approached this there are the diet models of (Beckerman et
 al., 2006) and (Petchey et al., 2008) as well as the `trait' framework
-developed by K. L. Wootton et al. (2023) that moves the `energy' into
+developed by Wootton et al. (2023) that moves the `energy' into
 different `modules' related to the process of the consumer acquiring
 energy from the resource (however there is a disregard for the `Rule 1'
 requirement of forbidden links, again not bad just pointing it out). The
@@ -581,6 +582,8 @@ movement ecology? What it boils down to is being able to quantify the
 cost of movement \emph{i.e.,} the physical constraints that the
 environment imposes on a species\ldots{} Maybe we can also think of it
 more in terms of metabolic rate?
+
+\textbf{5. Non-trophic interactions}
 
 \section{Network prediction is scale
 dependent}\label{network-prediction-is-scale-dependent}
@@ -1154,6 +1157,11 @@ intraspecific variation on food web structure. \emph{Ecology},
 Cohen, J. E., Briand, F., \& Newman, C. (1990). \emph{Community {Food
 Webs}: {Data} and {Theory}}. Springer-Verlag.
 
+\bibitem[\citeproctext]{ref-dallarivaExploringEvolutionarySignature2016}
+Dalla Riva, G. V., \& Stouffer, D. B. (2016). Exploring the evolutionary
+signature of food webs' backbones using functional traits. \emph{Oikos},
+\emph{125}(4), 446--456. \url{https://doi.org/10.1111/oik.02305}
+
 \bibitem[\citeproctext]{ref-dansereauSpatiallyExplicitPredictions2023}
 Dansereau, G., Barros, C., \& Poisot, T. (2023). \emph{Spatially
 explicit predictions of food web structure from regional level data}.
@@ -1186,6 +1194,13 @@ Fortin, M.-J., Dale, M. R. T., \& Brimacombe, C. (2021). Network ecology
 in dynamic landscapes. \emph{Proceedings of the Royal Society B:
 Biological Sciences}, \emph{288}(1949), rspb.2020.1889, 20201889.
 \url{https://doi.org/10.1098/rspb.2020.1889}
+
+\bibitem[\citeproctext]{ref-frickeCollapseTerrestrialMammal2022}
+Fricke, E. C., Hsieh, C., Middleton, O., Gorczynski, D., Cappello, C.
+D., Sanisidro, O., Rowan, J., Svenning, J.-C., \& Beaudrot, L. (2022).
+Collapse of terrestrial mammal food webs since the {Late Pleistocene}.
+\emph{Science}, \emph{377}(6609), 1008--1011.
+\url{https://doi.org/10.1126/science.abn4012}
 
 \bibitem[\citeproctext]{ref-jordanoChasingEcologicalInteractions2016}
 Jordano, P. (2016a). Chasing {Ecological Interactions}. \emph{PLOS
@@ -1311,6 +1326,14 @@ M. (2024). \emph{A framework for reconstructing ancient food webs using
 functional trait data} (p. 2024.01.30.578036). bioRxiv.
 \url{https://doi.org/10.1101/2024.01.30.578036}
 
+\bibitem[\citeproctext]{ref-strydomFoodWebReconstruction2022}
+Strydom, T., Bouskila, S., Banville, F., Barros, C., Caron, D., Farrell,
+M. J., Fortin, M.-J., Hemming, V., Mercier, B., Pollock, L. J., Runghen,
+R., Dalla Riva, G. V., \& Poisot, T. (2022). Food web reconstruction
+through phylogenetic transfer of low-rank network representation.
+\emph{Methods in Ecology and Evolution}, \emph{13}(12), 2838--2849.
+\url{https://doi.org/10.1111/2041-210X.13835}
+
 \bibitem[\citeproctext]{ref-strydomGraphEmbeddingTransfer2023}
 Strydom, T., Bouskila, S., Banville, F., Barros, C., Caron, D., Farrell,
 M. J., Fortin, M.-J., Mercier, B., Pollock, L. J., Runghen, R., Dalla
@@ -1343,12 +1366,6 @@ Williams, R. J., \& Martinez, N. D. (2008). Success and its limits among
 structural models of complex food webs. \emph{Journal of Animal
 Ecology}, \emph{77}(3), 512--519.
 \url{https://doi.org/10.1111/j.1365-2656.2008.01362.x}
-
-\bibitem[\citeproctext]{ref-woottonMeasurementInteractionStrength2005}
-Wootton, J. T., \& Emmerson, M. (2005). Measurement of {Interaction
-Strength} in {Nature}. \emph{Annual Review of Ecology, Evolution, and
-Systematics}, \emph{36}(1), 419--444.
-\url{https://doi.org/10.1146/annurev.ecolsys.36.091704.175535}
 
 \bibitem[\citeproctext]{ref-woottonModularTheoryTrophic2023}
 Wootton, K. L., Curtsdotter, A., Roslin, T., Bommarco, R., \& Jonsson,
