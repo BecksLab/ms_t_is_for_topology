@@ -293,12 +293,13 @@ make and predictions we might generate from the networks.
 
 With respect to data, it is extremely challenging to actually record
 species interactions in the field (Jordano, 2016a, 2016b). Despite
-notable herculean efforts (\textbf{Woodward? Benguela?}), actual
-coverage of `real world' interaction data remains sparse (Poisot et al.,
-2021). Against this practical challenge, there is additionally high
-variance in the terminology we use to define networks. Finally, the
-mathematical and statistical tools we use to construct, conceptualise,
-analyse and predict with these networks are also highly variable.
+notable herculean efforts (\textbf{Woodward? Benguela?} Maiorano et al.
+(2020)), actual coverage of `real world' interaction data remains sparse
+(Poisot et al., 2021). Against this practical challenge, there is
+additionally high variance in the terminology we use to define networks.
+Finally, the mathematical and statistical tools we use to construct,
+conceptualise, analyse and predict with these networks are also highly
+variable.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -322,7 +323,7 @@ a proposal that such thinking can accelerate our capacity to predict the
 impact of multiple stressors on biodiverse communities.
 
 \section{Setting the Scene: The Not So Basics of Nodes and
-Edges}\label{setting-the-scene-the-not-so-basics-of-nodes-and-edges}
+Edges}\label{sec-anatomy}
 
 Defining a food web seems simple; it is the representation of the
 interactions (edges) between species (nodes), however the definition of
@@ -584,158 +585,79 @@ interaction being present/absent is assessed at the pairwise level and
 one is left with a `list' of interactions that are present/absent.
 Although it is possible to build a network (\emph{i.e.,} metaweb) from
 this information it is important to be aware that the structure of this
-network is not constrained by information on real-world dynamics or
-conditions. In order to construct a network who's structure is a closer
-approximation of reality (localised interactions) one needs to take into
-consideration properties of the community as a whole and not just the
-two species of interest.
+network is not constrained by real-world dynamics or conditions, just
+becuase species are able to interact does not mean that they will
+(Poisot et al., 2015). In order to construct a network who's structure
+is a closer approximation of reality (localised interactions) one needs
+to take into consideration properties of the community as a whole and
+not just the two species of interest.
 
-\section{Network prediction is scale
-dependent}\label{network-prediction-is-scale-dependent}
+\section{Network prediction is
+nuanced}\label{network-prediction-is-nuanced}
+
+The different models that are used to either predict or construct
+networks have an underlying philosophy that often only captures one or a
+few of the processes discussed in Section~\ref{sec-process}, has
+implications for how the resulting network is defined
+Section~\ref{sec-anatomy}, which will ultimately delimit and define what
+inferences can be made from the resulting network. Selecting a model for
+the task of network prediction should come down to two things; what
+\emph{aspect} of a food web one is interested in predicting, and what
+data are available, necessary, and sufficient, and what is the purpose
+of wanting to predict a network? It is important that a researcher is
+aware of this to ensure that the appropriate model is selected. Broadly
+researchers will be interested in predicting/constructing two different
+types of networks; \emph{metawebs}, which is essentially a list of all
+interactions that are \emph{possible} for a specific community
+(\emph{i.e.,} at the scale of the species pairs), or being able to
+predict location specific, \emph{realised}, networks for the community
+(\emph{i.e.,} at the scale of the community). The nature of metawebs
+means that they are unable to capture the structural metrics of realised
+networks (Caron et al., 2024). The researcher is also constrained by the
+data needs of both the model as well as the network type; for example in
+order to predict a realised network one needs additional data
+(\emph{e.g.,} abundance), making metawebs a more feasible choice in
+data-poor contexts (\emph{e.g.,} Strydom et al. (2023) construct a
+metaweb using a species list and a phylogenetic tree). The final
+question is assessing the purpose of predicting a network - is it to
+create a series of simulated, species agnostic but still ecologically
+plausible, networks {[}\emph{e.g.,}{]} or to predict a network for a
+specific community at a specific location. It is these three points that
+will ultimately dictate which model is going to best allow one to
+predict the appropriate network.
 
 \begin{quote}
-The way in which we predict a network is driven by the underlying theory
-Figure~\ref{fig-feasibility} which constrains or informs the assumptions
-we make (this of course also has implications with regards to how the
-resulting network is defined (Box 1)). We can then spend a moment
-introducing the different model families Table~\ref{tbl-families}. I
-think a clear messaging here might be that models can share a similar
-underlying theory but use different methods to get there (\emph{e.g.,}
-using ecological rules (explicit), ecological expectations (pattern
-finders), or mathematical models (assumptions on the structure of the
-matrix - maybe even network)). Importantly different models will also
-have different `limits' to them - this is probably a product of both
-where they are found within the `theory space'
-Figure~\ref{fig-feasibility} as well as the definition of the network
-(Box 1) space. Should we also maybe revisit the idea of interaction vs
-structure predictors\ldots{} I think it is still a point that is worth
-raising but no longer the framework on which we hang the different model
-families\ldots{}
+Although the ability to predict `real-world' interactions (and the
+resulting food webs) can have more intuitive `real world' applications
+\emph{e.g.,} being able to `recover' food webs that have since gone
+extinct (Dunne et al., 2008; Yeakel et al., 2014), using pairwise
+interactions to understand species distributions (Pollock et al., 2014)
+or even co-extinction risk (Dunn et al., 2009), a more structural
+approach to network construction affords one an opportunity to
+interrogate some of the more high-level mechanisms that are structuring
+networks.
 \end{quote}
-
-\begin{itemize}
-\item
-  The way in which we predict networks is `constrained'/informed by the
-  different theories shown in Figure~\ref{fig-feasibility}
-\item
-  Need to be aware of this and be aware how/what we can use the networks
-  - Petchey dilemma
-\item
-  The `scale' that a network is constructed should be a determinant of
-  what we can learn about a system \emph{e.g.,} can't use a feasibility
-  network to learn something about energy flows. This is because they
-  are capturing different processes
-\item
-  Link the `model families' to the different scales/theories
-\item
-  Data\ldots{}
-\end{itemize}
-
-As discussed in Box 1 there are many ways to define a food web, meaning
-that there are equally as many reasons one might be interested in
-predicting a food web. However we may think of two primary drivers for
-wanting to predict networks (Panel B Figure~\ref{fig-anatomy}), namely
-an interest in generating a set of ecologically plausible networks
-(\emph{i.e.,} being able to describe networks using a model) or being
-able to recover (predict) location specific, `realised', interactions
-for a specific species community (\emph{i.e.,} being able to
-predict/infer the interactions between species). Of course these two
-categories are not distinct, mutually exclusive, groups but can rather
-be viewed as operating on a continuum ranging from a need for generality
-(\emph{i.e.,} creating a network that, when taken in aggregate, the
-distribution of links (interactions) between nodes (species) are
-ecologically plausible) to a need for specificity (\emph{i.e.,}
-local-level predictions between specific species pairs). Although the
-ability to predict `real-world' interactions (and the resulting food
-webs) can have more intuitive `real world' applications \emph{e.g.,}
-being able to `recover' food webs that have since gone extinct (Dunne et
-al., 2008; Yeakel et al., 2014), using pairwise interactions to
-understand species distributions (Pollock et al., 2014) or even
-co-extinction risk (Dunn et al., 2009), a more structural approach to
-network construction affords one an opportunity to interrogate some of
-the more high-level mechanisms that are structuring networks (Box 1).
-
-It is perhaps more important that when one is talking about `why' they
-want to predict networks to articulate exactly what anatomical part of
-the food web we are interested in scrutinising.
 
 \subsection{How do we predict food webs?}\label{sec-network-build}
 
-Selecting a model for the task of network prediction should come down to
-two things; what \emph{aspect} of a food web one is interested in
-predicting, and what data are available, necessary, and sufficient. As
-shown in panel B of Figure~\ref{fig-anatomy} the interest in a network
-is (usually) at either the `structural' or `interaction' level and the
-development of models for the task of network prediction often focus on
-high fidelity (performance) at one of these scales. With this in mind it
-is beneficial to think of the different model families relative to these
-two different goals; here we refer to models that are used to predict
-the structure of a network as \textbf{topology generators} and models
-developed to infer the interactions for a given species pool as
-\textbf{interaction predictors}. It is meaningful to make this
-distinction because although it is possible to construct a food web
-given using an \emph{interaction predictor} the models themselves lack
-any sort of parametrisation of the network structure and so the
-resulting network is a poor reflection of the actual network structure
-(Caron et al., 2024). This is primarily because \emph{interaction
-predictors} are models that evaluate the feasibility of an interaction
-between species pairs and not in the context of feasibility at the
-community level. Models themselves are a reflection of the different
-goals and intentions of the research program from which they are
-developed and are often `described' by a specific mechanism that will
-determine the resulting structure or interactions (Box 1). Models such
-as the niche (Williams \& Martinez, 2000) or cascade (Cohen et al.,
-1990) were developed with the intent of being used to understand the
-\emph{structural} aspects of food webs, specifically how links are
-distributed amongst species in the community, whereas bayesian (Cirtwill
-et al., 2019) or trait hierarchy (Shaw et al., 2024) models have been
-developed on the basis that the traits of a species are the underlying
-mechanism in determining the feasibility of interactions (\emph{i.e.,}
-species \(a\) has the capacity to eat species \(b\)). Along with
-predicting different anatomical parts of a food web the different models
-have varying degrees of data that are needed to `parametrise' the
-network. Once these two limitations are assessed and addressed it is
-then possible to select the model (or model family) that will best be
-able to capture food web feature that the researcher is most interested
-in (see Box 2 - Assessing model outputs). It is thus clear that
-(realistically) there will probably never be a `best fit' tool that is
-able to construct a food web that will span the entire range of needs,
-and rather the responsibility lies with the researcher to be aware of
-not only the underlying philosophy of the specific toolset (as this
-could have knock-on effects when using those networks for downstream
-analyses/simulations; pers. comms. Beckerman, 2024), but also how well
-the tool can retrieve the specific network or interaction properties
-that is of interest.
+\textbf{NEED A TRANSITION PARAGRAPH}
 
-\begin{quote}
 In order for a model to formalise a `complete' food web it is necessary
 to formalise two aspects of the network, `who eats whom' (to determine
 the links between nodes) as well as the structure of the network (to
 limit the distribution of links), however most models are inclined to
-focus on one of the two aspects panel B of~\ref{fig-anatomy}.
-\end{quote}
+focus on one of the two aspects.
 
-\begin{quote}
-Crucially most topology generators lack some key data on the interaction
-between species (this can be because of how the model itself defines
-species or the way in which links are assigned in the network) and
-interaction predictors lack some sort of parametrisation of network
-structure (just because two species can interact it does not mean that
-they will, Poisot et al., 2015).
-\end{quote}
+\textbf{assumptions}
 
-\begin{quote}
-What is the purpose of generating a network? Is it an element of a
-bigger question we are asking, \emph{e.g.,} I want to generate a series
-of networks to do some extinction simulations/bioenergetic stuff OR are
-we looking for a `final product' network that is relevant to a specific
-location? (this can still be broad in geographic scope).
-\end{quote}
-
-\subsection{Categorizing Model
-Families}\label{categorizing-model-families}
-
-\textbf{NEED A TRANSITION PARAGRAPH}
+Models such as the niche (Williams \& Martinez, 2000) or cascade (Cohen
+et al., 1990) were developed with the intent of being used to understand
+the \emph{structural} aspects of food webs, specifically how links are
+distributed amongst species in the community, whereas bayesian (Cirtwill
+et al., 2019) or trait hierarchy (Shaw et al., 2024) models have been
+developed on the basis that the traits of a species are the underlying
+mechanism in determining the feasibility of interactions (\emph{i.e.,}
+species \(a\) has the capacity to eat species \(b\)).
 
 As there are many food web models to choose from it is perhaps useful to
 think about the models in terms of model families, a summary of these
@@ -982,6 +904,8 @@ al., 2022).''
 
 \subsection{Time}\label{time}
 
+Look at Hutchinson et al. (2019)
+
 We lack a clear agenda (and conceptualisation) as to what the
 appropriate level of aggregation is for a `network'. Realistically most
 empirical networks are more aligned with `feasibility networks' as
@@ -1226,6 +1150,13 @@ interactions data illustrated using the {Serengeti} food web.
 \emph{PeerJ}, \emph{11}, e14620.
 \url{https://doi.org/10.7717/peerj.14620}
 
+\bibitem[\citeproctext]{ref-hutchinsonSeeingForestTrees2019}
+Hutchinson, M. C., Bramon Mora, B., Pilosof, S., Barner, A. K., Kéfi,
+S., Thébault, E., Jordano, P., \& Stouffer, D. B. (2019). Seeing the
+forest for the trees: {Putting} multilayer networks to work for
+community ecology. \emph{Functional Ecology}, \emph{33}(2), 206--217.
+\url{https://doi.org/10.1111/1365-2435.13237}
+
 \bibitem[\citeproctext]{ref-jordanoChasingEcologicalInteractions2016}
 Jordano, P. (2016a). Chasing {Ecological Interactions}. \emph{PLOS
 Biology}, \emph{14}(9), e1002559.
@@ -1255,6 +1186,12 @@ interactions into food webs: {More} than a meal {\ldots{}}.
 Lindeman, R. L. (1942). The {Trophic-Dynamic Aspect} of {Ecology}.
 \emph{Ecology}, \emph{23}(4), 399--417.
 \url{https://doi.org/10.2307/1930126}
+
+\bibitem[\citeproctext]{ref-maioranoTETRAEUSpecieslevelTrophic2020}
+Maiorano, L., Montemaggiori, A., Ficetola, G. F., O'Connor, L., \&
+Thuiller, W. (2020). {TETRA-EU} 1.0: {A} species-level trophic metaweb
+of {European} tetrapods. \emph{Global Ecology and Biogeography},
+\emph{29}(9), 1452--1457. \url{https://doi.org/10.1111/geb.13138}
 
 \bibitem[\citeproctext]{ref-momalTreebasedInferenceSpecies2020}
 Momal, R., Robin, S., \& Ambroise, C. (2020). Tree-based inference of
