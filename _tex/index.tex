@@ -212,7 +212,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-09-10}
+\date{2024-09-12}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -421,8 +421,8 @@ additional level of `complexity' to the construction and interpretation
 of networks, but ultimately it will allow us to capture more information
 at different scales (Banville et al., 2024).
 
-\subsubsection{Putting the parts together; what does it
-mean?}\label{putting-the-parts-together-what-does-it-mean}
+\subsubsection{Putting the parts
+together}\label{putting-the-parts-together}
 
 The ingredients one uses to construct networks from nodes and edges
 generates a unique representation of the mechanisms (see
@@ -609,6 +609,8 @@ is a closer approximation of reality (localised interactions) one needs
 to take into consideration properties of the community as a whole and
 not just the two species of interest.
 
+\textbf{downsampling paragraph??}
+
 \section{Network prediction is
 nuanced}\label{network-prediction-is-nuanced}
 
@@ -629,19 +631,19 @@ interactions that are \emph{possible} for a specific community
 (\emph{i.e.,} at the scale of the species pairs), or being able to
 predict location specific, \emph{realised}, networks for the community
 (\emph{i.e.,} at the scale of the community). The nature of metawebs
-means that they are unable to capture the structural metrics of realised
-networks (Caron et al., 2024). The researcher is also constrained by the
-data needs of both the model as well as the network type; for example in
-order to predict a realised network one needs additional data
-(\emph{e.g.,} abundance), making metawebs a more feasible choice in
-data-poor contexts (\emph{e.g.,} Strydom et al. (2023) construct a
-metaweb using a species list and a phylogenetic tree). The final
-question is assessing the purpose of predicting a network - is it to
-create a series of simulated, species agnostic but still ecologically
-plausible, networks {[}\emph{e.g.,}{]} or to predict a network for a
-specific community at a specific location. It is these three points that
-will ultimately dictate which model is going to best allow one to
-predict the appropriate network.
+means that they are unable to capture the structural metrics of
+realised/`real-world' networks (Caron et al., 2024). The researcher is
+also constrained by the data needs of both the model as well as the
+network type; for example in order to predict a realised network one
+needs additional data (\emph{e.g.,} abundance), making metawebs a more
+feasible choice in data-poor contexts (\emph{e.g.,} Strydom et al.
+(2023) construct a metaweb using a species list and a phylogenetic
+tree). The final question is assessing the purpose of predicting a
+network - is it to create a series of simulated, species agnostic but
+still ecologically plausible, networks {[}\emph{e.g.,}{]} or to predict
+a network for a specific community at a specific location. It is these
+three points that will ultimately dictate which model is going to best
+allow one to predict the appropriate network.
 
 \begin{quote}
 Although the ability to predict `real-world' interactions (and the
@@ -655,33 +657,50 @@ interrogate some of the more high-level mechanisms that are structuring
 networks.
 \end{quote}
 
-\subsection{How do we predict food webs?}\label{sec-network-build}
+\subsection{Models that predict structure}\label{sec-network-build}
 
-\textbf{NEED A TRANSITION PARAGRAPH}
+Although we identify mechanisms that determine species interactions in
+Section~\ref{sec-process} not all models that are used to predict
+networks operate at this `mechanistic' level, but rather represent the
+\emph{structure} of a network based on a series of \emph{a priori}
+assumptions of network connectance (\emph{e.g.,} the niche model
+Williams \& Martinez (2000)) or other structural features (\emph{e.g.,}
+stochastic block model, Xie et al. (2017)) of a \emph{realised} network.
+Importantly these structural models do not make species specific
+predictions (they are species agnostic and usually treat nodes as
+trophic species) and so cannot be used to determine if an interaction is
+either possible \emph{or} realised between two species (\emph{i.e.,}one
+cannot use these models to determine if species \(a\) eats species
+\(b\)). Although this means this suite of models are unsuitable as tools
+for predicting interactions, they have been shown to be sufficient tools
+to predict the structure of networks (Williams \& Martinez, 2008).
+
+\subsection{How do we predict food
+webs?}\label{how-do-we-predict-food-webs}
+
+There as many ways to predict networks as what there is to define them
+and along with taking into consideration the points raised in the
+previous section it is also beneficial to think about the context in
+which the different models were developed - and how this will influence
+the networks that they produce\ldots{} Also it is not feasibly possible
+to list every single approach that has been developed to predict
+networks and so we will present what we believe to be the broad families
+that represent the different approaches to predicting networks,
+particularly how these relate to the processes identified in
+Section~\ref{sec-process}, as well as models that predict network
+structure (see Section~\ref{sec-network-build}).
 
 In order for a model to formalise a `complete' food web it is necessary
 to formalise two aspects of the network, `who eats whom' (to determine
 the links between nodes) as well as the structure of the network (to
 limit the distribution of links), however most models are inclined to
-focus on one of the two aspects.
-
-\textbf{assumptions}
-
-Models such as the niche (Williams \& Martinez, 2000) or cascade (Cohen
-et al., 1990) were developed with the intent of being used to understand
-the \emph{structural} aspects of food webs, specifically how links are
-distributed amongst species in the community, whereas bayesian (Cirtwill
-et al., 2019) or trait hierarchy (Shaw et al., 2024) models have been
-developed on the basis that the traits of a species are the underlying
-mechanism in determining the feasibility of interactions (\emph{i.e.,}
-species \(a\) has the capacity to eat species \(b\)).
-
-As there are many food web models to choose from it is perhaps useful to
-think about the models in terms of model families, a summary of these
-families is presented in Table~\ref{tbl-families} highlights the
-differences and similarities of the philosophies and assumptions that
-determine a network. A more extensive overview of the different models
-that fall with in the different model families can be found in
+focus on one of the two aspects. As there are many food web models to
+choose from it is perhaps useful to think about the models in terms of
+model families, a summary of these families is presented in
+Table~\ref{tbl-families} highlights the differences and similarities of
+the philosophies and assumptions that determine a network. A more
+extensive overview of the different models that fall with in the
+different model families can be found in
 \href{https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_descriptions-preview.html}{SuppMat
 1} and for a more detailed breakdown of the different `traits' of the
 model families refer to
@@ -689,11 +708,11 @@ model families refer to
 2}.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1806}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3194}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1667}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1892}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2432}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1892}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1892}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1892}}@{}}
 \caption{A summary of the different families of tools that can be used
 to generate food webs. Here `type' leans on the ideas from Momal et al.
 (2020) in terms of reconstructing networks from other known (observed)
@@ -703,7 +722,7 @@ interactions.}\label{tbl-families}\tabularnewline
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assumption
+Assumption (process)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -717,7 +736,7 @@ Key reference
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assumption
+Assumption (process)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Theory
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -729,34 +748,33 @@ Key reference
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Links are randomly distributed within a network & & network
-inference & \\
+null & Links are randomly distributed within a network & & structural
+network & \\
 neutral & Network structure is random, but species abundance determines
-links between nodes & abundance & network inference & Canard et al.
+links between nodes & abundance & structural network & Canard et al.
 (2012) \\
 resource & Networks are interval, species can be ordered on a `niche
-axis' & & network inference & Williams \& Martinez (2008) \\
+axis' & & structural network & Williams \& Martinez (2008) \\
 generative & Networks are determined by their structural features & &
-network reconstruction & \\
+structural network & \\
 energetic & Interactions are determined by energetic costs & abundance +
-energy & network reconstruction & \\
+energy & `energy' network & \\
 graph embedding & Interactions can be predicted from the latent traits
-of networks & feasibility & network reconstruction & Strydom et al.
+of networks & evolutionary compatibility & metaweb & Strydom et al.
 (2023) \\
 trait matching & Interactions can be inferred by a mechanistic
-framework/relationships & feasibility & network reconstruction &
+framework/relationships & evolutionary compatibility & metaweb &
 Morales-Castilla et al. (2015) \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
-feasibility & network reconstruction & Pichler et al. (2020) \\
+evolutionary compatibility & metaweb & Pichler et al. (2020) \\
 expert knowledge & `Boots on the ground' ecological knowledge and
-observations & feasibility & network reconstruction & \\
+observations & evolutionary compatibility & metaweb & \\
 data scavenging & Webscraping to create networks from online databases &
-& network reconstruction & Poisot, Gravel, et al. (2016) (f you
-squint?) \\
+& metaweb & Poisot, Gravel, et al. (2016) (if you squint?) \\
 co-occurrence & co-occurrence patterns arise from interactions so we can
 use these patterns to reverse engineer the interactions & co-occurrence
-& network inference & \\
+& co-occurrence network & \\
 \end{longtable}
 
 \section{Making Progress with
@@ -1088,20 +1106,10 @@ environment to the rescue: Can physics help predict predator--prey
 interactions? \emph{Biological Reviews}, \emph{n/a}(n/a).
 \url{https://doi.org/10.1111/brv.13105}
 
-\bibitem[\citeproctext]{ref-cirtwillQuantitativeFrameworkInvestigating2019}
-Cirtwill, A. R., Eklf, A., Roslin, T., Wootton, K., \& Gravel, D.
-(2019). A quantitative framework for investigating the reliability of
-empirical network construction. \emph{Methods in Ecology and Evolution},
-\emph{10}(6), 902--911. \url{https://doi.org/10.1111/2041-210X.13180}
-
 \bibitem[\citeproctext]{ref-cleggImpactIntraspecificVariation2018}
 Clegg, T., Ali, M., \& Beckerman, A. P. (2018). The impact of
 intraspecific variation on food web structure. \emph{Ecology},
 \emph{99}(12), 2712--2720. \url{https://doi.org/10.1002/ecy.2523}
-
-\bibitem[\citeproctext]{ref-cohenCommunityFoodWebs1990}
-Cohen, J. E., Briand, F., \& Newman, C. (1990). \emph{Community {Food
-Webs}: {Data} and {Theory}}. Springer-Verlag.
 
 \bibitem[\citeproctext]{ref-dallarivaExploringEvolutionarySignature2016}
 Dalla Riva, G. V., \& Stouffer, D. B. (2016). Exploring the evolutionary
@@ -1320,12 +1328,6 @@ F. R. (2022). Ecological network assembly: {How} the regional metaweb
 influences local food webs. \emph{Journal of Animal Ecology},
 \emph{91}(3), 630--642. \url{https://doi.org/10.1111/1365-2656.13652}
 
-\bibitem[\citeproctext]{ref-shawFrameworkReconstructingAncient2024}
-Shaw, J. O., Dunhill, A. M., Beckerman, A. P., Dunne, J. A., \& Hull, P.
-M. (2024). \emph{A framework for reconstructing ancient food webs using
-functional trait data} (p. 2024.01.30.578036). bioRxiv.
-\url{https://doi.org/10.1101/2024.01.30.578036}
-
 \bibitem[\citeproctext]{ref-strydomFoodWebReconstruction2022}
 Strydom, T., Bouskila, S., Banville, F., Barros, C., Caron, D., Farrell,
 M. J., Fortin, M.-J., Hemming, V., Mercier, B., Pollock, L. J., Runghen,
@@ -1372,6 +1374,11 @@ Wootton, K. L., Curtsdotter, A., Roslin, T., Bommarco, R., \& Jonsson,
 T. (2023). Towards a modular theory of trophic interactions.
 \emph{Functional Ecology}, \emph{37}(1), 26--43.
 \url{https://doi.org/10.1111/1365-2435.13954}
+
+\bibitem[\citeproctext]{ref-xieCompletenessCommunityStructure2017}
+Xie, J.-R., Zhang, P., Zhang, H.-F., \& Wang, B.-H. (2017). Completeness
+of {Community Structure} in {Networks}. \emph{Scientific Reports},
+\emph{7}(1), 5269. \url{https://doi.org/10.1038/s41598-017-05585-6}
 
 \bibitem[\citeproctext]{ref-yeakelCollapseEcologicalNetwork2014}
 Yeakel, J. D., Pires, M. M., Rudolf, L., Dominy, N. J., Koch, P. L.,
