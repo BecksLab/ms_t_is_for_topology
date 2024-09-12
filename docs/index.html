@@ -10,7 +10,7 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-09-10">
+<meta name="dcterms.date" content="2024-09-12">
 <meta name="keywords" content="food web, network construction, scientific ignorance">
 
 <title>Unveiling the Complexity of Food Webs: A Comprehensive Overview of Definitions, Scales, and Mechanisms</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-09-10">
-<meta name="citation_cover_date" content="2024-09-10">
+<meta name="citation_publication_date" content="2024-09-12">
+<meta name="citation_cover_date" content="2024-09-12">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-09-10">
+<meta name="citation_online_date" content="2024-09-12">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="TREE (one can dream...)">
 <meta name="citation_reference" content="citation_title=A novel method for predicting ecological interactions with an unsupervised machine learning algorithm;,citation_abstract=This gap in knowledge regarding ecological interactions has prompted the development of various predictive approaches. Traditionally, ecological interactions have been inferred using traits. However, the lack of trait information for numerous organisms necessitates using phylogenetic data and statistical insights from interaction matrices for prediction. Previous studies have overlooked the validation of model-predicted interactions. This study used a novel method in predicting ecological interactions using a self-organizing map (SOM), an unsupervised machine learning algorithm. The SOM learns from the input interaction matrix by grouping the nodes into output layers based on their interactions. Subsequently, the trained model predicts the interactions as scores. To distinguish between interactions and non-interactions, we employed F1 score maximization, setting scores above a specific threshold as interactions and the remainder as non-interactions. We applied this method to three unipartite metawebs and one bipartite metaweb and subsequently validated the predicted interactions using two innovative approaches: taxonomic and interaction recovery validation. Our method exhibited outstanding predictive performance, particularly for large networks. Various binary classification performance indicators, including F1 score (0.84–0.97) and accuracy (0.97–0.99), indicated high performance. Moreover, the method generated minimal predicted interactions, signifying low noise in the predictions, particularly for large networks. Taxonomic validation excels in metawebs with a connectance &amp;amp;amp;gt;0.1 but performs poorly in metawebs with very low connectance. In contrast, interaction recovery was most effective in larger metawebs. Our proposed method excels at making highly accurate predictions of ecological interactions with minimal noise, solely utilizing input interaction data without relying on traits or phylogenetic information regarding interacting nodes. These predictions are particularly precise for large networks, underscoring their potential to address knowledge gaps in emerging extensive metawebs. Notably, taxonomic validation and interaction recovery methods are sensitive to connectance and network size, respectively, suggesting prospects for developing robust interaction validation methods.;,citation_author=Sagar Adhurya;,citation_author=Young-Seuk Park;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=n/a;,citation_doi=10.1111/2041-210X.14358;,citation_issn=2041-210X;,citation_volume=n/a;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
@@ -328,7 +328,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">September 10, 2024</p>
+              <p class="date">September 12, 2024</p>
             </div>
           </div>
           
@@ -365,7 +365,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#how-do-we-define-a-node" id="toc-how-do-we-define-a-node" class="nav-link" data-scroll-target="#how-do-we-define-a-node"><span class="header-section-number">1.0.1</span> How do we define a node?</a></li>
   <li><a href="#what-is-meant-by-an-edge" id="toc-what-is-meant-by-an-edge" class="nav-link" data-scroll-target="#what-is-meant-by-an-edge"><span class="header-section-number">1.0.2</span> What is meant by an edge?</a></li>
-  <li><a href="#putting-the-parts-together-what-does-it-mean" id="toc-putting-the-parts-together-what-does-it-mean" class="nav-link" data-scroll-target="#putting-the-parts-together-what-does-it-mean"><span class="header-section-number">1.0.3</span> Putting the parts together; what does it mean?</a></li>
+  <li><a href="#putting-the-parts-together" id="toc-putting-the-parts-together" class="nav-link" data-scroll-target="#putting-the-parts-together"><span class="header-section-number">1.0.3</span> Putting the parts together</a></li>
   </ul></li>
   <li><a href="#sec-mechanisms" id="toc-sec-mechanisms" class="nav-link" data-scroll-target="#sec-mechanisms"><span class="header-section-number">2</span> From Nodes and Edges to Scales, Context, and Processes</a>
   <ul class="collapse">
@@ -373,7 +373,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#network-prediction-is-nuanced" id="toc-network-prediction-is-nuanced" class="nav-link" data-scroll-target="#network-prediction-is-nuanced"><span class="header-section-number">3</span> Network prediction is nuanced</a>
   <ul class="collapse">
-  <li><a href="#sec-network-build" id="toc-sec-network-build" class="nav-link" data-scroll-target="#sec-network-build"><span class="header-section-number">3.1</span> How do we predict food webs?</a></li>
+  <li><a href="#sec-network-build" id="toc-sec-network-build" class="nav-link" data-scroll-target="#sec-network-build"><span class="header-section-number">3.1</span> Models that predict structure</a></li>
+  <li><a href="#how-do-we-predict-food-webs" id="toc-how-do-we-predict-food-webs" class="nav-link" data-scroll-target="#how-do-we-predict-food-webs"><span class="header-section-number">3.2</span> How do we predict food webs?</a></li>
   </ul></li>
   <li><a href="#making-progress-with-networks" id="toc-making-progress-with-networks" class="nav-link" data-scroll-target="#making-progress-with-networks"><span class="header-section-number">4</span> Making Progress with Networks</a></li>
   <li><a href="#concluding-remarks" id="toc-concluding-remarks" class="nav-link" data-scroll-target="#concluding-remarks"><span class="header-section-number">5</span> Concluding remarks</a>
@@ -409,7 +410,7 @@ window.Quarto = {
 <div id="fig-anatomy" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-anatomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/anatomy.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/anatomy.png" class="img-fluid figure-img"></a>
+<a href="images/anatomy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/anatomy.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anatomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: The many ways in which a food web can be defined and described at the node, edge, and even network level.
@@ -424,8 +425,8 @@ Figure&nbsp;1: The many ways in which a food web can be defined and described at
 <h3 data-number="1.0.2" class="anchored" data-anchor-id="what-is-meant-by-an-edge"><span class="header-section-number">1.0.2</span> What is meant by an edge?</h3>
 <p>At its core links within food webs can be thought of as a representation of either feeding links between species - be that realised <span class="citation" data-cites="pringleUntanglingFoodWebs2020">(<a href="#ref-pringleUntanglingFoodWebs2020" role="doc-biblioref">Pringle 2020</a>)</span> or potential <span class="citation" data-cites="dunneNetworkStructureFood2006">(<a href="#ref-dunneNetworkStructureFood2006" role="doc-biblioref">Jennifer A. Dunne 2006</a>)</span>, or representative of fluxes within the community/system <em>e..,</em> energy transfer or material flow <span class="citation" data-cites="lindemanTrophicDynamicAspectEcology1942">(<a href="#ref-lindemanTrophicDynamicAspectEcology1942" role="doc-biblioref">Lindeman 1942</a>)</span>. How we specify links will influence the resulting structure of the network - and the inferences we will make thereof. For example taking a food web that consists of links representing all <em>potential</em> feeding links for a community (<em>i.e.,</em> a metaweb) will be meaningless if you are interested in understanding the flow of energy through the system as the links within a metaweb do not represent environmental/energetic constraints. In addition to the various ways of defining the links between species pairs there are also a myriad of ways in which the links themselves can be quantified. Links between species are often treated as being present or absent (<em>i.e.,</em> binary) but it is also possible to use probabilities <span class="citation" data-cites="poisotStructureProbabilisticNetworks2016">(which quantifies how likely an interaction is to occur, <a href="#ref-poisotStructureProbabilisticNetworks2016" role="doc-biblioref">Poisot, Cirtwill, et al. 2016</a>)</span> or continuous measurements <span class="citation" data-cites="berlowInteractionStrengthsFood2004">(which quantifies the strength of of an interaction, <a href="#ref-berlowInteractionStrengthsFood2004" role="doc-biblioref">Berlow et al. 2004</a>)</span>. Moving away from a purely binary way of representing allows us to quantify a level of (un)certainty of our knowledge of interactions (<em>i.e.,</em> moving from being able to ask if are they occurring to quantifying how likely they are to occur) does add an additional level of ‘complexity’ to the construction and interpretation of networks, but ultimately it will allow us to capture more information at different scales <span class="citation" data-cites="banvilleDecipheringProbabilisticSpecies2024">(<a href="#ref-banvilleDecipheringProbabilisticSpecies2024" role="doc-biblioref">Banville et al. 2024</a>)</span>.</p>
 </section>
-<section id="putting-the-parts-together-what-does-it-mean" class="level3" data-number="1.0.3">
-<h3 data-number="1.0.3" class="anchored" data-anchor-id="putting-the-parts-together-what-does-it-mean"><span class="header-section-number">1.0.3</span> Putting the parts together; what does it mean?</h3>
+<section id="putting-the-parts-together" class="level3" data-number="1.0.3">
+<h3 data-number="1.0.3" class="anchored" data-anchor-id="putting-the-parts-together"><span class="header-section-number">1.0.3</span> Putting the parts together</h3>
 <p>The ingredients one uses to construct networks from nodes and edges generates a unique representation of the mechanisms (see <a href="#sec-mechanisms" class="quarto-xref">Section&nbsp;2</a>) that allow inference and reasoning about the structure, aspects of dynamics (<em>e.g.,</em> stability), and potentially the function of communities (<em>e.g.,</em> flux). It is thus important to keep in mind that different networks are going to be representing different processes and that can only be used for inference of some but not all aspects of the community at large. Here it may be meaningful to contextualise the different ‘types’ of food webs within the larger research programmes (or even practical needs) that have been driving the construction of them.</p>
 <p>Before thinking about the ways in which we can predict networks it is perhaps meaningful to take a step back and think about the different criteria that must be met in order for an interaction to be able to occur between two species, specifically thinking of this in terms of distinguishing between the feasibility versus realisation of an interaction and how these are determined (and defined by) different ‘rules’/mechanisms. If we look at this feasibility-reality continuum (<a href="#fig-feasibility" class="quarto-xref">Figure&nbsp;2</a>) it is clear how the different predictive approaches (methods) tend to fall within one of the broader categories identified (distinguished) in the triangle. This is not to say that this shortcoming should be viewed as a ‘bug’ but rather a ‘feature’ of the field as it allows one to engage with, as well as construct networks at different scales, which is particularly valuable if one takes into consideration the considerable ‘data cost’ of predicting well resolved, realised networks in comparison to constructing high-level metawebs. However, it is important that there is an awareness and acknowledgement of where within this feasibility-reality one is working at and how this will impact and limit the contexts in which the resulting network can be used and applied within.</p>
 </section>
@@ -443,7 +444,7 @@ Figure&nbsp;1: The many ways in which a food web can be defined and described at
 <div id="fig-feasibility" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-feasibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/concept_v2.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="images/concept_v2.png" class="img-fluid figure-img"></a>
+<a href="images/concept_v2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="images/concept_v2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feasibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: TODO.
@@ -461,21 +462,23 @@ Figure&nbsp;2: TODO.
 <p><strong>Indirect interactions</strong></p>
 <p>The realisation (presence/absence) or strength of trophic interactions themselves can also be modified by other, indirect (non-trophic), interactions <span class="citation" data-cites="golubskiModifyingModifiersWhat2011 pilosofMultilayerNatureEcological2017">(<a href="#ref-golubskiModifyingModifiersWhat2011" role="doc-biblioref">Golubski and Abrams 2011</a>; <a href="#ref-pilosofMultilayerNatureEcological2017" role="doc-biblioref">Pilosof et al. 2017</a>)</span>, this can be either ‘directly’ through <em>e.g.,</em> competition or ‘indirectly’ <em>e.g.,</em> mutualistic/facilitative interactions will alter the fine-scale distribution and abundance of some species <span class="citation" data-cites="kefiMoreMealIntegrating2012 kefiNetworkStructureFood2015">(<a href="#ref-kefiMoreMealIntegrating2012" role="doc-biblioref">Kéfi et al. 2012</a>, <a href="#ref-kefiNetworkStructureFood2015" role="doc-biblioref">2015</a>)</span>.</p>
 <p>It should be self evident that the different processes discussed above are all ultimately going to influence the realisation of interactions as well as the structure of a network, however they are acting at different scales of organisation. Both the <strong>co-occurrence</strong> and the <strong>evolutionary compatibility</strong> are valid at the scale of the species pair of interest, that is the <em>possibility</em> of an interaction being present/absent is assessed at the pairwise level and one is left with a ‘list’ of interactions that are present/absent. Although it is possible to build a network (<em>i.e.,</em> metaweb) from this information it is important to be aware that the structure of this network is not constrained by real-world dynamics or conditions, just becuase species are able to interact does not mean that they will <span class="citation" data-cites="poisotSpeciesWhyEcological2015">(<a href="#ref-poisotSpeciesWhyEcological2015" role="doc-biblioref">Poisot, Stouffer, and Gravel 2015</a>)</span>. In order to construct a network who’s structure is a closer approximation of reality (localised interactions) one needs to take into consideration properties of the community as a whole and not just the two species of interest.</p>
+<p><strong>downsampling paragraph??</strong></p>
 </section>
 </section>
 <section id="network-prediction-is-nuanced" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Network prediction is nuanced</h1>
-<p>The different models that are used to either predict or construct networks have an underlying philosophy that often only captures one or a few of the processes discussed in <a href="#sec-process" class="quarto-xref">Section&nbsp;2.1</a>, has implications for how the resulting network is defined <a href="#sec-anatomy" class="quarto-xref">Section&nbsp;1</a>, which will ultimately delimit and define what inferences can be made from the resulting network. Selecting a model for the task of network prediction should come down to two things; what <em>aspect</em> of a food web one is interested in predicting, and what data are available, necessary, and sufficient, and what is the purpose of wanting to predict a network? It is important that a researcher is aware of this to ensure that the appropriate model is selected. Broadly researchers will be interested in predicting/constructing two different types of networks; <em>metawebs</em>, which is essentially a list of all interactions that are <em>possible</em> for a specific community (<em>i.e.,</em> at the scale of the species pairs), or being able to predict location specific, <em>realised</em>, networks for the community (<em>i.e.,</em> at the scale of the community). The nature of metawebs means that they are unable to capture the structural metrics of realised networks <span class="citation" data-cites="caronTraitmatchingModelsPredict2024">(<a href="#ref-caronTraitmatchingModelsPredict2024" role="doc-biblioref">Caron et al. 2024</a>)</span>. The researcher is also constrained by the data needs of both the model as well as the network type; for example in order to predict a realised network one needs additional data (<em>e.g.,</em> abundance), making metawebs a more feasible choice in data-poor contexts (<em>e.g.,</em> <span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span> construct a metaweb using a species list and a phylogenetic tree). The final question is assessing the purpose of predicting a network - is it to create a series of simulated, species agnostic but still ecologically plausible, networks [<em>e.g.,</em>] or to predict a network for a specific community at a specific location. It is these three points that will ultimately dictate which model is going to best allow one to predict the appropriate network.</p>
+<p>The different models that are used to either predict or construct networks have an underlying philosophy that often only captures one or a few of the processes discussed in <a href="#sec-process" class="quarto-xref">Section&nbsp;2.1</a>, has implications for how the resulting network is defined <a href="#sec-anatomy" class="quarto-xref">Section&nbsp;1</a>, which will ultimately delimit and define what inferences can be made from the resulting network. Selecting a model for the task of network prediction should come down to two things; what <em>aspect</em> of a food web one is interested in predicting, and what data are available, necessary, and sufficient, and what is the purpose of wanting to predict a network? It is important that a researcher is aware of this to ensure that the appropriate model is selected. Broadly researchers will be interested in predicting/constructing two different types of networks; <em>metawebs</em>, which is essentially a list of all interactions that are <em>possible</em> for a specific community (<em>i.e.,</em> at the scale of the species pairs), or being able to predict location specific, <em>realised</em>, networks for the community (<em>i.e.,</em> at the scale of the community). The nature of metawebs means that they are unable to capture the structural metrics of realised/‘real-world’ networks <span class="citation" data-cites="caronTraitmatchingModelsPredict2024">(<a href="#ref-caronTraitmatchingModelsPredict2024" role="doc-biblioref">Caron et al. 2024</a>)</span>. The researcher is also constrained by the data needs of both the model as well as the network type; for example in order to predict a realised network one needs additional data (<em>e.g.,</em> abundance), making metawebs a more feasible choice in data-poor contexts (<em>e.g.,</em> <span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span> construct a metaweb using a species list and a phylogenetic tree). The final question is assessing the purpose of predicting a network - is it to create a series of simulated, species agnostic but still ecologically plausible, networks [<em>e.g.,</em>] or to predict a network for a specific community at a specific location. It is these three points that will ultimately dictate which model is going to best allow one to predict the appropriate network.</p>
 <blockquote class="blockquote">
 <p>Although the ability to predict ‘real-world’ interactions (and the resulting food webs) can have more intuitive ‘real world’ applications <em>e.g.,</em> being able to ‘recover’ food webs that have since gone extinct <span class="citation" data-cites="dunneCompilationNetworkAnalyses2008 yeakelCollapseEcologicalNetwork2014">(<a href="#ref-dunneCompilationNetworkAnalyses2008" role="doc-biblioref">Jennifer A. Dunne et al. 2008</a>; <a href="#ref-yeakelCollapseEcologicalNetwork2014" role="doc-biblioref">Yeakel et al. 2014</a>)</span>, using pairwise interactions to understand species distributions <span class="citation" data-cites="pollockUnderstandingCooccurrenceModelling2014">(<a href="#ref-pollockUnderstandingCooccurrenceModelling2014" role="doc-biblioref">Pollock et al. 2014</a>)</span> or even co-extinction risk <span class="citation" data-cites="dunnSixthMassCoextinction2009">(<a href="#ref-dunnSixthMassCoextinction2009" role="doc-biblioref">Dunn et al. 2009</a>)</span>, a more structural approach to network construction affords one an opportunity to interrogate some of the more high-level mechanisms that are structuring networks.</p>
 </blockquote>
 <section id="sec-network-build" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="sec-network-build"><span class="header-section-number">3.1</span> How do we predict food webs?</h2>
-<p><strong>NEED A TRANSITION PARAGRAPH</strong></p>
-<p>In order for a model to formalise a ‘complete’ food web it is necessary to formalise two aspects of the network, ‘who eats whom’ (to determine the links between nodes) as well as the structure of the network (to limit the distribution of links), however most models are inclined to focus on one of the two aspects.</p>
-<p><strong>assumptions</strong></p>
-<p>Models such as the niche <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> or cascade <span class="citation" data-cites="cohenCommunityFoodWebs1990">(<a href="#ref-cohenCommunityFoodWebs1990" role="doc-biblioref">Cohen, Briand, and Newman 1990</a>)</span> were developed with the intent of being used to understand the <em>structural</em> aspects of food webs, specifically how links are distributed amongst species in the community, whereas bayesian <span class="citation" data-cites="cirtwillQuantitativeFrameworkInvestigating2019">(<a href="#ref-cirtwillQuantitativeFrameworkInvestigating2019" role="doc-biblioref">Cirtwill et al. 2019</a>)</span> or trait hierarchy <span class="citation" data-cites="shawFrameworkReconstructingAncient2024">(<a href="#ref-shawFrameworkReconstructingAncient2024" role="doc-biblioref">Shaw et al. 2024</a>)</span> models have been developed on the basis that the traits of a species are the underlying mechanism in determining the feasibility of interactions (<em>i.e.,</em> species <span class="math inline">\(a\)</span> has the capacity to eat species <span class="math inline">\(b\)</span>).</p>
-<p>As there are many food web models to choose from it is perhaps useful to think about the models in terms of model families, a summary of these families is presented in <a href="#tbl-families" class="quarto-xref">Table&nbsp;1</a> highlights the differences and similarities of the philosophies and assumptions that determine a network. A more extensive overview of the different models that fall with in the different model families can be found in <a href="https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_descriptions-preview.html">SuppMat 1</a> and for a more detailed breakdown of the different ‘traits’ of the model families refer to <a href="https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_qualitative-preview.html">SuppMat 2</a>.</p>
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-network-build"><span class="header-section-number">3.1</span> Models that predict structure</h2>
+<p>Although we identify mechanisms that determine species interactions in <a href="#sec-process" class="quarto-xref">Section&nbsp;2.1</a> not all models that are used to predict networks operate at this ‘mechanistic’ level, but rather represent the <em>structure</em> of a network based on a series of <em>a priori</em> assumptions of network connectance (<em>e.g.,</em> the niche model <span class="citation" data-cites="williamsSimpleRulesYield2000">Williams and Martinez (<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">2000</a>)</span>) or other structural features (<em>e.g.,</em> stochastic block model, <span class="citation" data-cites="xieCompletenessCommunityStructure2017">Xie et al. (<a href="#ref-xieCompletenessCommunityStructure2017" role="doc-biblioref">2017</a>)</span>) of a <em>realised</em> network. Importantly these structural models do not make species specific predictions (they are species agnostic and usually treat nodes as trophic species) and so cannot be used to determine if an interaction is either possible <em>or</em> realised between two species (<em>i.e.,</em>one cannot use these models to determine if species <span class="math inline">\(a\)</span> eats species <span class="math inline">\(b\)</span>). Although this means this suite of models are unsuitable as tools for predicting interactions, they have been shown to be sufficient tools to predict the structure of networks <span class="citation" data-cites="williamsSuccessItsLimits2008">(<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">Williams and Martinez 2008</a>)</span>.</p>
+</section>
+<section id="how-do-we-predict-food-webs" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="how-do-we-predict-food-webs"><span class="header-section-number">3.2</span> How do we predict food webs?</h2>
+<p>There as many ways to predict networks as what there is to define them and along with taking into consideration the points raised in the previous section it is also beneficial to think about the context in which the different models were developed - and how this will influence the networks that they produce… Also it is not feasibly possible to list every single approach that has been developed to predict networks and so we will present what we believe to be the broad families that represent the different approaches to predicting networks, particularly how these relate to the processes identified in <a href="#sec-process" class="quarto-xref">Section&nbsp;2.1</a>, as well as models that predict network structure (see <a href="#sec-network-build" class="quarto-xref">Section&nbsp;3.1</a>).</p>
+<p>In order for a model to formalise a ‘complete’ food web it is necessary to formalise two aspects of the network, ‘who eats whom’ (to determine the links between nodes) as well as the structure of the network (to limit the distribution of links), however most models are inclined to focus on one of the two aspects. As there are many food web models to choose from it is perhaps useful to think about the models in terms of model families, a summary of these families is presented in <a href="#tbl-families" class="quarto-xref">Table&nbsp;1</a> highlights the differences and similarities of the philosophies and assumptions that determine a network. A more extensive overview of the different models that fall with in the different model families can be found in <a href="https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_descriptions-preview.html">SuppMat 1</a> and for a more detailed breakdown of the different ‘traits’ of the model families refer to <a href="https://beckslab.github.io/ms_t_is_for_topology/notebooks/model_qualitative-preview.html">SuppMat 2</a>.</p>
 <div id="tbl-families" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -485,15 +488,15 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <table class="table">
 <colgroup>
 <col style="width: 18%">
-<col style="width: 31%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 24%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Model family</th>
-<th>Assumption</th>
+<th>Assumption (process)</th>
 <th>Theory</th>
 <th>Type</th>
 <th>Key reference</th>
@@ -504,77 +507,77 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>null</td>
 <td>Links are randomly distributed within a network</td>
 <td></td>
-<td>network inference</td>
+<td>structural network</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>neutral</td>
 <td>Network structure is random, but species abundance determines links between nodes</td>
 <td>abundance</td>
-<td>network inference</td>
+<td>structural network</td>
 <td><span class="citation" data-cites="canardEmergenceStructuralPatterns2012">Canard et al. (<a href="#ref-canardEmergenceStructuralPatterns2012" role="doc-biblioref">2012</a>)</span></td>
 </tr>
 <tr class="odd">
 <td>resource</td>
 <td>Networks are interval, species can be ordered on a ‘niche axis’</td>
 <td></td>
-<td>network inference</td>
+<td>structural network</td>
 <td><span class="citation" data-cites="williamsSuccessItsLimits2008">Williams and Martinez (<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">2008</a>)</span></td>
 </tr>
 <tr class="even">
 <td>generative</td>
 <td>Networks are determined by their structural features</td>
 <td></td>
-<td>network reconstruction</td>
+<td>structural network</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>energetic</td>
 <td>Interactions are determined by energetic costs</td>
 <td>abundance + energy</td>
-<td>network reconstruction</td>
+<td>‘energy’ network</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>graph embedding</td>
 <td>Interactions can be predicted from the latent traits of networks</td>
-<td>feasibility</td>
-<td>network reconstruction</td>
+<td>evolutionary compatibility</td>
+<td>metaweb</td>
 <td><span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span></td>
 </tr>
 <tr class="odd">
 <td>trait matching</td>
 <td>Interactions can be inferred by a mechanistic framework/relationships</td>
-<td>feasibility</td>
-<td>network reconstruction</td>
+<td>evolutionary compatibility</td>
+<td>metaweb</td>
 <td><span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">Morales-Castilla et al. (<a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">2015</a>)</span></td>
 </tr>
 <tr class="even">
 <td>binary classifiers</td>
 <td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors</td>
-<td>feasibility</td>
-<td>network reconstruction</td>
+<td>evolutionary compatibility</td>
+<td>metaweb</td>
 <td><span class="citation" data-cites="pichlerMachineLearningAlgorithms2020">Pichler et al. (<a href="#ref-pichlerMachineLearningAlgorithms2020" role="doc-biblioref">2020</a>)</span></td>
 </tr>
 <tr class="odd">
 <td>expert knowledge</td>
 <td>‘Boots on the ground’ ecological knowledge and observations</td>
-<td>feasibility</td>
-<td>network reconstruction</td>
+<td>evolutionary compatibility</td>
+<td>metaweb</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>data scavenging</td>
 <td>Webscraping to create networks from online databases</td>
 <td></td>
-<td>network reconstruction</td>
-<td><span class="citation" data-cites="poisotSyntheticDatasetsCommunity2016">Poisot, Gravel, et al. (<a href="#ref-poisotSyntheticDatasetsCommunity2016" role="doc-biblioref">2016</a>)</span> (f you squint?)</td>
+<td>metaweb</td>
+<td><span class="citation" data-cites="poisotSyntheticDatasetsCommunity2016">Poisot, Gravel, et al. (<a href="#ref-poisotSyntheticDatasetsCommunity2016" role="doc-biblioref">2016</a>)</span> (if you squint?)</td>
 </tr>
 <tr class="odd">
 <td>co-occurrence</td>
 <td>co-occurrence patterns arise from interactions so we can use these patterns to reverse engineer the interactions</td>
 <td>co-occurrence</td>
-<td>network inference</td>
+<td>co-occurrence network</td>
 <td></td>
 </tr>
 </tbody>
@@ -738,14 +741,8 @@ Caron, Dominique, Ulrich Brose, Miguel Lurgi, F. Guillaume Blanchet, Dominique G
 <div id="ref-cherifEnvironmentRescueCan2024" class="csl-entry" role="listitem">
 Cherif, Mehdi, Ulrich Brose, Myriam R. Hirt, Remo Ryser, Violette Silve, Georg Albert, Russell Arnott, et al. 2024. <span>“The Environment to the Rescue: Can Physics Help Predict Predator–Prey Interactions?”</span> <em>Biological Reviews</em> n/a (n/a). <a href="https://doi.org/10.1111/brv.13105">https://doi.org/10.1111/brv.13105</a>.
 </div>
-<div id="ref-cirtwillQuantitativeFrameworkInvestigating2019" class="csl-entry" role="listitem">
-Cirtwill, Alyssa R., Anna Eklf, Tomas Roslin, Kate Wootton, and Dominique Gravel. 2019. <span>“A Quantitative Framework for Investigating the Reliability of Empirical Network Construction.”</span> <em>Methods in Ecology and Evolution</em> 10 (6): 902–11. <a href="https://doi.org/10.1111/2041-210X.13180">https://doi.org/10.1111/2041-210X.13180</a>.
-</div>
 <div id="ref-cleggImpactIntraspecificVariation2018" class="csl-entry" role="listitem">
 Clegg, Tom, Mohammad Ali, and Andrew P. Beckerman. 2018. <span>“The Impact of Intraspecific Variation on Food Web Structure.”</span> <em>Ecology</em> 99 (12): 2712–20. <a href="https://doi.org/10.1002/ecy.2523">https://doi.org/10.1002/ecy.2523</a>.
-</div>
-<div id="ref-cohenCommunityFoodWebs1990" class="csl-entry" role="listitem">
-Cohen, Joel E, Frederic Briand, and Charles Newman. 1990. <em>Community <span>Food Webs</span>: <span>Data</span> and <span>Theory</span></em>. Biomathematics. Berlin Heidelberg: Springer-Verlag.
 </div>
 <div id="ref-dallarivaExploringEvolutionarySignature2016" class="csl-entry" role="listitem">
 Dalla Riva, Giulio V, and Daniel B. Stouffer. 2016. <span>“Exploring the Evolutionary Signature of Food Webs’ Backbones Using Functional Traits.”</span> <em>Oikos</em> 125 (4): 446–56. <a href="https://doi.org/10.1111/oik.02305">https://doi.org/10.1111/oik.02305</a>.
@@ -855,9 +852,6 @@ Proulx, Stephen R., Daniel E. L. Promislow, and Patrick C. Phillips. 2005. <span
 <div id="ref-saraviaEcologicalNetworkAssembly2022" class="csl-entry" role="listitem">
 Saravia, Leonardo A., Tomás I Marina, Nadiah P. Kristensen, Marleen De Troch, and Fernando R. Momo. 2022. <span>“Ecological Network Assembly: <span>How</span> the Regional Metaweb Influences Local Food Webs.”</span> <em>Journal of Animal Ecology</em> 91 (3): 630–42. <a href="https://doi.org/10.1111/1365-2656.13652">https://doi.org/10.1111/1365-2656.13652</a>.
 </div>
-<div id="ref-shawFrameworkReconstructingAncient2024" class="csl-entry" role="listitem">
-Shaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. <span>“A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.”</span> bioRxiv. <a href="https://doi.org/10.1101/2024.01.30.578036">https://doi.org/10.1101/2024.01.30.578036</a>.
-</div>
 <div id="ref-strydomFoodWebReconstruction2022" class="csl-entry" role="listitem">
 Strydom, Tanya, Salomé Bouskila, Francis Banville, Ceres Barros, Dominique Caron, Maxwell J. Farrell, Marie-Josée Fortin, et al. 2022. <span>“Food Web Reconstruction Through Phylogenetic Transfer of Low-Rank Network Representation.”</span> <em>Methods in Ecology and Evolution</em> 13 (12): 2838–49. <a href="https://doi.org/10.1111/2041-210X.13835">https://doi.org/10.1111/2041-210X.13835</a>.
 </div>
@@ -879,6 +873,9 @@ Williams, Richard J., and Neo D. Martinez. 2000. <span>“Simple Rules Yield Com
 <div id="ref-woottonModularTheoryTrophic2023" class="csl-entry" role="listitem">
 Wootton, Kate L., Alva Curtsdotter, Tomas Roslin, Riccardo Bommarco, and Tomas Jonsson. 2023. <span>“Towards a Modular Theory of Trophic Interactions.”</span> <em>Functional Ecology</em> 37 (1): 26–43. <a href="https://doi.org/10.1111/1365-2435.13954">https://doi.org/10.1111/1365-2435.13954</a>.
 </div>
+<div id="ref-xieCompletenessCommunityStructure2017" class="csl-entry" role="listitem">
+Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Completeness of <span>Community Structure</span> in <span>Networks</span>.”</span> <em>Scientific Reports</em> 7 (1): 5269. <a href="https://doi.org/10.1038/s41598-017-05585-6">https://doi.org/10.1038/s41598-017-05585-6</a>.
+</div>
 <div id="ref-yeakelCollapseEcologicalNetwork2014" class="csl-entry" role="listitem">
 Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. <span>“Collapse of an Ecological Network in <span>Ancient Egypt</span>.”</span> <em>PNAS</em> 111 (40): 14472–77. <a href="https://doi.org/10.1073/pnas.1408471111">https://doi.org/10.1073/pnas.1408471111</a>.
 </div>
@@ -895,7 +892,7 @@ Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. K
   title = {Unveiling the {Complexity} of {Food} {Webs:} {A}
     {Comprehensive} {Overview} of {Definitions,} {Scales,} and
     {Mechanisms}},
-  date = {2024-09-10},
+  date = {2024-09-12},
   langid = {en},
   abstract = {Food webs are a useful abstraction and representation of
     the feeding links between species in a community and are used to
@@ -917,7 +914,7 @@ Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. K
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
 Beckerman. 2024. <span>“Unveiling the Complexity of Food Webs: A
 Comprehensive Overview of Definitions, Scales, and Mechanisms.”</span>
-TREE (One Can Dream...). September 10, 2024.
+TREE (One Can Dream...). September 12, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1308,7 +1305,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
