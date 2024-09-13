@@ -270,6 +270,7 @@ window.Quarto = {
 <meta name="citation_reference" content="citation_title=Towards a modular theory of trophic interactions;,citation_abstract=Species traits and environmental conditions determine the occurrence and strength of trophic interactions. If we understand the relationship between these factors and trophic interactions, we can make more accurate predictions and build better trophic-interaction models. We can compare traits and conditions by considering their effect on different parts (steps) of a trophic interaction, such as the steps search and pursuit. By linking traits to relevant steps, we can use these relationships to build trophic-interaction models. Currently, this is done ad hoc, defining steps based on the species and traits of interest. This makes it difficult to compare across traits and species and gain an overarching understanding of how traits and the environment drive trophic interactions. We present a comprehensive approach for the explicit choice of interaction steps and species traits or environmental conditions, which is readily integrated into existing models. The core of this framework is that it is modular; we present eight steps that occur in all trophic interactions and use them to build a modular, general dynamic model. When applying the framework, one explicitly selects only the most relevant steps and uses those to build a specific model. To build our modular framework, we revisit and expand the functional and numerical response functions, dividing the trophic interaction into eight steps: (1) search, (2) prey detection, (3) attack decision, (4) pursuit, (5) subjugation, (6) ingestion, (7) digestion and (8) nutrient allocation. Together these steps form a general dynamical model where trophic interactions can be explicitly parameterized for multiple traits and environmental factors. We then concretize this approach by outlining how a specific community can be modelled by selecting key modules (steps) and parameterizing them for relevant factors. This we exemplify for a community of terrestrial arthropods using empirical data on body size and temperature responses. With species interactions at the core of community dynamics, our modular approach allows for quantification and comparisons of the importance of different steps, traits, and abiotic factors across ecosystems and trophic-interaction types, and provides a powerful tool for trait-based prediction of food-web structure and dynamics. A free Plain Language Summary can be found within the Supporting Information of this article.;,citation_author=Kate L. Wootton;,citation_author=Alva Curtsdotter;,citation_author=Tomas Roslin;,citation_author=Riccardo Bommarco;,citation_author=Tomas Jonsson;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_issue=1;,citation_doi=10.1111/1365-2435.13954;,citation_issn=1365-2435;,citation_volume=37;,citation_language=en-US;,citation_journal_title=Functional Ecology;">
 <meta name="citation_reference" content="citation_title=Completeness of Community Structure in Networks;,citation_abstract=By defining a new measure to community structure, exclusive modularity, and based on cavity method of statistical physics, we develop a mathematically principled method to determine the completeness of community structure, which represents whether a partition that is either annotated by experts or given by a community-detection algorithm, carries complete information about community structure in the network. Our results demonstrate that the expert partition is surprisingly incomplete in some networks such as the famous political blogs network, indicating that the relation between meta-data and community structure in real-world networks needs to be re-examined. As a byproduct we find that the exclusive modularity, which introduces a null model based on the degree-corrected stochastic block model, is of independent interest. We discuss its applications as principled ways of detecting hidden structures, finding hierarchical structures without removing edges, and obtaining low-dimensional embedding of networks.;,citation_author=Jia-Rong Xie;,citation_author=Pan Zhang;,citation_author=Hai-Feng Zhang;,citation_author=Bing-Hong Wang;,citation_publication_date=2017-07;,citation_cover_date=2017-07;,citation_year=2017;,citation_issue=1;,citation_doi=10.1038/s41598-017-05585-6;,citation_issn=2045-2322;,citation_volume=7;,citation_language=en-US;,citation_journal_title=Scientific Reports;,citation_publisher=Nature Publishing Group;">
 <meta name="citation_reference" content="citation_title=Collapse of an ecological network in Ancient Egypt;,citation_author=Justin D. Yeakel;,citation_author=Mathias M. Pires;,citation_author=Lars Rudolf;,citation_author=Nathaniel J. Dominy;,citation_author=Paul L. Koch;,citation_author=Paulo R. Guimarães;,citation_author=Thilo Gross;,citation_publication_date=2014-10;,citation_cover_date=2014-10;,citation_year=2014;,citation_issue=40;,citation_doi=10.1073/pnas.1408471111;,citation_volume=111;,citation_journal_title=PNAS;">
+<meta name="citation_reference" content="citation_title=The Compartmentation of Real and Assembled Ecosystems;,citation_abstract=The dominant cliques of graph theory provide an unambiguous compartmentation for ecosystems. It is suggested here that it might make ecological sense to regard dominant cliques as something like &amp;amp;amp;quot;trophic guilds.&amp;quot; The dominant clique structure of 40 real food webs collected from the published literature by Briand (1982) is investigated. It is found that food webs from environments classifiedd by Briand as &quot;fluctuating&quot; differ significantly, both in number and in average size of dominant cliques, from food webs from environments classified by Briand as &quot;constant.&quot; In addition, food web intervality (Cohen 1978) is found to be associated with poverty in dominant cliques. Adding constraints on dominant clique number to &quot;assembled&quot; food web models (Yodzis 1981) yields mathematical food web universes which predict the observed frequency of interval food webs.;,citation_author=P. Yodzis;,citation_publication_date=1982-11;,citation_cover_date=1982-11;,citation_year=1982;,citation_issue=5;,citation_doi=10.1086/284013;,citation_issn=0003-0147;,citation_volume=120;,citation_journal_title=The American Naturalist;,citation_publisher=The University of Chicago Press;">
 </head>
 
 <body>
@@ -420,7 +421,7 @@ Figure&nbsp;1: The many ways in which a food web can be defined and described at
 </div>
 <section id="how-do-we-define-a-node" class="level3" data-number="1.0.1">
 <h3 data-number="1.0.1" class="anchored" data-anchor-id="how-do-we-define-a-node"><span class="header-section-number">1.0.1</span> How do we define a node?</h3>
-<p>Although this may seem an elementary question in the context of food webs — a node <em>should</em> represent a (taxonomic) species, the reality is that nodes can often represent an aggregation of different species - so called ‘trophic species’ or segregation of species by life stages. Representing nodes as non-taxonomic species can be useful in certain contexts <span class="citation" data-cites="williamsSimpleRulesYield2000">(<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> and in cases where the adult and larval stages of a species have different diets it may make ecological sense <span class="citation" data-cites="cleggImpactIntraspecificVariation2018">(<a href="#ref-cleggImpactIntraspecificVariation2018" role="doc-biblioref">Clegg, Ali, and Beckerman 2018</a>)</span> meaning that it is not uncommon that networks often have nodes that have different definitions of a ‘species’ <em>e.g.</em> consisting of both taxonomic and trophic species. Practical implications of how we are aggregating the nodes is that the resolution may not always be ‘pixel perfect’ <em>i.e.,</em> we may be unable to assess the co-extinction risk of a species pair, however there is value in having nodes that represent an aggregation of species, as these convey a much more general overview of how the links are distributed within the community.</p>
+<p>Although this may seem an elementary question in the context of food webs — a node <em>should</em> represent a (taxonomic) species, the reality is that nodes can often represent an aggregation of different species - so called ‘trophic species’ or segregation of species by life stages. Representing nodes as non-taxonomic species can be useful in certain contexts <span class="citation" data-cites="yodzisCompartmentationRealAssembled1982 williamsSimpleRulesYield2000">(<a href="#ref-yodzisCompartmentationRealAssembled1982" role="doc-biblioref">Yodzis 1982</a>; <a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> and in cases where the adult and larval stages of a species have different diets it may make ecological sense <span class="citation" data-cites="cleggImpactIntraspecificVariation2018">(<a href="#ref-cleggImpactIntraspecificVariation2018" role="doc-biblioref">Clegg, Ali, and Beckerman 2018</a>)</span> meaning that it is not uncommon that networks often have nodes that have different definitions of a ‘species’ <em>e.g.</em> consisting of both taxonomic and trophic species. Practical implications of how we are aggregating the nodes is that the resolution may not always be ‘pixel perfect’ <em>i.e.,</em> we may be unable to assess the co-extinction risk of a species pair, however there is value in having nodes that represent an aggregation of species, as these convey a much more general overview of how the links are distributed within the community.</p>
 </section>
 <section id="what-is-meant-by-an-edge" class="level3" data-number="1.0.2">
 <h3 data-number="1.0.2" class="anchored" data-anchor-id="what-is-meant-by-an-edge"><span class="header-section-number">1.0.2</span> What is meant by an edge?</h3>
@@ -457,7 +458,7 @@ Figure&nbsp;2: TODO.
 <p><strong>(Co)occurrence</strong></p>
 <p>Although the outright assumption that because two species are co-occurring it must mean that they are interacting is inherently flawed <span class="citation" data-cites="blanchetCooccurrenceNotEvidence2020">(<a href="#ref-blanchetCooccurrenceNotEvidence2020" role="doc-biblioref">Blanchet, Cazelles, and Gravel 2020</a>)</span>, it is of course impossible for two species to interact (at least in terms of feeding links) if they are not co-occurring in time and space. Thus co-occurrence data alone is insufficient to build an accurate and ecologically meaningful representation of a food web having information on the co-occurrence of species can further aid us in refining metawebs by allowing us to downsample the network based on the species found in a specific location, or even add additional uncertainty based in how likely species are to co-occur <span class="citation" data-cites="dansereauSpatiallyExplicitPredictions2023">(<a href="#ref-dansereauSpatiallyExplicitPredictions2023" role="doc-biblioref">Dansereau, Barros, and Poisot 2023</a>)</span>. Additionally the interplay between the interaction between a species pair and their co-occurrence is meaningful when one is operating in the space of trying to determine the distribution of a species <span class="citation" data-cites="higinoMismatchIUCNRange2023">(<a href="#ref-higinoMismatchIUCNRange2023" role="doc-biblioref">Higino et al. 2023</a>)</span>, and forms a key component of some of the next generation species distribution models <em>e.g.,</em> joint SDMs <span class="citation" data-cites="pollockUnderstandingCooccurrenceModelling2014">(<a href="#ref-pollockUnderstandingCooccurrenceModelling2014" role="doc-biblioref">Pollock et al. 2014</a>)</span>.</p>
 <p><strong>Abundance</strong></p>
-<p>The abundance of the different species within the community can influence the likelihood of an interaction occurring in a myriad of ways. There is the argument that networks (and the interactions that make them up) are driven by only the abundance of the different species and not the characteristics (traits), <em>sensu</em> neutral processes <span class="citation" data-cites="canardEmergenceStructuralPatterns2012">(<a href="#ref-canardEmergenceStructuralPatterns2012" role="doc-biblioref">Canard et al. 2012</a>)</span>. Alternatively the abundance of species in a community can influence which interactions are ultimately realised <span class="citation" data-cites="poisotSpeciesWhyEcological2015 banvilleDecipheringProbabilisticSpecies2024">(<a href="#ref-poisotSpeciesWhyEcological2015" role="doc-biblioref">Poisot, Stouffer, and Gravel 2015</a>; <a href="#ref-banvilleDecipheringProbabilisticSpecies2024" role="doc-biblioref">Banville et al. 2024</a>)</span>.</p>
+<p>The abundance of the different species within the community can influence the likelihood of an interaction occurring in a myriad of ways. There is the argument that networks (and the interactions that make them up) are driven by only the abundance of the different species and not the characteristics (traits), <em>sensu</em> neutral processes and have been formalised with the neutral model <span class="citation" data-cites="canardEmergenceStructuralPatterns2012">(<a href="#ref-canardEmergenceStructuralPatterns2012" role="doc-biblioref">Canard et al. 2012</a>)</span>, as well as statistical tools <span class="citation" data-cites="momalTreebasedInferenceSpecies2020">(<a href="#ref-momalTreebasedInferenceSpecies2020" role="doc-biblioref">Momal, Robin, and Ambroise 2020</a>)</span>. Alternatively the abundance of species in a community can influence which interactions are ultimately realised <span class="citation" data-cites="poisotSpeciesWhyEcological2015 banvilleDecipheringProbabilisticSpecies2024">(<a href="#ref-poisotSpeciesWhyEcological2015" role="doc-biblioref">Poisot, Stouffer, and Gravel 2015</a>; <a href="#ref-banvilleDecipheringProbabilisticSpecies2024" role="doc-biblioref">Banville et al. 2024</a>)</span>.</p>
 <p><strong>Predator choice (energetic cost)</strong></p>
 <p>Ultimately, predator choice is underpinned by the energetic cost-benefit of trying to catch, kill, and consume prey, and is well described within optimal foraging theory [ref] and rests on the idea that the prey a predator chooses to target is one that will have the greatest return on energy with the lowest energetic cost. There are additional bodies of work that attempt to include the cost of movement that the environment imposes on an individual <span class="citation" data-cites="cherifEnvironmentRescueCan2024">(<a href="#ref-cherifEnvironmentRescueCan2024" role="doc-biblioref">Cherif et al. 2024</a>)</span> as well as 2D/3D search space <span class="citation" data-cites="pawarDimensionalityConsumerSearch2012">(<a href="#ref-pawarDimensionalityConsumerSearch2012" role="doc-biblioref">Pawar, Dell, and Savage 2012</a>)</span>. In terms of formalising these processes in the context of predicting networks using diet models <span class="citation" data-cites="beckermanForagingBiologyPredicts2006 petcheySizeForagingFood2008">(<a href="#ref-beckermanForagingBiologyPredicts2006" role="doc-biblioref">Beckerman, Petchey, and Warren 2006</a>; <a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">Petchey et al. 2008</a>)</span> that have predator choice determined by the handling time, energy content, prey density, and predator attack rate. <span class="citation" data-cites="woottonModularTheoryTrophic2023">Wootton et al. (<a href="#ref-woottonModularTheoryTrophic2023" role="doc-biblioref">2023</a>)</span> developed a model that moves the energy of the system into different modules related to the process of the predator acquiring energy from the prey <em>i.e.,</em> compartmentation in food webs <span class="citation" data-cites="krauseCompartmentsRevealedFoodweb2003">(<a href="#ref-krauseCompartmentsRevealedFoodweb2003" role="doc-biblioref">Krause et al. 2003</a>)</span>.</p>
 <p><strong>Indirect interactions</strong></p>
@@ -474,7 +475,7 @@ Figure&nbsp;2: TODO.
 </blockquote>
 <section id="sec-network-build" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-network-build"><span class="header-section-number">3.1</span> Models that predict structure</h2>
-<p>Although we identify mechanisms that determine species interactions in <a href="#sec-process" class="quarto-xref">Section&nbsp;2.1</a> not all models that are used to predict networks operate at this ‘mechanistic’ level, but rather represent the <em>structure</em> of a network based on a series of <em>a priori</em> assumptions of network connectance (<em>e.g.,</em> the niche model <span class="citation" data-cites="williamsSimpleRulesYield2000">Williams and Martinez (<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">2000</a>)</span>) or other structural features (<em>e.g.,</em> stochastic block model, <span class="citation" data-cites="xieCompletenessCommunityStructure2017">Xie et al. (<a href="#ref-xieCompletenessCommunityStructure2017" role="doc-biblioref">2017</a>)</span>) of a <em>realised</em> network. Importantly these structural models do not make species specific predictions (they are species agnostic and usually treat nodes as trophic species) and so cannot be used to determine if an interaction is either possible <em>or</em> realised between two species (<em>i.e.,</em>one cannot use these models to determine if species <span class="math inline">\(a\)</span> eats species <span class="math inline">\(b\)</span>). Although this means this suite of models are unsuitable as tools for predicting interactions, they have been shown to be sufficient tools to predict the structure of networks <span class="citation" data-cites="williamsSuccessItsLimits2008">(<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">Williams and Martinez 2008</a>)</span>.</p>
+<p>Although we identify mechanisms that determine species interactions in <a href="#sec-process" class="quarto-xref">Section&nbsp;2.1</a> not all models that are used to predict networks operate at this ‘mechanistic’ level, but rather represent the <em>structure</em> of a network based on a series of <em>a priori</em> assumptions of network connectance (<em>e.g.,</em> the niche model <span class="citation" data-cites="williamsSimpleRulesYield2000">Williams and Martinez (<a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">2000</a>)</span>; although see <span class="citation" data-cites="allesinaFoodWebModels2009">Allesina and Pascual (<a href="#ref-allesinaFoodWebModels2009" role="doc-biblioref">2009</a>)</span> for a parameter-free model) or other structural features of a <em>realised</em> network (<em>e.g.,</em> stochastic block model, <span class="citation" data-cites="xieCompletenessCommunityStructure2017">Xie et al. (<a href="#ref-xieCompletenessCommunityStructure2017" role="doc-biblioref">2017</a>)</span>). Importantly these structural models do not make species specific predictions (they are species agnostic and usually treat nodes as trophic species) and so cannot be used to determine if an interaction is either possible <em>or</em> realised between two species (<em>i.e.,</em>one cannot use these models to determine if species <span class="math inline">\(a\)</span> eats species <span class="math inline">\(b\)</span>). Although this means this suite of models are unsuitable as tools for predicting interactions, they have been shown to be sufficient tools to predict the structure of networks <span class="citation" data-cites="williamsSuccessItsLimits2008">(<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">Williams and Martinez 2008</a>)</span>.</p>
 </section>
 <section id="how-do-we-predict-food-webs" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="how-do-we-predict-food-webs"><span class="header-section-number">3.2</span> How do we predict food webs?</h2>
@@ -483,13 +484,13 @@ Figure&nbsp;2: TODO.
 <div id="tbl-families" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: A summary of the different families of tools that can be used to generate food webs. Here ‘type’ leans on the ideas from <span class="citation" data-cites="momalTreebasedInferenceSpecies2020">Momal, Robin, and Ambroise (<a href="#ref-momalTreebasedInferenceSpecies2020" role="doc-biblioref">2020</a>)</span> in terms of reconstructing networks from other known (observed) interactions and inferring interactions without relying on observed interactions.
+Table&nbsp;1: A summary of the different families of tools that can be used to generate food webs.
 </figcaption>
 <div aria-describedby="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
 <col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 18%">
 <col style="width: 16%">
 <col style="width: 16%">
 <col style="width: 16%">
@@ -498,9 +499,9 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <thead>
 <tr class="header">
 <th>Model family</th>
-<th>Assumption on process</th>
-<th>‘Scale’ of data (??)</th>
-<th>Type</th>
+<th>Assumptions</th>
+<th>Data/process</th>
+<th>‘Limitation’</th>
 <th>Network type</th>
 <th>Key reference</th>
 </tr>
@@ -510,7 +511,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>null</td>
 <td>Links are randomly distributed within a network</td>
 <td></td>
-<td>network inference</td>
+<td>parameter assumptions, species agnostic</td>
 <td>structural network</td>
 <td></td>
 </tr>
@@ -518,7 +519,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>neutral</td>
 <td>Network structure is random, but species abundance determines links between nodes</td>
 <td>abundance</td>
-<td>network inference</td>
+<td>parameter assumptions</td>
 <td>structural network</td>
 <td><span class="citation" data-cites="canardEmergenceStructuralPatterns2012">Canard et al. (<a href="#ref-canardEmergenceStructuralPatterns2012" role="doc-biblioref">2012</a>)</span></td>
 </tr>
@@ -526,7 +527,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>resource</td>
 <td>Networks are interval, species can be ordered on a ‘niche axis’</td>
 <td></td>
-<td>network inference</td>
+<td>parameter assumptions, species agnostic</td>
 <td>structural network</td>
 <td><span class="citation" data-cites="williamsSuccessItsLimits2008">Williams and Martinez (<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">2008</a>)</span></td>
 </tr>
@@ -534,7 +535,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>generative</td>
 <td>Networks are determined by their structural features</td>
 <td></td>
-<td>network reconstruction</td>
+<td>need real world networks</td>
 <td>structural network</td>
 <td></td>
 </tr>
@@ -542,7 +543,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>energetic</td>
 <td>Interactions are determined by energetic costs</td>
 <td>abundance + energy</td>
-<td>network reconstruction</td>
+<td>does not account for forbidden links in terms of evolutionary compatibility</td>
 <td>‘energy’ network</td>
 <td></td>
 </tr>
@@ -550,7 +551,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>graph embedding</td>
 <td>Interactions can be predicted from the latent traits of networks</td>
 <td>evolutionary compatibility</td>
-<td>network reconstruction</td>
+<td>need real world networks</td>
 <td>metaweb</td>
 <td><span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span></td>
 </tr>
@@ -558,7 +559,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>trait matching</td>
 <td>Interactions can be inferred by a mechanistic framework/relationships</td>
 <td>evolutionary compatibility</td>
-<td>network reconstruction</td>
+<td>well studied species/communities</td>
 <td>metaweb</td>
 <td><span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">Morales-Castilla et al. (<a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">2015</a>)</span></td>
 </tr>
@@ -566,7 +567,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>binary classifiers</td>
 <td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors</td>
 <td>evolutionary compatibility</td>
-<td>network reconstruction</td>
+<td>need real world networks</td>
 <td>metaweb</td>
 <td><span class="citation" data-cites="pichlerMachineLearningAlgorithms2020">Pichler et al. (<a href="#ref-pichlerMachineLearningAlgorithms2020" role="doc-biblioref">2020</a>)</span></td>
 </tr>
@@ -574,7 +575,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>expert knowledge</td>
 <td>‘Boots on the ground’ ecological knowledge and observations</td>
 <td>evolutionary compatibility</td>
-<td>network reconstruction</td>
+<td>well studied species/communities</td>
 <td>metaweb</td>
 <td></td>
 </tr>
@@ -582,7 +583,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>data scavenging</td>
 <td>Webscraping to create networks from online databases</td>
 <td></td>
-<td>network reconstruction</td>
+<td>need real world networks</td>
 <td>metaweb</td>
 <td><span class="citation" data-cites="poisotSyntheticDatasetsCommunity2016">Poisot, Gravel, et al. (<a href="#ref-poisotSyntheticDatasetsCommunity2016" role="doc-biblioref">2016</a>)</span> (if you squint?)</td>
 </tr>
@@ -590,7 +591,7 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <td>co-occurrence</td>
 <td>co-occurrence patterns arise from interactions so we can use these patterns to reverse engineer the interactions</td>
 <td>co-occurrence</td>
-<td>network inference</td>
+<td>does not account for forbidden links in terms of evolutionary compatibility or account for energy constraints</td>
 <td>co-occurrence network</td>
 <td></td>
 </tr>
@@ -666,6 +667,9 @@ Table&nbsp;1: A summary of the different families of tools that can be used to g
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-allesinaFoodWebModels2009" class="csl-entry" role="listitem">
+Allesina, Stefano, and Mercedes Pascual. 2009. <span>“Food Web Models: A Plea for Groups.”</span> <em>Ecology Letters</em> 12 (7): 652–62. <a href="https://doi.org/10.1111/j.1461-0248.2009.01321.x">https://doi.org/10.1111/j.1461-0248.2009.01321.x</a>.
+</div>
 <div id="ref-banvilleDecipheringProbabilisticSpecies2024" class="csl-entry" role="listitem">
 Banville, Francis, Tanya Strydom, Penelope Blyth, Chris Brimacombe, Michael D. Catchen, Gabriel Dansereau, Gracielle Higino, et al. 2024. <span>“Deciphering Probabilistic Species Interaction Networks.”</span> EcoEvoRxiv. <a href="https://doi.org/10.32942/X28G8Z">https://doi.org/10.32942/X28G8Z</a>.
 </div>
@@ -842,6 +846,9 @@ Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Com
 </div>
 <div id="ref-yeakelCollapseEcologicalNetwork2014" class="csl-entry" role="listitem">
 Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. <span>“Collapse of an Ecological Network in <span>Ancient Egypt</span>.”</span> <em>PNAS</em> 111 (40): 14472–77. <a href="https://doi.org/10.1073/pnas.1408471111">https://doi.org/10.1073/pnas.1408471111</a>.
+</div>
+<div id="ref-yodzisCompartmentationRealAssembled1982" class="csl-entry" role="listitem">
+Yodzis, P. 1982. <span>“The <span>Compartmentation</span> of <span>Real</span> and <span>Assembled Ecosystems</span>.”</span> <em>The American Naturalist</em> 120 (5): 551–70. <a href="https://doi.org/10.1086/284013">https://doi.org/10.1086/284013</a>.
 </div>
 </div>
 <div class="hidden" aria-hidden="true">
@@ -1269,7 +1276,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
