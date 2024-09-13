@@ -196,7 +196,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-09-12}
+\date{2024-09-13}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -379,45 +379,39 @@ distributed within the community.
 \subsubsection{What is meant by an
 edge?}\label{what-is-meant-by-an-edge}
 
-At its core links within food webs can be thought of as a representation
-of either feeding links between species - be that realised (Pringle,
-2020) or potential (Dunne, 2006), or representative of fluxes within the
-community/system \emph{e..,} energy transfer or material flow (Lindeman,
-1942). How we specify links will influence the resulting structure of
-the network - and the inferences we will make thereof. For example
-taking a food web that consists of links representing all
-\emph{potential} feeding links for a community (\emph{i.e.,} a metaweb)
-will be meaningless if you are interested in understanding the flow of
-energy through the system as the links within a metaweb do not represent
-environmental/energetic constraints. In addition to the various ways of
-defining the links between species pairs there are also a myriad of ways
-in which the links themselves can be quantified. Links between species
-are often treated as being present or absent (\emph{i.e.,} binary) but
-it is also possible to use probabilities (which quantifies how likely an
+At its core, links within food webs can be thought of as a
+representation of either feeding links between species - be that
+realised (Pringle, 2020) or potential (Dunne, 2006), or representative
+of fluxes within the community/system \emph{e.g.,} energy transfer or
+material flow (Lindeman, 1942). How we specify links will influence the
+resulting structure of the network - and the inferences we will make
+thereof. For example taking a food web that consists of links
+representing all \emph{potential} feeding links for a community
+(\emph{i.e.,} a metaweb) will be meaningless if one is interested in
+understanding the flow of energy through the network as the links within
+a metaweb do not represent environmental/energetic constraints. In
+addition to the various ways of defining the links between species pairs
+there are also a myriad of ways in which the links themselves can be
+quantified. Links between species are often treated as being present or
+absent (\emph{i.e.,} binary) but it is also possible to use
+probabilities (Banville et al., 2024; which quantifies how likely an
 interaction is to occur, Poisot, Cirtwill, et al., 2016) or continuous
 measurements (which quantifies the strength of of an interaction, Berlow
-et al., 2004). Moving away from a purely binary way of representing
-allows us to quantify a level of (un)certainty of our knowledge of
-interactions (\emph{i.e.,} moving from being able to ask if are they
-occurring to quantifying how likely they are to occur) does add an
-additional level of `complexity' to the construction and interpretation
-of networks, but ultimately it will allow us to capture more information
-at different scales (Banville et al., 2024).
+et al., 2004).
 
 \subsubsection{Putting the parts
 together}\label{putting-the-parts-together}
 
-The ingredients one uses to construct networks from nodes and edges
-generates a unique representation of the mechanisms (see
-Section~\ref{sec-mechanisms}) that allow inference and reasoning about
-the structure, aspects of dynamics (\emph{e.g.,} stability), and
-potentially the function of communities (\emph{e.g.,} flux). It is thus
-important to keep in mind that different networks are going to be
-representing different processes and that can only be used for inference
-of some but not all aspects of the community at large. Here it may be
-meaningful to contextualise the different `types' of food webs within
-the larger research programmes (or even practical needs) that have been
-driving the construction of them.
+The ingredients one uses to construct networks generates a unique
+representation of the mechanisms (see Section~\ref{sec-mechanisms}) that
+allow inference and reasoning about the structure, aspects of dynamics
+(\emph{e.g.,} stability), and potentially the function of communities
+(\emph{e.g.,} flux). It is thus important to keep in mind that different
+networks are going to be representing different processes and that can
+only be used for inference of some but not all aspects of the community
+at large. Here it may be meaningful to contextualise the different
+`types' of food webs within the larger research programmes (or even
+practical needs) that have been driving the construction of them.
 
 Before thinking about the ways in which we can predict networks it is
 perhaps meaningful to take a step back and think about the different
@@ -691,11 +685,12 @@ model families refer to
 2}.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1892}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2432}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1892}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1892}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1892}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1892}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1892}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1216}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1216}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1892}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1892}}@{}}
 \caption{A summary of the different families of tools that can be used
 to generate food webs. Here `type' leans on the ideas from Momal et al.
 (2020) in terms of reconstructing networks from other known (observed)
@@ -705,11 +700,13 @@ interactions.}\label{tbl-families}\tabularnewline
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assumption (process)
+Assumption on process
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Theory
+`Scale' of data (??)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Network type
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Key reference
 \end{minipage} \\
@@ -719,11 +716,13 @@ Key reference
 \begin{minipage}[b]{\linewidth}\raggedright
 Model family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Assumption (process)
+Assumption on process
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Theory
+`Scale' of data (??)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Network type
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Key reference
 \end{minipage} \\
@@ -731,33 +730,37 @@ Key reference
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-null & Links are randomly distributed within a network & & structural
-network & \\
+null & Links are randomly distributed within a network & & network
+inference & structural network & \\
 neutral & Network structure is random, but species abundance determines
-links between nodes & abundance & structural network & Canard et al.
-(2012) \\
+links between nodes & abundance & network inference & structural network
+& Canard et al. (2012) \\
 resource & Networks are interval, species can be ordered on a `niche
-axis' & & structural network & Williams \& Martinez (2008) \\
+axis' & & network inference & structural network & Williams \& Martinez
+(2008) \\
 generative & Networks are determined by their structural features & &
-structural network & \\
+network reconstruction & structural network & \\
 energetic & Interactions are determined by energetic costs & abundance +
-energy & `energy' network & \\
+energy & network reconstruction & `energy' network & \\
 graph embedding & Interactions can be predicted from the latent traits
-of networks & evolutionary compatibility & metaweb & Strydom et al.
-(2023) \\
+of networks & evolutionary compatibility & network reconstruction &
+metaweb & Strydom et al. (2023) \\
 trait matching & Interactions can be inferred by a mechanistic
-framework/relationships & evolutionary compatibility & metaweb &
-Morales-Castilla et al. (2015) \\
+framework/relationships & evolutionary compatibility & network
+reconstruction & metaweb & Morales-Castilla et al. (2015) \\
 binary classifiers & Interactions can be predicted by learning the
 relationship between interactions and ecologically relevant predictors &
-evolutionary compatibility & metaweb & Pichler et al. (2020) \\
+evolutionary compatibility & network reconstruction & metaweb & Pichler
+et al. (2020) \\
 expert knowledge & `Boots on the ground' ecological knowledge and
-observations & evolutionary compatibility & metaweb & \\
+observations & evolutionary compatibility & network reconstruction &
+metaweb & \\
 data scavenging & Webscraping to create networks from online databases &
-& metaweb & Poisot, Gravel, et al. (2016) (if you squint?) \\
+& network reconstruction & metaweb & Poisot, Gravel, et al. (2016) (if
+you squint?) \\
 co-occurrence & co-occurrence patterns arise from interactions so we can
 use these patterns to reverse engineer the interactions & co-occurrence
-& co-occurrence network & \\
+& network inference & co-occurrence network & \\
 \end{longtable}
 
 \section{Making Progress with
@@ -947,57 +950,6 @@ the long term. And what is the scale for that long term - are we
 thinking at the generational scale? Because ultimately when we are
 constructing a network we are aggregating not only across space but also
 across time.
-
-\section*{Glossary}\label{glossary}
-\addcontentsline{toc}{section}{Glossary}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Term
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Definition
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-food web & a representation of feeding links between species \\
-topology generator & a model that predicts a network based on
-assumptions of structure, this network is species agnostic in the sense
-that it does not necessarily contain information at the node level \\
-interaction predictor & a model that predicts species interactions,
-these interactions can be used to construct a network but there are no
-\emph{a priori} assumptions as that will constrain the network
-structure \\
-model & A tool that can be used to construct food webs, where the
-resulting network is a representation of a real world network. Models
-typically only capture specific elements of real world networks and are
-intended to be used in specific settings \\
-model family & A family of models that share an underlying philosophy
-when it comes to the mapping, pragmatism, and reduction of a network.
-Families have the same underlying philosophies and assumptions that
-determine the links between nodes as well as how these may be encoded \\
-metaweb & A network that represents \emph{all} the potential links
-between species. Importantly these links will not necessarily all be
-realised in a specific location for a specific time \\
-realised network & A network that represents the links between species
-that are occurring. These networks represent a very localised
-network\ldots{} \\
-potential feeding link & links that indicate that an interaction is
-ecologically feasible but not realised \emph{per se} (a metaweb would
-contain potential feeding links) \\
-realised feeding link & links that indicate that the interaction is
-realised `in the field'. (a realised network contains realised feeding
-links) \\
-confusion matrix & captures the number of true positives (interaction
-predicted as present when it is present), false negatives (interaction
-predicted as absent when it is present), false positives (interaction
-predicted as present when it is absent), and true negatives (interaction
-predicted as absent when it is absent) \\
-\end{longtable}
 
 \section*{Outstanding questions}\label{outstanding-questions}
 \addcontentsline{toc}{section}{Outstanding questions}
