@@ -557,7 +557,8 @@ the context of predicting networks using diet models (Beckerman et al.,
 handling time, energy content, prey density, and predator attack rate.
 Wootton et al. (2023) developed a model that moves the energy of the
 system into different modules related to the process of the predator
-acquiring energy from the prey.
+acquiring energy from the prey \emph{i.e.,} compartmentation in food
+webs (Krause et al., 2003).
 
 \textbf{Indirect interactions}
 
@@ -685,12 +686,12 @@ model families refer to
 2}.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1892}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1892}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1216}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1216}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1892}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1892}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
 \caption{A summary of the different families of tools that can be used
 to generate food webs. Here `type' leans on the ideas from Momal et al.
 (2020) in terms of reconstructing networks from other known (observed)
@@ -766,6 +767,18 @@ use these patterns to reverse engineer the interactions & co-occurrence
 \section{Making Progress with
 Networks}\label{making-progress-with-networks}
 
+There is a bit of a `point of conflict' between those calling for `pixel
+perfect', regional scale data (Pringle, 2020; Pringle \& Hutchinson,
+2020) and for the means to generate networks that are ecologically
+plausible \emph{representations} (\emph{sensu} structural networks).
+This represents two challenges; one is that models that represent
+generalisations often lack the ability to retrieve any species/community
+specificity which limits their utility for real world, species-driven
+scenarios \emph{e.g.,} species driven conservation efforts, however
+networks that are constructed through either empirical observations or
+through predictive means are fundamentally going to represent metawebs,
+\emph{i.e.,} lack constrained links.
+
 In this section I want to highlight that we don't actually have any
 clear guidelines as to how we can `use' networks - which probably stems
 from both the fact that when I am talking about a network and when
@@ -776,11 +789,11 @@ actually be a selling point in the intro - may have just found my
 about networks are not really tied to any sort of tangible function
 (i.e.~Tim's GeoBon ms thing-y). However we can maybe at least try to
 present some guidelines - but I think specifically within the sort of
-Petchy dilemma space and clearly tied to the ideas we discuss in the ms.
-This includes: understanding the limits of how a network is defined and
-how the underlying theory impacts the use as well as data?? IDK we need
-to shoehorn data in here somehow\ldots{} We can also use this as a gap
-identifying space and I think the framing can still rest under the
+Petchey dilemma space and clearly tied to the ideas we discuss in the
+ms. This includes: understanding the limits of how a network is defined
+and how the underlying theory impacts the use as well as data?? IDK we
+need to shoehorn data in here somehow\ldots{} We can also use this as a
+gap identifying space and I think the framing can still rest under the
 limits concept particularly time, space, and boundaries - which will all
 probably fall under some aspect of biological scale\ldots{} We can also
 raise the idea of trust - as in which methods have more support/trust
@@ -925,7 +938,7 @@ al., 2022).''
 
 \subsection{Time}\label{time}
 
-Look at Hutchinson et al. (2019)
+Look at Hutchinson et al. (2019) and in a way Rooney et al. (2008)
 
 We lack a clear agenda (and conceptualisation) as to what the
 appropriate level of aggregation is for a `network'. Realistically most
@@ -1142,6 +1155,12 @@ interactions into food webs: {More} than a meal {\ldots{}}.
 \emph{Ecology Letters}, \emph{15}(4), 291--300.
 \url{https://doi.org/10.1111/j.1461-0248.2011.01732.x}
 
+\bibitem[\citeproctext]{ref-krauseCompartmentsRevealedFoodweb2003}
+Krause, A. E., Frank, K. A., Mason, D. M., Ulanowicz, R. E., \& Taylor,
+W. W. (2003). Compartments revealed in food-web structure.
+\emph{Nature}, \emph{426}(6964), 282--285.
+\url{https://doi.org/10.1038/nature02115}
+
 \bibitem[\citeproctext]{ref-lindemanTrophicDynamicAspectEcology1942}
 Lindeman, R. L. (1942). The {Trophic-Dynamic Aspect} of {Ecology}.
 \emph{Ecology}, \emph{23}(4), 399--417.
@@ -1256,6 +1275,11 @@ Proulx, S. R., Promislow, D. E. L., \& Phillips, P. C. (2005). Network
 thinking in ecology and evolution. \emph{Trends in Ecology \&
 Evolution}, \emph{20}(6), 345--353.
 \url{https://doi.org/10.1016/j.tree.2005.04.004}
+
+\bibitem[\citeproctext]{ref-rooneyLandscapeTheoryFood2008}
+Rooney, N., McCann, K. S., \& Moore, J. C. (2008). A landscape theory
+for food web architecture. \emph{Ecology Letters}, \emph{11}(8),
+867--881. \url{https://doi.org/10.1111/j.1461-0248.2008.01193.x}
 
 \bibitem[\citeproctext]{ref-saraviaEcologicalNetworkAssembly2022}
 Saravia, L. A., Marina, T. I., Kristensen, N. P., De Troch, M., \& Momo,
