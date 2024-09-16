@@ -38,6 +38,13 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+  
+\fi
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
@@ -212,7 +219,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-09-13}
+\date{2024-09-16}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -466,10 +473,11 @@ interactions}\label{sec-process}
 
 Processes that are all-or-nothing (possibility) vs processes that are
 context dependent (likelihood). Processes form the underlying logic of
-models (and arguably even empirical data capture). Processes influence
-how we define the network (its anatomy). Ultimately when we put this all
-together it will influence how we can and should use the resulting
-network.
+models (and \st{arguably}, no, for sure even empirical data capture).
+This means also the interplay of the two, \emph{i.e.,} the use of models
+to `gap fill' an existing empirical dataset (Biton et al., 2024; Stock,
+2021). Ultimately when we put this all together it will influence how we
+can, and should, use the resulting network.
 
 Important goal here is to introduce the idea that there are multiple
 facets as to what determines the interaction between species and that
@@ -511,13 +519,13 @@ structure\ldots{}
 There is compelling evidence that the possibility of an interaction
 occurring between two species is the result of their shared
 (co)evolutionary history (Dalla Riva \& Stouffer, 2016; Gómez et al.,
-2010). In the more proximal sense this is manifested as the `trait
-complementarity' between two species, whereby one species (the predator)
-has the `correct' set of traits that allow it to chase, capture, kill,
-and consume the other species (the prey). For species pairs where this
-condition is not met the link is deemed to be forbidden (Jordano,
-2016b); \emph{i.e.,} not physically possible and will always be absent
-within the network. In the context of trying to determine the
+2010; Segar et al., 2020). In the more proximal sense this is manifested
+as the `trait complementarity' between two species, whereby one species
+(the predator) has the `correct' set of traits that allow it to chase,
+capture, kill, and consume the other species (the prey). For species
+pairs where this condition is not met the link is deemed to be forbidden
+(Jordano, 2016b); \emph{i.e.,} not physically possible and will always
+be absent within the network. In the context of trying to determine the
 feasibility (\emph{i.e.,} the \emph{possibility}) of an interaction,
 phylogeny is an excellent predictor (Fricke et al., 2022; Strydom et
 al., 2022) and allows one to construct what can be considered to be a
@@ -792,12 +800,13 @@ perfect', regional scale data (Pringle, 2020; Pringle \& Hutchinson,
 2020) and for the means to generate networks that are ecologically
 plausible \emph{representations} (\emph{sensu} structural networks).
 This represents two challenges; one is that models that represent
-generalisations often lack the ability to retrieve any species/community
-specificity which limits their utility for real world, species-driven
-scenarios \emph{e.g.,} species driven conservation efforts, however
-networks that are constructed through either empirical observations or
-through predictive means are fundamentally going to represent metawebs,
-\emph{i.e.,} lack constrained links.
+generalisations of networks often lack the ability to retrieve any
+species/community specificity which limits their utility for real world,
+species-driven scenarios \emph{e.g.,} species driven conservation
+efforts, however networks that are constructed through either (most)
+empirical observations or through predictive means are fundamentally
+going to represent metawebs, \emph{i.e.,} lack constrained links, a
+representation of structure, energy flow.
 
 In this section I want to highlight that we don't actually have any
 clear guidelines as to how we can `use' networks - which probably stems
@@ -1040,6 +1049,11 @@ Kokkoris, G. D., Logofet, D. O., McKane, A. J., Montoya, J. M., \&
 Petchey, O. (2004). Interaction strengths in food webs: Issues and
 opportunities. \emph{Journal of Animal Ecology}, \emph{73}(3), 585--598.
 \url{https://doi.org/10.1111/j.0021-8790.2004.00833.x}
+
+\bibitem[\citeproctext]{ref-bitonInductiveLinkPrediction2024}
+Biton, B., Puzis, R., \& Pilosof, S. (2024). \emph{Inductive link
+prediction boosts data availability and enables cross-community link
+prediction in ecological networks}.
 
 \bibitem[\citeproctext]{ref-blanchetCooccurrenceNotEvidence2020}
 Blanchet, F. G., Cazelles, K., \& Gravel, D. (2020). Co-occurrence is
@@ -1311,6 +1325,18 @@ Saravia, L. A., Marina, T. I., Kristensen, N. P., De Troch, M., \& Momo,
 F. R. (2022). Ecological network assembly: {How} the regional metaweb
 influences local food webs. \emph{Journal of Animal Ecology},
 \emph{91}(3), 630--642. \url{https://doi.org/10.1111/1365-2656.13652}
+
+\bibitem[\citeproctext]{ref-segarRoleEvolutionShaping2020}
+Segar, S. T., Fayle, T. M., Srivastava, D. S., Lewinsohn, T. M., Lewis,
+O. T., Novotny, V., Kitching, R. L., \& Maunsell, S. C. (2020). The
+{Role} of {Evolution} in {Shaping Ecological Networks}. \emph{Trends in
+Ecology \& Evolution}, \emph{35}(5), 454--466.
+\url{https://doi.org/10.1016/j.tree.2020.01.004}
+
+\bibitem[\citeproctext]{ref-stockPairwiseLearningPredicting2021}
+Stock, M. (2021). Pairwise learning for predicting pollination
+interactions based on traits and phylogeny. \emph{Ecological Modelling},
+14.
 
 \bibitem[\citeproctext]{ref-strydomFoodWebReconstruction2022}
 Strydom, T., Bouskila, S., Banville, F., Barros, C., Caron, D., Farrell,
