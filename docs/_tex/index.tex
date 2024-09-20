@@ -117,6 +117,22 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -203,7 +219,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-09-19}
+\date{2024-09-20}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -328,6 +344,65 @@ Specifically, we finish this perspective with an overview of fundamental
 questions in ecology that we think can benefit from network thinking and
 a proposal that such thinking can accelerate our capacity to predict the
 impact of multiple stressors on biodiverse communities.
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, opacityback=0, rightrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, breakable, left=2mm, colback=white, bottomrule=.15mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, leftrule=.75mm]
+
+Although it might seem most prudent to be predicting, constructing, and
+defining networks that are the closest representation of reality there
+are pros and cons of constructing both realised networks as well as
+metawebs. Let us take for example a community across time/through
+seasons. In this community we expect species to be either present or
+absent depending on the season (\emph{i.e.,} changes in co-occurrence)
+as well as some species exhibiting seasonal diet shifts, these details
+would be lost at the scale of the metaweb an it would be valuable to
+construct either smaller metawebs for the different seasonal communities
+(thereby capturing the changes in community diversity), or realised
+networks for each season (to capture diet or ecosystem process shifts).
+However, these small-scale networks lack the context of the bigger
+picture that is available at the metaweb - that is it gives us a more
+holistic idea of the entire diet range of a specific species, which is
+important when one needs to make conservation-based/applied decisions
+(\emph{e.g.,} conserving the entire diet of a species and not just
+seasonal prey items) as well as providing information on interactions
+that may be possible regardless of the environmental/community context
+(species may have the capacity to consume certain prey items but do not
+do so due to local conditions). With this is mind let us see how the
+different network aggregations can be used
+
+\subsection*{1: A global metaweb}\label{a-global-metaweb}
+\addcontentsline{toc}{subsection}{1: A global metaweb}
+
+Knowledge of the entire diet breadth of a species is valuable especially
+in terms of understanding how a species will respond to changes in the
+community - \emph{e.g.,} invasions/rewilding exercises (where does the
+new species `fit' within the network?) as well as potential capacity to
+shift its diet.
+
+\subsection*{2: A seasonal metaweb}\label{a-seasonal-metaweb}
+\addcontentsline{toc}{subsection}{2: A seasonal metaweb}
+
+Knowledge at the finer scale is also valuable to understand/identify
+that there are in fact differences between the seasons
+
+\subsection*{3: A seasonal realised
+network}\label{a-seasonal-realised-network}
+\addcontentsline{toc}{subsection}{3: A seasonal realised network}
+
+Dynamics are useful because they are a representation of the different
+configurations/energy flows/ecosystem processes. Also to detect more
+nuanced shifts in diet - \emph{e.g.,} seasonal diet shifts.
+
+\subsection*{Data trade off}\label{data-trade-off}
+\addcontentsline{toc}{subsection}{Data trade off}
+
+Above we highlight the practical uses of the different network
+configurations but we also need to take into consideration the barriers
+to construction/associated data needs/cost and acknowledge them.
+Basically in the ideal world we would have all this information at hand
+but in reality we might be sitting with seasonal metawebs\ldots{}
+
+\end{tcolorbox}
 
 \section{Setting the Scene: The Not So Basics of Nodes and
 Edges}\label{sec-anatomy}
