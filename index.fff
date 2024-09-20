@@ -2,20 +2,6 @@
 
 \centering{
 
-\includegraphics{images/anatomy.png}
-
-}
-
-\caption{\label{fig-anatomy}The many ways in which a food web can be
-defined and described at the node, edge, and even network level.}
-
-\end{figure}
-\efloatseparator
- 
-\begin{figure}
-
-\centering{
-
 \includegraphics{images/concept_v2.png}
 
 }
