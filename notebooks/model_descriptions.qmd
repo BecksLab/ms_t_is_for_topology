@@ -16,7 +16,7 @@ bibliography: ../references.bib
 ---
 
 | Model family       | Assumptions                                                                                                          | Data/process               | 'Limitation'                                                                                                  | Network type          | Key reference                                          |
-|------------|--------------|------------|------------|------------|------------|
+|------------|------------|------------|------------|------------|------------|
 | null               | Links are randomly distributed within a network                                                                      |                            | parameter assumptions, species agnostic                                                                       | structural network    |                                                        |
 | neutral            | Network structure is random, but species abundance determines links between nodes                                    | abundance                  | parameter assumptions                                                                                         | structural network    | @canardEmergenceStructuralPatterns2012                 |
 | resource           | Networks are interval, species can be ordered on a 'niche axis'                                                      |                            | parameter assumptions, species agnostic                                                                       | structural network    | @williamsSuccessItsLimits2008                          |
@@ -35,17 +35,17 @@ bibliography: ../references.bib
 
 This broader group of model families share one fundamental feature and that is that they are parametrised (*i.e.,* delimited) by the expected structure of a network *i.e.,* the links between the nodes and how they might be distributed.
 
-### Null models 
+### Null models
 
 The interactions between species occurs regardless of the identity of the species (*i.e.,* species have no agency) and links are randomly distributed throughout the network. This family of models is often used as a 'null hypothesis' to ask questions about network structure [*e.g.,* @banvilleWhatConstrainsFood2023; @strydomSVDEntropyReveals2021]. Broadly there are two different approaches; Type I [@fortunaHabitatLossStructure2006], where interactions happen proportionally to connectance and Type II [@bascompteNestedAssemblyPlantanimal2003], where interactions happen proportionally to the joint degree of the two species involved.
 
-### Neutral models 
+### Neutral models
 
 Can be tied to Hubble's neutral theory [@hubbellUnifiedNeutralTheory2001] where it is assumed that the interactions that occur between species are due to the abundance of species within the community [@pomeranzInferringPredatorPrey2019].
 
 ### Resource models
 
-Based on the idea that networks follow a trophic hierarchy and that network structure can be determined by distributing interactions along single dimension [the “niche axis”; @allesinaGeneralModelFood2008]. Essentially these models can be viewed as being based on the idea of resource partitioning (niches) along a one-dimensional resource which will result in the standard 'trophic pyramid' to ensure that all species can 'fit' along this resource (which has strong ties back to the idea of intervality), importantly there is a strong assumption that the resulting network structure is constrained by connectance. 
+Based on the idea that networks follow a trophic hierarchy and that network structure can be determined by distributing interactions along single dimension [the “niche axis”; @allesinaGeneralModelFood2008]. Essentially these models can be viewed as being based on the idea of resource partitioning (niches) along a one-dimensional resource which will result in the standard 'trophic pyramid' to ensure that all species can 'fit' along this resource (which has strong ties back to the idea of intervality), importantly there is a strong assumption that the resulting network structure is constrained by connectance.
 
 **Cascade model** [@cohenCommunityFoodWebs1990]: Much like the name suggests the cascade model rests on the idea that species feed on one another in a hierarchical manner. This rests on the assumption that the links within a network are variably distributed across the network; with the proportion of links decreasing as one moves up the trophic levels (*i.e.,* 'many' prey and 'few' predators). This is achieved by assigning all species a random rank, this rank will then determine both the predators and prey of that species. A species will have a particular probability of being fed on by any species with a higher ranking than it, this probability is constrained by the specified connectance of the network. Interestingly here 'species' are treated as any individual that consume and are consumed by the same 'species', *i.e.,* these are not taxonomical species [@cohenStochasticTheoryCommunity1985]. The original cascade model has altered to be more 'generalised' [@stoufferQuantitativePatternsStructure2005], which altered the probability distribution of the prey that could be consumed by a species.
 
@@ -87,7 +87,7 @@ This family of approaches has been extensively discussed in @strydomGraphEmbeddi
 
 ### Binary classifiers
 
-The task of predicting if an interaction will occur between a species pair is treated as abinary classification task, where the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [*e.g.,* @caronAddressingEltonianShortfall2022], random forest [*e.g.,* @llewelynPredictingPredatorPrey2023], trait-based k-NN [*e.g.,* @desjardins-proulxEcologicalInteractionsNetflix2017], and Bayesian models [*e.g.,* @eklofSecondaryExtinctionsFood2013; @cirtwillQuantitativeFrameworkInvestigating2019]. See @pichlerMachineLearningAlgorithms2020 for a more detailed overview on the performance of machine learning and statistical approaches for inferring trait-feeding relationships.
+The task of predicting if an interaction will occur between a species pair is treated as a binary classification task, where the task is to correlate 'real world' interaction data with a suitable ecological proxy for which data is more widely available (*e.g.,* traits). Model families often used include generalised linear models [*e.g.,* @caronAddressingEltonianShortfall2022], random forest [*e.g.,* @llewelynPredictingPredatorPrey2023], trait-based k-NN [*e.g.,* @desjardins-proulxEcologicalInteractionsNetflix2017], and Bayesian models [*e.g.,* @eklofSecondaryExtinctionsFood2013; @cirtwillQuantitativeFrameworkInvestigating2019]. See @pichlerMachineLearningAlgorithms2020 for a more detailed overview on the performance of machine learning and statistical approaches for inferring trait-feeding relationships.
 
 ### Expert knowledge
 
@@ -107,7 +107,7 @@ Trying to infer interactions from the co-occurrence patterns of species pairs wi
 
 @ovaskainenUsingLatentVariable2016
 
-**Expectation-maximisation (EM) algorithms** [@momalTreebasedInferenceSpecies2020]: 
+**Expectation-maximisation (EM) algorithms** [@momalTreebasedInferenceSpecies2020]:
 
 ## References {.unnumbered}
 
