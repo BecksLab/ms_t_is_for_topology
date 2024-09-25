@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2024-08-21">
+    <meta name="dcterms.date" content="2024-09-25">
 
     <title>SuppMat 1: Model Families Extended Description</title>
     <style>
@@ -182,7 +182,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">August 21, 2024</p>
+              <p class="date">September 25, 2024</p>
             </div>
           </div>
           
@@ -237,7 +237,126 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <section id="topology-generators" class="level2">
+       <div id="tbl-families" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+A summary of the different families of tools that can be used to generate food webs.
+</figcaption>
+<div aria-describedby="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 18%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model family</th>
+<th>Assumptions</th>
+<th>Data/process</th>
+<th>‘Limitation’</th>
+<th>Network type</th>
+<th>Key reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>null</td>
+<td>Links are randomly distributed within a network</td>
+<td></td>
+<td>parameter assumptions, species agnostic</td>
+<td>structural network</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>neutral</td>
+<td>Network structure is random, but species abundance determines links between nodes</td>
+<td>abundance</td>
+<td>parameter assumptions</td>
+<td>structural network</td>
+<td><span class="citation" data-cites="canardEmergenceStructuralPatterns2012">Canard et al. (<a href="#ref-canardEmergenceStructuralPatterns2012" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>resource</td>
+<td>Networks are interval, species can be ordered on a ‘niche axis’</td>
+<td></td>
+<td>parameter assumptions, species agnostic</td>
+<td>structural network</td>
+<td><span class="citation" data-cites="williamsSuccessItsLimits2008">Williams and Martinez (<a href="#ref-williamsSuccessItsLimits2008" role="doc-biblioref">2008</a>)</span></td>
+</tr>
+<tr class="even">
+<td>generative</td>
+<td>Networks are determined by their structural features</td>
+<td></td>
+<td>need real world networks</td>
+<td>structural network</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>energetic</td>
+<td>Interactions are determined by energetic costs</td>
+<td>abundance + energy</td>
+<td>does not account for forbidden links in terms of evolutionary compatibility</td>
+<td>‘energy’ network</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>graph embedding</td>
+<td>Interactions can be predicted from the latent traits of networks</td>
+<td>evolutionary compatibility</td>
+<td>need real world networks</td>
+<td>metaweb</td>
+<td><span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">Strydom et al. (<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>trait matching</td>
+<td>Interactions can be inferred by a mechanistic framework/relationships</td>
+<td>evolutionary compatibility</td>
+<td>well studied species/communities</td>
+<td>metaweb</td>
+<td><span class="citation" data-cites="morales-castillaInferringBioticInteractions2015">Morales-Castilla et al. (<a href="#ref-morales-castillaInferringBioticInteractions2015" role="doc-biblioref">2015</a>)</span></td>
+</tr>
+<tr class="even">
+<td>binary classifiers</td>
+<td>Interactions can be predicted by learning the relationship between interactions and ecologically relevant predictors</td>
+<td>evolutionary compatibility</td>
+<td>need real world networks</td>
+<td>metaweb</td>
+<td><span class="citation" data-cites="pichlerMachineLearningAlgorithms2020">Pichler et al. (<a href="#ref-pichlerMachineLearningAlgorithms2020" role="doc-biblioref">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>expert knowledge</td>
+<td>‘Boots on the ground’ ecological knowledge and observations</td>
+<td>evolutionary compatibility</td>
+<td>well studied species/communities</td>
+<td>metaweb</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>data scavenging</td>
+<td>Webscraping to create networks from online databases</td>
+<td></td>
+<td>need real world networks</td>
+<td>metaweb</td>
+<td><span class="citation" data-cites="poisotSyntheticDatasetsCommunity2016">Poisot, Gravel, et al. (<a href="#ref-poisotSyntheticDatasetsCommunity2016" role="doc-biblioref">2016</a>)</span> (if you squint?)</td>
+</tr>
+<tr class="odd">
+<td>co-occurrence</td>
+<td>co-occurrence patterns arise from interactions so we can use these patterns to reverse engineer the interactions</td>
+<td>co-occurrence</td>
+<td>does not account for forbidden links in terms of evolutionary compatibility or account for energy constraints</td>
+<td>co-occurrence network</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<section id="topology-generators" class="level2">
 <h2 class="anchored" data-anchor-id="topology-generators">Topology generators</h2>
 <p>This broader group of model families share one fundamental feature and that is that they are parametrised (<em>i.e.,</em> delimited) by the expected structure of a network <em>i.e.,</em> the links between the nodes and how they might be distributed.</p>
 <section id="null-models" class="level3">
@@ -293,7 +412,7 @@
 </section>
 <section id="data-scavenging" class="level3">
 <h3 class="anchored" data-anchor-id="data-scavenging">Data scavenging</h3>
-<p>There are also a lot of published <em>pairwise interaction</em> data <em>e.g.,</em> the Global Biotic Interactions (GloBI) database <span class="citation" data-cites="poelenGlobalBioticInteractions2014">(<a href="#ref-poelenGlobalBioticInteractions2014" role="doc-biblioref">Poelen, Simons, and Mungall 2014</a>)</span> or <em>network</em> <em>e.g.,</em> Mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot et al. 2016</a>)</span> datasets, these can be mined to look for interactions for specific species pairs. This is done by matching species pairs against those within a dataset of trophic interactions to determine if an interaction is present between the two species <span class="citation" data-cites="grayJoiningDotsAutomated2015">(<em>e.g.,</em> the WebBuilder tool developed by <a href="#ref-grayJoiningDotsAutomated2015" role="doc-biblioref">Gray et al. 2015</a>)</span>. It is important to note that this methodology is only going to be able to infer observations that have been recorded and will thus be prone to many false negatives (missing pairwise interactions) being generated using this approach.</p>
+<p>There are also a lot of published <em>pairwise interaction</em> data <em>e.g.,</em> the Global Biotic Interactions (GloBI) database <span class="citation" data-cites="poelenGlobalBioticInteractions2014">(<a href="#ref-poelenGlobalBioticInteractions2014" role="doc-biblioref">Poelen, Simons, and Mungall 2014</a>)</span> or <em>network</em> <em>e.g.,</em> Mangal <span class="citation" data-cites="poisotMangalMakingEcological2016">(<a href="#ref-poisotMangalMakingEcological2016" role="doc-biblioref">Poisot, Baiser, et al. 2016</a>)</span> datasets, these can be mined to look for interactions for specific species pairs. This is done by matching species pairs against those within a dataset of trophic interactions to determine if an interaction is present between the two species <span class="citation" data-cites="grayJoiningDotsAutomated2015">(<em>e.g.,</em> the WebBuilder tool developed by <a href="#ref-grayJoiningDotsAutomated2015" role="doc-biblioref">Gray et al. 2015</a>)</span>. It is important to note that this methodology is only going to be able to infer observations that have been recorded and will thus be prone to many false negatives (missing pairwise interactions) being generated using this approach.</p>
 </section>
 </section>
 <section id="pattern-finders" class="level2">
@@ -323,6 +442,9 @@ Beckerman, Andrew P., Owen L. Petchey, and Philip H. Warren. 2006. <span>“Fora
 </div>
 <div id="ref-blanchetCooccurrenceNotEvidence2020" class="csl-entry" role="listitem">
 Blanchet, F. Guillaume, Kevin Cazelles, and Dominique Gravel. 2020. <span>“Co-Occurrence Is Not Evidence of Ecological Interactions.”</span> <em>Ecology Letters</em> 23 (7): 1050–63. <a href="https://doi.org/10.1111/ele.13525">https://doi.org/10.1111/ele.13525</a>.
+</div>
+<div id="ref-canardEmergenceStructuralPatterns2012" class="csl-entry" role="listitem">
+Canard, Elsa, Nicolas Mouquet, Lucile Marescot, Kevin J. Gaston, Dominique Gravel, and David Mouillot. 2012. <span>“Emergence of <span>Structural Patterns</span> in <span>Neutral Trophic Networks</span>.”</span> <em>PLOS ONE</em> 7 (8): e38295. <a href="https://doi.org/10.1371/journal.pone.0038295">https://doi.org/10.1371/journal.pone.0038295</a>.
 </div>
 <div id="ref-caronAddressingEltonianShortfall2022" class="csl-entry" role="listitem">
 Caron, Dominique, Luigi Maiorano, Wilfried Thuiller, and Laura J. Pollock. 2022. <span>“Addressing the <span>Eltonian</span> Shortfall with Trait-Based Interaction Models.”</span> <em>Ecology Letters</em> 25 (4): 889–99. <a href="https://doi.org/10.1111/ele.13966">https://doi.org/10.1111/ele.13966</a>.
@@ -392,6 +514,9 @@ Poelen, Jorrit H., James D. Simons, and Chris J. Mungall. 2014. <span>“Global 
 </div>
 <div id="ref-poisotMangalMakingEcological2016" class="csl-entry" role="listitem">
 Poisot, Timothée, Benjamin Baiser, Jennifer Dunne, Sonia Kéfi, François Massol, Nicolas Mouquet, Tamara N. Romanuk, Daniel B. Stouffer, Spencer A. Wood, and Dominique Gravel. 2016. <span>“Mangal – Making Ecological Network Analysis Simple.”</span> <em>Ecography</em> 39 (4): 384–90. <a href="https://doi.org/10.1111/ecog.00976">https://doi.org/10.1111/ecog.00976</a>.
+</div>
+<div id="ref-poisotSyntheticDatasetsCommunity2016" class="csl-entry" role="listitem">
+Poisot, Timothée, Dominique Gravel, Shawn Leroux, Spencer A. Wood, Marie-Josée Fortin, Benjamin Baiser, Alyssa R. Cirtwill, Miguel B. Araújo, and Daniel B. Stouffer. 2016. <span>“Synthetic Datasets and Community Tools for the Rapid Testing of Ecological Hypotheses.”</span> <em>Ecography</em> 39 (4): 402–8. <a href="https://doi.org/10.1111/ecog.01941">https://doi.org/10.1111/ecog.01941</a>.
 </div>
 <div id="ref-pomeranzInferringPredatorPrey2019" class="csl-entry" role="listitem">
 Pomeranz, Justin P. F., Ross M. Thompson, Timothée Poisot, and Jon S. Harding. 2019. <span>“Inferring Predator–Prey Interactions in Food Webs.”</span> <em>Methods in Ecology and Evolution</em> 10 (3): 356–67. <a href="https://doi.org/10.1111/2041-210X.13125">https://doi.org/10.1111/2041-210X.13125</a>.
