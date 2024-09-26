@@ -212,7 +212,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-09-25}
+\date{2024-09-26}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -599,8 +599,8 @@ showcase the utility/applicability of the different network
 representation in the context of trying to understand the feeding
 dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, left=2mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, arc=.35mm, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, rightrule=.15mm, opacityback=0, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, arc=.35mm, opacitybacktitle=0.6, left=2mm, bottomtitle=1mm, titlerule=0mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, colback=white, bottomrule=.15mm, coltitle=black]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -767,9 +767,9 @@ There has been a suite of models that have been developed to predict
 trophic links, however we are lacking in tools that are explicitly
 taking into consideration estimating both the feasibility as well as
 realisation of links, \emph{i.e.,} both interactions and structure
-simultaneously (Strydom et al., 2021). This could be addressed either
-through the development of tools that do both (predict both interactions
-and structure), or it might be possible to do a ensemble modelling
+simultaneously (Strydom, Catchen, et al., 2021). This could be addressed
+either through the development of tools that do both (predict both
+interactions and structure), or to develop an ensemble modelling
 approach (Becker et al., 2022). Alternatively the development of tools
 that will allow for the downsampling of metawebs into realised networks
 (\emph{e.g.,} Roopnarine, 2006), although deciding exactly what is
@@ -778,11 +778,16 @@ might not be that simple (Saravia et al., 2022). Probably also something
 that aligns with trying to predict interaction strength - because that
 would be the gold standard. Probably also worth just plainly stating
 that feasibility of developing a model that is both broadly
-generalisable, but also cas local specificity is probably not attainable
-(Stouffer, 2019), and more specifically the potential use un models
-untangling/identifying the different processes (Song \& Levine, 2024)
+generalisable, but also has local specificity is probably not attainable
+(Stouffer, 2019), and more specifically the potential use in models
+untangling/identifying the different processes that shape interaction
+networks (Song \& Levine, 2024), \emph{e.g.,} Curtsdotter et al. (2019)
+showcasing the use of models to disentangle the drivers of community
+function and Strydom, Dalla Riva, et al. (2021) who identified that
+networks are less complex than they could be, suggesting that there are
+constraints on network assembly.
 
-\subsection{At what scale should we be predicting/using
+\subsubsection{At what scale should we be predicting/using
 networks?}\label{at-what-scale-should-we-be-predictingusing-networks}
 
 Look at Hutchinson et al. (2019)
@@ -809,22 +814,7 @@ they may be integrated at - co-occurrence may span decades and just
 because two species have been recorded in teh same space does not mean
 it was at the same timescale (Brimacombe et al., 2024)
 
-\subsection{How should we use different
-networks?}\label{how-should-we-use-different-networks}
-
-What for and how we can use networks is perhaps one of the biggest
-`gaps' we have in network ecology (Tim's EBV ms), and there is a serious
-need to start drawing clear, ecological links between network form and
-function (although see Delmas et al., 2019). That being said one of the
-most important things we can do is to be aware of the parameter space
-that is possible given a specific definition of a network and operate
-within those parameters. And we should use this in how we also
-evaluate/benchmark the performance of the different models as well;
-Poisot (2023) presents a set of guidelines for assessing how well a
-model recovers pairwise interactions but we lack any clear strategies
-for benchmarking structure.
-
-\subsection{Feasible, realised, or
+\subsubsection{Feasible, realised, or
 sustainable?}\label{feasible-realised-or-sustainable}
 
 When do we determine a link to be `real'\ldots{} In the context of
@@ -841,6 +831,21 @@ Lokta-Volterra space question and something that the dynamic foodweb
 model (Curtsdotter et al., 2019; Delmas et al., 2017; Lajaaiti et al.,
 2024) is addressing, but again it is integrating this with the
 feasible/realised axis.
+
+\subsection{How should we use different
+networks?}\label{how-should-we-use-different-networks}
+
+What for and how we can use networks is perhaps one of the biggest
+`gaps' we have in network ecology (Tim's EBV ms), and there is a serious
+need to start drawing clear, ecological links between network form and
+function (although see Delmas et al., 2019). That being said one of the
+most important things we can do is to be aware of the parameter space
+that is possible given a specific definition of a network and operate
+within those parameters. And we should use this in how we also
+evaluate/benchmark the performance of the different models as well;
+Poisot (2023) presents a set of guidelines for assessing how well a
+model recovers pairwise interactions but we lack any clear strategies
+for benchmarking structure.
 
 \section{Concluding remarks}\label{concluding-remarks}
 
@@ -1302,6 +1307,12 @@ towards predicting species interaction networks (across space and time).
 \emph{Philosophical Transactions of the Royal Society B: Biological
 Sciences}, \emph{376}(1837), 20210063.
 \url{https://doi.org/10.1098/rstb.2021.0063}
+
+\bibitem[\citeproctext]{ref-strydomSVDEntropyReveals2021}
+Strydom, T., Dalla Riva, G. V., \& Poisot, T. (2021). {SVD Entropy
+Reveals} the {High Complexity} of {Ecological Networks}. \emph{Frontiers
+in Ecology and Evolution}, \emph{9}.
+\url{https://doi.org/10.3389/fevo.2021.623141}
 
 \bibitem[\citeproctext]{ref-terryFindingMissingLinks2020}
 Terry, J. C. D., \& Lewis, O. T. (2020). Finding missing links in
