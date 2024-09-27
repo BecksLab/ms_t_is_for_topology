@@ -617,8 +617,8 @@ different network types. This is paralleled by a hypothetical case study
 network representation in the context of trying to understand the
 feeding dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, bottomrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, opacitybacktitle=0.6, leftrule=.75mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, breakable, left=2mm, toptitle=1mm, toprule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, breakable, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, arc=.35mm, coltitle=black, left=2mm, opacitybacktitle=0.6, leftrule=.75mm]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -722,8 +722,9 @@ availability of datasets (Gray et al., 2015; \emph{e.g.,} Poelen et al.,
 testing/benchmarking tools (Poisot, 2023), means that these models can
 be validated and (with relative confidence) be used to construct first
 draft networks for communities for which we have no data (Strydom et
-al., 2022), and are valuable for constructing prehistoric networks
-(Fricke et al., 2022; Yeakel et al., 2014).
+al., 2022), and are valuable for constructing networks where we lack any
+interaction data \emph{e.g.,} prehistoric networks (Fricke et al., 2022;
+Yeakel et al., 2014).
 
 \subsubsection{Models that predict realised networks (realised
 interactions)}\label{models-that-predict-realised-networks-realised-interactions}
@@ -805,10 +806,12 @@ function and Strydom, Dalla Riva, et al. (2021) who identified that
 networks are less complex than they could be, suggesting that there are
 constraints on network assembly. In addition to the more intentional
 development of models we also need to consider the validation of these
-models, There have been developments and discussions for assessing how
+models, there have been developments and discussions for assessing how
 well a model recovers pairwise interactions (Poisot, 2023; Strydom,
-Catchen, et al., 2021) but we lack any clear strategies for benchmarking
-the ability of models to recover structure (Allesina et al., 2008).
+Catchen, et al., 2021), although the rate of false-negatives that may be
+present in the testing data still present a challenge (Catchen et al.,
+2023), and we still lack clear strategies for benchmarking the ability
+of models to recover structure (Allesina et al., 2008).
 
 \subsubsection{At what scale should we be predicting and using
 networks?}\label{at-what-scale-should-we-be-predicting-and-using-networks}
@@ -982,6 +985,11 @@ Caron, D., Maiorano, L., Thuiller, W., \& Pollock, L. J. (2022).
 Addressing the {Eltonian} shortfall with trait-based interaction models.
 \emph{Ecology Letters}, \emph{25}(4), 889--899.
 \url{https://doi.org/10.1111/ele.13966}
+
+\bibitem[\citeproctext]{ref-catchenMissingLinkDiscerning2023}
+Catchen, M. D., Poisot, T., Pollock, L. J., \& Gonzalez, A. (2023).
+\emph{The missing link: Discerning true from false negatives when
+sampling species interaction networks}.
 
 \bibitem[\citeproctext]{ref-cherifEnvironmentRescueCan2024}
 Cherif, M., Brose, U., Hirt, M. R., Ryser, R., Silve, V., Albert, G.,
