@@ -78,15 +78,17 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 % definitions for citeproc citations
@@ -181,9 +183,6 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage{bookmark}
 
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -228,7 +227,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-09-26}
+\date{2024-09-27}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -473,7 +472,7 @@ for which they are relevant (species, population, or community).
 
 \centering{
 
-\includegraphics{images/concept_v2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{images/concept_v2.png}}
 
 }
 
@@ -596,28 +595,30 @@ delimited by its intended use, however the reality is that the empirical
 collection of interaction data is both costly {[}ref{]} and challenging
 to execute in a way that captures the different processes (owing to the
 different time and spatial scales they may be operating at). Thus we
-often turn to using models to either predict the interaction between two
-species {[}ref{]}, the structure of networks {[}ref{]}, or even as a
-means to identify missing interactions (gap fill) within existing
-empirical dataset (Biton et al., 2024; Stock, 2021), and so for the
-purpose of this discussion network construction will be synonymous with
-using a model as a means to represent or predict a network. Different
-models have different underlying philosophies that often only capture
-one or a few of the processes discussed in Section~\ref{sec-process},
-has implications for how the resulting network is defined
-Section~\ref{sec-anatomy}, which will ultimately delimit and define what
-inferences can be made from the resulting network. Here we will
-introduce the three different types of network representations, how they
-link back to the different processes determining interactions
-Figure~\ref{fig-process}, and broadly discuss some of the modelling
-approaches that are used to construct these different network types.
-This is paralleled by a hypothetical case study (Box 1) where we
-showcase the utility/applicability of the different network
-representation in the context of trying to understand the feeding
-dynamics of a seasonal community.
+often turn to models to either predict networks, be that the interaction
+between two species, or its structure (Strydom, Catchen, et al., 2021),
+or as a means to identify missing interactions (gap fill) within
+existing empirical dataset (Biton et al., 2024; Stock, 2021), and so for
+the purpose of this discussion network construction will be synonymous
+with using a model as a means to represent or predict a network --- it
+can be argued that even the collection of empirical data is in and of
+itself a `model' as it is still only a \emph{representation} of the
+system. Different models have different underlying philosophies that
+often only capture one or a few of the processes discussed in
+Section~\ref{sec-process}, has implications for how the resulting
+network is defined Section~\ref{sec-anatomy}, which will ultimately
+delimit and define what inferences can be made from the resulting
+network. Here we will introduce the three different types of network
+representations, how they link back to the different processes
+determining interactions Figure~\ref{fig-process}, and broadly discuss
+some of the modelling approaches that are used to construct these
+different network types. This is paralleled by a hypothetical case study
+(Box 1) where we showcase the utility/applicability of the different
+network representation in the context of trying to understand the
+feeding dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, arc=.35mm, opacityback=0, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white, left=2mm, colback=white, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, titlerule=0mm, toptitle=1mm, bottomtitle=1mm, toprule=.15mm, rightrule=.15mm, coltitle=black, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, bottomrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, opacitybacktitle=0.6, leftrule=.75mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, breakable, left=2mm, toptitle=1mm, toprule=.15mm, opacityback=0, colback=white]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -732,21 +733,20 @@ In order to construct realised networks models need to incorporate
 entire diet breadth of a species) as well as then determine which
 interactions are realised (\emph{i.e.,} incorporate the `cost' of
 interactions). As far as we are aware there is no model that explicitly
-accounts for the feasibility (evolutionary compatibility) between
-species and rather \emph{only} accounts for processes that determine the
-realisation of an interaction (\emph{i.e.,} abundance, predator choice,
-or non-trophic interactions). Although the use of allometric scaling
-\emph{i.e.,} body size (Beckerman et al., 2006; \emph{e.g.,} Valdovinos
-et al., 2023) may represent a first step in capturing evolutionary
-compatibility one still needs to account for other feeding traits. In
-terms of models that do formalise these processes, diet models
-(Beckerman et al., 2006; Petchey et al., 2008) have been used construct
-networks based on both predator choice (as determined by the handling
-time, energy content, and predator attack rate) as well as abundance
-(prey density). Wootton et al. (2023) developed a model that moves the
-energy of the system into different modules related to the process of
-the predator acquiring energy from the prey \emph{i.e.,}
-compartmentation in food webs (Krause et al., 2003).
+accounts for both of these `rules' and rather \emph{only} account for
+processes that determine the realisation of an interaction (\emph{i.e.,}
+abundance, predator choice, or non-trophic interactions). Although the
+use of allometric scaling \emph{i.e.,} body size (Beckerman et al.,
+2006; \emph{e.g.,} Valdovinos et al., 2023) may represent a first step
+in capturing evolutionary compatibility one still needs to account for
+other feeding traits. In terms of models that do formalise these
+processes, diet models (Beckerman et al., 2006; Petchey et al., 2008)
+have been used construct networks based on both predator choice (as
+determined by the handling time, energy content, and predator attack
+rate) as well as abundance (prey density). Wootton et al. (2023)
+developed a model that moves the energy of the system into different
+modules related to the process of the predator acquiring energy from the
+prey \emph{i.e.,} compartmentation in food webs (Krause et al., 2003).
 
 \subsubsection{Models that predict structure (interaction
 agnostic)}\label{models-that-predict-structure-interaction-agnostic}
@@ -768,14 +768,15 @@ as trophic species) and so cannot be used to determine if an interaction
 is either possible \emph{or} realised between two species (\emph{i.e.,}
 one cannot use these models to determine if species \(a\) eats species
 \(b\)). Although this means this suite of models are unsuitable as tools
-for predicting interactions, they have been shown to be sufficient tools
-to predict the structure of networks (Williams \& Martinez, 2008). And
-provide a data-light (the models often only require species richness)
-but assumption heavy (the resulting network structure is determined by
-an assumption of network structure) way to construct a network.
+for predicting species-specific interactions, they have been shown to be
+sufficient tools to predict the structure of networks (Williams \&
+Martinez, 2008), and provide a data-light (the models often only require
+species richness) but assumption heavy (the resulting network structure
+is determined by an assumption of network structure) way to construct a
+network.
 
-\section{Making Progress with Networks: Why Definitions
-matter}\label{making-progress-with-networks-why-definitions-matter}
+\section{Making Progress with
+Networks}\label{making-progress-with-networks}
 
 \subsection{Further development of models and
 tools}\label{further-development-of-models-and-tools}
@@ -802,10 +803,15 @@ networks (Song \& Levine, 2024), \emph{e.g.,} Curtsdotter et al. (2019)
 showcasing the use of models to disentangle the drivers of community
 function and Strydom, Dalla Riva, et al. (2021) who identified that
 networks are less complex than they could be, suggesting that there are
-constraints on network assembly.
+constraints on network assembly. In addition to the more intentional
+development of models we also need to consider the validation of these
+models, There have been developments and discussions for assessing how
+well a model recovers pairwise interactions (Poisot, 2023; Strydom,
+Catchen, et al., 2021) but we lack any clear strategies for benchmarking
+the ability of models to recover structure (Allesina et al., 2008).
 
-\subsubsection{At what scale should we be predicting/using
-networks?}\label{at-what-scale-should-we-be-predictingusing-networks}
+\subsubsection{At what scale should we be predicting and using
+networks?}\label{at-what-scale-should-we-be-predicting-and-using-networks}
 
 Look at Hutchinson et al. (2019)
 
@@ -828,14 +834,14 @@ architecture) that showcases how different species use the landscape
 will influence network dynamics (Rooney et al., 2008). There is also a
 bit of an interplay with time and data and the different scales that
 they may be integrated at - co-occurrence may span decades and just
-because two species have been recorded in teh same space does not mean
+because two species have been recorded in the same space does not mean
 it was at the same timescale (Brimacombe et al., 2024)
 
 \subsubsection{Feasible, realised, or
 sustainable?}\label{feasible-realised-or-sustainable}
 
 When do we determine a link to be `real'\ldots{} In the context of
-feasible networks this is perhaps clearer - if all things were equal
+metawebs this is perhaps clearer - if all things were equal
 (\emph{i.e.,} community context is irrelevant) would the predator be
 able to consume the prey. However in the realised space there is also
 the question of the long term `energetic feasibility' of an interaction
@@ -858,11 +864,11 @@ need to start drawing clear, ecological links between network form and
 function (although see Delmas et al., 2019). That being said one of the
 most important things we can do is to be aware of the parameter space
 that is possible given a specific definition of a network and operate
-within those parameters. And we should use this in how we also
-evaluate/benchmark the performance of the different models as well;
-Poisot (2023) presents a set of guidelines for assessing how well a
-model recovers pairwise interactions but we lack any clear strategies
-for benchmarking structure.
+within those parameters. Here we can maybe tie it back to scale -
+specifically the idea that the fact that metawebs operate at
+evolutionary scales they are not suitable for `dynamic' processes,
+although they do have the potential to think about novel species
+entering the network/community\ldots{}
 
 \section{Concluding remarks}\label{concluding-remarks}
 
@@ -891,6 +897,11 @@ that different mechanisms (and thus models) are relevant in these two
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-allesinaGeneralModelFood2008}
+Allesina, S., Alonso, D., \& Pascual, M. (2008). A {General Model} for
+{Food Web Structure}. \emph{Science}, \emph{320}(5876), 658--661.
+\url{https://doi.org/10.1126/science.1156269}
+
 \bibitem[\citeproctext]{ref-allesinaFoodWebModels2009}
 Allesina, S., \& Pascual, M. (2009). Food web models: A plea for groups.
 \emph{Ecology Letters}, \emph{12}(7), 652--662.
