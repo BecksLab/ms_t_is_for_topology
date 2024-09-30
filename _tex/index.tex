@@ -551,7 +551,7 @@ additional bodies of work that attempt to include the cost of movement
 that the environment imposes on an individual (Cherif et al., 2024) as
 well as 2D/3D search space (Pawar et al., 2012).
 
-\textbf{Indirect interactions}
+\textbf{Indirect/higher order interactions}
 
 The realisation (presence/absence) or strength of trophic interactions
 themselves can also be modified by other, indirect (non-trophic),
@@ -559,7 +559,7 @@ interactions (Golubski \& Abrams, 2011; Pilosof et al., 2017), this can
 be either `directly' through \emph{e.g.,} competition or `indirectly'
 \emph{e.g.,} mutualistic/facilitative interactions will alter the
 fine-scale distribution and abundance of some species (Kéfi et al.,
-2012, 2015).
+2012, 2015) as well as persistence (Buche et al., 2024).
 
 \subsection{Contextualising the processes that determine species
 interactions}\label{contextualising-the-processes-that-determine-species-interactions}
@@ -616,8 +616,8 @@ different network types. This is paralleled by a hypothetical case study
 network representation in the context of trying to understand the
 feeding dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacitybacktitle=0.6, leftrule=.75mm, breakable, toptitle=1mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, coltitle=black, colback=white, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, toptitle=1mm, leftrule=.75mm, rightrule=.15mm, left=2mm, coltitle=black, opacitybacktitle=0.6, bottomtitle=1mm, colback=white, breakable, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, arc=.35mm, opacityback=0]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -736,17 +736,20 @@ interactions). As far as we are aware there is no model that explicitly
 accounts for both of these `rules' and rather \emph{only} account for
 processes that determine the realisation of an interaction (\emph{i.e.,}
 abundance, predator choice, or non-trophic interactions). Although the
-use of allometric scaling \emph{i.e.,} body size (Beckerman et al.,
-2006; \emph{e.g.,} Valdovinos et al., 2023) may represent a first step
-in capturing evolutionary compatibility one still needs to account for
-other feeding traits. In terms of models that do formalise these
-processes, diet models (Beckerman et al., 2006; Petchey et al., 2008)
-have been used construct networks based on both predator choice (as
-determined by the handling time, energy content, and predator attack
-rate) as well as abundance (prey density). Wootton et al. (2023)
-developed a model that moves the energy of the system into different
-modules related to the process of the predator acquiring energy from the
-prey \emph{i.e.,} compartmentation in food webs (Krause et al., 2003).
+use of allometry \emph{i.e.,} body size (Beckerman et al., 2006;
+\emph{e.g.,} Valdovinos et al., 2023) may represent a first step in
+capturing `evolutionary compatibility' alongside more energy (predator
+choice) driven processes accounting for additional traits is still
+needed (\emph{e.g.,} Van De Walle et al., 2023 show how incorporating
+prey defensive properties alongside body size improves predictions). In
+terms of models that do formalise these processes, diet models
+(Beckerman et al., 2006; Petchey et al., 2008) have been used construct
+networks based on both predator choice (as determined by the handling
+time, energy content, and predator attack rate) as well as abundance
+(prey density). Wootton et al. (2023) developed a model that moves the
+energy of the system into different modules related to the process of
+the predator acquiring energy from the prey \emph{i.e.,}
+compartmentation in food webs (Krause et al., 2003).
 
 \subsubsection{Models that predict structure (interaction
 agnostic)}\label{models-that-predict-structure-interaction-agnostic}
@@ -835,11 +838,11 @@ geographic scale at which a network is aggregated at (Estay et al.,
 species will influence both the dynamics of networks but also serve to
 link smaller `subnetworks'/community (Fortin et al., 2021; Rooney et
 al., 2008). And so does time \emph{e.g.,} seasonal rewiring (Brimacombe
-et al., 2021). There is also a bit of an interplay with time and data
-and the different scales that they may be integrated at - co-occurrence
-may span decades and just because two species have been recorded in the
-same space does not mean it was at the same timescale (Brimacombe et
-al., 2024).
+et al., 2021; Laender et al., 2010). There is also a bit of an interplay
+with time and data and the different scales that they may be integrated
+at - co-occurrence may span decades and just because two species have
+been recorded in the same space does not mean it was at the same
+timescale (Brimacombe et al., 2024).
 
 \subsection{Feasible, realised, or
 sustainable?}\label{feasible-realised-or-sustainable}
@@ -855,24 +858,36 @@ long term - are we thinking at the generational scale? Because
 ultimately when we are constructing a network we are aggregating not
 only across space but also across time\ldots{} This is probably again a
 Lokta-Volterra space question and something that the dynamic foodweb
-model (Curtsdotter et al., 2019; Delmas et al., 2017; Lajaaiti et al.,
-2024) is addressing, but again it is integrating this with the
-feasible/realised axis.
+models (Curtsdotter et al., 2019; Delmas et al., 2017; Lajaaiti et al.,
+2024) are addressing, but again it is integrating this with the
+feasible/realised axis. And of course the Petchey dilemma of even what
+networks should we be feeding into these dynamic models.
 
 \section{The future value of
 networks}\label{the-future-value-of-networks}
 
+\begin{quote}
+developing a dictionary of use\ldots{} that helps navigate between the
+levels and assumptions
+\end{quote}
+
 It should be clear that there is a high degree of interrelatedness and
 overlap between the way a network is constructed (modelled or predicted)
 and the process(es) it captures, these are encoded (embedded) within the
-network and ultimately influences how the network can and should be used
-(Berlow et al., 2008; Petchey et al., 2011). It is probably both this
-nuance as well as a lack of clear boundaries and guidelines as to the
-links between network form and function (although see Delmas et al.,
-2019) that has stifled the `productive use' of networks beyond
-inventorying the interactions between species. Here we will attempt to
-address this by linking some of the different network `types' to some of
-the current global challenges in biodiversity.
+network representation and ultimately influences how the network can and
+should be used (Berlow et al., 2008; Petchey et al., 2011). It is
+probably both this nuance as well as a lack of clear boundaries and
+guidelines as to the links between network form and function (although
+see Delmas et al., 2019) that has stifled the `productive use' of
+networks beyond inventorying the interactions between species. Although,
+progress with using networks as a means to address questions within
+larger bodies of ecological theory \emph{e.g.,} invasion biology (Hui \&
+Richardson, 2019) and co-existence theory (García-Callejas et al., 2023)
+we still need to have a discussion on what the appropriate network
+configuration for the task at hand would be. In order to evaluate this
+we need to think of the `ability' a specific network representation has
+to capture the process of interest as well as the `suitability' of using
+that representation to answer the question, as is highlighted in Box 1.
 
 \begin{quote}
 The Terry \& Lewis (2020) paper looks at some methods but is
@@ -956,6 +971,12 @@ M.-J. (2023). Shortcomings of reusing species interaction networks
 created by different sets of researchers. \emph{PLOS Biology},
 \emph{21}(4), e3002068.
 \url{https://doi.org/10.1371/journal.pbio.3002068}
+
+\bibitem[\citeproctext]{ref-bucheMultitrophicHigherOrderInteractions2024}
+Buche, L., Bartomeus, I., \& Godoy, O. (2024). Multitrophic
+{Higher-Order Interactions Modulate Species Persistence}. \emph{The
+American Naturalist}, \emph{203}(4), 458--472.
+\url{https://doi.org/10.1086/729222}
 
 \bibitem[\citeproctext]{ref-canardEmergenceStructuralPatterns2012}
 Canard, E., Mouquet, N., Marescot, L., Gaston, K. J., Gravel, D., \&
@@ -1079,6 +1100,13 @@ Collapse of terrestrial mammal food webs since the {Late Pleistocene}.
 \emph{Science}, \emph{377}(6609), 1008--1011.
 \url{https://doi.org/10.1126/science.abn4012}
 
+\bibitem[\citeproctext]{ref-garcia-callejasNonrandomInteractionsGuilds2023}
+García-Callejas, D., Godoy, O., Buche, L., Hurtado, M., Lanuza, J. B.,
+Allen-Perkins, A., \& Bartomeus, I. (2023). Non-random interactions
+within and across guilds shape the potential to coexist in multi-trophic
+ecological communities. \emph{Ecology Letters}, \emph{26}(6), 831--842.
+\url{https://doi.org/10.1111/ele.14206}
+
 \bibitem[\citeproctext]{ref-golubskiModifyingModifiersWhat2011}
 Golubski, A. J., \& Abrams, P. A. (2011). Modifying modifiers: What
 happens when interspecific interactions interact? \emph{Journal of
@@ -1104,6 +1132,11 @@ F., \& Poisot, T. (2023). Mismatch between {IUCN} range maps and species
 interactions data illustrated using the {Serengeti} food web.
 \emph{PeerJ}, \emph{11}, e14620.
 \url{https://doi.org/10.7717/peerj.14620}
+
+\bibitem[\citeproctext]{ref-huiHowInvadeEcological2019}
+Hui, C., \& Richardson, D. M. (2019). How to {Invade} an {Ecological
+Network}. \emph{Trends in Ecology \& Evolution}, \emph{34}(2), 121--131.
+\url{https://doi.org/10.1016/j.tree.2018.11.003}
 
 \bibitem[\citeproctext]{ref-hutchinsonSeeingForestTrees2019}
 Hutchinson, M. C., Bramon Mora, B., Pilosof, S., Barner, A. K., Kéfi,
@@ -1142,6 +1175,13 @@ Krause, A. E., Frank, K. A., Mason, D. M., Ulanowicz, R. E., \& Taylor,
 W. W. (2003). Compartments revealed in food-web structure.
 \emph{Nature}, \emph{426}(6964), 282--285.
 \url{https://doi.org/10.1038/nature02115}
+
+\bibitem[\citeproctext]{ref-laenderCarbonTransferHerbivore2010}
+Laender, F. D., Oevelen, D. V., Soetaert, K., \& Middelburg, J. J.
+(2010). Carbon transfer in a herbivore- and microbial loop-dominated
+pelagic food webs in the southern {Barents Sea} during spring and
+summer. \emph{Marine Ecology Progress Series}, \emph{398}, 93--107.
+\url{https://doi.org/10.3354/meps08335}
 
 \bibitem[\citeproctext]{ref-lajaaitiEcologicalNetworksDynamicsJlJulia2024}
 Lajaaiti, I., Bonnici, I., Kéfi, S., Mayall, H., Danet, A., Beckerman,
@@ -1364,6 +1404,13 @@ S., Simon, S. M., Thébault, E., Wetzel, W. C., Wootton, K. L., \&
 Yeakel, J. D. (2023). A bioenergetic framework for aboveground
 terrestrial food webs. \emph{Trends in Ecology \& Evolution},
 \emph{38}(3), 301--312. \url{https://doi.org/10.1016/j.tree.2022.11.004}
+
+\bibitem[\citeproctext]{ref-vandewalleArthropodFoodWebs2023}
+Van De Walle, R., Logghe, G., Haas, N., Massol, F., Vandegehuchte, M.
+L., \& Bonte, D. (2023). Arthropod food webs predicted from body size
+ratios are improved by incorporating prey defensive properties.
+\emph{Journal of Animal Ecology}, \emph{92}(4), 913--924.
+\url{https://doi.org/10.1111/1365-2656.13905}
 
 \bibitem[\citeproctext]{ref-wellsSpeciesInteractionsEstimating2013}
 Wells, K., \& O'Hara, R. B. (2013). Species interactions: Estimating
