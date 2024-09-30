@@ -601,8 +601,8 @@ different network types. This is paralleled by a hypothetical case study
 network representation in the context of trying to understand the
 feeding dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, colback=white, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, opacityback=0, breakable, toptitle=1mm, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, opacityback=0, breakable, opacitybacktitle=0.6, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, colframe=quarto-callout-note-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, bottomtitle=1mm, arc=.35mm, bottomrule=.15mm, toptitle=1mm, leftrule=.75mm, left=2mm]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -843,6 +843,8 @@ model (Curtsdotter et al., 2019; Delmas et al., 2017; Lajaaiti et al.,
 2024) is addressing, but again it is integrating this with the
 feasible/realised axis.
 
+\subsection{Petchey dilemma}\label{petchey-dilemma}
+
 \subsection{How should we use different
 networks?}\label{how-should-we-use-different-networks}
 
@@ -852,13 +854,98 @@ need to start drawing clear, ecological links between network form and
 function (although see Delmas et al., 2019). That being said one of the
 most important things we can do is to be aware of the parameter space
 that is possible given a specific definition of a network and operate
-within those parameters. Here we can maybe tie it back to scale -
-specifically the idea that the fact that metawebs operate at
+within those parameters. See table for an overview. Also tie it back to
+scale - specifically the idea that the fact that metawebs operate at
 evolutionary scales they are not suitable for `dynamic' processes,
 although they do have the potential to think about novel species
 entering the network/community\ldots{}
 
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0673}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1571}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1763}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3045}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2853}}@{}}
+\caption{An informative table}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Network
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Captures
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Mechanism(s)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Uses
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Limits
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Network
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Captures
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Mechanism(s)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Uses
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Limits
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Global metaweb & `diet niche' of all species, who \emph{can} eat who &
+evolutionary capacity & list of all possible interactions
+
+potential interactions of `invading' species
+
+potential diet shifts
+
+time/context invariant interactions & structure non-informative of
+process
+
+lacks time/spatial constraint
+
+`static' representation of links
+
+local specificity \\
+Regional metaweb & potential links for a given community in space &
+evolutionary capacity, co-occurrence & list of all possible interactions
+
+potential diet shifts
+
+time/context invariant interactions & lack of time constraint
+(co-occurrence can be aggregated over years) \\
+Realised network & given the community context. who eats who &
+abundance, predator choice, non trophic interactions & `on the ground'
+approximation of interactions (local specificity)
+
+structure is informative
+
+dynamic processes \emph{e.g.,} stability/persistence (if modelling not
+the representation itself) & lack of broader context - only realised
+interactions but not all possible interactions
+
+need a lot of information of the community - data cost \\
+Structural network & distribution of feeding links & & simulated
+networks (low data cost)
+
+structure
+
+dynamic processes (but not species specific, community level only) &
+assumptions on structure to determine structure
+
+lack of species specificity \\
+\end{longtable}
+
 \section{Concluding remarks}\label{concluding-remarks}
+
+\begin{quote}
+what is the future value of networks?
+\end{quote}
 
 I think a big take home will (hopefully) be how different approaches do
 better in different situations and so you as an end user need to take
