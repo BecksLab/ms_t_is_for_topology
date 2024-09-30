@@ -370,8 +370,7 @@ how the structure influences ecosystem level processes) as well as the
 prediction process (Banville et al., 2024). One thus needs to be aware
 of both the criteria that is used to define nodes and edges, and what
 processes or mechanisms the aggregation of the two represents, as this
-will ultimately determine and delimit the way in which a network can and
-should be used.
+will determine what the network can be used for.
 
 \subsubsection{How do we define a node?}\label{how-do-we-define-a-node}
 
@@ -617,8 +616,8 @@ different network types. This is paralleled by a hypothetical case study
 network representation in the context of trying to understand the
 feeding dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, bottomtitle=1mm, colback=white, opacitybacktitle=0.6, leftrule=.75mm, left=2mm, opacityback=0, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, titlerule=0mm, toptitle=1mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacitybacktitle=0.6, leftrule=.75mm, breakable, toptitle=1mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, coltitle=black, colback=white, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, rightrule=.15mm]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -814,7 +813,7 @@ data still present a challenge (Catchen et al., 2023), and we still lack
 clear strategies for benchmarking the ability of models to recover
 structure (Allesina et al., 2008).
 
-\subsubsection{At what scale should we be predicting and using
+\subsection{At what scale should we be predicting and using
 networks?}\label{at-what-scale-should-we-be-predicting-and-using-networks}
 
 Look at Hutchinson et al. (2019)
@@ -832,16 +831,17 @@ to how we should define a network is (actually) probably one of the
 biggest barriers that is affecting the use of networks in applied
 settings\ldots{} By define I mean both delimiting the time and
 geographic scale at which a network is aggregated at (Estay et al.,
-2023). This is important because it can influence the inferences made,
-\emph{e.g.,} the large body of work (landscape theory for food web
-architecture) that showcases how different species use the landscape
-will influence network dynamics (Rooney et al., 2008). There is also a
-bit of an interplay with time and data and the different scales that
-they may be integrated at - co-occurrence may span decades and just
-because two species have been recorded in the same space does not mean
-it was at the same timescale (Brimacombe et al., 2024)
+2023). We know that space plays a role - the motility of different
+species will influence both the dynamics of networks but also serve to
+link smaller `subnetworks'/community (Fortin et al., 2021; Rooney et
+al., 2008). And so does time \emph{e.g.,} seasonal rewiring (Brimacombe
+et al., 2021). There is also a bit of an interplay with time and data
+and the different scales that they may be integrated at - co-occurrence
+may span decades and just because two species have been recorded in the
+same space does not mean it was at the same timescale (Brimacombe et
+al., 2024).
 
-\subsubsection{Feasible, realised, or
+\subsection{Feasible, realised, or
 sustainable?}\label{feasible-realised-or-sustainable}
 
 When do we determine a link to be `real'\ldots{} In the context of
@@ -859,129 +859,25 @@ model (Curtsdotter et al., 2019; Delmas et al., 2017; Lajaaiti et al.,
 2024) is addressing, but again it is integrating this with the
 feasible/realised axis.
 
-\subsection{Petchey dilemma}\label{petchey-dilemma}
+\section{The future value of
+networks}\label{the-future-value-of-networks}
 
-\subsection{How should we use different
-networks?}\label{how-should-we-use-different-networks}
-
-What for and how we can use networks is perhaps one of the biggest
-`gaps' we have in network ecology (Tim's EBV ms), and there is a serious
-need to start drawing clear, ecological links between network form and
-function (although see Delmas et al., 2019). That being said one of the
-most important things we can do is to be aware of the parameter space
-that is possible given a specific definition of a network and operate
-within those parameters. See table for an overview. Also tie it back to
-scale - specifically the idea that the fact that metawebs operate at
-evolutionary scales they are not suitable for `dynamic' processes,
-although they do have the potential to think about novel species
-entering the network/community\ldots{}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0673}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1571}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1763}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3045}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2853}}@{}}
-\caption{An informative table}\tabularnewline
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Network
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Captures
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Mechanism(s)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Uses
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Limits
-\end{minipage} \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Network
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Captures
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Mechanism(s)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Uses
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Limits
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Global metaweb & `diet niche' of all species, who \emph{can} eat who &
-evolutionary capacity & list of all possible interactions
-
-potential interactions of `invading' species
-
-potential diet shifts
-
-time/context invariant interactions & structure non-informative of
-process
-
-lacks time/spatial constraint
-
-`static' representation of links
-
-local specificity \\
-Regional metaweb & potential links for a given community in space &
-evolutionary capacity, co-occurrence & list of all possible interactions
-
-potential diet shifts
-
-time/context invariant interactions & lack of time constraint
-(co-occurrence can be aggregated over years) \\
-Realised network & given the community context. who eats who &
-abundance, predator choice, non trophic interactions & `on the ground'
-approximation of interactions (local specificity)
-
-structure is informative
-
-dynamic processes \emph{e.g.,} stability/persistence (if modelling not
-the representation itself) & lack of broader context - only realised
-interactions but not all possible interactions
-
-need a lot of information of the community - data cost \\
-Structural network & distribution of feeding links & & simulated
-networks (low data cost)
-
-structure
-
-dynamic processes (but not species specific, community level only) &
-assumptions on structure to determine structure
-
-lack of species specificity \\
-\end{longtable}
-
-\section{Concluding remarks}\label{concluding-remarks}
+It should be clear that there is a high degree of interrelatedness and
+overlap between the way a network is constructed (modelled or predicted)
+and the process(es) it captures, these are encoded (embedded) within the
+network and ultimately influences how the network can and should be used
+(Berlow et al., 2008; Petchey et al., 2011). It is probably both this
+nuance as well as a lack of clear boundaries and guidelines as to the
+links between network form and function (although see Delmas et al.,
+2019) that has stifled the `productive use' of networks beyond
+inventorying the interactions between species. Here we will attempt to
+address this by linking some of the different network `types' to some of
+the current global challenges in biodiversity.
 
 \begin{quote}
-what is the future value of networks?
+The Terry \& Lewis (2020) paper looks at some methods but is
+specifically looking at a bipartite world\ldots{}
 \end{quote}
-
-I think a big take home will (hopefully) be how different approaches do
-better in different situations and so you as an end user need to take
-this into consideration and pick accordingly. I think Petchey et al.
-(2011) might have (and share) some thoughts on this. I feel like I need
-to look at Berlow et al. (2008) but maybe not exactly in this context
-but vaguely adjacent. This is sort of the crux of the argument presented
-in Brimacombe et al. (2024) as well.
-
-Do we expect there to be differences when thinking about unipartite vs
-bipartite networks? Is there underlying ecology/theory that would assume
-that different mechanisms (and thus models) are relevant in these two
-`systems'.
-
-\begin{itemize}
-\tightlist
-\item
-  The Terry \& Lewis (2020) paper looks at some methods but is
-  specifically looking at a bipartite world\ldots{}
-\end{itemize}
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
@@ -1042,6 +938,12 @@ prediction in ecological networks}.
 Blanchet, F. G., Cazelles, K., \& Gravel, D. (2020). Co-occurrence is
 not evidence of ecological interactions. \emph{Ecology Letters},
 \emph{23}(7), 1050--1063. \url{https://doi.org/10.1111/ele.13525}
+
+\bibitem[\citeproctext]{ref-brimacombeInferredSeasonalInteraction2021}
+Brimacombe, C., Bodner, K., \& Fortin, M.-J. (2021). Inferred seasonal
+interaction rewiring of a freshwater stream fish network.
+\emph{Ecography}, \emph{44}(2), 219--230.
+\url{https://doi.org/10.1111/ecog.05452}
 
 \bibitem[\citeproctext]{ref-brimacombeApplyingMethodIts2024}
 Brimacombe, C., Bodner, K., \& Fortin, M.-J. (2024). \emph{Applying a
@@ -1163,6 +1065,12 @@ Evolution}, \emph{4}(8), 760--770.
 Estay, S. A., Fortin, M.-J., \& López, D. N. (2023). Editorial:
 {Patterns} and processes in ecological networks over space.
 \emph{Frontiers in Ecology and Evolution}, \emph{11}.
+
+\bibitem[\citeproctext]{ref-fortinNetworkEcologyDynamic2021}
+Fortin, M.-J., Dale, M. R. T., \& Brimacombe, C. (2021). Network ecology
+in dynamic landscapes. \emph{Proceedings of the Royal Society B:
+Biological Sciences}, \emph{288}(1949), rspb.2020.1889, 20201889.
+\url{https://doi.org/10.1098/rspb.2020.1889}
 
 \bibitem[\citeproctext]{ref-frickeCollapseTerrestrialMammal2022}
 Fricke, E. C., Hsieh, C., Middleton, O., Gorczynski, D., Cappello, C.
