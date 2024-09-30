@@ -227,7 +227,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-09-27}
+\date{2024-09-30}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -528,14 +528,15 @@ component of some of the next generation species distribution models
 \textbf{Abundance}
 
 The abundance of the different species within the community can
-influence the likelihood of an interaction occurring in a myriad of
-ways. There is the argument that networks (and the interactions that
-make them up) are driven by only the abundance of the different species
-and not the characteristics (traits), \emph{sensu} neutral processes and
-have been formalised with the neutral model (Canard et al., 2012), as
-well as statistical tools (Momal et al., 2020). Alternatively the
-abundance of species in a community can influence which interactions are
-ultimately realised (Banville et al., 2024; Poisot et al., 2015).
+influence the likelihood of an interaction occurring in a myriad of ways
+\emph{e.g.,} the likelihood of two species meeting, or the long term
+availability of prey. There is the argument that structure of networks
+(and the interactions that they are composed of) are driven by only the
+abundance of the different species and not their characteristics
+(traits), \emph{sensu} neutral processes (Canard et al., 2012; Momal et
+al., 2020). Alternatively the abundance of species in a community can
+influence which interactions are ultimately realised (Banville et al.,
+2024; Poisot et al., 2015).
 
 \textbf{Predator choice (energetic cost)}
 
@@ -616,8 +617,8 @@ different network types. This is paralleled by a hypothetical case study
 network representation in the context of trying to understand the
 feeding dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, opacitybacktitle=0.6, toptitle=1mm, rightrule=.15mm, colback=white, bottomrule=.15mm, coltitle=black, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, breakable, coltitle=black, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, leftrule=.75mm]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -794,23 +795,24 @@ that will allow for the downsampling of metawebs into realised networks
 driving differences between local networks and the regional metaweb
 might not be that simple (Saravia et al., 2022). Probably also something
 that aligns with trying to predict interaction strength - because that
-would be the gold standard. Probably also worth just plainly stating
-that feasibility of developing a model that is both broadly
-generalisable, but also has local specificity is probably not attainable
-(Stouffer, 2019), and more specifically the potential use in models
-untangling/identifying the different processes that shape interaction
-networks (Song \& Levine, 2024), \emph{e.g.,} Curtsdotter et al. (2019)
-showcasing the use of models to disentangle the drivers of community
-function and Strydom, Dalla Riva, et al. (2021) who identified that
-networks are less complex than they could be, suggesting that there are
-constraints on network assembly. In addition to the more intentional
-development of models we also need to consider the validation of these
-models, there have been developments and discussions for assessing how
-well a model recovers pairwise interactions (Poisot, 2023; Strydom,
-Catchen, et al., 2021), although the rate of false-negatives that may be
-present in the testing data still present a challenge (Catchen et al.,
-2023), and we still lack clear strategies for benchmarking the ability
-of models to recover structure (Allesina et al., 2008).
+would be the gold standard (\emph{e.g.,} Wells \& O'Hara, 2013).
+Probably also worth just plainly stating that feasibility of developing
+a model that is both broadly generalisable, but also has local
+specificity is probably not attainable (Stouffer, 2019), and more
+specifically the potential use of models to untangle/identify the
+different processes that shape interaction networks (Song \& Levine,
+2024), \emph{e.g.,} Curtsdotter et al. (2019) showcase the use of models
+to disentangle the drivers of community function and Strydom, Dalla
+Riva, et al. (2021) who identified that networks are less complex than
+they could be, suggesting that there are constraints on network
+assembly. In addition to the more intentional development of models we
+also need to consider the validation of these models, there have been
+developments and discussions for assessing how well a model recovers
+pairwise interactions (Poisot, 2023; Strydom, Catchen, et al., 2021),
+although the rate of false-negatives that may be present in the testing
+data still present a challenge (Catchen et al., 2023), and we still lack
+clear strategies for benchmarking the ability of models to recover
+structure (Allesina et al., 2008).
 
 \subsubsection{At what scale should we be predicting and using
 networks?}\label{at-what-scale-should-we-be-predicting-and-using-networks}
@@ -1367,6 +1369,13 @@ S., Simon, S. M., Thébault, E., Wetzel, W. C., Wootton, K. L., \&
 Yeakel, J. D. (2023). A bioenergetic framework for aboveground
 terrestrial food webs. \emph{Trends in Ecology \& Evolution},
 \emph{38}(3), 301--312. \url{https://doi.org/10.1016/j.tree.2022.11.004}
+
+\bibitem[\citeproctext]{ref-wellsSpeciesInteractionsEstimating2013}
+Wells, K., \& O'Hara, R. B. (2013). Species interactions: Estimating
+per-individual interaction strength and covariates before simplifying
+data into per-species ecological networks. \emph{Methods in Ecology and
+Evolution}, \emph{4}(1), 1--8.
+\url{https://doi.org/10.1111/j.2041-210x.2012.00249.x}
 
 \bibitem[\citeproctext]{ref-williamsSimpleRulesYield2000}
 Williams, R. J., \& Martinez, N. D. (2000). Simple rules yield complex
