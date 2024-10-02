@@ -227,7 +227,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-10-01}
+\date{2024-10-02}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -457,25 +457,44 @@ determine either the feasibility or realisation of interactions, namely:
 evolutionary compatibility, co-occurrence, feasibility, abundance,
 predator choice, and non-trophic interactions; while simultaneously
 contextualising them within, and linking them to the different network
-representations Figure~\ref{fig-process}; specifically if the processes
-captures an all-or-nothing (possibility) vs context dependent
-(likelihood) determination of interactions between species. Of course
-these processes do not function in a vacuum and do interact
+representations Figure~\ref{fig-process}. We can think of the different
+network representations to be conceptually analogous to the fundamental
+and realised niche, whereby the metaweb represents the `fundamental diet
+niche' of a species and a realised network represents the `realised
+diet' of a species and are thus determined by different processes. Of
+course these processes do not function in a vacuum and do interact
 with/influence one another, but it is still beneficial to present them
 in a categorical manner as these different processes are often the
 underpinning logic in the development of prediction/network models, the
 criteria for data collection in the field, and the scale of organisation
-for which they are relevant (species, population, or community).
+for which they are relevant (species, population, or community), which
+is all ultimately captured and encapsulated by the different network
+representations.
 
 \begin{figure}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{images/concept_v2.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{images/representations.png}}
 
 }
 
-\caption{\label{fig-process}TODO.}
+\caption{\label{fig-process}Aligning the various processes that
+determine interactions with the different network representations. First
+we start with a `global metaweb' this network which captures all
+possible interactions for an arbitrary collection of species, we can
+further refine this network by taking in to consideration the
+co-occurrence of these difference species - as shown here we have two
+regions with some species (blue) that are found in both regions and
+others endemic to either region one (pink) or region two (orange). These
+regional metawebs to capture all possible interactions, however it only
+considers species that co-occur. However even within a region we do not
+expect all interactions to be realised but rather that there are
+multiple configurations of the regional metaweb over both space and
+time. The `state' of the different network realisations are ultimately
+influenced not just by the co-occurrence of a species pair but rather
+the larger community context such as the abundance of different species,
+maximising energy gain, or indirect/higher order interactions.}
 
 \end{figure}%
 
@@ -592,32 +611,35 @@ nuanced}\label{network-construction-is-nuanced}
 The act of constructing a `real world' network will ultimately be
 delimited by its intended use, however the reality is that the empirical
 collection of interaction data is both costly {[}ref{]} and challenging
-to execute in a way that captures the different processes (owing to the
-different time and spatial scales they may be operating at). Thus we
-often turn to models to either predict networks, be that the interaction
-between two species, or its structure (Strydom, Catchen, et al., 2021),
-or as a means to identify missing interactions (gap fill) within
-existing empirical dataset (Biton et al., 2024; Stock, 2021), and so for
-the purpose of this discussion network construction will be synonymous
-with using a model as a means to represent or predict a network --- it
-can be argued that even the collection of empirical data is in and of
-itself a `model' as it is still only a \emph{representation} of the
-system. Different models have different underlying philosophies that
-often only capture one or a few of the processes discussed in
-Section~\ref{sec-process}, has implications for how the resulting
-network is defined Section~\ref{sec-anatomy}, which will ultimately
-delimit and define what inferences can be made from the resulting
-network. Here we will introduce the three different types of network
-representations, how they link back to the different processes
-determining interactions Figure~\ref{fig-process}, and broadly discuss
-some of the modelling approaches that are used to construct these
-different network types. This is paralleled by a hypothetical case study
-(Box 1) where we showcase the utility/applicability of the different
-network representation in the context of trying to understand the
-feeding dynamics of a seasonal community.
+to execute in a way that captures the different processes discussed in
+Section~\ref{sec-process} (owing to the different time and spatial
+scales they may be operating at). Thus we often turn to models to either
+predict networks (be that the interaction between two species, or its
+structure (Strydom, Catchen, et al., 2021)), or as a means to identify
+missing interactions (gap fill) within an existing empirical dataset
+(Biton et al., 2024; Dallas et al., 2017; Stock, 2021), and so for the
+purpose of this discussion network construction will be synonymous with
+using a model as a means to represent or predict a network. That is not
+to say that there is no need for empirical data collection but rather
+that using a model for food web prediction (or reconstruction) is a more
+feasible, with the added benefit that one is able to build some
+uncertainty into the resulting network (Banville et al., 2024).
+Additionally different models have different underlying philosophies
+that allow us to capture one or a few of the processes discussed in
+Section~\ref{sec-process}, which ultimately delimits and defines what
+inferences can be made from the resulting network. Here we will
+introduce the three different types of network representations
+(metawebs, realised networks, and structural networks), how they link
+back to the different processes determining interactions
+Figure~\ref{fig-process}, and broadly discuss some of the modelling
+approaches that are used to construct these different network types.
+This is paralleled by a hypothetical case study (Box 1) where we
+showcase the utility/applicability of the different network
+representations in the context of trying to understand the feeding
+dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, rightrule=.15mm, arc=.35mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, left=2mm, bottomrule=.15mm, breakable, leftrule=.75mm, bottomtitle=1mm, opacitybacktitle=0.6, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, opacityback=0, rightrule=.15mm, colframe=quarto-callout-note-color-frame, titlerule=0mm, breakable, opacitybacktitle=0.6, left=2mm, bottomtitle=1mm, toptitle=1mm, coltitle=black, toprule=.15mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, leftrule=.75mm]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -673,29 +695,7 @@ but in reality we might be sitting with seasonal metawebs\ldots{}
 
 \end{tcolorbox}
 
-\subsection{How do we predict food
-webs?}\label{how-do-we-predict-food-webs}
-
-There as many ways to predict networks as what there is to define them
-and along with taking into consideration the points raised in the
-previous section it is also beneficial to think about the context in
-which the different models were developed - and how this will influence
-the networks that they produce\ldots{}
-
-There is a bit of a `point of conflict' between those calling for `pixel
-perfect', regional scale data (Pringle, 2020; Pringle \& Hutchinson,
-2020) and for the means to generate networks that are ecologically
-plausible \emph{representations} (\emph{sensu} structural networks).
-This represents two challenges; one is that models that represent
-generalisations of networks often lack the ability to retrieve any
-species/community specificity which limits their utility for real world,
-species-driven scenarios \emph{e.g.,} species driven conservation
-efforts (Dunn et al., 2009), however networks that are constructed
-through either (most) empirical observations or through predictive means
-are fundamentally going to represent metawebs, \emph{i.e.,} lack
-constrained links, a representation of structure, or energy flow\ldots{}
-
-\subsubsection{Models that predict metawebs (feasible
+\subsection{Models that predict metawebs (feasible
 interactions)}\label{models-that-predict-metawebs-feasible-interactions}
 
 This is perhaps the most developed group of models; with a variety of
@@ -725,7 +725,7 @@ al., 2022), and are valuable for constructing networks where we lack any
 interaction data \emph{e.g.,} prehistoric networks (Fricke et al., 2022;
 Yeakel et al., 2014).
 
-\subsubsection{Models that predict realised networks (realised
+\subsection{Models that predict realised networks (realised
 interactions)}\label{models-that-predict-realised-networks-realised-interactions}
 
 In order to construct realised networks models need to incorporate
@@ -751,7 +751,7 @@ energy of the system into different modules related to the process of
 the predator acquiring energy from the prey \emph{i.e.,}
 compartmentation in food webs (Krause et al., 2003).
 
-\subsubsection{Models that predict structure (interaction
+\subsection{Models that predict structure (interaction
 agnostic)}\label{models-that-predict-structure-interaction-agnostic}
 
 Although we identify mechanisms that determine species interactions in
@@ -1033,6 +1033,12 @@ Dalla Riva, G. V., \& Stouffer, D. B. (2016). Exploring the evolutionary
 signature of food webs' backbones using functional traits. \emph{Oikos},
 \emph{125}(4), 446--456. \url{https://doi.org/10.1111/oik.02305}
 
+\bibitem[\citeproctext]{ref-dallasPredictingCrypticLinks2017}
+Dallas, T., Park, A. W., \& Drake, J. M. (2017). Predicting cryptic
+links in host-parasite networks. \emph{PLOS Computational Biology},
+\emph{13}(5), e1005557.
+\url{https://doi.org/10.1371/journal.pcbi.1005557}
+
 \bibitem[\citeproctext]{ref-dansereauSpatiallyExplicitPredictions2024}
 Dansereau, G., Barros, C., \& Poisot, T. (2024). Spatially explicit
 predictions of food web structure from regional-level data.
@@ -1057,13 +1063,6 @@ Delmas, E., Brose, U., Gravel, D., Stouffer, D. B., \& Poisot, T.
 Desjardins-Proulx, P., Laigle, I., Poisot, T., \& Gravel, D. (2017).
 Ecological interactions and the {Netflix} problem. \emph{PeerJ},
 \emph{5}, e3644. \url{https://doi.org/10.7717/peerj.3644}
-
-\bibitem[\citeproctext]{ref-dunnSixthMassCoextinction2009}
-Dunn, R. R., Harris, N. C., Colwell, R. K., Koh, L. P., \& Sodhi, N. S.
-(2009). The sixth mass coextinction: Are most endangered species
-parasites and mutualists? \emph{Proceedings. Biological Sciences},
-\emph{276}(1670), 3037--3045.
-\url{https://doi.org/10.1098/rspb.2009.0413}
 
 \bibitem[\citeproctext]{ref-dunneNetworkStructureFood2006}
 Dunne, J. A. (2006). The {Network Structure} of {Food Webs}. In J. A.
@@ -1305,12 +1304,6 @@ Distribution Model} ({JSDM}). \emph{Methods in Ecology and Evolution},
 Pringle, R. M. (2020). Untangling {Food Webs}. In \emph{Unsolved
 {Problems} in {Ecology}} (pp. 225--238). Princeton University Press.
 \url{https://doi.org/10.1515/9780691195322-020}
-
-\bibitem[\citeproctext]{ref-pringleResolvingFoodWebStructure2020}
-Pringle, R. M., \& Hutchinson, M. C. (2020). Resolving {Food-Web
-Structure}. \emph{Annual Review of Ecology, Evolution and Systematics},
-\emph{51}(Volume 51, 2020), 55--80.
-\url{https://doi.org/10.1146/annurev-ecolsys-110218-024908}
 
 \bibitem[\citeproctext]{ref-proulxNetworkThinkingEcology2005}
 Proulx, S. R., Promislow, D. E. L., \& Phillips, P. C. (2005). Network
