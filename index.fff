@@ -2,10 +2,25 @@
 
 \centering{
 
-\includegraphics{images/concept_v2.png}
+\includegraphics{images/representations.png}
 
 }
 
-\caption{\label{fig-process}TODO.}
+\caption{\label{fig-process}Aligning the various processes that
+determine interactions with the different network representations. First
+we start with a `global metaweb' this network which captures all
+possible interactions for an arbitrary collection of species, we can
+further refine this network by taking in to consideration the
+co-occurrence of these difference species - as shown here we have two
+regions with some species (blue) that are found in both regions and
+others endemic to either region one (pink) or region two (orange). These
+regional metawebs to capture all possible interactions, however it only
+considers species that co-occur. However even within a region we do not
+expect all interactions to be realised but rather that there are
+multiple configurations of the regional metaweb over both space and
+time. The `state' of the different network realisations are ultimately
+influenced not just by the co-occurrence of a species pair but rather
+the larger community context such as the abundance of different species,
+maximising energy gain, or indirect/higher order interactions.}
 
 \end{figure}
