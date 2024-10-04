@@ -212,7 +212,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-10-03}
+\date{2024-10-04}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -585,18 +585,22 @@ collection of interaction data is both costly and challenging to execute
 aspects of the processes discussed in Section~\ref{sec-process} (owing
 to the different time and spatial scales they may be operating at). Thus
 we often turn to models to either predict networks (be that the
-interaction between two species, or its structure (Strydom, Catchen, et
-al., 2021)), or as a means to identify missing interactions (gap fill)
-within an existing empirical dataset (Biton et al., 2024; Dallas et al.,
-2017; Stock, 2021), and so for the purpose of this discussion network
+interaction between two species, or its structure (Strydom et al.,
+2021)), or as a means to identify missing interactions (gap fill) within
+an existing empirical dataset (Biton et al., 2024; Dallas et al., 2017;
+Stock, 2021), and so for the purpose of this discussion network
 construction will be synonymous with using a model as a means to
 represent or predict a network. That is not to say that there is no need
 for empirical data collection but rather that using a model for food web
-prediction (or reconstruction) is a more feasible, with the added
-benefit that one is able to build some uncertainty into the resulting
-network (Banville et al., 2024). Additionally different models have
-different underlying philosophies that allow us to capture one or a few
-of the processes discussed in Section~\ref{sec-process}, which
+prediction (or reconstruction) is a more feasible approach as it allows
+us to make inferences about interactions that are not happening in the
+`observable now' (Strydom et al., 2021), with the added benefit that one
+is able to build some uncertainty into the resulting network (Banville
+et al., 2024), as well as explicitly designing models that allow us to
+isolate and understand how different processes determine interactions
+(Song \& Levine, 2024; Stouffer, 2019). Additionally different models
+have different underlying philosophies that allow us to capture one or a
+few of the processes discussed in Section~\ref{sec-process}, which
 ultimately delimits and defines what inferences can be made from the
 resulting network. Here we will introduce the three different types of
 network representations (metawebs, realised networks, and structural
@@ -608,8 +612,8 @@ showcase the utility/applicability of the different network
 representations in the context of trying to understand the feeding
 dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, breakable, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, titlerule=0mm, colback=white, toptitle=1mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, arc=.35mm, leftrule=.75mm, toprule=.15mm, left=2mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, toptitle=1mm, coltitle=black, opacitybacktitle=0.6, colback=white, opacityback=0, bottomtitle=1mm, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, titlerule=0mm, rightrule=.15mm, toprule=.15mm]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -761,33 +765,23 @@ There has been a suite of models that have been developed to predict
 trophic links, however we are lacking in tools that are explicitly
 taking into consideration estimating both the feasibility as well as
 realisation of links, \emph{i.e.,} both interactions and structure
-simultaneously (Strydom, Catchen, et al., 2021). This could be addressed
-either through the development of tools that do both (predict both
-interactions and structure), or to develop an ensemble modelling
-approach (Becker et al., 2022). Alternatively the development of tools
-that will allow for the downsampling of metawebs into realised networks
-(\emph{e.g.,} Roopnarine, 2006), although deciding exactly what is
-driving differences between local networks and the regional metaweb
-might not be that simple (Saravia et al., 2022). Probably also something
-that aligns with trying to predict interaction strength - because that
-would be the gold standard (\emph{e.g.,} Wells \& O'Hara, 2013).
-Probably also worth just plainly stating that feasibility of developing
-a model that is both broadly generalisable, but also has local
-specificity is probably not attainable (Stouffer, 2019), and more
-specifically the potential use of models to untangle/identify the
-different processes that shape interaction networks (Song \& Levine,
-2024), \emph{e.g.,} Curtsdotter et al. (2019) showcase the use of models
-to disentangle the drivers of community function and Strydom, Dalla
-Riva, et al. (2021) who identified that networks are less complex than
-they could be, suggesting that there are constraints on network
-assembly. In addition to the more intentional development of models we
-also need to consider the validation of these models, there have been
-developments and discussions for assessing how well a model recovers
-pairwise interactions (Poisot, 2023; Strydom, Catchen, et al., 2021),
-although the rate of false-negatives that may be present in the testing
-data still present a challenge (Catchen et al., 2023), and we still lack
-clear strategies for benchmarking the ability of models to recover
-structure (Allesina et al., 2008).
+simultaneously (Strydom et al., 2021). This could be addressed either
+through the development of tools that do both (predict both interactions
+and structure), or to develop an ensemble modelling approach (Becker et
+al., 2022). Alternatively the development of tools that will allow for
+the downsampling of metawebs into realised networks (\emph{e.g.,}
+Roopnarine, 2006), although deciding exactly what is driving differences
+between local networks and the regional metaweb might not be that simple
+(Saravia et al., 2022). Probably also something that aligns with trying
+to predict interaction strength - because that would be the gold
+standard (\emph{e.g.,} Wells \& O'Hara, 2013). In addition to the more
+intentional development of models we also need to consider the
+validation of these models, there have been developments and discussions
+for assessing how well a model recovers pairwise interactions (Poisot,
+2023; Strydom et al., 2021), although the rate of false-negatives that
+may be present in the testing data still present a challenge (Catchen et
+al., 2023), and we still lack clear strategies for benchmarking the
+ability of models to recover structure (Allesina et al., 2008).
 
 \subsection{At what scale should we be predicting and using
 networks?}\label{at-what-scale-should-we-be-predicting-and-using-networks}
@@ -854,12 +848,62 @@ see Delmas et al., 2019) that has stifled the `productive use' of
 networks beyond inventorying the interactions between species. Although,
 progress with using networks as a means to address questions within
 larger bodies of ecological theory \emph{e.g.,} invasion biology (Hui \&
-Richardson, 2019) and co-existence theory (García-Callejas et al., 2023)
-we still need to have a discussion on what the appropriate network
-configuration for the task at hand would be. This is highlighted in Box
-1, and underscores that we need to evaluate exactly what process a
-specific network representation captures as well as its suitability for
-the question of interest.
+Richardson, 2019) and co-existence theory (García-Callejas et al.,
+2023), has been made we still need to have a discussion on what the
+appropriate network representation for the task at hand would be. This
+is highlighted in Box 1, and underscores that we need to evaluate
+exactly what process a specific network representation captures as well
+as its suitability for the question of interest.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1528}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4028}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4444}}@{}}
+\caption{An informative table}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Question (broad)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Question (specific)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Network representation
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Question (broad)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Question (specific)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Network representation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Species invasions & What species will the invading species interact
+with? & Regional metaweb but need to derive information from a global
+metaweb since these are interactions that are `novel' \\
+Species invasions & How does the invading species alter network dynamics
+and function? & Realised network (after having moved through the global
+metaweb to understand which interactions are feasible \\
+Range shifts and novel communities & Under global change how will novel
+community assemblages interact? & Global metaweb, need context of
+broader community \\
+Extinctions & Cascading effect of the loss of a species from the network
+& Regional metaweb - need to account for entire diet, a realised network
+will exclude the entire diet but will allow to elucidate the final
+structure \\
+Species/community persistence & Dynamics over time.
+Stability/resilience. How does a change in pop \emph{A} affect pop
+\emph{B}? & Realised networks - but dynamic! \\
+Synthetic networks & Creating ecologically plausible communities for
+synthetic analyses & Structural networks - data light! \\
+Practical use & What is both attainable (data constraints) but also of
+practical use to `real world' decision making. So moving from theory to
+applied & ??Regional metawebs?? \\
+\end{longtable}
 
 \begin{quote}
 The Terry \& Lewis (2020) paper looks at some methods but is
@@ -1349,12 +1393,6 @@ towards predicting species interaction networks (across space and time).
 \emph{Philosophical Transactions of the Royal Society B: Biological
 Sciences}, \emph{376}(1837), 20210063.
 \url{https://doi.org/10.1098/rstb.2021.0063}
-
-\bibitem[\citeproctext]{ref-strydomSVDEntropyReveals2021}
-Strydom, T., Dalla Riva, G. V., \& Poisot, T. (2021). {SVD Entropy
-Reveals} the {High Complexity} of {Ecological Networks}. \emph{Frontiers
-in Ecology and Evolution}, \emph{9}.
-\url{https://doi.org/10.3389/fevo.2021.623141}
 
 \bibitem[\citeproctext]{ref-terryFindingMissingLinks2020}
 Terry, J. C. D., \& Lewis, O. T. (2020). Finding missing links in

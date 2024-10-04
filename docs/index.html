@@ -10,7 +10,7 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-10-03">
+<meta name="dcterms.date" content="2024-10-04">
 <meta name="keywords" content="food web, network construction, scientific ignorance">
 
 <title>Unveiling the Complexity of Food Webs: A Comprehensive Overview of Definitions, Scales, and Mechanisms</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-10-03">
-<meta name="citation_cover_date" content="2024-10-03">
+<meta name="citation_publication_date" content="2024-10-04">
+<meta name="citation_cover_date" content="2024-10-04">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-10-03">
+<meta name="citation_online_date" content="2024-10-04">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="TREE (one can dream...)">
 <meta name="citation_reference" content="citation_title=A novel method for predicting ecological interactions with an unsupervised machine learning algorithm;,citation_abstract=This gap in knowledge regarding ecological interactions has prompted the development of various predictive approaches. Traditionally, ecological interactions have been inferred using traits. However, the lack of trait information for numerous organisms necessitates using phylogenetic data and statistical insights from interaction matrices for prediction. Previous studies have overlooked the validation of model-predicted interactions. This study used a novel method in predicting ecological interactions using a self-organizing map (SOM), an unsupervised machine learning algorithm. The SOM learns from the input interaction matrix by grouping the nodes into output layers based on their interactions. Subsequently, the trained model predicts the interactions as scores. To distinguish between interactions and non-interactions, we employed F1 score maximization, setting scores above a specific threshold as interactions and the remainder as non-interactions. We applied this method to three unipartite metawebs and one bipartite metaweb and subsequently validated the predicted interactions using two innovative approaches: taxonomic and interaction recovery validation. Our method exhibited outstanding predictive performance, particularly for large networks. Various binary classification performance indicators, including F1 score (0.84–0.97) and accuracy (0.97–0.99), indicated high performance. Moreover, the method generated minimal predicted interactions, signifying low noise in the predictions, particularly for large networks. Taxonomic validation excels in metawebs with a connectance &amp;amp;amp;gt;0.1 but performs poorly in metawebs with very low connectance. In contrast, interaction recovery was most effective in larger metawebs. Our proposed method excels at making highly accurate predictions of ecological interactions with minimal noise, solely utilizing input interaction data without relying on traits or phylogenetic information regarding interacting nodes. These predictions are particularly precise for large networks, underscoring their potential to address knowledge gaps in emerging extensive metawebs. Notably, taxonomic validation and interaction recovery methods are sensitive to connectance and network size, respectively, suggesting prospects for developing robust interaction validation methods.;,citation_author=Sagar Adhurya;,citation_author=Young-Seuk Park;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=n/a;,citation_doi=10.1111/2041-210X.14358;,citation_issn=2041-210X;,citation_volume=n/a;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
@@ -350,7 +350,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">October 3, 2024</p>
+              <p class="date">October 4, 2024</p>
             </div>
           </div>
           
@@ -472,7 +472,7 @@ Figure&nbsp;1: Aligning the various processes that determine interactions with t
 </section>
 <section id="network-construction-is-nuanced" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Network construction is nuanced</h1>
-<p>The act of constructing a ‘real world’ network will ultimately be delimited by its intended use, however the reality is that the empirical collection of interaction data is both costly and challenging to execute <span class="citation" data-cites="jordanoChasingEcologicalInteractions2016 jordanoSamplingNetworksEcological2016">(<a href="#ref-jordanoChasingEcologicalInteractions2016" role="doc-biblioref">Jordano 2016a</a>, <a href="#ref-jordanoSamplingNetworksEcological2016" role="doc-biblioref">2016b</a>)</span>, especially if one wants to capture <em>all</em> aspects of the processes discussed in <a href="#sec-process" class="quarto-xref">Section&nbsp;2</a> (owing to the different time and spatial scales they may be operating at). Thus we often turn to models to either predict networks (be that the interaction between two species, or its structure <span class="citation" data-cites="strydomRoadmapPredictingSpecies2021">(<a href="#ref-strydomRoadmapPredictingSpecies2021" role="doc-biblioref">Strydom et al. 2021</a>)</span>), or as a means to identify missing interactions (gap fill) within an existing empirical dataset <span class="citation" data-cites="bitonInductiveLinkPrediction2024 stockPairwiseLearningPredicting2021 dallasPredictingCrypticLinks2017">(<a href="#ref-bitonInductiveLinkPrediction2024" role="doc-biblioref">Biton, Puzis, and Pilosof 2024</a>; <a href="#ref-stockPairwiseLearningPredicting2021" role="doc-biblioref">Stock 2021</a>; <a href="#ref-dallasPredictingCrypticLinks2017" role="doc-biblioref">Dallas, Park, and Drake 2017</a>)</span>, and so for the purpose of this discussion network construction will be synonymous with using a model as a means to represent or predict a network. That is not to say that there is no need for empirical data collection but rather that using a model for food web prediction (or reconstruction) is a more feasible, with the added benefit that one is able to build some uncertainty into the resulting network <span class="citation" data-cites="banvilleDecipheringProbabilisticSpecies2024">(<a href="#ref-banvilleDecipheringProbabilisticSpecies2024" role="doc-biblioref">Banville et al. 2024</a>)</span>. Additionally different models have different underlying philosophies that allow us to capture one or a few of the processes discussed in <a href="#sec-process" class="quarto-xref">Section&nbsp;2</a>, which ultimately delimits and defines what inferences can be made from the resulting network. Here we will introduce the three different types of network representations (metawebs, realised networks, and structural networks), how they link back to the different processes determining interactions <a href="#fig-process" class="quarto-xref">Figure&nbsp;1</a>, and broadly discuss some of the modelling approaches that are used to construct these different network types. This is paralleled by a hypothetical case study (Box 1) where we showcase the utility/applicability of the different network representations in the context of trying to understand the feeding dynamics of a seasonal community.</p>
+<p>The act of constructing a ‘real world’ network will ultimately be delimited by its intended use, however the reality is that the empirical collection of interaction data is both costly and challenging to execute <span class="citation" data-cites="jordanoChasingEcologicalInteractions2016 jordanoSamplingNetworksEcological2016">(<a href="#ref-jordanoChasingEcologicalInteractions2016" role="doc-biblioref">Jordano 2016a</a>, <a href="#ref-jordanoSamplingNetworksEcological2016" role="doc-biblioref">2016b</a>)</span>, especially if one wants to capture <em>all</em> aspects of the processes discussed in <a href="#sec-process" class="quarto-xref">Section&nbsp;2</a> (owing to the different time and spatial scales they may be operating at). Thus we often turn to models to either predict networks (be that the interaction between two species, or its structure <span class="citation" data-cites="strydomRoadmapPredictingSpecies2021">(<a href="#ref-strydomRoadmapPredictingSpecies2021" role="doc-biblioref">Strydom et al. 2021</a>)</span>), or as a means to identify missing interactions (gap fill) within an existing empirical dataset <span class="citation" data-cites="bitonInductiveLinkPrediction2024 stockPairwiseLearningPredicting2021 dallasPredictingCrypticLinks2017">(<a href="#ref-bitonInductiveLinkPrediction2024" role="doc-biblioref">Biton, Puzis, and Pilosof 2024</a>; <a href="#ref-stockPairwiseLearningPredicting2021" role="doc-biblioref">Stock 2021</a>; <a href="#ref-dallasPredictingCrypticLinks2017" role="doc-biblioref">Dallas, Park, and Drake 2017</a>)</span>, and so for the purpose of this discussion network construction will be synonymous with using a model as a means to represent or predict a network. That is not to say that there is no need for empirical data collection but rather that using a model for food web prediction (or reconstruction) is a more feasible approach as it allows us to make inferences about interactions that are not happening in the ‘observable now’ <span class="citation" data-cites="strydomRoadmapPredictingSpecies2021">(<a href="#ref-strydomRoadmapPredictingSpecies2021" role="doc-biblioref">Strydom et al. 2021</a>)</span>, with the added benefit that one is able to build some uncertainty into the resulting network <span class="citation" data-cites="banvilleDecipheringProbabilisticSpecies2024">(<a href="#ref-banvilleDecipheringProbabilisticSpecies2024" role="doc-biblioref">Banville et al. 2024</a>)</span>, as well as explicitly designing models that allow us to isolate and understand how different processes determine interactions <span class="citation" data-cites="stoufferAllEcologicalModels2019 songRigorousValidationEcological2024">(<a href="#ref-stoufferAllEcologicalModels2019" role="doc-biblioref">Stouffer 2019</a>; <a href="#ref-songRigorousValidationEcological2024" role="doc-biblioref">Song and Levine 2024</a>)</span>. Additionally different models have different underlying philosophies that allow us to capture one or a few of the processes discussed in <a href="#sec-process" class="quarto-xref">Section&nbsp;2</a>, which ultimately delimits and defines what inferences can be made from the resulting network. Here we will introduce the three different types of network representations (metawebs, realised networks, and structural networks), how they link back to the different processes determining interactions <a href="#fig-process" class="quarto-xref">Figure&nbsp;1</a>, and broadly discuss some of the modelling approaches that are used to construct these different network types. This is paralleled by a hypothetical case study (Box 1) where we showcase the utility/applicability of the different network representations in the context of trying to understand the feeding dynamics of a seasonal community.</p>
 <div id="box-hypothetical" class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -512,7 +512,7 @@ Box 1 - Why we need to aggregate networks at different scales: A hypothetical ca
 <h1 data-number="4"><span class="header-section-number">4</span> Making Progress with Networks</h1>
 <section id="further-development-of-models-and-tools" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="further-development-of-models-and-tools"><span class="header-section-number">4.1</span> Further development of models and tools</h2>
-<p>There has been a suite of models that have been developed to predict trophic links, however we are lacking in tools that are explicitly taking into consideration estimating both the feasibility as well as realisation of links, <em>i.e.,</em> both interactions and structure simultaneously <span class="citation" data-cites="strydomRoadmapPredictingSpecies2021">(<a href="#ref-strydomRoadmapPredictingSpecies2021" role="doc-biblioref">Strydom et al. 2021</a>)</span>. This could be addressed either through the development of tools that do both (predict both interactions and structure), or to develop an ensemble modelling approach <span class="citation" data-cites="beckerOptimisingPredictiveModels2022">(<a href="#ref-beckerOptimisingPredictiveModels2022" role="doc-biblioref">Becker et al. 2022</a>)</span>. Alternatively the development of tools that will allow for the downsampling of metawebs into realised networks <span class="citation" data-cites="roopnarineExtinctionCascadesCatastrophe2006">(<em>e.g.,</em> <a href="#ref-roopnarineExtinctionCascadesCatastrophe2006" role="doc-biblioref">Roopnarine 2006</a>)</span>, although deciding exactly what is driving differences between local networks and the regional metaweb might not be that simple <span class="citation" data-cites="saraviaEcologicalNetworkAssembly2022">(<a href="#ref-saraviaEcologicalNetworkAssembly2022" role="doc-biblioref">Saravia et al. 2022</a>)</span>. Probably also something that aligns with trying to predict interaction strength - because that would be the gold standard <span class="citation" data-cites="wellsSpeciesInteractionsEstimating2013">(<em>e.g.,</em> <a href="#ref-wellsSpeciesInteractionsEstimating2013" role="doc-biblioref">Wells and O’Hara 2013</a>)</span>. Probably also worth just plainly stating that feasibility of developing a model that is both broadly generalisable, but also has local specificity is probably not attainable <span class="citation" data-cites="stoufferAllEcologicalModels2019">(<a href="#ref-stoufferAllEcologicalModels2019" role="doc-biblioref">Stouffer 2019</a>)</span>, and more specifically the potential use of models to untangle/identify the different processes that shape interaction networks <span class="citation" data-cites="songRigorousValidationEcological2024">(<a href="#ref-songRigorousValidationEcological2024" role="doc-biblioref">Song and Levine 2024</a>)</span>, <em>e.g.,</em> <span class="citation" data-cites="curtsdotterEcosystemFunctionPredator2019">Curtsdotter et al. (<a href="#ref-curtsdotterEcosystemFunctionPredator2019" role="doc-biblioref">2019</a>)</span> showcase the use of models to disentangle the drivers of community function and <span class="citation" data-cites="strydomSVDEntropyReveals2021">Strydom, Dalla Riva, and Poisot (<a href="#ref-strydomSVDEntropyReveals2021" role="doc-biblioref">2021</a>)</span> who identified that networks are less complex than they could be, suggesting that there are constraints on network assembly. In addition to the more intentional development of models we also need to consider the validation of these models, there have been developments and discussions for assessing how well a model recovers pairwise interactions <span class="citation" data-cites="strydomRoadmapPredictingSpecies2021 poisotGuidelinesPredictionSpecies2023">(<a href="#ref-strydomRoadmapPredictingSpecies2021" role="doc-biblioref">Strydom et al. 2021</a>; <a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">Poisot 2023</a>)</span>, although the rate of false-negatives that may be present in the testing data still present a challenge <span class="citation" data-cites="catchenMissingLinkDiscerning2023">(<a href="#ref-catchenMissingLinkDiscerning2023" role="doc-biblioref">Catchen et al. 2023</a>)</span>, and we still lack clear strategies for benchmarking the ability of models to recover structure <span class="citation" data-cites="allesinaGeneralModelFood2008">(<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">Allesina, Alonso, and Pascual 2008</a>)</span>.</p>
+<p>There has been a suite of models that have been developed to predict trophic links, however we are lacking in tools that are explicitly taking into consideration estimating both the feasibility as well as realisation of links, <em>i.e.,</em> both interactions and structure simultaneously <span class="citation" data-cites="strydomRoadmapPredictingSpecies2021">(<a href="#ref-strydomRoadmapPredictingSpecies2021" role="doc-biblioref">Strydom et al. 2021</a>)</span>. This could be addressed either through the development of tools that do both (predict both interactions and structure), or to develop an ensemble modelling approach <span class="citation" data-cites="beckerOptimisingPredictiveModels2022">(<a href="#ref-beckerOptimisingPredictiveModels2022" role="doc-biblioref">Becker et al. 2022</a>)</span>. Alternatively the development of tools that will allow for the downsampling of metawebs into realised networks <span class="citation" data-cites="roopnarineExtinctionCascadesCatastrophe2006">(<em>e.g.,</em> <a href="#ref-roopnarineExtinctionCascadesCatastrophe2006" role="doc-biblioref">Roopnarine 2006</a>)</span>, although deciding exactly what is driving differences between local networks and the regional metaweb might not be that simple <span class="citation" data-cites="saraviaEcologicalNetworkAssembly2022">(<a href="#ref-saraviaEcologicalNetworkAssembly2022" role="doc-biblioref">Saravia et al. 2022</a>)</span>. Probably also something that aligns with trying to predict interaction strength - because that would be the gold standard <span class="citation" data-cites="wellsSpeciesInteractionsEstimating2013">(<em>e.g.,</em> <a href="#ref-wellsSpeciesInteractionsEstimating2013" role="doc-biblioref">Wells and O’Hara 2013</a>)</span>. In addition to the more intentional development of models we also need to consider the validation of these models, there have been developments and discussions for assessing how well a model recovers pairwise interactions <span class="citation" data-cites="strydomRoadmapPredictingSpecies2021 poisotGuidelinesPredictionSpecies2023">(<a href="#ref-strydomRoadmapPredictingSpecies2021" role="doc-biblioref">Strydom et al. 2021</a>; <a href="#ref-poisotGuidelinesPredictionSpecies2023" role="doc-biblioref">Poisot 2023</a>)</span>, although the rate of false-negatives that may be present in the testing data still present a challenge <span class="citation" data-cites="catchenMissingLinkDiscerning2023">(<a href="#ref-catchenMissingLinkDiscerning2023" role="doc-biblioref">Catchen et al. 2023</a>)</span>, and we still lack clear strategies for benchmarking the ability of models to recover structure <span class="citation" data-cites="allesinaGeneralModelFood2008">(<a href="#ref-allesinaGeneralModelFood2008" role="doc-biblioref">Allesina, Alonso, and Pascual 2008</a>)</span>.</p>
 </section>
 <section id="at-what-scale-should-we-be-predicting-and-using-networks" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="at-what-scale-should-we-be-predicting-and-using-networks"><span class="header-section-number">4.2</span> At what scale should we be predicting and using networks?</h2>
@@ -529,7 +529,59 @@ Box 1 - Why we need to aggregate networks at different scales: A hypothetical ca
 <blockquote class="blockquote">
 <p>developing a dictionary of use… that helps navigate between the levels and assumptions</p>
 </blockquote>
-<p>It should be clear that there is a high degree of interrelatedness and overlap between the way a network is constructed (modelled or predicted) and the process(es) it captures, these are encoded (embedded) within the network representation and ultimately influences how the network can and should be used <span class="citation" data-cites="petcheyFitEfficiencyBiology2011 berlowGoldilocksFactorFood2008">(<a href="#ref-petcheyFitEfficiencyBiology2011" role="doc-biblioref">Petchey et al. 2011</a>; <a href="#ref-berlowGoldilocksFactorFood2008" role="doc-biblioref">Berlow, Brose, and Martinez 2008</a>)</span>. It is probably both this nuance as well as a lack of clear boundaries and guidelines as to the links between network form and function <span class="citation" data-cites="delmasAnalysingEcologicalNetworks2019">(although see <a href="#ref-delmasAnalysingEcologicalNetworks2019" role="doc-biblioref">Delmas et al. 2019</a>)</span> that has stifled the ‘productive use’ of networks beyond inventorying the interactions between species. Although, progress with using networks as a means to address questions within larger bodies of ecological theory <em>e.g.,</em> invasion biology <span class="citation" data-cites="huiHowInvadeEcological2019">(<a href="#ref-huiHowInvadeEcological2019" role="doc-biblioref">Hui and Richardson 2019</a>)</span> and co-existence theory <span class="citation" data-cites="garcia-callejasNonrandomInteractionsGuilds2023">(<a href="#ref-garcia-callejasNonrandomInteractionsGuilds2023" role="doc-biblioref">García-Callejas et al. 2023</a>)</span> we still need to have a discussion on what the appropriate network configuration for the task at hand would be. This is highlighted in Box 1, and underscores that we need to evaluate exactly what process a specific network representation captures as well as its suitability for the question of interest.</p>
+<p>It should be clear that there is a high degree of interrelatedness and overlap between the way a network is constructed (modelled or predicted) and the process(es) it captures, these are encoded (embedded) within the network representation and ultimately influences how the network can and should be used <span class="citation" data-cites="petcheyFitEfficiencyBiology2011 berlowGoldilocksFactorFood2008">(<a href="#ref-petcheyFitEfficiencyBiology2011" role="doc-biblioref">Petchey et al. 2011</a>; <a href="#ref-berlowGoldilocksFactorFood2008" role="doc-biblioref">Berlow, Brose, and Martinez 2008</a>)</span>. It is probably both this nuance as well as a lack of clear boundaries and guidelines as to the links between network form and function <span class="citation" data-cites="delmasAnalysingEcologicalNetworks2019">(although see <a href="#ref-delmasAnalysingEcologicalNetworks2019" role="doc-biblioref">Delmas et al. 2019</a>)</span> that has stifled the ‘productive use’ of networks beyond inventorying the interactions between species. Although, progress with using networks as a means to address questions within larger bodies of ecological theory <em>e.g.,</em> invasion biology <span class="citation" data-cites="huiHowInvadeEcological2019">(<a href="#ref-huiHowInvadeEcological2019" role="doc-biblioref">Hui and Richardson 2019</a>)</span> and co-existence theory <span class="citation" data-cites="garcia-callejasNonrandomInteractionsGuilds2023">(<a href="#ref-garcia-callejasNonrandomInteractionsGuilds2023" role="doc-biblioref">García-Callejas et al. 2023</a>)</span>, has been made we still need to have a discussion on what the appropriate network representation for the task at hand would be. This is highlighted in Box 1, and underscores that we need to evaluate exactly what process a specific network representation captures as well as its suitability for the question of interest.</p>
+<table class="table">
+<caption>An informative table</caption>
+<colgroup>
+<col style="width: 15%">
+<col style="width: 40%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question (broad)</th>
+<th>Question (specific)</th>
+<th>Network representation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Species invasions</td>
+<td>What species will the invading species interact with?</td>
+<td>Regional metaweb but need to derive information from a global metaweb since these are interactions that are ‘novel’</td>
+</tr>
+<tr class="even">
+<td>Species invasions</td>
+<td>How does the invading species alter network dynamics and function?</td>
+<td>Realised network (after having moved through the global metaweb to understand which interactions are feasible</td>
+</tr>
+<tr class="odd">
+<td>Range shifts and novel communities</td>
+<td>Under global change how will novel community assemblages interact?</td>
+<td>Global metaweb, need context of broader community</td>
+</tr>
+<tr class="even">
+<td>Extinctions</td>
+<td>Cascading effect of the loss of a species from the network</td>
+<td>Regional metaweb - need to account for entire diet, a realised network will exclude the entire diet but will allow to elucidate the final structure</td>
+</tr>
+<tr class="odd">
+<td>Species/community persistence</td>
+<td>Dynamics over time. Stability/resilience. How does a change in pop <em>A</em> affect pop <em>B</em>?</td>
+<td>Realised networks - but dynamic!</td>
+</tr>
+<tr class="even">
+<td>Synthetic networks</td>
+<td>Creating ecologically plausible communities for synthetic analyses</td>
+<td>Structural networks - data light!</td>
+</tr>
+<tr class="odd">
+<td>Practical use</td>
+<td>What is both attainable (data constraints) but also of practical use to ‘real world’ decision making. So moving from theory to applied</td>
+<td>??Regional metawebs??</td>
+</tr>
+</tbody>
+</table>
 <blockquote class="blockquote">
 <p>The <span class="citation" data-cites="terryFindingMissingLinks2020">Terry and Lewis (<a href="#ref-terryFindingMissingLinks2020" role="doc-biblioref">2020</a>)</span> paper looks at some methods but is specifically looking at a bipartite world…</p>
 </blockquote>
@@ -771,9 +823,6 @@ Strydom, Tanya, Salomé Bouskila, Francis Banville, Ceres Barros, Dominique Caro
 <div id="ref-strydomRoadmapPredictingSpecies2021" class="csl-entry" role="listitem">
 Strydom, Tanya, Michael D. Catchen, Francis Banville, Dominique Caron, Gabriel Dansereau, Philippe Desjardins-Proulx, Norma R. Forero-Muñoz, et al. 2021. <span>“A Roadmap Towards Predicting Species Interaction Networks (Across Space and Time).”</span> <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em> 376 (1837): 20210063. <a href="https://doi.org/10.1098/rstb.2021.0063">https://doi.org/10.1098/rstb.2021.0063</a>.
 </div>
-<div id="ref-strydomSVDEntropyReveals2021" class="csl-entry" role="listitem">
-Strydom, Tanya, Giulio V. Dalla Riva, and Timothée Poisot. 2021. <span>“<span>SVD Entropy Reveals</span> the <span>High Complexity</span> of <span>Ecological Networks</span>.”</span> <em>Frontiers in Ecology and Evolution</em> 9. <a href="https://doi.org/10.3389/fevo.2021.623141">https://doi.org/10.3389/fevo.2021.623141</a>.
-</div>
 <div id="ref-terryFindingMissingLinks2020" class="csl-entry" role="listitem">
 Terry, J. Christopher D., and Owen T. Lewis. 2020. <span>“Finding Missing Links in Interaction Networks.”</span> <em>Ecology</em> 101 (7): e03047. <a href="https://doi.org/10.1002/ecy.3047">https://doi.org/10.1002/ecy.3047</a>.
 </div>
@@ -819,7 +868,7 @@ Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consum
   title = {Unveiling the {Complexity} of {Food} {Webs:} {A}
     {Comprehensive} {Overview} of {Definitions,} {Scales,} and
     {Mechanisms}},
-  date = {2024-10-03},
+  date = {2024-10-04},
   langid = {en},
   abstract = {Food webs are a useful abstraction and representation of
     the feeding links between species in a community and are used to
@@ -841,7 +890,7 @@ Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consum
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
 Beckerman. 2024. <span>“Unveiling the Complexity of Food Webs: A
 Comprehensive Overview of Definitions, Scales, and Mechanisms.”</span>
-TREE (One Can Dream...). October 3, 2024.
+TREE (One Can Dream...). October 4, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1232,7 +1281,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
