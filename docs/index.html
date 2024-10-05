@@ -62,12 +62,6 @@ div.csl-indent {
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<script async="" src="https://hypothes.is/embed.js"></script>
-<script>
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    document.body.classList.add('hypothesis-enabled');
-  });
-</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -448,7 +442,7 @@ window.Quarto = {
 <div id="fig-process" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/representations.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/representations.png" class="img-fluid figure-img"></a>
+<a href="images/representations.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/representations.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Aligning the various processes that determine interactions with the different network representations. First we start with a ‘global metaweb’ this network which captures all possible interactions for an arbitrary collection of species, we can further refine this network by taking in to consideration the co-occurrence of these difference species - as shown here we have two regions with some species (blue) that are found in both regions and others endemic to either region one (pink) or region two (orange). These regional metawebs to capture all possible interactions, however it only considers species that co-occur. However even within a region we do not expect all interactions to be realised but rather that there are multiple configurations of the regional metaweb over both space and time. The ‘state’ of the different network realisations are ultimately influenced not just by the co-occurrence of a species pair but rather the larger community context such as the abundance of different species, maximising energy gain, or indirect/higher order interactions.
@@ -1285,7 +1279,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
