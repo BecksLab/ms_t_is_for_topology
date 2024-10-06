@@ -24,3 +24,18 @@ the larger community context such as the abundance of different species,
 maximising energy gain, or indirect/higher order interactions.}
 
 \end{figure}
+\efloatseparator
+ 
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/future_use.png}
+
+}
+
+\caption{\label{fig-future}Aa attempt to try and visualise a way to map
+the different scales of network representations to the way in which we
+can interrogate/ask questions about them?}
+
+\end{figure}

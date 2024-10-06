@@ -10,7 +10,7 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-10-05">
+<meta name="dcterms.date" content="2024-10-06">
 <meta name="keywords" content="food web, network construction, scientific ignorance">
 
 <title>Unveiling the Complexity of Food Webs: A Comprehensive Overview of Definitions, Scales, and Mechanisms</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-10-05">
-<meta name="citation_cover_date" content="2024-10-05">
+<meta name="citation_publication_date" content="2024-10-06">
+<meta name="citation_cover_date" content="2024-10-06">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-10-05">
+<meta name="citation_online_date" content="2024-10-06">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="TREE (one can dream...)">
 <meta name="citation_reference" content="citation_title=A novel method for predicting ecological interactions with an unsupervised machine learning algorithm;,citation_abstract=This gap in knowledge regarding ecological interactions has prompted the development of various predictive approaches. Traditionally, ecological interactions have been inferred using traits. However, the lack of trait information for numerous organisms necessitates using phylogenetic data and statistical insights from interaction matrices for prediction. Previous studies have overlooked the validation of model-predicted interactions. This study used a novel method in predicting ecological interactions using a self-organizing map (SOM), an unsupervised machine learning algorithm. The SOM learns from the input interaction matrix by grouping the nodes into output layers based on their interactions. Subsequently, the trained model predicts the interactions as scores. To distinguish between interactions and non-interactions, we employed F1 score maximization, setting scores above a specific threshold as interactions and the remainder as non-interactions. We applied this method to three unipartite metawebs and one bipartite metaweb and subsequently validated the predicted interactions using two innovative approaches: taxonomic and interaction recovery validation. Our method exhibited outstanding predictive performance, particularly for large networks. Various binary classification performance indicators, including F1 score (0.84–0.97) and accuracy (0.97–0.99), indicated high performance. Moreover, the method generated minimal predicted interactions, signifying low noise in the predictions, particularly for large networks. Taxonomic validation excels in metawebs with a connectance &amp;amp;amp;gt;0.1 but performs poorly in metawebs with very low connectance. In contrast, interaction recovery was most effective in larger metawebs. Our proposed method excels at making highly accurate predictions of ecological interactions with minimal noise, solely utilizing input interaction data without relying on traits or phylogenetic information regarding interacting nodes. These predictions are particularly precise for large networks, underscoring their potential to address knowledge gaps in emerging extensive metawebs. Notably, taxonomic validation and interaction recovery methods are sensitive to connectance and network size, respectively, suggesting prospects for developing robust interaction validation methods.;,citation_author=Sagar Adhurya;,citation_author=Young-Seuk Park;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=n/a;,citation_doi=10.1111/2041-210X.14358;,citation_issn=2041-210X;,citation_volume=n/a;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
@@ -354,7 +354,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">October 5, 2024</p>
+              <p class="date">October 6, 2024</p>
             </div>
           </div>
           
@@ -448,7 +448,7 @@ window.Quarto = {
 <div id="fig-process" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/representations.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="images/representations.png" class="img-fluid figure-img"></a>
+<a href="images/representations.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="images/representations.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Aligning the various processes that determine interactions with the different network representations. First we start with a ‘global metaweb’ this network which captures all possible interactions for an arbitrary collection of species, we can further refine this network by taking in to consideration the co-occurrence of these difference species - as shown here we have two regions with some species (blue) that are found in both regions and others endemic to either region one (pink) or region two (orange). These regional metawebs to capture all possible interactions, however it only considers species that co-occur. However even within a region we do not expect all interactions to be realised but rather that there are multiple configurations of the regional metaweb over both space and time. The ‘state’ of the different network realisations are ultimately influenced not just by the co-occurrence of a species pair but rather the larger community context such as the abundance of different species, maximising energy gain, or indirect/higher order interactions.
@@ -528,6 +528,16 @@ Box 1 - Why we need to aggregate networks at different scales: A hypothetical ca
 <p>developing a dictionary of use… that helps navigate between the levels and assumptions</p>
 </blockquote>
 <p>It should be clear that there is a high degree of interrelatedness and overlap between the way a network is constructed (modelled or predicted) and the process(es) it captures, these are encoded (embedded) within the network representation and ultimately influences how the network can and should be used <span class="citation" data-cites="petcheyFitEfficiencyBiology2011 berlowGoldilocksFactorFood2008">(<a href="#ref-petcheyFitEfficiencyBiology2011" role="doc-biblioref">Petchey et al. 2011</a>; <a href="#ref-berlowGoldilocksFactorFood2008" role="doc-biblioref">Berlow, Brose, and Martinez 2008</a>)</span>. It is probably both this nuance as well as a lack of clear boundaries and guidelines as to the links between network form and function <span class="citation" data-cites="delmasAnalysingEcologicalNetworks2019">(although see <a href="#ref-delmasAnalysingEcologicalNetworks2019" role="doc-biblioref">Delmas et al. 2019</a>)</span> that has stifled the ‘productive use’ of networks beyond inventorying the interactions between species. Although, progress with using networks as a means to address questions within larger bodies of ecological theory <em>e.g.,</em> invasion biology <span class="citation" data-cites="huiHowInvadeEcological2019">(<a href="#ref-huiHowInvadeEcological2019" role="doc-biblioref">Hui and Richardson 2019</a>)</span> and co-existence theory <span class="citation" data-cites="garcia-callejasNonrandomInteractionsGuilds2023">(<a href="#ref-garcia-callejasNonrandomInteractionsGuilds2023" role="doc-biblioref">García-Callejas et al. 2023</a>)</span>, has been made we still need to have a discussion on what the appropriate network representation for the task at hand would be. This is highlighted in Box 1, and underscores that we need to evaluate exactly what process a specific network representation captures as well as its suitability for the question of interest.</p>
+<div id="fig-future" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-future-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/future_use.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="images/future_use.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-future-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Aa attempt to try and visualise a way to map the different scales of network representations to the way in which we can interrogate/ask questions about them?
+</figcaption>
+</figure>
+</div>
 <table class="table">
 <caption>An informative table</caption>
 <colgroup>
@@ -863,6 +873,7 @@ Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consum
 </div>
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Aligning the various processes that determine interactions with the different network representations. First we start with a ‘global metaweb’ this network which captures all possible interactions for an arbitrary collection of species, we can further refine this network by taking in to consideration the co-occurrence of these difference species - as shown here we have two regions with some species (blue) that are found in both regions and others endemic to either region one (pink) or region two (orange). These regional metawebs to capture all possible interactions, however it only considers species that co-occur. However even within a region we do not expect all interactions to be realised but rather that there are multiple configurations of the regional metaweb over both space and time. The ‘state’ of the different network realisations are ultimately influenced not just by the co-occurrence of a species pair but rather the larger community context such as the abundance of different species, maximising energy gain, or indirect/higher order interactions.</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Aa attempt to try and visualise a way to map the different scales of network representations to the way in which we can interrogate/ask questions about them?</span>
 </div>
 </section>
 
@@ -872,7 +883,7 @@ Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consum
   title = {Unveiling the {Complexity} of {Food} {Webs:} {A}
     {Comprehensive} {Overview} of {Definitions,} {Scales,} and
     {Mechanisms}},
-  date = {2024-10-05},
+  date = {2024-10-06},
   langid = {en},
   abstract = {Food webs are a useful abstraction and representation of
     the feeding links between species in a community and are used to
@@ -894,7 +905,7 @@ Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consum
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
 Beckerman. 2024. <span>“Unveiling the Complexity of Food Webs: A
 Comprehensive Overview of Definitions, Scales, and Mechanisms.”</span>
-TREE (One Can Dream...). October 5, 2024.
+TREE (One Can Dream...). October 6, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1285,7 +1296,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
