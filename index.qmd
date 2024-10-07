@@ -162,7 +162,7 @@ Linking to dynamic networks and how this lets us build spatially/temporally expl
 
 ## How/why do species persist and/or co-exist?
 
-Specific sub points to consider here is persistence, especially persistence to perturbation. Again, dynamic networks and network/community assembly and finally extinctions.
+Specific sub points to consider here is persistence, especially persistence to perturbation. Again, dynamic networks and network/community assembly and finally extinctions [@dunhillExtinctionCascadesCommunity2024].
 
 ![An attempt to try and visualise a way to map the different scales of network representations to the way in which we can interrogate/ask questions about them?](images/NetworkFuture.png){#fig-future}
 
