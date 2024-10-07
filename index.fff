@@ -26,15 +26,28 @@ maximising energy gain, or indirect/higher order interactions.}
 \end{figure}
 \efloatseparator
  
+\begin{figure}[H]
+
+\centering{
+
+\captionsetup{labelsep=none}\includegraphics{images/Box1.png}
+
+}
+
+\caption{\label{fig-box}}
+
+\end{figure}
+\efloatseparator
+ 
 \begin{figure}
 
 \centering{
 
-\includegraphics{images/future_use.png}
+\includegraphics{images/NetworkFuture.png}
 
 }
 
-\caption{\label{fig-future}Aa attempt to try and visualise a way to map
+\caption{\label{fig-future}An attempt to try and visualise a way to map
 the different scales of network representations to the way in which we
 can interrogate/ask questions about them?}
 
