@@ -160,7 +160,7 @@ Here we can talk about the effects of range shifts and invasions and how this wi
 
 Linking to dynamic networks and how this lets us build spatially/temporally explicit networks which can be used to infer form and function. Also bring in the discussion on the suitable aggregation (and the fact that we don't know)
 
-## How/why do species persist and/or co-exist?
+## How do species persist/co-exist?
 
 Specific sub points to consider here is persistence, especially persistence to perturbation. Again, dynamic networks and network/community assembly and finally extinctions [@dunhillExtinctionCascadesCommunity2024].
 
