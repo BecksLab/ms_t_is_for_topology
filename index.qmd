@@ -116,7 +116,7 @@ The act of constructing a 'real world' network will ultimately be delimited by i
 ::: {#box-hypothetical .callout-note}
 # Box 1 - Why we need to aggregate networks at different scales: A hypothetical case study {.unnumbered}
 
-> not I am using a figure for layout purposes
+> note I am using a figure for layout experimentation purposes
 
 Although it might seem most prudent to be predicting, constructing, and defining networks that are the closest representation of reality there are pros and cons of constructing both realised networks as well as metawebs. Let us take for example a community that experiences a degree of species turnover between seasons. In this community we expect species to be either present or absent depending on the season (*i.e.,* changes in co-occurrence) as well as some species exhibiting seasonal shifts in their diets (be that due to changes in species occurrence or predator choice). If one were to construct a metaweb that disregards these season shifts ('global metaweb') these details would be lost and it would be valuable to construct either smaller metawebs for the different seasonal communities (thereby capturing the changes in community diversity), or realised networks for each season (to capture diet or ecosystem process shifts). However, these small-scale networks lack the context of the bigger picture that is available at the metaweb - that is it gives us a more holistic idea of the entire diet range of a specific species, which is important when one needs to make conservation-based/applied decisions (*e.g.,* conserving the entire diet of a species and not just seasonal prey items) as well as providing information on interactions that may be possible regardless of the environmental/community context (species may have the capacity to consume certain prey items but do not do so due to local conditions). With this is mind let us see how the different network aggregations can be used
 
@@ -151,6 +151,18 @@ We lack an understanding of which processes drive the differences between differ
 > developing a dictionary of use... that helps navigate between the levels and assumptions
 
 It should be clear that there is a high degree of interrelatedness and overlap between the way a network is constructed (modelled or predicted) and the process(es) it captures, these are encoded (embedded) within the network representation and ultimately influences how the network can and should be used [@petcheyFitEfficiencyBiology2011; @berlowGoldilocksFactorFood2008]. It is probably both this nuance as well as a lack of clear boundaries and guidelines as to the links between network form and function [although see @delmasAnalysingEcologicalNetworks2019] that has stifled the 'productive use' of networks beyond inventorying the interactions between species. Although, progress with using networks as a means to address questions within larger bodies of ecological theory *e.g.,* invasion biology [@huiHowInvadeEcological2019] and co-existence theory [@garcia-callejasNonrandomInteractionsGuilds2023], has been made we still need to have a discussion on what the appropriate network representation for the task at hand would be. This is highlighted in Box 1, and underscores that we need to evaluate exactly what process a specific network representation captures as well as its suitability for the question of interest.
+
+## How will novel communities interact?
+
+Here we can talk about the effects of range shifts and invasions and how this will result in new/novel community assemblages. And then also the intentional changes of species compositions through rewilding.
+
+## How will changes in the community influence ecosystem processes?
+
+Linking to dynamic networks and how this lets us build spatially/temporally explicit networks which can be used to infer form and function. Also bring in the discussion on the suitable aggregation (and the fact that we don't know)
+
+## How/why do species persist and/or co-exist?
+
+Specific sub points to consider here is persistence, especially persistence to perturbation. Again, dynamic networks and network/community assembly and finally extinctions.
 
 ![An attempt to try and visualise a way to map the different scales of network representations to the way in which we can interrogate/ask questions about them?](images/NetworkFuture.png){#fig-future}
 
