@@ -227,7 +227,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-10-10}
+\date{2024-10-17}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -409,22 +409,23 @@ Broadly, networks can be thought of to fall into two different `types';
 namely metawebs; traditionally defined as all of the \emph{potential}
 interactions for a specific species pool (Dunne, 2006), and realised
 networks; which is the subset of interactions in a metaweb that are
-\emph{realised} at a given time and place. The fundamental difference
-between these two different network representations is that a metaweb
-provides insight as to the viability of an interaction between two
-species occurring and is a means to identify links that are not
-ecologically plausible, \emph{i.e.,} forbidden links (Jordano, 2016b),
-or provide an idea of the \emph{complete} diet of a species (Strydom et
-al., 2023). In contrast realised networks are highly localised and links
-between species are contingent on both the co-occurrence of species as
-well as the influence of the environment, and population and community
-dynamics on predator choice. In the context of definitions and semantics
-the links that are represented by a metaweb and a realised network are
-different; links that are absent in a metaweb can be treated as being
-truly absent, however links that are absent in a realised network cannot
-be considered to be truly absent but are rather as absent due to the
-broader environmental/community context. Importantly, a realised network
-is \emph{not} simply the downscaling of a metaweb to a smaller scale
+\emph{realised} for a specific community at a given time and place. The
+fundamental difference between these two different network
+representations is that a metaweb provides insight as to the viability
+of an interaction between two species occurring and is a means to
+identify links that are not ecologically plausible, \emph{i.e.,}
+forbidden links (Jordano, 2016b), or provide an idea of the
+\emph{complete} diet of a species (Strydom et al., 2023). In contrast
+realised networks are highly localised and links between species are
+contingent on both the co-occurrence of species as well as the influence
+of the environment, and population and community dynamics on predator
+choice. In the context of definitions and semantics the links that are
+represented by a metaweb and a realised network are different; links
+that are absent in a metaweb can be treated as being truly absent,
+however links that are absent in a realised network cannot be considered
+to be truly absent but rather as absent due to the broader
+environmental/community context. Importantly, a realised network is
+\emph{not} simply the downscaling of a metaweb to a smaller scale
 (\emph{e.g.,} moving from the country to the 1x1 km\textsuperscript{2}
 scale based on fine-scale species co-occurrence) but represents a shift
 towards capturing the higher level processes that determine the
@@ -634,8 +635,8 @@ showcase the utility/applicability of the different network
 representations in the context of trying to understand the feeding
 dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, toptitle=1mm, colframe=quarto-callout-note-color-frame, colback=white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, coltitle=black, left=2mm, opacityback=0, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, bottomrule=.15mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colframe=quarto-callout-note-color-frame, opacityback=0, left=2mm, opacitybacktitle=0.6, titlerule=0mm, leftrule=.75mm, coltitle=black, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, rightrule=.15mm, bottomrule=.15mm]
 
 \begin{quote}
 note I am using a figure for layout experimentation purposes
@@ -690,31 +691,32 @@ predator and prey (\emph{i.e.} their evolutionary compatibility) to
 determine `feeding rules' (Morales-Castilla et al., 2015). These feeding
 rules are broadly elucidated in two different ways; mechanistic feeding
 rules can be explicitly defined and applied to a community (Dunne et
-al., 2008; \emph{e.g.,} Shaw et al., 2024) or they are inferred from a
-community for which there are interaction data and the `rules' are then
-applied to a different community (Caron et al., 2022; Cirtwill et al.,
-2019; Desjardins-Proulx et al., 2017; Eklöf et al., 2013; Llewelyn et
-al., 2023; Pichler et al., 2020; Strydom et al., 2022; \emph{e.g.,}
-Strydom et al., 2023). The fundamental difference between these two
-model groups is that `mechanistic models' rely on expert knowledge and
-make explicit assumptions on trait-feeding relationships, whereas the
-`pattern finding' models are dependent on existing datasets from which
-to elucidate feeding rules. These models are useful for determining all
-feasible interactions for a specific community, and owing to the
-availability of empirical interaction datasets (Gray et al., 2015;
-\emph{e.g.,} Poelen et al., 2014; Poisot, Baiser, et al., 2016), as well
-as the development of model testing/benchmarking tools (Poisot, 2023),
-means that these models can be validated and (with relative confidence)
-be used to construct first draft networks for communities for which we
-have no interaction data (Strydom et al., 2022), and are valuable not
-only in data poor regions but also for predicting interactions for
-`unobservable' communities \emph{e.g.,} prehistoric networks (Fricke et
-al., 2022; Yeakel et al., 2014) or future, novel community assemblages.
-Importantly metawebs are inherently `static' in the sense that they are
-\emph{not} able to capture dynamic processes (since the notion of
-feasibility is all or nothing), however they provide a bigger picture
-context (\emph{e.g.,} understanding the \emph{entire} diet breadth of a
-species) and often require little data to construct.
+al., 2008; Roopnarine, 2017; \emph{e.g.,} Shaw et al., 2024) or they are
+inferred from a community for which there are interaction data and the
+`rules' are then applied to a different community (Caron et al., 2022;
+Cirtwill et al., 2019; Desjardins-Proulx et al., 2017; Eklöf et al.,
+2013; Llewelyn et al., 2023; Pichler et al., 2020; Strydom et al., 2022;
+\emph{e.g.,} Strydom et al., 2023). The fundamental difference between
+these two model groups is that `mechanistic models' rely on expert
+knowledge and make explicit assumptions on trait-feeding relationships,
+whereas the `pattern finding' models are dependent on existing datasets
+from which to elucidate feeding rules. These models are useful for
+determining all feasible interactions for a specific community, and
+owing to the availability of empirical interaction datasets (Gray et
+al., 2015; \emph{e.g.,} Poelen et al., 2014; Poisot, Baiser, et al.,
+2016), as well as the development of model testing/benchmarking tools
+(Poisot, 2023), means that these models can be validated and (with
+relative confidence) be used to construct first draft networks for
+communities for which we have no interaction data (Strydom et al.,
+2022), and are valuable not only in data poor regions but also for
+predicting interactions for `unobservable' communities \emph{e.g.,}
+prehistoric networks (Fricke et al., 2022; Yeakel et al., 2014) or
+future, novel community assemblages. Importantly metawebs are inherently
+`static' in the sense that they are \emph{not} able to capture dynamic
+processes (since the notion of feasibility is all or nothing), however
+they provide a bigger picture context (\emph{e.g.,} understanding the
+\emph{entire} diet breadth of a species) and often require little data
+to construct.
 
 \subsection{Models that predict realised networks (realised
 interactions)}\label{models-that-predict-realised-networks-realised-interactions}
@@ -799,9 +801,9 @@ to consider the validation of these models, there have been developments
 and discussions for assessing how well a model recovers pairwise
 interactions (Poisot, 2023; Strydom et al., 2021), although the rate of
 false-negatives that may be present in the testing data still present a
-challenge (Catchen et al., 2023), we still lack clear set of guidelines
-for benchmarking the ability of models to recover structure (Allesina et
-al., 2008).
+challenge (Catchen et al., 2023), and we still lack clear set of
+guidelines for benchmarking the ability of models to recover structure
+(Allesina et al., 2008).
 
 \subsection{At what scale should we be predicting and using
 networks?}\label{at-what-scale-should-we-be-predicting-and-using-networks}
@@ -1394,6 +1396,11 @@ for food web architecture. \emph{Ecology Letters}, \emph{11}(8),
 Roopnarine, P. D. (2006). Extinction {Cascades} and {Catastrophe} in
 {Ancient Food Webs}. \emph{Paleobiology}, \emph{32}(1), 1--19.
 \url{https://www.jstor.org/stable/4096814}
+
+\bibitem[\citeproctext]{ref-roopnarineEcologicalModellingPaleocommunity2017}
+Roopnarine, P. D. (2017). Ecological {Modelling} of {Paleocommunity Food
+Webs}. In \emph{Conservation {Paleobiology}: {Using} the {Past} to
+{Manage} for the {Future}} (pp. 201--226). University of Chicago Press.
 
 \bibitem[\citeproctext]{ref-saraviaEcologicalNetworkAssembly2022}
 Saravia, L. A., Marina, T. I., Kristensen, N. P., De Troch, M., \& Momo,
