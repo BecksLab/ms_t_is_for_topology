@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.26">
+<meta name="generator" content="quarto-1.6.29">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-10-17">
+<meta name="dcterms.date" content="2024-10-22">
 <meta name="keywords" content="food web, network construction, scientific ignorance">
 
 <title>Unveiling the Complexity of Food Webs: A Comprehensive Overview of Definitions, Scales, and Mechanisms</title>
@@ -55,10 +55,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0c8af03b2fbd4cf44d6703e337af0e8d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-29a703985b9506ee1f3285ce059650bf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7a6c7608d79196830f248dfc2336d5b1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-73fd45496f3e0a94065533b8a4640c92.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-10-17">
-<meta name="citation_cover_date" content="2024-10-17">
+<meta name="citation_publication_date" content="2024-10-22">
+<meta name="citation_cover_date" content="2024-10-22">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-10-17">
+<meta name="citation_online_date" content="2024-10-22">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="TREE (one can dream...)">
 <meta name="citation_reference" content="citation_title=A novel method for predicting ecological interactions with an unsupervised machine learning algorithm;,citation_abstract=This gap in knowledge regarding ecological interactions has prompted the development of various predictive approaches. Traditionally, ecological interactions have been inferred using traits. However, the lack of trait information for numerous organisms necessitates using phylogenetic data and statistical insights from interaction matrices for prediction. Previous studies have overlooked the validation of model-predicted interactions. This study used a novel method in predicting ecological interactions using a self-organizing map (SOM), an unsupervised machine learning algorithm. The SOM learns from the input interaction matrix by grouping the nodes into output layers based on their interactions. Subsequently, the trained model predicts the interactions as scores. To distinguish between interactions and non-interactions, we employed F1 score maximization, setting scores above a specific threshold as interactions and the remainder as non-interactions. We applied this method to three unipartite metawebs and one bipartite metaweb and subsequently validated the predicted interactions using two innovative approaches: taxonomic and interaction recovery validation. Our method exhibited outstanding predictive performance, particularly for large networks. Various binary classification performance indicators, including F1 score (0.84–0.97) and accuracy (0.97–0.99), indicated high performance. Moreover, the method generated minimal predicted interactions, signifying low noise in the predictions, particularly for large networks. Taxonomic validation excels in metawebs with a connectance $&amp;amp;amp;gt;$0.1 but performs poorly in metawebs with very low connectance. In contrast, interaction recovery was most effective in larger metawebs. Our proposed method excels at making highly accurate predictions of ecological interactions with minimal noise, solely utilizing input interaction data without relying on traits or phylogenetic information regarding interacting nodes. These predictions are particularly precise for large networks, underscoring their potential to address knowledge gaps in emerging extensive metawebs. Notably, taxonomic validation and interaction recovery methods are sensitive to connectance and network size, respectively, suggesting prospects for developing robust interaction validation methods.;,citation_author=Sagar Adhurya;,citation_author=Young-Seuk Park;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=n/a;,citation_doi=10.1111/2041-210X.14358;,citation_issn=2041-210X;,citation_volume=n/a;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
@@ -361,7 +361,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">October 17, 2024</p>
+              <p class="date">October 22, 2024</p>
             </div>
           </div>
           
@@ -396,9 +396,9 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-anatomy" id="toc-sec-anatomy" class="nav-link active" data-scroll-target="#sec-anatomy"><span class="header-section-number">1</span> Setting the Scene: The Not So Basics of Nodes and Edges</a>
   <ul class="collapse">
-  <li><a href="#how-do-we-define-a-node" id="toc-how-do-we-define-a-node" class="nav-link" data-scroll-target="#how-do-we-define-a-node"><span class="header-section-number">1.0.1</span> How do we define a node?</a></li>
-  <li><a href="#what-is-captured-by-an-edge" id="toc-what-is-captured-by-an-edge" class="nav-link" data-scroll-target="#what-is-captured-by-an-edge"><span class="header-section-number">1.0.2</span> What is captured by an edge?</a></li>
-  <li><a href="#network-representations" id="toc-network-representations" class="nav-link" data-scroll-target="#network-representations"><span class="header-section-number">1.0.3</span> Network representations</a></li>
+  <li><a href="#how-do-we-define-a-node" id="toc-how-do-we-define-a-node" class="nav-link" data-scroll-target="#how-do-we-define-a-node"><span class="header-section-number">1.1</span> How do we define a node?</a></li>
+  <li><a href="#what-is-captured-by-an-edge" id="toc-what-is-captured-by-an-edge" class="nav-link" data-scroll-target="#what-is-captured-by-an-edge"><span class="header-section-number">1.2</span> What is captured by an edge?</a></li>
+  <li><a href="#network-representations" id="toc-network-representations" class="nav-link" data-scroll-target="#network-representations"><span class="header-section-number">1.3</span> Network representations</a></li>
   </ul></li>
   <li><a href="#sec-process" id="toc-sec-process" class="nav-link" data-scroll-target="#sec-process"><span class="header-section-number">2</span> From Nodes and Edges to Scale, Context, and Process</a>
   <ul class="collapse">
@@ -441,16 +441,16 @@ window.Quarto = {
 <section id="sec-anatomy" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Setting the Scene: The Not So Basics of Nodes and Edges</h1>
 <p>Defining a food web seems simple; it is the representation of the interactions (edges) between species (nodes), however the definition of ‘edges’ and ‘nodes’, as well as the scale at which they are aggregated can take many forms <span class="citation" data-cites="poisotDescribeUnderstandPredict2016">(<a href="#ref-poisotDescribeUnderstandPredict2016" role="doc-biblioref">Poisot, Stouffer, and Kéfi 2016</a>)</span>, which ultimately encodes a series of assumptions and criteria within a network. An awareness of variance in the way a food web can be defined is critical as a network (or its adjacency matrix) is both the ‘object’ from which inferences are made (<em>e.g.,</em> the interactions between species, or how the structure influences ecosystem level processes) as well as the ‘product’ of either the data collection <span class="citation" data-cites="brimacombeShortcomingsReusingSpecies2023">(<a href="#ref-brimacombeShortcomingsReusingSpecies2023" role="doc-biblioref">Brimacombe et al. 2023</a>)</span> or prediction process <span class="citation" data-cites="banvilleDecipheringProbabilisticSpecies2024">(<a href="#ref-banvilleDecipheringProbabilisticSpecies2024" role="doc-biblioref">Banville et al. 2024</a>)</span>. One thus needs to be aware of both the criteria that is used to define nodes and edges, and what processes or mechanisms the aggregation of the two represents, as this will determine what the network can be used for.</p>
-<section id="how-do-we-define-a-node" class="level3" data-number="1.0.1">
-<h3 data-number="1.0.1" class="anchored" data-anchor-id="how-do-we-define-a-node"><span class="header-section-number">1.0.1</span> How do we define a node?</h3>
+<section id="how-do-we-define-a-node" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="how-do-we-define-a-node"><span class="header-section-number">1.1</span> How do we define a node?</h2>
 <p>Although this may seem an elementary question in the context of food webs — a node <em>should</em> represent a (taxonomic) species, the reality is that nodes can often represent an aggregation of different species - so called ‘trophic species’ <span class="citation" data-cites="yodzisCompartmentationRealAssembled1982 williamsSimpleRulesYield2000">(<a href="#ref-yodzisCompartmentationRealAssembled1982" role="doc-biblioref">Yodzis 1982</a>; <a href="#ref-williamsSimpleRulesYield2000" role="doc-biblioref">Williams and Martinez 2000</a>)</span> or segregation of species by life stages <span class="citation" data-cites="cleggImpactIntraspecificVariation2018">(<a href="#ref-cleggImpactIntraspecificVariation2018" role="doc-biblioref">Clegg, Ali, and Beckerman 2018</a>)</span>. Practical implications of how we are aggregating the nodes is that the resolution may not always be ‘pixel perfect’, which limits the ability to make (taxonomic) species specific inferences <em>e.g.,</em> does species <span class="math inline">\(a\)</span> eat species <span class="math inline">\(b\)</span>, however there is value in having nodes that represent an aggregation of species, as the distribution of the links between them are more meaningful in terms of understanding energy flow and distribution within the system.</p>
 </section>
-<section id="what-is-captured-by-an-edge" class="level3" data-number="1.0.2">
-<h3 data-number="1.0.2" class="anchored" data-anchor-id="what-is-captured-by-an-edge"><span class="header-section-number">1.0.2</span> What is captured by an edge?</h3>
+<section id="what-is-captured-by-an-edge" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="what-is-captured-by-an-edge"><span class="header-section-number">1.2</span> What is captured by an edge?</h2>
 <p>At its core, links within food webs can be thought of as a representation of either feeding links between species - be that realised <span class="citation" data-cites="pringleUntanglingFoodWebs2020">(<a href="#ref-pringleUntanglingFoodWebs2020" role="doc-biblioref">Pringle 2020</a>)</span> or potential <span class="citation" data-cites="dunneNetworkStructureFood2006">(<a href="#ref-dunneNetworkStructureFood2006" role="doc-biblioref">Jennifer A. Dunne 2006</a>)</span>, alternative links can represent fluxes within the system <em>e.g.,</em> energy transfer or material flow as the result of the feeding links between species <span class="citation" data-cites="lindemanTrophicDynamicAspectEcology1942">(<a href="#ref-lindemanTrophicDynamicAspectEcology1942" role="doc-biblioref">Lindeman 1942</a>)</span>. Fundamentally this means that the links within a network represent different ‘currencies’ (either the feasibility of a link existing between two species or the energy that is moving through the system) and how the links within a network are specified will influence the resulting structure of the network. For example taking a food web that consists of links representing all <em>potential</em> feeding links for a community (<em>i.e.,</em> a metaweb) will be meaningless if one is interested in understanding the flow of energy through the network as the links within a metaweb do not represent environmental/energetic constraints, making them poor representations of which interactions are <em>realised</em> in a specific location <span class="citation" data-cites="caronTraitmatchingModelsPredict2024">(<a href="#ref-caronTraitmatchingModelsPredict2024" role="doc-biblioref">Caron et al. 2024</a>)</span>. In addition to the various ways of defining the links between species pairs there are also a myriad of ways in which the links themselves can be quantified. Links between species are often treated as being present or absent (<em>i.e.,</em> binary) but it is also possible to use probabilities <span class="citation" data-cites="poisotStructureProbabilisticNetworks2016 banvilleDecipheringProbabilisticSpecies2024">(which quantifies how likely an interaction is to occur, <a href="#ref-poisotStructureProbabilisticNetworks2016" role="doc-biblioref">Poisot, Cirtwill, et al. 2016</a>; <a href="#ref-banvilleDecipheringProbabilisticSpecies2024" role="doc-biblioref">Banville et al. 2024</a>)</span> or continuous measurements <span class="citation" data-cites="berlowInteractionStrengthsFood2004">(which quantifies the strength of of an interaction, <a href="#ref-berlowInteractionStrengthsFood2004" role="doc-biblioref">Berlow et al. 2004</a>)</span>.</p>
 </section>
-<section id="network-representations" class="level3" data-number="1.0.3">
-<h3 data-number="1.0.3" class="anchored" data-anchor-id="network-representations"><span class="header-section-number">1.0.3</span> Network representations</h3>
+<section id="network-representations" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="network-representations"><span class="header-section-number">1.3</span> Network representations</h2>
 <p>Broadly, networks can be thought of to fall into two different ‘types’; namely metawebs; traditionally defined as all of the <em>potential</em> interactions for a specific species pool <span class="citation" data-cites="dunneNetworkStructureFood2006">(<a href="#ref-dunneNetworkStructureFood2006" role="doc-biblioref">Jennifer A. Dunne 2006</a>)</span>, and realised networks; which is the subset of interactions in a metaweb that are <em>realised</em> for a specific community at a given time and place. The fundamental difference between these two different network representations is that a metaweb provides insight as to the viability of an interaction between two species occurring and is a means to identify links that are not ecologically plausible, <em>i.e.,</em> forbidden links <span class="citation" data-cites="jordanoSamplingNetworksEcological2016">(<a href="#ref-jordanoSamplingNetworksEcological2016" role="doc-biblioref">Jordano 2016b</a>)</span>, or provide an idea of the <em>complete</em> diet of a species <span class="citation" data-cites="strydomGraphEmbeddingTransfer2023">(<a href="#ref-strydomGraphEmbeddingTransfer2023" role="doc-biblioref">Strydom et al. 2023</a>)</span>. In contrast realised networks are highly localised and links between species are contingent on both the co-occurrence of species as well as the influence of the environment, and population and community dynamics on predator choice. In the context of definitions and semantics the links that are represented by a metaweb and a realised network are different; links that are absent in a metaweb can be treated as being truly absent, however links that are absent in a realised network cannot be considered to be truly absent but rather as absent due to the broader environmental/community context. Importantly, a realised network is <em>not</em> simply the downscaling of a metaweb to a smaller scale (<em>e.g.,</em> moving from the country to the 1x1 km<sup>2</sup> scale based on fine-scale species co-occurrence) but represents a shift towards capturing the higher level processes that determine the <em>realisation</em> of an interaction, <em>i.e.,</em> the definition of an edges shifts from being determined by interaction feasibility to that of energetic choices/consequences. Thus, different network representations are determined and constrained by different sets of assumptions as to what the processes are that determine the presence/absence of an interaction between two species as well as the resulting network structure.</p>
 </section>
 </section>
@@ -922,7 +922,7 @@ Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consum
   title = {Unveiling the {Complexity} of {Food} {Webs:} {A}
     {Comprehensive} {Overview} of {Definitions,} {Scales,} and
     {Mechanisms}},
-  date = {2024-10-17},
+  date = {2024-10-22},
   langid = {en},
   abstract = {Food webs are a useful abstraction and representation of
     the feeding links between species in a community and are used to
@@ -944,7 +944,7 @@ Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consum
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
 Beckerman. 2024. <span>“Unveiling the Complexity of Food Webs: A
 Comprehensive Overview of Definitions, Scales, and Mechanisms.”</span>
-TREE (One Can Dream...). October 17, 2024.
+TREE (One Can Dream...). October 22, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1368,7 +1368,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
