@@ -346,19 +346,19 @@ biodiverse communities.
 Edges}\label{sec-anatomy}
 
 Defining a food web seems simple; it is the representation of the
-interactions (edges) between species (nodes), however the definition of
-`edges' and `nodes', as well as the scale at which they are aggregated
-can take many forms (Poisot, Stouffer, et al., 2016), which ultimately
-encodes a series of assumptions and criteria within a network. An
-awareness of variance in the way a food web can be defined is critical
-as a network (or its adjacency matrix) is both the `object' from which
-inferences are made (\emph{e.g.,} the interactions between species, or
-how the structure influences ecosystem level processes) as well as the
-`product' of either the data collection (Brimacombe et al., 2023) or
-prediction process (Banville et al., 2024). One thus needs to be aware
-of both the criteria that is used to define nodes and edges, and what
-processes or mechanisms the aggregation of the two represents, as this
-will determine what the network can be used for.
+interactions (edges) between species (nodes) in the form of a network,
+however the definition of `edges' and `nodes', as well as the scale at
+which they are aggregated can take many forms (Poisot, Stouffer, et al.,
+2016), which ultimately encodes a series of assumptions and criteria
+within a network. An awareness of variance in the way a food web can be
+defined is critical as a network (or its adjacency matrix) is both the
+`object' from which inferences are made (\emph{e.g.,} the interactions
+between species, or how the structure influences ecosystem level
+processes) as well as the `product' of either the data collection
+(Brimacombe et al., 2023) or prediction process (Banville et al., 2024).
+One thus needs to be aware of both the criteria that is used to define
+nodes and edges, and what processes or mechanisms the aggregation of the
+two represents, as this will determine what the network can be used for.
 
 \subsection{How do we define a node?}\label{how-do-we-define-a-node}
 
@@ -538,11 +538,12 @@ abundance of the different species and that interactions are not
 contingent on there being any compatibility (trait matching) between
 them, \emph{sensu} neutral processes (Canard et al., 2012; Momal et al.,
 2020). However, a more ecologically sound assumption would be that the
-abundance of different prey species will influence which prey are
+abundance of different prey species will influence the distribution of
+links in a network (Vázquez et al., 2009), be influencing which prey are
 targeted or preferred by the predator as abundance influences factors
-such as the likelihood of species meeting (Banville et al., 2024; Poisot
-et al., 2015), or in the dynamic sense will influence the persistence of
-viable populations.
+such as the likelihood of two species (individuals) meeting (Banville et
+al., 2024; Poisot et al., 2015), or in the dynamic sense will influence
+the persistence of viable populations.
 
 \textbf{Predator choice (energetic cost)}
 
@@ -636,8 +637,8 @@ showcase the utility/applicability of the different network
 representations in the context of trying to understand the feeding
 dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, rightrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, toprule=.15mm, leftrule=.75mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, toptitle=1mm, colback=white, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, colback=white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, titlerule=0mm, colframe=quarto-callout-note-color-frame, left=2mm, breakable, bottomrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, bottomtitle=1mm, toptitle=1mm, arc=.35mm, opacityback=0, leftrule=.75mm]
 
 \begin{quote}
 note I am using a figure for layout experimentation purposes
@@ -1491,6 +1492,12 @@ L., \& Bonte, D. (2023). Arthropod food webs predicted from body size
 ratios are improved by incorporating prey defensive properties.
 \emph{Journal of Animal Ecology}, \emph{92}(4), 913--924.
 \url{https://doi.org/10.1111/1365-2656.13905}
+
+\bibitem[\citeproctext]{ref-vazquezUnitingPatternProcess2009}
+Vázquez, D. P., Blüthgen, N., Cagnolo, L., \& Chacoff, N. P. (2009).
+Uniting pattern and process in plant--animal mutualistic networks: A
+review. \emph{Annals of Botany}, \emph{103}(9), 1445--1457.
+\url{https://doi.org/10.1093/aob/mcp057}
 
 \bibitem[\citeproctext]{ref-wellsSpeciesInteractionsEstimating2013}
 Wells, K., \& O'Hara, R. B. (2013). Species interactions: Estimating
