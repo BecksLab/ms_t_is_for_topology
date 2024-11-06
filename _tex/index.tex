@@ -227,7 +227,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-11-05}
+\date{2024-11-06}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -302,13 +302,17 @@ multiple stressors. The interaction between species is one of the
 fundamental building blocks of ecological communities, providing a
 powerful abstraction that can help quantify, conceptualise, and
 understand biodiversity dynamics, and ultimately, make predictions,
-mitigate change, and manage services. Such network representations of
-biodiversity (including within species diversity) are increasingly
-argued to be an asset to predictive ecology, climate change mitigation
-and resource management. Here, it is argued that characterising
-biodiversity in a network will allow deeper capacity to understand and
-predict the abundance, distribution, dynamics and services provided by
-multiple species facing multiple stressors.
+mitigate change, and manage services (Windsor et al., 2023). Such
+network representations of biodiversity (including within species
+diversity) are increasingly argued to be an asset to predictive ecology,
+climate change mitigation and resource management, with the argument
+that characterising biodiversity in a network will afford a deeper
+capacity to understand and predict the abundance, distribution, dynamics
+and services provided by multiple species facing multiple stressors.
+However, there is a growing discourse around limitations to the
+interpretation and applied use of networks (Blüthgen, 2010; Dormann,
+2023), primarily as the result of shortcomings regarding the
+conceptualisation of networks (Blüthgen \& Staab, 2024).
 
 A `network' can be defined and conceptualised in a myriad of ways, which
 means that different networks will be embedding different processes (or
@@ -334,7 +338,7 @@ terminology used to define a network, and how this influenced by both
 the processes that determine networks as well as how this relates to the
 way in which we construct networks. The provision of this detail
 ultimately leads to a set of insights and conclusions about whether,
-when and under what conditions network representations of biodiversity
+when. and under what conditions network representations of biodiversity
 can contribute to the advancement of ecological theory and generate
 value in predictive ecology. Specifically, we finish this perspective
 with an overview of fundamental questions in ecology that we think can
@@ -639,8 +643,8 @@ showcase the utility/applicability of the different network
 representations in the context of trying to understand the feeding
 dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, coltitle=black, breakable, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, bottomrule=.15mm, arc=.35mm, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, coltitle=black, breakable, opacityback=0, arc=.35mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, opacitybacktitle=0.6, left=2mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm]
 
 \begin{quote}
 note I am using a figure for layout experimentation purposes
@@ -812,22 +816,26 @@ guidelines for benchmarking the ability of models to recover structure
 \subsection{At what scale should we be predicting and using
 networks?}\label{at-what-scale-should-we-be-predicting-and-using-networks}
 
-We lack an understanding of which processes drive the differences
-between different scales (Saravia et al., 2022), as well as to what the
-appropriate level of aggregation is for a `network' (Estay et al.,
-2023). Which presents a challenge both in deciding what the appropriate
-spatial and time scales are for constructing not only a network but also
-which type of network representation. Space influences both network
-properties (Galiana et al., 2018), as well as dynamics (Fortin et al.,
-2021; Rooney et al., 2008), and time has implications when it comes to
-accounting for seasonal turnover in communities (Brimacombe et al.,
-2021; Laender et al., 2010) as well as thinking co-occurrence,
-particularly the records used to determine it (Brimacombe et al., 2024).
-Although multilayer networks may allow us to encode the nuances of space
-and time (Hutchinson et al., 2019) we still need to understand the
-implications of \emph{e.g.,} constructing networks that are not at
-ecologically but rather politically relevant scales (Strydom et al.,
-2022) and what we can learn or infer from networks a these scales.
+We lack an understanding of which processes drive interactions at
+different scales (Saravia et al., 2022), as well as to what the
+appropriate level of aggregation for a `network' is (Estay et al.,
+2023). Thus we need an understanding of not only how time and scale
+influence the interpretation of networks (Blüthgen \& Staab, 2021;
+Morales \& Vázquez, 2008), but how this is in turn influenced by the
+type of networks used. Which presents a challenge both in deciding what
+the appropriate spatial and time scales are for constructing not only a
+network but also which type of network representation. Space influences
+both network properties (Galiana et al., 2018), as well as dynamics
+(Fortin et al., 2021; Rooney et al., 2008), and time has implications
+when it comes to accounting for seasonal turnover in communities
+(Brimacombe et al., 2021; Laender et al., 2010) as well as thinking
+about co-occurrence, particularly the records are used to determine it
+(Brimacombe et al., 2024). Although multilayer networks may allow us to
+encode the nuances of space and time (Hutchinson et al., 2019) we still
+need to understand the implications of \emph{e.g.,} constructing
+networks that are not at ecologically but rather politically relevant
+scales (Strydom et al., 2022) and what the implications of this
+disconnect may be.
 
 \section{The future value of
 networks}\label{the-future-value-of-networks}
@@ -1011,6 +1019,24 @@ Blanchet, F. G., Cazelles, K., \& Gravel, D. (2020). Co-occurrence is
 not evidence of ecological interactions. \emph{Ecology Letters},
 \emph{23}(7), 1050--1063. \url{https://doi.org/10.1111/ele.13525}
 
+\bibitem[\citeproctext]{ref-bluthgenWhyNetworkAnalysis2010}
+Blüthgen, N. (2010). Why network analysis is often disconnected from
+community ecology: {A} critique and an ecologist's guide. \emph{Basic
+and Applied Ecology}, \emph{11}(3), 185--195.
+\url{https://doi.org/10.1016/j.baae.2010.01.001}
+
+\bibitem[\citeproctext]{ref-bluthgenEcologyMammalsInteraction2021}
+Blüthgen, N., \& Staab, M. (2021). Ecology: {Mammals}, interaction
+networks and the relevance of scale. \emph{Current Biology},
+\emph{31}(13), R850--R853.
+\url{https://doi.org/10.1016/j.cub.2021.05.032}
+
+\bibitem[\citeproctext]{ref-bluthgenCriticalEvaluationNetwork2024}
+Blüthgen, N., \& Staab, M. (2024). A {Critical Evaluation} of {Network
+Approaches} for {Studying Species Interactions}. \emph{Annual Review of
+Ecology, Evolution, and Systematics}, \emph{55}(1), 65--88.
+\url{https://doi.org/10.1146/annurev-ecolsys-102722-021904}
+
 \bibitem[\citeproctext]{ref-brimacombeInferredSeasonalInteraction2021}
 Brimacombe, C., Bodner, K., \& Fortin, M.-J. (2021). Inferred seasonal
 interaction rewiring of a freshwater stream fish network.
@@ -1125,6 +1151,11 @@ Delmas, E., Brose, U., Gravel, D., Stouffer, D. B., \& Poisot, T.
 Desjardins-Proulx, P., Laigle, I., Poisot, T., \& Gravel, D. (2017).
 Ecological interactions and the {Netflix} problem. \emph{PeerJ},
 \emph{5}, e3644. \url{https://doi.org/10.7717/peerj.3644}
+
+\bibitem[\citeproctext]{ref-dormannRisePossibleFall2023}
+Dormann, C. F. (2023). The rise, and possible fall, of network ecology.
+In \emph{Defining {Agroecology} -- {A Festschrift} for {Teja
+Tscharntke}} (pp. 143--159.). Tredition.
 
 \bibitem[\citeproctext]{ref-dunhillExtinctionCascadesCommunity2024}
 Dunhill, A. M., Zarzyczny, K., Shaw, J. O., Atkinson, J. W., Little, C.
@@ -1306,6 +1337,12 @@ Momal, R., Robin, S., \& Ambroise, C. (2020). Tree-based inference of
 species interaction networks from abundance data. \emph{Methods in
 Ecology and Evolution}, \emph{11}(5), 621--632.
 \url{https://doi.org/10.1111/2041-210X.13380}
+
+\bibitem[\citeproctext]{ref-moralesEffectSpacePlant2008}
+Morales, J. M., \& Vázquez, D. P. (2008). The effect of space in
+plant--animal mutualistic networks: Insights from a simulation study.
+\emph{Oikos}, \emph{117}(9), 1362--1370.
+\url{https://doi.org/10.1111/j.0030-1299.2008.16737.x}
 
 \bibitem[\citeproctext]{ref-morales-castillaInferringBioticInteractions2015}
 Morales-Castilla, I., Matias, M. G., Gravel, D., \& Araújo, M. B.
@@ -1549,6 +1586,12 @@ Williams, R. J., \& Martinez, N. D. (2008). Success and its limits among
 structural models of complex food webs. \emph{Journal of Animal
 Ecology}, \emph{77}(3), 512--519.
 \url{https://doi.org/10.1111/j.1365-2656.2008.01362.x}
+
+\bibitem[\citeproctext]{ref-windsorUsingEcologicalNetworks2023}
+Windsor, F. M., van den Hoogen, J., Crowther, T. W., \& Evans, D. M.
+(2023). Using ecological networks to answer questions in global
+biogeography and ecology. \emph{Journal of Biogeography}, \emph{50}(1),
+57--69. \url{https://doi.org/10.1111/jbi.14447}
 
 \bibitem[\citeproctext]{ref-woottonModularTheoryTrophic2023}
 Wootton, K. L., Curtsdotter, A., Roslin, T., Bommarco, R., \& Jonsson,
