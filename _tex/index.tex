@@ -227,7 +227,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-11-06}
+\date{2024-11-07}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -333,7 +333,10 @@ evolutionary scale of assumptions we make and the predictions we might
 generate from different network representations.
 
 In this perspective we aim to provide an overview of the different
-\textbf{food web} representations, particularly how these relate to the
+\textbf{food web} representations (*a note on how there has been
+developments in the `bipartite space' and it would be flawed to try and
+view them in tandem as food webs and non-trophic webs are two very
+different conceptualisations), particularly how these relate to the
 terminology used to define a network, and how this influenced by both
 the processes that determine networks as well as how this relates to the
 way in which we construct networks. The provision of this detail
@@ -351,14 +354,14 @@ Edges}\label{sec-anatomy}
 
 Defining a food web seems simple; it is the representation of the
 interactions (edges) between species (nodes) in the form of a network,
-however the definition of `edges' and `nodes', as well as the scale at
-which they are aggregated can take many forms (Poisot, Stouffer, et al.,
-2016), which ultimately encodes a series of assumptions and criteria
-within a network. An awareness of variance in the way a food web can be
-defined is critical as a network (or its adjacency matrix) is both the
-`object' from which inferences are made (\emph{e.g.,} the interactions
-between species, or how the structure influences ecosystem level
-processes) as well as the `product' of either the data collection
+however the definition of `edges' and `nodes', as well as the levels of
+organization at which they are aggregated can take many forms Moulatlet
+et al. (2024), which ultimately encodes a series of assumptions and
+criteria within a network. An awareness of variance in the way a food
+web can be defined is critical as a network (or its adjacency matrix) is
+both the `object' from which inferences are made (\emph{e.g.,} the
+interactions between species, or how the structure influences ecosystem
+level processes) as well as the `product' of either the data collection
 (Brimacombe et al., 2023) or prediction process (Banville et al., 2024).
 One thus needs to be aware of both the criteria that is used to define
 nodes and edges, and what processes or mechanisms the aggregation of the
@@ -451,7 +454,7 @@ context dependent. Here we start by introducing the five core processes
 that determine either the feasibility or the realisation of
 interactions, namely: evolutionary compatibility, co-occurrence,
 abundance, predator choice, and non-trophic interactions; while
-simultaneously contextualising them within, and linking them to the
+simultaneously contextualising them within, and linking them to, the
 different network representations Figure~\ref{fig-process}. We can think
 of the different network representations to be conceptually analogous to
 the fundamental and realised niche, whereby the metaweb represents the
@@ -643,8 +646,8 @@ showcase the utility/applicability of the different network
 representations in the context of trying to understand the feeding
 dynamics of a seasonal community.
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, coltitle=black, breakable, opacityback=0, arc=.35mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, opacitybacktitle=0.6, left=2mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, toptitle=1mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0, coltitle=black, rightrule=.15mm, breakable, bottomtitle=1mm, titlerule=0mm, toprule=.15mm, arc=.35mm, bottomrule=.15mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white]
 
 \begin{quote}
 note I am using a figure for layout experimentation purposes
@@ -818,24 +821,24 @@ networks?}\label{at-what-scale-should-we-be-predicting-and-using-networks}
 
 We lack an understanding of which processes drive interactions at
 different scales (Saravia et al., 2022), as well as to what the
-appropriate level of aggregation for a `network' is (Estay et al.,
-2023). Thus we need an understanding of not only how time and scale
-influence the interpretation of networks (Blüthgen \& Staab, 2021;
-Morales \& Vázquez, 2008), but how this is in turn influenced by the
-type of networks used. Which presents a challenge both in deciding what
-the appropriate spatial and time scales are for constructing not only a
-network but also which type of network representation. Space influences
-both network properties (Galiana et al., 2018), as well as dynamics
-(Fortin et al., 2021; Rooney et al., 2008), and time has implications
-when it comes to accounting for seasonal turnover in communities
-(Brimacombe et al., 2021; Laender et al., 2010) as well as thinking
-about co-occurrence, particularly the records are used to determine it
-(Brimacombe et al., 2024). Although multilayer networks may allow us to
-encode the nuances of space and time (Hutchinson et al., 2019) we still
-need to understand the implications of \emph{e.g.,} constructing
-networks that are not at ecologically but rather politically relevant
-scales (Strydom et al., 2022) and what the implications of this
-disconnect may be.
+appropriate level of aggregation for a `network' is (Estay et al., 2023;
+Moulatlet et al., 2024). Thus we need an understanding of not only how
+time and scale influence the interpretation of networks (Blüthgen \&
+Staab, 2021; Morales \& Vázquez, 2008), but how this is in turn
+influenced by the type of networks used. Which presents a challenge both
+in deciding what the appropriate spatial and time scales are for
+constructing not only a network but also which type of network
+representation. Space influences both network properties (Galiana et
+al., 2018), as well as dynamics (Fortin et al., 2021; Rooney et al.,
+2008), and time has implications when it comes to accounting for
+seasonal turnover in communities (Brimacombe et al., 2021; Laender et
+al., 2010) as well as thinking about co-occurrence, particularly the
+records are used to determine it (Brimacombe et al., 2024). Although
+multilayer networks may allow us to encode the nuances of space and time
+(Hutchinson et al., 2019) we still need to understand the implications
+of \emph{e.g.,} constructing networks that are not at ecologically but
+rather politically relevant scales (Strydom et al., 2022) and what the
+implications of this disconnect may be.
 
 \section{The future value of
 networks}\label{the-future-value-of-networks}
@@ -1349,6 +1352,12 @@ Morales-Castilla, I., Matias, M. G., Gravel, D., \& Araújo, M. B.
 (2015). Inferring biotic interactions from proxies. \emph{Trends in
 Ecology \& Evolution}, \emph{30}(6), 347--356.
 \url{https://doi.org/10.1016/j.tree.2015.03.014}
+
+\bibitem[\citeproctext]{ref-moulatletScalingTrophicSpecialization2024}
+Moulatlet, G., Luna, P., Dattilo, W., \& Villalobos, F. (2024).
+\emph{The scaling of trophic specialization in interaction networks
+across levels of organization}. Authorea.
+\url{https://doi.org/10.22541/au.172977303.33335171/v1}
 
 \bibitem[\citeproctext]{ref-olivierExploringTemporalVariability2019}
 Olivier, P., Frelat, R., Bonsdorff, E., Kortsch, S., Kröncke, I.,
