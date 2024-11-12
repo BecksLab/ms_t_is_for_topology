@@ -10,10 +10,6 @@ date: last-modified
 bibliography: ../references.bib
 execute:
   echo: false
-format:
-  html:
-    code-fold: true
-    code-summary: "Show the code"
 ---
 
 Understanding the rationale of the traits table is perhaps the most crucial thing though so I will try and elaborate on some of the 'categories' that I have selected and provide a very high-level glossary of terms. Many of these categories are the product of discussions we've hard and this is an attempt to articulate those discussions in a more categorical manner.
