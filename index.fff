@@ -2,7 +2,7 @@
 
 \centering{
 
-\includegraphics{images/representations.png}
+\pandocbounded{\includegraphics[keepaspectratio]{images/representations.png}}
 
 }
 
@@ -30,7 +30,7 @@ maximising energy gain, or indirect/higher order interactions.}
 
 \centering{
 
-\captionsetup{labelsep=none}\includegraphics{images/Box1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Box1.png}}
 
 }
 
@@ -43,7 +43,7 @@ maximising energy gain, or indirect/higher order interactions.}
 
 \centering{
 
-\includegraphics{images/NetworkFuture.png}
+\pandocbounded{\includegraphics[keepaspectratio]{images/NetworkFuture.png}}
 
 }
 
