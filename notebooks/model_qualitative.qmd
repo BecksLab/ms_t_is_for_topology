@@ -8,6 +8,12 @@ abstract: |
   The purpose of this document is to provide a rationalisation but also 'formalisation' of the different model families of sorts. This starts of by trying to construct a 'traits' table that focuses on what the resulting network is (is it a prediction of structure or is it a prediction of interactions), how the resulting network is encoded (*i.e.,* its anatomy) as well as trying to identify what type of data are needed to 'parametrise' the model. Finally we take this traits table and feed it into a hierarchical clustering model to sort of see how our broader *a priori* ideas of models being either topology generators or interaction predictors.
 date: last-modified
 bibliography: ../references.bib
+execute:
+  echo: false
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
 ---
 
 Understanding the rationale of the traits table is perhaps the most crucial thing though so I will try and elaborate on some of the 'categories' that I have selected and provide a very high-level glossary of terms. Many of these categories are the product of discussions we've hard and this is an attempt to articulate those discussions in a more categorical manner.
@@ -29,7 +35,7 @@ Seventh. How the interactions quantified
 Eight. What are the data sources needed for each model.
 
 ```{r}
-#| include: false
+#| output: false
 #| warning: false
 suppressPackageStartupMessages(library(tidyverse))
 library(gt)
