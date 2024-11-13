@@ -7,21 +7,24 @@
 }
 
 \caption{\label{fig-process}Aligning the various processes that
-determine interactions with the different network representations. First
-we start with a `global metaweb' this network which captures all
-possible interactions for an arbitrary collection of species, we can
-further refine this network by taking in to consideration the
-co-occurrence of these difference species - as shown here we have two
-regions with some species (blue) that are found in both regions and
-others endemic to either region one (pink) or region two (orange). These
-regional metawebs to capture all possible interactions, however it only
-considers species that co-occur. However even within a region we do not
-expect all interactions to be realised but rather that there are
+determine interactions (right column) with the different network
+representations (left column). First we start with a \textbf{global
+metaweb} this network captures all possible interactions for a
+collection of species in the global context. However within the global
+environment different species occur in different regions (region one =
+yellow and region 2 = orange), and it is possible to construct two
+different metawebs (\textbf{regional metawebs}) for each region by
+taking accounting for the co-occurrence patterns of the difference
+species - as shown here we have two regions with some species (blue)
+that are found in both regions and others endemic to either region one
+(yellow) or region two (orange). However even within a region we do not
+expect that all interactions to be realised but rather that there are
 multiple configurations of the regional metaweb over both space and
-time. The `state' of the different network realisations are ultimately
-influenced not just by the co-occurrence of a species pair but rather
-the larger community context such as the abundance of different species,
-maximising energy gain, or indirect/higher order interactions.}
+time. The `state' of the different \textbf{realised networks} are
+ultimately influenced not just by the co-occurrence of a species pair
+but rather the larger community context such as the abundance of
+different species, maximisation of energy gain, or indirect/higher order
+interactions.}
 
 \end{figure}
 \efloatseparator
@@ -47,8 +50,8 @@ maximising energy gain, or indirect/higher order interactions.}
 
 }
 
-\caption{\label{fig-future}An attempt to try and visualise a way to map
-the different scales of network representations to the way in which we
-can interrogate/ask questions about them?}
+\caption{\label{fig-future}Here we highlight som of the outstanding
+questions in both network as well as general ecology, as well as some of
+the outstadning methodological challenges we face.}
 
 \end{figure}
