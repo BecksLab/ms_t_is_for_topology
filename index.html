@@ -10,7 +10,7 @@
 <meta name="author" content="Jennifer A. Dunne">
 <meta name="author" content="Timothée Poisot">
 <meta name="author" content="Andrew P. Beckerman">
-<meta name="dcterms.date" content="2024-11-12">
+<meta name="dcterms.date" content="2024-11-13">
 <meta name="keywords" content="food web, network construction, scientific ignorance">
 
 <title>Unveiling the Complexity of Food Webs: A Comprehensive Overview of Definitions, Scales, and Mechanisms</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jennifer A. Dunne">
 <meta name="citation_author" content="Timothée Poisot">
 <meta name="citation_author" content="Andrew P. Beckerman">
-<meta name="citation_publication_date" content="2024-11-12">
-<meta name="citation_cover_date" content="2024-11-12">
+<meta name="citation_publication_date" content="2024-11-13">
+<meta name="citation_cover_date" content="2024-11-13">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-11-12">
+<meta name="citation_online_date" content="2024-11-13">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="TREE (one can dream...)">
 <meta name="citation_reference" content="citation_title=A novel method for predicting ecological interactions with an unsupervised machine learning algorithm;,citation_abstract=This gap in knowledge regarding ecological interactions has prompted the development of various predictive approaches. Traditionally, ecological interactions have been inferred using traits. However, the lack of trait information for numerous organisms necessitates using phylogenetic data and statistical insights from interaction matrices for prediction. Previous studies have overlooked the validation of model-predicted interactions. This study used a novel method in predicting ecological interactions using a self-organizing map (SOM), an unsupervised machine learning algorithm. The SOM learns from the input interaction matrix by grouping the nodes into output layers based on their interactions. Subsequently, the trained model predicts the interactions as scores. To distinguish between interactions and non-interactions, we employed F1 score maximization, setting scores above a specific threshold as interactions and the remainder as non-interactions. We applied this method to three unipartite metawebs and one bipartite metaweb and subsequently validated the predicted interactions using two innovative approaches: taxonomic and interaction recovery validation. Our method exhibited outstanding predictive performance, particularly for large networks. Various binary classification performance indicators, including F1 score (0.84–0.97) and accuracy (0.97–0.99), indicated high performance. Moreover, the method generated minimal predicted interactions, signifying low noise in the predictions, particularly for large networks. Taxonomic validation excels in metawebs with a connectance $&amp;amp;amp;gt;$0.1 but performs poorly in metawebs with very low connectance. In contrast, interaction recovery was most effective in larger metawebs. Our proposed method excels at making highly accurate predictions of ecological interactions with minimal noise, solely utilizing input interaction data without relying on traits or phylogenetic information regarding interacting nodes. These predictions are particularly precise for large networks, underscoring their potential to address knowledge gaps in emerging extensive metawebs. Notably, taxonomic validation and interaction recovery methods are sensitive to connectance and network size, respectively, suggesting prospects for developing robust interaction validation methods.;,citation_author=Sagar Adhurya;,citation_author=Young-Seuk Park;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=n/a;,citation_doi=10.1111/2041-210X.14358;,citation_issn=2041-210X;,citation_volume=n/a;,citation_language=en-US;,citation_journal_title=Methods in Ecology and Evolution;">
@@ -376,7 +376,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">November 12, 2024</p>
+              <p class="date">November 13, 2024</p>
             </div>
           </div>
           
@@ -473,10 +473,10 @@ window.Quarto = {
 <div id="fig-process" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/representations.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Aligning the various processes that determine interactions with the different network representations. First we start with a ‘global metaweb’ this network which captures all possible interactions for an arbitrary collection of species, we can further refine this network by taking in to consideration the co-occurrence of these difference species - as shown here we have two regions with some species (blue) that are found in both regions and others endemic to either region one (pink) or region two (orange). These regional metawebs to capture all possible interactions, however it only considers species that co-occur. However even within a region we do not expect all interactions to be realised but rather that there are multiple configurations of the regional metaweb over both space and time. The ‘state’ of the different network realisations are ultimately influenced not just by the co-occurrence of a species pair but rather the larger community context such as the abundance of different species, maximising energy gain, or indirect/higher order interactions."><img src="images/representations.png" class="img-fluid figure-img"></a>
+<a href="images/anatomy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Aligning the various processes that determine interactions (right column) with the different network representations (left column). First we start with a global metaweb this network captures all possible interactions for a collection of species in the global context. However within the global environment different species occur in different regions (region one = yellow and region 2 = orange), and it is possible to construct two different metawebs (regional metawebs) for each region by taking accounting for the co-occurrence patterns of the difference species - as shown here we have two regions with some species (blue) that are found in both regions and others endemic to either region one (yellow) or region two (orange). However even within a region we do not expect that all interactions to be realised but rather that there are multiple configurations of the regional metaweb over both space and time. The ‘state’ of the different realised networks are ultimately influenced not just by the co-occurrence of a species pair but rather the larger community context such as the abundance of different species, maximising energy gain, or indirect/higher order interactions."><img src="images/anatomy.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Aligning the various processes that determine interactions with the different network representations. First we start with a ‘global metaweb’ this network which captures all possible interactions for an arbitrary collection of species, we can further refine this network by taking in to consideration the co-occurrence of these difference species - as shown here we have two regions with some species (blue) that are found in both regions and others endemic to either region one (pink) or region two (orange). These regional metawebs to capture all possible interactions, however it only considers species that co-occur. However even within a region we do not expect all interactions to be realised but rather that there are multiple configurations of the regional metaweb over both space and time. The ‘state’ of the different network realisations are ultimately influenced not just by the co-occurrence of a species pair but rather the larger community context such as the abundance of different species, maximising energy gain, or indirect/higher order interactions.
+Figure&nbsp;1: Aligning the various processes that determine interactions (right column) with the different network representations (left column). First we start with a <strong>global metaweb</strong> this network captures all possible interactions for a collection of species in the global context. However within the global environment different species occur in different regions (region one = yellow and region 2 = orange), and it is possible to construct two different metawebs (<strong>regional metawebs</strong>) for each region by taking accounting for the co-occurrence patterns of the difference species - as shown here we have two regions with some species (blue) that are found in both regions and others endemic to either region one (yellow) or region two (orange). However even within a region we do not expect that all interactions to be realised but rather that there are multiple configurations of the regional metaweb over both space and time. The ‘state’ of the different <strong>realised networks</strong> are ultimately influenced not just by the co-occurrence of a species pair but rather the larger community context such as the abundance of different species, maximising energy gain, or indirect/higher order interactions.
 </figcaption>
 </figure>
 </div>
@@ -980,7 +980,7 @@ Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consum
   title = {Unveiling the {Complexity} of {Food} {Webs:} {A}
     {Comprehensive} {Overview} of {Definitions,} {Scales,} and
     {Mechanisms}},
-  date = {2024-11-12},
+  date = {2024-11-13},
   langid = {en},
   abstract = {Food webs are a useful abstraction and representation of
     the feeding links between species in a community and are used to
@@ -1002,7 +1002,7 @@ Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consum
 Strydom, Tanya, Jennifer A. Dunne, Timothée Poisot, and Andrew P.
 Beckerman. 2024. <span>“Unveiling the Complexity of Food Webs: A
 Comprehensive Overview of Definitions, Scales, and Mechanisms.”</span>
-TREE (One Can Dream...). November 12, 2024.
+TREE (One Can Dream...). November 13, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
