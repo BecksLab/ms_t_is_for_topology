@@ -2,7 +2,7 @@
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{images/representations.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{images/anatomy.png}}
 
 }
 
