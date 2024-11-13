@@ -161,7 +161,7 @@ It should be clear that there is a high degree of interrelatedness and overlap b
 
 : This table represents an alternative approach to try and think about mapping questions to the different network representations.
 
-# Conclusing remarks
+# Concluding remarks
 
 Having a clear understanding of the interplay between network representations and the processes that they are capable of encoding is critical if we are to understand exactly which networks can be used to answer which questions. As we highlight in Box 1 the different network representations have different potential uses and it should be clear that there is no 'best' network representation but rather a network representation that is best suited to its intended purpose. In providing a formalisation regards to the assumptions, scales, and mechanisms that need to be explicitly taken into consideration when deciding to use (and construct) networks we hope to prevent the unintentional misuse or misinterpretation of networks as well as provide a starting point from which we can develop a better framework for the applied use of networks to answer questions that are not only pressing within the field but also within broader biodiversity science.
 
