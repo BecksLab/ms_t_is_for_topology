@@ -651,12 +651,8 @@ utility/applicability of the different network representations in the
 context of trying to understand the feeding dynamics of a seasonal
 community.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, toptitle=1mm, breakable, bottomtitle=1mm, arc=.35mm, leftrule=.75mm, colback=white, rightrule=.15mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6]
-
-\begin{quote}
-note I am using a figure for layout experimentation purposes
-\end{quote}
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, coltitle=black, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm, opacitybacktitle=0.6, titlerule=0mm, toptitle=1mm, left=2mm, colback=white]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -667,21 +663,23 @@ to be either present or absent depending on the season (\emph{i.e.,}
 changes in co-occurrence) as well as some species exhibiting seasonal
 shifts in their diets (be that due to changes in species occurrence or
 predator choice). If one were to construct a metaweb that disregards
-these season shifts (`global metaweb') these details would be lost and
-it would be valuable to construct either smaller metawebs for the
-different seasonal communities (thereby capturing the changes in
-community diversity), or realised networks for each season (to capture
-diet or ecosystem process shifts \emph{e.g.,} Schwarz et al. (2020)).
-However, these small-scale networks lack the context of the bigger
-picture that is available at the metaweb - that is it gives us a more
-holistic idea of the entire diet range of a specific species, which is
-important when one needs to make conservation-based/applied decisions
-(\emph{e.g.,} conserving the entire diet of a species and not just
-seasonal prey items) as well as providing information on interactions
-that may be possible regardless of the environmental/community context
-(species may have the capacity to consume certain prey items but do not
-do so due to local conditions). With this is mind let us see how the
-different network aggregations can be used
+these season shifts (\emph{i.e.,} a global metaweb) it is clear that
+these finer nuances would be lost. It is of course possible to construct
+either smaller metawebs for the different seasonal communities (thereby
+capturing the changes in community diversity), or realised networks for
+each season (to capture diet or ecosystem process shifts \emph{e.g.,}
+Schwarz et al. (2020)). However, these small-scale networks lack the
+context of the bigger picture that is available at the metaweb - that is
+it gives us a more holistic idea of the entire diet range of a specific
+species, which is important when one needs to make
+conservation-based/applied decisions (\emph{e.g.,} conserving the entire
+diet of a species and not just seasonal prey items) as well as providing
+information on interactions that may be possible regardless of the
+environmental/community context (species may have the capacity to
+consume certain prey items but do not do so due to local conditions).
+With this is mind let us see how the different network aggregations can
+be used: \emph{not3 that for now I am using Figure~\ref{fig-box} for
+layout experimentation purposes}
 
 \begin{figure}[H]
 
@@ -817,11 +815,12 @@ In addition to the more intentional development of models we also need
 to consider the validation of these models, there have been developments
 and discussions for assessing how well a model recovers pairwise
 interactions (Poisot, 2023; Strydom et al., 2021), although their are
-still challenges related to the completeness of the datasets used for
-validation, specifically the challenge of dealing with false-negatives
-(Catchen et al., 2023). In terms of validating the predicted structure
-of networks, we still lack clear set of guidelines for benchmarking the
-ability of models to recover structure (Allesina et al., 2008).
+still challenges related to the completeness of the datasets that are to
+be used for validation, specifically the challenge of dealing with
+false-negatives (Catchen et al., 2023). In terms of validating the
+predicted structure of networks, we still lack clear set of guidelines
+for benchmarking the ability of models to recover structure (Allesina et
+al., 2008).
 
 \subsection{At what scale should we be predicting and using
 networks?}\label{at-what-scale-should-we-be-predicting-and-using-networks}
@@ -874,29 +873,6 @@ believe are some of the key questions for which interaction networks can
 be used to the different networks representations that are most
 suitable, as well as highlight some of the methodological challenges
 that still need to be improved upon.
-
-\subsection{How will novel communities
-interact?}\label{how-will-novel-communities-interact}
-
-Here we can talk about the effects of range shifts and invasions and how
-this will result in new/novel community assemblages. And then also the
-intentional changes of species compositions through rewilding.
-
-\subsection{How will changes in the community influence ecosystem
-processes?}\label{how-will-changes-in-the-community-influence-ecosystem-processes}
-
-Linking to dynamic networks and how this lets us build
-spatially/temporally explicit networks which can be used to infer form
-and function. Also bring in the discussion on the suitable aggregation
-(and the fact that we don't know)
-
-\subsection{How do species
-persist/co-exist?}\label{how-do-species-persistco-exist}
-
-Specific sub points to consider here is persistence, especially
-persistence to perturbation. Again, dynamic networks and
-network/community assembly and finally extinctions (Dunhill et al.,
-2024).
 
 \begin{figure}
 
@@ -962,6 +938,23 @@ Practical use & What is both attainable (data constraints) but also of
 practical use to `real world' decision making. So moving from theory to
 applied & ??Regional metawebs?? \\
 \end{longtable}
+
+\section{Conclusing remarks}\label{conclusing-remarks}
+
+Having a clear understanding of the interplay between network
+representations and the processes that they are capapble of encoding is
+critical if we are to understand exactly which networks can be used to
+answer which questions. As we highlight in Box 1 the different network
+representations have different potential uses and it should be clear
+that there is no `best' network representation but rather a network
+representation that is best suited to its intended purpose. In providing
+a formalisation regards to the assumptions, scales, and mechanisms that
+need to be explicitly taken into consideration when deciding to use (and
+construct) networks we hope to prevent the unintentional misuse or
+misinterpretation of networks as well as provide a starting point from
+which we can develop a better framework for the applied use of networks
+to answer questions that are not only pressing within the field but also
+within broader biodiversity science.
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
