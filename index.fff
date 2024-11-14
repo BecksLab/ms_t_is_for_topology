@@ -29,19 +29,6 @@ interactions.}
 \end{figure}
 \efloatseparator
  
-\begin{figure}[H]
-
-\centering{
-
-\pandocbounded{\includegraphics[keepaspectratio]{images/Box1.png}}
-
-}
-
-\caption{\label{fig-box}}
-
-\end{figure}
-\efloatseparator
- 
 \begin{figure}
 
 \centering{
@@ -52,6 +39,7 @@ interactions.}
 
 \caption{\label{fig-future}Here we highlight some of the outstanding
 questions in both network as well as general ecology, as well as some of
-the outstanding methodological challenges we face.}
+the outstanding methodological challenges with regards to constructing
+food webs (shown in orange) that we are faced with.}
 
 \end{figure}
