@@ -227,7 +227,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-11-13}
+\date{2024-11-14}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -298,68 +298,65 @@ scientific ignorance%
 
 
 At the heart of modern biodiversity science are a set of concepts and
-theories about biodiversity, stability and function. These relate to the
-abundance, distribution and services that biodiversity provides, and how
-biodiversity -- as an interconnected set of species -- responds to
-multiple stressors. The interaction between species is one of the
+theories about biodiversity, stability, and function. These relate to
+the abundance, distribution, and services that biodiversity provides,
+and how biodiversity -- as an interconnected set of species -- responds
+to multiple stressors. The interaction between species is one of the
 fundamental building blocks of ecological communities, providing a
 powerful abstraction that can help quantify, conceptualise, and
 understand biodiversity dynamics, and ultimately, make predictions,
 mitigate change, and manage services (Windsor et al., 2023). Such
 network representations of biodiversity (including within species
 diversity) are increasingly argued to be an asset to predictive ecology,
-climate change mitigation and resource management, with the argument
+climate change mitigation, and resource management. With the argument
 that characterising biodiversity in a network will afford a deeper
-capacity to understand and predict the abundance, distribution, dynamics
-and services provided by multiple species facing multiple stressors.
-However, there is a growing discourse around limitations to the
-interpretation and applied use of networks (Blüthgen, 2010; Dormann,
+capacity to understand and predict the abundance, distribution,
+dynamics, and services provided by multiple species facing multiple
+stressors. However, there is a growing discourse around limitations to
+the interpretation and applied use of networks (Blüthgen, 2010; Dormann,
 2023), primarily as the result of shortcomings regarding the
 conceptualisation of networks (Blüthgen \& Staab, 2024).
 
 An `interaction network' can be defined and conceptualised in a myriad
-of ways, which means that different networks will be embedding different
-processes (or determinants) of interactions, ultimately influencing the
-patterns and mechanisms that are inferred (Proulx et al., 2005). The
-different ways in which a network can be represented is the result of
-\emph{how} the network is constructed, which itself rests on two
-pillars: the data used to construct the network (of which there has been
-a plethora of discussions as to the challenges relating to the scale and
-nature of data collection/observation \emph{e.g.,} Blüthgen \& Staab,
-2024; Brimacombe et al., 2023; Moulatlet et al., 2024; Polis, 1991;
-Pringle \& Hutchinson, 2020; Saberski et al., 2024) and the underlying
-theory as to what drives the occurrence of interactions between species.
-The latter represents an expression of mechanism and process that gives
-rise to the patterns that emerge from collating interactions among
-species, and will ultimately inform which data are deemed important in
-the determination of interactions occurring. Each of these pillars
-carries with it a set of practical, semantic and conceptual constraints
-that not only influence progress in making network ecology more valuable
-and potentially predictive, but help define the spatial, temporal, and
+of ways, which means that different networks embed different processes
+(or determinants) of interactions, ultimately influencing the patterns
+and mechanisms that are inferred (Proulx et al., 2005). The different
+ways in which a network can be represented is the result of \emph{how}
+the network is constructed, which itself rests on two pillars: the data
+used to construct the network (of which there has been a plethora of
+discussions as to the challenges relating to the scale and nature of
+data collection/observation \emph{e.g.,} Blüthgen \& Staab, 2024;
+Brimacombe et al., 2023; Moulatlet et al., 2024; Polis, 1991; Pringle \&
+Hutchinson, 2020; Saberski et al., 2024) and the underlying theory as to
+what drives the occurrence of interactions between species. The latter
+represents an expression of mechanism and process that gives rise to the
+patterns that emerge from collating interactions among species, and will
+ultimately inform which data are deemed important in the determination
+of interactions occurring. Each of these pillars carries with it a set
+of practical, semantic and conceptual constraints that not only
+influence progress in making network ecology more valuable and
+potentially predictive, but help define the spatial, temporal, and
 evolutionary scale of assumptions we make and the predictions we might
 generate from different network representations.
 
 In this perspective we aim to provide an overview of the different
-\textbf{food web} representations (\emph{a note on how there has been
-developments in the `bipartite space' and it would be flawed to try and
-view them in tandem as food webs and non-trophic webs are two very
-different conceptualisations}), particularly how these relate to the
-terminology used to define a network, and how this influenced by both
-the processes that determine networks as well as how this relates to the
-way in which we construct networks. The provision of this detail
-ultimately leads to a set of insights and conclusions about whether,
-when. and under what conditions network representations of biodiversity
-can contribute to the advancement of ecological theory and generate
-value in predictive ecology. Specifically, we finish this perspective
-with an overview of fundamental questions in ecology that we think can
-benefit from network thinking and a proposal that such thinking can
-accelerate our capacity to predict the impact of multiple stressors on
-biodiverse communities.
+\textbf{food web} representations, particularly how these relate to the
+terminology used to define a food web, and how this influenced by both
+the processes that determine interactions as well as how this relates to
+the way in which we construct the resulting networks. An understanding
+of the nuances of what different network representations are encoding
+provides insights and conclusions about whether, when, and under what
+conditions network representations of biodiversity can contribute to the
+advancement of ecological theory and be of value in predictive ecology.
+Specifically, we finish this perspective with an overview of fundamental
+questions in ecology that we think can benefit from network thinking and
+a proposal that such thinking can accelerate our capacity to predict the
+impact of change on biodiverse communities.
 
 \section{Setting the Scene: The Not So Basics of Nodes and
 Edges}\label{sec-anatomy}
 
-Defining a food web seems simple; it is the representation of the
+Defining a food web seems simple; it is the representation of feeding
 interactions (edges) between species (nodes) in the form of a network,
 however the definition of `edges' and `nodes', as well as the levels of
 organization at which they are aggregated can take many forms Moulatlet
@@ -383,8 +380,8 @@ species - so called `trophic species' (Williams \& Martinez, 2000;
 Yodzis, 1982) or segregation of species by life stages (Clegg et al.,
 2018). Practical implications of how we are aggregating the nodes is
 that the resolution may not always be `pixel perfect', which limits the
-ability to make (taxonomic) species specific inferences \emph{e.g.,}
-does species \(a\) eat species \(b\), however there is value in having
+ability to make (taxonomic) species specific inferences (\emph{e.g.,}
+does species \(a\) eat species \(b\)), however there is value in having
 nodes that represent an aggregation of species, as the distribution of
 the links between them are more meaningful in terms of understanding
 energy flow and distribution within the system.
@@ -394,14 +391,14 @@ edge?}\label{what-is-captured-by-an-edge}
 
 At its core, links within food webs can be thought of as a
 representation of either feeding links between species - be that
-realised (Pringle, 2020) or potential (Dunne, 2006), alternative links
-can represent fluxes within the system \emph{e.g.,} energy transfer or
+realised (Pringle, 2020) or potential (Dunne, 2006), or links can
+represent fluxes within a system \emph{e.g.,} energy transfer or
 material flow as the result of the feeding links between species
 (Lindeman, 1942). Fundamentally this means that the links within a
 network represent different `currencies' (either the feasibility of a
 link existing between two species or the energy that is moving through
 the system) and how the links within a network are specified will
-influence the resulting structure of the network. For example taking a
+influence the resulting structure of the network. For example, taking a
 food web that consists of links representing all \emph{potential}
 feeding links for a community (\emph{i.e.,} a metaweb) will be
 meaningless if one is interested in understanding the flow of energy
@@ -432,24 +429,24 @@ forbidden links (Jordano, 2016b), or provide an idea of the
 \emph{complete} diet of a species (Strydom et al., 2023). In contrast
 realised networks are highly localised and the links between species are
 contingent on both the co-occurrence of species, the role of the
-environment, and population and community dynamics on predator choice.
-In the context of definitions and semantics the links that are
+environment, and the population and community dynamics on predator
+choice. In the context of definitions and semantics the links that are
 represented by a metaweb and a realised network are different; links
-that are absent in a metaweb can be treated as being truly absent,
-however links that are absent in a realised network cannot be considered
-to be truly absent but rather as absent due to the broader
-environmental/community context. Importantly, a realised network is
-\emph{not} simply the downscaling of a metaweb to a smaller scale
-(\emph{e.g.,} moving from the country to the 1x1 km\textsuperscript{2}
-scale based on fine-scale species co-occurrence) but represents a shift
-towards capturing the higher level processes that determine the
-\emph{realisation} of an interaction, \emph{i.e.,} the definition of an
-edges shifts from being determined by interaction feasibility to that of
-energetic choices/consequences. Thus, different network representations
-are determined and constrained by different sets of assumptions as to
-what the processes are that determine the presence/absence of an
-interaction between two species as well as the resulting network
-structure.
+that are absent in a metaweb can (conceptually although not always
+practically) be treated as being truly absent, however links that are
+absent in a realised network cannot be considered to be truly absent but
+rather as absent due to the broader environmental/community context.
+Importantly, a realised network is \emph{not} simply the downscaling of
+a metaweb to a smaller scale (\emph{e.g.,} moving from the country to
+the 1x1 km\textsuperscript{2} scale based on fine-scale species
+co-occurrence) but rather represents a shift towards capturing the
+higher level processes that determine the \emph{realisation} of an
+interaction, \emph{i.e.,} the definition of an edges shifts from being
+determined by interaction feasibility to that of energetic
+choices/consequences. Thus, different network representations are
+determined and constrained by different sets of assumptions as to what
+the processes are that determine the presence/absence of an interaction
+between two species as well as the resulting network structure.
 
 \section{From Nodes and Edges to Scale, Context, and
 Process}\label{sec-process}
@@ -460,7 +457,7 @@ interaction between species, however these processes are also scale and
 context dependent. Here we start by introducing the five core processes
 that determine either the feasibility or the realisation of
 interactions, namely: evolutionary compatibility, co-occurrence,
-abundance, predator choice, and non-trophic interactions; while
+abundance, profitability, and non-trophic interactions; while
 simultaneously contextualising them within, and linking them to, the
 different network representations Figure~\ref{fig-process}. We can think
 of the different network representations to be conceptually analogous to
@@ -469,10 +466,10 @@ the fundamental and realised niche, whereby the metaweb represents the
 the `realised diet' of a species. Of course these processes do not
 function in a vacuum and do interact with/influence one another, but it
 is still beneficial to present them in a categorical manner as these
-different processes are often the underpinning logic in the development
-of prediction/network models, the criteria for data collection in the
-field, and the scale of organisation for which they are relevant
-(species, population, or community).
+different processes are often the underpinning the logic in the
+development of prediction/network models, the criteria for data
+collection in the field, and the scale of organisation for which they
+are relevant (species, population, or community).
 
 \begin{figure}
 
@@ -527,7 +524,7 @@ Finally, one should be aware that it is possible to represent
 evolutionary compatible interactions as either binary (possible vs
 forbidden) or as a probability (Banville et al., 2024), where the
 probability represents how likely the interaction between two species is
-to be possible.
+to be feasible.
 
 \textbf{(Co)occurrence}
 
@@ -550,7 +547,7 @@ in the space of trying to determine the distribution of a species
 
 The abundance of the different species within the community is thought
 to influence the realisation of feeding links primarily in two ways.
-Firstly there is the argument that the structure of networks (and the
+Firstly, there is the argument that the structure of networks (and the
 interactions that they are composed of) are driven \emph{only} by the
 abundance of the different species and that interactions are not
 contingent on there being any compatibility (trait matching) between
@@ -615,7 +612,10 @@ order to construct a network who's structure is a closer approximation
 of reality (localised interactions) one needs to take into consideration
 the properties of the community as a whole and information about the
 individuals it is comprised of (Quintero et al., 2024), which requires
-more data at the community scale, such as the abundance of species.
+more data at the community scale, which, as shown in
+Figure~\ref{fig-process}, is encapsulated by the intersections of
+species \textbf{abundance}, \textbf{profitability}m and the role of
+\textbf{non-trophic interactions}.
 
 \section{Network construction is
 nuanced}\label{network-construction-is-nuanced}
@@ -629,9 +629,9 @@ to the different time and spatial scales they may be operating at). Thus
 we often turn to models to either predict networks (be that the
 interaction between two species, or network structure (Strydom et al.,
 2021)), or as a means to identify missing interactions (gap fill) within
-an existing empirical dataset (Biton et al., 2024; Dallas et al., 2017;
-Stock, 2021), and so for the purpose of this discussion network
-construction will be synonymous with using a model as a means to
+an existing empirical dataset (\emph{e.g.,} Biton et al., 2024; Dallas
+et al., 2017; Stock, 2021), and so for the purpose of this discussion
+network construction will be synonymous with using a model as a means to
 represent or predict a network. That is not to say that there is no need
 for empirical data collection, but rather that using a model for food
 web prediction (or reconstruction) is a more feasible approach as it
@@ -654,8 +654,8 @@ utility/applicability of the different network representations in the
 context of trying to understand the feeding dynamics of a seasonal
 community.
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, rightrule=.15mm, left=2mm, breakable, colframe=quarto-callout-note-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, toptitle=1mm, bottomrule=.15mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, rightrule=.15mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, toptitle=1mm, colback=white, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, arc=.35mm, left=2mm, opacityback=0]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -681,20 +681,28 @@ information on interactions that may be possible regardless of the
 environmental/community context (species may have the capacity to
 consume certain prey items but do not do so due to local conditions).
 With this is mind let us see how the different network aggregations can
-be used: \emph{note that for now I am using Figure~\ref{fig-box} for
-layout experimentation purposes}
+be used:
 
-\begin{figure}[H]
+\textbf{1. A global metaweb:} Knowledge of the entire diet breadth of a
+species is valuable especially in terms of understanding how a species
+will respond to changes in the community - \emph{e.g.}
+invasions/rewilding scenarios (where does the new species `fit' within
+the network?) as well as potential capacity to shift its diet. There is
+also the argument that a metaweb will allow us to identify species that
+act as links across the landscape.
 
-\centering{
+\textbf{2. A seasonal metaweb:} Knowledge at the finer scale is also
+valuable to understand and provide insight on the differences in diets
+between seasons (and identify key species within the network in
+different environments).
 
-\pandocbounded{\includegraphics[keepaspectratio]{images/Box1.png}}
-
-}
-
-\caption{\label{fig-box}}
-
-\end{figure}%
+\textbf{3. A realised network:} Provide insight as to the different
+network configurations for a given time and place, which is a better
+approximation of the energy flows/ecosystem processes as they are
+occurring (that is the \emph{structure} of the network is also
+meaningful). A realised network will also allow one to detect more
+nuanced shifts diet - \emph{i.e.,} not only changes in links due to
+species turnover between seasons.
 
 \end{tcolorbox}
 
@@ -887,7 +895,8 @@ that still need to be improved upon.
 
 \caption{\label{fig-future}Here we highlight some of the outstanding
 questions in both network as well as general ecology, as well as some of
-the outstanding methodological challenges (shown in orange) we face.}
+the outstanding methodological challenges with regards to constructing
+food webs (shown in orange) that we are faced with.}
 
 \end{figure}%
 
