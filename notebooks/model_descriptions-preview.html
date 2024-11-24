@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.6.33">
+    <meta name="generator" content="quarto-1.6.37">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2024-11-15">
+    <meta name="dcterms.date" content="2024-11-24">
 
     <title>SuppMat 1: Model Families Extended Description</title>
     <style>
@@ -139,10 +139,10 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-27262f0026302d056883bfd2faaf8757.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-86e67f1fcd594f562d62505f92e4b4dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -182,7 +182,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">November 15, 2024</p>
+              <p class="date">November 24, 2024</p>
             </div>
           </div>
           
@@ -388,6 +388,7 @@ A summary of the different families of tools that can be used to generate food w
 <section id="energetic-models" class="level3">
 <h3 class="anchored" data-anchor-id="energetic-models">Energetic models</h3>
 <p>Broadly this family of models is rooted in feeding theory and allocates the links between species based on energetics, which predicts the diet of a consumer based on energy intake. This means that the model is focused on predicting not only the number of links in a network but also the arrangement of these links based on the diet breadth of a species. See also <span class="citation" data-cites="deangelisModelTropicInteraction1975">DeAngelis, Goldstein, and O’Neill (<a href="#ref-deangelisModelTropicInteraction1975" role="doc-biblioref">1975</a>)</span></p>
+<p>In order to construct realised networks models need to incorporate <em>both</em> the feasibility of interactions (<em>i.e.,</em> determine the entire diet breadth of a species) as well as then determine which interactions are realised (<em>i.e.,</em> incorporate the ‘cost’ of interactions). As far as we are aware there is no model that explicitly accounts for both of these ‘rules’ (although see <span class="citation" data-cites="olivierExploringTemporalVariability2019">Olivier et al. (<a href="#ref-olivierExploringTemporalVariability2019" role="doc-biblioref">2019</a>)</span>) and rather <em>only</em> account for processes that determine the realisation of an interaction (<em>i.e.,</em> abundance, predator choice, or non-trophic interactions). Although the use of allometry <em>i.e.,</em> body size <span class="citation" data-cites="valdovinosBioenergeticFrameworkAboveground2023 beckermanForagingBiologyPredicts2006 yodzisBodySizeConsumerResource1992 whiteRelationshipsBodySize2007">(<em>e.g.,</em> <a href="#ref-valdovinosBioenergeticFrameworkAboveground2023" role="doc-biblioref">Valdovinos et al. 2023</a>; <a href="#ref-beckermanForagingBiologyPredicts2006" role="doc-biblioref">Beckerman, Petchey, and Warren 2006</a>; <a href="#ref-yodzisBodySizeConsumerResource1992" role="doc-biblioref">Yodzis and Innes 1992</a>; <a href="#ref-whiteRelationshipsBodySize2007" role="doc-biblioref">White et al. 2007</a>)</span> may represent a first step in capturing ‘evolutionary compatibility’ alongside more energy (predator choice) driven processes we still need to account for other traits that determine feeding compatibility <span class="citation" data-cites="vandewalleArthropodFoodWebs2023">(<em>e.g.,</em> <a href="#ref-vandewalleArthropodFoodWebs2023" role="doc-biblioref">Van De Walle et al. 2023</a> show how incorporating prey defensive properties alongside body size improves predictions)</span>. As realised networks are are build on the concept of dynamic processes (the abundance of species will always be in flux) these networks are valuable for understanding the behaviour of networks over time or their response to change <span class="citation" data-cites="lajaaitiEcologicalNetworksDynamicsJlJulia2024 delmasSimulationsBiomassDynamics2017 curtsdotterEcosystemFunctionPredator2019">(<a href="#ref-lajaaitiEcologicalNetworksDynamicsJlJulia2024" role="doc-biblioref">Lajaaiti et al. 2024</a>; <a href="#ref-delmasSimulationsBiomassDynamics2017" role="doc-biblioref">Delmas et al. 2017</a>; <a href="#ref-curtsdotterEcosystemFunctionPredator2019" role="doc-biblioref">Curtsdotter et al. 2019</a>)</span>. However, they are ‘costly’ to construct (requiring data about the entire community as it is the behaviour of the system that determines the behaviour of the part) and also lack the larger diet niche context afforded by metawebs.</p>
 <p><strong>DBM</strong> <span class="citation" data-cites="beckermanForagingBiologyPredicts2006">(<a href="#ref-beckermanForagingBiologyPredicts2006" role="doc-biblioref">Beckerman, Petchey, and Warren 2006</a>)</span>: Feeding ‘rules’ are based on the energetic content of species, which is theoretically and conceptually embedded within the foraging ecology space</p>
 <p><strong>ADBM</strong> <span class="citation" data-cites="petcheySizeForagingFood2008">(<a href="#ref-petcheySizeForagingFood2008" role="doc-biblioref">Petchey et al. 2008</a>)</span>: A version of the DBM that adds the idea of body size (allometry) to the equation</p>
 </section>
@@ -461,8 +462,14 @@ Cohen, Joel E, Frederic Briand, and Charles Newman. 1990. <em>Community <span>Fo
 <div id="ref-cohenStochasticTheoryCommunity1985" class="csl-entry" role="listitem">
 Cohen, Joel E., C. M. Newman, and John Hyslop Steele. 1985. <span>“A Stochastic Theory of Community Food Webs <span>I</span>. <span>Models</span> and Aggregated Data.”</span> <em>Proceedings of the Royal Society of London. Series B. Biological Sciences</em> 224 (1237): 421–48. <a href="https://doi.org/10.1098/rspb.1985.0042">https://doi.org/10.1098/rspb.1985.0042</a>.
 </div>
+<div id="ref-curtsdotterEcosystemFunctionPredator2019" class="csl-entry" role="listitem">
+Curtsdotter, Alva, H. Thomas Banks, John E. Banks, Mattias Jonsson, Tomas Jonsson, Amanda N. Laubmeier, Michael Traugott, and Riccardo Bommarco. 2019. <span>“Ecosystem Function in Predator–Prey Food Webs—Confronting Dynamic Models with Empirical Data.”</span> <em>Journal of Animal Ecology</em> 88 (2): 196–210. <a href="https://doi.org/10.1111/1365-2656.12892">https://doi.org/10.1111/1365-2656.12892</a>.
+</div>
 <div id="ref-deangelisModelTropicInteraction1975" class="csl-entry" role="listitem">
 DeAngelis, D. L., R. A. Goldstein, and R. V. O’Neill. 1975. <span>“A <span>Model</span> for <span>Tropic Interaction</span>.”</span> <em>Ecology</em> 56 (4): 881–92. <a href="https://doi.org/10.2307/1936298">https://doi.org/10.2307/1936298</a>.
+</div>
+<div id="ref-delmasSimulationsBiomassDynamics2017" class="csl-entry" role="listitem">
+Delmas, Eva, Ulrich Brose, Dominique Gravel, Daniel B. Stouffer, and Timothée Poisot. 2017. <span>“Simulations of Biomass Dynamics in Community Food Webs.”</span> <em>Methods in Ecology and Evolution</em> 8 (7): 881–86. <a href="https://doi.org/10.1111/2041-210X.12713">https://doi.org/10.1111/2041-210X.12713</a>.
 </div>
 <div id="ref-desjardins-proulxEcologicalInteractionsNetflix2017" class="csl-entry" role="listitem">
 Desjardins-Proulx, Philippe, Idaline Laigle, Timothée Poisot, and Dominique Gravel. 2017. <span>“Ecological Interactions and the <span>Netflix</span> Problem.”</span> <em>PeerJ</em> 5: e3644. <a href="https://doi.org/10.7717/peerj.3644">https://doi.org/10.7717/peerj.3644</a>.
@@ -482,6 +489,9 @@ Gray, Clare, David H. Figueroa, Lawrence N. Hudson, Athen Ma, Dan Perkins, and G
 <div id="ref-hubbellUnifiedNeutralTheory2001" class="csl-entry" role="listitem">
 Hubbell, Stephen P. 2001. <em>The <span>Unified Neutral Theory</span> of <span>Biodiversity</span> and <span>Biogeography</span> (<span>MPB-32</span>)</em>. Princeton University Press. <a href="https://www.jstor.org/stable/j.ctt7rj8w">https://www.jstor.org/stable/j.ctt7rj8w</a>.
 </div>
+<div id="ref-lajaaitiEcologicalNetworksDynamicsJlJulia2024" class="csl-entry" role="listitem">
+Lajaaiti, Ismaël, Iago Bonnici, Sonia Kéfi, Hana Mayall, Alain Danet, Andrew P. Beckerman, Thomas Malpas, and Eva Delmas. 2024. <span>“<span>EcologicalNetworksDynamics</span>.jl <span>A Julia</span> Package to Simulate the Temporal Dynamics of Complex Ecological Networks.”</span> bioRxiv. <a href="https://doi.org/10.1101/2024.03.20.585899">https://doi.org/10.1101/2024.03.20.585899</a>.
+</div>
 <div id="ref-llewelynPredictingPredatorPrey2023" class="csl-entry" role="listitem">
 Llewelyn, John, Giovanni Strona, Christopher R. Dickman, Aaron C. Greenville, Glenda M. Wardle, Michael S. Y. Lee, Seamus Doherty, Farzin Shabani, Frédérik Saltré, and Corey J. A. Bradshaw. 2023. <span>“Predicting Predator–Prey Interactions in Terrestrial Endotherms Using Random Forest.”</span> <em>Ecography</em> 2023 (9): e06619. <a href="https://doi.org/10.1111/ecog.06619">https://doi.org/10.1111/ecog.06619</a>.
 </div>
@@ -496,6 +506,9 @@ Morales-Castilla, Ignacio, Miguel G. Matias, Dominique Gravel, and Miguel B. Ara
 </div>
 <div id="ref-ohlmannMappingImprintBiotic2018" class="csl-entry" role="listitem">
 Ohlmann, Marc, Florent Mazel, Loïc Chalmandrier, Stéphane Bec, Eric Coissac, Ludovic Gielly, Johan Pansu, et al. 2018. <span>“Mapping the Imprint of Biotic Interactions on <span><span class="math inline">\(\beta\)</span></span>-Diversity.”</span> <em>Ecology Letters</em> 21 (11): 1660–69. <a href="https://doi.org/10.1111/ele.13143">https://doi.org/10.1111/ele.13143</a>.
+</div>
+<div id="ref-olivierExploringTemporalVariability2019" class="csl-entry" role="listitem">
+Olivier, Pierre, Romain Frelat, Erik Bonsdorff, Susanne Kortsch, Ingrid Kröncke, Christian Möllmann, Hermann Neumann, Anne F. Sell, and Marie C. Nordström. 2019. <span>“Exploring the Temporal Variability of a Food Web Using Long-Term Biomonitoring Data.”</span> <em>Ecography</em> 42 (12): 2107–21. <a href="https://doi.org/10.1111/ecog.04461">https://doi.org/10.1111/ecog.04461</a>.
 </div>
 <div id="ref-ovaskainenUsingLatentVariable2016" class="csl-entry" role="listitem">
 Ovaskainen, Otso, Nerea Abrego, Panu Halme, and David Dunson. 2016. <span>“Using Latent Variable Models to Identify Large Networks of Species-to-Species Associations at Different Spatial Scales.”</span> <em>Methods in Ecology and Evolution</em> 7 (5): 549–55. <a href="https://doi.org/10.1111/2041-210X.12501">https://doi.org/10.1111/2041-210X.12501</a>.
@@ -539,6 +552,15 @@ Strydom, Tanya, Salomé Bouskila, Francis Banville, Ceres Barros, Dominique Caro
 <div id="ref-strydomSVDEntropyReveals2021" class="csl-entry" role="listitem">
 Strydom, Tanya, Giulio V. Dalla Riva, and Timothée Poisot. 2021. <span>“<span>SVD Entropy Reveals</span> the <span>High Complexity</span> of <span>Ecological Networks</span>.”</span> <em>Frontiers in Ecology and Evolution</em> 9. <a href="https://doi.org/10.3389/fevo.2021.623141">https://doi.org/10.3389/fevo.2021.623141</a>.
 </div>
+<div id="ref-valdovinosBioenergeticFrameworkAboveground2023" class="csl-entry" role="listitem">
+Valdovinos, Fernanda S., Kayla R. S. Hale, Sabine Dritz, Paul R. Glaum, Kevin S. McCann, Sophia M. Simon, Elisa Thébault, William C. Wetzel, Kate L. Wootton, and Justin D. Yeakel. 2023. <span>“A Bioenergetic Framework for Aboveground Terrestrial Food Webs.”</span> <em>Trends in Ecology &amp; Evolution</em> 38 (3): 301–12. <a href="https://doi.org/10.1016/j.tree.2022.11.004">https://doi.org/10.1016/j.tree.2022.11.004</a>.
+</div>
+<div id="ref-vandewalleArthropodFoodWebs2023" class="csl-entry" role="listitem">
+Van De Walle, Ruben, Garben Logghe, Nina Haas, François Massol, Martijn L. Vandegehuchte, and Dries Bonte. 2023. <span>“Arthropod Food Webs Predicted from Body Size Ratios Are Improved by Incorporating Prey Defensive Properties.”</span> <em>Journal of Animal Ecology</em> 92 (4): 913–24. <a href="https://doi.org/10.1111/1365-2656.13905">https://doi.org/10.1111/1365-2656.13905</a>.
+</div>
+<div id="ref-whiteRelationshipsBodySize2007" class="csl-entry" role="listitem">
+White, Ethan P., S. K. Morgan Ernest, Andrew J. Kerkhoff, and Brian J. Enquist. 2007. <span>“Relationships Between Body Size and Abundance in Ecology.”</span> <em>Trends in Ecology &amp; Evolution</em> 22 (6): 323–30. <a href="https://doi.org/10.1016/j.tree.2007.03.007">https://doi.org/10.1016/j.tree.2007.03.007</a>.
+</div>
 <div id="ref-williamsSimpleRulesYield2000" class="csl-entry" role="listitem">
 Williams, Richard J., and Neo D. Martinez. 2000. <span>“Simple Rules Yield Complex Food Webs.”</span> <em>Nature</em> 404 (6774): 180–83. <a href="https://doi.org/10.1038/35004572">https://doi.org/10.1038/35004572</a>.
 </div>
@@ -550,6 +572,9 @@ Xie, Jia-Rong, Pan Zhang, Hai-Feng Zhang, and Bing-Hong Wang. 2017. <span>“Com
 </div>
 <div id="ref-yeakelCollapseEcologicalNetwork2014" class="csl-entry" role="listitem">
 Yeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. <span>“Collapse of an Ecological Network in <span>Ancient Egypt</span>.”</span> <em>PNAS</em> 111 (40): 14472–77. <a href="https://doi.org/10.1073/pnas.1408471111">https://doi.org/10.1073/pnas.1408471111</a>.
+</div>
+<div id="ref-yodzisBodySizeConsumerResource1992" class="csl-entry" role="listitem">
+Yodzis, P., and S. Innes. 1992. <span>“Body <span>Size</span> and <span>Consumer-Resource Dynamics</span>.”</span> <em>The American Naturalist</em> 139 (6): 1151–75. <a href="https://doi.org/10.1086/285380">https://doi.org/10.1086/285380</a>.
 </div>
 </div>
 </section>
@@ -636,8 +661,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -748,7 +771,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
