@@ -227,7 +227,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2024-11-26}
+\date{2024-11-27}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -391,24 +391,21 @@ representation of either feeding links between species (be that realised
 or potential (Dunne, 2006; Pringle, 2020)), or fluxes within a system
 \emph{e.g.,} energy transfer or material flow as the result of the
 feeding links between species (Lindeman, 1942). These correspond with
-different `currencies' (the feasibility of links or the energy that is
-moving between nodes). How these links are specified will influence the
-resulting structure of the network. For example, taking a food web that
-consists of links representing all \emph{potential} feeding links for a
-community will be meaningless if one is interested in understanding the
-flow of energy through the network as the links are not
-environmentally/energetically constrained. In addition to the various
-ways of defining the links between species pairs there are also a myriad
-of ways in which the links themselves can be quantified. Links between
-species are often treated as being present or absent (\emph{i.e.,}
-binary) but it is also possible to use probabilities (Banville et al.,
-2024; which quantifies how likely an interaction is to occur, Poisot,
-Cirtwill, et al., 2016) or continuous measurements (which quantifies the
-strength of of an interaction, Berlow et al., 2004).
+different `currencies' (the feasibility of links, or the energy that is
+moving between nodes). There is also a myriad of ways in which the links
+themselves can be specified. Links between species can be treated
+present or absent (\emph{i.e.,} binary), may be defined a, or by
+continuous functions which further quantify the strength of an
+interaction (Berlow et al., 2004). How these links are specified will
+influence the resulting structure of the network. For example, taking a
+food web that consists of links representing all \emph{potential}
+feeding links for a community will be meaningless if one is interested
+in understanding the flow of energy through the network as the links are
+not environmentally/energetically constrained.
 
 \subsection{Network representations}\label{sec-representation}
 
-Networks can be thought of to fall into two different `types'; namely
+Networks can be thought of to fall into two different `types': namely
 metawebs; traditionally defined as all of the \emph{potential}
 interactions for a specific species pool (Dunne, 2006), and realised
 networks; which is the subset of interactions in a metaweb that are
@@ -486,9 +483,9 @@ defined, the scale at which they operate and how they deliver a network.
 
 \caption{\label{fig-process}Aligning the various processes that
 determine interactions (right column) with the different network
-representations (left column). First we start with a \textbf{global
+representations (left column). First, we start with a \textbf{global
 metaweb} this network captures all possible interactions for a
-collection of species in the global context. However within the global
+collection of species in the global context. However, within the global
 environment different species occur in different regions (region one =
 yellow and region 2 = orange), and it is possible to construct two
 different metawebs (\textbf{regional metawebs}) for each region by
@@ -498,7 +495,7 @@ that are found in both regions and others endemic to either region one
 (yellow) or region two (orange). However even within a region we do not
 expect that all interactions to be realised but rather that there are
 multiple configurations of the regional metaweb over both space and
-time. The `state' of the different \textbf{realised networks} are
+time. The `state' of the different \textbf{realised networks} is
 ultimately influenced not just by the co-occurrence of a species pair
 but rather the larger community context such as the abundance of
 different species, maximisation of energy gain, or indirect/higher order
@@ -634,8 +631,8 @@ constraints determining interactions (Song \& Levine, 2024; Stouffer,
 2019), allowing us to interrogate, generate, and reflect upon different
 ecological theories.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, toptitle=1mm, bottomtitle=1mm, colback=white, opacityback=0, breakable, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, left=2mm, leftrule=.75mm, toprule=.15mm, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
-hypothetical case study}, arc=.35mm, coltitle=black, bottomrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, leftrule=.75mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, toptitle=1mm, arc=.35mm, bottomtitle=1mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1 - Why we need to aggregate networks at different scales: A
+hypothetical case study}, bottomrule=.15mm, breakable, left=2mm]
 
 Although it might seem most prudent to be predicting, constructing, and
 defining networks that are the closest representation of reality there
@@ -731,7 +728,7 @@ explicit assumptions on trait-feeding relationships, whereas the
 \emph{pattern finding models} are dependent on existing interaction
 datasets from feeding rules can be elucidated. It perhaps also bears
 repeating that these models are often only presenting a list of feasible
-interactions and that the rresulting netowrk is `unstructured', as it is
+interactions and that the resulting network is `unstructured', as it is
 uconstrained by any processes or conditions that generate structure.
 While these networks can be imprinted with external definitions of
 trophic position and guild identity to deliver hypothetical structure,
@@ -767,15 +764,16 @@ current models are rooted in feeding theory and allocate the links
 between species based on energy \emph{e.g.,} diet models (Beckerman et
 al., 2006; Petchey et al., 2008) have been used construct networks based
 on both profitability (as determined by the handling time, energy
-content, and predator attack rate) as well as abundance (prey density),
-and modular models (Krause et al., 2003; Wootton et al., 2023) are based
-on the compartmentation and aquisition of energy for species at
-different trophic levels. Models that determine structure are based on
-the idea that networks follow a trophic hierarchy and that network
-structure can be determined by distributing interactions along single
-dimension {[}the ``niche axis''; Allesina et al. (2008){]}, while
-parametrising an aspect of the network structure (although see Allesina
-\& Pascual, 2009 for a parameter-free model).
+content, and predator attack rate) as well as abundance (prey density).
+(Wootton et al., 2023). At a `coarser', funtional level there are models
+that are based on the compartmentation and aquisition of energy for
+species at different trophic levels (Allesina \& Pascual, 2009; Krause
+et al., 2003). Models that determine structure are based on the idea
+that networks follow a trophic hierarchy and that network structure can
+be determined by distributing interactions along single dimension {[}the
+``niche axis''; Allesina et al. (2008){]}, while parametrising an aspect
+of the network structure (although see Allesina \& Pascual, 2009 for a
+parameter-free model).
 
 As behavioural networks are are build on the concept of dynamic
 processes (\emph{e.g.,} the abundance of species will always be in flux)
@@ -828,10 +826,17 @@ representations}\label{making-use-of-the-different-network-representations}
   Tools that allow us to estimate both the feasibility as well as
   realisation of links: Currently most approaches to modelling relaised
   networks fail to explicitly account for any form of evolutionary
-  constraint (although see Van De Walle et al., 2023) and we need to
-  develop either an ensemble modelling approach (Becker et al., 2022;
-  Terry \& Lewis, 2020) or tools that will allow for the downsampling of
-  metawebs into realised networks (\emph{e.g.,} Roopnarine, 2006).
+  constraint Wootton et al. (2023) and we need to develop either an
+  ensemble modelling approach (Becker et al., 2022; Terry \& Lewis,
+  2020) or tools that will allow for the downsampling of metawebs into
+  realised networks (\emph{e.g.,} Roopnarine, 2006).
+\item
+  Is there something in generalisable models that `combine' different
+  processes/aspects (\emph{e.g.,} using body size as a catch all) versus
+  limited models that allow you to unpack things bit-by-bit
+  (\emph{i.e.,} process by process). So Wootton et al. (2023) \emph{may}
+  (TBD) span the gamut but it lcks the ability to unpack\ldots{}
+  Although myabe the terms do?
 \item
   Modelling interaction strength: Although realised networks are more
   closely aligned with \emph{explicitly} capturing interaction strength
@@ -1329,12 +1334,6 @@ Evolution}, \emph{1}(4), 101.
 Poisot, T. (2023). Guidelines for the prediction of species interactions
 through binary classification. \emph{Methods in Ecology and Evolution},
 \emph{14}(5), 1333--1345. \url{https://doi.org/10.1111/2041-210X.14071}
-
-\bibitem[\citeproctext]{ref-poisotStructureProbabilisticNetworks2016}
-Poisot, T., Cirtwill, A., Cazelles, K., Gravel, D., Fortin, M.-J., \&
-Stouffer, D. (2016). The structure of probabilistic networks.
-\emph{Methods in Ecology and Evolution}, \emph{7}(3), 303--312.
-\url{https://doi.org/10}
 
 \bibitem[\citeproctext]{ref-poisotSpeciesWhyEcological2015}
 Poisot, T., Stouffer, D. B., \& Gravel, D. (2015). Beyond species: Why
