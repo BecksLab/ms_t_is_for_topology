@@ -8,9 +8,9 @@
 
 \caption{\label{fig-process}Aligning the various processes that
 determine interactions (right column) with the different network
-representations (left column). First we start with a \textbf{global
+representations (left column). First, we start with a \textbf{global
 metaweb} this network captures all possible interactions for a
-collection of species in the global context. However within the global
+collection of species in the global context. However, within the global
 environment different species occur in different regions (region one =
 yellow and region 2 = orange), and it is possible to construct two
 different metawebs (\textbf{regional metawebs}) for each region by
@@ -20,7 +20,7 @@ that are found in both regions and others endemic to either region one
 (yellow) or region two (orange). However even within a region we do not
 expect that all interactions to be realised but rather that there are
 multiple configurations of the regional metaweb over both space and
-time. The `state' of the different \textbf{realised networks} are
+time. The `state' of the different \textbf{realised networks} is
 ultimately influenced not just by the co-occurrence of a species pair
 but rather the larger community context such as the abundance of
 different species, maximisation of energy gain, or indirect/higher order
