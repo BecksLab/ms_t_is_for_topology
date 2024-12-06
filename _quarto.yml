@@ -35,3 +35,7 @@ format:
 
 execute:
   freeze: auto
+#
+#editor:
+#  markdown:
+#    wrap: 84
