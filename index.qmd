@@ -177,7 +177,7 @@ It is probably both this nuance as well as a lack of clear boundaries and guidel
 2.  Is there something in generalisable models that 'combine' different processes/aspects (*e.g.,* using body size as a catch all) versus limited models that allow you to unpack things bit-by-bit (*i.e.,* process by process). So @woottonModularTheoryTrophic2023 *may* (TBD) span the gamut but it lacks the ability to unpack... Although maybe the terms do?
 3.  Modelling interaction strength: Although realised networks are more closely aligned with *explicitly* capturing interaction strength we lack models that allow us to quantify this [@wellsSpeciesInteractionsEstimating2013; @strydomRoadmapPredictingSpecies2021].
 4.  How do we validate our predictions?: Progress has been made to assess how well a model recovers pairwise interactions [@strydomRoadmapPredictingSpecies2021; @poisotGuidelinesPredictionSpecies2023], but we still lack clear set of guidelines for benchmarking the ability of models to recover structure [@allesinaGeneralModelFood2008]
-5.  Something about making what we do with networks more tractablie in the applied space? *e.g.,* @dansereauOvercomingDisconnectInteraction2024
+5.  Something about making what we do with networks more tractable in the applied space? *e.g.,* @dansereauOvercomingDisconnectInteraction2024
 
 **Theory challenges**
 
