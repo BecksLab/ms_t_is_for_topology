@@ -175,30 +175,29 @@ Our introduction put forward that biodiversity science is underpinned by a set o
 
 ## Making use of the different network representations
 
-**Methodological challenges**
+**Advancing Ecological Theory**
 
-1.  ENSEMBLING I:: Tools that allow us to estimate both the feasibility as well as realisation of links: Currently most approaches to modelling realised networks fail to explicitly account for any form of evolutionary constraint [although see @vandewalleArthropodFoodWebs2023 and @woottonModularTheoryTrophic2023] and we need to develop either an ensemble modelling approach [@beckerOptimisingPredictiveModels2022; @terryFindingMissingLinks2020] or tools that will allow for the downsampling of metawebs into realised networks [*e.g.,* @roopnarineExtinctionCascadesCatastrophe2006].
-2.  ENSEMBLING II :: Is there something in generalisable models that 'combine' different processes/aspects (*e.g.,* using body size as a catch all) versus limited models that allow you to unpack things bit-by-bit (*i.e.,* process by process). So @woottonModularTheoryTrophic2023 *may* (TBD) span the gamut but it lacks the ability to unpack... Although maybe the terms do?
-3. MODEL PIECES :: Modelling interaction strength: Although realised networks are more closely aligned with *explicitly* capturing interaction strength we lack models that allow us to quantify this [@wellsSpeciesInteractionsEstimating2013; @strydomRoadmapPredictingSpecies2021].
-4.  MODEL-DATA :: How do we validate our predictions?: Progress has been made to assess how well a model recovers pairwise interactions [@strydomRoadmapPredictingSpecies2021; @poisotGuidelinesPredictionSpecies2023], but we still lack clear set of guidelines for benchmarking the ability of models to recover structure [@allesinaGeneralModelFood2008]
-M
-
-**Theory challenges**
-
-1.  EMERGENT PREDICTIONS - ECOLOGICAL THEORY: Do the decades of insights arrived at for stability-diversity-productivity relationships with tri-trophic or diamond shaped models hold for complex communities (10's-100s) [@danetResponseDiversityMajor2024]; How will spatial and temporal variation in climate and productivity drive change in complex ecosystems. Necessary to move to predicting changes in biodiversity per se, ecosystem functions and identifying sensitive and robust species and portions of communities.
-
-3.  REWIRING:: Does rewiring happen and does it deliver robustness? Specific sub points to consider here is persistence, especially persistence to perturbation. Again, dynamic networks and network/community assembly and finally extinctions [@dunhillExtinctionCascadesCommunity2024].
+-ENSEMBLING I:: Tools that allow us to estimate both the feasibility as well as realisation of links: Currently most approaches to modelling realised networks fail to explicitly account for any form of evolutionary constraint [although see @vandewalleArthropodFoodWebs2023 and @woottonModularTheoryTrophic2023] and we need to develop either an ensemble modelling approach [@beckerOptimisingPredictiveModels2022; @terryFindingMissingLinks2020] or tools that will allow for the downsampling of metawebs into realised networks [*e.g.,* @roopnarineExtinctionCascadesCatastrophe2006].
+-ENSEMBLING II :: Is there something in generalisable models that 'combine' different processes/aspects (*e.g.,* using body size as a catch all) versus limited models that allow you to unpack things bit-by-bit (*i.e.,* process by process). So @woottonModularTheoryTrophic2023 *may* (TBD) span the gamut but it lacks the ability to unpack... Although maybe the terms do?
+-MODEL PIECES :: Modelling interaction strength: Although realised networks are more closely aligned with *explicitly* capturing interaction strength we lack models that allow us to quantify this [@wellsSpeciesInteractionsEstimating2013; @strydomRoadmapPredictingSpecies2021].
+-MODEL-DATA :: How do we validate our predictions?: Progress has been made to assess how well a model recovers pairwise interactions [@strydomRoadmapPredictingSpecies2021; @poisotGuidelinesPredictionSpecies2023], but we still lack clear set of guidelines for benchmarking the ability of models to recover structure [@allesinaGeneralModelFood2008]
+-EMERGENT PREDICTIONS - ECOLOGICAL THEORY: Do the decades of insights arrived at for stability-diversity-productivity relationships with tri-trophic or diamond shaped models hold for complex communities (10's-100s) [@danetResponseDiversityMajor2024]; How will spatial and temporal variation in climate and productivity drive change in complex ecosystems. Necessary to move to predicting changes in biodiversity per se, ecosystem functions and identifying sensitive and robust species and portions of communities.
+-REWIRING:: Does rewiring happen and does it deliver robustness? Specific sub points to consider here is persistence, especially persistence to perturbation. Again, dynamic networks and network/community assembly and finally extinctions [@dunhillExtinctionCascadesCommunity2024].
 
 
 **Conservation Applications**
-5.  Something about making what we do with networks more tractable in the applied space? *e.g.,* @dansereauOvercomingDisconnectInteraction2024
-2.  How will novel communities interact? How will range shifts and invasions result in new/novel community assemblages. And then also the intentional changes of species compositions through rewilding.
-6.  Can socioeconomic networks combined with biological networks drive understanding of externalities?
-Brose et al information networks
-INVASION-EXTINCTION:: When do invasive species enhance or decimate communities? When do reintroductions work? [@woosterAustraliasRecentlyEstablished2024]
-TEMPERATURE - Are there temperature threshold to community collapse
-MULTIPLE STRESSOR SENSITIVITY ANALYSIS
-7.  Can paleoecological data from deep time hyperthermal events provide sufficient insight into the targets, pace and recovery times from rapid climate events?
+-How will novel communities interact? How will range shifts and invasions result in new/novel community assemblages. And then also the intentional changes of species compositions through rewilding.
+-MULTI-LAYER NETWORKS: 
+--Can socioeconomic networks combined with biological networks drive understanding of externalities?
+--Brose et al information networks
+-MULTIPLE STRESSOR SENSITIVITY ANALYSIS
+--INVASION-EXTINCTION:: When do invasive species enhance or decimate communities? When do reintroductions work? [@woosterAustraliasRecentlyEstablished2024]
+--TEMPERATURE - Are there temperature threshold to community collapse
+--Land Use and Harvesting
+-Can paleoecological data from deep time hyperthermal events provide sufficient insight into the targets, pace and recovery times from rapid climate events?
+
+Something about making what we do with networks more tractable in the applied space? *e.g.,* @dansereauOvercomingDisconnectInteraction2024
+
 
 ![Here we highlight some of the outstanding questions in both network as well as general ecology, as well as some of the outstanding methodological challenges with regards to constructing food webs (shown in orange) that we are faced with.](images/NetworkFuture.png){#fig-future}
 
