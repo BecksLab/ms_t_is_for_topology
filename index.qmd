@@ -175,46 +175,47 @@ There is a broader group of models that focus on determining interactions in ter
 
 # Making Progress with Networks {#sec-progress}
 
-**THIS SECTION NEEDS WORK. THE FIRST TWO SENTENCES SAY TOO MUCH AT ONCE AND NOT ENOUGH**
-Our introduction put forward that biodiversity science is underpinned by a set of concepts and theories about species richness, stability, and function that help define the abundance, distribution, functions and services that biodiversity provides [@loreauBiodiversityEcosystemStability2013].  We have above delieverd a hierarchical framework encompassing the wide range of ways that biodiversity is representated as a network. These representations carry assumptions that foster specific sets of questions [see also @gauzensTailoringInteractionNetwork2025 ].  
+In order to effectvely (and correctly) use networks to aid us in answering questions about concepts and theories that help define the abundance, distribution, functions and services that biodiversity provides [@loreauBiodiversityEcosystemStability2013] we need to be mindful that we are mapping the *correct* network representation to the question of interest [@gauzensTailoringInteractionNetwork2025]. Notably there are certain questions that cannot be answered using specific netwotk representations as the scale of the question of interest is fundamentally misaligned with either (or both) the process captured by a specific network representation [@sec-process-feasibility] or the underlying data that is used to construct it [@sec-construct]. Here we will discuss and map different research questions and agenda to the network representations shown in @fig-process as well as highlighting some of the key methodological challenges that limiting our conceptialisation of a 'network' as well as the effective practical application of them in real world settings. 
 
-Here we present a range of opportunities that emerge from these frameworks and the clarity afforded by our classification. Leverging Box 1 details that underscore how specific network representations capture specific processes, we present two groups of opportunites.  First, we highlight a set that advances specifically our understanding of ecological theory and provide predictions and generalisations of emergent properties of ecological communities and ecosystems.  Second, we highlight a set that address aspects of key global challenges facing humanity where biodiversity is at the core.  The latter aims to showcase how we might transition from simply documenting declines and negative impacts to using network representations of biodiversity to provide solutions.
+## Key Eco-Evo-Conservation Questions
 
-~~It is probably both this nuance as well as a lack of clear boundaries and guidelines as to the links between network form and function [although see @delmasAnalysingEcologicalNetworks2019] that has stifled the 'productive use' of networks beyond the inventorying the interactions between species. Although progress with using networks as a means to address questions within larger bodies of ecological theory *e.g.,* invasion biology [@huiHowInvadeEcological2019] and co-existence theory [@garcia-callejasNonrandomInteractionsGuilds2023] has been made we still lack explicit guidelines as to what the appropriate network representation for the task at hand would be, and as highlighted in~~
+### Global Metawebs
 
-## Making use of the different network representations
+As the interactions in global metawebs are not constrained by the realisation of specific community assemblages (or species co-occurence) they can provide valuable insights as to what interactions *could* occur between species or the *entire* diet breadth of a specfic species. Fundamentally this allows us to ask questions about *hypothetical* communties and interactions, such as thinking about novel communities in future climate change scenarios, or the potential 'position' of an invasive (or re-introduced) within a network [@huiHowInvadeEcological2019]. There is also additional scope to think about the rewiring capacity and potential of species, and how this may help inform on the potetnial persitience of species within new community assemblages [@marjakangasFundamentalInteractionNiches2025]. Finally because metawebs are often build on some proxy of the evolutionary lineages there is scope to deeper interrogate the role of ecological-evolutionary dynamics and the role that both the evolutionary history as well as plasticity influences and shapes the diet breadth of species.
 
-**Advancing Ecological Theory**
+### Regional Metawebs
 
-- ENSEMBLING:: 
--- Tools that allow us to estimate both the feasibility as well as realisation of links: Currently most approaches to modelling realised networks fail to explicitly account for any form of evolutionary constraint [although see @vandewalleArthropodFoodWebs2023 and @woottonModularTheoryTrophic2023] and we need to develop either an ensemble modelling approach [@beckerOptimisingPredictiveModels2022; @terryFindingMissingLinks2020] or tools that will allow for the downsampling of metawebs into realised networks [*e.g.,* @roopnarineExtinctionCascadesCatastrophe2006].
--- Is there something in generalisable models that 'combine' different processes/aspects (*e.g.,* using body size as a catch all) versus limited models that allow you to unpack things bit-by-bit (*i.e.,* process by process). So @woottonModularTheoryTrophic2023 *may* (TBD) span the gamut but it lacks the ability to unpack... Although maybe the terms do?
-- MODEL PIECES :: Modelling interaction strength: Although realised networks are more closely aligned with *explicitly* capturing interaction strength we lack models that allow us to quantify this [@wellsSpeciesInteractionsEstimating2013; @strydomRoadmapPredictingSpecies2021].*Is this about defining IS in models or model validation or predicting IS as emergent property or all of this*
-- MODEL-DATA :: How do we validate our predictions?: Progress has been made to assess how well a model recovers pairwise interactions [@strydomRoadmapPredictingSpecies2021; @poisotGuidelinesPredictionSpecies2023], but we still lack clear set of guidelines for benchmarking the ability of models to recover structure [@allesinaGeneralModelFood2008]
-- EMERGENT PREDICTIONS - ECOLOGICAL THEORY: Do the decades of insights arrived at for stability-diversity-productivity relationships with tri-trophic or diamond shaped models hold for complex communities (10's-100s) [@danetResponseDiversityMajor2024]; How will spatial and temporal variation in climate and productivity drive change in complex ecosystems. Necessary to move to predicting changes in biodiversity per se, ecosystem functions and identifying sensitive and robust species and portions of communities.
-- REWIRING:: Does rewiring happen and does it deliver robustness? Specific sub points to consider here is persistence, especially persistence to perturbation. Again, dynamic networks and network/community assembly and finally extinctions [@dunhillExtinctionCascadesCommunity2024].
+As regional metawebs are conceptually a psatially constrained global metaweb they could conceptually be used to answer similar questions to those raised above and becuase they represent a 'real' community are probably more meaningful in the applied space. Regional metawebs have also been used as a way to help refine and constrain species distributions giving us more refined range maps [@garcia-callejasNonrandomInteractionsGuilds2023] as well as insights to future communtiites under climate change scenarios, even at global scales [@haoGlobalProjectionTerrestrial2025]. However it should be clear that the links in these regional metawebs are only being constrained by feasibility and species co-occurence and we must exercise a high degree of caution to not assume that changes/differences between different regional webs in structure (link distribution) are being driven by *e.g.,* environmental factors. At minimum if one is interested in comparing regional metawebs across environmental scales or gradients we need to assert that strutureal differences are independent from species turnover.
 
+### Realised networks
 
-**Conservation Applications**
-- How will novel communities interact? How will range shifts and invasions result in new/novel community assemblages. And then also the intentional changes of species compositions through rewilding.
-- MULTI-LAYER NETWORKS: 
--- Can socioeconomic networks combined with biological networks drive understanding of externalities?
--- Brose et al information networks
-- MULTIPLE STRESSOR SENSITIVITY ANALYSIS
-*using models to identify most at risk species processes*
-*using models to identify driver/stressor to invest in to limit impacts*
-*using models to quantify resistance (rivets) and resilience/recovery potential (multiple states too)
-*early warning*
--- INVASION-EXTINCTION:: When do invasive species enhance or decimate communities? When do reintroductions work? [@woosterAustraliasRecentlyEstablished2024]
--- TEMPERATURE - Are there temperature threshold to community collapse
--- Multiple stressor allocation across networks (among species; among trophic levels; bioaccumulation)
--- Land Use and Harvesting and Temperature and Contaminants
-- Can paleoecological data from deep time hyperthermal events provide sufficient insight into the targets, pace and recovery times from rapid climate events?
+Realised network are perhaps the most representative of what comes to mind when people think of networks, and more specifically how we can use them to help inform on larger biogeographic processes [@thuillerNavigatingIntegrationBiotic2024]. This is becuase they represent a shift in the 'currency' that determines interactions that is constrained by a broader community and environmental context that allows us the opprotunity to ask questions that revolve around community stability, diversity, function, and complexity. Specifically we are in a position to exp;icitly link network structure to ecosystem function. The dynamic nature of realised webs mean that they alowing us to think about the propogation of change (across both time and space) which allow us to ask questions about the persitence of communities and how they respond to pperturbations or stressors (at both the level of the node as well as modification of links). Although the recent boom in the availibility of long-term observation data is allowing us to unpack decades of insights arrived at for stability-diversity-productivity relationships for more complex communities [@danetResponseDiversityMajor2024] or to evaluate the impacts and efficacy of re-introductions [@woosterAustraliasRecentlyEstablished2024] we need to be mindful that empirical interaction data is typically accumulated over time and so it compresses the dynamic component of the interactions between species [@polisComplexTrophicInteractions1991]. Thus we need to apply a degree of caution when using empirical data to construct realised networks - however there is scope to think about developing methods that will allow us to modify metawebs in such a way that their structures become more aligned with realised webs (see the next section).
 
-Something about making what we do with networks more tractable in the applied space? *e.g.,* @dansereauOvercomingDisconnectInteraction2024
+## Key methodological challenges
+
+**Transitioning between metawebs and realised webs:** Currently most approaches to modelling realised networks fail to explicitly account for any form of evolutionary constraint [although see @vandewalleArthropodFoodWebs2023 and @woottonModularTheoryTrophic2023] and we need to develop either an ensemble modelling approach [@beckerOptimisingPredictiveModels2022; @terryFindingMissingLinks2020] or tools that will allow for the downsampling of metawebs into realised networks [*e.g.,* @roopnarineExtinctionCascadesCatastrophe2006].
+
+**The validation of network structure:** Progress has been made to assess how well a model recovers pairwise interactions [@strydomRoadmapPredictingSpecies2021; @poisotGuidelinesPredictionSpecies2023], but we still lack clear set of guidelines for benchmarking the ability of models to recover structure [@allesinaGeneralModelFood2008]
+
+**Making networks more tractible in applied spaces:** There is a disconnect when it comes to effectively using networks in applied spaces [@dansereauOvercomingDisconnectInteraction2024]. We need to make an effort to more effictely map the from (structure) of a network to its function as well as identify how this can effively be integrated into policy to make it meanigful and actionable. Additionally we also need a firmer grasp as to what defines a 'network' as a unit, are the logical (environmental) boundaries between networks and how do these relate to 'management' units and scales [@fortinNetworkEcologyDynamic2021].
 
 
-![Here we highlight some of the outstanding questions in both network as well as general ecology, as well as some of the outstanding methodological challenges with regards to constructing food webs (shown in orange) that we are faced with.](images/NetworkFuture.png){#fig-future}
+> I want to keep this bullet list below - maybe we can morph this into a companion table for the above section???
+> **Conservation Applications**
+> - How will novel communities interact? How will range shifts and invasions result in new/novel community assemblages. And then also the intentional changes of species compositions through rewilding.
+> - MULTI-LAYER NETWORKS: 
+> -- Can socioeconomic networks combined with biological networks drive understanding of externalities?
+> -- Brose et al information networks
+> - MULTIPLE STRESSOR SENSITIVITY ANALYSIS
+> *using models to identify most at risk species processes*
+> *using models to identify driver/stressor to invest in to limit impacts*
+> *using models to quantify resistance (rivets) and resilience/recovery potential (multiple states too)
+> *early warning*
+> -- INVASION-EXTINCTION:: When do invasive species enhance or decimate communities? When do reintroductions work?
+> -- TEMPERATURE - Are there temperature threshold to community collapse
+> -- Multiple stressor allocation across networks (among species; among trophic levels; bioaccumulation)
+> -- Land Use and Harvesting and Temperature and Contaminants
+> - Can paleoecological data from deep time hyperthermal events provide sufficient insight into the targets, pace and recovery times from rapid climate events?
 
 # Concluding remarks
 
