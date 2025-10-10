@@ -26,19 +26,3 @@ the larger community context such as the abundance of different species,
 maximisation of energy gain, or indirect/higher order interactions.}
 
 \end{figure}
-\efloatseparator
- 
-\begin{figure}
-
-\centering{
-
-\pandocbounded{\includegraphics[keepaspectratio]{images/NetworkFuture.png}}
-
-}
-
-\caption{\label{fig-future}Here we highlight some of the outstanding
-questions in both network as well as general ecology, as well as some of
-the outstanding methodological challenges with regards to constructing
-food webs (shown in orange) that we are faced with.}
-
-\end{figure}
