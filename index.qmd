@@ -216,7 +216,7 @@ Realised network are perhaps the most representative of what comes to mind when 
 
 **Making networks more tractible in applied spaces:** There is a disconnect when it comes to effectively using networks in applied spaces [@dansereauOvercomingDisconnectInteraction2024]. We need to make an effort to more efficiently map the from (structure) of a network to its function as well as identify how this can effectively be integrated into policy to make it meaningful and actionable. Additionally we also need a firmer grasp as to what defines a 'network' as a unit, are the logical (environmental) boundaries between networks and how do these relate to 'management' units and scales [@fortinNetworkEcologyDynamic2021].
 
-**Understanding what emperical data represents:** What does it mean when we 'observe' an interaction be that directly or indirectly *e.g.,* isotope analysis.
+**Understanding what emperical data represents:** What does it mean when we 'observe' an interaction be that directly or indirectly *e.g.,* isotope analysis. This data still represents an 'accumulation' of feeding data and this is conceptually more closely aligned with idea of a metaweb.
 
 # Concluding remarks
 
