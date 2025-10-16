@@ -190,6 +190,7 @@ In order to effectively (and correctly) use networks to aid us in answering ques
 |  | Extinction and persistence after perturbation |
 |  | Stability-diversity-function |
 |  | Ecosystem level processes |
+|  | Meta communitites and the idea of meta-network-communities |
 
 : Table Caption {#tbl-questions}
 
@@ -214,6 +215,8 @@ Realised network are perhaps the most representative of what comes to mind when 
 **The validation of network structure:** Progress has been made to assess how well a model recovers pairwise interactions [@strydomRoadmapPredictingSpecies2021; @poisotGuidelinesPredictionSpecies2023], but we still lack clear set of guidelines for benchmarking the ability of models to recover structure [@allesinaGeneralModelFood2008]. This makes it challenging to assess if models are capturing network structure accurately, especially if we are interested developing ways in which we can begin to downsample metawebs.
 
 **Making networks more tractible in applied spaces:** There is a disconnect when it comes to effectively using networks in applied spaces [@dansereauOvercomingDisconnectInteraction2024]. We need to make an effort to more efficiently map the from (structure) of a network to its function as well as identify how this can effectively be integrated into policy to make it meaningful and actionable. Additionally we also need a firmer grasp as to what defines a 'network' as a unit, are the logical (environmental) boundaries between networks and how do these relate to 'management' units and scales [@fortinNetworkEcologyDynamic2021].
+
+**Understanding what emperical data represents:** What does it mean when we 'observe' an interaction be that directly or indirectly *e.g.,* isotope analysis.
 
 # Concluding remarks
 
