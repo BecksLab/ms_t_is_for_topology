@@ -234,9 +234,13 @@ Importantly we need to think critically how the creation of either an 'ensemble 
 
 *Is this a problem for meta and realised?  I think it is?  Expand to include two aspects: getting the network properties right and getting the links correct.... two problems?*
 
-**Making networks more tractible in applied spaces:** There is a disconnect when it comes to effectively using networks in applied spaces [@dansereauOvercomingDisconnectInteraction2024]. We need to make an effort to more efficiently map the from (structure) of a network to its function as well as identify how this can effectively be integrated into policy to make it meaningful and actionable. Additionally we also need a firmer grasp as to what defines a 'network' as a unit, are the logical (environmental) boundaries between networks and how do these relate to 'management' units and scales [@fortinNetworkEcologyDynamic2021].
+**Making networks more tractible in applied spaces:** There is a disconnect when it comes to effectively using networks in applied spaces [@dansereauOvercomingDisconnectInteraction2024]. **WHY - need three reasons...**
 
-**Understanding what emperical data represents:** What does it mean when we 'observe' an interaction be that directly (predator actively feeding on prey) or indirectly *e.g.,* gut or isotope analysis. A netwrok constructued with emperical data will most liekley still represents an 'accumulation' of feeding data and this is conceptually more closely aligned with idea of a metaweb. Something about how this is a challenge if we want to use empirical networks to test or ask questions in the realised space.
+We need to make an effort to more efficiently map the from (structure) of a network to its function as well as identify how this can effectively be integrated into policy to make it meaningful and actionable. Additionally we also need a firmer grasp as to what defines a 'network' as a unit, are the logical (environmental) boundaries between networks and how do these relate to 'management' units and scales [@fortinNetworkEcologyDynamic2021].
+
+**Understanding what emperical data represents:** Ultimately, knowing what is right/precise/correct in an ecological network requires robust data.  What does it mean when we 'observe' an interaction be that directly (predator actively feeding on prey) or indirectly via *e.g.,* gut or isotope analysis. A netwrok constructued with emperical data will most liekley still represents an 'accumulation' of feeding data and this is conceptually more closely aligned with idea of a metaweb. Something about how this is a challenge if we want to use empirical networks to test or ask questions in the realised space.
+
+*more on how we increase precision and accuracy (TSS speak) to get benchmark for link and structure correct*
 
 # Concluding remarks
 
