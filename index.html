@@ -585,10 +585,10 @@ Figure&nbsp;1: Aligning the various processes that determine interactions (right
 </section>
 <section id="sec-progress" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Making Progress with Networks</h1>
-<p>The motivation to leverage network ecology in conservation ecology, environmental risk assessment and natural resource managment stems from a shift away from species/populaiton specific measures of the effects of stress and distrubrance to community level metrics. These metrics, such as resilience and more generally stability, ecosystem function and biodiversity <em>per se</em>, are natural properties of networks. This suggests that modern conservation, risk assessment and resource management requires robust tools to support decision making.</p>
-<p>This is also true in the discipline of ecology. Major questions remain about stability-diversity-productivity relationships and the impacts of multiple stressors operating at multiple ecological scales. The network approach to answering these questions specifically allows for questions about how direct and indirect effects among species in a complex community, shaped by their environment, deliver fundamental patterns and understanding of processes in the natural world. and theories that help define the abundance, distribution, functions and services that biodiversity provides <span class="citation" data-cites="loreauBiodiversityEcosystemStability2013">(<a href="#ref-loreauBiodiversityEcosystemStability2013" role="doc-biblioref">Loreau and de Mazancourt 2013</a>)</span></p>
-<p>In order to effectively use networks to aid us in answering questions about conservation/risk assessment/management and core ecological theorywe need to be mindful that we are mapping the <em>correct</em> network representation to the question of interest <span class="citation" data-cites="gauzensTailoringInteractionNetwork2025">(<a href="#ref-gauzensTailoringInteractionNetwork2025" role="doc-biblioref">Gauzens et al. 2025</a>)</span>. Notably, there are certain questions that cannot be answered using specific network representations as the scale of the question of interest is fundamentally misaligned with either the process captured by a specific network representation <a href="#sec-process-feasibility" class="quarto-xref">Section&nbsp;2.1</a>, the underlying data that is used to construct it <a href="#sec-construct" class="quarto-xref">Section&nbsp;3</a> or both of these factors.</p>
-<p>Here we will discuss and map different the different network representations shown in <a href="#fig-process" class="quarto-xref">Figure&nbsp;1</a> the the appropriate research questions and agendas [see also <a href="#tbl-questions" class="quarto-xref">Table&nbsp;1</a>], as well as highlighting some of the key methodological challenges that limiting our conceptualisation of a ‘network’ as well as the effective practical application of them in real world settings.</p>
+<p>The motivation to leverage network ecology in conservation ecology, environmental risk assessment and natural resource managment stems from a shift away from species/population specific measures of the effects of stress and distrubrance to community level metrics of these impacts. These metrics, such as resilience and more generally stability, ecosystem function and biodiversity <em>per se</em>, are natural properties of networks. This suggests that modern conservation, risk assessment and resource management requires robust network tools to support decision making.</p>
+<p>This is also true in the disciplines of ecology and environmental science and their focus on abundance, distribution, functions and services that biodiversity provides <span class="citation" data-cites="loreauBiodiversityEcosystemStability2013">(<a href="#ref-loreauBiodiversityEcosystemStability2013" role="doc-biblioref">Loreau and de Mazancourt 2013</a>)</span>. Major questions remain, for example, about stability-diversity-productivity relationships, the impacts of exintctions and invasions and the impacts of multiple stressors operating at multiple ecological scales. A network approach to answering these types of questions specifically allows us to evaluate how environmental gradients and anthropogenic stress map through direct and indirect effects among species in a complex community and reveal fundamental patterns and understanding of processes in the natural world.</p>
+<p>In order to effectively use networks to aid us in answering questions about conservation/risk assessment/management and core ecological theory, we need to be mindful that we are mapping the <em>correct</em> network representation to the question of interest <span class="citation" data-cites="gauzensTailoringInteractionNetwork2025">(<a href="#ref-gauzensTailoringInteractionNetwork2025" role="doc-biblioref">Gauzens et al. 2025</a>)</span>. Notably, there are certain questions that cannot be answered using specific network representations as the scale of the question of interest is fundamentally misaligned with either the process captured by a specific network representation <a href="#sec-process-feasibility" class="quarto-xref">Section&nbsp;2.1</a>, the underlying data that is used to construct it <a href="#sec-construct" class="quarto-xref">Section&nbsp;3</a> or both of these factors.</p>
+<p>Here we discuss and map the different network representations shown in <a href="#fig-process" class="quarto-xref">Figure&nbsp;1</a> to ‘appropriate’ research questions and agendas [see also <a href="#tbl-questions" class="quarto-xref">Table&nbsp;1</a>]. We also highlight some of the key methodological challenges that currently limit our conceptualisation of a ‘network’ and thus impact their effective practical application in real world settings.</p>
 <div id="tbl-questions" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-questions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -603,17 +603,17 @@ Table&nbsp;1: Table Caption
 <thead>
 <tr class="header">
 <th>Network Representation</th>
-<th>Research Question</th>
+<th>Example Research Question</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Global Metaweb</td>
-<td>How will novel communities interact <em>e.g.</em> invasion and rewilding</td>
+<td>How will novel communities respond to <em>e.g.</em> extinction, turnover, invasion and rewilding</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Diet-based conservation</td>
+<td>Diet/Trait-based conservation</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -621,7 +621,7 @@ Table&nbsp;1: Table Caption
 </tr>
 <tr class="even">
 <td></td>
-<td>Ecology-Evolutionary dynamics</td>
+<td>Eco-Evolutionary dynamics</td>
 </tr>
 <tr class="odd">
 <td>Regional Metawebs</td>
@@ -629,11 +629,11 @@ Table&nbsp;1: Table Caption
 </tr>
 <tr class="even">
 <td></td>
-<td>Refinement of species distributions</td>
+<td>Refinement/Extension of species distribution models</td>
 </tr>
 <tr class="odd">
 <td>Realised webs</td>
-<td>Multiple stressor allocation across networks</td>
+<td>How do we allocate multiple stressors across networks</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -641,11 +641,11 @@ Table&nbsp;1: Table Caption
 </tr>
 <tr class="odd">
 <td></td>
-<td>Extinction and persistence after perturbation</td>
+<td>Extinction and persistence after harvesting/invasion/extinction</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Stability-diversity-function</td>
+<td>Stability-diversity-productivity-function</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -664,7 +664,7 @@ Table&nbsp;1: Table Caption
 <h2 data-number="4.1" class="anchored" data-anchor-id="key-eco-evo-conservation-questions"><span class="header-section-number">4.1</span> Key Eco-Evo-Conservation Questions</h2>
 <section id="global-metawebs" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="global-metawebs"><span class="header-section-number">4.1.1</span> Global Metawebs</h3>
-<p>As the interactions in global metawebs are not constrained by the realisation of specific community assemblages (or species co-occurrence) they can provide valuable insights as to what interactions <em>could</em> occur between species or the <em>entire</em> diet breadth of a specific species. Fundamentally this allows us to ask questions about <em>hypothetical</em> communities and interactions, such as thinking about novel communities in future climate change scenarios, or the potential ‘position’ of an invasive (or re-introduced) within a network <span class="citation" data-cites="huiHowInvadeEcological2019">(<a href="#ref-huiHowInvadeEcological2019" role="doc-biblioref">Hui and Richardson 2019</a>)</span> or the rewiring capacity of species, and how this may help inform on the potential persistence of species within new community assemblages <span class="citation" data-cites="marjakangasFundamentalInteractionNiches2025">(<a href="#ref-marjakangasFundamentalInteractionNiches2025" role="doc-biblioref">Marjakangas, Dalsgaard, and Ordonez 2025</a>)</span>. Finally because metawebs are often built on some proxy of the evolutionary lineages there is scope to deeper interrogate the role of ecological-evolutionary dynamics and the role that both the evolutionary history as well as plasticity influences and shapes the diet breadth of species.</p>
+<p>The interactions in global metawebs are not constrained by the realisation of specific community assemblages (or species co-occurrence). These networks provide a platform for answering quesstions that assume interactions <em>could</em> occur between species (feasibility) or where the potential diet breadth of species is required. Examples of appropriate research questions at this scale includes those about <em>hypothetical</em> or <em>novel</em> communities and interactions under future climate change scenarios, or the potential ‘position’ of an invasive (or re-introduced) species within a network <span class="citation" data-cites="huiHowInvadeEcological2019">(<a href="#ref-huiHowInvadeEcological2019" role="doc-biblioref">Hui and Richardson 2019</a>)</span>. This scale is also appropriate for a partciularly class of questions related to the potential (eco-evolutionary) rewiring capacity of species, and how this may help inform on the opportunities for persistence of species within new community assemblages <span class="citation" data-cites="marjakangasFundamentalInteractionNiches2025">(<a href="#ref-marjakangasFundamentalInteractionNiches2025" role="doc-biblioref">Marjakangas, Dalsgaard, and Ordonez 2025</a>)</span>. The implicit focus on feasibility in these examples highlights that global metawebs are linked to strong proxies for targets and mechanisms of evolutionary change. This offers a network scale for modelling ecological-evolutionary dynamics and the role that both the evolutionary history, natural selection and phenotypic plasticity shapes the diet breadth of species.</p>
 </section>
 <section id="regional-metawebs" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="regional-metawebs"><span class="header-section-number">4.1.2</span> Regional Metawebs</h3>
