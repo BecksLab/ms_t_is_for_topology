@@ -221,7 +221,7 @@ of Definitions, Scales, and Mechanisms}
 1%
 }%
 }
-\date{2025-10-22}
+\date{2025-10-31}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -410,8 +410,7 @@ the distribution of the links between aggregated nodes may be more
 meaningful in terms of understanding or generalising about energy flow
 and distribution within the system {[}REF{]}.
 
-\subsection{What is captured by an
-edge?}\label{what-is-captured-by-an-edge}
+\subsection{What is captured by an edge?}\label{sec-edge}
 
 In order to break down the definitions of an edge, it is important to
 introduce the concept of \emph{potential} versus \emph{realised} links:
@@ -680,8 +679,7 @@ data, we construct models that facilitate interpolation and gap-filling
 of existing empirical datasets (\emph{e.g.,} Biton et al., 2024; Dallas
 et al., 2017; Poisot et al., 2023; Stock et al., 2017), predict the
 feasibility of interaction among pairs of species, or directly predict
-network structure (see Strydom, Catchen, et al., 2021 for a broader
-discussion).
+network structure (see Strydom et al., 2021 for a broader discussion).
 
 They are unique in delivering more than just estimates of species
 richness. As note in the introduction, a network embodies the organising
@@ -773,46 +771,32 @@ example.
 induction}\label{species-agnostic-networks-construction-through-structure-induction}
 
 Networks in this category are generated rules that create non-random
-(\textbf{note that this is irritated by the Random models paragraph
-below; do we need that? The stochastic models are the `real' version of
-this type of network?}) networks that reflect empirical knowledge of
-ecological network structures and evaluated by matching predictions to
-this \emph{expected} structure of the network(s). The determination of
-links between species is only implicitly linked to properties of the
-nodes (\textbf{see ADBM 5 rules}). This means these networks are usually
-not species specific. Although these models are data input light, often
-requiring only species richness and an estimate of the number of
-expected links, they make clear assumptions regarding what the
-expectations are for network structure. These are some of the most
-commonly used network generation tools (e.g.~the Niche model REF). There
-are two sub-categories of these species agnostic networks:
-
-Random network models (Bascompte et al., 2003; \emph{e.g.,} Erdős \&
-Rényi, 1959; Fortuna \& Bascompte, 2006) represent a `process free'
-model. These models are not explicitly tied to a process discussed in
-Section~\ref{sec-process}, rather links are randomly distributed among
-nodes. Although these models lack real world tractability (Bascompte,
-2007) they are often used as a `null hypothesis' to ask questions about
-network structure (\emph{e.g.,} Banville et al., 2023; Strydom, Dalla
-Riva, et al., 2021).
+networks that reflect empirical knowledge of ecological network
+structures and evaluated by matching predictions to this \emph{expected}
+structure of the network(s). The determination of links between species
+is only implicitly linked to properties of the nodes. This means these
+networks are usually not species specific. Although these models are
+data input light, often requiring only species richness and an estimate
+of the number of expected links, they make clear assumptions regarding
+what the expectations are for network structure. These are some of the
+most commonly used network generation tools (e.g.~the Niche model REF).
+There are two sub-categories of these species agnostic networks.
 
 Stochastic network models use a probabilistic rule-set about diet choice
 and niche breadth to reflect fundamental ideas of foraging biology.
-\textbf{RATHER THAN ALLESINA, I'D SUGGEST PRESENTING THE 5 RULES IN THE
-ADBM EXPLANATION OF THE NICHE MODEL} These models that are based on the
-compartmentation and acquisition of energy for species at different
-trophic levels (Allesina \& Pascual, 2009; Krause et al., 2003) and that
-network structure can be determined by distributing interactions along
-single dimension {[}the `niche axis'; Allesina et al. (2008){]}.
-Typically these models parametrise some aspect of the network structure
-(although see Allesina \& Pascual, 2009 for a parameter-free model).
-These models include the most commonly used network generator, the Niche
-model (Williams \& Martinez, 2000), as well as the original Cascade
-model (Cohen et al., 1990) and the derived Nested hierarchy model
-(Cattin et al., 2004). These models often form the basis for dynamic
-models \emph{e.g.,} the allometric trophic network (Brose et al., 2006;
-Schneider et al., 2016) and bioenergetic food web models (Delmas et al.,
-2017).
+These models that are based on the compartmentation and acquisition of
+energy for species at different trophic levels (Allesina \& Pascual,
+2009; Krause et al., 2003) and that network structure can be determined
+by distributing interactions along single dimension {[}the `niche axis';
+Allesina et al. (2008){]}. Typically these models parametrise some
+aspect of the network structure (although see Allesina \& Pascual, 2009
+for a parameter-free model). These models include the most commonly used
+network generator, the Niche model (Williams \& Martinez, 2000), as well
+as the original Cascade model (Cohen et al., 1990) and the derived
+Nested hierarchy model (Cattin et al., 2004). These models often form
+the basis for dynamic models \emph{e.g.,} the allometric trophic network
+(Brose et al., 2006; Schneider et al., 2016) and bioenergetic food web
+models (Delmas et al., 2017).
 
 \subsection{Construction through
 deduction}\label{construction-through-deduction}
@@ -970,7 +954,7 @@ includes those about \emph{hypothetical} or \emph{novel} communities and
 interactions under future climate change scenarios, or the potential
 `position' of an invasive (or re-introduced) species within a network
 (Hui \& Richardson, 2019). This scale is also appropriate for a
-partciularly class of questions related to the potential
+partciular class of questions related to the potential
 (eco-evolutionary) rewiring capacity of species, and how this may help
 inform on the opportunities for persistence of species within new
 community assemblages (Marjakangas et al., 2025). The implicit focus on
@@ -978,68 +962,67 @@ feasibility in these examples highlights that global metawebs are linked
 to strong proxies for targets and mechanisms of evolutionary change.
 This offers a network scale for modelling ecological-evolutionary
 dynamics and the role that both the evolutionary history, natural
-selection and phenotypic plasticity shapes the diet breadth of species.
+selection, and phenotypic plasticity shapes the diet breadth of species.
 
-\subsubsection{Regional Metawebs}\label{regional-metawebs}
+\subsubsection{Regional Metawebs}\label{sec-progress_regional}
 
 Regional metawebs are conceptually a spatially constrained global
-metaweb. The make explicit co-occurence. Against this backdrop, they are
-conceptually aligned with similar questions to those posed above, with
-the added focus on a community facing real challenge. Additionally,
-regional metawebs can and have been used to refine and constrain species
-distribution model predictions, giving us more refined range maps
-(García-Callejas et al., 2023) or community composition under climate
-change scenarios, even at global scales (Hao et al., 2025).
+metaweb. They make explicit the co-occurence between species. Against
+this backdrop, they are conceptually aligned with similar questions to
+those posed above, with the added focus on a community facing, real,
+challenge. Additionally, regional metawebs can and have been used to
+refine and constrain species distribution model predictions, giving us
+more refined range maps (García-Callejas et al., 2023) or community
+composition under climate change scenarios, even at global scales (Hao
+et al., 2025).
 
 However we must exercise a high degree of caution when comparing
-structures among regional metwebs, wither discrete collections or along
+structures among regional metwebs, whether discrete collections or along
 environmental gradients. At this scale, where the network embeds the
-assumptions of feasibility, it is vital to disentangle structural change
-per se from multiple processes that might determine species turnover
-(e.g.~\beta - diversity) because link distributions can be driven by
-both environmental filtering and this turnover {[}NOT SURE THIS IS
-CORRECT; needs refinement and references{]}.
+assumptions of feasibility, the link distribution is not meaningfully
+constrained by environmental factors (see Section~\ref{sec-edge}) and it
+is vital to disentangle structural change \emph{per se} from the
+multiple processes that might determine species turnover (\emph{e.g.,}
+\(\beta\) - diversity).
 
-\subsubsection{\texorpdfstring{Realised networks {[}\emph{not totally
-convinced we've done `justice' here. This was the type that has the most
-questions in our brainstorm\ldots. i feel like it needs to take that
-list and create three groups of example
-questions}{]}}{Realised networks {[}not totally convinced we've done `justice' here. This was the type that has the most questions in our brainstorm\ldots. i feel like it needs to take that list and create three groups of example questions{]}}}\label{realised-networks-not-totally-convinced-weve-done-justice-here.-this-was-the-type-that-has-the-most-questions-in-our-brainstorm.-i-feel-like-it-needs-to-take-that-list-and-create-three-groups-of-example-questions}
+\subsubsection{Realised networks}\label{realised-networks}
 
 Realised network are the most representative of what comes to mind when
 people think of networks, and more specifically how we can use them to
 help inform on larger biogeographic processes (Thuiller et al., 2024).
-This is partially because of the popularity and profile of generative
-network models like the Cascade and Niche model which produce realised
-network representations, and because they represent a shift in the
-`currency' which determine interactions and that is constrained by a
-broader community and environmental context. This change in currency and
-context allows us the opportunity to ask questions that revolve around
-major ecological theory - e.g.~community stability and resilience,
-biodiversity dynamics, ecosystem function, structure-function
-relationships - and around major conservation and climate change global
-challenges - e.g.~temperature change, extinction dynamics, invasion
-impacts and reintroductions/rewilding.
+This is partially because of the popularity and legacy of generative
+network models (like the Cascade and Niche model) which produce realised
+network representations, and represent the ideal `currency' for which to
+understand the constraints placed on interactions/network structure by
+the broader community and environmental context. This change in currency
+and context affords us the opportunity to ask questions that revolve
+around major ecological theory - \emph{e.g.,} community stability and
+resilience, biodiversity dynamics, ecosystem function,
+structure-function relationships - and around major conservation and
+climate change global challenges - \emph{e.g.,} temperature change,
+extinction dynamics, invasion impacts and reintroductions/rewilding.
 
-These network representations embody an explicit focus on the link
-between network structure to ecosystem function. \textbf{{[}DON'T LOVE
-THIS -\textgreater{} dynamic is the wrong word as we are still talking
-topologies; is it that turnover processes are isolated from
-structure?{]}}The dynamic nature of realised webs mean that they allow
-us to think about the propagation of change (across both time and space)
-which allow us to ask questions about the persistence of communities and
-how they respond to perturbations or stressors (at both the level of the
-node as well as modification of links).
+Something something about how we can asks questions here about nodes but
+instead of it being limited to the fesibility space (e.g.~rewiring
+capcity or diet breadth).
+
+Realised networks embody an explicit focus on the link between network
+structure to ecosystem function. Because the structure of realised webs
+are isolated from turnover processes they allow us to think about the
+propagation of change (across both time and space) which allows us to
+ask questions about the persistence of communities and how they respond
+to perturbations or stressors (at both the level of the node as well as
+the modification of links).
 
 Although the recent boom in the availability of long-term observation
-data is allowing us to unpack decades of insights arrived at for
+data is allowing us to unpack decades of insights for
 stability-diversity-productivity relationships for more complex
 communities (Danet et al., 2024) or to evaluate the impacts and efficacy
 of re-introductions (Wooster et al., 2024), we need to be mindful that
 empirical interaction data is typically accumulated over time and so it
-compresses the dynamic component of the interactions between species
+compresses the transient nature of the interactions between species
 (Polis, 1991). Thus we need to apply a degree of caution when using
-empirical data to construct realised networks - however there is scope
+empirical data to construct realised networks - although there is scope
 to think about developing methods that will allow us to modify metawebs
 in such a way that their structures become more aligned with realised
 webs (see the next section).
@@ -1052,6 +1035,35 @@ methodological challenges that affect our abiloty to increase both
 precision and accuracy of inference derived from the questions we
 highlight above. Here we review some of these challenges and
 opportunities that are arising to mitigate them.
+
+\textbf{Understanding what emperical data represents:} Ultimately,
+knowing what is right/precise/correct in an ecological network requires
+robust data. What does it mean when we `observe' an interaction be that
+directly (predator actively feeding on prey) or indirectly via
+\emph{e.g.,} gut or isotope analysis. A netwrok constructued with
+emperical data will most likley still represent an `accumulation' of
+feeding data making it conceptually more closely aligned with idea of a
+metaweb.
+
+\textbf{The validation of network structure:} Progress has been made in
+the development of tools and approaches of assessing how well a model
+recovers pairwise interactions (Poisot, 2023; Strydom et al., 2021), but
+we still lack a clear set of guidelines for benchmarking the ability of
+models to recover structure (Allesina et al., 2008). This makes it
+challenging to assess if models are capturing network structure
+accurately, especially if one wants to use empirical data as the
+`testing set'. Specifically, can we use a network constructed using
+long-term interaction observation data (\emph{i.e.,} conceptually a
+metaweb) to assess the accuracy of a modelled (\emph{I don't know how I
+feel about this word}), realised network? Additionally one needs to
+think about \emph{what} aspect of accurate/precise network construction
+is the most important - is it the structure or ability to correctly
+predict pairwise links? In the case of attempting to construct a metaweb
+it is important that one is accurately recovering both links that are
+truly present and absent, however in the case of realised webs it is
+perhaps not that clear. Is it sufficient to ccorrectly recover structure
+\emph{e.g.,} connectance or do the pairwise links also need to be
+correct?
 
 \textbf{Transitioning between metawebs and realised webs:} Currently
 most approaches to modelling realised networks fail to explicitly
@@ -1072,18 +1084,6 @@ web, but the links to not represent prey choice \emph{per se}.
 \emph{What about the eco-evolutionary space? What does Louille and
 Loreau's model represent?}
 
-\textbf{The validation of network structure:} Progress has been made to
-assess how well a model recovers pairwise interactions (Poisot, 2023;
-Strydom, Catchen, et al., 2021), but we still lack clear set of
-guidelines for benchmarking the ability of models to recover structure
-(Allesina et al., 2008). This makes it challenging to assess if models
-are capturing network structure accurately, especially if we are
-interested developing ways in which we can begin to downsample metawebs.
-
-\emph{Is this a problem for meta and realised? I think it is? Expand to
-include two aspects: getting the network properties right and getting
-the links correct\ldots. two problems?}
-
 \textbf{Making networks more tractible in applied spaces:} There is a
 disconnect when it comes to effectively using networks in applied spaces
 (Dansereau, Braga, et al., 2024). \textbf{WHY - need three
@@ -1096,19 +1096,6 @@ actionable. Additionally we also need a firmer grasp as to what defines
 a `network' as a unit, are the logical (environmental) boundaries
 between networks and how do these relate to `management' units and
 scales (Fortin et al., 2021).
-
-\textbf{Understanding what emperical data represents:} Ultimately,
-knowing what is right/precise/correct in an ecological network requires
-robust data. What does it mean when we `observe' an interaction be that
-directly (predator actively feeding on prey) or indirectly via
-\emph{e.g.,} gut or isotope analysis. A netwrok constructued with
-emperical data will most liekley still represents an `accumulation' of
-feeding data and this is conceptually more closely aligned with idea of
-a metaweb. Something about how this is a challenge if we want to use
-empirical networks to test or ask questions in the realised space.
-
-\emph{more on how we increase precision and accuracy (TSS speak) to get
-benchmark for link and structure correct}
 
 \section{Concluding remarks}\label{concluding-remarks}
 
@@ -1142,29 +1129,12 @@ Allesina, S., \& Pascual, M. (2009). Food web models: A plea for groups.
 \emph{Ecology Letters}, \emph{12}(7), 652--662.
 \url{https://doi.org/10.1111/j.1461-0248.2009.01321.x}
 
-\bibitem[\citeproctext]{ref-banvilleWhatConstrainsFood2023}
-Banville, F., Gravel, D., \& Poisot, T. (2023). What constrains food
-webs? {A} maximum entropy framework for predicting their structure with
-minimal biases. \emph{PLOS Computational Biology}, \emph{19}(9),
-e1011458. \url{https://doi.org/10.1371/journal.pcbi.1011458}
-
 \bibitem[\citeproctext]{ref-banvilleDecipheringProbabilisticSpecies2025}
 Banville, F., Strydom, T., Blyth, P. S. A., Brimacombe, C., Catchen, M.
 D., Dansereau, G., Higino, G., Malpas, T., Mayall, H., Norman, K.,
 Gravel, D., \& Poisot, T. (2025). Deciphering {Probabilistic Species
 Interaction Networks}. \emph{Ecology Letters}, \emph{28}(6), e70161.
 \url{https://doi.org/10.1111/ele.70161}
-
-\bibitem[\citeproctext]{ref-bascompteNetworksEcology2007}
-Bascompte, J. (2007). Networks in ecology. \emph{Basic and Applied
-Ecology}, \emph{8}(6), 485--490.
-\url{https://doi.org/10.1016/j.baae.2007.06.003}
-
-\bibitem[\citeproctext]{ref-bascompteNestedAssemblyPlantanimal2003}
-Bascompte, J., Jordano, P., Melian, C. J., \& Olesen, J. M. (2003). The
-nested assembly of plant-animal mutualistic networks. \emph{Proceedings
-of the National Academy of Sciences}, \emph{100}(16), 9383--9387.
-\url{https://doi.org/10.1073/pnas.1633576100}
 
 \bibitem[\citeproctext]{ref-beckerOptimisingPredictiveModels2022}
 Becker, D. J., Albery, G. F., Sjodin, A. R., Poisot, T., Bergner, L. M.,
@@ -1380,22 +1350,11 @@ food webs: A {Bayesian} network approach. \emph{Methods in Ecology and
 Evolution}, \emph{4}(8), 760--770.
 \url{https://doi.org/10.1111/2041-210X.12062}
 
-\bibitem[\citeproctext]{ref-erdosRandomGraphs1959}
-Erdős, P., \& Rényi, A. (1959). On {Random Graphs I}.
-\emph{Publicationes Mathematicae}.
-\url{https://doi.org/10.5486/PMD.1959.6.3-4.12}
-
 \bibitem[\citeproctext]{ref-fortinNetworkEcologyDynamic2021}
 Fortin, M.-J., Dale, M. R. T., \& Brimacombe, C. (2021). Network ecology
 in dynamic landscapes. \emph{Proceedings of the Royal Society B:
 Biological Sciences}, \emph{288}(1949), rspb.2020.1889, 20201889.
 \url{https://doi.org/10.1098/rspb.2020.1889}
-
-\bibitem[\citeproctext]{ref-fortunaHabitatLossStructure2006}
-Fortuna, M. A., \& Bascompte, J. (2006). Habitat loss and the structure
-of plant-animal mutualistic networks: {Mutualistic} networks and habitat
-loss. \emph{Ecology Letters}, \emph{9}(3), 281--286.
-\url{https://doi.org/10.1111/j.1461-0248.2005.00868.x}
 
 \bibitem[\citeproctext]{ref-frickeCollapseTerrestrialMammal2022}
 Fricke, E. C., Hsieh, C., Middleton, O., Gorczynski, D., Cappello, C.
@@ -1787,12 +1746,6 @@ towards predicting species interaction networks (across space and time).
 \emph{Philosophical Transactions of the Royal Society B: Biological
 Sciences}, \emph{376}(1837), 20210063.
 \url{https://doi.org/10.1098/rstb.2021.0063}
-
-\bibitem[\citeproctext]{ref-strydomSVDEntropyReveals2021}
-Strydom, T., Dalla Riva, G. V., \& Poisot, T. (2021). {SVD Entropy
-Reveals} the {High Complexity} of {Ecological Networks}. \emph{Frontiers
-in Ecology and Evolution}, \emph{9}.
-\url{https://doi.org/10.3389/fevo.2021.623141}
 
 \bibitem[\citeproctext]{ref-terryFindingMissingLinks2020}
 Terry, J. C. D., \& Lewis, O. T. (2020). Finding missing links in
