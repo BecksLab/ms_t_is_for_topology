@@ -1,5 +1,5 @@
 ---
-title: "Unveiling the Complexity of Food Webs: A Comprehensive Overview of Definitions, Scales, and Mechanisms"
+title: "Scaling from Metawebs to Realised Webs: A Hierarchical Approach to Network Ecology"
 author:
   - name: Tanya Strydom
     id: ts
@@ -45,9 +45,11 @@ funding: "The author(s) received no specific funding for this work. Well they di
 keywords:
   - food web
   - network construction
-  - scientific ignorance
+  - biodiversity
+  - scale and process
+  - interaction modelling
 abstract: |
-  Food webs are a useful abstraction and representation of the feeding links between species in a community and are used to infer many ecosystem level processes. However, the different theories, mechanisms, and criteria that underpin how a food web is defined, and ultimately, constructed means that not all food webs are representing the same ecological process at the same scale. Here we present a synthesis of the different assumptions, scales, and mechanisms that are used to define the different ecological networks , leading to a revision of definitions for different types of networks. Additionally we explicitly link the different network representations to the broader methodological approaches (models) that are used to construct them. In explicitly outlining the assumptions, scales, and mechanisms of network inference allows for a formal categorisation of how to use networks to answer key ecological and conservation questions as wel as defining clear guidelines to prevent unintentional misuse or misinterpretation.
+  Ecological networks provide a powerful framework for representing and analysing biodiversity, yet their construction and interpretation embed diverse theoretical assumptions. This perspective examines how alternative food web representations encode distinct scales, processes, and conceptual boundaries. We develop a hierarchical framework linking five core processes - evolutionary compatibility, co-occurrence, abundance, diet choice, and non-trophic interactions, to the construction and inference of networks. Additionally we distinguish between the different ways in which we construct networks and demonstrate how each constrains the type and scope of ecological inference. By explicitly connecting network representation to underlying theory and data, we clarify how structural assumptions influence interpretations of biodiversity patterns, community stability, and responses to multiple stressors. We argue that progress in biodiversity and ecosystem science depends on a rigorous alignment between the conceptual foundations of network models, the processes they capture, and the ecological questions they seek to address.
 date: last-modified
 bibliography: references.bib
 number-sections: true
