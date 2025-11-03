@@ -374,14 +374,14 @@ theory about energy flow (Lindeman, 1942), function (Schneider et al.,
 Networks are thus required as the response variable in evaluating
 ecological theory and statistical models of `generative processes'
 giving rise to such structure. Such structure is now commonly used to
-compare communities along environmental gradients or across time (Hao et
-al., 2025; Pecuchet et al., 2020). Networks and their topology are also
-used as a platform for evaluating `downstream' responses to stressors
-such as evaluating patterns of secondary extinction (Keyes et al., 2024;
+compare communities along environmental gradients or time (Hao et al.,
+2025; Pecuchet et al., 2020). Networks and their topology are also used
+as a platform for evaluating `downstream' responses to stressors such as
+evaluating patterns of secondary extinction (Keyes et al., 2024;
 Staniczenko et al., 2010). Finally, they are commonly used as a platform
-for implementing mathematical models of community dynamics (Delmas et
-al., 2017); delivering inference about stability, function, invasive
-species, climate change, contaminants, and secondary extinction
+for implementing mathematical models of community dynamics (\emph{e.g.,}
+Delmas et al., 2017); delivering inference about stability, function,
+invasive species, climate change, contaminants, and secondary extinction
 (\emph{e.g.,} Curtsdotter et al., 2019), to name a few applications.
 Against this backdrop of multiple research agendas, the definition of
 `edges' and `nodes', and the levels of organisation at which they are
@@ -409,8 +409,9 @@ invasions as the identity of species and the consequences of their
 losses can be hidden. Despite these issues, there are justifications for
 representing nodes as aggregated units. Most prominent relates to when
 the distribution of the links between aggregated nodes may be more
-meaningful in terms of understanding or generalising about energy flow
-and distribution within the system {[}REF{]}.
+meaningful in terms of understanding or making generalisations about the
+system *e.g.,* tracking species extinctions across feeding guilds
+(Dunhill et al., 2024).
 
 \subsection{What is captured by an edge?}\label{sec-edge}
 
@@ -419,12 +420,12 @@ introduce the concept of \emph{potential} versus \emph{realised} links:
 potential links reflect feasibility while realised links are connected
 to flux of some currency (typically energy; see below for more detail).
 Links within food webs are thus a representation of either potential
-links between species or fluxes within a system \emph{e.g.,} energy
-transfer or material flow as the result of the feeding links between
-species {[}Lindeman (1942); Proulx et al. (2005){]}Pringle (2020). Edges
-can thus correspond to different `currencies' (Gauzens et al., 2025).
-There is also a myriad of ways in which the links themselves can be
-specified. Links between species can be treated as present or absent
+links between species Pringle (2020) or fluxes within a system
+\emph{e.g.,} energy transfer or material flow as the result of the
+feeding links between species (Lindeman, 1942; Proulx et al., 2005).
+Edges can thus correspond to different `currencies' (Gauzens et al.,
+2025). There is also a myriad of ways in which the links themselves can
+be specified. Links between species can be treated as present or absent
 (\emph{i.e.,} binary), may be defined as probabilities (Banville et al.,
 2025; Poisot, Cirtwill, et al., 2016) or by continuous functions which
 further quantify the strength of an interaction (Berlow et al., 2004).
@@ -450,14 +451,14 @@ pattern at these scales.
 
 A metaweb is, at its core, a list of \emph{feasible} interactions
 between pairs of species. The feasibility for a given pair is derived
-from the complementarity (phylogenetic relationships) of their traits,
-typically aligned with feeding. Feasibility can be further refined by
-\emph{co-occurrence} leading to the transition from a \emph{global} to
-\emph{regional metaweb}. Metawebs thus provide a means to identify
-evolutionarily plausible links, regionally plausible interactions, the
-set of ecologically impossible, \emph{i.e.,} forbidden, links (Jordano,
-2016b), and ultimately a definition of the plausible \emph{complete}
-diet of a species (Strydom et al., 2023).
+from the complementarity of their traits, typically aligned with
+feeding. Feasibility can be further refined by \emph{co-occurrence}
+leading to the transition from a \emph{global} to \emph{regional
+metaweb}. Metawebs thus provide a means to identify evolutionarily
+plausible links, regionally plausible interactions, the set of
+ecologically impossible, \emph{i.e.,} forbidden, links (Jordano, 2016b),
+and ultimately a definition of the plausible \emph{complete} diet of a
+species (Strydom et al., 2023).
 
 In contrast, realised networks are typically more localised in space and
 time, and the links between species are contingent on the co-occurrence
@@ -473,7 +474,7 @@ capture processes that determine the realisation of an interaction and
 flows of energy in a community. Specifically, in realised webs, the
 definition of an edge shifts from being determined by feasibility to
 that of choices and consequences that centre around energy. If one were
-to take the same community of species and constructed both a metaweb and
+to take the same community of species and construct both a metaweb and
 realised network the two networks might have the same species but would
 be structurally different, owing to the differences in the `rules'
 constraining the presence of links. This distinction between metawebs
@@ -491,7 +492,7 @@ edges, representing different scales and processes, lead to the concept
 of a metaweb and a realised web. The fundamental take-homes are that
 nodes vary in their resolution, edges vary in what kind of process they
 represent and the intersection of these, defined by meta- vs.~realised
-webs, underpins distinct lines of enquiry and constraints on the type of
+webs, underpins distinct lines of inquiry and constraints on the type of
 inference we can make with networks. Here we reveal five core
 constraints across evolutionary and ecological scales that further
 delineate the transition from meta- to realised webs, exposing processes
@@ -557,12 +558,12 @@ Networks do not properly arise from models based on this constraint.
 Instead, interacting species pairs are defined and these are represented
 as binary (possible vs forbidden) or probabilistic (Banville et al.,
 2025). For example, in the metaweb constructed by Strydom et al. (2022)
-probabilities are quantified as the confidence of a specific being
-\emph{possible} between two species. A network constructed on the basis
-of evolutionary compatibility is conceptually aligned with a `global
-metaweb', and gives us information as to the global feasibility of links
-between species pairs despite the fact that they do not co-occur (see
-Figure~\ref{fig-process}).
+probabilities are quantified as the confidence of a specific interaction
+being \emph{possible} between two species. A network constructed on the
+basis of evolutionary compatibility is conceptually aligned with a
+`global metaweb', and gives us information as to the global feasibility
+of links between species pairs despite the fact that they do not
+co-occur (see Figure~\ref{fig-process}).
 
 \textbf{(Co)occurrence}
 
@@ -620,7 +621,7 @@ necessarily contingent on there being any compatibility between species
 It is well established that consumers make more active decisions than
 eating items in proportion to their abundance (Stephens \& Krebs, 1986).
 Ultimately, consumer choice is underpinned by an energetic cost-benefit
-framework centred around profitability and defined by traits associated
+framework centered around profitability and defined by traits associated
 with finding, catching, killing, and consuming a resource (Smith et al.,
 2021; Wootton et al., 2023). Energetic constraints are invoked to
 construct networks in a myriad of ways (\emph{e.g.,} Beckerman et al.,
@@ -656,10 +657,6 @@ abundance of species and relative contributions of direct and indirect
 effects to biomass, persistence, stability and the functioning of the
 communities (Buche et al., 2024; Kéfi et al., 2012, 2015; Miele et al.,
 2019).
-
-\textbf{are these strictly modifiers of realised networks? - because we
-class them as community context with co-occurrence, a modifier of
-feasible networks\ldots.}
 
 \section{Network construction}\label{sec-construct}
 
@@ -704,7 +701,7 @@ foundation for network construction is implemented through node- and
 network levels. When applied at the node level, species specific
 networks are created and judge by their association with expected
 feeding interactions. When applied at the network level, networks are
-judged by their structural properties per se.
+judged by their structural properties \emph{per se}.
 
 \subsubsection{Species specific networks: construction through node
 level
@@ -718,24 +715,23 @@ relationships about feeding. All methods in this inference space rest on
 a set of three assumptions: there are a set of `feeding rules' that
 underpin interaction feasibility (Morales-Castilla et al., 2015); these
 rules are phylogenetically conserved (Bramon Mora et al., 2018; Dalla
-Riva \& Stouffer, 2016); they can be specified by matching the traits
-between consumer and resource.
+Riva \& Stouffer, 2016); and they can be specified by matching the
+traits between consumer and resource.
 
 Evolutionary compatibility and co-occurrence constraints, the foundation
-theory for feasible networks, and have delivered insight in many ways.
-They have been critical to the construction of `first draft' networks
-for communities for which we have no interaction data (Strydom et al.,
-2022). They are also central to interpolation in data poor regions and
-predicting interactions for `unobservable' communities \emph{e.g.,}
-prehistoric networks (Dunhill et al., 2024; Fricke et al., 2022; Yeakel
-et al., 2014) or future, novel community assemblages (Van der Putten et
-al., 2010). Furthermore, they have the capacity to evaluate a role of
-interactions among species relative to their distribution by accounting
-for the role of the environment and the role of species interactions
-(Gravel et al., 2019; Higino et al., 2023; Pollock et al., 2014).There
-are substantial data requirements for these approaches including expert
-knowledge, species traits and phylogenetic relationships and/or
-interaction data on related species or communities.
+theory for feasible networks, have been critical to the construction of
+`first draft' networks for communities for which we have no interaction
+data (Strydom et al., 2022). They are also central to interpolation in
+data poor regions and predicting interactions for `unobservable'
+communities \emph{e.g.,} prehistoric networks (Dunhill et al., 2024;
+Fricke et al., 2022; Yeakel et al., 2014) or future, novel community
+assemblages (Van der Putten et al., 2010). Furthermore, they have the
+capacity to evaluate a role of interactions among species relative to
+their distribution by accounting for the role of the environment and the
+role of species interactions (Gravel et al., 2019; Higino et al., 2023;
+Pollock et al., 2014).There are substantial data requirements for these
+approaches including expert knowledge, species traits and phylogenetic
+relationships and/or interaction data on related species or communities.
 
 Feeding rules are defined in multiple ways. The determination of the
 feeding rules can be defined \emph{a priori} based expert knowledge
@@ -763,10 +759,10 @@ Finally, graph embedding uses the structural features of a known network
 to infer the position of species in an unknown network through the
 decomposition of the interaction onto the embedding space. This
 decomposition relies on a combination of ecological proxies
-\textbf{(e.g.~???)} in conjunction with known interactions to infer the
-latent values of species \textbf{What is a latent value of a species
-with respect to inferring interactions?}. See Strydom et al. (2023) for
-a detailed review of methods and Strydom et al. (2022) for a specific
+(\emph{e.g.,} traits) in conjunction with known interactions to infer
+the latent values of species, which can then be mapped onto
+decomposition of a known network. See Strydom et al. (2023) for a
+detailed review of methods and Strydom et al. (2022) for a specific
 example.
 
 \subsubsection{Species agnostic networks: construction through structure
@@ -781,13 +777,14 @@ networks are usually not species specific. Although these models are
 data input light, often requiring only species richness and an estimate
 of the number of expected links, they make clear assumptions regarding
 what the expectations are for network structure. These are some of the
-most commonly used network generation tools (e.g.~the Niche model REF).
-There are two sub-categories of these species agnostic networks.
+most commonly used network generation tools (e.g.~the Niche model;
+Williams \& Martinez (2008)). There are two sub-categories of these
+species agnostic networks.
 
 Stochastic network models use a probabilistic rule-set about diet choice
 and niche breadth to reflect fundamental ideas of foraging biology.
-These models that are based on the compartmentation and acquisition of
-energy for species at different trophic levels (Allesina \& Pascual,
+These models that are based on the compartmentalisation and acquisition
+of energy for species at different trophic levels (Allesina \& Pascual,
 2009; Krause et al., 2003) and that network structure can be determined
 by distributing interactions along single dimension {[}the `niche axis';
 Allesina et al. (2008){]}. Typically these models parametrise some
@@ -803,10 +800,10 @@ models (Delmas et al., 2017).
 \subsection{Construction through
 deduction}\label{construction-through-deduction}
 
-In contrast to the above approaches centred on feasibility, relised
+In contrast to the above approaches centered on feasibility, realised
 networks via methods reflecting abundance and diet choice typically rely
 on deductive reasoning and have a unique agenda to those above. In
-contrast to the inductive methods, inference about a realise network
+contrast to the inductive methods, inference about a realised network
 follows from a set of premises defining generative processes, often
 referred to as mechanisms. Typically, models that embed abundance and
 diet choice constraints reference theory that allows inference about the
@@ -834,12 +831,12 @@ and also lack the larger diet niche context afforded by metawebs.
 
 Neutral networks are built on the assumption that foraging decisions are
 tied \emph{only} to the abundance of species within the community (E. F.
-Canard et al., 2014; Krishna et al., 2008). Here links are soley
+Canard et al., 2014; Krishna et al., 2008). Here links are solely
 determined by the relative abundance of the different species in the
 community. Although it is highly unlikely that abundance is the only
-determaninant of interactions work by Pomeranz et al. (2019) showcases
-how these neutral processes can be used in conjunction with inductive
-models to construct more refined/localised networks.
+determinant of interactions work by Pomeranz et al. (2019) showcases how
+these neutral processes can be used in conjunction with inductive models
+to construct more refined/localised networks.
 
 There is a broader group of models that focus on determining
 interactions in terms of energetic constraints on diet breadth, often
@@ -858,14 +855,14 @@ to the stochastic network models they also embed assumptions on network
 structure. Thus these models predict both interactions and network
 structure simultaneously, although they would benefit in being refined
 by more explicitly accounting for trait-based (\emph{i.e.,} feasibility)
-paramterisation (Curtsdotter et al., 2019).
+parameterisation (Curtsdotter et al., 2019).
 
 \section{Making Progress with Networks}\label{sec-progress}
 
 The motivation to leverage network ecology in conservation ecology,
-environmental risk assessment and natural resource managment stems from
+environmental risk assessment and natural resource management stems from
 a shift away from species/population specific measures of the effects of
-stress and distrubrance to community level metrics of these impacts.
+stress and disturbance to community level metrics of these impacts.
 These metrics, such as resilience and more generally stability,
 ecosystem function and biodiversity \emph{per se}, are natural
 properties of networks. This suggests that modern conservation, risk
@@ -877,7 +874,7 @@ science and their focus on abundance, distribution, functions and
 services that biodiversity provides (Loreau \& de Mazancourt, 2013).
 Major questions remain, for example, about
 stability-diversity-productivity relationships, the impacts of
-exintctions and invasions and the impacts of multiple stressors
+extinctions and invasions and the impacts of multiple stressors
 operating at multiple ecological scales. A network approach to answering
 these types of questions specifically allows us to evaluate how
 environmental gradients and anthropogenic stress map through direct and
@@ -898,15 +895,17 @@ Section~\ref{sec-construct} or both of these factors.
 
 Here we discuss and map the different network representations shown in
 Figure~\ref{fig-process} to `appropriate' research questions and agendas
-{[}see also Table~\ref{tbl-questions}{]}. We also highlight some of the
-key methodological challenges that currently limit our conceptualisation
-of a `network' and thus impact their effective practical application in
+see also~\ref{tbl-questions}. We also highlight some of the key
+methodological challenges that currently limit our conceptualisation of
+a `network' and thus impact their effective practical application in
 real world settings.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
-\caption{Table Caption}\label{tbl-questions}\tabularnewline
+\caption{Showcasing some of the broader avenues of inquiry, specifically
+how they map to the different network
+representations}\label{tbl-questions}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Network Representation
@@ -925,20 +924,25 @@ Example Research Question
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Global Metaweb & How will novel communities respond to \emph{e.g.}
+Global Metaweb & How will novel communities respond to \emph{e.g.,}
 extinction, turnover, invasion and rewilding \\
-& Diet/Trait-based conservation \\
-& Rewiring capacity of species \\
-& Eco-Evolutionary dynamics \\
+& Diet-based conservation focusing not only on the target species but
+the species it might depend on for food resources \\
+& Rewiring capacity/potential of species by looking at the \emph{entire}
+diets of species \\
+& Eco-Evolutionary dynamics and hoe they relate to the conservation and
+origination of feeding strategies \\
 Regional Metawebs & Applied use potential of questions highlighted for
 global metawebs at the management scale \emph{e.g.,} a protected area \\
-& Refinement/Extension of species distribution models \\
-Realised webs & How do we allocate multiple stressors across networks \\
+& Refinement/extension of species distribution models by incorporating
+co-occurrence and species associations \emph{e.g.,} predator and prey \\
+Realised webs & The allocation of multiple stressors across networks \\
 & Temperature threshold to community collapse \\
 & Extinction and persistence after harvesting/invasion/extinction \\
 & Stability-diversity-productivity-function \\
-& Ecosystem level processes \\
-& Meta communitites and the idea of meta-network-communities \\
+& Explicilty tying ecosystem level processes and nutrient flows to
+networks \\
+& Meta communities and the idea of meta-network-communities \\
 \end{longtable}
 
 \subsection{Key Eco-Evo-Conservation
@@ -949,14 +953,14 @@ Questions}\label{key-eco-evo-conservation-questions}
 The interactions in global metawebs are not constrained by the
 realisation of specific community assemblages (or species
 co-occurrence). These networks provide a platform for answering
-quesstions that assume interactions \emph{could} occur between species
+questions that assume interactions \emph{could} occur between species
 (feasibility) or where the potential diet breadth of species is
 required. Examples of appropriate research questions at this scale
 includes those about \emph{hypothetical} or \emph{novel} communities and
 interactions under future climate change scenarios, or the potential
 `position' of an invasive (or re-introduced) species within a network
 (Hui \& Richardson, 2019). This scale is also appropriate for a
-partciular class of questions related to the potential
+particular class of questions related to the potential
 (eco-evolutionary) rewiring capacity of species, and how this may help
 inform on the opportunities for persistence of species within new
 community assemblages (Marjakangas et al., 2025). The implicit focus on
@@ -971,12 +975,12 @@ selection, and phenotypic plasticity shapes the diet breadth of species.
 Regional metawebs are conceptually a spatially constrained global
 metaweb. They make explicit the co-occurence between species. Against
 this backdrop, they are conceptually aligned with similar questions to
-those posed above, with the added focus on a community facing, real,
-challenge. Additionally, regional metawebs can and have been used to
-refine and constrain species distribution model predictions, giving us
-more refined range maps (García-Callejas et al., 2023) or community
-composition under climate change scenarios, even at global scales (Hao
-et al., 2025).
+those posed above, with the added focus on a community facing,
+real-world, challenge. Additionally, regional metawebs can and have been
+used to refine and constrain species distribution model predictions,
+giving us more refined range maps (García-Callejas et al., 2023) or
+community composition under climate change scenarios, even at global
+scales (Hao et al., 2025).
 
 However we must exercise a high degree of caution when comparing
 structures among regional metwebs, whether discrete collections or along
@@ -1011,8 +1015,8 @@ propagation of change (across both time and space) which allows us to
 ask questions about the persistence of communities and how they respond
 to perturbations or stressors (at both the level of the node as well as
 the modification of links). For example in
-Section~\ref{sec-progress_metaweb} we discuss ho global metawebs can
-inform as to the rewiring \emph{capcity} of a species, a realised
+Section~\ref{sec-progress_metaweb} we discuss how global metawebs can
+inform as to the rewiring \emph{capacity} of a species, a realised
 network however would be better suited to capture the rewiring of
 networks over time as a response to changes in the environment or
 community.
@@ -1034,17 +1038,17 @@ webs (see the next section).
 challenges}\label{key-methodological-challenges}
 
 As noted above, the three types of networks help highlight longstanding
-methodological challenges that affect our abiloty to increase both
+methodological challenges that affect our ability to increase both
 precision and accuracy of inference derived from the questions we
 highlight above. Here we review some of these challenges and
 opportunities that are arising to mitigate them.
 
-\textbf{Understanding what emperical data represents:} Ultimately,
+\textbf{Understanding what empirical data represents:} Ultimately,
 knowing what is right/precise/correct in an ecological network requires
 robust data. What does it mean when we `observe' an interaction be that
 directly (predator actively feeding on prey) or indirectly via
-\emph{e.g.,} gut or isotope analysis. A netwrok constructued with
-emperical data will most likley still represent an `accumulation' of
+\emph{e.g.,} gut or isotope analysis. A network constructed with
+empirical data will most likely still represent an `accumulation' of
 feeding data making it conceptually more closely aligned with idea of a
 metaweb.
 
@@ -1064,64 +1068,65 @@ is the most important - is it the structure or ability to correctly
 predict pairwise links? In the case of attempting to construct a metaweb
 it is important that one is accurately recovering both links that are
 truly present and absent, however in the case of realised webs it is
-perhaps not that clear. Is it sufficient to ccorrectly recover structure
+perhaps not that clear. Is it sufficient to correctly recover structure
 \emph{e.g.,} connectance or do the pairwise links also need to be
 correct?
 
 \textbf{Transitioning between metawebs and realised webs:} Currently
 most approaches to modelling realised networks fail to explicitly
-account for any form of evolutionary constraint (although Van De Walle
-et al. (2023) and Wootton et al. (2023) have added traits to more ) and
-we need to develop either an ensemble modelling approach (Becker et al.,
-2022; Terry \& Lewis, 2020) or. tools that will allow for the
-downsampling of metawebs into realised networks, (\emph{e.g.,}
-Roopnarine, 2006).
+account for any form of evolutionary constraint (although see Van De
+Walle et al. (2023) and Wootton et al. (2023)) and we need to develop
+either an ensemble modelling approach (Becker et al., 2022; Terry \&
+Lewis, 2020) or tools that will allow for the downsampling of metawebs
+into realised networks, (\emph{e.g.,} Roopnarine, 2006).
 
 Importantly we need to think critically how the creation of either an
 `ensemble network' or downsampled metaweb might change the underlying
-`currency' of a nework and thus the underling defintiion of the edge
+`currency' of a network and thus the underling definition of the edge
 \emph{e.g.} the downsampling approach developed by Roopnarine (2006)
-structually constrains the network to structurally look like a realised
+structurally constrains the network to structurally look like a realised
 web, but the links to not represent prey choice \emph{per se}.
 
 Having a well developed framework as well as `fluidity' to allow us to
 scale up between meta- and realised food webs lays the groundwork for us
 to actively begin the integration of food webs into the classical
-metacommunity-metaecosystem space (Massol et al., 2011). Developments in
-the metacommunity-metaecosystem space should be intentional about
-articulating a firm dixtinction as to what defines a `network' as a
-unit, as well as defining the logical (spatial and temporal) boundaries
-between networks (Fortin et al., 2021).
+metacommunity-metaecosystem space (Massol et al., 2011) as well as
+ecosystem level processes (Liu et al., 2025). The being said
+developments in the community-ecosystem space should be intentional
+about articulating a firm distinction as to what defines a `network' as
+a unit, as well as defining the logical (spatial and temporal)
+boundaries between networks (Fortin et al., 2021).
 
-\textbf{Making networks more tractible in applied spaces:} There is a
+\textbf{Making networks more tractable in applied spaces:} There is a
 disconnect when it comes to effectively using networks in applied
 spaces. This is probably at least in part related to the challenges with
-delinating `boundaries' between networks, and specifically how do these
-relate to `management' units and scales. Additionally a limted
+delineating `boundaries' between networks, and specifically how these
+relate to `management units' and scales in addition to a limited
 interpretability of network metrics, specifically how this can be
-applied to conservation targets/indeces (Dansereau, Braga, et al.,
-2024). In order to adress this shortcoming we not only need to make an
-effort to more efficiently map the from (structure) of a network to its
-function as well as identify how this can effectively be integrated into
-policy to make it meaningful and actionable (O'Connor et al., 2025) but
-also actively identify the appropriate network representation.
+applied to conservation targets/indices (Dansereau, Braga, et al.,
+2024). In order to address these shortcomings we need to make an effort
+to more efficiently map the form (structure) of a network to its
+function in order to identify how this can effectively be integrated
+into policy to make it meaningful and actionable (O'Connor et al.,
+2025), all while remaining mindful to ensure that we identify the
+appropriate network representation.
 
 \section{Concluding remarks}\label{concluding-remarks}
 
 Having a clear understanding of the interplay between network
 representations and the processes that they are capable of encoding is
 critical if we are to understand exactly which networks can be used to
-answer which questions. As we highlight in Box 1 the different network
-representations have different potential uses and it should be clear
-that there is no `best' network representation but rather a network
-representation that is best suited to its intended purpose. In providing
-a formalisation regards to the assumptions and mechanisms that need to
-be explicitly taken into consideration when deciding to use (and
-construct) networks we hope to prevent the unintentional misuse or
-misinterpretation of networks as well as provide a starting point from
-which we can develop a better framework for the applied use of networks
-to answer questions that are not only pressing within the field but also
-within broader biodiversity science.
+answer which questions. As we highlight in Section~\ref{sec-progress}
+the different network representations have different potential uses and
+it should be clear that there is no `best' network representation but
+rather a network representation that is best suited to its intended
+purpose. In providing a formalisation regards to the assumptions and
+mechanisms that need to be explicitly taken into consideration when
+deciding to use (and construct) networks we hope to prevent the
+unintentional misuse or misinterpretation of networks as well as provide
+a starting point from which we can develop a better framework for the
+applied use of networks to answer questions that are not only pressing
+within the field but also within broader biodiversity science.
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
@@ -1498,6 +1503,12 @@ Lindeman, R. L. (1942). The {Trophic-Dynamic Aspect} of {Ecology}.
 \emph{Ecology}, \emph{23}(4), 399--417.
 \url{https://doi.org/10.2307/1930126}
 
+\bibitem[\citeproctext]{ref-liuHarnessingFoodWebs2025}
+Liu, J., Liu, M., Yin, J., Zhang, Y., Guo, Y., Yu, T., Yu, H., \& Ming,
+X. (2025). Harnessing food webs as a framework for enhancing ecosystem
+multifunctionality. \emph{Biological Conservation}, \emph{310}, 111383.
+\url{https://doi.org/10.1016/j.biocon.2025.111383}
+
 \bibitem[\citeproctext]{ref-llewelynPredictingPredatorPrey2023}
 Llewelyn, J., Strona, G., Dickman, C. R., Greenville, A. C., Wardle, G.
 M., Lee, M. S. Y., Doherty, S., Shabani, F., Saltré, F., \& Bradshaw, C.
@@ -1819,6 +1830,12 @@ review. \emph{Annals of Botany}, \emph{103}(9), 1445--1457.
 Williams, R. J., \& Martinez, N. D. (2000). Simple rules yield complex
 food webs. \emph{Nature}, \emph{404}(6774), 180--183.
 \url{https://doi.org/10.1038/35004572}
+
+\bibitem[\citeproctext]{ref-williamsSuccessItsLimits2008}
+Williams, R. J., \& Martinez, N. D. (2008). Success and its limits among
+structural models of complex food webs. \emph{Journal of Animal
+Ecology}, \emph{77}(3), 512--519.
+\url{https://doi.org/10.1111/j.1365-2656.2008.01362.x}
 
 \bibitem[\citeproctext]{ref-windsorUsingEcologicalNetworks2023}
 Windsor, F. M., van den Hoogen, J., Crowther, T. W., \& Evans, D. M.
