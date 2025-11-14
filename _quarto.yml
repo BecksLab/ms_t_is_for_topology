@@ -19,7 +19,7 @@ format:
     callout-appearance: simple
     callout-icon: false
     comments:
-      hypothesis: false
+      hypothesis: true
     citations-hover: true
     crossrefs-hover: true
     toc: true
