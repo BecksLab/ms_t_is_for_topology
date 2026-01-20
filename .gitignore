@@ -17,3 +17,5 @@ _scrap.md
 BESPoster.pdf
 BESposter.psd
 .Rproj.user
+
+**/*.quarto_ipynb

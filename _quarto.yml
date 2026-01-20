@@ -9,10 +9,6 @@ project:
 
 manuscript:
   article: index.qmd
-  code-links:
-    - text: GitHub
-      icon: github
-      href: https://github.com/BecksLab/topology_generators
 
 format:
   html:
