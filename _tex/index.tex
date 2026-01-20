@@ -310,6 +310,14 @@ interaction modelling%
 \doublespacing
 \linenumbers
 
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+\section{Introduction}\label{introduction}
 
 At the heart of modern biodiversity science are a set of concepts and
 theories about species richness, stability, and function, which have
@@ -1148,22 +1156,21 @@ of a metaweb.
 the development of tools and approaches of assessing how well a model
 recovers pairwise interactions (Poisot, 2023; Strydom et al., 2021), but
 we still lack a clear set of guidelines for benchmarking the ability of
-models to recover structure (Allesina et al., 2008;
-\textbf{tylianakisConservationSpeciesInteraction2010?}). This makes it
-challenging to assess if models are capturing network structure
-accurately, especially if one wants to use empirical data as the
-`testing set'. Specifically, can we use a network constructed using
-long-term interaction observation data (\emph{i.e.,} conceptually a
-metaweb) to assess the accuracy of a modelled (\emph{I don't know how I
-feel about this word}), realised network? Additionally one needs to
-think about \emph{what} aspect of accurate/precise network construction
-is the most important - is it the structure or ability to correctly
-predict pairwise links? In the case of attempting to construct a metaweb
-it is important that one is accurately recovering both links that are
-truly present and absent, however in the case of realised webs it is
-perhaps not that clear. Is it sufficient to correctly recover structure
-\emph{e.g.,} connectance or do the pairwise links also need to be
-correct?
+models to recover structure (Allesina et al., 2008; Tylianakis et al.,
+2010). This makes it challenging to assess if models are capturing
+network structure accurately, especially if one wants to use empirical
+data as the `testing set'. Specifically, can we use a network
+constructed using long-term interaction observation data (\emph{i.e.,}
+conceptually a metaweb) to assess the accuracy of a modelled (\emph{I
+don't know how I feel about this word}), realised network? Additionally
+one needs to think about \emph{what} aspect of accurate/precise network
+construction is the most important - is it the structure or ability to
+correctly predict pairwise links? In the case of attempting to construct
+a metaweb it is important that one is accurately recovering both links
+that are truly present and absent, however in the case of realised webs
+it is perhaps not that clear. Is it sufficient to correctly recover
+structure \emph{e.g.,} connectance or do the pairwise links also need to
+be correct?
 
 \textbf{Transitioning between metawebs and realised webs:} Currently
 most approaches to modelling realised networks fail to explicitly
@@ -2109,6 +2116,12 @@ O'Connor, L. M. J., Ohlmann, M., Poggiato, G., \& Münkemüller, T.
 (2024). Navigating the integration of biotic interactions in
 biogeography. \emph{Journal of Biogeography}, \emph{51}(4), 550--559.
 \url{https://doi.org/10.1111/jbi.14734}
+
+\bibitem[\citeproctext]{ref-tylianakisConservationSpeciesInteraction2010}
+Tylianakis, J. M., Laliberté, E., Nielsen, A., \& Bascompte, J. (2010).
+Conservation of species interaction networks. \emph{Biological
+Conservation}, \emph{143}(10), 2270--2279.
+\url{https://doi.org/10.1016/j.biocon.2009.12.004}
 
 \bibitem[\citeproctext]{ref-valdovinosBioenergeticFrameworkAboveground2023}
 Valdovinos, F. S., Hale, K. R. S., Dritz, S., Glaum, P. R., McCann, K.
