@@ -63,7 +63,10 @@ abstract: |
 date: last-modified
 bibliography: references.bib
 number-sections: true
+toc: true
 ---
+
+# Introduction
 
 At the heart of modern biodiversity science are a set of concepts and theories about species richness, stability, and function, which have been discussed since the foundational work of @eltonAnimalEcology2001, @lindemanTrophicDynamicAspectEcology1942, and @macarthurFluctuationsAnimalPopulations1955 and synthesised more recently [@loreauBiodiversityEcosystemStability2013]. These relate to the abundance, distribution, functions, and services that biodiversity provides. Network representations of interactions among organisms are increasingly argued to be an asset to understanding and predicting the impacts of multiple, simultaneous stress on biodiversity (*e.g.,* foundational studies on food web structure and robustness: @cohenCommunityFoodWebs1990; @martinezTimeSpaceScale1998; @dunneNetworkStructureBiodiversity2002; @simmonsRefocusingMultipleStressor2021). Documenting interactions between and among taxa is thus one of the fundamental building blocks of community ecology and provides a powerful abstraction and platform for mathematical and statistical modelling of biodiversity to make predictions, and to mitigate and manage threats [@windsorUsingEcologicalNetworks2023].
 
