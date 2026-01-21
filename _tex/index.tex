@@ -138,6 +138,11 @@
  
 
 
+\usepackage[left=3cm,right=5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{lineno}
+\usepackage{setspace}
+\usepackage{orcidlink}
+\usepackage{etoolbox}
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -195,122 +200,182 @@ process, interaction modelling},
   pdfcreator={LaTeX via pandoc}}
 
 
-
 \title{Scaling from Metawebs to Realised Webs: A Hierarchical Approach
 to Network Ecology}
-\author{Tanya Strydom %
+
+
+% ==================================================================
+% 1. CAPTURE DATA 
+% ==================================================================
+\newcommand{\myauthors}{%
 %
-\textsuperscript{%
+\textbf{Tanya Strydom}%
+~\orcidlink{0000-0001-6067-1349}%
+\textsuperscript{1}%
+\textsuperscript{*}%
 %
-1%
-}%
-; Alexander M. Dunhill %
+, %
 %
-\textsuperscript{%
+\textbf{Alexander M. Dunhill}%
+~\orcidlink{0000-0002-8680-9163}%
+\textsuperscript{2}%
 %
-2%
-}%
-; Jennifer A. Dunne %
 %
-\textsuperscript{%
+, %
 %
-3%
-}%
-; Timothée Poisot %
+\textbf{Jennifer A. Dunne}%
+~\orcidlink{0000-0002-3789-9561}%
+\textsuperscript{3}%
 %
-\textsuperscript{%
-4,%
-5%
-}%
-; Andrew P. Beckerman %
 %
-\textsuperscript{%
+, %
 %
-1%
-}%
+\textbf{Timothée Poisot}%
+~\orcidlink{0000-0002-0735-5184}%
+\textsuperscript{4,5}%
+%
+%
+, %
+%
+\textbf{Andrew P. Beckerman}%
+~\orcidlink{0000-0002-7859-8394}%
+\textsuperscript{1}%
+%
+%
+%
 }
+
+\newcommand{\myaffiliations}{%
+%
+\textsuperscript{1} School of Biosciences, University of Sheffield,
+Sheffield, UK%
+\\ %
+%
+\textsuperscript{2} School of Earth, Environment and Sustainability,
+University of Leeds, Leeds, UK%
+\\ %
+%
+\textsuperscript{3} Santa Fe Institute, 1399 Hyde Park Road, Santa Fe,
+NM 87501, USA%
+\\ %
+%
+\textsuperscript{4} Université de Montréal, Département de Sciences
+Biologiques, Montréal, QC, Canada%
+\\ %
+%
+\textsuperscript{5} Québec Centre for Biodiversity Sciences, Montréal,
+QC, Canada%
+%
+}
+
+\newcommand{\myemail}{%
+%
+%
+\textsuperscript{*}Correspondence: \texttt{t.strydom@sheffield.ac.uk}%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+}
+
+% ==================================================================
+% 2. DEFINE THE LAYOUT
+% ==================================================================
+\makeatletter
+\renewcommand{\maketitle}{%
+  \newpage
+  \null
+  \vskip 1em%
+  % Use a Group with \raggedright instead of 'flushleft' environment
+  % This ensures it aligns EXACTLY with the body text margins.
+  {\raggedright
+    \let \footnote \thanks
+    \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+    % TITLE
+    {\LARGE \bfseries \sffamily \@title \par}%
+    \vskip 1em%
+    % AUTHORS
+    {\large
+      \lineskip .5em%
+      \noindent\myauthors\par}% 
+    % AFFILIATIONS
+    \vskip 1em%
+    {\footnotesize \myaffiliations \par}%
+    % EMAIL
+    \vskip 0.5em%
+    {\footnotesize \myemail \par}%
+  }% End group
+  \par
+  \vskip 1em}
+\makeatother
+
 \date{2026-01-21}
 
-\usepackage{setspace}
-\usepackage[left]{lineno}
-\usepackage[letterpaper]{geometry}
-
 \usepackage[nolists,noheads,markers]{endfloat}
-\geometry{margin=2.5cm}
 
 \begin{document}
+\maketitle
 
-\thispagestyle{empty}
-{\bfseries\sffamily\Large Scaling from Metawebs to Realised Webs: A
-Hierarchical Approach to Network Ecology}
-\vfil
-Tanya Strydom %
-%
-\textsuperscript{%
-%
-1%
-}%
-; Alexander M. Dunhill %
-%
-\textsuperscript{%
-%
-2%
-}%
-; Jennifer A. Dunne %
-%
-\textsuperscript{%
-%
-3%
-}%
-; Timothée Poisot %
-%
-\textsuperscript{%
-4,%
-5%
-}%
-; Andrew P. Beckerman %
-%
-\textsuperscript{%
-%
-1%
-}%
+% REDEFINE ABSTRACT TO REMOVE INDENTATION
+\renewenvironment{abstract}
+ {\small\noindent\textbf{Abstract:}}
+ {\par}
 
-\vfil
-{\small
-\textbf{Abstract:} Ecological networks provide a critical framework for
-understanding the architecture of biodiversity and predicting ecosystem
-responses to environmental change. However, the application of network
-ecology is often hindered by a lack of clarity regarding the assumptions
-inherent in different network representations. Here, we present a
-hierarchical framework that distinguishes between `metawebs'
-(representing the fundamental feasibility of interactions) and `realised
-webs' (representing interactions expressed in specific spatiotemporal
-contexts). We contrast our conceptual approach with recent data-centric
-reviews, focusing instead on the theoretical gradients that govern
-network construction. We identify five core processes that drive the
-transition from potential to realised interactions: evolutionary
-compatibility and co-occurrence, which define the feasibility of links;
-and abundance, diet choice, and non-trophic interactions, which
-determine their realisation. Furthermore, we map these processes onto a
-methodological spectrum of network construction, distinguishing between
-inductive approaches (\emph{e.g.,} trait-matching and stochastic models)
-that infer structure from observation, and deductive approaches
-(\emph{e.g.,} neutral and optimal foraging models) that generate
-structure from mechanistic first principles. By making explicit the
-assumptions and scale-dependent processes underpinning these different
-representations, this framework clarifies the scope of inference
-possible with each approach, ultimately facilitating more robust
-predictions of biodiversity dynamics in the anthropocene.
-\vfil
-\textbf{Keywords:} %
-food web, network construction, biodiversity, scale and process, %
-interaction modelling%
-}
-\clearpage
-\setcounter{page}{1}
-\doublespacing
+  \begin{abstract}
+    Ecological networks provide a critical framework for understanding
+    the architecture of biodiversity and predicting ecosystem responses
+    to environmental change. However, the application of network ecology
+    is often hindered by a lack of clarity regarding the assumptions
+    inherent in different network representations. Here, we present a
+    hierarchical framework that distinguishes between `metawebs'
+    (representing the fundamental feasibility of interactions) and
+    `realised webs' (representing interactions expressed in specific
+    spatiotemporal contexts). We contrast our conceptual approach with
+    recent data-centric reviews, focusing instead on the theoretical
+    gradients that govern network construction. We identify five core
+    processes that drive the transition from potential to realised
+    interactions: evolutionary compatibility and co-occurrence, which
+    define the feasibility of links; and abundance, diet choice, and
+    non-trophic interactions, which determine their realisation.
+    Furthermore, we map these processes onto a methodological spectrum
+    of network construction, distinguishing between inductive approaches
+    (\emph{e.g.,} trait-matching and stochastic models) that infer
+    structure from observation, and deductive approaches (\emph{e.g.,}
+    neutral and optimal foraging models) that generate structure from
+    mechanistic first principles. By making explicit the assumptions and
+    scale-dependent processes underpinning these different
+    representations, this framework clarifies the scope of inference
+    possible with each approach, ultimately facilitating more robust
+    predictions of biodiversity dynamics in the anthropocene.
+          \par\bigskip
+      \noindent\textbf{Keywords:} food web, network
+construction, biodiversity, scale and process, interaction modelling
+      \end{abstract}
+
+% FORCE NEW PAGE BEFORE CONTENT
+\newpage
+
+% ==========================================================
+% BODY TEXT SETUP
+% ==========================================================
+
+% 1. Set default body style
 \linenumbers
+\doublespacing % <--- CHANGED TO DOUBLE SPACING
 
+% 2. Fix Table of Contents (Clean Mode)
+\makeatletter
+\@ifpackageloaded{etoolbox}{%
+  \pretocmd{\tableofcontents}{\nolinenumbers\singlespacing}{}{}%
+  \apptocmd{\tableofcontents}{\linenumbers\doublespacing}{}{}% 
+}{}%
+\makeatother
 \renewcommand*\contentsname{Table of contents}
 {
 \setcounter{tocdepth}{3}
@@ -2194,7 +2259,6 @@ Dynamics}. \emph{The American Naturalist}, \emph{139}(6), 1151--1175.
 \url{https://doi.org/10.1086/285380}
 
 \end{CSLReferences}
-
 
 
 
