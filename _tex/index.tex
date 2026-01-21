@@ -65,6 +65,7 @@
 
 
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -183,7 +184,7 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={Scaling from Metawebs to Realised Webs: A Hierarchical Approach to Network Ecology},
-  pdfauthor={Tanya Strydom; Alexander Dunhill; Jennifer A. Dunne; Timothée Poisot; Andrew P. Beckerman},
+  pdfauthor={Tanya Strydom; Alexander M. Dunhill; Jennifer A. Dunne; Timothée Poisot; Andrew P. Beckerman},
   pdfkeywords={food web, network construction, biodiversity, scale and
 process, interaction modelling},
   colorlinks=true,
@@ -203,7 +204,7 @@ to Network Ecology}
 %
 1%
 }%
-; Alexander Dunhill %
+; Alexander M. Dunhill %
 %
 \textsuperscript{%
 %
@@ -228,7 +229,7 @@ to Network Ecology}
 1%
 }%
 }
-\date{2026-01-20}
+\date{2026-01-21}
 
 \usepackage{setspace}
 \usepackage[left]{lineno}
@@ -249,7 +250,7 @@ Tanya Strydom %
 %
 1%
 }%
-; Alexander Dunhill %
+; Alexander M. Dunhill %
 %
 \textsuperscript{%
 %
@@ -299,7 +300,7 @@ structure from mechanistic first principles. By making explicit the
 assumptions and scale-dependent processes underpinning these different
 representations, this framework clarifies the scope of inference
 possible with each approach, ultimately facilitating more robust
-predictions of biodiversity dynamics in the Anthropocene.
+predictions of biodiversity dynamics in the anthropocene.
 \vfil
 \textbf{Keywords:} %
 food web, network construction, biodiversity, scale and process, %
@@ -312,7 +313,6 @@ interaction modelling%
 
 \renewcommand*\contentsname{Table of contents}
 {
-\hypersetup{linkcolor=}
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
@@ -348,10 +348,8 @@ In this perspective we aim to provide an overview of different
 embeds assumptions about the processes that determine interactions
 (Section~\ref{sec-process}) about the levels of organization at which
 this occurs (\emph{i.e.} the biological, ecological, spatial/temporal
-scales) and and the way in which we construct the resulting networks
-(Section~\ref{sec-construct}). The differences among this tri-partite
-set of assumptions ultimately influence the nature and scope of
-inference that can be made from a given network (Proulx et al., 2005).
+scales) and the way in which we construct the resulting networks
+(Section~\ref{sec-construct}).
 
 Fundamentally, we are talking about an intersection of the type of data
 used to construct a network and the underlying theory as to what drives
@@ -409,25 +407,25 @@ distributions or abundance patterns) networks provide a formal framework
 for capturing the organisation of interactions among species. The study
 of network structure and topology has a long history in ecology, rooted
 in early theory on energy flow (Lindeman, 1942; Odum, 1968), and later
-extended to questions of robustness, stability, and complexity (Brose et
-al., 2006; Dunne et al., 2002; May, 1972; Montoya et al., 2006;
-\emph{e.g.,} Pimm, 1984). More recent work has built on this foundation
-to link network structure to ecosystem functioning, persistence, and
-dynamical behaviour (\emph{e.g.,} Schneider et al. (2016); Danet et al.
-(2024); Pilosof et al. (2017)). Networks are therefore commonly treated
-as response variables in tests of ecological theory and statistical
-models of the generative processes that give rise to observed structure,
-and are widely used to compare communities across environmental
-gradients or through time (\emph{e.g.,} Hao et al., 2025; Pecuchet et
-al., 2020). They also provide a platform for evaluating downstream
-responses to perturbations, including secondary extinctions and
-robustness to species loss (\emph{e.g.,} Dunne et al., 2002; Keyes et
-al., 2021, 2024; Staniczenko et al., 2010), as well as for implementing
-dynamical process that inference about stability, ecosystem function,
-invasions, climate change, contaminants, and extinction cascades
-(\emph{e.g.,} Delmas et al. (2017); Curtsdotter et al. (2019); Terry et
-al. (2025)). Against this backdrop of multiple research agendas, the
-definition of `edges' and `nodes', and the levels of organisation at
+extended to questions of robustness, stability, and complexity
+(\emph{e.g.,} Pimm, 1984; Brose et al., 2006; Dunne et al., 2002; May,
+1972; Montoya et al., 2006). More recent work has built on this
+foundation to link network structure to ecosystem functioning,
+persistence, and dynamical behaviour (\emph{e.g.,} Schneider et al.,
+2016; Danet et al., 2024; Pilosof et al., 2017). Networks are therefore
+commonly treated as response variables in tests of ecological theory and
+statistical models of the generative processes that give rise to
+observed structure, and are widely used to compare communities across
+environmental gradients or through time (\emph{e.g.,} Hao et al., 2025;
+Pecuchet et al., 2020). They also provide a platform for evaluating
+downstream responses to perturbations, including secondary extinctions
+and robustness to species loss (\emph{e.g.,} Dunne et al., 2002; Keyes
+et al., 2021, 2024; Staniczenko et al., 2010), as well as for
+implementing dynamical process that inference about stability, ecosystem
+function, invasions, climate change, contaminants, and extinction
+cascades (\emph{e.g.,} Delmas et al., 2017; Curtsdotter et al., 2019;
+Terry et al., 2025). Against this backdrop of multiple research agendas,
+the definition of `edges' and `nodes', and the levels of organisation at
 which they are defined, take many forms (Moulatlet et al., 2024; Poisot,
 Stouffer, et al., 2016), each of which encode a series of assumptions
 within a network. Here we introduce a perspective on these baseline
@@ -460,7 +458,7 @@ informative than species-level detail, for example when analysing
 extinction patterns across feeding guilds (Dunhill et al., 2024). More
 broadly, issues of resolution, scale, and sampling have long been
 recognised as central to the construction and interpretation of food
-webs (Dunne, 2006; \emph{e.g.,} Martinez \& Dunne, 1998).
+webs (\emph{e.g.,} Martinez \& Dunne, 1998; Dunne, 2006).
 
 \subsection{What is captured by an edge?}\label{sec-edge}
 
@@ -811,8 +809,8 @@ suitable ecological proxies for which data is more widely available
 et al. (2020) for an overview). These include generalised linear models
 (\emph{e.g.,} Caron et al., 2022), random forest (\emph{e.g.,} Llewelyn
 et al., 2023), trait-based k-NN (\emph{e.g.,} Desjardins-Proulx et al.,
-2017), and Bayesian models (Cirtwill et al., 2019; \emph{e.g.,} Eklöf et
-al., 2013).
+2017), and Bayesian models (\emph{e.g.,} Eklöf et al., 2013; Cirtwill et
+al., 2019).
 
 Finally, graph embedding uses the structural features of a known network
 to infer the position of species in an unknown network through the
@@ -833,7 +831,7 @@ ecological networks. These can be used in a variety of ways, for example
 comparing the structure of realised networks to quantify relative
 deviations from the model structure. They are also used as a way to
 generate `realistic' food web structures that are used for dynamical or
-other analyses The determination of links between species is only
+other analyses. The determination of links between species is only
 implicitly linked to properties of the nodes. This means these networks
 are usually not species specific. Although these models are data input
 light, often requiring only species richness and an estimate of the
@@ -1171,13 +1169,13 @@ Importantly we need to think critically how the creation of either an
 `currency' of a network and thus the underlying definition of the edge
 \emph{e.g.} the downsampling approach developed by Roopnarine (2006)
 structurally constrains the network to structurally look like a realised
-web, but the links to not represent prey choice \emph{per se}.
+web, but the links do not represent prey choice \emph{per se}.
 
 Having a well developed framework as well as `fluidity' to allow us to
 scale up between meta- and realised food webs lays the groundwork for us
 to actively begin the integration of food webs into the classical
 metacommunity-metaecosystem space (Massol et al., 2011) as well as
-ecosystem level processes (Liu et al., 2025). The being said
+ecosystem level processes (Liu et al., 2025). That being said
 developments in the community-ecosystem space should be intentional
 about articulating a firm distinction as to what defines a `network' as
 a unit, as well as defining the logical (spatial and temporal)
@@ -1186,26 +1184,25 @@ boundaries between networks (Fortin et al., 2021).
 \textbf{Making networks more tractable in applied spaces:} There is a
 disconnect when it comes to effectively using networks in applied
 spaces. This is probably at least in part related to the challenges with
-delineating `boundaries' between networks, and specifically how these
-relate to `management units' and scales in addition to a limited
-interpretability of network metrics, specifically how this can be
-applied to conservation targets/indices (Dansereau, Braga, et al.,
-2024). In order to address these shortcomings we need to make an effort
-to more efficiently map the form (structure) of a network to its
-function in order to identify how this can effectively be integrated
-into policy to make it meaningful and actionable (O'Connor et al.,
-2025), all while remaining mindful to ensure that we identify the
-appropriate analytical tools and network representation (Pellissier et
-al., 2018).
+delineating `boundaries' between networks, and how these relate to
+`management units' and scales in addition to a limited interpretability
+of network metrics, specifically how this can be applied to conservation
+targets/indices (Dansereau, Braga, et al., 2024). In order to address
+these shortcomings we need to make an effort to more efficiently map the
+form (structure) of a network to its function in order to identify how
+this can effectively be integrated into policy to make it meaningful and
+actionable (O'Connor et al., 2025), all while remaining mindful to
+ensure that we identify the appropriate analytical tools and network
+representation (Pellissier et al., 2018).
 
 Taken together, these challenges highlight three overarching messages.
-Network representations are inseparable from the data and assumptions
-used to construct them; that validation and benchmarking must be
-explicitly aligned with the intended network type and question; greater
-conceptual clarity is needed when transitioning between metawebs and
-realised networks, particularly in applied contexts. Explicitly
-articulating these distinctions is essential if networks are to be used
-both rigorously and transparently across scales.
+(i) Network representations are inseparable from the data and
+assumptions used to construct them; (ii) validation and benchmarking
+must be explicitly aligned with the intended network type and question;
+(iii) greater conceptual clarity is needed when transitioning between
+metawebs and realised networks, particularly in applied contexts.
+Explicitly articulating these distinctions is essential if networks are
+to be used both rigorously and transparently across scales.
 
 \section{Concluding remarks}\label{concluding-remarks}
 
@@ -1221,17 +1218,17 @@ should be clear that there is no `best' network representation but
 rather a network representation that is best suited to its intended
 purpose. By formalising the assumptions and mechanisms underlying
 different network constructions, we provide a framework for evaluating
-when and how particular representations are appropriate we hope to
-prevent the unintentional misuse or misinterpretation of networks as
-well as provide a starting point from which we can develop a better
-framework for the applied use of networks to answer questions that are
-not only pressing within the field but also within broader biodiversity
+when and how particular representations are appropriate. This framework
+aims to prevent the unintentional misuse or misinterpretation of
+networks. It also offers a starting point for developing improved
+approaches to the applied use of networks in addressing questions that
+are pressing both within the field and across broader biodiversity
 science.
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
 
-\phantomsection\label{refs}
+\protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-albouyProjectedSpeciesDistribution2014}
 Albouy, C., Velez, L., Coll, M., Colloca, F., Le Loc'h, F., Mouillot,
