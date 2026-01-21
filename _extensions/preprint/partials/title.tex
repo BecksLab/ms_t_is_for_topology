@@ -1,35 +1,78 @@
-$-- Provides configuration of document metadata for writing the title block.
-$-- Note that in addition to these templates and partials, Quarto will also make normalized authors and affiliations data available to the template,
-$-- making is easy to write custom title blocks against a standard schema.
-$--
-$-- %%%% TODO %%%%%
-$-- Customize is needed, like below for printing the authors. Otherwise remove this partials to use Quarto default one.
-$-- %%%%%%%%%%%%%%%%
-
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
+
 $if(subtitle)$
-\usepackage{etoolbox}
 \makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
+\providecommand{\subtitle}[1]{\apptocmd{\@title}{\par {\large #1 \par}}{}{}}
 \makeatother
 \subtitle{$subtitle$}
 $endif$
-\author{${ by-author:_authors.tex()[; ] }}
-\date{$date$}
 
-\usepackage{setspace}
-\usepackage[left]{lineno}
-\usepackage[letterpaper]{geometry}
+% ==================================================================
+% 1. CAPTURE DATA 
+% ==================================================================
+\newcommand{\myauthors}{%
+$for(by-author)$%
+\textbf{$it.name.literal$}%
+$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$%
+\textsuperscript{$for(it.affiliations)$$it.number$$sep$,$endfor$}%
+$if(it.attributes.corresponding)$\textsuperscript{*}$endif$%
+$if(it.acknowledgements)$\thanks{$it.acknowledgements$}$endif$%
+$sep$, %
+$endfor$%
+}
+
+\newcommand{\myaffiliations}{%
+$for(by-affiliation)$%
+\textsuperscript{$it.number$} $it.name$%
+$sep$\\ %
+$endfor$%
+}
+
+\newcommand{\myemail}{%
+$for(by-author)$%
+$if(it.attributes.corresponding)$%
+\textsuperscript{*}Correspondence: \texttt{$it.email$}%
+$endif$%
+$endfor$%
+}
+
+% ==================================================================
+% 2. DEFINE THE LAYOUT
+% ==================================================================
+\makeatletter
+\renewcommand{\maketitle}{%
+  \newpage
+  \null
+  \vskip 1em%
+  % Use a Group with \raggedright instead of 'flushleft' environment
+  % This ensures it aligns EXACTLY with the body text margins.
+  {\raggedright
+    \let \footnote \thanks
+    \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+    % TITLE
+    {\LARGE \bfseries \sffamily \@title \par}%
+    \vskip 1em%
+    % AUTHORS
+    {\large
+      \lineskip .5em%
+      \noindent\myauthors\par}% 
+    % AFFILIATIONS
+    \vskip 1em%
+    {\footnotesize \myaffiliations \par}%
+    % EMAIL
+    \vskip 0.5em%
+    {\footnotesize \myemail \par}%
+  }% End group
+  \par
+  \vskip 1em}
+\makeatother
+
+\date{$date$}
 
 $if(formatting.draft-format)$
 \usepackage[nolists,noheads,markers]{endfloat}
-\geometry{margin=2.5cm}
 $else$
 \singlespacing
-\geometry{lmargin=3cm}
-\geometry{rmargin=5cm}
 $endif$

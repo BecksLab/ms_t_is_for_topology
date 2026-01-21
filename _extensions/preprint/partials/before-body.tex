@@ -1,33 +1,37 @@
-$-- Implements the frontmatter, title page, and abstract.
-$--
-$-- %%%% TODO %%%%%
-$-- Customize is needed, otherwise remove this partials to use Quarto default one
-$-- %%%%%%%%%%%%%%%%
+$if(title)$
+\maketitle
+$endif$
 
-$if(formatting.draft-format)$\thispagestyle{empty}$endif$
-{\bfseries\sffamily\Large ${title}}
-$if(formatting.masked-review)$
-$else$
-$if(formatting.draft-format)$\vfil$else$\vskip 1em$endif$
-${ by-author:_authors.tex()[; ] }
-$endif$
-$if(formatting.draft-format)$\vfil$else$\vskip 2em$endif$
-{\small
+% REDEFINE ABSTRACT TO REMOVE INDENTATION
+\renewenvironment{abstract}
+ {\small\noindent\textbf{Abstract:}}
+ {\par}
+
 $if(abstract)$
-\textbf{Abstract:} $abstract$
+  \begin{abstract}
+    $abstract$
+    $if(keywords)$
+      \par\bigskip
+      \noindent\textbf{Keywords:} $for(keywords)$$it$$sep$, $endfor$
+    $endif$
+  \end{abstract}
 $endif$
-$if(formatting.draft-format)$\vfil$else$\vskip 1em$endif$
-$if(keywords)$
-\textbf{Keywords:} %
-$for(keywords/allbutlast)$${it}, $endfor$%
-$for(keywords/last)$${it}$endfor$%
-$endif$
-}
-$if(formatting.draft-format)$\clearpage$else$\vskip 4em$endif$
-$if(formatting.draft-format)$
-\setcounter{page}{1}
-\doublespacing
+
+% FORCE NEW PAGE BEFORE CONTENT
+\newpage
+
+% ==========================================================
+% BODY TEXT SETUP
+% ==========================================================
+
+% 1. Set default body style
 \linenumbers
-$else$
-\flushleft
-$endif$
+\doublespacing % <--- CHANGED TO DOUBLE SPACING
+
+% 2. Fix Table of Contents (Clean Mode)
+\makeatletter
+\@ifpackageloaded{etoolbox}{%
+  \pretocmd{\tableofcontents}{\nolinenumbers\singlespacing}{}{}%
+  \apptocmd{\tableofcontents}{\linenumbers\doublespacing}{}{}% 
+}{}%
+\makeatother

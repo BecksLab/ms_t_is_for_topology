@@ -17,25 +17,21 @@ contributes:
       fig-width: 6.5
       fig-height: 4.5
       csl: https://www.zotero.org/styles/ecology-letters
-      # Set this below (`biblio-config: false`) if your cls already load a bst file
-      # biblio-config: false
-      # Content to add in header that your format is using
-      #header-includes: |
-      #  \usepackage{orcidlink}
-      #  \usepackage{preprint}
+      # PACKAGES
+      header-includes: 
+        - \usepackage[left=3cm,right=5cm,top=2cm,bottom=2cm]{geometry}
+        - \usepackage{lineno}
+        - \usepackage{setspace}
+        - \usepackage{orcidlink} 
+        - \usepackage{etoolbox}
       template-partials:
         - "partials/title.tex"
-        - "partials/_authors.tex"
-        - "partials/_authors_data.tex"
-        - "partials/after-body.tex"
         - "partials/before-body.tex"
+        - "partials/after-body.tex"
       format-resources:
-        - preprint.sty
         - te.bst
     html:
-      # define default configuration for the html version of your format
       number-sections: true
       toc: true
       theme: custom.scss
-      # Use a CSL file to style (https://www.zotero.org/styles/)
       csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics
