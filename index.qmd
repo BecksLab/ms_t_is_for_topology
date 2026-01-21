@@ -11,7 +11,7 @@ author:
     - methodology: supporting
     affiliations:
       - School of Biosciences, University of Sheffield, Sheffield, UK
-  - name: Alexander Dunhill
+  - name: Alexander M. Dunhill
     id: ad
     orcid: 0000-0002-8680-9163
     corresponding: false
@@ -19,7 +19,7 @@ author:
     - conceptualization: lead
     - methodology: supporting
     affiliations:
-      - School of Earth and Environment, University of Leeds, Leeds, UK
+      - School of Earth, Environment and Sustainability, University of Leeds, Leeds, UK
   - name: Jennifer A. Dunne
     id: jad
     orcid: 0000-0002-3789-9561
