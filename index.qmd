@@ -27,7 +27,7 @@ author:
     role: 
     - conceptualization: lead
     - methodology: supporting
-    affiliation:
+    affiliations:
         - ref: sfi
   - name: Timothée Poisot
     id: tp
@@ -36,7 +36,7 @@ author:
     role: 
     - conceptualization: lead
     - methodology: supporting
-    affiliation:
+    affiliations:
         - ref: udem
         - ref: qcbs
   - name: Andrew P. Beckerman
@@ -179,9 +179,9 @@ Finally, graph embedding uses the structural features of a known network to infe
 
 ### Species agnostic networks: construction through structure induction
 
-Networks in this category are generated using rules that create non-random networks that reflect some minimal empirical knowledge of ecological networks. These can be used in a variety of ways, for example comparing the structure of realised networks to quantify relative deviations from the model structure. They are also used as a way to generate 'realistic' food web structures that are used for dynamical or other analyses. The determination of links between species is only implicitly linked to properties of the nodes. This means these networks are usually not species specific. Although these models are data input light, often requiring only species richness and an estimate of the number of expected links, they make clear assumptions regarding what the expectations are for network structure. These are some of the most commonly used network generation tools (*e.g.,* the Niche model; @williamsSimpleRulesYield2000). There are two sub-categories of these species agnostic networks.
+Networks in this category are generated using rules that create non-random networks that reflect some minimal empirical knowledge of ecological networks. These can be used in a variety of ways, for example comparing the structure of realised networks to quantify relative deviations from the model structure. They are also used as a way to generate 'realistic' food web structures that are used for dynamical or other analyses. The determination of links between species is only implicitly linked to properties of the nodes. This means these networks are usually not species specific. Although these models are data input light, often requiring only species richness and an estimate of the number of expected links, they make clear assumptions regarding what the expectations are for network structure.
 
-Stochastic network models use a probabilistic rule-set about diet choice and niche breadth to reflect fundamental ideas of foraging biology. These models that are based on the compartmentalisation and acquisition of energy for species at different trophic levels [@allesinaFoodWebModels2009; @krauseCompartmentsRevealedFoodweb2003] and that network structure can be determined by distributing interactions along single dimension [the 'niche axis'; @allesinaGeneralModelFood2008]. Typically these models parametrise some aspect of the network structure [although see @allesinaFoodWebModels2009 for a parameter-free model]. These models include the most commonly used network generator, the Niche model [@williamsSimpleRulesYield2000], as well as the original Cascade model [@cohenCommunityFoodWebs1990] and the derived Nested hierarchy model [@cattinPhylogeneticConstraintsAdaptation2004]. These models often form the basis for dynamic models *e.g.,* the allometric trophic network [@broseAllometricScalingEnhances2006; @schneiderAnimalDiversityEcosystem2016a] and bioenergetic food web models [@delmasSimulationsBiomassDynamics2017].
+Stochastic network models use a probabilistic rule-set about diet choice and niche breadth to reflect fundamental ideas of foraging biology. These models that are based on the compartmentalisation and acquisition of energy for species at different trophic levels [@allesinaFoodWebModels2009; @krauseCompartmentsRevealedFoodweb2003] and that network structure can be determined by distributing interactions along single dimension [the 'niche axis'; @allesinaGeneralModelFood2008]. Typically these models parametrise some aspect of the network structure [although see @allesinaFoodWebModels2009 for a parameter-free model]. These models include the most commonly used network generator, the Niche model [@williamsSimpleRulesYield2000], as well as the original Cascade model [@cohenCommunityFoodWebs1990] and the derived Nested hierarchy model [@cattinPhylogeneticConstraintsAdaptation2004]. Despite the fact that these networks are derived without any real world data they are still able to recover the structure of emirical networks [@stoufferQuantitativePatternsStructure2005]. These models often form the basis for dynamic models *e.g.,* the allometric trophic network [@broseAllometricScalingEnhances2006; @schneiderAnimalDiversityEcosystem2016a] and bioenergetic food web models [@delmasSimulationsBiomassDynamics2017].
 
 ## Construction through deduction
 
@@ -206,7 +206,7 @@ In order to effectively use networks to aid us in answering questions about cons
 Here we discuss and map the different network representations shown in @fig-process to 'appropriate' research questions and agendas [see also @tbl-questions]. We also highlight some of the key methodological challenges that currently limit our conceptualisation of a 'network' and thus impact their effective practical application in real world settings.
 
 | Network Representation | Example Research Question | Representative Studies |
-|-----------------|--------------------------|-----------------------------|
+|------------------|--------------------------|-----------------------------|
 | Global Metaweb | How will novel communities respond to *e.g.,* extinction, turnover, invasion and rewilding $^\checkmark$ | @gravelMeaningFunctionalTrait2016; @dunneNetworkStructureBiodiversity2002 |
 |  | Diet-based conservation focusing not only on the target species but the species it might depend on for food resources $^\Delta$ | @rooneyIntegratingFoodWeb2012; @curtsdotterRobustnessSecondaryExtinctions2011; @mcdonald-maddenUsingFoodwebTheory2016 |
 |  | Rewiring capacity/potential of species by looking at the *entire* diets of species $^\Delta$ | @gilljamAdaptiveRewiringAggravates2015; @staniczenkoStructuralDynamicsRobustness2010; @suAdaptiveRewiringShapes2024a; @marjakangasFundamentalInteractionNiches2025 |
