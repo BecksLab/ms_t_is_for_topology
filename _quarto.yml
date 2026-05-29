@@ -23,9 +23,9 @@ format:
     title-block-style: manuscript
     title-block-banner-color: "#1D8265"
   docx:
-    csl: https://www.zotero.org/styles/biological-reviews
+    csl: https://www.zotero.org/styles/proceedings-of-the-royal-society-b
   preprint-pdf:
-    csl: https://www.zotero.org/styles/biological-reviews
+    csl: https://www.zotero.org/styles/proceedings-of-the-royal-society-b
     formatting:
       draft-format: true
 
