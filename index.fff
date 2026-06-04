@@ -10,12 +10,12 @@
 interactions (right) with different network representations (left). A
 \textbf{global metaweb} captures all feasible interactions among a
 species pool. Restricting this network by species co-occurrence yields
-\textbf{regional metawebs}, which differ in species composition and
-interaction feasibility. Species occurring in both regions are shown in
-red, whereas region-specific species are shown in blue and yellow.
-\textbf{Realised networks} represent subsets of regional metawebs
-expressed in particular spatial and temporal contexts. Their structure
-is shaped not only by co-occurrence, but also by community-level
-processes such as abundance, diet choice, and non-trophic interactions.}
+\textbf{regional metawebs}, which differ in species composition. Species
+occurring in both regions are shown in red, whereas region-specific
+species are shown in blue and yellow. \textbf{Realised networks}
+represent subsets of regional metawebs expressed in specific spatial and
+temporal contexts. Their structure is shaped not only by co-occurrence,
+but also by community-level processes such as abundance, diet choice,
+and non-trophic interactions.}
 
 \end{figure}
