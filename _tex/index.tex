@@ -329,31 +329,31 @@ Docteur Penfield Avenue, Montreal, Quebec, Canada H3A 1B1, Canada%
  {\par}
 
   \begin{abstract}
-    Ecological networks provide a critical framework for understanding
-    the architecture of biodiversity and predicting ecosystem responses
-    to environmental change. However, the application of network ecology
-    is often hindered by a lack of clarity regarding the assumptions
-    inherent in different network representations. While recent
-    literature predominantly focuses on data-centric classifications,
-    predictive missing-link inference, or the topological specification
-    of nodes and links, we focus instead on the theoretical gradients
-    and processes that govern network construction. Here, we present a
-    hierarchical framework that distinguishes between `metawebs'
-    (representing the fundamental feasibility of interactions) and
-    `realised webs' (representing interactions expressed in specific
-    spatiotemporal contexts). We identify five core processes that drive
-    the transition from potential to realised interactions: evolutionary
-    compatibility and co-occurrence, which define the feasibility of
-    links; and abundance, diet choice, and non-trophic interactions,
-    which determine their realisation. Furthermore, we map these
-    processes onto a methodological spectrum of network construction,
-    distinguishing between inductive approaches that infer structure
-    from observation, and deductive approaches that generate structure
-    from mechanistic first principles. By making explicit the underlying
-    biological assumptions and scale-dependent processes, this framework
-    moves the field past descriptive topology, clarifying the scope of
-    inference possible with each approach to facilitate more robust
-    predictions of biodiversity dynamics in the anthropocene.
+    Ecological networks are increasingly used to understand biodiversity
+    and predict ecosystem responses to environmental change, yet their
+    application is often limited by uncertainty about the assumptions
+    embedded in different network representations. Here, we present a
+    theory-driven framework that views network construction as a
+    hierarchical transition from metawebs, which represent the
+    feasibility of interactions, to realised webs, which represent
+    interactions expressed in specific spatiotemporal contexts. We
+    identify five key processes underlying this transition: evolutionary
+    compatibility and co-occurrence, which define interaction
+    feasibility, and abundance, diet choice, and non-trophic
+    interactions, which determine interaction realisation. We further
+    position these processes along a continuum of network construction
+    methods, from inductive approaches that infer structure from
+    observations to deductive approaches that generate structure from
+    mechanistic principles. By explicitly linking network
+    representations to their underlying assumptions and scale-dependent
+    processes, our framework clarifies the questions that different
+    networks can address, highlights key challenges in moving between
+    potential and realised interactions, and provides a roadmap for
+    developing predictive network ecology. We argue that greater
+    conceptual clarity is essential for advancing biodiversity science
+    and for the effective application of networks in conservation,
+    environmental management, and forecasting ecological change in the
+    Anthropocene.
           \par\bigskip
       \noindent\textbf{Keywords:} food web, network
 construction, biodiversity, scale and process, interaction
@@ -536,6 +536,19 @@ is governed by different constraints. Links absent from a metaweb
 represent infeasible interactions, whereas links absent from a realised
 network reflect context-dependent ecological constraints.
 
+A key distinction between these representations concerns what
+constitutes a realised interaction. At its most general, a realised
+network requires more than the feasibility of species interactions; it
+must incorporate the ecological context that determines whether feasible
+interactions are expressed. This context may be represented through
+observation, abundance-dependent encounter rates, consumer choice,
+environmental conditions, or other mechanisms that constrain interaction
+expression. Consequently, realised networks need not be observed
+directly, but they should reflect processes governing the distribution
+or strength of interactions within a particular community. In contrast,
+metawebs represent the space of feasible interactions irrespective of
+whether those interactions are expressed locally.
+
 \section{From Nodes and Edges to Process and
 Constraints}\label{sec-process}
 
@@ -706,7 +719,10 @@ inherent in building different types of networks. Each of the processes,
 or combinations thereof, deliver a unique set of boundary conditions on
 what a network represents and can be used for. Here we build on the
 introduction of these five processes to further categorise the
-approaches to constructing networks.
+approaches to constructing networks. The utility of a network depends on
+the processes used to construct it. Different construction approaches
+encode different assumptions about how interactions arise, and therefore
+support different ecological questions.
 
 \subsection{Why construct networks?}\label{why-construct-networks}
 
@@ -743,9 +759,8 @@ from a set of observations and relationships around feeding. Inductive
 reasoning as a foundation for network construction is implemented at
 node and network levels.
 
-\subsubsection{Species specific networks: construction through node
-level
-induction}\label{species-specific-networks-construction-through-node-level-induction}
+\subsubsection{Species specific
+induction}\label{species-specific-induction}
 
 When applied at the node level, species-specific networks are created
 based on expected feeding interactions. When applied at the network
@@ -789,8 +804,8 @@ proxies (\emph{e.g.,} phylogenetic relatedness {[}57{]}) in conjunction
 with known interactions to infer the latent values of species, which can
 then be mapped onto decomposition of a known network.
 
-\subsubsection{Species agnostic networks: construction through structure
-induction}\label{species-agnostic-networks-construction-through-structure-induction}
+\subsubsection{Structure-based
+induction}\label{structure-based-induction}
 
 These models generate ecologically realistic network structures using
 simple probabilistic rules. They are commonly used as null expectations,
@@ -819,21 +834,20 @@ allometric trophic network {[}24,26{]} and bioenergetic food web models
 \subsection{Construction through
 deduction}\label{construction-through-deduction}
 
-In contrast to the above approaches centred on feasibility, the
-construction of realised networks relies on deductive reasoning and have
-a unique agenda to those above. In contrast to the inductive methods,
-inference about a realised network follows from a set of premises
-defining generative processes, often referred to as mechanisms, allowing
-inference about the distribution and strength of interactions. These
-models are widely used to study energy flux, extinction dynamics, and
-ecosystem functioning. They also provide the structural backbone for
-dynamical systems modelling to address questions about
+In contrast to metaweb construction, realised networks require
+assumptions about the ecological processes that determine whether
+feasible interactions are expressed. These approaches are deductive
+because interactions emerge from explicit assumptions about encounters,
+foraging behaviour, energetic constraints, or interaction modification.
+These approaches operationalise the abundance, diet-choice, and
+non-trophic processes introduced in
+Section~\ref{sec-process-feasibility}. The resulting networks are widely
+used to study energy flux, extinction dynamics, and ecosystem
+functioning. They also provide the structural backbone for dynamical
+systems modelling to address questions about
 stability-structure-productivity-function relationships, secondary
 extinction dynamics, species invasion and climate change. There are two
 broad groups of models in this deductive category.
-
-\subsubsection{Species-specific
-networks}\label{species-specific-networks}
 
 These models capture the behaviour of the nodes by explicitly
 considering the properties of the different species in the community.
@@ -844,6 +858,8 @@ real world settings (requiring data about the entire community, as it is
 the behaviour of the system that determines the behaviour of the part)
 and also lack the larger diet niche context afforded by metawebs.
 
+\subsubsection{Abundance-based models}\label{abundance-based-models}
+
 Neutral networks are built on the assumption that foraging decisions are
 tied \emph{only} to the abundance of species within the community
 {[}117,118{]}. Here links are solely determined by the relative
@@ -851,6 +867,8 @@ abundance of the different species in the community. Although
 unrealistic as a complete explanation, neutral models can be combined
 with inductive approaches to generate more localised predictions
 {[}67{]}.
+
+\subsubsection{Abundance-based models}\label{abundance-based-models-1}
 
 There is a broader group of models that focus on determining
 interactions in terms of energetic constraints on diet breadth, often
