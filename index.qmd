@@ -105,6 +105,8 @@ A metaweb is fundamentally a list of *feasible* interactions between species. Fe
 
 In contrast, realised networks are localised in space and time, with links shaped by co-occurrence, environmental conditions, and diet choice. Even when represented as binary matrices, their links implicitly reflect interaction strength and energy transfer. Realised networks are therefore not simple spatial or temporal subsets of metawebs; they emerge from the processes governing whether feasible interactions are expressed. Consequently, a metaweb and realised network containing the same species may differ substantially in structure because link presence is governed by different constraints. Links absent from a metaweb represent infeasible interactions, whereas links absent from a realised network reflect context-dependent ecological constraints.
 
+A key distinction between these representations concerns what constitutes a realised interaction. At its most general, a realised network requires more than the feasibility of species interactions; it must incorporate the ecological context that determines whether feasible interactions are expressed. This context may be represented through observation, abundance-dependent encounter rates, consumer choice, environmental conditions, or other mechanisms that constrain interaction expression. Consequently, realised networks need not be observed directly, but they should reflect processes governing the distribution or strength of interactions within a particular community. In contrast, metawebs represent the space of feasible interactions irrespective of whether those interactions are expressed locally.
+
 # From Nodes and Edges to Process and Constraints {#sec-process}
 
 In the previous section we discussed how the definition of nodes and edges, representing different scales and processes, lead to the concept of a metaweb and a realised web. The fundamental take-homes are that nodes vary in their resolution, edges vary in what kind of process they represent and the intersection of these, defined by meta- vs. realised webs, underpins distinct lines of inquiry and constraints on the type of inference we can make with networks. Here we reveal five core constraints across evolutionary and ecological scales that further delineate the transition from meta- to realised webs, exposing processes that determine the nature of links among nodes: evolutionary compatibility, co-occurrence, abundance, diet choice, and non-trophic interactions [@fig-process].
@@ -149,7 +151,7 @@ Some interactions, such as pollination, occupy an intermediate position in this 
 
 # Network construction {#sec-construct}
 
-The above five processes are central to understanding the assumptions inherent in building different types of networks. Each of the processes, or combinations thereof, deliver a unique set of boundary conditions on what a network represents and can be used for. Here we build on the introduction of these five processes to further categorise the approaches to constructing networks.
+The above five processes are central to understanding the assumptions inherent in building different types of networks. Each of the processes, or combinations thereof, deliver a unique set of boundary conditions on what a network represents and can be used for. Here we build on the introduction of these five processes to further categorise the approaches to constructing networks. The utility of a network depends on the processes used to construct it. Different construction approaches encode different assumptions about how interactions arise, and therefore support different ecological questions.
 
 ## Why construct networks?
 
@@ -161,7 +163,7 @@ Networks are unique in delivering more than just estimates of species richness. 
 
 Constructing feasible or realised networks can be framed as an ‘inductive reasoning’ process where insight and generalisation arise from a set of observations and relationships around feeding. Inductive reasoning as a foundation for network construction is implemented at node and network levels.
 
-### Species specific networks: construction through node level induction
+### Species specific induction
 
 When applied at the node level, species-specific networks are created based on expected feeding interactions. When applied at the network level, networks are judged by their structural properties. All methods in this inference space rest on a set of three assumptions: there are a set of ‘feeding rules’ that underpin interaction feasibility [@morales-castillaInferringBioticInteractions2015]; these rules are phylogenetically conserved [@dallarivaExploringEvolutionarySignature2016; @bramonmoraIdentifyingCommonBackbone2018]; and they can be specified by matching the traits between consumer and resource.
 
@@ -173,7 +175,7 @@ Rules are also defined by correlating real world interaction data with suitable 
 
 Finally, graph embedding uses the structural features of a known network to infer the position of species in an unknown network through the decomposition of the interaction onto the embedding space (see @strydomGraphEmbeddingTransfer2023). This decomposition relies on a combination of ecological proxies (*e.g.,* phylogenetic relatedness @strydomFoodWebReconstruction2022) in conjunction with known interactions to infer the latent values of species, which can then be mapped onto decomposition of a known network.
 
-### Species agnostic networks: construction through structure induction
+### Structure-based induction
 
 These models generate ecologically realistic network structures using simple probabilistic rules. They are commonly used as null expectations, for comparative analyses, and as inputs to dynamical models. The determination of links between species is not directly linked to properties of the nodes. This means these networks are usually not species specific. Although they require little empirical information, they encode explicit assumptions about expected network structure.
 
@@ -181,13 +183,15 @@ Stochastic network models use a probabilistic ruleset about diet choice and nich
 
 ## Construction through deduction
 
-In contrast to the above approaches centred on feasibility, the construction of realised networks relies on deductive reasoning and have a unique agenda to those above. In contrast to the inductive methods, inference about a realised network follows from a set of premises defining generative processes, often referred to as mechanisms, allowing inference about the distribution and strength of interactions. These models are widely used to study energy flux, extinction dynamics, and ecosystem functioning. They also provide the structural backbone for dynamical systems modelling to address questions about stability-structure-productivity-function relationships, secondary extinction dynamics, species invasion and climate change. There are two broad groups of models in this deductive category.
-
-### Species-specific networks
+In contrast to metaweb construction, realised networks require assumptions about the ecological processes that determine whether feasible interactions are expressed. These approaches are deductive because interactions emerge from explicit assumptions about encounters, foraging behaviour, energetic constraints, or interaction modification. These approaches operationalise the abundance, diet-choice, and non-trophic processes introduced in @sec-process-feasibility. The resulting networks are widely used to study energy flux, extinction dynamics, and ecosystem functioning. They also provide the structural backbone for dynamical systems modelling to address questions about stability-structure-productivity-function relationships, secondary extinction dynamics, species invasion and climate change. There are two broad groups of models in this deductive category.
 
 These models capture the behaviour of the nodes by explicitly considering the properties of the different species in the community. Which means that there is a degree of variance in which links are predicted between species unlike the more 'static' predictions made by inductive models. However, these networks are costly to construct in real world settings (requiring data about the entire community, as it is the behaviour of the system that determines the behaviour of the part) and also lack the larger diet niche context afforded by metawebs.
 
+### Abundance-based models
+
 Neutral networks are built on the assumption that foraging decisions are tied *only* to the abundance of species within the community [@canardEmpiricalEvaluationNeutral2014; @krishnaNeutralnicheTheoryNestedness2008]. Here links are solely determined by the relative abundance of the different species in the community. Although unrealistic as a complete explanation, neutral models can be combined with inductive approaches to generate more localised predictions [@pomeranzInferringPredatorPrey2019].
+
+### Abundance-based models
 
 There is a broader group of models that focus on determining interactions in terms of energetic constraints on diet breadth, often using the ratio of consumer-resource body size as a proxy for capturing the energetic constraints of feeding. Models such as those developed by @portalierMechanicsPredatorPrey2019 and @woottonModularTheoryTrophic2023 are similar to the mechanistic approaches discussed in @sec-construct-induct, however instead of determining interactions based on mechanistic feasibility it is rather constrained by the energetic cost of predation. Note that although these models do not place any explicit constraints on the expected structure of the network, the links should still be considered as 'realised' owing to the energetic constraint placed on links. A different subset of diet models [*e.g.,* @beckermanForagingBiologyPredicts2006; @petcheySizeForagingFood2008] use a diet choice approach, however like the stochastic network models they also embed assumptions on network structure. Thus, these models predict both interactions and network structure simultaneously, although they would benefit in being refined by more explicitly accounting for trait-based (*i.e.,* feasibility) parameterisation [@curtsdotterEcosystemFunctionPredator2019].
 
