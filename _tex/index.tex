@@ -419,18 +419,23 @@ challenges relating to data collection and observation
 in capacity to more effectively predict the impact of multiple stressors
 on biodiverse communities and their functions.
 
-In their recent work, {[}21{]} provided a perspective on the advantages
-and limitations of node resolution and link type. Here, we compliment
-this definition focused work by providing a theory-driven perspective
-that frames network construction as a hierarchical transition from
-feasibility to the realisation of interactions. In the following
+In their recent work, {[}21{]} synthesised ecological network
+representations according to node resolution and link type, highlighting
+the advantages, limitations, and methodological considerations
+associated with different approaches. Here, we take a complementary
+theory-driven perspective by framing network construction as a
+hierarchical transition from the feasibility to the realisation of
+interactions. Rather than classifying networks according to their
+structural characteristics alone, we focus on how assumptions about
+ecological entities, interactions, and processes give rise to different
+representations and the inferences they support. In the following
 sections, we review how nodes, edges, and interaction processes shape
-different network representations, highlighting how changes in
-assumptions alter ecological node and link resolution, the relative
-importance of evolutionary versus ecological processes, and how this
-intersects with the choices made when attempting to construct networks.
-We conclude by aligning these representations with key questions in
-biodiversity science in the Anthropocene.
+ecological networks, highlighting how these assumptions determine
+ecological scale, node and link resolution, the relative importance of
+evolutionary versus ecological processes, and the approaches used to
+construct networks. We conclude by linking alternative network
+representations to key questions in biodiversity science in the
+Anthropocene.
 
 \section{Setting the Scene: The Not So Basics of Nodes and
 Edges}\label{sec-anatomy}
@@ -482,29 +487,34 @@ functional or trophic units is more informative than species-level
 detail, for example when analysing extinction patterns across feeding
 guilds or other functional units {[}43{]}. Issues of resolution, scale,
 and sampling have long been recognised as central to the construction
-and interpretation of food webs (\emph{e.g.,} {[}6,44{]}) and it is
-important that we understand how the choices we make when defining nodes
-will impact the conclusions that are derived from a network {[}21{]}.
+and interpretation of food webs (\emph{e.g.,} {[}6,44{]}). Consequently,
+node definition is not merely a methodological choice but an assumption
+about the ecological entities represented in a network, with direct
+implications for the processes that can be represented and the questions
+that can be addressed {[}21{]}.
 
 \subsection{What is captured by an edge?}\label{sec-edge}
 
-Understanding how edge assumptions impact on ecological process
+Understanding how edge assumptions impact ecological process
 representation requires distinguishing between \emph{potential} and
-\emph{realised} links - potential links reflect feasibility, whereas
-realised links reflect fluxes such as energy transfer. Links within food
-webs are thus a representation of either potential links between species
-{[}45{]} or fluxes within a system \emph{e.g.,} energy transfer or
-material flow as the result of the feeding links between species
-{[}2,46{]}. Edges can thus correspond to different `currencies'
-{[}21{]}. There is also a myriad of ways in which the links themselves
-can be specified. Links between species can be treated as present or
-absent (\emph{i.e.,} binary), may be defined as probabilities
-{[}47,48{]} or by continuous functions which further quantify the
-strength of an interaction {[}49{]}. Link definition depends on both the
-ecological currency and how interactions are represented. For example,
-feasible links unlikely to accommodate inferences about the flow of
-energy through the network as the links are not
-environmentally/energetically constrained.
+\emph{realised} links. Potential links reflect interaction feasibility,
+whereas realised links reflect ecological fluxes such as energy
+transfer. Links within food webs may therefore represent either
+potential interactions between species {[}44,45{]} or realised fluxes
+within a system, such as the transfer of energy or materials resulting
+from feeding interactions {[}2,46{]}. Edges can thus correspond to
+different ecological `currencies' {[}21{]}. Moreover, links can be
+specified in multiple ways: they may be treated as present or absent
+(\emph{i.e.,} binary), defined probabilistically {[}47,48{]}, or
+represented by continuous functions that quantify interaction strength
+{[}49{]}. Link definition therefore depends on both the ecological
+currency and how interactions are represented. Because different edge
+definitions encode different ecological processes, they also support
+different forms of inference. For example, networks composed of feasible
+interactions can characterise potential trophic structure but are
+generally insufficient for inferring the magnitude or distribution of
+energy flow because their links are not environmentally or energetically
+constrained.
 
 \subsection{Network representations}\label{sec-representation}
 
@@ -514,9 +524,8 @@ rise to two well established types of ecological networks:
 within a species pool {[}44{]}, and \textbf{realised networks}, which
 represent the subset of interactions expressed within a particular
 community at a given place and time. Because of the assumptions made
-about nodes and edges in these networks, they differ in both their
-representation of scale at which they are constructed and the processes
-assumed to generate their structure.
+about nodes and edges in these networks, they differ in the scales they
+represent and the processes assumed to generate their structure.
 
 A metaweb is fundamentally a list of \emph{feasible} interactions
 between species. Metawebs identify evolutionarily and regionally
@@ -531,27 +540,17 @@ In contrast, realised networks are localised in space and time, with
 links shaped by co-occurrence, environmental conditions, and diet
 choice. Even when represented as binary matrices, their links implicitly
 reflect interaction strength and energy transfer. Realised networks are
-therefore not simple spatial or temporal subsets of metawebs; they
-emerge from the processes governing whether feasible interactions are
-expressed. Consequently, a metaweb and realised network containing the
-same species may differ substantially in structure because link presence
-is governed by different constraints. Critically, links absent from a
-metaweb represent infeasible interactions, whereas links absent from a
-realised network reflect both infeasible and context-dependent
-ecological constraints.
-
-As a result of this distinction a realised interaction can have many
-definitions. At its most general, a realised network requires more than
-the feasibility of species interactions; it must incorporate the
-ecological context that determines whether feasible interactions are
-expressed. This context may be represented through observation,
-abundance-dependent encounter rates, consumer choice, environmental
-conditions, or other mechanisms that constrain interaction expression.
-Consequently, realised networks need not be observed directly, but they
-should reflect processes governing the distribution or strength of
-interactions within a particular community. In contrast, metawebs
-represent the space of feasible interactions irrespective of whether
-those interactions are expressed locally.
+therefore not simply spatial or temporal subsets of metawebs; they
+emerge from ecological processes that govern the occurrence and strength
+of interactions among species. Consequently, a metaweb and realised
+network containing the same species may differ substantially in
+structure because link presence is governed by different constraints.
+Critically, links absent from a metaweb represent infeasible
+interactions, whereas links absent from a realised network reflect
+context-dependent ecological constraints. At its most general, a
+realised network must represent more than the potential for species
+interactions; it must reflect the processes governing the distribution
+or strength of interactions within a particular community.
 
 \section{From Nodes and Edges to Process and
 Constraints}\label{sec-process}
@@ -1109,36 +1108,21 @@ networks are to be used rigorously and transparently across scales.
 
 \section{Concluding Remarks}\label{concluding-remarks}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Network representations encode different processes:} Different
-  network representations capture distinct assumptions, data structures,
-  and ecological processes; understanding the interplay between a
-  network's structure and the processes it encodes is critical for
-  determining which questions it can address.
-\item
-  \textbf{Network representations are not interchangeable:} There is no
-  universally optimal network representation. The utility of a network
-  depends entirely on how well its underlying assumptions and data align
-  with the intended scale and process of analysis.
-\item
-  \textbf{Explicit assumptions are essential for evaluation:} Explicitly
-  articulating the assumptions behind network assembly facilitates a
-  more critical evaluation of network suitability and inferential power.
-  It is important that we move beyond the uncritical and default
-  reliance on conventional network representations in favour of
-  understanding the consequences of selecting a specific representation
-  or reconstruction/modelling approach.
-\item
-  \textbf{A unified framework improves application and progress:} The
-  framework presented here provides a structured basis for comparing
-  network representations and evaluating their suitability across
-  conceptual, methodological, and applied contexts. Establishing this
-  standard is essential for preventing the misinterpretation of network
-  data and for addressing foundational questions in biodiversity
-  science.
-\end{enumerate}
+Ecological network representations provide alternative abstractions of
+biodiversity, each defined by specific assumptions regarding ecological
+entities, interactions, and processes. Consequently, the suitability of
+a given representation depends on the ecological questions being
+addressed and the processes that the available data can meaningfully
+capture. Recognising these differences is essential for interpreting
+network structure, evaluating the scope of inference, and avoiding
+implicit assumptions associated with conventional approaches. By linking
+network representations to their underlying ecological processes and
+data requirements, the framework developed here provides a basis for
+systematically comparing alternative network constructions and
+identifying the contexts in which they are most informative.
+Establishing this standard is essential for preventing the
+misinterpretation of network data and for addressing foundational
+questions in biodiversity science.
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
