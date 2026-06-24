@@ -25,7 +25,7 @@ format:
   docx:
     csl: https://www.zotero.org/styles/proceedings-of-the-royal-society-b
   preprint-pdf:
-    csl: https://www.zotero.org/styles/proceedings-of-the-royal-society-b
+    csl: https://www.zotero.org/styles/methods-in-ecology-and-evolution
     formatting:
       draft-format: true
 
