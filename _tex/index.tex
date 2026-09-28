@@ -187,11 +187,16 @@
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
 \hypersetup{
   pdftitle={From Metawebs to Realised Webs: A Framework for Ecological Network Representation under Global Change},
   pdfauthor={Tanya Strydom; Alexander M. Dunhill; Jennifer A. Dunne; Timothée Poisot; Andrew P. Beckerman},
-  pdfkeywords={food web, network construction, biodiversity, scale and
-process, interaction modelling, trophic network},
+  pdfkeywords={\xmpquote{food web}, \xmpquote{network
+construction}, \xmpquote{biodiversity}, \xmpquote{scale and
+process}, \xmpquote{interaction modelling}, \xmpquote{trophic network}},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -316,7 +321,7 @@ Docteur Penfield Avenue, Montreal, Quebec, H3A 1B1, Canada%
   \vskip 1em}
 \makeatother
 
-\date{2026-06-24}
+\date{2026-09-28}
 
 \usepackage[nolists,noheads,markers]{endfloat}
 
