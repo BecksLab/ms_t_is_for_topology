@@ -19,3 +19,18 @@ but also by community-level processes such as abundance, diet choice,
 and non-trophic interactions.}
 
 \end{figure}
+\efloatseparator
+ 
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{images/building_flowchart.jpg}}
+
+}
+
+\caption{\label{fig-build}Flow chart showing the three core different
+appraoches to building networks (empirical, inference, and theory).
+Highlighting what the resulting netowrk representation is.}
+
+\end{figure}
