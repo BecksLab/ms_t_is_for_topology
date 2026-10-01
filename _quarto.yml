@@ -23,9 +23,9 @@ format:
     title-block-style: manuscript
     title-block-banner-color: "#1D8265"
   docx:
-    csl: https://www.zotero.org/styles/proceedings-of-the-royal-society-b
+    csl: https://www.zotero.org/styles/ecological-monographs
   preprint-pdf:
-    csl: https://www.zotero.org/styles/methods-in-ecology-and-evolution
+    csl: https://www.zotero.org/styles/ecological-monographs
     formatting:
       draft-format: true
 
