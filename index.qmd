@@ -181,7 +181,7 @@ These assumptions matter because food webs support ecological inference beyond s
 
 Recent work has further highlighted that variation in food web topology can arise not only from ecological differences among communities, but also from differences in sampling strategy, taxonomic resolution, and network construction methodology [@brimacombeShortcomingsReusingSpecies2023; @brimacombePublicationdrivenConsistencyFood2024]. Understanding how food webs are constructed is therefore a prerequisite for understanding what ecological questions they can legitimately answer (@fig-build).
 
-![Flow chart showing the three core different appraoches to building networks (empirical, inference, and theory). Highlighting what the resulting netowrk representation is.](images/building_flowchart.jpg){#fig-build}
+![Flow chart showing the three core different appraoches to building networks. Highlighting what the resulting netowrk representation is.](images/building_flowchart.png){#fig-build}
 
 ## Construction from empirical evidence {#sec-construct-empirical}
 
