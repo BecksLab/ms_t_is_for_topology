@@ -25,12 +25,12 @@ and non-trophic interactions.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{images/building_flowchart.jpg}}
+\pandocbounded{\includegraphics[keepaspectratio]{images/building_flowchart.png}}
 
 }
 
 \caption{\label{fig-build}Flow chart showing the three core different
-appraoches to building networks (empirical, inference, and theory).
-Highlighting what the resulting netowrk representation is.}
+appraoches to building networks. Highlighting what the resulting netowrk
+representation is.}
 
 \end{figure}
