@@ -211,7 +211,7 @@ Rules are also defined by correlating real world interaction data with suitable 
 
 Finally, graph embedding uses the structural features of a known network to infer the position of species in an unknown network through the decomposition of the interaction onto the embedding space (see @strydomGraphEmbeddingTransfer2023). This decomposition relies on a combination of ecological proxies (*e.g.,* phylogenetic relatedness @strydomFoodWebReconstruction2022) in conjunction with known interactions to infer the latent values of species, which can then be mapped onto decomposition of a known network.
 
-These approaches can also be used to interpolate missing interactions within partially observed networks [@bitonInductiveLinkPrediction2024; @stockLinearFilteringReveals2017; @dallasPredictingCrypticLinks2017; @poisotNetworkEmbeddingUnveils2023]. Graph-embedding approaches provide a related strategy in which the position of species within an interaction network is represented in a lower-dimensional space and transferred or inferred using information from known interactions and ecological proxies such as phylogenetic relatedness [@strydomGraphEmbeddingTransfer2023]. In each case, the inferred edge should be interpreted according to the model's underlying assumptions: it represents an interaction judged to be feasible or probable given the information used to infer it, rather than an observation that the interaction occurred.
+Finally there is a group of emerging appraoches geared towrds interpolating missing interactions within observed networks [@bitonInductiveLinkPrediction2025; @stockLinearFilteringReveals2017; @dallasPredictingCrypticLinks2017; @poisotNetworkEmbeddingUnveils2023; @habedankNewPerspectiveRevealing2025]. Broadly these appraoches aim to infer interactions that are missing in the current network based on the structure and links in the network. In each case an interaction judged to be feasible or probable given the information used to infer it, rather than an observation that the interaction occurred.
 
 ## Process-based inference {#sec-construct-process}
 
@@ -231,7 +231,7 @@ A broader class of process-based approaches determines realised interactions thr
 
 For example, models developed by @portalierMechanicsPredatorPrey2019 and @woottonModularTheoryTrophic2023 constrain interactions according to the energetic properties of predator-prey relationships. Unlike approaches that define feasibility directly from trait compatibility, these models use energetic constraints to determine which feasible interactions are likely to be realised. The resulting links therefore represent predicted feeding relationships under the assumptions and conditions of the model.
 
-Diet-choice models provide a related approach. Models such as @beckermanForagingBiologyPredicts2006 and @petcheySizeForagingFood2008 determine interactions through assumptions about how consumers allocate feeding effort among available resources. Because diet choice simultaneously affects which interactions occur and the resulting distribution of interactions across the network, these models can generate both realised links and network structure. Their process-based interpretation can nevertheless be strengthened by explicitly incorporating trait-based constraints on which interactions are feasible [@curtsdotterEcosystemFunctionPredator2019].
+Diet-choice models provide a related approach. Models such as @beckermanForagingBiologyPredicts2006 and @petcheySizeForagingFood2008 determine interactions through assumptions about how consumers allocate feeding effort among available resources. Because diet choice simultaneously affects which interactions occur and the resulting distribution of interactions across the network, these models can generate both realised links and network structure. Their process-based interpretation can nevertheless be strengthened by explicitly incorporating trait-based constraints on which interactions are feasible [@curtsdotterEcosystemFunctionPredator2019], or complimented by more explicitly incorporating nutrients [@cuffNetworkingNutrientsHow2024].
 
 The key feature of these approaches is that network structure emerges, at least in part, from ecological processes operating within a community. The same set of species can therefore produce different realised networks when abundance, environmental conditions, energetic constraints, or behavioural rules change.
 
@@ -251,19 +251,21 @@ The ability of these approaches to recover the properties of empirical food webs
 
 ## Inference choice shapes ecological inference
 
-Food web construction is not a neutral preprocessing step, rather it determines what an interaction represents and therefore what ecological questions the network can address. An empirical edge provides evidence of an interaction under sampled conditions; a feasibility-based edge represents a potential interaction; a process-based edge represents an interaction predicted to be realised under specified conditions; and a random edge represents a structural relationship generated by a probabilistic model.
+Food web construction determines not only the structure of a network, but also the ecological meaning of its interactions and the scope of inference that the network can support. An interaction recorded through direct observation provides evidence of feeding under the sampled conditions, whereas a feasibility-based link represents a biologically plausible interaction, and a process-based link represents a prediction of feeding under specified ecological conditions. Structural network models serve a different purpose as they generate configurations against which observed or predicted patterns can be compared, without necessarily identifying the interactions occurring in a particular community.
 
-These distinctions matter because analyses of energy flux, extinction cascades, stability, and ecosystem functioning depend on assumptions about which interactions exist and which are realised. Network construction should therefore be treated as an explicit modelling decision [@strydomAreWeMapping2026], with the key question being what determines an edge and what is that edge intended to represent?
+These distinctions become particularly important when networks are used to investigate ecological responses to environmental change. A network that represents the potential interactions among a regional species pool can inform questions about alternative feeding relationships, community assembly, and the capacity for interaction rewiring. However, it cannot, without additional assumptions, establish which interactions will be realised in a particular place and time. Conversely, an observed network provides evidence about interactions detected under particular sampling conditions, but may not capture the full set of feasible interactions or the distribution of feeding interactions across different environmental contexts.
+
+Network construction should therefore be treated as an explicit modelling decision [@strydomAreWeMapping2026], whereby the inferential value of a network depends on the agreement between its construction assumptions and the ecological quantity of interest. This should be made explicit when networks are constructed, compared, or used to predict ecological change [@brimacombePublicationdrivenConsistencyFood2024]. In particular, three questions require consideration: what quantity or process is being inferred; what evidence and assumptions support that inference; and what independent evidence can be used to evaluate the resulting network or its predictions?
 
 # Making Progress with Networks {#sec-progress}
 
-The motivation to leverage network ecology in conservation ecology, environmental risk assessment and natural resource management stems from a shift away from species/population specific measures of the effects of stress and disturbance to community level metrics of these impacts. These metrics, such as resilience and more generally stability, ecosystem function and biodiversity, are natural properties of networks. This suggests that modern conservation, risk assessment and resource management would benefit from robust network tools to support decision making.
+Ecological networks are increasingly used in conservation, environmental risk assessment, and natural resource management to move beyond species- or population-specific responses and investigate how stress and disturbance propagate through communities. Making them the ideal means from which to bein approaching ecosystem-level challenes [@loreauBiodiversityEcosystemStability2013a]. Network representations provide a means of examining community-level properties, including stability, resilience, biodiversity, and ecosystem functioning, and therefore have considerable potential to support ecological understanding and decision-making.
 
-This is also true in the disciplines of ecology and environmental science and their focus on abundance, distribution, functions and services that biodiversity provides [@loreauBiodiversityEcosystemStability2013a]. Major questions remain unresolved, for example, about stability-diversity-productivity relationships, the drivers and consequences of extinctions and invasions, and the impacts of multiple stressors operating at multiple ecological scales [@simmonsRefocusingMultipleStressor2021]. A network approach to answering these types of questions specifically allows us to evaluate how environmental gradients and anthropogenic stress map through direct and indirect effects among species in a complex community and reveal fundamental patterns and understanding of processes in the natural world.
+This potential is particularly relevant to unresolved questions concerning stability–diversity–productivity relationships, the drivers and consequences of extinctions and invasions, and the impacts of multiple stressors operating across ecological scales [@simmonsRefocusingMultipleStressor2021]. By representing direct and indirect feeding relationships, ecological networks can help identify how environmental gradients and anthropogenic pressures may affect communities beyond their immediate effects on individual species.
 
-To effectively use networks to aid us in answering questions about conservation/risk assessment/management and core ecological theory, we need to be mindful that we are mapping the *correct* network representation to the question of interest [@gauzensTailoringInteractionNetwork2025]. Notably, there are certain questions that cannot be answered using specific network representations as the scale of the question of interest is fundamentally misaligned with the process captured by a specific network representation (@sec-process-feasibility), the underlying data that is used to construct it (@sec-construct), or both.
+However, the usefulness of a network depends on whether its representation, construction assumptions, and scale are appropriate for the ecological question being addressed [@gauzensTailoringInteractionNetwork2025]. A network that represents feasible feeding interactions across a species pool does not provide the same information as one representing interactions expressed within a particular community. Similarly, a network that reproduces the structural properties of an empirical food web does not necessarily identify the mechanisms responsible for those properties or predict the consequences of environmental change.
 
-Here we discuss and map the different network representations shown in @fig-process to 'appropriate' research questions and agendas (see also @tbl-questions). We also highlight some of the key methodological challenges that currently limit our conceptualisation of a 'network' and thus impact their effective practical application in real world settings.
+We therefore suggest that researchers make three decisions explicit when applying ecological networks: what they want to infer, which representation can support that inference, and how the resulting inference will be evaluated. These decisions link the ecological processes described in @sec-process-feasibility to the construction approaches discussed in @sec-construct. In @tbl-questions we summarise the questions that different representations can address and the pitfalls that may arise when their inferential scope is misunderstood. Below, we develop these distinctions into practical guidance for global metawebs, regional metawebs, and realised networks, before considering the methodological challenges that currently limit their application.
 
 | Network Representation | Common Inferential Pitfall | Appropriate Inference | Representative Studies |
 |-------------|-------------|----------------------|----------------------------|
@@ -284,9 +286,57 @@ Here we discuss and map the different network representations shown in @fig-proc
 
 ## Key Eco-Evo-Conservation Questions
 
+The choice of network representation should begin with the ecological quantity of interest rather than with the availability of a particular network dataset or analytical method. In practice, this means distinguishing questions about which interactions are biologically feasible, which are possible within a regional species pool, and which are expressed under particular ecological conditions (See @ecoevo-box for a summary of these distinctions). Each question requires different information and supports different conclusions.
+
+::: {#ecoeov-box .callout-note title="Question mapping"}
+
+**Global metawebs**
+
+*Primary question*: Which feeding interactions are biologically feasible within a broader species pool?
+
+*Use when:* Investigating potential diet breadth, evolutionary constraints on feeding, novel communities, species introductions, or the potential for interaction rewiring under future environmental conditions.
+
+*You need:* A defined species pool and evidence or assumptions about interaction compatibility, typically based on traits, phylogeny, or documented interactions. Spatial co-occurrence need not be imposed if the aim is to represent the broader feasible interaction space.
+
+*It lets you infer:* Which interactions are plausible, which appear incompatible, and which potential feeding relationships could become relevant as species distributions or environmental conditions change.
+
+*Check it by:* Testing predictions against independent interaction records where possible, including evidence for both feasible and forbidden links. Assess sensitivity to the species pool, trait definitions, and rules used to infer compatibility.
+
+*Do not infer:* That every feasible interaction occurs, that all listed interactions can occur simultaneously, or that the network describes energy flow in any particular community.
+
+**Regional metawebs**
+
+*Primary question:* Which feasible interactions are possible among species that occur, or are expected to occur, within a region?
+
+*Use when:* Examining potential interactions within a regional species pool, anticipating community changes following range shifts, or assessing possible feeding relationships involving introduced or reintroduced species.
+
+*You need:* A regional species pool, distribution or co-occurrence information at an appropriate scale, and rules for identifying feasible feeding relationships.
+
+*It lets you infer:* How regional species availability constrains the feasible interaction space, and how that space may change as species distributions shift.
+
+*Check it by:* Comparing predicted species occurrence and feasible interactions with independent distribution and interaction data. When comparing regions, separate changes due to species turnover from changes in interaction constraints.
+
+*Do not infer:* That co-occurring species necessarily interact, or that differences between regional networks necessarily reflect changes in feeding behaviour or interaction processes.
+
+**Realised networks**
+
+*Primary question:* Which interactions occur, and how are they distributed or expressed, under particular ecological conditions?
+
+*Use when:* Investigating community responses to environmental change, temporal rewiring, trophic dynamics, or the consequences of altered interactions for ecosystem functioning.
+
+*You need:* Interaction observations or a predictive model that represents relevant ecological conditions, such as species abundance, environmental context, and diet choice. The temporal window and sampling process should be explicit.
+
+*It lets you infer:* Which interactions are supported under the sampled or modelled conditions, and—where the data permit—how interaction frequencies or strengths change through space or time.
+
+*Check it by:* Evaluating predictions against independent observations, accounting for imperfect detection and sampling effort, and assessing whether the network captures the properties relevant to the ecological question.
+
+*Do not infer:* That unobserved links are impossible, that binary links quantify interaction strength, or that a network aggregated across many places or times represents a single community state.
+
+:::
+
 ### Global Metawebs {#sec-progress_metaweb}
 
-Global metawebs are most appropriate for questions centred on interaction feasibility and potential diet breadth. They provide a platform for exploring hypothetical or novel communities under climate change [@huiHowInvadeEcological2019], species invasions, reintroductions, and rewilding, and the potential rewiring capacity [@marjakangasFundamentalInteractionNiches2025]. Because they focus on feasible rather than realised interactions, global metawebs are also well suited to studying eco-evolutionary dynamics and how evolutionary history, natural selection, and phenotypic plasticity shape interaction niches.
+Global metawebs are most appropriate for questions centred on interaction feasibility and potential diet breadth [@mestreMetawebsToolConnect2026; @adhuryaMetawebApproachesUnderstanding2025]. They provide a platform for exploring hypothetical or novel communities under climate change [@huiHowInvadeEcological2019], species invasions, reintroductions, and rewilding, and the potential rewiring capacity [@marjakangasFundamentalInteractionNiches2025]. Because they focus on feasible rather than realised interactions, global metawebs are also well suited to studying eco-evolutionary dynamics and how evolutionary history, natural selection, and phenotypic plasticity shape interaction niches.
 
 ### Regional Metawebs {#sec-progress_regional}
 
@@ -316,7 +366,12 @@ Taken together, these challenges highlight three overarching messages. (i) Netwo
 
 # Concluding Remarks
 
-Ecological network representations provide alternative abstractions of biodiversity, each defined by specific assumptions regarding ecological entities, interactions, and processes. Consequently, the suitability of a given representation depends on the ecological questions being addressed and the processes that the available data can meaningfully capture. Recognising these differences is essential for interpreting network structure, evaluating the scope of inference, and avoiding implicit assumptions associated with conventional approaches. By linking network representations to their underlying ecological processes and data requirements, the framework developed here provides a basis for systematically comparing alternative network constructions and identifying the contexts in which they are most informative. Establishing this standard is essential for preventing the misinterpretation of network data and for addressing foundational questions in biodiversity science.
+Ecological networks provide powerful abstractions for understanding biodiversity, but their inferential value depends on what their nodes and edges represent and which ecological processes underpin their construction. Distinguishing interaction feasibility from realisation clarifies why global and regional metawebs, realised networks, and structural models serve different questions, scales, and objectives rather than interchangeable descriptions of ecological systems.
+
+Network construction should begin with the intended inference, aligning representation, available evidence, and evaluation criteria. Assumptions about interaction feasibility and realisation, spatial and temporal scales, and validation objectives should be explicit. Recovering individual interactions, reproducing network structure, and predicting ecological outcomes are distinct goals; potential interactions should not be mistaken for realised feeding, nor structural similarity for evidence of ecological mechanisms.
+
+Advancing predictive network ecology requires linking feasible interactions to realised patterns under changing conditions by integrating evolutionary constraints, species distributions, abundance, consumer behaviour, and interaction modification, alongside independent validation and clearer links between network structure and ecosystem functioning. These advances would strengthen applications to global change, conservation, and environmental management. Ultimately, robust ecological inference depends not on a single preferred representation, but on aligning networks, evidence, and objectives with the ecological question.
+
 
 # References {.unnumbered}
 
