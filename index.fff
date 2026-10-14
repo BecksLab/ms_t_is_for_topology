@@ -29,8 +29,9 @@ and non-trophic interactions.}
 
 }
 
-\caption{\label{fig-build}Flow chart showing the three core different
-appraoches to building networks. Highlighting what the resulting netowrk
-representation is.}
+\caption{\label{fig-build}Flow chart showing four approaches to network
+construction: empirical, feasibility-based, process-based, and
+structure-based, highlighting the information used to assign links and
+the resulting network representation.}
 
 \end{figure}
