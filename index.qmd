@@ -1,5 +1,5 @@
 ---
-title: "From Metawebs to Realised Food Webs: A Process-Based Framework for Network Representation Across Ecological Scales"
+title: "From Metawebs to Realised Food Webs: A Process-Based Framework for Network Representation"
 author:
   - name: Tanya Strydom
     id: ts
