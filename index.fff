@@ -6,17 +6,22 @@
 
 }
 
-\caption{\label{fig-process}Aligning the processes that determine
-interactions (right) with different network representations (left). A
-\textbf{global metaweb} captures all feasible interactions among a
-species pool. Restricting this network by species co-occurrence yields
-\textbf{regional metawebs}, which differ in species composition. Species
-occurring in both regions are shown in red, whereas region-specific
-species are shown in blue and yellow. \textbf{Realised networks}
-represent subsets of regional metawebs expressed in specific spatial and
-temporal contexts. Their structure is shaped not only by co-occurrence,
-but also by community-level processes such as abundance, diet choice,
-and non-trophic interactions.}
+\caption{\label{fig-process}Conceptual summary of the process-based
+hierarchy linking food-web representations to ecological filters. A
+\textbf{global metaweb} represents evolutionarily feasible
+consumer--resource links across a defined species pool. Restricting this
+pool by spatiotemporal overlap yields \textbf{regional metawebs}, which
+differ with regional species composition. Species occurring in both
+regions are shown in red, whereas region-specific species are shown in
+blue and yellow. \textbf{Realised food webs} emerge when abundance,
+consumer diet choice, and non-trophic interaction modification further
+filter feasible links under local conditions. The arrows represent
+transitions that can be tested separately: compatibility constrains the
+global feasible set; overlap constrains the regional set; and ecological
+context determines which remaining links occur and how strongly. The
+framework predicts nested constraints in principle, while allowing
+empirical estimates to differ because of uncertainty, incomplete
+sampling, and scale mismatch.}
 
 \end{figure}
 \efloatseparator
@@ -31,7 +36,6 @@ and non-trophic interactions.}
 
 \caption{\label{fig-build}Flow chart showing four approaches to network
 construction: empirical, feasibility-based, process-based, and
-structure-based, highlighting the information used to assign links and
-the resulting network representation.}
+structure-based, highlighting the resulting network representation.}
 
 \end{figure}
