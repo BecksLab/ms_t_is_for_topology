@@ -7,7 +7,7 @@
 }
 
 \caption{\label{fig-process}Conceptual summary of the process-based
-hierarchy linking food-web representations to ecological filters. A
+hierarchy linking food web representations to ecological filters. A
 \textbf{global metaweb} represents evolutionarily feasible
 consumer--resource links across a defined species pool. Restricting this
 pool by spatiotemporal overlap yields \textbf{regional metawebs}, which
