@@ -23,9 +23,9 @@ format:
     title-block-style: manuscript
     title-block-banner-color: "#1D8265"
   docx:
-    csl: https://www.zotero.org/styles/ecological-monographs
+    csl: https://www.zotero.org/styles/ecology-letters
   preprint-pdf:
-    csl: https://www.zotero.org/styles/ecological-monographs
+    csl: https://www.zotero.org/styles/ecology-letters
     formatting:
       draft-format: true
 
